@@ -186,37 +186,4 @@
     "$cuiv:tab_name": "selectWorld.tab.thirdParty",
     "$toggle_group_forced_index": 2
   }
-}ed_binding_type": "global",
-    "$toggle_name": "navigation_tab",
-    "$toggle_group_default_selected": "$default_tab",
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "$toggle_tts_type_priority": 1001,
-    "$toggle_tts_toggle_on_text": "",
-    "$toggle_tts_toggle_off_text": "",
-    "$toggle_tts_index_priority": 1002,
-    "$cuiv:tab_content": "cui-play_screen.adv_tab_content"
-  },
-  "world_navigation_tab@cui-play_screen.top_tab": {
-    "$tab_view_binding_name": "world_navigation_tab_toggle",
-    "$cuiv:count_text_name": "#world_item_count",
-    "$cuiv:tab_name": "selectWorld.tab.worlds",
-    "$toggle_group_forced_index": 0,
-    "variables": [
-      { "requires": "$is_editor_mode_enabled",
-        "$cuiv:tab_name": "playscreen.editor.worlds"
-      }
-  ]},
-  "friends_navigation_tab@cui-play_screen.top_tab": {
-    "$tab_view_binding_name": "friends_navigation_tab_toggle",
-    "$cuiv:count_text_name": "#friend_world_item_count",
-    "$cuiv:tab_name": "selectWorld.tab.friends",
-    "$toggle_group_forced_index": 1
-  },
-  "server_navigation_tab@cui-play_screen.top_tab": {
-    "$tab_view_binding_name": "server_navigation_tab_toggle",
-    "$cuiv:count_text_name": "#server_world_item_count",
-    "$cuiv:tab_name": "selectWorld.tab.thirdParty",
-    "$toggle_group_forced_index": 2
-  }
 }

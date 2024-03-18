@@ -5,7 +5,7 @@
   "$cuigv:FontPrimaryColor": [ 1, 1, 1 ],
   "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ],
   "$cuigv:BackgroundAlpha": 0.7,
-  "$cuigv:UIBackground": false,
+  "$cuigv:UIBackground": true,
   
   // Experiments
   "$cuigv:OriginUI": true,

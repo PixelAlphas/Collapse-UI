@@ -147,7 +147,7 @@
     "size": [ "100%", "100%c" ],
     "use_child_anchors": true,
     "controls": [
-      { "control_centre_label@cui-common.header": { "$cuiv:header_text": "Control Centre" }},
+      { "control_centre_label@cui-common.header": { "$cuiv:header_text": "cui.play.controllcentre" }},
       { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
       { "add_server_button@cui-servers_section.add_server_toggle_button": {}},
       { "padding_01": { "type": "panel", "size": [ "100%", 2 ]}},

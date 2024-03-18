@@ -264,7 +264,7 @@
     "size": [ "100%", "100%c" ],
     "$cuiv:test_panel_label|default": "none",
     "controls": [
-      { "control_centre_label@cui-common.header": { "$cuiv:header_text": "Control Centre" }},
+      { "control_centre_label@cui-common.header": { "$cuiv:header_text": "cui.play.controllcentre" }},
       { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
       { "play_screen_warning@play.realm_warning_tip": {}},
       { "header_button": {
@@ -289,7 +289,7 @@
           }}]
       }},
       { "padding_06": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "most_recent_label@cui-common.header": { "$cuiv:header_text": "Most Recent" }},
+      { "most_recent_label@cui-common.header": { "$cuiv:header_text": "cui.play.mostrecent" }},
       { "padding_07": { "type": "panel", "size": [ "100%", 2 ]}},
       { "most_recent": {
           "type": "stack_panel",
@@ -301,7 +301,7 @@
             }}
       ]}},
       { "padding_08": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "experiment_search_label@cui-common.header": { "$cuiv:header_text": "Experiment World Search", "ignored": "(not $cuigv:SearchBoxSystem)"}},
+      { "experiment_search_label@cui-common.header": { "$cuiv:header_text": "cui.play.exp.worldsearch", "ignored": "(not $cuigv:SearchBoxSystem)"}},
       { "padding_09": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
       { "search_bar@cui-common.text_box": { "$cuiv:placeholder_text": "Search World (Case sensitive)", "$cuiv:text_edit_text_control": "string_world", "size": [ "100%", 20 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
       { "test_grid@cui-worlds_section.search_world_grid": { "ignored": "(not $cuigv:SearchBoxSystem)"}},

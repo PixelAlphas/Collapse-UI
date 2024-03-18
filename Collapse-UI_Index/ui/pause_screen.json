@@ -2,6 +2,7 @@
   "pause_screen": {
     "$screen_content": "pause.check_screen",
     "$screen_bg_content": "cui-common.screen_background",
+    "$cuigv:UIBackground": false,
     "variables": []
   },
   "check_screen": {

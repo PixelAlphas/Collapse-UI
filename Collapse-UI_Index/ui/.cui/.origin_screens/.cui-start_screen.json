@@ -2,7 +2,7 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.3.2" }},
+      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.3.3" }},
       { "@main_button": {}},
       { "@additional_button": {}},
       { "@xbox_element": {}},
@@ -102,7 +102,7 @@
                 "controls": [
                   { "label": {
                       "type": "label",
-                      "text": "Logged as",
+                      "text": "cui.username.logged_in",
                       "layer": 1,
                       "color": "$cuigv:FontPrimaryColor",
                       "offset": [ 0.5, 0.5 ]
@@ -148,7 +148,7 @@
                 "controls": [
                   { "label": {
                       "type": "label",
-                      "text": "Playing as (Local)",
+                      "text": "cui.username.local",
                       "layer": 1,
                       "color": "$cuigv:FontPrimaryColor",
                       "offset": [ 0.5, 0.5 ]
@@ -233,7 +233,7 @@
           "$cuiv:button_type_panel": "cuiorigin-start_screen.button_label",
           "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
           "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-          "$cuiv:button_text": "PLAY",
+          "$cuiv:button_text": "cui.main_menu.play",
           "$cuiv:button_image_texture": "textures/ui/.cui-assets/play",
           "$cuiv:button_image_size": [ "100%", "100%" ]
       }},
@@ -250,7 +250,7 @@
               "$cuiv:button_type_panel": "cuiorigin-start_screen.button_label",
               "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
               "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-              "$cuiv:button_text": "ACHIEVEMENTS",
+              "$cuiv:button_text": "cui.main_menu.achievement",
               "$cuiv:button_image_texture": "textures/ui/.cui-assets/achievement_icon",
               "$cuiv:button_image_anchor": "top_left",
               "$cuiv:button_image_offset": [ 5, 5 ]
@@ -262,7 +262,7 @@
               "$cuiv:button_type_panel": "cuiorigin-start_screen.button_label",
               "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
               "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-              "$cuiv:button_text": "SKINS",
+              "$cuiv:button_text": "cui.main_menu.skin",
               "$cuiv:button_image_texture": "textures/ui/.cui-assets/skin_icon",
               "$cuiv:button_image_anchor": "top_left",
               "$cuiv:button_image_offset": [ 5, 5 ]

@@ -93,7 +93,7 @@
                 "controls": [
                   { "label": {
                       "type": "label",
-                      "text": "Logged as",
+                      "text": "cui.username.logged_in",
                       "layer": 1,
                       "color": "$cuigv:FontPrimaryColor",
                       "offset": [ 0.5, 0.5 ]
@@ -139,7 +139,7 @@
                 "controls": [
                   { "label": {
                       "type": "label",
-                      "text": "Playing as (Local)",
+                      "text": "cui.username.local",
                       "layer": 1,
                       "color": "$cuigv:FontPrimaryColor",
                       "offset": [ 0.5, 0.5 ]
@@ -335,34 +335,6 @@
                 "anchor_to": "top_left",
                 "font_type": "dainbold",
                 "offset": [ 145, 10 ],
-                "alpha": 0.7
-            }}
-      ]}}
-  ]},
-  "button_label": {
-    "type": "label",
-    "layer": 2,
-    "$cuiv:text_color_main|default": [ 1, 1, 1 ],
-    "$cuiv:button_text_offset|default": [ 3, -0.5 ],
-    "offset": "$cuiv:button_text_offset",
-    "font_type": "dainbold",
-    "font_scale_factor": 1.20,
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle",
-    "text": "$cuiv:button_text",
-    "color": "$cuiv:text_color_main",
-    "shadow": "$cuiv:button_text_shadow",
-    "$cuiv:anims|default": [],
-    "anims": "$cuiv:anims",
-    "variables": [
-      {
-        "requires": "(($hover_state) or ($pressed_state))",
-        "$cuiv:text_color_main": [ 1, 0.8627, 0 ],
-        "$cuiv:button_text_offset": [ 7, -0.5 ]
-      }
-    ]
-  }
-} "offset": [ 145, 10 ],
                 "alpha": 0.7
             }}
       ]}}

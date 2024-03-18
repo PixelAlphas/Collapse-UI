@@ -256,7 +256,7 @@
     "$add_friend_visible": true,
     "$add_friend_not_visible": false,
     "controls": [
-      { "control_centre_label@cui-common.header": { "$cuiv:header_text": "Control Centre" }},
+      { "control_centre_label@cui-common.header": { "$cuiv:header_text": "cui.play.controllcentre" }},
       { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
       { "friends_screen_warning@play.realm_warning_tip": {}},
       { "header_button": {

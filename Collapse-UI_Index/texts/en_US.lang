@@ -1,0 +1,19 @@
+## Collapse-UI's Default EN lang
+
+## Start screen
+cui.main_menu.play=PLAY
+cui.main_menu.achievement=ACHIEVEMENTS
+cui.main_menu.skin=SKINS
+cui.username.logged_in=Logged as
+cui.username.local=Playing as (Local)
+
+## Pause screen
+cui.pause.resume=RESUME
+cui.pause.world=Currently playing
+cui.pause.playerlist=Players list
+
+## Play screen
+cui.play.controllcentre=Control centre
+cui.play.mostrecent=Most Recent
+cui.play.exp.worldsearch=Experiment World Search
+cui.play.exp.worldsearch.textbar=Search World (Case sensitive)

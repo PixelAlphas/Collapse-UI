@@ -35,7 +35,7 @@
           "$cuiv:button_type_panel": "cuiorigin-pause_screen.button_label",
           "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
           "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-          "$cuiv:button_text": "RESUME",
+          "$cuiv:button_text": "cui.pause.resume",
           "$cuiv:button_image_anchor": "bottom_right",
           "$cuiv:button_image_offset": [ -5, -5 ],
           "$cuiv:button_image_texture": "textures/ui/.cui-assets/play_icon"
@@ -53,7 +53,7 @@
               "$cuiv:button_type_panel": "cuiorigin-start_screen.button_label",
               "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
               "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-              "$cuiv:button_text": "ACHIEVEMENTS",
+              "$cuiv:button_text": "cui.main_menu.achievement",
               "$cuiv:button_image_texture": "textures/ui/.cui-assets/achievement_icon",
               "$cuiv:button_image_anchor": "top_left",
               "$cuiv:button_image_offset": [ 5, 5 ]
@@ -65,7 +65,7 @@
               "$cuiv:button_type_panel": "cuiorigin-start_screen.button_label",
               "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
               "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-              "$cuiv:button_text": "SKINS",
+              "$cuiv:button_text": "cui.main_menu.skin",
               "$cuiv:button_image_texture": "textures/ui/.cui-assets/skin_icon",
               "$cuiv:button_image_anchor": "top_left",
               "$cuiv:button_image_offset": [ 5, 5 ]
@@ -141,7 +141,7 @@
           "controls": [
             { "label": {
                 "type": "label",
-                "text": "Currently playing",
+                "text": "cui.pause.world",
                 "layer": 1,
                 "font_size": "small",
                 "color": "$cuiv:text_color_main"
@@ -177,7 +177,7 @@
           "$cuiv:element_background_size": [ "30%", "100% - 4px" ],
           "anchor_to": "right_middle",
           "anchor_from": "right_middle",
-          "$text": "Players List",
+          "$text": "cui.pause.playerlist",
           "offset": [ -4, 0 ],
           "bindings": [{ "binding_type": "view", "source_control_name": "cuib-player_list", "source_property_name": "#toggle_state", "target_property_name": "#visible" }]
       }},
