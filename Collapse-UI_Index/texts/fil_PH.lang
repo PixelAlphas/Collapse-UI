@@ -1,0 +1,19 @@
+## Collapse UI - FIL
+
+## Start screen
+cui.main_menu.play=MAGLARO
+cui.main_menu.achievement=NATAGUMPAYAN
+cui.main_menu.skin=SKINS
+cui.username.logged_in=Naka-log bilang
+cui.username.local=Naglalaro bilang (Lokal)
+
+## Pause screen
+cui.pause.resume=IPAGPATULOY
+cui.pause.world=Naglalaro bilang
+cui.pause.playerlist=Listahan ng manlalaro
+
+## Play screen
+cui.play.controllcentre=Sentro ng kontrol
+cui.play.mostrecent=Kumakailan
+cui.play.exp.worldsearch=Experiment World Search
+cui.play.exp.worldsearch.textbar=Maghanap ng World (Case sensitive)
