@@ -1,0 +1,17 @@
+{
+  "pause_screen": {
+    "$screen_content": "pause.check_screen",
+    "$screen_bg_content": "cui-common.screen_background",
+    "variables": []
+  },
+  "check_screen": {
+    "type": "panel",
+    "$cuiv:screen_content|default": "cui-pause_screen.root_contents",
+    "variables": [
+      { "requires": "$cuigv:OriginUI",
+        "$cuiv:screen_content": "cuiorigin-pause_screen.root_contents"
+    }],
+    "controls": [
+      { "active_screen@$cuiv:screen_content": {}}
+  ]}
+}

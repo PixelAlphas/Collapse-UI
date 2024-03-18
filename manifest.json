@@ -1,0 +1,16 @@
+{ "format_version": 2,
+  "header": {
+    "name": "Collapse UI Pack v1.2",
+    "description": "Modified UI made by Arxance (Harlow)",
+    "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
+    "version": [ 1, 2, 0 ],
+    "min_engine_version": [ 1, 20, 0 ]
+  },
+  "modules": [
+    { "type": "resources",
+      "uuid": "c4a12d1d-2fc8-4dca-a412-a413536c40b2",
+      "version": [ 1, 0, 0 ]
+  }],
+  "metadata": {
+    "authors": [ "Arxance (Harlow)" ]
+}}

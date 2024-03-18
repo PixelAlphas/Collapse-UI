@@ -1,0 +1,6 @@
+{ "namespace": "cui-safezone_screen",
+  "root_contents": {
+    "type": "panel",
+    "controls": [
+  ]}
+}

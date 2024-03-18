@@ -1,0 +1,34 @@
+{
+  "play_screen@common.base_screen": {
+    "$screen_content": "play.check_screen",
+    "$screen_bg_content": "cui-common.menu_screen_background",
+    "$world_picker_screen": false,
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ]
+  },
+  "world_screenshot_base": {
+    "size": [ "100%cm + 2px", "100%" ],
+    "texture": ""
+  },
+  "collection_world_screenshot/screenshot_picture": {
+    "size": [ "173.91%y", "100%" ],
+    "offset": [ 0, 0 ]
+  },
+  "realms_world_details": {
+    "color": "$cuigv:FontSecondaryColor",
+    "font_size": "small"
+  },
+  "check_screen": {
+    "type": "panel",
+    "$cuiv:screen_content|default": "cui-play_screen.root_contents",
+    "variables": [
+      { "requires": "$cuigv:OriginUI",
+        "$cuiv:screen_content": "cuiorigin-play_screen.root_contents"
+    }],
+    "controls": [
+      { "active_screen@$cuiv:screen_content": {}}
+]}}

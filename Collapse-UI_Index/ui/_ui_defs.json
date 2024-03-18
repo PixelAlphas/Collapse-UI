@@ -1,0 +1,22 @@
+{ "ui_defs": [
+    
+  "ui/.cui/.cui-anims.json",
+  "ui/.cui/.cui-button.json",
+  "ui/.cui/.cui-common.json",
+  "ui/.cui/.cui-debug.json",
+  "ui/.cui/.cui-gamepad.json",
+  "ui/.cui/.origin_screens/.cui-start_screen.json",
+  "ui/.cui/.origin_screens/.cui-play_screen.json",
+  "ui/.cui/.origin_screens/.cui-pause_screen.json",
+  
+  "ui/.cui/.screens/.cui-start_screen.json",
+  "ui/.cui/.screens/.cui-play_screen.json",
+  "ui/.cui/.screens/.cui-setting_screen.json",
+  "ui/.cui/.screens/.cui-progress_screen.json",
+  "ui/.cui/.screens/.cui-death_screen.json",
+  "ui/.cui/.screens/.cui-pause_screen.json",
+  
+  "ui/.cui/.screens/.play_sections/.cui-worlds_section.json",
+  "ui/.cui/.screens/.play_sections/.cui-friends_section.json",
+  "ui/.cui/.screens/.play_sections/.cui-servers_section.json"
+]}

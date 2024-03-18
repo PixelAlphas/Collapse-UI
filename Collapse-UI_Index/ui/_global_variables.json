@@ -1,0 +1,24 @@
+{
+  // UI Theme
+  "$cuigv:PrimaryColor": [ 1, 0.8627, 0 ],
+  "$cuigv:SecondaryColor": [ 0, 0, 0 ],
+  "$cuigv:FontPrimaryColor": [ 1, 1, 1 ],
+  "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ],
+  "$cuigv:BackgroundAlpha": 0.7,
+  "$cuigv:UIBackground": false,
+  
+  // Experiments
+  "$cuigv:OriginUI": true,
+  "$cuigv:SearchBoxSystem": true,
+  
+  // Layouts
+  "$cuigv:VanillaPaperdoll": false,
+  "$cuigv:NoGameLogo": false,
+  "$cuigv:NoMarketplaceButton": false,
+  "$cuigv:NoRealmsPromoteInWorldSection": true,
+  "$cuigv:AdditionalStartButtons": true,
+  
+  // Unused - will do nothing...
+  "$cuigv:DebugElement": false,
+  "$cuigv:CompactMode": false
+}

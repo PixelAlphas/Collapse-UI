@@ -1,0 +1,101 @@
+{ "namespace": "cui-debug",
+  "screen": {
+    "ignored": "(not $cuigv:DebugElement)",
+    "$cuiv:DebugBoxColor|default": [ 0.5, 0.2, 0.2 ],
+    "type": "panel",
+    "controls": [
+      {
+        "top_box": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuiv:DebugBoxColor",
+          "size": [ "100%", 1 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "left_box": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuiv:DebugBoxColor",
+          "size": [ 1, "100%" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "bottom_box": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuiv:DebugBoxColor",
+          "size": [ "100%", 1 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      },
+      {
+        "right_box": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuiv:DebugBoxColor",
+          "size": [ 1, "100%" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+        }
+      }
+    ]
+  },
+  "element": {
+    "ignored": "(not $cuigv:DebugElement)",
+    "$cuiv:DebugBoxColor|default": [ 0.5, 0.8, 0.1 ],
+    "type": "panel",
+    "layer": 999,
+    "controls": [
+      {
+        "top_box": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuiv:DebugBoxColor",
+          "size": [ "100%", 1 ],
+          "layer": 999,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "left_box": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuiv:DebugBoxColor",
+          "size": [ 1, "100%" ],
+          "layer": 999,
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "bottom_box": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuiv:DebugBoxColor",
+          "size": [ "100%", 1 ],
+          "layer": 999,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      },
+      {
+        "right_box": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuiv:DebugBoxColor",
+          "size": [ 1, "100%" ],
+          "layer": 999,
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+        }
+      }
+    ]
+  }
+}
