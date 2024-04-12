@@ -1,6 +1,6 @@
 {
   "play_screen@common.base_screen": {
-    "$screen_content": "play.check_screen",
+    "$screen_content": "cui-play_screen.root_contents",
     "$screen_bg_content": "cui-common.menu_screen_background",
     "$world_picker_screen": false,
     "$screen_animations": [
@@ -21,14 +21,4 @@
   "realms_world_details": {
     "color": "$cuigv:FontSecondaryColor",
     "font_size": "small"
-  },
-  "check_screen": {
-    "type": "panel",
-    "$cuiv:screen_content|default": "cui-play_screen.root_contents",
-    "variables": [
-      { "requires": "$cuigv:OriginUI",
-        "$cuiv:screen_content": "cuiorigin-play_screen.root_contents"
-    }],
-    "controls": [
-      { "active_screen@$cuiv:screen_content": {}}
-]}}
+}}

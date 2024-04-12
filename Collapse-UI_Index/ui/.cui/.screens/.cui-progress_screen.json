@@ -21,7 +21,7 @@
     "offset": [ -2, -12 ],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
-    "$cuiv:button_type_panel": "cuiorigin-start_screen.button_label",
+    "$cuiv:button_type_panel": "cui-start_screen.button_label",
     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
     "$cuiv:button_image_texture": "textures/ui/.cui-assets/exit_icon",

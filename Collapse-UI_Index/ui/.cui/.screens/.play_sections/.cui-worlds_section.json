@@ -154,50 +154,6 @@
             ]}}
       ]}}
   ]},
-  "search_world_grid": {
-    "type": "stack_panel",
-    "size": ["100%","100%c"],
-    "collection_name": "local_worlds",
-    "$cuiv:ec": "cui-worlds_section.search_world",
-    "controls": [
-      { "element001@$cuiv:ec": { "$cuiv:ci": 0 }},
-      { "element002@$cuiv:ec": { "$cuiv:ci": 1 }},
-      { "element003@$cuiv:ec": { "$cuiv:ci": 2 }},
-      { "element004@$cuiv:ec": { "$cuiv:ci": 3 }},
-      { "element005@$cuiv:ec": { "$cuiv:ci": 4 }},
-      { "element006@$cuiv:ec": { "$cuiv:ci": 5 }},
-      { "element007@$cuiv:ec": { "$cuiv:ci": 6 }},
-      { "element008@$cuiv:ec": { "$cuiv:ci": 7 }},
-      { "element009@$cuiv:ec": { "$cuiv:ci": 8 }},
-      { "element010@$cuiv:ec": { "$cuiv:ci": 9 }},
-      { "element011@$cuiv:ec": { "$cuiv:ci": 10 }},
-      { "element012@$cuiv:ec": { "$cuiv:ci": 11 }},
-      { "element013@$cuiv:ec": { "$cuiv:ci": 12 }},
-      { "element014@$cuiv:ec": { "$cuiv:ci": 13 }},
-      { "element015@$cuiv:ec": { "$cuiv:ci": 14 }},
-      { "element016@$cuiv:ec": { "$cuiv:ci": 15 }},
-      { "element017@$cuiv:ec": { "$cuiv:ci": 16 }},
-      { "element018@$cuiv:ec": { "$cuiv:ci": 17 }},
-      { "element019@$cuiv:ec": { "$cuiv:ci": 18 }},
-      { "element020@$cuiv:ec": { "$cuiv:ci": 19 }}
-    ]
-  },
-  "search_world@cui-worlds_section.local_world_item": {
-    "collection_index": "$cuiv:ci",
-    "bindings": [
-      { "binding_name": "#local_world_name",
-        "binding_type": "collection",
-        "binding_collection_name": "local_worlds"
-      },
-      { "binding_type": "view",
-        "source_control_name": "string_world",
-        "source_property_name": "#item_name",
-        "target_property_name": "#world_search_string"
-      },
-      { "binding_type": "view",
-        "source_property_name": "(not (((#local_world_name - #world_search_string) = #local_world_name) - ' ' - '§r' - '§f'))",
-        "target_property_name": "#visible"
-  }]},
   "local_world_item_button@cui-button.text_button": {
     "$cuiv:button_type_panel": "play.world_content_panel",
     "$pressed_button_name": "button.menu_start_local_world",
@@ -258,53 +214,112 @@
     "collection_name": "local_worlds",
     "bindings": [{ "binding_name": "#local_world_item_grid_dimension" }
   ]},
+  "search_world_grid": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "collection_name": "local_worlds",
+    "factory": {
+      "name": "local_worlds",
+      "control_name": "cui-worlds_section.search_world"
+    },
+    "bindings": [
+      { "binding_name": "#world_item_count", "binding_type": "global" },
+      { "binding_type": "view",
+        "source_property_name": "(#world_item_count - 'h')",
+        "target_property_name": "#collection_length"
+    }]
+  },
+  "search_world@cui-worlds_section.local_world_item": {
+    "visible": false,
+    "bindings": [
+      { "binding_name": "#local_world_name",
+        "binding_type": "collection",
+        "binding_collection_name": "local_worlds"
+      },
+      { "binding_type": "view",
+        "source_control_name": "string_world",
+        "source_property_name": "#item_name",
+        "target_property_name": "#world_search_string"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(not (((#local_world_name - #world_search_string) = #local_world_name) - ' ' - '§r' - '§f'))",
+        "target_property_name": "#visible"
+  }]},
+  "search_button@cui-toggle.toggle_button": {
+    "size": [ 30, 30 ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/search_icon",
+    "$button_type_panel": "cui-play_screen.icon_tab_content",
+    "$toggle_view_binding_name": "cuib-world_search",
+    "$toggle_name": "worldsearch"
+  },
   "core_element": {
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "$cuiv:test_panel_label|default": "none",
+    "use_child_anchors": true,
+    "$cuiv:search_mode_bindings|default": [
+      { "binding_type": "view",
+        "source_control_name": "string_world",
+        "source_property_name": "#item_name",
+        "target_property_name": "#world_search_string"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(#world_search_string = '')",
+        "target_property_name": "#visible"
+    }],
     "controls": [
-      { "control_centre_label@cui-common.header": { "$cuiv:header_text": "cui.play.controllcentre" }},
-      { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "play_screen_warning@play.realm_warning_tip": {}},
       { "header_button": {
           "ignored": "$local_world_upload",
           "type": "stack_panel",
           "orientation": "vertical",
           "layer": 1,
           "use_child_anchors": true,
-          "size": [ "100%", "100%c + 4px" ],
+          "size": [ "100%", "100%c" ],
+          "bindings": "$cuiv:search_mode_bindings",
           "controls": [
+            { "control_centre_label@cui-common.header": { "$cuiv:header_text": "cui.play.controllcentre" }},
+            { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
             { "regular_buttons": {
                 "type": "stack_panel",
                 "size": [ "100% - 8px", 30 ],
                 "orientation": "horizontal",
                 "controls": [
                   { "@create_new_world_button": {}},
-                  { "padding_01": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
+                  { "padding_01": { "type": "panel", "size": [ 2, 2 ]}},
                   { "@quick_play_button": {}},
-                  { "padding_02": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
+                  { "padding_02": { "type": "panel", "size": [ 2, 2 ]}},
                   { "@import_world_button": {}}
                 ]
-          }}]
+            }},
+            { "play_screen_warning@play.realm_warning_tip": {}}
+          ]
       }},
-      { "padding_06": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "most_recent_label@cui-common.header": { "$cuiv:header_text": "cui.play.mostrecent" }},
-      { "padding_07": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "search_mode": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%c" ],
+          "use_child_anchors": true,
+          "controls": [
+            { "padding_01": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
+            { "search_bar@cui-common.text_box": { "$cuiv:placeholder_text": "Search World (Case sensitive)", "$cuiv:text_edit_text_control": "string_world", "size": [ "100% - 8px", 20 ], "ignored": "(not $cuigv:SearchBoxSystem)" }},
+            { "padding_02": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
+            { "search_grid@cui-worlds_section.search_world_grid": { "ignored": "(not $cuigv:SearchBoxSystem)"}}
+      ]}},
       { "most_recent": {
           "type": "stack_panel",
           "$cuiv:is_recent_world": true,
           "collection_name": "local_worlds",
+          "bindings": "$cuiv:search_mode_bindings",
           "controls": [
+            { "most_recent_label@cui-common.header": { "$cuiv:header_text": "cui.play.mostrecent" }},
+            { "padding_07": { "type": "panel", "size": [ "100%", 2 ]}},
             { "recent_world@cui-worlds_section.local_world_item": {
                 "collection_index": 0
             }}
       ]}},
-      { "padding_08": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "experiment_search_label@cui-common.header": { "$cuiv:header_text": "cui.play.exp.worldsearch", "ignored": "(not $cuigv:SearchBoxSystem)"}},
-      { "padding_09": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
-      { "search_bar@cui-common.text_box": { "$cuiv:placeholder_text": "Search World (Case sensitive)", "$cuiv:text_edit_text_control": "string_world", "size": [ "100%", 20 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
-      { "test_grid@cui-worlds_section.search_world_grid": { "ignored": "(not $cuigv:SearchBoxSystem)"}},
       { "padding_01": { "type": "panel", "ignored": "((not $is_realms_enabled) or ($cuigv:NoRealmsPromoteInWorldSection))", "size": [ "100%", 2 ]}},
       { "realms_panel": {
           "ignored": "((not $is_realms_enabled) or ($cuigv:NoRealmsPromoteInWorldSection))",
@@ -344,9 +359,9 @@
                   { "loading_friends_realms_label@play.loading_label": { "$message_binding_name": "#realms_loading_display_message" }},
                   { "padding": { "type": "panel", "size": [ "100%", 4 ]}},
                   { "progress_loading_bars@play.progress_loading_bars": {}}],
-                "bindings": [
-                  { "binding_name": "#loading_personal_realms_grid_visible",
-                    "binding_name_override": "#visible"
+                    "bindings": [
+                      { "binding_name": "#loading_personal_realms_grid_visible",
+                        "binding_name_override": "#visible"
                 }]
             }},
             { "realms_trial_panel": {
@@ -396,7 +411,7 @@
             { "padding_1": { "type": "panel", "size": [ "100%", 4 ]}}
       ]}},
       { "realms_multiplayer_blocked_panel": {
-          "ignored": "(not $is_realms_enabled)",
+          "ignored": "((not $is_realms_enabled) or ($cuigv:NoRealmsPromoteInWorldSection))",
           "type": "stack_panel",
           "size": [ "100%", "100%c" ],
           "visible": false,
@@ -415,22 +430,30 @@
             { "open_uri_button@play.open_account_setting_button": {}}
       ]}},
       { "padding_03": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "world_label@cui-common.header": { "$cuiv:header_text": "worlds" }},
-      { "padding_04": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "grid@cui-worlds_section.local_world_item_grid": {
-          "$tts_section_header": "playscreen.worlds",
-          "variables": [
-            { "requires": "$pre_release",
-              "$tts_section_header": "playscreen.beta_worlds"
-          }]
-      }},
-      { "padding_05": { "type": "panel", "size": [ "100%", 2 ]}},
-      { "no_worlds_label": {
-          "type": "label",
-          "text": "No worlds, perhaps you could press \"Quick play\" button...",
-          "bindings": [
-            { "binding_name": "#no_local_worlds",
-              "binding_name_override": "#visible"
-          }]
-      }}
+      { "world_section": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "use_child_anchors": true,
+          "size": [ "100%", "100%c" ],
+          "bindings": "$cuiv:search_mode_bindings",
+          "controls": [
+            { "world_label@cui-common.header": { "$cuiv:header_text": "worlds" }},
+            { "padding_04": { "type": "panel", "size": [ "100%", 2 ]}},
+            { "grid@cui-worlds_section.local_world_item_grid": {
+                "$tts_section_header": "playscreen.worlds",
+                "variables": [
+                  { "requires": "$pre_release",
+                    "$tts_section_header": "playscreen.beta_worlds"
+                }]
+            }},
+            { "padding_05": { "type": "panel", "size": [ "100%", 2 ]}},
+            { "no_worlds_label": {
+                "type": "label",
+                "text": "No worlds, perhaps you could press \"Quick play\" button...",
+                "bindings": [
+                  { "binding_name": "#no_local_worlds",
+                    "binding_name_override": "#visible"
+                }]
+            }}
+      ]}}
 ]}}

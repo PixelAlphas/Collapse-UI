@@ -19,8 +19,17 @@
     "type": "panel",
     "size": [ "100% - 85px", "100%" ],
     "offset": [ 0, 0 ],
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
+    "animation_reset_name": "screen_animation_reset",
+    "$cuiv:anim_from": [ "25%", 0 ],
+    "$cuiv:anim_to": [ 0, 0 ],
+    "$cuiv:anim_size_from": [ "80% - 85px", "80%" ],
+    "$cuiv:anim_size_to": [ "100% - 85px", "100%" ],
+    "anims": [
+      "@cui-anims.screen_outro_anim_size_push",
+      "@cui-anims.screen_outro_anim_size_pop",
+      "@cui-anims.screen_intro_anim_size_push",
+      "@cui-anims.screen_intro_anim_size_pop"
+    ],
     "controls": [
       { "tab_content_panel@cui-play_screen.tab_content_element": { "layer": 2 }}
     ]
@@ -31,6 +40,8 @@
     "anchor_to": "top_left",
     "focus_container": true,
     "use_last_focus": true,
+    "$cuiv:anim_from": [ "-30%", 0 ],
+    "$cuiv:anim_to": [ 0, 0 ],
     "focus_navigation_mode_down": "contained",
     "focus_navigation_mode_up": "contained",
     "focus_navigation_mode_right": "contained",
@@ -61,7 +72,7 @@
           "layer": 2,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
-          "size": [ "100%", "100% - 20px" ],
+          "size": [ "100%", "100% - 38px" ],
           "offset": [ 0, 0 ],
           "ttsSectionContainer": true
     }}],
@@ -73,21 +84,35 @@
   }]},
   "worlds_tab_content_panel@common_tab_content_panel": {
     "$visible_bind_toggle_source_control": "world_navigation_tab_toggle",
-    "$scroll_tab_content": "cui-worlds_section.root_contents",
-    "$cuiv:test_panel_label": "World"
+    "$scroll_tab_content": "cui-worlds_section.root_contents"
   },
   "friends_tab_content_panel@common_tab_content_panel": {
     "$visible_bind_toggle_source_control": "friends_navigation_tab_toggle",
-    "$scroll_tab_content": "cui-friends_section.root_contents",
-    "$cuiv:test_panel_label": "Friends"
+    "$scroll_tab_content": "cui-friends_section.root_contents"
   },
   "server_tab_content_panel@common_tab_content_panel": {
     "$visible_bind_toggle_source_control": "server_navigation_tab_toggle",
-    "$scroll_tab_content": "cui-servers_section.root_contents",
-    "$cuiv:test_panel_label": "Server"
+    "$scroll_tab_content": "cui-servers_section.root_contents"
   },
-  
-  
+  "search_tab_content_panel@common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "search_navigation_tab_toggle",
+    "$scroll_tab_content": "cui-search_section.root_contents"
+  },
+  "gamepad_tooltips": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 15 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 4, -10 ],
+    "layer": 20,
+    "use_child_anchors": false,
+    "controls": [
+      { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {}},
+      { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {
+          "ignored": "(not $can_quit)"
+      }}
+  ]},
   "common_scrolling_panel@common.scrolling_panel": {
     "layer": 1,
     "$scrolling_pane_size": [ "100% - 1px", "100%" ],
@@ -99,36 +124,35 @@
   "tab_element": {
     "type": "panel",
     "controls": [
-      {
-        "background": {
-          "type": "image",
-          "texture": "textures/ui/White",
-          "color": "$cuigv:SecondaryColor",
-          "alpha": "$cuigv:BackgroundAlpha",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "size": [ "200%", 120 ],
-          "offset": [ 0, -100 ]
-        }
-      },
-      { "close_button@cui-common.close_button": {
-          "size": [ 20, 20 ],
-          "offset": [ 4, 0 ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left"
+      { "@cui-common.title_core": {
+          "$cuiv:title_text": "Play"
       }},
-      {
-        "tabs_element": {
+      { "gamepad_tooltips@gamepad_tooltips": {}},
+      { "tabs_element": {
           "type": "stack_panel",
           "orientation": "horizontal",
-          "size": [ "50%", 20 ],
+          "size": [ "100%c", 40 ],
+          "offset": [ -14, 4 ],
           "layer": 1,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$cuiv:anim_from": [ -14, -50 ],
+          "$cuiv:anim_to": [ -14, 4 ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ],
           "controls": [
-            { "world_navigation_tab@cui-play_screen.world_navigation_tab": { "size": [ "fill", "100%" ]}},
-            { "friends_navigation_tab@cui-play_screen.friends_navigation_tab": { "size": [ "fill", "100%" ]}},
-            { "server_navigation_tab@cui-play_screen.server_navigation_tab": { "size": [ "fill", "100%" ]}}
+            { "gamepad_tooltip_lb@cui-gamepad.gamepad_tooltip_lb": {}},
+            { "world_navigation_tab@cui-play_screen.world_navigation_tab": { "size": [ 65, 28 ]}},
+            { "paddings_01": { "type": "panel", "size": [ 2, 1 ]}},
+            { "friends_navigation_tab@cui-play_screen.friends_navigation_tab": { "size": [ 65, 28 ]}},
+            { "paddings_02": { "type": "panel", "size": [ 2, 1 ]}},
+            { "server_navigation_tab@cui-play_screen.server_navigation_tab": { "size": [ 65, 28 ]}},
+            { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip_rb": {}}
           ]
         }
       }
@@ -136,6 +160,7 @@
   },
   "adv_tab_content": {
     "type": "panel",
+    "$cuiv:play_icon_texture|default": "",
     "controls": [
       { "text_section": {
           "type": "panel",
@@ -145,12 +170,45 @@
                 "shadow": false,
                 "layer": 3,
                 "font_type": "dainbold",
-                "font_scale_factor": 1.20,
+                "font_scale_factor": 1,
                 "color": "$text_color",
-                "text": "$cuiv:tab_name"
+                "text": "$cuiv:tab_name",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 2, -2 ]
+            }},
+            { "count": {
+                "type": "label",
+                "shadow": false,
+                "layer": 3,
+                "font_type": "dainbold",
+                "font_scale_factor": 1,
+                "color": "$text_color",
+                "text": "$cuiv:count_text_name",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [ -2, -2 ],
+                "bindings": [{ "binding_name": "$cuiv:count_text_name" }]
             }}
-      ]}}
+      ]}},
+      { "icons": {
+          "type": "image",
+          "texture": "$cuiv:play_icon_texture",
+          "size": [ 8, 8 ],
+          "layer": 3,
+          "color": "$text_color",
+          "offset": [ -2, 2 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+      }}
   ]},
+  "icon_tab_content": {
+    "type": "image",
+    "texture": "$cuiv:play_icon_texture",
+    "size": [ 16, 16 ],
+    "layer": 3,
+    "color": "$text_color"
+  },
   "top_tab@cui-button.tab_button": {
     "$radio_toggle_group": true,
     "$toggle_tts_enabled_binding_type": "global",
@@ -169,6 +227,7 @@
     "$cuiv:count_text_name": "#world_item_count",
     "$cuiv:tab_name": "selectWorld.tab.worlds",
     "$toggle_group_forced_index": 0,
+    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/worlds_icon",
     "variables": [
       { "requires": "$is_editor_mode_enabled",
         "$cuiv:tab_name": "playscreen.editor.worlds"
@@ -178,12 +237,14 @@
     "$tab_view_binding_name": "friends_navigation_tab_toggle",
     "$cuiv:count_text_name": "#friend_world_item_count",
     "$cuiv:tab_name": "selectWorld.tab.friends",
-    "$toggle_group_forced_index": 1
+    "$toggle_group_forced_index": 1,
+    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/friends_icon"
   },
   "server_navigation_tab@cui-play_screen.top_tab": {
     "$tab_view_binding_name": "server_navigation_tab_toggle",
     "$cuiv:count_text_name": "#server_world_item_count",
     "$cuiv:tab_name": "selectWorld.tab.thirdParty",
-    "$toggle_group_forced_index": 2
+    "$toggle_group_forced_index": 2,
+    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/servers_icon"
   }
 }

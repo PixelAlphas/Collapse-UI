@@ -43,5 +43,41 @@
     "to": "$cuiv:anim_to",
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
+  },
+  "screen_outro_anim_size_push": {
+    "anim_type": "size",
+    "easing": "in_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv:anim_size_to",
+    "to": "$cuiv:anim_size_from",
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "screen_outro_anim_size_pop": {
+    "anim_type": "size",
+    "easing": "in_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv:anim_size_to",
+    "to": "$cuiv:anim_size_from",
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "screen_intro_anim_size_push": {
+    "anim_type": "size",
+    "easing": "out_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv:anim_size_from",
+    "to": "$cuiv:anim_size_to",
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_intro_anim_size_pop": {
+    "anim_type": "size",
+    "easing": "out_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv:anim_size_from",
+    "to": "$cuiv:anim_size_to",
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
   }
 }

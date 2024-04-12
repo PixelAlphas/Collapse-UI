@@ -5,10 +5,9 @@
   "$cuigv:FontPrimaryColor": [ 1, 1, 1 ],
   "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ],
   "$cuigv:BackgroundAlpha": 0.7,
-  "$cuigv:UIBackground": true,
+  "$cuigv:UIBackground": false,
   
   // Experiments
-  "$cuigv:OriginUI": true,
   "$cuigv:SearchBoxSystem": true,
   
   // Layouts
@@ -19,6 +18,7 @@
   "$cuigv:AdditionalStartButtons": true,
   
   // Unused - will do nothing...
+  "$cuigv:OriginUI": true,
   "$cuigv:DebugElement": false,
   "$cuigv:CompactMode": false
 }

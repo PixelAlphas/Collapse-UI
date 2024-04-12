@@ -1,4 +1,60 @@
 ## Collapse-UI's Default EN lang
+## Settings screen
+cui.settings.experimental.title=Experimental
+cui.settings.utilities=Utilities
+cui.settings.controls=Control(s)
+cui.settings.generals=General(s)
+
+## > Accessibility
+cui.settings.accessibility.main.description=A section that may help with disability and visibility related.
+cui.settings.accessibility.tts.description=A robot voice that may play once you interact things.
+cui.settings.accessibility.misc.description=Hud and Gameplay related accessibility such as Chat messages and Darkness.
+
+## > General
+cui.settings.general.online.title=Online
+cui.settings.general.online.description=A essential section for managing Online related - such as the way the skin would display or auto-update marketplace packs. ( This may be different on variety of platforms you play on )
+cui.settings.general.network.description=A section that may control network/internet related besides just wifi.
+cui.settings.general.misc.description=Additional Game infos, Credits, Game build etc. may only useful for developers.
+
+## > Creator
+cui.settings.creator.main.description=A section that are pretty useful for creators and debugging resource packs / behavior packs.
+cui.settings.creator.contentlog.title=Content Log
+
+## > Sounds
+cui.settings.sound.main.description=A section for sound volume.
+cui.settings.sound.main.all.description=Global Volume - Will affect the whole game volume
+cui.settings.sound.main.music.description=Music/Song Volume
+cui.settings.sound.main.audio.description=Audio/SFX Volume
+cui.settings.sound.main.ambient.description=Ambient/Cave Volume
+cui.settings.sound.main.block.description=Placing/Breaking Volume
+cui.settings.sound.main.hostile.description=Hostile Mobs Volume
+cui.settings.sound.main.neutral.description=Neutral Mobs Volume
+cui.settings.sound.main.player.description=Player Hitsound/Hurt Volume
+cui.settings.sound.main.record.description=Record disc's Volume
+cui.settings.sound.main.weather.description=Weather Volume
+cui.settings.sound.main.texttospeech.description="Beep-Boop" Voice Volume
+
+## > Language
+cui.settings.language.main.description=A section for changing the game language - NOTE : Collapse-UI currently doesn't support ALL languages just yet, this may causes some stuff being english. Language Contribution are welcome! - also the toggle broke and kinda forced me to rewrite, but that's not happening.
+
+## > Video
+cui.settings.video.main.description=A section for tweaking graphical and gameplay related.
+cui.settings.video.gameplay.title=Gameplay
+cui.settings.video.gameplay.description=Tweaks the gameplay experience.
+cui.settings.video.graphic.title=Graphical
+cui.settings.video.graphic.description=Tweaks the visual and performance experience.
+cui.settings.video.ui.title=UI
+cui.settings.video.ui.description=Tweaks the UI in general for maybe improved accessibility.
+cui.settings.video.perspective.description=Changes your gameplay perspective (or aka F5)
+
+## > Gamepad
+cui.settings.gamepad.main.description=A section for tweaking controller experience.
+cui.settings.gamepad.mapping.description=Changes the controller mapping, which may allow you to use change the mechanic to different buttons.
+
+## > Touch
+cui.settings.touch.main.description=A section for tweaking touch experience.
+cui.settings.touch.misc.description=Regular stuff.
+
 
 ## Start screen
 cui.main_menu.play=PLAY
@@ -17,3 +73,7 @@ cui.play.controllcentre=Control centre
 cui.play.mostrecent=Most Recent
 cui.play.exp.worldsearch=Experiment World Search
 cui.play.exp.worldsearch.textbar=Search World (Case sensitive)
+
+
+options.fov= 
+options.fov.alt=FOV

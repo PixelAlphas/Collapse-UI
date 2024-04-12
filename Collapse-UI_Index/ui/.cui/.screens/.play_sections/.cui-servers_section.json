@@ -123,7 +123,7 @@
       { "pudding_02": { "type": "panel", "size": [ 4, 1 ]}},
       { "ping_rate_icon@play.ping_rate_icon": {}}
   ]},
-  "add_server_toggle_button@cui-button.text_toggle": {
+  "add_server_toggle_button@cui-toggle.text_toggle": {
     "visible": "(not $ignore_add_servers)",
     "size": [ "100% - 8px", 30 ],
     "layer": 2,

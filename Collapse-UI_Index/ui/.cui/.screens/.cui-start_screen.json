@@ -2,13 +2,13 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      { "@cui-debug.screen": {}},
-      { "@title_core": {}},
+      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.4" }},
       { "@main_button": {}},
       { "@additional_button": {}},
       { "@xbox_element": {}},
       { "@information": {}},
-      { "@gamepad_tooltips":{}}
+      { "@gamepad_tooltips":{}},
+      { "@skin_panel": {}}
   ]},
   "gamepad_tooltips": {
     "type": "stack_panel",
@@ -28,19 +28,28 @@
   "xbox_element": {
     "type": "panel",
     "size": [ 145, 24 ],
-    "offset": [ 12, -5 ],
-    "anchor_from": "bottom_left",
-    "anchor_to": "bottom_left",
+    "offset": [ -12, 5 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$cuiv:anim_from": [ -12, -50 ],
+    "$cuiv:anim_to": [ -12, 5 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "controls": [
-      { "player_head_element@cui-common.player_head_element": {
-        "anchor_from": "left_middle",
-        "anchor_to": "left_middle"
+      { "player_head_element@cui-common.player_head_element_origin": {
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle"
       }},
       { "online_element": {
           "type": "panel",
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "offset": [ 32, 0 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -32, 0 ],
           "bindings": [
             { "binding_name": "#gamertag_pic_and_label_visible",
               "binding_name_override": "#visible"
@@ -48,8 +57,8 @@
           "controls": [
             { "username_label": {
                 "type": "image",
-                "anchor_from": "bottom_left",
-                "anchor_to": "bottom_left",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
                 "texture": "textures/ui/White",
                 "color": "$cuigv:SecondaryColor",
                 "alpha": "$cuigv:BackgroundAlpha",
@@ -84,8 +93,8 @@
             ]}},
             { "status_label": {
                 "type": "image",
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
                 "texture": "textures/ui/White",
                 "color": "$cuigv:SecondaryColor",
                 "alpha": "$cuigv:BackgroundAlpha",
@@ -102,9 +111,9 @@
       ]}},
       { "local_element": {
           "type": "panel",
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "offset": [ 32, 0 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -32, 0 ],
           "bindings": [
             { "binding_name": "#sign_in_visible",
               "binding_name_override": "#visible"
@@ -112,8 +121,8 @@
           "controls": [
             { "username_label": {
                 "type": "image",
-                "anchor_from": "bottom_left",
-                "anchor_to": "bottom_left",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
                 "texture": "textures/ui/White",
                 "color": "$cuigv:SecondaryColor",
                 "alpha": "$cuigv:BackgroundAlpha",
@@ -130,8 +139,8 @@
             ]}},
             { "status_label": {
                 "type": "image",
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
                 "texture": "textures/ui/White",
                 "color": "$cuigv:SecondaryColor",
                 "alpha": "$cuigv:BackgroundAlpha",
@@ -155,60 +164,38 @@
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "controls": [
-      { "cui_version": {
-          "ignored": "$cuigv:NoGameLogo",
-          "type": "image",
-          "texture": "textures/ui/White",
-          "color": "$cuigv:SecondaryColor",
-          "alpha": "$cuigv:BackgroundAlpha",
-          "size": [ "100%c + 4px", "100%c + 2px" ],
-          "controls": [
-            { "text_version": {
-                "type": "label",
-                "text": "Collapse-UI v1.3.2",
-                "offset": [ 0.5, 0.5 ],
-                "color": "$cuigv:FontPrimaryColor"
-            }}
+      { "game_version": {
+          "type": "label",
+          "layer": 1,
+          "font_type": "dainbold",
+          "offset": [ 125, 0 ],
+          "alpha": 0.7,
+          "text": "#version",
+          "bindings": [
+            { "binding_name": "#version" }
       ]}},
       { "paddings": { "type": "panel", "size": [ 4, 1 ]}},
-      { "game_version": {
-          "type": "image",
-          "texture": "textures/ui/White",
-          "size": [ "100%c + 4px", "100%c + 2px" ],
-          "color": "$cuigv:SecondaryColor",
-          "alpha": "$cuigv:BackgroundAlpha",
-          "controls": [
-            { "label": {
-                "type": "label",
-                "layer": 1,
-                "text": "#text",
-                "offset": [ 0.5, 0.5 ],
-                "color": "$cuigv:FontPrimaryColor",
-                "bindings": [
-                  { "binding_name": "#version" },
-                  { "binding_type": "view",
-                    "source_property_name": "(#version + ' | ©Mojang AB ')",
-                    "target_property_name": "#text"
-                }]
-            }}
-      ]}},
-      { "paddings": { "type": "panel", "ignored": "(not $cuigv:CompactMode)", "size": [ 4, 1 ]}},
-      { "compact_mode": {
-          "type": "image",
-          "ignored": "(not $cuigv:CompactMode)",
-          "texture": "textures/ui/White",
-          "color": "$cuigv:SecondaryColor",
-          "alpha": "$cuigv:BackgroundAlpha",
-          "size": [ "100%c + 4px", "100%c + 2px" ],
-          "controls": [
-            { "text_version": {
-                "type": "label",
-                "text": "Compact mode",
-                "offset": [ 0.5, 0.5 ],
-                "color": "$cuigv:FontPrimaryColor"
-            }}
-      ]}}
+      { "mojang_copyright": {
+          "type": "label",
+          "layer": 1,
+          "font_type": "dainbold",
+          "offset": [ 125, 0 ],
+          "alpha": 0.7,
+          "text": "| Copyright Mojang AB"
+      }}
   ]},
+  
+  "skin_panel": {
+    "ignored": "(not $cuigv:VanillaPaperdoll)",
+    "type": "panel",
+    "anchor_to": "bottom_right",
+    "anchor_from": "bottom_right",
+    "offset": [ -12, -30 ],
+    "size": [ 60, 124 ],
+    "controls": [
+      { "viewer_panel@start.skin_viewer_panel": {} }
+    ]
+  },
   "additional_button": {
     "type": "stack_panel",
     "ignored": "(not $cuigv:AdditionalStartButtons)",
@@ -228,138 +215,135 @@
           "size": [ 24, 24 ],
           "$pressed_button_name": "button.feedback_button_pressed",
           "$cuiv:button_type_panel": "start.feedback_icon"
+          
       }}
   ]},
   "main_button": {
     "type": "stack_panel",
     "orientation": "vertical",
-    "size": [ 145, "100%c" ],
+    "size": [ 200, "100%c" ],
     "offset": [ 14, 0 ],
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
+    "$cuiv:button_content_size": [ "100%", "100%" ],
     "controls": [
       { "play@cui-button.text_button": {
-          "size": [ 145, 22 ],
+          "size": [ 200, 100 ],
+          "$cuiv:gradientbackground": true,
           "$pressed_button_name": "$play_button_target",
           "$cuiv:button_type_panel": "cui-start_screen.button_label",
-          "$cuiv:default_button_texture": "",
-          "$cuiv:hover_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:hover_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:pressed_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:pressed_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:button_text": "PLAY"
+          "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:button_text": "cui.main_menu.play",
+          "$cuiv:button_image_texture": "textures/ui/.cui-assets/play",
+          "$cuiv:button_image_size": [ "100%", "100%" ]
       }},
-      { "achievements@cui-button.text_button": {
-          "size": [ 145, 22 ],
-          "$pressed_button_name": "button.menu_achievements",
-          "$cuiv:button_type_panel": "cui-start_screen.button_label",
-          "$cuiv:default_button_texture": "",
-          "$cuiv:hover_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:hover_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:pressed_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:pressed_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:button_text": "ACHIEVEMENTS"
-      }},
-      { "profile@cui-button.text_button": {
-          "size": [ 145, 22 ],
-          "$pressed_button_name": "button.to_profile_screen",
-          "$cuiv:button_type_panel": "cui-start_screen.button_label",
-          "$cuiv:default_button_texture": "",
-          "$cuiv:hover_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:hover_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:pressed_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:pressed_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:button_text": "DRESSING ROOM"
-      }},
-      { "marketplace@cui-button.text_button": {
-          "size": [ 145, 22 ],
-          "ignored": "$cuigv:NoMarketplaceButton",
-          "$pressed_button_name": "button.menu_store",
-          "$cuiv:button_type_panel": "cui-start_screen.button_label",
-          "$cuiv:default_button_texture": "",
-          "$cuiv:hover_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:hover_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:pressed_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:pressed_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:button_text": "MARKETPLACE"
-      }},
-      { "settings@cui-button.text_button": {
-          "size": [ 145, 22 ],
-          "$pressed_button_name": "button.menu_settings",
-          "$cuiv:button_type_panel": "cui-start_screen.button_label",
-          "$cuiv:default_button_texture": "",
-          "$cuiv:hover_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:hover_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:pressed_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:pressed_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:button_text": "SETTINGS"
-      }},
-      { "exit@cui-button.text_button": {
-          "size": [ 145, 22 ],
-          "$pressed_button_name": "button.menu_exit",
-          "$cuiv:button_type_panel": "cui-start_screen.button_label",
-          "$cuiv:default_button_texture": "",
-          "$cuiv:hover_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:hover_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:pressed_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
-          "$cuiv:pressed_button_color": [ 1, 0.8627, 0 ],
-          "$cuiv:button_text": "EXIT"
-      }}
-  ]},
-  "title_core": {
-    "type": "panel",
-    "size": [ 145, 30 ],
-    "offset": [ 14, 14 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "controls": [
-      { "image": {
-          "ignored": "$cuigv:NoGameLogo",
-          "type": "image",
-          "texture": "textures/ui/title"
-      }},
-      { "label": {
-          "ignored": "(not $cuigv:NoGameLogo)",
-          "type": "label",
-          "text": "Collapse-UI",
-          "size": [ "100% + 20px", "default" ],
-          "font_scale_factor": 2.3,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "font_type": "dainbold",
+      { "paddings": { "type": "panel", "size": [ 4, 4 ]}},
+      { "alter_stack": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%cm", "100%cm" ],
+          "$cuiv:subbutton": true,
           "controls": [
-            { "version_label": {
-                "type": "label",
-                "text": "v1.02",
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "font_type": "dainbold",
-                "offset": [ 145, 10 ],
-                "alpha": 0.7
-            }}
+          { "achievements@cui-button.text_button": {
+              "size": [ 85, 72 ],
+              "$pressed_button_name": "button.menu_achievements",
+              "$cuiv:button_type_panel": "cui-start_screen.button_label",
+              "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+              "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+              "$cuiv:button_text": "cui.main_menu.achievement",
+              "$cuiv:button_image_texture": "textures/ui/.cui-assets/achievement_icon",
+              "$cuiv:button_image_anchor": "top_left",
+              "$cuiv:button_image_offset": [ 5, 5 ]
+          }},
+          { "paddings_01": { "type": "panel", "size": [ 4, 4 ]}},
+          { "profile@cui-button.text_button": {
+              "size": [ 73, 72 ],
+              "$pressed_button_name": "button.to_profile_screen",
+              "$cuiv:button_type_panel": "cui-start_screen.button_label",
+              "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+              "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+              "$cuiv:button_text": "cui.main_menu.skin",
+              "$cuiv:button_image_texture": "textures/ui/.cui-assets/skin_icon",
+              "$cuiv:button_image_anchor": "top_left",
+              "$cuiv:button_image_offset": [ 5, 5 ]
+          }},
+          { "paddings_02": { "type": "panel", "size": [ 4, 4 ]}},
+          { "alter_stack_2": {
+              "type": "stack_panel",
+              "orientation": "vertical",
+              "size": [ 34, 72 ],
+              "controls": [
+                { "settings@cui-button.text_button": {
+                    "size": [ 34, 34 ],
+                    "$pressed_button_name": "button.menu_settings",
+                    "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                    "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                    "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                    "$cuiv:button_image_texture": "textures/ui/.cui-assets/setting_icon"
+                }},
+                { "paddings_01": { "type": "panel", "size": [ 4, 4 ]}},
+                { "exit@cui-button.text_button": {
+                    "size": [ 34, 34 ],
+                    "$pressed_button_name": "button.menu_exit",
+                    "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                    "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                    "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                    "$cuiv:button_image_texture": "textures/ui/.cui-assets/exit_icon"
+                }}
+          ]}}
       ]}}
   ]},
   "button_label": {
-    "type": "label",
-    "layer": 2,
-    "$cuiv:text_color_main|default": [ 1, 1, 1 ],
-    "$cuiv:button_text_offset|default": [ 3, -0.5 ],
-    "offset": "$cuiv:button_text_offset",
-    "font_type": "dainbold",
-    "font_scale_factor": 1.20,
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle",
-    "text": "$cuiv:button_text",
-    "color": "$cuiv:text_color_main",
-    "shadow": "$cuiv:button_text_shadow",
-    "$cuiv:anims|default": [],
-    "anims": "$cuiv:anims",
-    "variables": [
-      {
-        "requires": "(($hover_state) or ($pressed_state))",
-        "$cuiv:text_color_main": [ 1, 0.8627, 0 ],
-        "$cuiv:button_text_offset": [ 7, -0.5 ]
-      }
-    ]
-  }
-}
+    "type": "panel",
+    "$cuiv:subbutton|default": false,
+    "$cuiv:gradientbackground|default": false,
+    "clips_children": true,
+    "controls": [
+      { "label": {
+          "type": "label",
+          "layer": 4,
+          "$cuiv:button_text|default": "",
+          "$cuiv:text_color_main|default": [ 1, 1, 1 ],
+          "$cuiv:button_text_offset|default": [ 3, -3 ],
+          "$cuiv:button_text_scale|default": 1.4,
+          "offset": "$cuiv:button_text_offset",
+          "font_scale_factor": "$cuiv:button_text_scale",
+          "font_type": "dainbold",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "text": "$cuiv:button_text",
+          "color": "$cuiv:text_color_main",
+          "$cuiv:anims|default": [],
+          "anims": "$cuiv:anims",
+          "variables": [
+            { "requires": "(($hover_state) or ($pressed_state))",
+              "$cuiv:text_color_main": [ 1, 0.8627, 0 ]
+            },
+            { "requires": "($cuiv:subbutton)",
+              "$cuiv:button_text_scale": 1
+          }]
+      }},
+      { "image": {
+          "type": "image",
+          "$cuiv:button_image_texture|default": "",
+          "$cuiv:button_image_size|default": [ 16, 16 ],
+          "$cuiv:button_image_anchor|default": "center",
+          "$cuiv:button_image_offset|default": [ 0, 0 ],
+          "anchor_from": "$cuiv:button_image_anchor",
+          "anchor_to": "$cuiv:button_image_anchor",
+          "offset": "$cuiv:button_image_offset",
+          "texture": "$cuiv:button_image_texture",
+          "size": "$cuiv:button_image_size",
+          "fill": true
+      }},
+      { "gradient": {
+          "ignored": "(not $cuiv:gradientbackground)",
+          "type": "custom",
+          "renderer": "gradient_renderer",
+          "gradient_direction": "vertical",
+          "color1": [ 0, 0, 0, 0 ],
+          "color2": [ 0, 0, 0, 0.6 ],
+          "layer": 3
+    }}]
+}}

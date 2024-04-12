@@ -70,8 +70,7 @@
         "handle_select": false,
         "handle_deselect": false,
         "mapping_type": "focused"
-      }
-    ],
+    }],
     "controls": [
       { "centering_panel": {
           "type": "panel",
@@ -155,8 +154,8 @@
           "size": [ 20, "100%" ],
           "layer": 90,
           "gradient_direction": "horizontal",
-          "color1": [ 0.8, 0.8, 0.8, 0 ],
-          "color2": [ 0.8, 0.8, 0.8, 1 ],
+          "color1": [ 1, 1, 1, 0 ],
+          "color2": [ 1, 1, 1, 0.8 ],
           "offset": [ -1, 0 ],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle"
@@ -289,22 +288,6 @@
             }}
       ]}}
   ]},
-  "player_head_element": {
-    "type": "panel",
-    "size": [ 25, 25 ],
-    "clips_children": true,
-    "controls": [
-      { "skin_renderer": {
-          "type": "custom",
-          "layer": 5,
-          "camera_tilt_degrees": -10,
-          "starting_rotation": -30,
-          "rotation": "gesture_x",
-          "renderer": "paper_doll_renderer",
-          "size": [ 42, 92 ],
-          "offset": [ 0, 8 ]
-      }}
-  ]},
   "player_head_element_origin": {
     "type": "panel",
     "size": [ 25, 25 ],
@@ -357,7 +340,7 @@
     "$cuiv:element_background_size|default": [ "default", "100%cm" ],
     "$cuiv:element_background_offset|default": [ 0, 0 ],
     "$cuiv:element_background_anchor|default": "bottom_middle",
-    "$cuiv:element_background_texture|default": "textures/ui/White",
+    "$cuiv:element_background_texture|default": "textures/ui/.cui-assets/background",
     "$cuiv:element_background_contents|default": "",
     "alpha": "$cuiv:element_background_alpha",
     "color": "$cuiv:element_background_color",
@@ -370,24 +353,15 @@
       { "header_contents@$cuiv:element_background_contents": {}},
       { "header_label":{
           "type": "label",
-          "text": "$text",
+          "text": "$cuiv:header_text",
           "layer": 1,
           "shadow": false,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [ 0, 3 ],
-          "font_type": "MinecraftTen",
-          "text_alignment": "center",
-          "max_size": [ "90%", 11 ],
-          "controls": [
-            { "contentline": {
-                "type": "image",
-                "size": [ "100% + 4px", 1 ],
-                "texture": "textures/ui/White",
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "offset": [ 0.5, 13 ]
-            }}
-      ]}}
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 5.5, 0 ],
+          "font_type": "dainbold",
+          "font_scale_factor": 1.5,
+          "max_size": [ "90%", 45 ]
+      }}
   ]}
 }
