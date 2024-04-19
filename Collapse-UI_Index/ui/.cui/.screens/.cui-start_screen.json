@@ -2,7 +2,7 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.4" }},
+      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.4.05" }},
       { "@main_button": {}},
       { "@additional_button": {}},
       { "@xbox_element": {}},

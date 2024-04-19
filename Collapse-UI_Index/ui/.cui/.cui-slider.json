@@ -6,6 +6,10 @@
     "$slider_box_locked_layout|default": "cui-slider.slider_button_locked_layout",
     "$slider_box_indent_layout|default": "cui-slider.slider_button_indent_layout",
     "$slider_step_factory_control_ids": { "slider_step": "@cui-slider.slider_step", "slider_step_hover": "@cui-slider.slider_step_hover", "slider_step_progress": "@cui-slider.slider_step_progress", "slider_step_progress_hover": "@cui-slider.slider_step_progress_hover" },
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    
     "controls": [
       { "slider_box@cui-slider.slider_box": { "$slider_box_layout": "$slider_box_layout", "$slider_box_size": "$slider_box_size", "$slider_track_button": "$slider_name" }},
       { "slider_bar_default@cui-slider.slider_bar_default": {} },
@@ -70,7 +74,7 @@
     "controls": [
       { "sizing_panel": {
           "type": "panel",
-          "size": [ "100% + 4px", "100% - 4px" ],
+          "size": [ "100%", "100% - 4px" ],
           "controls": [
             { "$background_control_name@$background_control": { "layer": 1, "size": [ "100%", 2 ] }},
             { "$progress_control_name@$progress_control": { "layer": 3, "clip_direction": "$progress_clip_direction", "clip_pixelperfect": false }}

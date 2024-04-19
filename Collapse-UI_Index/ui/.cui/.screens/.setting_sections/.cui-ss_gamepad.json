@@ -13,7 +13,7 @@
         "target_property_name": "#visible"
     }],
     "controls": [
-      { "gamepad@cui-common.element_background": { "$cuiv:header_text": "options.gamepad", "$cuiv:element_background_contents": "cui-ss_gamepad.gamepad"}},
+      { "gamepad@cui-common.element_background": { "$cuiv:header_text": "options.controller", "$cuiv:element_background_contents": "cui-ss_gamepad.gamepad"}},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
       { "mapping@cui-common.element_background": { "$cuiv:header_text": "options.controllerLayout", "$cuiv:element_background_contents": "cui-ss_gamepad.mapping"}},
       { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},

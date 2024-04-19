@@ -8,9 +8,10 @@
   "$cuigv:UIBackground": false,
   
   // Experiments
-  "$cuigv:SearchBoxSystem": true,
   
   // Layouts
+  "$cuigv:SearchBoxSystem": true,
+  "$cuigv:OldSliderDesign": false,
   "$cuigv:VanillaPaperdoll": false,
   "$cuigv:NoGameLogo": false,
   "$cuigv:NoMarketplaceButton": false,

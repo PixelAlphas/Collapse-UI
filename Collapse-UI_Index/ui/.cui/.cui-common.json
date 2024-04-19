@@ -359,7 +359,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 5.5, 0 ],
-          "font_type": "dainbold",
+          "font_type": "MinecraftTen",
           "font_scale_factor": 1.5,
           "max_size": [ "90%", 45 ]
       }}

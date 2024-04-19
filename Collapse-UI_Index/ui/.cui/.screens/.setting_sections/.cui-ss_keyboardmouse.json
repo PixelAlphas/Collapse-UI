@@ -101,7 +101,7 @@
       { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
       { "description": {
           "type": "label",
-          "text": "cui.settings.gamepad.mapping.description",
+          "text": "cui.settings.keyboardmouse.mapping.description",
           "font_type": "dainbold",
           "size": [ "100% - 6px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
@@ -159,7 +159,7 @@
       { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
       { "description": {
           "type": "label",
-          "text": "cui.settings.gamepad.mapping.description",
+          "text": "cui.settings.keyboardmouse.mapping.description",
           "font_type": "dainbold",
           "size": [ "100% - 6px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]

@@ -154,7 +154,6 @@
                         { "video_button@cui-setting_screen.video_button": { "$toggle_group_forced_index": "$video_forced_index" }},
                         { "sound_button@cui-setting_screen.sound_button": { "$toggle_group_forced_index": "$sound_forced_index" }},
                         { "global_texture_pack_button@cui-setting_screen.global_texture_pack_button": { "ignored": "$ignore_global_resources_section", "$toggle_group_forced_index": "$global_texture_pack_forced_index", "visible": "($is_global_texture_packs_visible)" }},
-                        { "storage_management_button@cui-setting_screen.storage_management_button": { "ignored": "$ignore_storage_section", "$toggle_group_forced_index": "$storage_management_forced_index" }},
                         { "language_button@cui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index" }}
                   ]}}
             ]}}
@@ -273,7 +272,6 @@
             { "gamepad_section@cui-ss_gamepad.gamepad_section": { "ignored": "(not $gamepad_supported)", "visible": false } },
             { "keyboardmouse_section@cui-ss_keyboardmouse.keyboardmouse_section": { "ignored": "(not $keyboard_and_mouse_supported)", "visible": false } },
             { "touch_section@cui-ss_touch.touch_section": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "visible": false } },
-            { "storage_management_section@general_section.storage_management_section": { "visible": false, "ignored": "$ignore_storage_section" }},
             { "global_texture_pack_section@general_section.global_texture_pack_section": { "visible": false, "ignored": "$ignore_global_resources_section" }}
       ]}}
   ]},
@@ -454,9 +452,45 @@
   "option_slider@cui-setting_screen.option_toggle": {
     "$cuiv:is_slider": true,
     "$cuiv:slider_value_binding|default": [],
-    "$cuiv:option_control_name": "cui-setting_screen.option_slider_control"
+    "$cuiv:option_control_name": "cui-setting_screen.option_slider_control",
+    "$cuiv:option_control_name_slider": "cui-setting_screen.slider",
+    "variables": [
+      { "requires": "($cuigv:OldSliderDesign)",
+        "$cuiv:option_control_name": "cui-setting_screen.option_slider_control_old"
+  }]},
+  "slider@cui-slider.slider": {
+    "$slider_box_size": [ 10, 10 ],
+    "size": [ "100% - 8px", 10 ],
+    "enabled": "$cuiv:is_enabled",
+    "$option_label|default": "",
+    "$slider_tts_header": "$option_label",
+    "$slider_tts_header_binding_type": "global",
+    "$slider_enabled_binding_name": "$cuiv:option_toggle_binding_name",
+    "$slider_enabled_binding_type": "global",
+    "variables": [
+      { "requires": "(not $cuiv:option_toggle_binding_name or not $cuiv:is_enabled)",
+        "$slider_enabled_binding_name": "#not_data_bound",
+        "$slider_enabled_binding_type": "none"
+    }]
   },
   "option_slider_control": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [ "100%", 10 ],
+    "controls": [
+      { "label_value": {
+          "type": "label",
+          "text": "$cuiv:slider_value_text",
+          "size": [ "100%", "default" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "text_alignment": "right",
+          "offset": [ -4, 3 ],
+          "bindings": "$cuiv:slider_value_binding"
+      }}
+  ]},
+  "option_slider_control_old": {
     "type": "panel",
     "anchor_from": "top_right",
     "anchor_to": "top_right",
@@ -512,12 +546,13 @@
     "$cuiv:option_description_text|default": "No description?",
     "$cuiv:option_layout_size|default": [ "100%", "100%c + 18px" ],
     "$cuiv:option_layout_max_size|default": [ "100%", 16 ],
-    "$cuiv:option_label_size|default": [ "100% - 14px", "default" ],
+    "$cuiv:option_label_size|default": [ "70% - 14px", "default" ],
     "$cuiv:option_label_offset|default": [ 4, 3 ],
     "$cuiv:option_label_bindings|default": [],
     "$cuiv:option_value_bindings|default": [],
     "$cuiv:option_value_text|default": "No bindings?",
     "use_child_anchors": true,
+    "$cuiv:option_control_name_slider|default": "",
     "variables": [
       { "requires": "(not $cuiv:is_enabled or not $cuiv:option_toggle_binding_name)",
         "$cuiv:option_toggle_binding_type": "none",
@@ -539,7 +574,7 @@
                 "anchor_from": "$cuiv:option_layout_anchor",
                 "anchor_to": "$cuiv:option_layout_anchor",
                 "variables": [
-                  { "requires": "$cuiv:is_slider",
+                  { "requires": "(($cuiv:is_slider) or (not $cuigv:OldSliderDesign))",
                     "$cuiv:option_layout_anchor": "top_right"
                 }]
             }},
@@ -554,6 +589,14 @@
                 "bindings": "$cuiv:option_label_bindings"
             }}
       ]}},
+      { "$cuiv:option_control_name_slider@$cuiv:option_control_name_slider": {
+          "ignored": "((not $cuiv:is_slider) or ($cuigv:OldSliderDesign))"
+      }},
+      { "slider_spacing": {
+          "ignored": "((not $cuiv:is_slider) or ($cuigv:OldSliderDesign))",
+          "type": "panel",
+          "size": [ 4, 4 ]
+      }},
       { "label_panel": {
           "type": "panel",
           "size": [ "100%", "100%c" ],

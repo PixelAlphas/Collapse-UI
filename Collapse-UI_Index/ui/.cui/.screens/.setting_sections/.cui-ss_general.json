@@ -100,6 +100,18 @@
           "color": [ 0.6, 0.6, 0.6 ]
       }},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "action_button@cui-button.text_button": {
+          "ignored": "((not $is_pregame or not $include_controls_and_settings_sections) or (not $is_xboxlive_enabled))",
+          "$pressed_button_name": "sign_out_button",
+          "$cuiv:button_text": "xbox.signOut",
+          "size": [ "100% - 4px", 30 ]
+      }},
+      { "action_button@cui-button.text_button": {
+          "ignored": "((not $is_pregame or not $include_controls_and_settings_sections) or ($is_xboxlive_enabled))",
+          "$pressed_button_name": "sign_in_button",
+          "$cuiv:button_text": "xbox.signInLong",
+          "size": [ "100% - 4px", 30 ]
+      }},
       { "auto_update_enabled_toggle@cui-setting_screen.option_toggle": {
           "ignored": "((not $is_console and not $is_settopbox and not $win10_edition and not $osx_edition) or $nx_os)",
           "$cuiv:option_label_text": "options.autoUpdateEnabled",
