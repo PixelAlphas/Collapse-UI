@@ -1,0 +1,49 @@
+{ "namespace": "cui-credits_section",
+  "root_contents": {
+    "type": "panel",
+    "$scrolling_content": "cui-credits_section.core_element",
+    "controls": [
+      { "@cui-play_screen.general_scroll_contents": {}}
+  ]},
+  "credits": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "pudding_top": { "type": "panel", "size": [ 1, 20 ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 1 ],
+          "texture": "textures/ui/White",
+          "color": [ 0.6, 0.6, 0.6 ]
+      }},
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "bg_label": {
+          "type": "label",
+          "text": "cui.about.tab.credit.bg",
+          "font_type": "MinecraftTen",
+          "size": [ "100% - 8px", 10 ]
+      }},
+      { "mattoo@cui-about_section.about_text": {
+          "$cuiv:about_text": "Mattoo/Mattoo0oo0",
+          "$cuiv:about_text_gray": "youtube.com/@Mattoo0oo0 (YT)"
+      }},
+      { "nutor@cui-about_section.about_text": {
+          "$cuiv:about_text": "Nutor",
+          "$cuiv:about_text_gray": "n.tor (Discord)"
+      }}
+  ]},
+  "core_element": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "use_child_anchors": true,
+    "controls": [
+      { "padding01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-credits_section.credits",
+          "$cuiv:header_text": "cui.about.tab.credit"
+      }},
+      { "padding03": { "type": "panel", "size": [ 1, 10 ]}}
+]}}

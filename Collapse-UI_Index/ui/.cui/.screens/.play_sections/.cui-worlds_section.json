@@ -199,10 +199,22 @@
           "controls": [
             { "h@cui-worlds_section.local_world_item_button": { "size": [ "100%", "100%" ]}}
       ]}},
-      { "padding_03": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
+      { "padding_03": { "type": "panel", "size": [ 2, 2 ],
+        "bindings": [
+          { "binding_type": "view",
+            "source_control_name": "cuib-edit_mode",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+      }]}},
       { "edit_button": {
           "type": "panel",
           "size": [ "100%y", "100%" ],
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "cuib-edit_mode",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+          }],
           "controls": [
             { "h@cui-worlds_section.local_world_edit_button": {}}
       ]}},

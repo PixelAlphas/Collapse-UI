@@ -1,0 +1,73 @@
+{ "namespace": "cui-background_slider",
+  "background_slider": {
+    "type": "panel",
+    "controls": [
+      { "background_slider1@cui-background_slider.background_slider_core": {
+          "$cuiv:background_slider_anim_duration": 0,
+          "$cuiv:background_slider_anim_max": 16,
+          "$cuiv:background_slider_anim_alpha": 1,
+          "$cuiv:background_slider_image": "textures/ui/cui-backgrounds/play_button_slider01"
+      }},
+      { "background_slider2@cui-background_slider.background_slider_core": {
+          "$cuiv:background_slider_anim_duration": 8,
+          "$cuiv:background_slider_anim_max": 16,
+          "$cuiv:background_slider_anim_alpha": 0,
+          "$cuiv:background_slider_image": "textures/ui/cui-backgrounds/play_button_slider02"
+      }},
+      { "background_slider3@cui-background_slider.background_slider_core": {
+          "$cuiv:background_slider_anim_duration": 16,
+          "$cuiv:background_slider_anim_max": 16,
+          "$cuiv:background_slider_anim_alpha": 0,
+          "$cuiv:background_slider_image": "textures/ui/cui-backgrounds/play_button_slider03"
+      }}
+    ]
+  },
+  "background_slider_core": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "offset": [ 0, 0 ],
+    "layer": 1,
+    "$cuiv:background_slider_text_enable|default": false,
+    "$cuiv:background_slider_shadow_enable|default": false,
+    "$cuiv:background_slider_border_enable|default": false,
+    "$cuiv:background_slider_anim_duration|default": 4,
+    "$cuiv:background_slider_anim_max|default": 4,
+    "$cuiv:background_slider_anim_alpha|default": 1,
+    "$cuiv:background_slider_anim|default": "@cui-anims.background_slider_load",
+    "$cuiv:background_slider_text|default": "§e[ Title not written? ]",
+    "$cuiv:background_slider_subtitle_text|default": "§e[ Subtitle not written? ]",
+    "$cuiv:background_slider_image|default": "textures/ui/.cui-assets/error",
+    "$cuiv:background_slider_border_color|default": [ 1, 1, 1 ],
+    "$cuiv:background_slider_text_color|default": [ 0, 0, 0 ],
+    "$cuiv:background_slider_gradient_main_color|default": [ 1, 1, 1, 0 ],
+    "$cuiv:background_slider_gradient_second_color|default": [ 1, 1, 1, 1 ],
+    "controls": [
+      { "image_background_slider_main": {
+          "type": "image",
+          "fill": true,
+          "disable_anim_fast_forward": true,
+    
+          "texture": "$cuiv:background_slider_image",
+          "alpha": "$cuiv:background_slider_anim",
+          "controls": [
+            { "image_background_slider_border": { "ignored": "(not $cuiv:background_slider_border_enable)", "type": "image", "size": [ "100% + 2px", "100% + 2px" ], "texture": "textures/ui/White", "layer": -4, "color": "$cuiv:background_slider_border_color"}},
+            { "image_background_slider_shadow": { "ignored": "(not $cuiv:background_slider_shadow_enable)", "type": "image", "size": [ "100% + 16px", "100% + 16px" ], "texture": "textures/ui/.cui-assets/.shadows/shadow", "alpha": 0.7, "layer": -1 }},
+            { "image_background_slider_text_background": {
+                "type": "panel",
+                "size": [ "100% + 1px", 35 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 1,
+                "alpha": "$cuiv:background_slider_anim",
+                "controls": [
+                  { "background_slider_title": { "type": "label", "ignored": "(not $cuiv:background_slider_text_enable)", "layer": 3, "font_type": "smooth", "text": "$cuiv:background_slider_text", "alpha": "$cuiv:background_slider_anim", "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 4, -12 ], "shadow": true, "color": [ 1, 0.8627, 0 ]}},
+                  { "background_slider_subtitle": { "type": "label", "layer": 3, "ignored": "(not $cuiv:background_slider_text_enable)", "font_type": "smooth", "font_scale_factor": 0.80, "text": "$cuiv:background_slider_subtitle_text", "alpha": "$cuiv:background_slider_anim", "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 4, -2 ], "color": "$cuiv:background_slider_text_color"}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{ "screen": {
+    "$screen_content": "cui-pack_settings_screen.main_screen_content",
+    "$screen_bg_content": "cui-pack_settings_screen.main_screen_background"
+}}

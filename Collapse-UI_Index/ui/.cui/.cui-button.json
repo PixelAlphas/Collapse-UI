@@ -96,7 +96,8 @@
           "layer": 1,
           "alpha": "$cuiv:button_texture_alpha",
           "color": "$cuiv:button_texture_color",
-          "texture": "$cuiv:button_texture"
+          "texture": "$cuiv:button_texture",
+          "anims": "$cuiv:button_anims"
       }},
       { "button_content": {
           "type": "panel",

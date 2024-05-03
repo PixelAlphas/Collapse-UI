@@ -22,7 +22,14 @@
               "binding_collection_name": "$collection_name"
           }]
       }},
-      { "padding_03": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
+      { "padding_03": { "type": "panel", "size": [ 2, 2 ],
+        "bindings": [
+          { "binding_type": "view",
+            "source_control_name": "cuib-edit_mode",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+          }]
+      }},
       { "server_edit_button@cui-button.text_button": {
           "ignored": "(not $cuiv:is_public_server)",
           "$cuiv:button_type_panel": "play.edit_icon",
@@ -30,8 +37,12 @@
           "$pressed_button_name": "button.menu_network_server_world_edit",
           "layer": 4,
           "bindings": [
-            {
-              "binding_type": "collection_details",
+            { "binding_type": "view",
+              "source_control_name": "cuib-edit_mode",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            },
+            { "binding_type": "collection_details",
               "binding_collection_name": "$collection_name"
           }]
       }}
@@ -127,7 +138,7 @@
     "visible": "(not $ignore_add_servers)",
     "size": [ "100% - 8px", 30 ],
     "layer": 2,
-    "$button_text": "networkWorld.add_server",
+    "$cuiv:button_text": "networkWorld.add_server",
     "$radio_toggle_group": true,
     "$toggle_name": "server_navigation_toggle",
     "$toggle_view_binding_name": "add_server_toggle_button",

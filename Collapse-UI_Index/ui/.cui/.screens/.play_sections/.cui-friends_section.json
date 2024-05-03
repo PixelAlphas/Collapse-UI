@@ -35,9 +35,9 @@
               "binding_name_override": "#enabled"
           }]
       }},
-      { "padding_01": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
+      { "padding_01": {  "type": "panel", "size": [ 2, 2 ]}},
       { "join_by_code_button@cui-friends_section.join_by_code_button": { "size": [ "fill", 30 ]}},
-      { "padding_02": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
+      { "padding_02": {  "type": "panel", "size": [ 2, 2 ]}},
       { "notification_button_panel": {
           "type": "panel",
           "size": [ "13%", 30 ],
@@ -174,7 +174,7 @@
     "orientation": "horizontal",
     "controls": [
       { "realms_world_item_button@cui-friends_section.realms_world_item_button": { "size": [ "fill", "100%" ], "layer": 1 }},
-      { "padding_01": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
+      { "padding_01": {  "type": "panel", "size": [ 2, 2 ]}},
       { "edit_panel": {
           "type": "panel",
           "size": [ "100%y", "100%" ],
@@ -202,26 +202,38 @@
               "binding_collection_name": "$realms_worlds_collection_name"
           }]
       }},
-      { "padding_02": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
       { "feed_panel": {
           "type": "panel",
           "size": [ "100%c", "100%" ],
           "controls": [
             { "realms_feed_button@cui-friends_section.realms_feed_button": { "layer": 1 }}
       ]}},
-      { "padding_03": { "ignored": "(not $cuigv:OriginUI)", "type": "panel", "size": [ 2, 2 ]}},
+      { "padding_03": { "type": "panel", "size": [ 2, 2 ],
+        "bindings": [
+          { "binding_type": "view",
+            "source_control_name": "cuib-edit_mode",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+          }]
+      }},
       { "leave_realm_panel": {
           "type": "panel",
           "size": [ "100%c", "100%" ],
           "controls": [
             { "leave_friends_realm_button@cui-friends_section.leave_friends_realm_button": {
-                "layer": 1
+                "layer": 1,
+                "bindings": [
+                  { "binding_name": "#leave_realm_button_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$realms_worlds_collection_name"
+                }]
           }}],
           "bindings": [
-            { "binding_name": "#leave_realm_button_visible",
-              "binding_name_override": "#visible",
-              "binding_type": "collection",
-              "binding_collection_name": "$realms_worlds_collection_name"
+            { "binding_type": "view",
+              "source_control_name": "cuib-edit_mode",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
           }]
   }}]},
   "network_world_item": {

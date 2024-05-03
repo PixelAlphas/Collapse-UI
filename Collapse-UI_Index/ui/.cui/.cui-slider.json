@@ -83,7 +83,7 @@
           "type": "image",
           "ignored": "$is_holographic",
           "texture": "textures/ui/slider_locked_transparent_fade",
-          "alpha": 0.5,
+          "alpha": 0,
           "layer": 4,
           "bindings": [ { "binding_type": "$slider_enabled_binding_type", "binding_condition": "$slider_enabled_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "(not $slider_enabled_binding_name)", "binding_name_override": "#visible" }]
       }}

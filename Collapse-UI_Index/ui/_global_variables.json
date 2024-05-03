@@ -6,6 +6,7 @@
   "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ],
   "$cuigv:BackgroundAlpha": 0.7,
   "$cuigv:UIBackground": false,
+  "$cuigv:UIBackgroundSlider": true,
   
   // Experiments
   
@@ -14,12 +15,12 @@
   "$cuigv:OldSliderDesign": false,
   "$cuigv:VanillaPaperdoll": false,
   "$cuigv:NoGameLogo": false,
-  "$cuigv:NoMarketplaceButton": false,
   "$cuigv:NoRealmsPromoteInWorldSection": true,
-  "$cuigv:AdditionalStartButtons": true,
   
   // Unused - will do nothing...
   "$cuigv:OriginUI": true,
+  "$cuigv:NoMarketplaceButton": false,
   "$cuigv:DebugElement": false,
-  "$cuigv:CompactMode": false
+  "$cuigv:CompactMode": false,
+  "$cuigv:AdditionalStartButtons": true
 }

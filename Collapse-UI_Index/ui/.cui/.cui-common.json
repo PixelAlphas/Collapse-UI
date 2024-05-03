@@ -197,25 +197,38 @@
           "ignored": "(not $cuigv:UIBackground)",
           "type": "image",
           "fill": true,
+          "alpha": "$cuigv:BackgroundAlpha",
           "layer": -95,
-          "texture": "textures/ui/.cui-assets/ui_background"
+          "texture": "textures/ui/cui-backgrounds/ui_background"
       }}
   ]},
-  "close_button@cui-button.text_button": {
-    "$pressed_button_name": "button.menu_exit",
+  "loading_screen_background": {
+    "type": "panel",
     "controls": [
-      { "default@cui-common.close_button_panel": {}},
-      { "hover@cui-common.close_button_panel": { "$cuiv:close_button_color": [ 0.7, 0.7, 0.7 ]}},
-      { "pressed@cui-common.close_button_panel": { "$cuiv:close_button_color": "$cuigv:PrimaryColor"}}
+      { "gradient02@cui-common.gradient_renderer_template": {
+          "size": [ "100%", "30%" ],
+          "color1": [ 0, 0, 0, 0 ],
+          "color2": [ 0, 0, 0, 1 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -50 ]
+      }},
+      { "background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "size": [ "100%", 50 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }},
+      { "background": {
+          "ignored": "(not $cuigv:UIBackground)",
+          "type": "image",
+          "alpha": "$cuigv:BackgroundAlpha",
+          "fill": true,
+          "layer": -95,
+          "texture": "textures/ui/cui-backgrounds/ui_background_blur"
+      }}
   ]},
-  "close_button_panel": {
-    "type": "label",
-    "font_type": "dainbold",
-    "font_scale_factor": 1.8,
-    "text": "<",
-    "color":"$cuiv:close_button_color",
-    "$cuiv:close_button_color|default": [ 1, 1, 1 ]
-  },
   "menu_screen_background": {
     "type": "panel",
     "controls": [
@@ -236,11 +249,27 @@
       { "background": {
           "ignored": "(not $cuigv:UIBackground)",
           "type": "image",
+          "alpha": "$cuigv:BackgroundAlpha",
           "fill": true,
           "layer": -95,
-          "texture": "textures/ui/.cui-assets/ui_background_blur"
+          "texture": "textures/ui/cui-backgrounds/ui_background_blur"
       }}
   ]},
+  "close_button@cui-button.text_button": {
+    "$pressed_button_name": "button.menu_exit",
+    "controls": [
+      { "default@cui-common.close_button_panel": {}},
+      { "hover@cui-common.close_button_panel": { "$cuiv:close_button_color": [ 0.7, 0.7, 0.7 ]}},
+      { "pressed@cui-common.close_button_panel": { "$cuiv:close_button_color": "$cuigv:PrimaryColor"}}
+  ]},
+  "close_button_panel": {
+    "type": "label",
+    "font_type": "dainbold",
+    "font_scale_factor": 1.8,
+    "text": "<",
+    "color":"$cuiv:close_button_color",
+    "$cuiv:close_button_color|default": [ 1, 1, 1 ]
+  },
   "title_core": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -253,6 +282,7 @@
     "$cuiv:title_text_subtitle|default": "",
     "$cuiv:anim_from": [ 14, -50 ],
     "$cuiv:anim_to": [ 14, 4 ],
+    "$cuiv:AddPadding|default": false,
     "animation_reset_name": "screen_animation_reset",
     "anims": [
       "@cui-anims.screen_outro_anim_push",
@@ -262,6 +292,7 @@
     ],
     
     "controls": [
+      { "paddings": { "type": "panel", "size": [ 28, 1 ], "ignored": "(not $cuiv:AddPadding)"}},
       { "close_button@cui-common.close_button": {
           "ignored": "(not $cuiv:title_back_button)",
           "size": [ 28, 28 ]
@@ -270,7 +301,7 @@
       { "label": {
           "type": "label",
           "text": "$cuiv:title_text",
-          "size": [ 180, 30 ],
+          "size": [ 300, 30 ],
           "font_scale_factor": 2.3,
           "anchor_from": "top_left",
           "anchor_to": "top_left",

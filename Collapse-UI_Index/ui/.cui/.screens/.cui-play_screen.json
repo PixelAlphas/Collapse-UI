@@ -2,18 +2,13 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      { "@cui-play_screen.play_screen_core": {}},
+      { "@cui-play_screen.tab_element": { "layer": 10 }},
+      { "@cui-play_screen.play_screen_panel": {}},
       { "popup_dialog_factory": {
           "type": "factory",
           "control_ids": {
             "join_by_code": "@play.popup_dialog_join_by_code"
       }}}
-  ]},
-  "play_screen_core": {
-    "type": "panel",
-    "controls": [
-      { "@cui-play_screen.tab_element": { "layer": 10 }},
-      { "@cui-play_screen.play_screen_panel": {}}
   ]},
   "play_screen_panel": {
     "type": "panel",
@@ -32,6 +27,44 @@
     ],
     "controls": [
       { "tab_content_panel@cui-play_screen.tab_content_element": { "layer": 2 }}
+  ]},
+  "tab_element": {
+    "type": "panel",
+    "controls": [
+      { "@cui-common.title_core": {
+          "$cuiv:title_text": "menu.play"
+      }},
+      { "gamepad_tooltips@gamepad_tooltips": {}},
+      { "tabs_element": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 40 ],
+          "offset": [ -14, 4 ],
+          "layer": 1,
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$cuiv:anim_from": [ -14, -50 ],
+          "$cuiv:anim_to": [ -14, 4 ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ],
+          "controls": [
+            { "gamepad_tooltip_lb@cui-gamepad.gamepad_tooltip_lb": {}},
+            { "edit_mode@cui-play_screen.edit_mode": { "size": [ 28, 28 ]}},
+            { "paddings_00": { "type": "panel", "size": [ 2, 1 ]}},
+            { "world_navigation_tab@cui-play_screen.world_navigation_tab": { "size": [ 65, 28 ]}},
+            { "paddings_01": { "type": "panel", "size": [ 2, 1 ]}},
+            { "friends_navigation_tab@cui-play_screen.friends_navigation_tab": { "size": [ 65, 28 ]}},
+            { "paddings_02": { "type": "panel", "size": [ 2, 1 ]}},
+            { "server_navigation_tab@cui-play_screen.server_navigation_tab": { "size": [ 65, 28 ]}},
+            { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip_rb": {}}
+          ]
+        }
+      }
     ]
   },
   "general_scroll_contents": {
@@ -63,8 +96,20 @@
     "controls": [
       { "worlds_tab_content@cui-play_screen.worlds_tab_content_panel": {} },
       { "friends_tab_content@cui-play_screen.friends_tab_content_panel": {} },
-      { "server_tab_content_panel@cui-play_screen.server_tab_content_panel": {} }
+      { "server_tab_content@cui-play_screen.server_tab_content_panel": {} }
   ]},
+  "worlds_tab_content_panel@common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "world_navigation_tab_toggle",
+    "$scroll_tab_content": "cui-worlds_section.root_contents"
+  },
+  "friends_tab_content_panel@common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "friends_navigation_tab_toggle",
+    "$scroll_tab_content": "cui-friends_section.root_contents"
+  },
+  "server_tab_content_panel@common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "server_navigation_tab_toggle",
+    "$scroll_tab_content": "cui-servers_section.root_contents"
+  },
   "common_tab_content_panel": {
     "type": "panel",
     "controls": [
@@ -82,22 +127,6 @@
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
   }]},
-  "worlds_tab_content_panel@common_tab_content_panel": {
-    "$visible_bind_toggle_source_control": "world_navigation_tab_toggle",
-    "$scroll_tab_content": "cui-worlds_section.root_contents"
-  },
-  "friends_tab_content_panel@common_tab_content_panel": {
-    "$visible_bind_toggle_source_control": "friends_navigation_tab_toggle",
-    "$scroll_tab_content": "cui-friends_section.root_contents"
-  },
-  "server_tab_content_panel@common_tab_content_panel": {
-    "$visible_bind_toggle_source_control": "server_navigation_tab_toggle",
-    "$scroll_tab_content": "cui-servers_section.root_contents"
-  },
-  "search_tab_content_panel@common_tab_content_panel": {
-    "$visible_bind_toggle_source_control": "search_navigation_tab_toggle",
-    "$scroll_tab_content": "cui-search_section.root_contents"
-  },
   "gamepad_tooltips": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -111,6 +140,10 @@
       { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {}},
       { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {
           "ignored": "(not $can_quit)"
+      }},
+      { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
+          "$cuiv:icon_texture": "textures/ui/.cui-assets/.controller/start",
+          "$icon_description_bind": "Toggle \"Edit Mode\""
       }}
   ]},
   "common_scrolling_panel@common.scrolling_panel": {
@@ -120,43 +153,6 @@
     "$show_background": false,
     "anchor_from": "top_right",
     "anchor_to": "top_right"
-  },
-  "tab_element": {
-    "type": "panel",
-    "controls": [
-      { "@cui-common.title_core": {
-          "$cuiv:title_text": "Play"
-      }},
-      { "gamepad_tooltips@gamepad_tooltips": {}},
-      { "tabs_element": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": [ "100%c", 40 ],
-          "offset": [ -14, 4 ],
-          "layer": 1,
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "$cuiv:anim_from": [ -14, -50 ],
-          "$cuiv:anim_to": [ -14, 4 ],
-          "animation_reset_name": "screen_animation_reset",
-          "anims": [
-            "@cui-anims.screen_outro_anim_push",
-            "@cui-anims.screen_outro_anim_pop",
-            "@cui-anims.screen_intro_anim_push",
-            "@cui-anims.screen_intro_anim_pop"
-          ],
-          "controls": [
-            { "gamepad_tooltip_lb@cui-gamepad.gamepad_tooltip_lb": {}},
-            { "world_navigation_tab@cui-play_screen.world_navigation_tab": { "size": [ 65, 28 ]}},
-            { "paddings_01": { "type": "panel", "size": [ 2, 1 ]}},
-            { "friends_navigation_tab@cui-play_screen.friends_navigation_tab": { "size": [ 65, 28 ]}},
-            { "paddings_02": { "type": "panel", "size": [ 2, 1 ]}},
-            { "server_navigation_tab@cui-play_screen.server_navigation_tab": { "size": [ 65, 28 ]}},
-            { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip_rb": {}}
-          ]
-        }
-      }
-    ]
   },
   "adv_tab_content": {
     "type": "panel",
@@ -227,7 +223,7 @@
     "$cuiv:count_text_name": "#world_item_count",
     "$cuiv:tab_name": "selectWorld.tab.worlds",
     "$toggle_group_forced_index": 0,
-    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/worlds_icon",
+    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/.icons/worlds_icon",
     "variables": [
       { "requires": "$is_editor_mode_enabled",
         "$cuiv:tab_name": "playscreen.editor.worlds"
@@ -238,13 +234,29 @@
     "$cuiv:count_text_name": "#friend_world_item_count",
     "$cuiv:tab_name": "selectWorld.tab.friends",
     "$toggle_group_forced_index": 1,
-    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/friends_icon"
+    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/.icons/friends_icon"
   },
   "server_navigation_tab@cui-play_screen.top_tab": {
     "$tab_view_binding_name": "server_navigation_tab_toggle",
     "$cuiv:count_text_name": "#server_world_item_count",
     "$cuiv:tab_name": "selectWorld.tab.thirdParty",
     "$toggle_group_forced_index": 2,
-    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/servers_icon"
-  }
-}
+    "$cuiv:play_icon_texture": "textures/ui/.cui-assets/.icons/servers_icon"
+  },
+  "edit_mode@cui-toggle.toggle_button": {
+    "size": [ 28, 28 ],
+    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/edit_icon",
+    "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_image",
+    "$cuiv:toggle_texture_offset": [ 0, 0 ],
+    "$toggle_view_binding_name": "cuib-edit_mode",
+    "$toggle_name": "editmode",
+    "$button_mappings": [
+      { "from_button_id": "button.controller_start",
+        "to_button_id": "button.controller_start",
+        "mapping_type": "global"
+      },
+      { "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+    }]
+}}

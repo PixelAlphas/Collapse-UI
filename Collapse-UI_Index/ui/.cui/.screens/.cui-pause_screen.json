@@ -38,7 +38,7 @@
           "$cuiv:button_text": "cui.pause.resume",
           "$cuiv:button_image_anchor": "bottom_right",
           "$cuiv:button_image_offset": [ -5, -5 ],
-          "$cuiv:button_image_texture": "textures/ui/.cui-assets/play_icon"
+          "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/play_icon"
       }},
       { "paddings": { "type": "panel", "size": [ 4, 4 ]}},
       { "alter_stack": {
@@ -54,7 +54,7 @@
               "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
               "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
               "$cuiv:button_text": "cui.main_menu.achievement",
-              "$cuiv:button_image_texture": "textures/ui/.cui-assets/achievement_icon",
+              "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/achievement_icon",
               "$cuiv:button_image_anchor": "top_left",
               "$cuiv:button_image_offset": [ 5, 5 ]
           }},
@@ -66,7 +66,7 @@
               "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
               "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
               "$cuiv:button_text": "cui.main_menu.skin",
-              "$cuiv:button_image_texture": "textures/ui/.cui-assets/skin_icon",
+              "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/skin_icon",
               "$cuiv:button_image_anchor": "top_left",
               "$cuiv:button_image_offset": [ 5, 5 ]
           }},
@@ -82,7 +82,7 @@
                     "$cuiv:button_type_panel": "cui-start_screen.button_label",
                     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
                     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-                    "$cuiv:button_image_texture": "textures/ui/.cui-assets/setting_icon"
+                    "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/setting_icon"
                 }},
                 { "paddings_01": { "type": "panel", "size": [ 4, 4 ]}},
                 { "exit@cui-button.text_button": {
@@ -91,7 +91,7 @@
                     "$cuiv:button_type_panel": "cui-start_screen.button_label",
                     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
                     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-                    "$cuiv:button_image_texture": "textures/ui/.cui-assets/exit_icon"
+                    "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/exit_icon"
                 }}
           ]}}
       ]}}
@@ -202,7 +202,7 @@
                 "$cuiv:toggle_texture": "textures/ui/.cui-assets/close",
                 "$toggle_view_binding_name": "cuib-player_list",
                 "$toggle_name": "playerlist",
-                "$button_type_panel": "cui-toggle.toggle_button_core_only_image",
+                "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_image",
                 "$toggle_group_forced_index": 2,
                 "$radio_toggle_group": true,
                 "$toggle_group_default_selected": 0
@@ -216,7 +216,7 @@
           "$cuiv:toggle_texture_size": [ 8, 15 ],
           "$cuiv:toggle_texture": "textures/ui/.cui-assets/open",
           "$toggle_view_binding_name": "cuib-player_list",
-          "$button_type_panel": "cui-toggle.toggle_button_core_only_image",
+          "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_image",
           "$toggle_name": "playerlist",
           "$toggle_group_forced_index": 1,
           "$radio_toggle_group": true,
