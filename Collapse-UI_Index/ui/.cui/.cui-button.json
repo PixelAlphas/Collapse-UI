@@ -32,13 +32,13 @@
   }]},
   "standard_button_assets@button": {
     "$cuiv:default_button_texture|default": "textures/ui/.cui-assets/.buttons/button_idle",
-    "$cuiv:default_button_color|default": [ 1, 1, 1 ],
+    "$cuiv:default_button_color|default": "$cuigv:SecondaryColor",
     "$cuiv:hover_button_texture|default": "textures/ui/.cui-assets/.buttons/button_hover",
-    "$cuiv:hover_button_color|default": [ 1, 1, 1 ],
+    "$cuiv:hover_button_color|default": "$cuigv:SecondaryColor",
     "$cuiv:pressed_button_texture|default": "textures/ui/.cui-assets/.buttons/button_pressed",
-    "$cuiv:pressed_button_color|default": [ 1, 1, 1 ],
+    "$cuiv:pressed_button_color|default": "$cuigv:SecondaryColor",
     "$cuiv:locked_button_texture|default": "textures/ui/disabledButtonNoBorder",
-    "$cuiv:locked_button_color|default": [ 1, 1, 1 ]
+    "$cuiv:locked_button_color|default": "$cuigv:SecondaryColor"
   },
   "text_button@standard_button_assets": {
     "$cuiv:button_text|default": "",

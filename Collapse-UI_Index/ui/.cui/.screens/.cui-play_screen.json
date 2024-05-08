@@ -255,6 +255,10 @@
         "to_button_id": "button.controller_start",
         "mapping_type": "global"
       },
+      { "from_button_id": "button.scoreboard",
+        "to_button_id": "button.scoreboard",
+        "mapping_type": "global"
+      },
       { "from_button_id": "button.menu_select",
         "to_button_id": "button.menu_select",
         "mapping_type": "pressed"

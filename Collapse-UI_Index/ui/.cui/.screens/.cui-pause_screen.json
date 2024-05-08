@@ -8,7 +8,9 @@
       }},
       { "@main_button": {}},
       { "@playerlist_element": {}},
-      { "@cui-start_screen.gamepad_tooltips":{}}
+      { "@cui-start_screen.gamepad_tooltips":{
+        "$cuigv:no_extramenu": true
+      }}
   ]},
   "main_button": {
     "type": "stack_panel",
@@ -230,12 +232,13 @@
       }}
   ]},
   "scrolling_panel@common.scrolling_panel": {
-    "size": [ "100%", "100% - 40px" ],
+    "size": [ "100%", "100% - 20px" ],
     "$scrolling_pane_size": [ "100%", "100%" ],
     "$scroll_size": [ 2, "100%" ],
     "$show_background": false,
     "clips_children": true,
     "layer": 6,
+    "offset": [ 0, 10 ],
     "$scrolling_content": "cui-pause_screen.playerlist_scroll"
   },
   "invite_button@cui-button.text_button": {
@@ -478,5 +481,4 @@
                 "bindings": [ { "binding_type": "collection_details", "binding_collection_name": "players_collection" }]
             }}
       ]}}
-  ]}
-}
+]}}

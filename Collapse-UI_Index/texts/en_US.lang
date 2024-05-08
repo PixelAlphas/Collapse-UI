@@ -72,8 +72,6 @@ cui.username.local=Playing as (Local)
 cui.main_menu.quickaccess=Quick Access
 cui.main_menu.infomation=Information
 
-
-
 ## Pause screen
 cui.pause.resume=RESUME
 cui.pause.world=Currently playing
@@ -93,7 +91,7 @@ cui.about.title=About This UI
 cui.about.tab.about=About
 cui.about.tab.about.uititle=Collapse-UI
 cui.about.tab.about.author=Author of this UI
-cui.about.tab.about.update=Release date
+cui.about.tab.about.update=Build Release
 cui.about.tab.activeconfig=Configs
 cui.about.tab.activeconfigalt=Active Configurations
 
@@ -110,7 +108,7 @@ cui.about.tab.activeconfig.layout=Layouts
 cui.about.tab.activeconfig.searchboxsystem=World Search Box
 cui.about.tab.activeconfig.oldsliderdesign=Old Slider design
 cui.about.tab.activeconfig.vanillapaperdoll=Vanilla Player doll
-cui.about.tab.activeconfig.norealmspromoteinworldsection=Realm Promoters on world section
+cui.about.tab.activeconfig.norealmspromoteinworldsection=No Realm Promoters on world section
 cui.about.tab.activeconfig.nogamelogo=No Game logo
 
 cui.about.tab.credit=Credits

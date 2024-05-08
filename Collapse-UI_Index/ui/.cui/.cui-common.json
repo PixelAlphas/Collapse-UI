@@ -188,7 +188,7 @@
       { "gradient@cui-common.gradient_renderer_template": {
           "size": [ "55%", "100%" ],
           "gradient_direction": "horizontal",
-          "color1": [ 0, 0, 0, 0.7 ],
+          "color1": "$cuigv:BackgroundGradient",
           "color2": [ 0, 0, 0, 0 ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle"
@@ -234,7 +234,7 @@
     "controls": [
       { "gradient01@cui-common.gradient_renderer_template": {
           "size": [ "100%", "20%" ],
-          "color1": [ 0, 0, 0, 0.7 ],
+          "color1": "$cuigv:BackgroundGradient",
           "color2": [ 0, 0, 0, 0 ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle"
@@ -242,7 +242,7 @@
       { "gradient02@cui-common.gradient_renderer_template": {
           "size": [ "100%", "45%" ],
           "color1": [ 0, 0, 0, 0 ],
-          "color2": [ 0, 0, 0, 0.7 ],
+          "color2": "$cuigv:BackgroundGradient",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
       }},
@@ -366,7 +366,7 @@
   ]},
   "element_background":{
     "type": "image",
-    "$cuiv:element_background_alpha|default": 0.7,
+    "$cuiv:element_background_alpha|default": "$cuigv:BackgroundAlpha",
     "$cuiv:element_background_color|default": [ 0, 0, 0 ],
     "$cuiv:element_background_size|default": [ "default", "100%cm" ],
     "$cuiv:element_background_offset|default": [ 0, 0 ],

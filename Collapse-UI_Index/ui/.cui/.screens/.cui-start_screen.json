@@ -2,7 +2,7 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.4.1", "$cuiv:AddPadding": false, "ignored": "(not $cuigv:NoGameLogo)"}},
+      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.4.1.1", "$cuiv:AddPadding": false, "ignored": "(not $cuigv:NoGameLogo)"}},
       { "@title": { "ignored": "$cuigv:NoGameLogo" }},
       { "@main_button": {}},
       { "@xbox_element": {}},
@@ -29,12 +29,14 @@
     "offset": [ 4, -10 ],
     "layer": 20,
     "use_child_anchors": false,
+    "$cuigv:no_extramenu|default": false,
     "controls": [
       { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {}},
       { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {
           "ignored": "(not $can_quit)"
       }},
       { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
+          "ignored": "$cuiv:no_extramenu",
           "$cuiv:icon_texture": "textures/ui/.cui-assets/.controller/start",
           "$icon_description_bind": "Open \"Extra Menu\""
       }}
@@ -231,6 +233,10 @@
           "$button_mappings": [
             { "from_button_id": "button.controller_start",
               "to_button_id": "button.controller_start",
+              "mapping_type": "global"
+            },
+            { "from_button_id": "button.scoreboard",
+              "to_button_id": "button.scoreboard",
               "mapping_type": "global"
             },
             { "from_button_id": "button.menu_select",
