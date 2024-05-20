@@ -25,25 +25,43 @@
           "font_type": "MinecraftTen",
           "size": [ "100% - 8px", 10 ]
       }},
+      { "config_name@cui-activeconfig_section.config_string": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.configname",
+          "$cuiv:config_string": "$cuigv:ConfigName"
+      }},
+      { "config_version@cui-activeconfig_section.config_string": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.designedversion",
+          "$cuiv:config_string": "$cuigv:DesignedVersion"
+      }},
+      { "pudding_idk_1": { "type": "panel", "size": [ 1, 2 ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 1 ],
+          "texture": "textures/ui/White",
+          "color": [ 0.6, 0.6, 0.6 ]
+      }},
+      { "pudding_idk_2": { "type": "panel", "size": [ 1, 2 ]}},
       { "config_theme_01@cui-activeconfig_section.config_color": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.primarycolor",
-          "$cuiv:config_color|default": "$cuigv:PrimaryColor"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.primarycolor",
+          "$cuiv:config_color": "$cuigv:PrimaryColor"
       }},
       { "config_theme_02@cui-activeconfig_section.config_color": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.secondarycolor",
-          "$cuiv:config_color|default": "$cuigv:SecondaryColor"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.secondarycolor",
+          "$cuiv:config_color": "$cuigv:SecondaryColor"
       }},
       { "config_theme_03@cui-activeconfig_section.config_color": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.fontprimarycolor",
-          "$cuiv:config_color|default": "$cuigv:FontPrimaryColor"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.fontprimarycolor",
+          "$cuiv:config_color": "$cuigv:FontPrimaryColor"
       }},
       { "config_theme_04@cui-activeconfig_section.config_color": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.fontsecondarycolor",
-          "$cuiv:config_color|default": "$cuigv:FontSecondaryColor"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.fontsecondarycolor",
+          "$cuiv:config_color": "$cuigv:FontSecondaryColor"
       }},
       { "config_theme_05": {
           "type": "panel",
@@ -66,13 +84,13 @@
       ]}},
       { "config_theme_06@cui-activeconfig_section.config_label": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.uibackground",
-          "$cuiv:config_value|default": "$cuigv:UIBackground"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.uibackground",
+          "$cuiv:config_value": "$cuigv:UIBackground"
       }},
       { "config_theme_07@cui-activeconfig_section.config_label": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.uibackgroundslider",
-          "$cuiv:config_value|default": "$cuigv:UIBackgroundSlider"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.uibackgroundslider",
+          "$cuiv:config_value": "$cuigv:UIBackgroundSlider"
       }},
       { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
       { "line": {
@@ -90,30 +108,56 @@
       }},
       { "config_layout_01@cui-activeconfig_section.config_label": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.searchboxsystem",
-          "$cuiv:config_value|default": "$cuigv:SearchBoxSystem"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.searchboxsystem",
+          "$cuiv:config_value": "$cuigv:SearchBoxSystem"
       }},
       { "config_layout_02@cui-activeconfig_section.config_label": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.oldsliderdesign",
-          "$cuiv:config_value|default": "$cuigv:OldSliderDesign"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.oldsliderdesign",
+          "$cuiv:config_value": "$cuigv:OldSliderDesign"
       }},
       { "config_layout_03@cui-activeconfig_section.config_label": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.vanillapaperdoll",
-          "$cuiv:config_value|default": "$cuigv:VanillaPaperdoll"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.vanillapaperdoll",
+          "$cuiv:config_value": "$cuigv:VanillaPaperdoll"
       }},
       { "config_layout_04@cui-activeconfig_section.config_label": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.nogamelogo",
-          "$cuiv:config_value|default": "$cuigv:NoGameLogo"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.nogamelogo",
+          "$cuiv:config_value": "$cuigv:NoGameLogo"
       }},
       { "config_layout_05@cui-activeconfig_section.config_label": {
           "type": "panel",
-          "$cuiv:config_text|default": "cui.about.tab.activeconfig.norealmspromoteinworldsection",
-          "$cuiv:config_value|default": "$cuigv:NoRealmsPromoteInWorldSection"
+          "$cuiv:config_text": "cui.about.tab.activeconfig.norealmspromoteinworldsection",
+          "$cuiv:config_value": "$cuigv:NoRealmsPromoteInWorldSection"
+      }},
+      { "config_layout_06@cui-activeconfig_section.config_label": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.startmainbuttonclassic",
+          "$cuiv:config_value": "$cuigv:StartMainButtonClassic"
       }}
       
+  ]},
+  "config_string": {
+    "type": "panel",
+    "size": [ "100% - 10px", 16 ],
+    "$cuiv:config_text|default": "",
+    "$cuiv:config_string|default": "",
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:config_text"
+      }},
+      { "config_value": {
+          "type": "label",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "text": "$cuiv:config_string",
+          "color": [ 0.7, 0.7, 0.7 ],
+          "$cuiv:config_string|default": "Invaild..."
+      }}
   ]},
   "config_label": {
     "type": "panel",

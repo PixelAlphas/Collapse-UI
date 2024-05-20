@@ -67,6 +67,8 @@ cui.settings.accoumt.main.description=A section for signing in your xbox account
 cui.main_menu.play=PLAY
 cui.main_menu.achievement=ACHIEVEMENTS
 cui.main_menu.skin=SKINS
+cui.main_menu.settings=SETTINGS
+cui.main_menu.exit=EXIT
 cui.username.logged_in=Logged as
 cui.username.local=Playing as (Local)
 cui.main_menu.quickaccess=Quick Access
@@ -95,6 +97,9 @@ cui.about.tab.about.update=Build Release
 cui.about.tab.activeconfig=Configs
 cui.about.tab.activeconfigalt=Active Configurations
 
+cui.about.tab.activeconfig.configname=Config Name
+cui.about.tab.activeconfig.designedversion=Supported version
+
 cui.about.tab.activeconfig.theme=Theme
 cui.about.tab.activeconfig.primarycolor=Primary Color
 cui.about.tab.activeconfig.secondarycolor=Secondary Color (Unsupported)
@@ -110,6 +115,7 @@ cui.about.tab.activeconfig.oldsliderdesign=Old Slider design
 cui.about.tab.activeconfig.vanillapaperdoll=Vanilla Player doll
 cui.about.tab.activeconfig.norealmspromoteinworldsection=No Realm Promoters on world section
 cui.about.tab.activeconfig.nogamelogo=No Game logo
+cui.about.tab.activeconfig.startmenubuttonclassic=Classic Start menu
 
 cui.about.tab.credit=Credits
 cui.about.tab.credit.bg=Artworks / Backgrounds

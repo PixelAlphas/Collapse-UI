@@ -21,11 +21,11 @@
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
       { "collapse-ui@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.uititle",
-          "$cuiv:about_text_gray": "v1.4.1.1"
+          "$cuiv:about_text_gray": "v1.4.2"
       }},
       { "update_release_date@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Fri, May 8 (2024)"
+          "$cuiv:about_text_gray": "Mon, May 19 (2024)"
       }},
       { "arxance@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.author",
@@ -136,7 +136,7 @@
                 "size": [ 16, 16 ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
-                "texture": "textures/ui/.cui-assets/.icons/yt_icon"
+                "texture": "textures/ui/.cui-assets/.icons/youtube_icon"
             }},
             { "label01": {
                 "type": "label",
@@ -148,6 +148,58 @@
             { "label02": {
                 "type": "label",
                 "text": "@Arcdustry",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "color": [ 0.7, 0.7, 0.7 ]
+            }}
+      ]}},
+      { "twitter": {
+          "type": "panel",
+          "size": [ "100% - 10px", 18 ],
+          "controls": [
+            { "logo": {
+                "type": "image",
+                "size": [ 16, 16 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/.cui-assets/.icons/twitter_icon"
+            }},
+            { "label01": {
+                "type": "label",
+                "text": "Twitter/X",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [ 20, 0 ]
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "@PixelHarlow",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "color": [ 0.7, 0.7, 0.7 ]
+            }}
+      ]}},
+      { "github": {
+          "type": "panel",
+          "size": [ "100% - 10px", 18 ],
+          "controls": [
+            { "logo": {
+                "type": "image",
+                "size": [ 16, 16 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "texture": "textures/ui/.cui-assets/.icons/github_icon"
+            }},
+            { "label01": {
+                "type": "label",
+                "text": "Github (View source code)",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [ 20, 0 ]
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "@PixelAlpha",
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
                 "color": [ 0.7, 0.7, 0.7 ]

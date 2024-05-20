@@ -247,7 +247,7 @@
                 "size": [ "100% - 8px", "100%c" ],
                 "controls": [
                   { "utilities@cui-common.header": { "$cuiv:header_text": "realmsSettingsScreen.worldSectionTitle" }},
-                  { "game_button@cui-setting_screen.game_button": { "visible": "(not $education_edition_china)", "$toggle_group_forced_index": "$game_forced_index" }},
+                  { "game_button@cui-setting_screen.game_button": { "$toggle_group_forced_index": "$game_forced_index" }},
                   { "multiplayer_button@cui-setting_screen.multiplayer_button": { "visible": "(not $education_edition)", "$toggle_group_forced_index": "$multiplayer_forced_index" }}
             ]}}
       ]}}

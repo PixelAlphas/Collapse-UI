@@ -1,27 +1,56 @@
 {
+  // General
+  "$cuigv:ConfigName": "Default",
+    // Config name — You can change it to anything you want if you wish to customize.
+  "$cuigv:DesignedVersion": "v1.4.2",
+    // Designed Version — Config version that supported the UI
+  
+  // -- README before modifying! --
+  // There'll be a corresponding text next to the value.
+  // To ensure the correct way and not causing errors, You'll see those
+  // by following.
+    // [ 1, 1, 1, 1.0 ] | ColorAdv — RBG values but divided by 1 + Alpha
+    // [ 1, 1, 1 ] Color — RBG values but divided by 1
+    // 0.0 - 1.0 | String — Value only support ranged from 0.0 to 1.0
+    // True/False | Boolean — Only True/False as Value ( True = Enable | False = Disable )
+  
   // UI Theme
-  "$cuigv:PrimaryColor": [ 1, 0.8627, 0 ],
-  "$cuigv:SecondaryColor": [ 0, 0, 0 ],
-  "$cuigv:FontPrimaryColor": [ 1, 1, 1 ],
-  "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ],
-  "$cuigv:BackgroundAlpha": 0.7,
-  "$cuigv:UIBackground": false,
-  "$cuigv:UIBackgroundSlider": true,
-  "$cuigv:BackgroundGradient": [ 0, 0, 0, 0.7 ],
-  
-  // Experiments
-  
+  // Changes the UI color/alpha and enable some of its featuure
+  "$cuigv:PrimaryColor": [ 1, 0.8627, 0 ], // Color
+    // UI accents, this includes — Buttons, Icons, Loading bar, and etc.
+  "$cuigv:SecondaryColor": [ 0, 0, 0 ], // Color
+    // Background Colors.
+  "$cuigv:FontPrimaryColor": [ 1, 1, 1 ], // Color
+    // Overall texts color. (Not fully finished)
+  "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ], // Color
+    // Secondary texts color — it's gray text.
+  "$cuigv:BackgroundAlpha": 0.7, // String
+    // UI Background transparent.
+  "$cuigv:UIBackground": false, // Boolean
+    // Shows actual image behind the UI — Including Blur version.
+  "$cuigv:UIBackgroundSlider": true, // Boolean
+    // Shows a sliding images on the Play Button from Start screen.
+  "$cuigv:BackgroundGradient": [ 0, 0, 0, 0.7 ], // ColorAdv
+    // Background Gradient.
+
   // Layouts
-  "$cuigv:SearchBoxSystem": true,
-  "$cuigv:OldSliderDesign": false,
-  "$cuigv:VanillaPaperdoll": false,
-  "$cuigv:NoGameLogo": false,
-  "$cuigv:NoRealmsPromoteInWorldSection": true,
-  
+  "$cuigv:StartMainButtonClassic": false,
+    // Enable Classic menu (from Arc-UI) for controller convenience.
+  "$cuigv:SearchBoxSystem": true, // Boolean
+    // World Search ( Case Sensitive! )
+  "$cuigv:OldSliderDesign": false, // Boolean
+    // Enable "Sodium Mod" looking settings slider — Controller are not supported.
+  "$cuigv:VanillaPaperdoll": false, // Boolean
+    // Shows your character/skin on the menu.
+  "$cuigv:NoGameLogo": false, // Boolean
+    // Replace the UI logo with game logo.
+  "$cuigv:NoRealmsPromoteInWorldSection": true, // Boolean
+    // Realms promotion on world section.
+    
   // Unused - will do nothing...
-  "$cuigv:OriginUI": true,
-  "$cuigv:NoMarketplaceButton": false,
-  "$cuigv:DebugElement": false,
-  "$cuigv:CompactMode": false,
-  "$cuigv:AdditionalStartButtons": true
-}
+  "$cuigv:OriginUI": true, // Boolean
+  "$cuigv:NoMarketplaceButton": false, // Boolean
+  "$cuigv:DebugElement": false, // Boolean
+  "$cuigv:CompactMode": false, // Boolean
+  "$cuigv:AdditionalStartButtons": true // Boolean
+}a
