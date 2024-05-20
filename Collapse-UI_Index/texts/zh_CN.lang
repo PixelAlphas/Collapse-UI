@@ -6,9 +6,9 @@ cui.settings.controls=控制(s)
 cui.settings.generals=通用(s)
 
 ## > Accessibility
-cui.settings.accessibility.main.description=可能有助于残疾和可见性相关的部分。
-cui.settings.accessibility.tts.description=当你与按键互动时，可能会播放 AI 的声音。
-cui.settings.accessibility.misc.description=hud 和游戏相关的辅助功能，例如聊天消息和黑暗效果。
+cui.settings.accessibility.main.description=可能有助于残疾人和可见性相关的部分。
+cui.settings.accessibility.tts.description=当你与按钮互动时，可能会播放AI的声音。
+cui.settings.accessibility.misc.description=hud和游戏相关的辅助功能，例如聊天消息和黑暗效果。
 
 ## > General
 cui.settings.general.online.title=在线
@@ -26,16 +26,16 @@ cui.settings.sound.main.all.description=全局音量-将影响整个游戏音量
 cui.settings.sound.main.music.description=音乐/歌曲音量
 cui.settings.sound.main.audio.description=音频/SFX音量
 cui.settings.sound.main.ambient.description=环境/洞穴音量
-cui.settings.sound.main.block.description=放置/破坏音量
+cui.settings.sound.main.block.description=方块放置/破坏音量
 cui.settings.sound.main.hostile.description=敌对生物音量
 cui.settings.sound.main.neutral.description=中立生物音量
-cui.settings.sound.main.player.description=玩家攻击/伤害音量
-cui.settings.sound.main.record.description=唱片的音量
+cui.settings.sound.main.player.description=玩家攻击声音/伤害音量
+cui.settings.sound.main.record.description=唱片机音量
 cui.settings.sound.main.weather.description=天气音量
 cui.settings.sound.main.texttospeech.description="Beep Boop“音量
 
 ## > Language
-cui.settings.language.main.description=用于更改游戏语言的部分 - 注意：Collapse-UI 目前尚不支持所有语言，这可能会导致某些内容变成英语。欢迎语言贡献！ - 开关也坏了，有点迫使我重写，但这并没有发生。
+cui.settings.language.main.description=更改游戏语言的部分-注意：Collapse UI目前还不支持所有语言，这可能会导致一些东西是英语的。欢迎语言投稿！-开关也坏了，差点迫使我重写，但这并没有发生。
 
 ## > Video
 cui.settings.video.main.description=调整图形和游戏相关的部分。
@@ -45,7 +45,7 @@ cui.settings.video.graphic.title=图形
 cui.settings.video.graphic.description=调整视觉和性能体验。
 cui.settings.video.ui.title=UI
 cui.settings.video.ui.description=总体上调整 UI，以提高可访问性。
-cui.settings.video.perspective.description=改变你的游戏视角（或又称 F5）
+cui.settings.video.perspective.description=改变你的游戏视角（又称 F5）
 
 ## > Gamepad
 cui.settings.gamepad.main.description=调整手柄体验的部分。
@@ -57,26 +57,26 @@ cui.settings.touch.misc.description=常规的东西。
 
 ## > Keyboard
 cui.settings.keyboardmouse.main.description=调整鼠标和键盘体验的部分。
-cui.settings.keyboardmouse.mapping.description=更改键盘映射，这可能允许您在不同的按键上使用不同的游戏机制。
+cui.settings.keyboardmouse.mapping.description=更改键盘映射，这可能允许您在不同的键上使用不同的游戏机制。
 
 ## Account
 cui.settings.accoumt.main.description=用于登录您的xbox帐户以加入多人游戏的部分。
 
 
 ## Start screen
-cui.main_menu.play=开始游戏
+cui.main_menu.play=玩
 cui.main_menu.achievement=成就
 cui.main_menu.skin=皮肤
 cui.main_menu.settings=设置
-cui.main_menu.exit=退出游戏
+cui.main_menu.exit=退出
 cui.username.logged_in=已登录
-cui.username.local=以（游客）身份游戏
+cui.username.local=以（游客）身份游玩
 cui.main_menu.quickaccess=快速访问
 cui.main_menu.infomation=信息
 
 ## Pause screen
-cui.pause.resume=继续游戏
-cui.pause.world=当前世界
+cui.pause.resume=继续
+cui.pause.world=当前世界名称
 cui.pause.playerlist=玩家列表
 
 ## Play screen
@@ -97,14 +97,14 @@ cui.about.tab.activeconfig=配置
 cui.about.tab.activeconfigalt=启用配置
 
 cui.about.tab.activeconfig.configname=配置名称
-cui.about.tab.activeconfig.designedversion=支持的版本
+cui.about.tab.activeconfig.designedversion=支持版本
 
 cui.about.tab.activeconfig.theme=主题
 cui.about.tab.activeconfig.primarycolor=原色
 cui.about.tab.activeconfig.secondarycolor=辅助颜色（不支持）
 cui.about.tab.activeconfig.fontprimarycolor=字体原色（不支持）
 cui.about.tab.activeconfig.fontsecondarycolor=字体辅助颜色（不支持）
-cui.about.tab.activeconfig.backgroundalpha=背景Alpha
+cui.about.tab.activeconfig.backgroundalpha=背景 Alpha
 cui.about.tab.activeconfig.uibackground=背景
 cui.about.tab.activeconfig.uibackgroundslider=开始屏幕上的 BG Slider
 
@@ -112,7 +112,7 @@ cui.about.tab.activeconfig.layout=布局
 cui.about.tab.activeconfig.searchboxsystem=世界搜索框
 cui.about.tab.activeconfig.oldsliderdesign=旧Slider设计
 cui.about.tab.activeconfig.vanillapaperdoll=原版玩家玩偶
-cui.about.tab.activeconfig.norealmspromoteinworldsection=世界部分没有领域推广者
+cui.about.tab.activeconfig.norealmspromoteinworldsection=世界部分无领域推广
 cui.about.tab.activeconfig.nogamelogo=无游戏标志
 cui.about.tab.activeconfig.startmenubuttonclassic=经典开始菜单
 
@@ -122,16 +122,21 @@ cui.about.tab.credit.lang=语言
 
 ## Extras
 cui.extras.title=附加信息
+cui.extras.tips=提示:
+cui.extras.warning=警告!
+cui.extras.uirestart=如果你是第一次使用该包，请考虑先重新启动游戏！由于此UI使用自定义字体，因此在不重新启动游戏的情况下，体验可能会有所不同。
+cui.extras.goback=按下键盘的背景或ESC键或手柄的“选择”按钮）返回
 
 options.fov= 
 options.fov.alt=FOV
 resourcePack.subpackResolution.alt=Resolution
-cui.play.worldsearch.textbar=搜索世界（区分大小写）
-Settings=设置
-Marketplace=市场
-Inbox=收件箱
-Feedback=反馈
+
+Github (View source code)=Github（查看源代码）
 Pause=暂停
-没有世界，也许你可以按“快速创建世界”按钮...=没有世界，也许你可以按“快速开始游戏”按钮...
-Action Bar Background Opacitg=操作栏背景不透明
-Extras=附加信息
+Feedback=反馈
+Inbox=收件箱
+Marketplace=市场
+Search World (Case sensitive)=搜索世界（区分大小写）
+Settings=设置
+Loading...=加载中...
+| Copyright Mojang AB=| 版权归 Mojang 所有
