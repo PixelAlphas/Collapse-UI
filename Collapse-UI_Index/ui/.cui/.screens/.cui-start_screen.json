@@ -102,7 +102,7 @@
                             "anims": "$cuiv:selector_anims",
                             "$cuiv:button_type_panel": "cui-toggle.toggle_button_core",
                             "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/marketplace_icon",
-                            "$cuiv:toggle_label_text": "Marketplace",
+                            "$cuiv:toggle_label_text": "dayOneExperience.tab.marketplace",
                             "$cuiv:button_image_offset": [ 5, 5 ],
                             "$pressed_button_name": "button.menu_store"
                         }},
@@ -136,7 +136,7 @@
                             "anims": "$cuiv:selector_anims",
                             "$cuiv:button_type_panel": "cui-toggle.toggle_button_core",
                             "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/about_icon",
-                            "$cuiv:toggle_label_text": "About this UI",
+                            "$cuiv:toggle_label_text": "cui.about.title",
                             "$cuiv:button_image_offset": [ 5, 5 ],
                             "$pressed_button_name": "button.menu_buy_game"
                         }},
@@ -264,7 +264,7 @@
     "type": "panel",
     "layer": 20,
     "controls": [
-      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text": "Extras",
+      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text": "cui.extras.title",
           "layer": 20,
           "anims": [ 
             "@cui-anims.extra_anims_offset_title"
@@ -305,12 +305,12 @@
     "offset": [ -20, 10 ],
     "controls": [
       { "warningmessage@cui-common.element_background": { 
-          "$cuiv:header_text": "Warning!",
+          "$cuiv:header_text": "cui.extras.warning",
           "$cuiv:element_background_contents": "cui-start_screen.warningmessagebase"
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
       { "extratip@cui-common.element_background": { 
-          "$cuiv:header_text": "Tips:",
+          "$cuiv:header_text": "cui.extras.tips",
           "$cuiv:element_background_contents": "cui-start_screen.extratip"
       }}
   ]},
@@ -358,7 +358,7 @@
       { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
       { "description": {
           "type": "label",
-          "text": "If you're applying the pack for the first time, please consider restart the game first! Since this UI uses custom fonts, which the experience may vary without restarting.",
+          "text": "cui.extras.uirestart",
           "font_type": "dainbold",
           "size": [ "100% - 6px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
@@ -374,7 +374,7 @@
       { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
       { "description": {
           "type": "label",
-          "text": "Press the background (ESC key for keyboard or 'Select' button for Controller) order to go back!",
+          "text": "cui.extras.goback",
           "font_type": "dainbold",
           "size": [ "100% - 6px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]

@@ -82,8 +82,7 @@ cui.pause.playerlist=Players list
 ## Play screen
 cui.play.controllcentre=Control centre
 cui.play.mostrecent=Most Recent
-cui.play.exp.worldsearch=Experiment World Search
-cui.play.exp.worldsearch.textbar=Search World (Case sensitive)
+cui.play.worldsearch.textbar=Search World (Case sensitive)
 
 ## Safezone
 cui.safezone.exp.title=Experiment Settings
@@ -119,8 +118,14 @@ cui.about.tab.activeconfig.startmenubuttonclassic=Classic Start menu
 
 cui.about.tab.credit=Credits
 cui.about.tab.credit.bg=Artworks / Backgrounds
+cui.about.tab.credit.lang=Languages
 
-
+## Extras
+cui.extras.title=Extras
+cui.extras.tips=Tips:
+cui.extras.warning=Warning!
+cui.extras.uirestart=If you're applying the pack for the first time, please consider restart the game first! Since this UI uses custom fonts, which the experience may vary without restarting.
+cui.extras.goback=Press the background or ESC key for keyboard or 'Select' button for Controller) order to go back
 
 options.fov= 
 options.fov.alt=FOV

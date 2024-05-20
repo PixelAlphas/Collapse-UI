@@ -26,13 +26,32 @@
           "size": [ "100% - 8px", 10 ]
       }},
       { "mattoo@cui-about_section.about_text": {
-          "$cuiv:about_text": "Mattoo/Mattoo0oo0",
+          "$cuiv:about_text": "Mattoo/Mattoo0oo0 | Backgrounds",
           "$cuiv:about_text_gray": "youtube.com/@Mattoo0oo0 (YT)"
       }},
       { "nutor@cui-about_section.about_text": {
-          "$cuiv:about_text": "Nutor",
-          "$cuiv:about_text_gray": "n.tor (Discord)"
+          "$cuiv:about_text": "Nutor | Additional Backgrounds",
+          "$cuiv:about_text_gray": "@n.tor (Discord)"
+      }},
+      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 1 ],
+          "texture": "textures/ui/White",
+          "color": [ 0.6, 0.6, 0.6 ]
+      }},
+      { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}},
+      { "bg_label": {
+          "type": "label",
+          "text": "cui.about.tab.credit.lang",
+          "font_type": "MinecraftTen",
+          "size": [ "100% - 8px", 10 ]
+      }},
+      { "@cui-about_section.about_text": {
+          "$cuiv:about_text": "QinDagghc | 中文 / Chinese",
+          "$cuiv:about_text_gray": "@QinDagghc (Github)"
       }}
+      
   ]},
   "core_element": {
     "type": "stack_panel",
