@@ -35,12 +35,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.video.main.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
@@ -51,12 +50,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.video.gameplay.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -72,6 +70,7 @@
           "$cuiv:option_label_text": "options.gamma",
           "$slider_name": "gamma",
           "$slider_value_binding_name": "#gamma",
+          "$slider_tts_text_value": "#gamma_text_value",
           "$cuiv:slider_value_text": "#gamma_text_value",
           "$cuiv:option_toggle_binding_name": "#gamma_enabled",
           "$focus_override_up": "FOCUS_OVERRIDE_STOP",
@@ -201,12 +200,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.video.ui.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -259,7 +257,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "action_button@cui-button.text_button": {
-          "size": [ "100% - 4px", 20 ],
+          "size": [ "100% - 4px", 18 ],
           "ignored": "(not $supports_user_configured_safezone or (not $is_pregame))",
           "$pressed_button_name": "setup_safe_zone_button",
           "$cuiv:button_text": "options.safeZone.title",
@@ -335,12 +333,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
-          "text": "cui.settings.video.gameplay.description",
           "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -478,7 +475,7 @@
           "$cuiv:slider_value_text": "#raytracing_render_distance_text_value",
           "$cuiv:option_toggle_binding_name": "#raytracing_render_distance_enabled",
           "$slider_steps_binding_name": "#raytracing_render_distance_steps",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:option_label_text" }],
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }],
           "bindings": [
             { "binding_name": "#show_raytracing_render_distance",
               "binding_name_override": "#visible"
@@ -493,7 +490,7 @@
           "$cuiv:slider_value_text": "#deferred_render_distance_text_value",
           "$cuiv:option_toggle_binding_name": "#deferred_render_distance_enabled",
           "$slider_steps_binding_name": "#deferred_render_distance_steps",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:option_label_text" }],
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }],
           "bindings": [
             { "binding_name": "#show_deferred_render_distance",
               "binding_name_override": "#visible"
@@ -554,7 +551,7 @@
             },
             {
               "advanced_graphics_options_button@common_buttons.light_content_button": {
-                "size": [ "100%", 20 ],
+                "size": [ "100%", 18 ],
                 "$button_content": "general_section.advanced_graphics_options_button_content",
                 "$pressed_button_name": "button.expand_advanced_graphics"
               }

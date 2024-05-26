@@ -72,9 +72,6 @@
   ]},
   "content_area": {
     "type": "panel",
-    "size": [ "60% - 6px", "100% - 38px" ],
-    "anchor_from": "top_right",
-    "anchor_to": "top_right",
     "layer": 1,
     "focus_container": true,
     "use_last_focus": false,
@@ -87,12 +84,38 @@
     "focus_navigation_mode_left": "$focus_navigation_mode_override_left",
     "focus_navigation_mode_right": "$focus_navigation_mode_override_right",
     "controls": [
-      { "scrolling_panel@common.scrolling_panel": {
-          "$scrolling_content": "$section_content_panels",
-          "$show_background": false,
-          "$scroll_size": [ "5px", "100% - 4px" ],
-          "$scroll_bar_left_padding_size": [ 1, 0 ]
-      }}
+      { "control": {
+          "type": "stack_panel",
+          "size": [ "60% - 6px", "100% - 38px" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "controls": [
+            { "header_panel": {
+                "type": "panel",
+                "layer": 20,
+                "size": [ "100%", "100%c" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  { "content@$section_header_panels": {}}]
+            }},
+            { "scrolling_panel@common.scrolling_panel": {
+                "size": [ "100%", "fill" ],
+                "$scrolling_content": "$section_content_panels",
+                "$show_background": false,
+                "$scroll_size": [ "5px", "100% - 4px" ],
+                "$scroll_bar_left_padding_size": [ 1, 0 ]
+            }},
+            { "footer_panel": {
+                "type": "panel",
+                "layer": 20,
+                "size": [ "100%", "100%c" ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "controls": [
+                  { "content@$section_footer_panels": {} }]
+            }}
+      ]}}
   ]},
   "selector_stack_panel": {
     "type": "stack_panel",
@@ -169,6 +192,7 @@
                         { "video_button@cui-setting_screen.video_button": { "$toggle_group_forced_index": "$video_forced_index" }},
                         { "sound_button@cui-setting_screen.sound_button": { "$toggle_group_forced_index": "$sound_forced_index" }},
                         { "global_texture_pack_button@cui-setting_screen.global_texture_pack_button": { "ignored": "$ignore_global_resources_section", "$toggle_group_forced_index": "$global_texture_pack_forced_index", "visible": "($is_global_texture_packs_visible)" }},
+                        { "storage_management_button@cui-setting_screen.storage_button": { "ignored": "$ignore_storage_section", "$toggle_group_forced_index": "$storage_management_forced_index" }},
                         { "language_button@cui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index" }}
                   ]}}
             ]}}
@@ -252,10 +276,8 @@
             ]}}
       ]}}
   ]},
-  "section_content_panels@auicore_configloader.core": {
+  "section_content_panels": {
     "type": "panel",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
     "size": [ "100% - 2px", "100%c" ],
     "controls": [
       { "world_sections": {
@@ -288,9 +310,18 @@
             { "gamepad_section@cui-ss_gamepad.gamepad_section": { "ignored": "(not $gamepad_supported)", "visible": false } },
             { "keyboardmouse_section@cui-ss_keyboardmouse.keyboardmouse_section": { "ignored": "(not $keyboard_and_mouse_supported)", "visible": false } },
             { "touch_section@cui-ss_touch.touch_section": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "visible": false } },
+            { "storage_management_section@general_section.storage_management_section": { "visible": false, "ignored": "$ignore_storage_section" }},
             { "global_texture_pack_section@general_section.global_texture_pack_section": { "visible": false, "ignored": "$ignore_global_resources_section" }}
       ]}}
   ]},
+  "storage_button@cui-toggle.toggle_button_section": {
+    "size": [ "100%", 22 ],
+    "$toggle_view_binding_name": "storage_management_button_toggle",
+    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/storage_section_icon",
+    "$cuiv:toggle_label_text": "menu.storageManagement",
+    "$toggle_property_bag": {
+      "#panel_title": "menu.storageManagement"
+  }},
   "account_button@cui-toggle.toggle_button_section": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "account_button_toggle",
@@ -356,7 +387,10 @@
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "keyboard_and_mouse_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/keyboard_section_icon",
-    "$cuiv:toggle_label_text": "options.keyboardAndMouse"
+    "$cuiv:toggle_label_text": "options.keyboardAndMouse",
+    "$toggle_property_bag": {
+      "#panel_title": "options.keyboardAndMouseSettings"
+    }
   },
   "touch_button@cui-toggle.toggle_button_section": {
     "size": [ "100%", 22 ],
@@ -415,6 +449,7 @@
   ]},
   "binding_button@cui-button.text_button": {
     "$pressed_button_name": "button.binding_button",
+    "$cuiv:button_type_panel": "cui-setting_screen.just_label",
     "$cuiv:button_text": "#binding_button_text",
     "$cuiv:button_text_bindings": [
       { "binding_name": "#binding_button_text",
@@ -427,6 +462,14 @@
         "binding_collection_name": "$cuiv:keymapping_collection"
       }
   ]},
+  "just_label": {
+    "type": "label",
+    "layer": 2,
+    "text": "$cuiv:button_text",
+    "color": "$text_color",
+    "shadow": "$cuiv:button_text_shadow",
+    "bindings": "$cuiv:button_text_bindings"
+  },
   "image_binding_button@cui-button.text_button": {
     "$pressed_button_name": "button.binding_button",
     "$cuiv:button_type_panel": "cui-setting_screen.base_icon_image",
@@ -474,16 +517,7 @@
     "$slider_box_size": [ 10, 10 ],
     "size": [ "100% - 8px", 10 ],
     "enabled": "$cuiv:is_enabled",
-    "$option_label|default": "",
-    "$slider_tts_header": "$option_label",
-    "$slider_tts_header_binding_type": "global",
-    "$slider_enabled_binding_name": "$cuiv:option_toggle_binding_name",
-    "$slider_enabled_binding_type": "global",
-    "variables": [
-      { "requires": "(not $cuiv:option_toggle_binding_name or not $cuiv:is_enabled)",
-        "$slider_enabled_binding_name": "#not_data_bound",
-        "$slider_enabled_binding_type": "none"
-    }]
+    "$option_label|default": ""
   },
   "option_slider_control": {
     "type": "panel",
@@ -532,6 +566,7 @@
           "anchor_to": "right_middle",
           "text_alignment": "right",
           "offset": [ "-100% - 12px", 3 ],
+          "$cuiv:slider_value_binding|default": "",
           "bindings": "$cuiv:slider_value_binding"
       }}
   ]},
@@ -552,7 +587,7 @@
     "$cuiv:is_slider|default": false,
     "$cuiv:is_dropdown|default": false,
     "$cuiv:option_toggle_binding_type|default": "global",
-    "$cuiv:option_toggle_binding_name|default": "",
+    "$cuiv:option_toggle_binding_name|default": [],
     "$cuiv:option_label_text|default": "No text?",
     "$cuiv:option_description|default": false,
     "$cuiv:option_description_text|default": "No description?",
@@ -561,7 +596,6 @@
     "$cuiv:option_label_size|default": [ "70% - 14px", "default" ],
     "$cuiv:option_label_offset|default": [ 4, 3 ],
     "$cuiv:option_label_bindings|default": [],
-    "$cuiv:option_value_bindings|default": [],
     "$cuiv:option_value_text|default": "No bindings?",
     "use_child_anchors": true,
     "$cuiv:option_control_name_slider|default": "",
@@ -708,7 +742,6 @@
                 "anchor_to": "top_right",
                 "text": "$cuiv:option_value_text",
                 "text_alignment": "right",
-                "bindings": "$cuiv:option_value_bindings",
                 "locked_alpha": 0.5
             }},
             { "right_arrow": {

@@ -31,12 +31,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.sound.main.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.6, 0.6, 0.6 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
@@ -47,7 +46,7 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "line": {
           "type": "image",
           "size": [ "100% - 8px", 1 ],

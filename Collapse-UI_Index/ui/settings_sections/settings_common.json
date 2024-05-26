@@ -1,7 +1,6 @@
 { "namespace": "settings_common",
-  "dynamic_dialog_screen@common.base_screen": {
+  "dynamic_dialog_screen": {
     "type": "screen",
-    "cache_screen": false,
     "button_mappings": [
       { "from_button_id": "button.menu_cancel", "to_button_id": "button.menu_exit", "mapping_type": "global" },
       { "from_button_id": "button.menu_tab_left", "to_button_id": "button.menu_tab_left", "mapping_type": "global", "scope": "view" },
@@ -17,5 +16,5 @@
     "$is_full_screen_layout": false
   },
   "screen_base": {
-    "$dialog_content": ""
+    "$dialog_content": "cui-setting_screen.dialog_content"
 }}

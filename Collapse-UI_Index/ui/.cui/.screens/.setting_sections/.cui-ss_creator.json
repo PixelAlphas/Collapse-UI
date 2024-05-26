@@ -31,12 +31,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.creator.main.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
@@ -47,12 +46,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "contentlog.settingsSectionName",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -103,8 +101,7 @@
       { "content_log_location_label_header": {
           "type": "label",
           "text": "contentlog.logLocationSectionName",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ],
           "bindings": [
             { "binding_name": "#content_log_file_enabled",
@@ -114,8 +111,7 @@
       { "cclt": {
           "type": "label",
           "text": "#text",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "hide_hyphen": true,
           "bindings": [
             { "binding_name": "#content_log_location_text",

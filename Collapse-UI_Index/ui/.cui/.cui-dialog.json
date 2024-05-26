@@ -34,7 +34,7 @@
           "type": "image",
           "size": [ "250%", "250%" ],
           "layer": -10,
-          "alpha": 0.20,
+          "alpha": 0.2,
           "texture": "textures/ui/White",
           "color": "$cuigv:PrimaryColor"
       }},

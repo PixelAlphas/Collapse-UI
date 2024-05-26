@@ -20,6 +20,7 @@
     "type": "image",
     "size": [ "100%", "100%" ],
     "texture": "textures/ui/White",
+    "alpha": 0.2,
     "color": "$cuigv:PrimaryColor"
   },
   "pack_scroll_panel@common.scrolling_panel": {

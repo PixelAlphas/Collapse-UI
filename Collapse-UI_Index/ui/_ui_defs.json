@@ -31,10 +31,11 @@
   
   "ui/.cui/.screens/.setting_sections/.cui-ss_account.json",
   "ui/.cui/.screens/.setting_sections/.cui-ss_accessibility.json",
-  "ui/.cui/.screens/.setting_sections/.cui-ss_general.json",
   "ui/.cui/.screens/.setting_sections/.cui-ss_creator.json",
+  "ui/.cui/.screens/.setting_sections/.cui-ss_general.json",
   "ui/.cui/.screens/.setting_sections/.cui-ss_language.json",
   "ui/.cui/.screens/.setting_sections/.cui-ss_sound.json",
+  "ui/.cui/.screens/.setting_sections/.cui-ss_storage.json",
   "ui/.cui/.screens/.setting_sections/.cui-ss_video.json",
   "ui/.cui/.screens/.setting_sections/.cui-ss_gamepad.json",
   "ui/.cui/.screens/.setting_sections/.cui-ss_keyboardmouse.json",

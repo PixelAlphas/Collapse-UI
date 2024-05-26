@@ -37,7 +37,7 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}}
+      { "pudding_top": { "type": "panel", "size": [ 1, 20 ]}}
   ]},
   "network": {
     "type": "stack_panel",
@@ -45,12 +45,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.general.network.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -84,12 +83,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.general.online.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -162,7 +160,7 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "line": {
           "type": "image",
           "size": [ "100% - 8px", 1 ],
@@ -185,12 +183,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.general.misc.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -264,8 +261,7 @@
       { "description": {
           "type": "label",
           "text": "options.licenses",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_04": { "type": "panel", "size": [ 1, 2 ]}},
@@ -304,7 +300,7 @@
             { "version_label": {
                 "type": "label",
                 "font_type": "dainbold",
-                "size": [ "100% - 6px", "default" ],
+                "size": [ "100% - 8px", "default" ],
                 "color": [ 0.7, 0.7, 0.7 ],
                 "text": "#modifiedtext",
                 "bindings": [
@@ -317,7 +313,7 @@
             { "build_id_label": {
                 "type": "label",
                 "font_type": "dainbold",
-                "size": [ "100% - 6px", "default" ],
+                "size": [ "100% - 8px", "default" ],
                 "color": [ 0.7, 0.7, 0.7 ],
                 "text": "#build_id",
                 "bindings": [
@@ -327,7 +323,7 @@
             { "build_date_label": {
                 "type": "label",
                 "font_type": "dainbold",
-                "size": [ "100% - 6px", "default" ],
+                "size": [ "100% - 8px", "default" ],
                 "color": [ 0.7, 0.7, 0.7 ],
                 "text": "#build_date",
                 "bindings": [
@@ -337,7 +333,7 @@
             { "protocol_version_label": {
                 "type": "label",
                 "font_type": "dainbold",
-                "size": [ "100% - 6px", "default" ],
+                "size": [ "100% - 8px", "default" ],
                 "color": [ 0.7, 0.7, 0.7 ],
                 "text": "#modifiedtext",
                 "bindings": [
@@ -351,7 +347,7 @@
                 "visible": "(not $education_edition)",
                 "type": "label",
                 "font_type": "dainbold",
-                "size": [ "100% - 6px", "default" ],
+                "size": [ "100% - 8px", "default" ],
                 "color": [ 0.7, 0.7, 0.7 ],
                 "text": "#treatment_ids",
                 "bindings": [
@@ -361,7 +357,7 @@
             { "world_converter_label": {
                 "type": "label",
                 "font_type": "dainbold",
-                "size": [ "100% - 6px", "default" ],
+                "size": [ "100% - 8px", "default" ],
                 "color": [ 0.7, 0.7, 0.7 ],
                 "text": "#world_conversion_version",
                 "bindings": [

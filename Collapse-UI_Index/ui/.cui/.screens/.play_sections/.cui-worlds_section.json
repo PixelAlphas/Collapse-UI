@@ -92,7 +92,6 @@
                       "font_scale_factor": "$cuiv:primary_label_font_size",
                       "color": "$cuigv:FontPrimaryColor",
                       "layer": 1,
-                      
                       "bindings": [
                         { "binding_name": "#local_world_name",
                           "binding_type": "collection",
@@ -163,21 +162,16 @@
     "orientation": "horizontal",
     "size": [ "100%", "100%" ],
     "controls": [
-      {
-        "world_screenshot@play.collection_world_screenshot": {
+      { "world_screenshot@play.collection_world_screenshot": {
           "$collection_binding_name": "$worlds_collection_name",
           "$image_binding_name": "$world_image_binding_name",
           "$supports_realmsplus_overlay": "$world_supports_realmsplus_overlay",
           "$texture_source_binding_name": "$world_texture_source_binding_name"
-        }
-      },
-      {
-        "world_text_panel@$world_text_panel_control": {
+      }},
+      { "world_text_panel@$world_text_panel_control": {
           "size": [ "fill", "100%" ]
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "collection_world_screenshot": {
     "type": "image",
     "size": [ "100%cm + 2px", "100%" ],
@@ -291,7 +285,11 @@
         "target_property_name": "#world_search_string"
       },
       { "binding_type": "view",
-        "source_property_name": "(not (((#local_world_name - #world_search_string) = #local_world_name) - ' ' - '§r' - '§f'))",
+        "source_property_name": "('§f' + #local_world_name)",
+        "target_property_name": "#modified_world_text"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(not (((#modified_world_text - #world_search_string) = #modified_world_text) - ' ' - '§r' - '§f'))",
         "target_property_name": "#visible"
   }]},
   "search_button@cui-toggle.toggle_button": {
@@ -341,8 +339,7 @@
                   { "@quick_play_button": {}},
                   { "padding_02": { "type": "panel", "size": [ 2, 2 ]}},
                   { "@import_world_button": {}}
-                ]
-            }},
+            ]}},
             { "play_screen_warning@play.realm_warning_tip": {}}
           ]
       }},

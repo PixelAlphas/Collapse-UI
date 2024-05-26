@@ -3,9 +3,10 @@
   "fonts": [
     {
       "font_format": "ttf",
-      "version": 1,
+      "version": 2,
       "font_name": "dainbold",
-      "font_file": "font/dainbold"
+      "font_file": "font/dainbold",
+      "lowPerformanceCompatible": false
     },
     {
       "font_format": "ttf",
@@ -75,11 +76,6 @@
             { "first": 57344, "last": 63743 }
           ]
         }
-      ]
-    }
-  ]
-}
-      }
       ]
     }
   ]

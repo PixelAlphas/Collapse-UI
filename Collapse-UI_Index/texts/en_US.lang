@@ -35,7 +35,7 @@ cui.settings.sound.main.weather.description=Weather Volume
 cui.settings.sound.main.texttospeech.description="Beep-Boop" Voice Volume
 
 ## > Language
-cui.settings.language.main.description=A section for changing the game language - NOTE : Collapse-UI currently doesn't support ALL languages just yet, this may causes some stuff being english. Language Contribution are welcome! - also the toggle broke and kinda forced me to rewrite, but that's not happening.
+cui.settings.language.main.description=A section for changing the game language - NOTE : Collapse-UI currently doesn't support ALL languages just yet, this may causes some stuff being english. Language Contribution are welcome!
 
 ## > Video
 cui.settings.video.main.description=A section for tweaking graphical and gameplay related.

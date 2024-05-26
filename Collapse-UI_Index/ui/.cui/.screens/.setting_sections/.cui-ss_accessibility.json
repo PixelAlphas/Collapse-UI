@@ -33,12 +33,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.accessibility.main.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
@@ -49,12 +48,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.accessibility.tts.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -104,8 +102,8 @@
           "$slider_tts_text_value": "#texttospeech_volume_text_value",
           "$cuiv:slider_value_text": "#texttospeech_volume_text_value",
           "$cuiv:option_toggle_binding_name": "#texttospeech_volume_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
-      }}
+          "$cuiv:slider_value_binding": [{ "binding_name": "#texttospeech_volume_text_value", "binding_name_override": "#text"
+      }]}}
   ]},
   "misc": {
     "type": "stack_panel",
@@ -113,12 +111,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.accessibility.misc.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -143,7 +140,7 @@
           "$slider_tts_text_value": "#text_background_opacity_text_value",
           "$cuiv:slider_value_text": "#text_background_opacity_text_value",
           "$cuiv:option_toggle_binding_name": "#text_background_opacity_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+          "$cuiv:slider_value_binding": [{ "binding_name": "#text_background_opacity_text_value" }]
       }},
       { "actionbar_text_background_opacity_slider@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.actionBarTextBackgroundOpacity",
@@ -152,7 +149,7 @@
           "$slider_tts_text_value": "#actionbar_text_background_opacity_text_value",
           "$cuiv:slider_value_text": "#actionbar_text_background_opacity_text_value",
           "$cuiv:option_toggle_binding_name": "#actionbar_text_background_opacity_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+          "$cuiv:slider_value_binding": [{ "binding_name": "#actionbar_text_background_opacity_text_value" }]
       }},
       { "darkness_slider@cui-setting_screen.option_slider": {
           "$cuiv:option_description": true,
@@ -163,7 +160,7 @@
           "$slider_value_binding_name": "#darkness",
           "$slider_tts_text_value": "#darkness_text_value",
           "$cuiv:option_toggle_binding_name": "#darkness_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+          "$cuiv:slider_value_binding": [{ "binding_name": "#darkness_text_value" }]
       }},
       { "chat_message_duration_options_panel": {
           "type": "stack_panel",
@@ -240,7 +237,7 @@
           "$slider_tts_text_value": "#glint_strength_text_value",
           "$cuiv:slider_value_text": "#glint_strength_text_value",
           "$cuiv:option_toggle_binding_name": "#glint_strength_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+          "$cuiv:slider_value_binding": [{ "binding_name": "#glint_strength_text_value" }]
       }},
       { "glint_speed_slider@cui-setting_screen.option_slider": {
           "$cuiv:option_description": true,
@@ -251,7 +248,7 @@
           "$slider_tts_text_value": "#glint_speed_text_value",
           "$cuiv:slider_value_text": "#glint_speed_text_value",
           "$cuiv:option_toggle_binding_name": "#glint_speed_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+          "$cuiv:slider_value_binding": [{ "binding_name": "#glint_speed_text_value" }]
       }},
       { "gui_scale_slider@cui-setting_screen.option_slider": {
           "ignored": "($is_holographic)",
@@ -262,7 +259,7 @@
           "$cuiv:slider_value_text": "#gui_scale_text_value",
           "$cuiv:option_toggle_binding_name": "#gui_scale_enabled",
           "$slider_steps_binding_name": "#gui_scale_steps",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }],
+          "$cuiv:slider_value_binding": [{ "binding_name": "#gui_scale_text_value" }],
           "bindings": [
             { "binding_name": "#gui_scale_visible",
               "binding_name_override": "#visible"
@@ -282,12 +279,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "Chat Messages related accessibility.",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},

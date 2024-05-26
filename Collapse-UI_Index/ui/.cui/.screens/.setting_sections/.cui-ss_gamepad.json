@@ -31,12 +31,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.gamepad.main.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -108,18 +107,16 @@
           "$cuiv:option_binding_name": "#swap_gamepad_ab_buttons",
           "$cuiv:option_toggle_binding_name": "#swap_gamepad_ab_buttons_enabled",
           "$toggle_name": "swap_gamepad_ab_buttons",
-          "$toggle_tts_header_binding_type": "global",
           "$focus_override_right": "FOCUS_OVERRIDE_STOP",
-          "$cuiv:option_label_bindings": [{ "binding_name": "$cuiv:option_label_text" }]
+          "$cuiv:option_label_bindings": [{ "binding_name": "#swap_gamepad_ab" }]
       }},
       { "gamepad_swap_xy@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "#swap_gamepad_xy",
           "$cuiv:option_binding_name": "#swap_gamepad_xy_buttons",
           "$cuiv:option_toggle_binding_name": "#swap_gamepad_xy_buttons_enabled",
           "$toggle_name": "swap_gamepad_xy_buttons",
-          "$toggle_tts_header_binding_type": "global",
           "$focus_override_right": "FOCUS_OVERRIDE_STOP",
-          "$cuiv:option_label_bindings": [{ "binding_name": "$cuiv:option_label_text" }]
+          "$cuiv:option_label_bindings": [{ "binding_name": "#swap_gamepad_xy" }]
       }},
       { "gamepad_cursor_sensitivity_option_slider@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.gamepadcursorsensitivity",
@@ -138,12 +135,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.gamepad.mapping.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
@@ -165,7 +161,7 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 20 ]}},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
       { "line": {
           "type": "image",
@@ -205,7 +201,7 @@
                 "size": [ "100% - 4px", "default" ],
                 "text_alignment": "center",
                 "layer": 1,
-                "font_type": "dainbold",
+                
                 "text": "#keymapping_name",
                 "bindings": [
                   { "binding_name": "#keymapping_name",

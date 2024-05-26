@@ -32,12 +32,11 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
           "text": "cui.settings.touch.main.description",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ]
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
@@ -48,11 +47,10 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ],
           "text": "#selected_control_scheme",
           "bindings": [
@@ -145,11 +143,10 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 16 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
       { "description": {
           "type": "label",
-          "font_type": "dainbold",
-          "size": [ "100% - 6px", "default" ],
+          "size": [ "100% - 8px", "default" ],
           "color": [ 0.7, 0.7, 0.7 ],
           "text": "cui.settings.touch.misc.description"
       }},
@@ -168,15 +165,16 @@
           "$slider_tts_text_value": "#touch_sensitivity_text_value",
           "$cuiv:slider_value_text": "#touch_sensitivity_text_value",
           "$cuiv:option_toggle_binding_name": "#touch_sensitivity_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+          "$cuiv:slider_value_binding": [{ "binding_name": "#touch_sensitivity_text_value" }]
       }},
       { "option_slider_damen@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.spyglassdampen",
           "$slider_name": "spyglass_touch_dampening",
           "$slider_value_binding_name": "#spyglass_touch_dampening",
+          "$slider_tts_text_value": "#spyglass_touch_dampening_text_value",
           "$cuiv:slider_value_text": "#spyglass_touch_dampening_text_value",
           "$cuiv:option_toggle_binding_name": "#touch_sensitivity_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+          "$cuiv:slider_value_binding": [{ "binding_name": "#spyglass_touch_dampening_text_value" }]
       }},
       { "option_show_action_button@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.showActionButton",
@@ -246,7 +244,7 @@
           "$slider_tts_text_value": "#thumbstick_opacity_text_value",
           "$cuiv:slider_value_text": "#thumbstick_opacity_text_value",
           "$cuiv:option_toggle_binding_name": "#thumbstick_opacity_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }],
+          "$cuiv:slider_value_binding": [{ "binding_name": "#thumbstick_opacity_text_value" }],
           "bindings": [
             { "binding_name": "#is_thumbstick_visible",
               "binding_name_override": "#visible"
@@ -286,7 +284,7 @@
           "$slider_tts_text_value": "#button_size_text_value",
           "$cuiv:slider_value_text": "#button_size_text_value",
           "$cuiv:option_toggle_binding_name": "#button_size_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+          "$cuiv:slider_value_binding": [{ "binding_name": "#button_size_text_value" }]
       }},
       { "hotbar_scale@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.hotbarScale",
@@ -295,7 +293,7 @@
           "$slider_tts_text_value": "#hotbar_scale_text_value",
           "$cuiv:slider_value_text": "#hotbar_scale_text_value",
           "$cuiv:option_toggle_binding_name": "#hotbar_scale_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }],
+          "$cuiv:slider_value_binding": [{ "binding_name": "#hotbar_scale_text_value" }],
           "bindings": [
             { "binding_name": "#resizable_ui_active",
               "binding_name_override": "#visible"

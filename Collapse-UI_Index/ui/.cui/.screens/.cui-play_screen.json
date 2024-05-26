@@ -62,11 +62,8 @@
             { "paddings_02": { "type": "panel", "size": [ 2, 1 ]}},
             { "server_navigation_tab@cui-play_screen.server_navigation_tab": { "size": [ 65, 28 ]}},
             { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip_rb": {}}
-          ]
-        }
-      }
-    ]
-  },
+      ]}}
+  ]},
   "general_scroll_contents": {
     "type": "input_panel",
     "anchor_from": "top_left",
@@ -143,6 +140,7 @@
       }},
       { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
           "$cuiv:icon_texture": "textures/ui/.cui-assets/.controller/start",
+          "$cuiv:gamepad_no_bindings_description": true,
           "$icon_description_bind": "Toggle \"Edit Mode\""
       }}
   ]},

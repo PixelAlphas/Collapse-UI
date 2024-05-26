@@ -9,7 +9,12 @@
     "focus_enabled": true,
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": true,
-    
+    "$slider_binding_type|default": "global",
+    "$slider_binding_condition|default": "visible",
+    "$slider_value_binding_name|default": "#slider_value",
+    "$slider_steps_binding_type|default": "global",
+    "$slider_steps_binding_condition|default": "visible",
+    "$slider_steps_binding_name|default": "#slider_steps",
     "controls": [
       { "slider_box@cui-slider.slider_box": { "$slider_box_layout": "$slider_box_layout", "$slider_box_size": "$slider_box_size", "$slider_track_button": "$slider_name" }},
       { "slider_bar_default@cui-slider.slider_bar_default": {} },
