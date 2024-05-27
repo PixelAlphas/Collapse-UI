@@ -47,7 +47,7 @@
     "$cuiv:button_state_panel|default": "cui-button.button_core",
     "$cuiv:button_text_shadow|default": false,
     "$cuiv:button_texture_alpha|default": 1,
-    "$cuiv:button_text_bindings": "",
+    "$cuiv:button_text_bindings": [],
     "$default_state|default": false,
     "$hover_state|default": false,
     "$pressed_state|default": false,

@@ -87,9 +87,9 @@
       { "control": {
           "type": "stack_panel",
           "size": [ "60% - 6px", "100% - 38px" ],
-    "anchor_from": "top_right",
-    "anchor_to": "top_right",
-    "controls": [
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "controls": [
             { "header_panel": {
                 "type": "panel",
                 "layer": 20,
@@ -192,7 +192,7 @@
                         { "video_button@cui-setting_screen.video_button": { "$toggle_group_forced_index": "$video_forced_index" }},
                         { "sound_button@cui-setting_screen.sound_button": { "$toggle_group_forced_index": "$sound_forced_index" }},
                         { "global_texture_pack_button@cui-setting_screen.global_texture_pack_button": { "ignored": "$ignore_global_resources_section", "$toggle_group_forced_index": "$global_texture_pack_forced_index", "visible": "($is_global_texture_packs_visible)" }},
-                        { "storage_management_button@cui-setting_screen.storage_button": { "ignored": "$ignore_storage_section", "$toggle_group_forced_index": "$storage_management_forced_index" }},
+                        { "storage_management_button@cui-setting_screen.storage_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$storage_management_forced_index" }},
                         { "language_button@cui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index" }}
                   ]}}
             ]}}
