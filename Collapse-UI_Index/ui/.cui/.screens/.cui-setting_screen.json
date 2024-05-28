@@ -90,30 +90,12 @@
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "controls": [
-            { "header_panel": {
-                "type": "panel",
-                "layer": 20,
-                "size": [ "100%", "100%c" ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "controls": [
-                  { "content@$section_header_panels": {}}]
-            }},
             { "scrolling_panel@common.scrolling_panel": {
                 "size": [ "100%", "fill" ],
                 "$scrolling_content": "$section_content_panels",
                 "$show_background": false,
                 "$scroll_size": [ "5px", "100% - 4px" ],
                 "$scroll_bar_left_padding_size": [ 1, 0 ]
-            }},
-            { "footer_panel": {
-                "type": "panel",
-                "layer": 20,
-                "size": [ "100%", "100%c" ],
-                "anchor_from": "bottom_left",
-                "anchor_to": "bottom_left",
-                "controls": [
-                  { "content@$section_footer_panels": {} }]
             }}
       ]}}
   ]},
