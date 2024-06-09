@@ -6,6 +6,7 @@
     "anchor_to": "top_left",
     "$cuiv:keymapping_grid_dimension": "#gamepad_grid_dimension",
     "$cuiv:keymapping_collection": "gamepad_collection",
+    "use_child_anchors": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "gamepad_button_toggle",

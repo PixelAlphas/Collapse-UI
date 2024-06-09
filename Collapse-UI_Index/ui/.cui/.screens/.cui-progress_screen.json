@@ -52,11 +52,18 @@
   ]},
   "progress_title_world_panel_alt": {
     "type": "panel",
+    "size": [ "100% - 80px", "100%" ],
     "controls": [
+      { "experience_bar_empty@cui-common.experience_bar_empty": { 
+          "layer": 1,
+          "offset": [ 0, -30 ],
+          "size": [ "100%", 5 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }},
       { "progress_title_text@progress.progress_title_text": {
-          "font_size": "large",
           "text": "#title_text",
-          "offset": [ 30, -30 ],
+          "offset": [ 14, -26 ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "animation_reset_name": "screen_animation_reset",
@@ -71,7 +78,8 @@
       { "progress_bar_text@progress.progress_bar_text": {
           "size": [ "default", 20 ],
           "localize": false,
-          "offset": [ 30, -10 ],
+          "font_size": "small",
+          "offset": [ 1, -8 ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "text": "#progress_text",
@@ -85,10 +93,10 @@
           "bindings": [ { "binding_name": "#progress_text" }]
       }},
       { "loading_icon@cui-progress_screen.loading_icon": {
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "offset": [ -20, -20 ],
-          "size": [ 32, 32 ]
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 1, -37 ],
+          "size": [ 10, 10 ]
       }}
   ]},
   "progress_title_world_panel": {
@@ -196,21 +204,11 @@
   "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
-    "size": [ "100% - 8px", 8 ],
-    "offset": [ 0, -2 ],
+    "size": [ "100% - 80px", 5 ],
+    "offset": [ 0, -30 ],
     "animation_reset_name": "screen_animation_reset",
     "anims": [],
     "controls": [
-      { "experience_bar_full@cui-common.experience_bar_full": { "layer": 2 }},
-      { "experience_bar_empty@cui-common.experience_bar_empty": { "layer": 1 }},
-      { "loading_text": {
-          "type": "label",
-          "text": "Loading...",
-          "font_type": "MinecraftTen",
-          "font_size": "small",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "offset": [ 0, -10 ]
-      }}
+      { "experience_bar_full@cui-common.experience_bar_full": { "layer": 2 }}
   ]}
 }

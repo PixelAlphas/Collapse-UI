@@ -82,45 +82,45 @@
   },
   "extra_anims_offset": {
     "anim_type": "offset",
-    "from": [ -80, 0 ],
+    "from": [ -120, 0 ],
     "to": [ 4, 0 ],
-    "duration": 0.25,
+    "duration": 0.4,
     "easing": "out_cubic"
   },
   "extra_anims_offset_exit": {
     "anim_type": "offset",
     "from": [ 4, 0 ],
-    "to": [ -80, 0 ],
-    "duration": 0.25,
+    "to": [ -120, 0 ],
+    "duration": 0.4,
     "easing": "in_cubic"
   },
   "extra_anims_offset_title": {
     "anim_type": "offset",
-    "from": [ -80, 4 ],
+    "from": [ -120, 4 ],
     "to": [ 14, 4 ],
-    "duration": 0.25,
+    "duration": 0.4,
     "easing": "out_cubic"
   },
   "extra_anims_offset_title_exit": {
     "anim_type": "offset",
     "from": [ 14, 4 ],
-    "to": [ -80, 4 ],
-    "duration": 0.25,
+    "to": [ -120, 4 ],
+    "duration": 0.4,
     "easing": "in_cubic"
   },
   "extra_anims_alpha": {
     "anim_type": "alpha",
     "from": 0,
-    "to": 0.55,
-    "duration": 0.25
+    "to": 0.85,
+    "duration": 0.4
   },
   "extra_anims_alpha_exit": {
     "anim_type": "alpha",
-    "from": 0.55,
+    "from": 0.85,
     "to": 0,
     "$cuiv:destroy_at_end|default": "extra_element_out",
     "destroy_at_end": "$cuiv:destroy_at_end",
-    "duration": 0.25
+    "duration": 0.4
   },
   "background_slider_load": {
     "anim_type": "alpha",

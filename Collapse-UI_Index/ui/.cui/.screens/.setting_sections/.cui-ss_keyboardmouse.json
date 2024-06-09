@@ -6,6 +6,7 @@
     "anchor_to": "top_left",
     "$cuiv:keymapping_grid_dimension": "#keyboard_standard_grid_dimension",
     "$cuiv:keymapping_collection": "keyboard_standard_collection",
+    "use_child_anchors": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "keyboard_and_mouse_button_toggle",

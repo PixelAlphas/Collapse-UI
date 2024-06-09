@@ -43,6 +43,8 @@ cui.settings.video.gameplay.title=Gameplay
 cui.settings.video.gameplay.description=Tweaks the gameplay experience.
 cui.settings.video.graphic.title=Graphical
 cui.settings.video.graphic.description=Tweaks the visual and performance experience.
+cui.settings.video.advgraphic.title=Advanced Graphical
+cui.settings.video.advgraphic.description=Tweaks the grpahical experience, e.g Deferred renderer and RTX.
 cui.settings.video.ui.title=UI
 cui.settings.video.ui.description=Tweaks the UI in general for maybe improved accessibility.
 cui.settings.video.perspective.description=Changes your gameplay perspective (or aka F5)
@@ -59,7 +61,14 @@ cui.settings.touch.misc.description=Regular stuff.
 cui.settings.keyboardmouse.main.description=A section for tweaking Mouse and Keyboard experience.
 cui.settings.keyboardmouse.mapping.description=Changes the keyboard mapping, which may allow you to use different game mechanic in different keys.
 
-## Account
+## > Global Resource
+cui.settings.globalresource.main.description=A section for applying resource packs.
+cui.settings.globalresource.deselected.title=Deselected
+cui.settings.globalresource.deselected.description=Current non-applied pack(s).
+cui.settings.globalresource.selected.title=Selected
+cui.settings.globalresource.selected.description=Current applied pack(s) - If you're applying config packs for CUI, consider placing it on the top of Collapse-UI!
+
+## > Account
 cui.settings.accoumt.main.description=A section for signing in your xbox account order to join multiplayer.
 
 

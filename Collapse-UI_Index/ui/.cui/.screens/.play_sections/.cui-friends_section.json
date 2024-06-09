@@ -37,7 +37,13 @@
       }},
       { "padding_01": {  "type": "panel", "size": [ 2, 2 ]}},
       { "join_by_code_button@cui-friends_section.join_by_code_button": { "size": [ "fill", 30 ]}},
-      { "padding_02": {  "type": "panel", "size": [ 2, 2 ]}},
+      { "padding_02": {  "type": "panel", "size": [ 2, 2 ],
+        "bindings": [
+            { "binding_name": "#realms_notification_button_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+          }]
+      }},
       { "notification_button_panel": {
           "type": "panel",
           "size": [ "13%", 30 ],
@@ -282,7 +288,7 @@
                 "ignored": "$add_friend_not_visible"
             }}
       ]}},
-      { "padding_01": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "padding_01": { "type": "panel", "size": [ "100%", 2 ], "ignored": "$add_friend_not_visible" }},
       { "friend_and_realm_label@cui-common.header": {
           "$cuiv:header_text": "playscreen.joinableRealms",
           "bindings": [

@@ -260,7 +260,7 @@
   ]},
   "section_content_panels": {
     "type": "panel",
-    "size": [ "100% - 2px", "100%c" ],
+    "size": [ "100% - 2px", "100%cm" ],
     "controls": [
       { "world_sections": {
           "type": "stack_panel",
@@ -293,7 +293,7 @@
             { "keyboardmouse_section@cui-ss_keyboardmouse.keyboardmouse_section": { "ignored": "(not $keyboard_and_mouse_supported)", "visible": false } },
             { "touch_section@cui-ss_touch.touch_section": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "visible": false } },
             { "storage_management_section@general_section.storage_management_section": { "visible": false, "ignored": "$ignore_storage_section" }},
-            { "global_texture_pack_section@general_section.global_texture_pack_section": { "visible": false, "ignored": "$ignore_global_resources_section" }}
+            { "global_texture_pack_section@cui-ss_globalresource.globalresource_section": { "visible": false, "ignored": "$ignore_global_resources_section" }}
       ]}}
   ]},
   "storage_button@cui-toggle.toggle_button_section": {

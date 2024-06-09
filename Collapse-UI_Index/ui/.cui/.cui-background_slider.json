@@ -1,4 +1,103 @@
 { "namespace": "cui-background_slider",
+  "background_slider_anim_00": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@cui-background_slider.background_slider_anim_01"
+  },
+  "background_slider_anim_01": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "from": [ 0, 0 ],
+    "to": [ "-100%", 0 ],
+    "duration": 1,
+    "next": "@cui-background_slider.background_slider_anim_02"
+  },
+  "background_slider_anim_02": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@cui-background_slider.background_slider_anim_03"
+  },
+  "background_slider_anim_03": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "from": [ "-100%", 0 ],
+    "to": [ "-200%", 0 ],
+    "duration": 1,
+    "next": "@cui-background_slider.background_slider_anim_04"
+  },
+  "background_slider_anim_04": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@cui-background_slider.background_slider_anim_05"
+  },
+  "background_slider_anim_05": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "from": [ "-200%", 0 ],
+    "to": [ "-300%", 0 ],
+    "duration": 1,
+    "next": "@cui-background_slider.background_slider_anim_06"
+  },
+  "background_slider_anim_06": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "duration": 0,
+    "next": "@cui-background_slider.background_slider_anim_00"
+  },
+  "background_slider_new": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$cuiv:background_slider_image_01|default": "textures/ui/cui-backgrounds/play_button_slider01",
+    "$cuiv:background_slider_image_02|default": "textures/ui/cui-backgrounds/play_button_slider02",
+    "$cuiv:background_slider_image_03|default": "textures/ui/cui-backgrounds/play_button_slider03",
+    "controls": [
+      {
+        "inside_element": {
+          "type": "panel",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "anims": [
+            "@cui-background_slider.background_slider_anim_00"
+          ],
+          "controls": [
+            {
+              "image_01": {
+                "type": "image",
+                "fill": true,
+                "offset": [ 0, 0 ],
+                "texture": "$cuiv:background_slider_image_01"
+              }
+            },
+            {
+              "image_02": {
+                "type": "image",
+                "fill": true,
+                "offset": [ "100%", 0 ],
+                "texture": "$cuiv:background_slider_image_02"
+              }
+            },
+            {
+              "image_03": {
+                "type": "image",
+                "fill": true,
+                "offset": [ "200%", 0 ],
+                "texture": "$cuiv:background_slider_image_03"
+              }
+            },
+            {
+              "image_default": {
+                "type": "image",
+                "fill": true,
+                "offset": [ "300%", 0 ],
+                "texture": "$cuiv:background_slider_image_01"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
   "background_slider": {
     "type": "panel",
     "controls": [
@@ -42,6 +141,25 @@
     "$cuiv:background_slider_gradient_main_color|default": [ 1, 1, 1, 0 ],
     "$cuiv:background_slider_gradient_second_color|default": [ 1, 1, 1, 1 ],
     "controls": [
+      {
+        "stack_images": {
+          "type": "stack_panel",
+          "size": [ "100%c", "100%" ],
+          "orientation": "horizontal",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "image_01": {
+                "type": "image",
+                "fill": true,
+                "texture": "$cuiv:background_slider_image"
+              }
+            }
+          ]
+        }
+      },
+      
       { "image_background_slider_main": {
           "type": "image",
           "fill": true,

@@ -21,15 +21,15 @@
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
       { "collapse-ui@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.uititle",
-          "$cuiv:about_text_gray": "v1.4.2.3"
+          "$cuiv:about_text_gray": "v1.5"
       }},
       { "update_release_date@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Mon, May 27 (2024)"
+          "$cuiv:about_text_gray": "Sun, Jun 6th (2024)"
       }},
       { "arxance@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.author",
-          "$cuiv:about_text_gray": "Arxance/Harlow"
+          "$cuiv:about_text_gray": "// Arxance (Harlow)"
       }},
       { "minecraft@cui-about_section.about_text": {
           "$cuiv:about_text": "MCBE Version Supported",

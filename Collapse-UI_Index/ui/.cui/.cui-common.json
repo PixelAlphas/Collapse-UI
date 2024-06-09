@@ -22,28 +22,6 @@
       }
     ]
   },
-  "label_with_background_old": {
-    "type": "label",
-    "text": "$cuiv:lwb_text",
-    "color": "$cuiv:lwb_text_color",
-    "$cuiv:lwb_text|default": "?",
-    "$cuiv:lwb_text_color|default": "$cuigv:SecondaryColor",
-    "$cuiv:lwb_bg_color|default": "$cuigv:PrimaryColor",
-    "$cuiv:lwb_bindings|default": "",
-    "shadow": false,
-    "bindings": "$cuiv:lwb_bindings",
-    "controls": [
-      {
-        "background": {
-          "type": "image",
-          "layer": -1,
-          "texture": "textures/ui/.cui-assets/background",
-          "color": "$cuiv:lwb_bg_color",
-          "size": [ "100%c + 4px", "100%c + 4px" ]
-        }
-      }
-    ]
-  },
   "experience_bar_template": {
     "type": "image",
     "size": [ "100%", "100%" ],

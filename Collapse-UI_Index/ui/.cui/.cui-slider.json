@@ -62,7 +62,7 @@
   ]},
   "slider_background_template@auicore_configloader.core": {
     "type": "image",
-    "texture": "textures/ui/.cui-assets/slider"
+    "texture": "textures/ui/White"
   },
   "slider_background@cui-slider.slider_background_template": { "color": [ 0.2, 0.2, 0.2 ] },
   "slider_background_hover@cui-slider.slider_background_template": { "color": [ 0.5, 0.5, 0.5 ] },
@@ -79,7 +79,7 @@
     "controls": [
       { "sizing_panel": {
           "type": "panel",
-          "size": [ "100%", "100% - 4px" ],
+          "size": [ "100%", "100% - 2px" ],
           "controls": [
             { "$background_control_name@$background_control": { "layer": 1, "size": [ "100%", 2 ] }},
             { "$progress_control_name@$progress_control": { "layer": 3, "clip_direction": "$progress_clip_direction", "clip_pixelperfect": false }}
