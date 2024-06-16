@@ -214,13 +214,11 @@
     "$cuiv:primary_label_font|default": "",
     "$cuiv:primary_label_font_size|default": 1,
     "variables": [
-      {
-        "requires": "$cuiv:is_recent_world",
+      { "requires": "$cuiv:is_recent_world",
         "$cuiv:world_screenshot_size": [ "100%", 65 ],
         "$cuiv:primary_label_font": "MinecraftTen",
         "$cuiv:primary_label_font_size": 1.3
-      }
-    ],
+    }],
     "$local_world_edit_button_visible|default": true,
     "controls": [
       { "pudding01": { "type": "panel", "size": [ 4, "100%" ]}},
@@ -341,8 +339,7 @@
                   { "@import_world_button": {}}
             ]}},
             { "play_screen_warning@play.realm_warning_tip": {}}
-          ]
-      }},
+      ]}},
       { "search_mode": {
           "type": "stack_panel",
           "orientation": "vertical",
@@ -493,13 +490,25 @@
                 }]
             }},
             { "padding_05": { "type": "panel", "size": [ "100%", 2 ]}},
-            { "no_worlds_label": {
-                "type": "label",
-                "text": "No worlds, perhaps you could press \"Quick play\" button...",
+            { "no_world_bg": {
+                "type": "image",
+                "texture": "textures/ui/.cui-assets/background",
+                "size": [ "100%", "100%cm + 8px" ],
+                "color": "$cuigv:SecondaryColor",
+                "alpha": "$cuigv:BackgroundAlpha",
                 "bindings": [
                   { "binding_name": "#no_local_worlds",
                     "binding_name_override": "#visible"
-                }]
-            }}
+                }],
+                "controls": [
+                  { "no_worlds_label": {
+                      "type": "label",
+                      "text": "No worlds, perhaps you could press \"Quick play\" button...",
+                      "bindings": [
+                        { "binding_name": "#no_local_worlds",
+                          "binding_name_override": "#visible"
+                      }]
+                  }}
+            ]}}
       ]}}
 ]}}

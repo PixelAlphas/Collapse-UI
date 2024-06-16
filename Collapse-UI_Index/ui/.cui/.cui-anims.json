@@ -1,4 +1,80 @@
 { "namespace": "cui-anims",
+  "content_log_anim_text_alpha_00": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0,
+    "to": 1,
+    "next": "@cui-anims.content_log_anim_text_alpha_01"
+  },
+  "content_log_anim_text_alpha_01": {
+    "anim_type": "wait",
+    "duration": "$content_log_item_lifetime",
+    "next": "@cui-anims.content_log_anim_text_alpha_02"
+  },
+  "content_log_anim_text_alpha_02": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 1,
+    "to": 0,
+    "destroy_at_end": "content_log_core"
+  },
+  "content_log_anim_alpha_00": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0,
+    "to": 0.5,
+    "next": "@cui-anims.content_log_anim_alpha_01"
+  },
+  "content_log_anim_alpha_01": {
+    "anim_type": "wait",
+    "duration": "$content_log_item_lifetime",
+    "next": "@cui-anims.content_log_anim_alpha_02"
+  },
+  "content_log_anim_alpha_02": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0.5,
+    "to": 0,
+    "destroy_at_end": "content_log_core"
+  },
+  "content_log_anim_bar_alpha_00": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0,
+    "to": 0.2,
+    "next": "@cui-anims.content_log_anim_bar_alpha_01"
+  },
+  "content_log_anim_bar_alpha_01": {
+    "anim_type": "wait",
+    "duration": "$content_log_item_lifetime",
+    "next": "@cui-anims.content_log_anim_bar_alpha_02"
+  },
+  "content_log_anim_bar_alpha_02": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0.2,
+    "to": 0
+  },
+  "content_log_anim_bg_00": {
+    "anim_type": "size",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": [ "100% + 8px", "0%" ],
+    "to": [ "100% + 8px", "100%"]
+  },
+  "content_log_anim_bar_00": {
+    "anim_type": "size",
+    "easing": "in_quart",
+    "duration": "$content_log_item_lifetime",
+    "from": [ "0%", "100%" ],
+    "to": [ "100% + 8px", "100%" ]
+  },
   "loading_anim": {
     "anim_type": "flip_book",
     "initial_uv": [ 0, 0 ],

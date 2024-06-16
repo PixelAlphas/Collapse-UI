@@ -2,7 +2,7 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.5", "$cuiv:AddPadding": false, "ignored": "(not $cuigv:NoGameLogo)"}},
+      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text_subtitle": "v1.5.1", "$cuiv:AddPadding": false, "ignored": "(not $cuigv:NoGameLogo)"}},
       { "@title": { "ignored": "$cuigv:NoGameLogo" }},
       { "@main_button": {
         "ignored": "$cuigv:StartMainButtonClassic"
@@ -89,9 +89,8 @@
                 "type": "image",
                 "texture": "textures/ui/.cui-assets/background",
                 "size": [ "100%", "100%cm + 8px" ],
-                "color": [ 0, 0, 0 ],
-                "alpha": 0.7,
-                "anims": "$cuiv:selector_anims",
+                "color": "$cuigv:SecondaryColor",
+                "alpha": "$cuigv:BackgroundAlpha",
                 "controls": [
                   { "stack_panel": {
                       "type": "stack_panel",
@@ -123,8 +122,8 @@
                 "type": "image",
                 "texture": "textures/ui/.cui-assets/background",
                 "size": [ "100%", "100%cm + 8px" ],
-                "color": [ 0, 0, 0 ],
-                "alpha": 0.7,
+                "color": "$cuigv:SecondaryColor",
+                "alpha": "$cuigv:BackgroundAlpha",
                 "anims": "$cuiv:selector_anims",
                 "controls": [
                   { "stack_panel": {
