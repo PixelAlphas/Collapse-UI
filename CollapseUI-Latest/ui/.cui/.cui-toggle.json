@@ -16,14 +16,14 @@
     "$checked_locked_control": "cui-toggle.toggle_locked",
     "$checked_locked_hover_control": "cui-toggle.toggle_locked",
     
-    "$cuiv:default_button_texture|default": "textures/ui/.cui-assets/.buttons/button_idle",
-    "$cuiv:default_button_color|default": [ 1, 1, 1 ],
-    "$cuiv:hover_button_texture|default": "textures/ui/.cui-assets/.buttons/button_hover",
-    "$cuiv:hover_button_color|default": [ 1, 1, 1 ],
-    "$cuiv:pressed_button_texture|default": "textures/ui/.cui-assets/.buttons/button_pressed",
-    "$cuiv:pressed_button_color|default": [ 1, 1, 1 ],
-    "$cuiv:pressed_no_hover_button_texture|default": "textures/ui/.cui-assets/.buttons/button_pressed",
-    "$cuiv:pressed_no_hover_button_color|default": [ 1, 1, 1 ],
+    "$cuiv:default_button_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:default_button_color|default": "$cuigv:SecondaryColor",
+    "$cuiv:hover_button_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:hover_button_color|default": "$cuigv:PrimaryColor",
+    "$cuiv:pressed_button_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:pressed_button_color|default": "$cuigv:PrimaryColor",
+    "$cuiv:pressed_no_hover_button_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:pressed_no_hover_button_color|default": "$cuigv:SecondaryColor",
     "$cuiv:locked_button_texture|default": "textures/ui/disabledButtonNoBorder",
     "$cuiv:locked_button_color|default": [ 1, 1, 1 ]
   },
@@ -60,7 +60,9 @@
     "anchor_to": "left_middle",
     "$cuiv:toggle_texture_only|default": false,
     "$cuiv:toggle_texture|default": "",
+    "$cuiv:toggle_texture_color|default": "$cuigv:FontPrimaryColor",
     "$cuiv:toggle_texture_size|default": [ 16, 16 ],
+    "$cuiv:toggle_texture_alpha|default": "$cuigv:BackgroundAlpha",
     "$cuiv:toggle_texture_anchor|default": "center",
     "$cuiv:toggle_texture_offset|default": [ 0, 0 ],
     "$cuiv:toggle_label_text|default": "",
@@ -69,9 +71,10 @@
       { "toggle_button_image": {
           "type": "image",
           "layer": 3,
-          "color": "$cuigv:PrimaryColor",
+          "color": "$cuiv:toggle_texture_color",
           "size": "$cuiv:toggle_texture_size",
           "texture": "$cuiv:toggle_texture",
+          "alpha": "$cuiv:toggle_texture_alpha",
           "anchor_from": "$cuiv:toggle_texture_anchor",
           "anchor_to": "$cuiv:toggle_texture_anchor",
           "offset": "$cuiv:toggle_texture_offset"
@@ -94,6 +97,7 @@
   "toggle_button_core_only_image": {
     "type": "panel",
     "$cuiv:toggle_texture|default": "",
+    "$cuiv:toggle_texture_color|default": "$cuigv:FontPrimaryColor",
     "$cuiv:toggle_texture_size|default": [ 16, 16 ],
     "$cuiv:toggle_texture_anchor|default": "center",
     "$cuiv:toggle_texture_offset|default": [ 0, 0 ],
@@ -102,7 +106,7 @@
       { "toggle_button_image": {
           "type": "image",
           "layer": 3,
-          "color": "$cuigv:PrimaryColor",
+          "color": "$cuiv:toggle_texture_color",
           "size": "$cuiv:toggle_texture_size",
           "texture": "$cuiv:toggle_texture",
           "anchor_from": "$cuiv:toggle_texture_anchor",
@@ -128,6 +132,7 @@
   "toggle_checked@cui-toggle.toggle_state_panel": {
     "$cuiv:button_texture": "$cuiv:hover_button_texture",
     "$cuiv:button_texture_color": "$cuiv:hover_button_color",
+    "$cuiv:toggle_texture_color": "$cuigv:SecondaryColor",
     "$cuiv:text_color": "$dark_button_hover_text_color",
     "$toggle_checked": true,
     "$pressed_state": true,
@@ -137,6 +142,7 @@
   "toggle_unchecked_hover@cui-toggle.toggle_state_panel": {
     "$cuiv:button_texture": "$cuiv:pressed_button_texture",
     "$cuiv:button_texture_color": "$cuiv:pressed_button_color",
+    "$cuiv:toggle_texture_color": "$cuigv:SecondaryColor",
     "$cuiv:text_color": "$dark_button_pressed_text_color",
     "$toggle_unchecked_hover": true,
     "$hover_state": true,
@@ -155,6 +161,7 @@
   "toggle_locked@cui-toggle.toggle_state_panel": {
     "$cuiv:button_texture": "$cuiv:locked_button_texture",
     "$cuiv:button_texture_color": "$cuiv:pressed_button_color",
+    "$cuiv:toggle_texture_color": "$cuigv:SecondaryColor",
     "$cuiv:text_color": "$dark_button_locked_text_color",
     "$toggle_locked": true,
     "$default_state": true,
@@ -173,6 +180,7 @@
   "toggle_checked_locked@cui-toggle.toggle_state_panel": {
     "$cuiv:button_texture": "$cuiv:hover_button_texture",
     "$cuiv:button_texture_color": "$cuiv:hover_button_color",
+    "$cuiv:toggle_texture_color": "$cuigv:SecondaryColor",
     "$cuiv:text_color": "$dark_button_hover_text_color",
     "$toggle_locked": true,
     "$pressed_state": true,

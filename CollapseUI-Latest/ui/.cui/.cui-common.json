@@ -1,4 +1,45 @@
 { "namespace": "cui-common",
+  "gradient_renderer_template": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "layer": -89
+  },
+  "player_head_renderer": {
+    "type": "panel",
+    "size": [ 25, 25 ],
+    "clips_children": true,
+    "controls": [
+      { "skin_renderer": {
+          "type": "custom",
+          "layer": 5,
+          "camera_tilt_degrees": -10,
+          "starting_rotation": 30,
+          "rotation": "gesture_x",
+          "renderer": "paper_doll_renderer",
+          "size": [ 42, 92 ],
+          "offset": [ 0, 8 ]
+      }}
+  ]},
+  "screen_background": {
+    "type": "panel",
+    "controls": [
+      { "gradient@cui-common.gradient_renderer_template": {
+          "size": [ "55%", "100%" ],
+          "gradient_direction": "horizontal",
+          "color1": "$cuigv:BackgroundGradient",
+          "color2": [ 0, 0, 0, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+      }},
+      { "background": {
+          "ignored": "(not $cuigv:UIBackground)",
+          "type": "image",
+          "fill": true,
+          "alpha": "$cuigv:BackgroundAlpha",
+          "layer": -95,
+          "texture": "textures/ui/cui-backgrounds/ui_background"
+      }}
+  ]},
   "label_with_background": {
     "type": "image",
     "layer": 1,
@@ -200,31 +241,6 @@
   "edit_box_indent_hover@cui-common.edit_box_indent": {
     "texture": "textures/ui/.cui-assets/text_box_hover"
   },
-  "gradient_renderer_template": {
-    "type": "custom",
-    "renderer": "gradient_renderer",
-    "layer": -89
-  },
-  "screen_background": {
-    "type": "panel",
-    "controls": [
-      { "gradient@cui-common.gradient_renderer_template": {
-          "size": [ "55%", "100%" ],
-          "gradient_direction": "horizontal",
-          "color1": "$cuigv:BackgroundGradient",
-          "color2": [ 0, 0, 0, 0 ],
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle"
-      }},
-      { "background": {
-          "ignored": "(not $cuigv:UIBackground)",
-          "type": "image",
-          "fill": true,
-          "alpha": "$cuigv:BackgroundAlpha",
-          "layer": -95,
-          "texture": "textures/ui/cui-backgrounds/ui_background"
-      }}
-  ]},
   "loading_screen_background": {
     "type": "panel",
     "controls": [
@@ -303,8 +319,8 @@
     "$cuiv:title_back_button|default": true,
     "$cuiv:title_text|default": "Collapse-UI",
     "$cuiv:title_text_subtitle|default": "",
-    "$cuiv:anim_from": [ 14, -50 ],
-    "$cuiv:anim_to": [ 14, 4 ],
+    "$cuiv-anim:pos_from": [ 14, -50 ],
+    "$cuiv-anim:pos_to": [ 14, 4 ],
     "$cuiv:AddPadding|default": false,
     "animation_reset_name": "screen_animation_reset",
     "anims": [

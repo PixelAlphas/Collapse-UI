@@ -1,4 +1,88 @@
 { "namespace": "cui-anims",
+  "screen_outro_anim_push": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": "$transition_time_push",
+    "from": "$cuiv-anim:pos_to",
+    "to": "$cuiv-anim:pos_from",
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "screen_outro_anim_pop": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:pos_to",
+    "to": "$cuiv-anim:pos_from",
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "screen_intro_anim_push": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$transition_time_push",
+    "from": "$cuiv-anim:pos_from",
+    "to": "$cuiv-anim:pos_to",
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_intro_anim_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:pos_from",
+    "to": "$cuiv-anim:pos_to",
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_outro_anim_size_push": {
+    "anim_type": "size",
+    "easing": "in_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:size_to",
+    "to": "$cuiv-anim:size_from",
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "screen_outro_anim_size_pop": {
+    "anim_type": "size",
+    "easing": "in_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:size_to",
+    "to": "$cuiv-anim:size_from",
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "screen_intro_anim_size_push": {
+    "anim_type": "size",
+    "easing": "out_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:size_from",
+    "to": "$cuiv-anim:size_to",
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_intro_anim_size_pop": {
+    "anim_type": "size",
+    "easing": "out_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:size_from",
+    "to": "$cuiv-anim:size_to",
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
   "content_log_anim_text_alpha_00": {
     "anim_type": "alpha",
     "easing": "in_quart",
@@ -83,78 +167,6 @@
     "fps": 20,
     "reversible": false,
     "easing": "linear"
-  },
-  "screen_outro_anim_push": {
-    "anim_type": "offset",
-    "easing": "in_cubic",
-    "duration": "$transition_time_push",
-    "from": "$cuiv:anim_to",
-    "to": "$cuiv:anim_from",
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-  "screen_outro_anim_pop": {
-    "anim_type": "offset",
-    "easing": "in_cubic",
-    "duration": "$transition_time_pop",
-    "from": "$cuiv:anim_to",
-    "to": "$cuiv:anim_from",
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
-  "screen_intro_anim_push": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": "$transition_time_push",
-    "from": "$cuiv:anim_from",
-    "to": "$cuiv:anim_to",
-    "play_event": "screen.entrance_push",
-    "end_event": "screen.entrance_end"
-  },
-  "screen_intro_anim_pop": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": "$transition_time_pop",
-    "from": "$cuiv:anim_from",
-    "to": "$cuiv:anim_to",
-    "play_event": "screen.entrance_pop",
-    "end_event": "screen.entrance_end"
-  },
-  "screen_outro_anim_size_push": {
-    "anim_type": "size",
-    "easing": "in_cubic",
-    "duration": "$transition_time_pop",
-    "from": "$cuiv:anim_size_to",
-    "to": "$cuiv:anim_size_from",
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-  "screen_outro_anim_size_pop": {
-    "anim_type": "size",
-    "easing": "in_cubic",
-    "duration": "$transition_time_pop",
-    "from": "$cuiv:anim_size_to",
-    "to": "$cuiv:anim_size_from",
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
-  "screen_intro_anim_size_push": {
-    "anim_type": "size",
-    "easing": "out_cubic",
-    "duration": "$transition_time_pop",
-    "from": "$cuiv:anim_size_from",
-    "to": "$cuiv:anim_size_to",
-    "play_event": "screen.entrance_push",
-    "end_event": "screen.entrance_end"
-  },
-  "screen_intro_anim_size_pop": {
-    "anim_type": "size",
-    "easing": "out_cubic",
-    "duration": "$transition_time_pop",
-    "from": "$cuiv:anim_size_from",
-    "to": "$cuiv:anim_size_to",
-    "play_event": "screen.entrance_pop",
-    "end_event": "screen.entrance_end"
   },
   "extra_anims_offset": {
     "anim_type": "offset",

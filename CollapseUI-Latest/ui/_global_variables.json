@@ -2,7 +2,7 @@
   // General
   "$cuigv:ConfigName": "Default",
     // Config name — You can change it to anything you want if you wish to customize.
-  "$cuigv:DesignedVersion": "v1.4.2",
+  "$cuigv:DesignedVersion": "v1.0",
     // Designed Version — Config version that supported the UI
   
   // -- README before modifying! --
@@ -16,9 +16,9 @@
   
   // UI Theme
   // Changes the UI color/alpha and enable some of its featuure
-  "$cuigv:PrimaryColor": [ 1, 0.8627, 0 ], // Color
+  "$cuigv:PrimaryColor": [ 0.3686, 0.0274, 0.7490 ], // Color
     // UI accents, this includes — Buttons, Icons, Loading bar, and etc.
-  "$cuigv:SecondaryColor": [ 0, 0, 0 ], // Color
+  "$cuigv:SecondaryColor": [ 0.0745, 0.0588, 0.0862 ], // Color
     // Background Colors.
   "$cuigv:FontPrimaryColor": [ 1, 1, 1 ], // Color
     // Overall texts color. (Not fully finished)
@@ -53,4 +53,4 @@
   "$cuigv:DebugElement": false, // Boolean
   "$cuigv:CompactMode": false, // Boolean
   "$cuigv:AdditionalStartButtons": true // Boolean
-}a
+}

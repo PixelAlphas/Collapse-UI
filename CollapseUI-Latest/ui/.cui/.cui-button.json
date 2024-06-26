@@ -1,7 +1,6 @@
 { "namespace": "cui-button",
   "button": {
     "type": "button",
-    "layer": 1,
     "$focus_id|default": "", 
     "$focus_override_down|default": "", 
     "$focus_override_up|default": "", 
@@ -31,14 +30,14 @@
         "mapping_type": "focused"
   }]},
   "standard_button_assets@cui-button.button": {
-    "$cuiv:default_button_texture|default": "textures/ui/.cui-assets/.buttons/button_idle",
-    "$cuiv:default_button_color|default": "$cuigv:PrimaryColor",
-    "$cuiv:hover_button_texture|default": "textures/ui/.cui-assets/.buttons/button_hover",
+    "$cuiv:default_button_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:default_button_color|default": "$cuigv:SecondaryColor",
+    "$cuiv:hover_button_texture|default": "textures/ui/.cui-assets/background",
     "$cuiv:hover_button_color|default": "$cuigv:PrimaryColor",
-    "$cuiv:pressed_button_texture|default": "textures/ui/.cui-assets/.buttons/button_pressed",
+    "$cuiv:pressed_button_texture|default": "textures/ui/.cui-assets/background",
     "$cuiv:pressed_button_color|default": "$cuigv:PrimaryColor",
     "$cuiv:locked_button_texture|default": "textures/ui/disabledButtonNoBorder",
-    "$cuiv:locked_button_color|default": "$cuigv:PrimaryColor"
+    "$cuiv:locked_button_color|default": "$cuigv:SecondaryColor"
   },
   "text_button@cui-button.standard_button_assets": {
     "$cuiv:button_text|default": "",
@@ -46,7 +45,7 @@
     "$cuiv:button_type_panel": "cui-button.button_label",
     "$cuiv:button_state_panel|default": "cui-button.button_core",
     "$cuiv:button_text_shadow|default": false,
-    "$cuiv:button_texture_alpha|default": 1,
+    "$cuiv:button_texture_alpha|default": "$cuigv:BackgroundAlpha",
     "$cuiv:button_text_bindings": [],
     "$default_state|default": false,
     "$hover_state|default": false,
@@ -65,14 +64,14 @@
       { "hover@$cuiv:button_state_panel": {
           "$cuiv:button_texture": "$cuiv:hover_button_texture",
           "$cuiv:button_texture_color": "$cuiv:hover_button_color",
-          "$cuiv:text_color": "$dark_button_hover_text_color",
+          "$cuiv:text_color": "$light_button_hover_text_color",
           "$hover_state": true,
           "layer": 4
       }},
       { "pressed@$cuiv:button_state_panel": {
           "$cuiv:button_texture": "$cuiv:pressed_button_texture",
           "$cuiv:button_texture_color": "$cuiv:pressed_button_color",
-          "$cuiv:text_color": "$dark_button_pressed_text_color",
+          "$cuiv:text_color": "$light_button_pressed_text_color",
           "$pressed_state": true,
           "layer": 5
       }},
@@ -140,7 +139,7 @@
                 "offset": "$cuiv:hover_offset",
                 "anchor_from": "$cuiv:label_anchor",
                 "anchor_to": "$cuiv:label_anchor",
-                "layer": 1,
+                "layer": 10,
                 "font_type": "dainbold",
                 "$cuiv:hover_offset|default": [ 3, -1 ],
                 "variables": [
