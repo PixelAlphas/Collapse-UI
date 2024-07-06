@@ -8,7 +8,9 @@
             { "top_left_marker@safe_zone.corner_tl": {} },
             { "top_right_marker@safe_zone.corner_tr": {} },
             { "bottom_left_marker@safe_zone.corner_bl": {} },
-            { "bottom_right_marker@safe_zone.corner_br": {} }
+            { "bottom_right_marker@safe_zone.corner_br": {} },
+            { "border@cui-safezone_screen.corner_image_border": {} }
+            
       ]}},
       { "main_content_panel": {
           "type": "panel",
@@ -60,6 +62,87 @@
             }}
       ]}}
   ]},
+  "corner_image_border": {
+    "type": "panel",
+    "controls": [
+      {
+        "left_border": {
+          "type": "image",
+          "size": [ 1, "100%" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "use_anchored_offset": true,
+          "texture": "textures/ui/White",
+          "property_bag": {
+            "#anchored_offset_value_x": 0.0
+          },
+          "bindings": [
+            {
+              "binding_name": "#left_safe_zone_offset",
+              "binding_name_override": "#anchored_offset_value_x"
+            }
+          ]
+        }
+      },
+      {
+        "right_border": {
+          "type": "image",
+          "size": [ 1, "100%" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "use_anchored_offset": true,
+          "texture": "textures/ui/White",
+          "property_bag": {
+            "#anchored_offset_value_x": 0.0
+          },
+          "bindings": [
+            {
+              "binding_name": "#right_safe_zone_offset",
+              "binding_name_override": "#anchored_offset_value_x"
+            }
+          ]
+        }
+      },
+      {
+        "top_border": {
+          "type": "image",
+          "size": [ "100%", 1 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "use_anchored_offset": true,
+          "texture": "textures/ui/White",
+          "property_bag": {
+            "#anchored_offset_value_y": 0.0
+          },
+          "bindings": [
+            {
+              "binding_name": "#top_safe_zone_offset",
+              "binding_name_override": "#anchored_offset_value_y"
+            }
+          ]
+        }
+      },
+      {
+        "bottom_border": {
+          "type": "image",
+          "size": [ "100%", 1 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "use_anchored_offset": true,
+          "texture": "textures/ui/White",
+          "property_bag": {
+            "#anchored_offset_value_y": 0.0
+          },
+          "bindings": [
+            {
+              "binding_name": "#bottom_safe_zone_offset",
+              "binding_name_override": "#anchored_offset_value_y"
+            }
+          ]
+        }
+      }
+    ]
+  },
   "safezone_section": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],

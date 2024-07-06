@@ -124,6 +124,7 @@ cui.about.tab.activeconfig.vanillapaperdoll=Vanilla Player doll
 cui.about.tab.activeconfig.norealmspromoteinworldsection=No Realm Promoters on world section
 cui.about.tab.activeconfig.nogamelogo=No Game logo
 cui.about.tab.activeconfig.startmenubuttonclassic=Classic Start menu
+cui.about.tab.activeconfig.logoinpausescreen=Logo In Pause Screen
 
 cui.about.tab.credit=Credits
 cui.about.tab.credit.bg=Artworks / Backgrounds

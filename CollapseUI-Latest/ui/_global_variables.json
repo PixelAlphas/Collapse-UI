@@ -2,7 +2,7 @@
   // General
   "$cuigv:ConfigName": "Default",
     // Config name — You can change it to anything you want if you wish to customize.
-  "$cuigv:DesignedVersion": "v1.0",
+  "$cuigv:DesignedVersion": "v1.0.4",
     // Designed Version — Config version that supported the UI
   
   // -- README before modifying! --
@@ -16,7 +16,7 @@
   
   // UI Theme
   // Changes the UI color/alpha and enable some of its featuure
-  "$cuigv:PrimaryColor": [ 0.3686, 0.0274, 0.7490 ], // Color
+  "$cuigv:PrimaryColor": [ 0.5450, 0.3450, 0.9254 ], // Color
     // UI accents, this includes — Buttons, Icons, Loading bar, and etc.
   "$cuigv:SecondaryColor": [ 0.0745, 0.0588, 0.0862 ], // Color
     // Background Colors.
@@ -34,6 +34,8 @@
     // Background Gradient.
 
   // Layouts
+  "$cuigv:LogoInPauseScreen": true,
+    // Enable the game's logo instead displaying "Pause"
   "$cuigv:StartMainButtonClassic": false,
     // Enable Classic menu (from Arc-UI) for controller convenience.
   "$cuigv:SearchBoxSystem": true, // Boolean

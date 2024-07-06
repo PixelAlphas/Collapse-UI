@@ -391,6 +391,7 @@
           "size": [ "100% - 8px", 10 ],
           "font_type": "MinecraftTen",
           "text": "$cuiv:header_text",
+          "layer": 10,
           "offset": [ 0, -2 ]
       }},
       { "outline": {
@@ -406,7 +407,7 @@
   "element_background":{
     "type": "image",
     "$cuiv:element_background_alpha|default": "$cuigv:BackgroundAlpha",
-    "$cuiv:element_background_color|default": [ 0, 0, 0 ],
+    "$cuiv:element_background_color|default": "$cuigv:SecondaryColor",
     "$cuiv:element_background_size|default": [ "default", "100%cm" ],
     "$cuiv:element_background_offset|default": [ 0, 0 ],
     "$cuiv:element_background_anchor|default": "bottom_middle",

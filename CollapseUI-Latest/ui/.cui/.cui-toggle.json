@@ -23,7 +23,7 @@
     "$cuiv:pressed_button_texture|default": "textures/ui/.cui-assets/background",
     "$cuiv:pressed_button_color|default": "$cuigv:PrimaryColor",
     "$cuiv:pressed_no_hover_button_texture|default": "textures/ui/.cui-assets/background",
-    "$cuiv:pressed_no_hover_button_color|default": "$cuigv:SecondaryColor",
+    "$cuiv:pressed_no_hover_button_color|default": "$cuigv:PrimaryColor",
     "$cuiv:locked_button_texture|default": "textures/ui/disabledButtonNoBorder",
     "$cuiv:locked_button_color|default": [ 1, 1, 1 ]
   },
@@ -89,8 +89,7 @@
                 "type": "label",
                 "offset": [ 0, 7 ],
                 "text": "$cuiv:toggle_label_text",
-                "color": "$cuiv:text_color",
-                "font_type": "dainbold"
+                "color": "$cuiv:text_color"
             }}
       ]}}
   ]},
@@ -152,6 +151,7 @@
   "toggle_checked_hover@cui-toggle.toggle_state_panel": {
     "$cuiv:button_texture": "$cuiv:pressed_no_hover_button_texture",
     "$cuiv:button_texture_color": "$cuiv:pressed_no_hover_button_color",
+    "$cuiv:toggle_texture_color": "$cuigv:SecondaryColor",
     "$cuiv:text_color": "$dark_button_pressed_text_color",
     "$toggle_checked_hover": true,
     "$pressed_state": true,

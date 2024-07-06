@@ -2,14 +2,18 @@
   "root_contents": {
     "type": "panel",
     "controls": [
+      { "@cui-start_screen.game_title": {
+          "ignored": "(not $cuigv:LogoInPauseScreen)"
+      }},
       { "@cui-common.title_core": {
           "$cuiv:title_text": "Pause",
+          "ignored": "$cuigv:LogoInPauseScreen",
           "$cuiv:title_back_button": false
       }},
       { "@main_button": {}},
       { "@playerlist_element": {}},
       { "@cui-start_screen.gamepad_tooltips":{
-        "$cuigv:no_extramenu": true
+          "$cuigv:no_extramenu": true
       }}
   ]},
   "main_button": {

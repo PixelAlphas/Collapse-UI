@@ -135,6 +135,11 @@
           "type": "panel",
           "$cuiv:config_text": "cui.about.tab.activeconfig.startmenubuttonclassic",
           "$cuiv:config_value": "$cuigv:StartMainButtonClassic"
+      }},
+      { "config_layout_07@cui-activeconfig_section.config_label": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.logoinpausescreen",
+          "$cuiv:config_value": "$cuigv:LogoInPauseScreen"
       }}
       
   ]},
