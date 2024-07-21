@@ -163,6 +163,7 @@
     "type": "stack_panel",
     "$tts_section_header": "realmsSettingsScreen.worldSectionTitle",
     "variables": { "requires": "$is_pregame", "$tts_section_header": "options.editSettings" },
+    "use_child_anchors": true,
     "controls": [
       { "world_snapshot_image": {
           "ignored": "(not $is_pregame)",

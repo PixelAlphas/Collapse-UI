@@ -92,6 +92,8 @@ cui.pause.playerlist=Players list
 cui.play.controllcentre=Control centre
 cui.play.mostrecent=Most Recent
 cui.play.worldsearch.textbar=Search World (Case sensitive)
+cui.play.hidefeaturedserver=Hide Featured Server list
+cui.play.viewfeaturedserver=View Featured Server list
 
 ## Safezone
 cui.safezone.exp.title=Experiment Settings
