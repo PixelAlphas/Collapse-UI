@@ -35,7 +35,7 @@ cui.settings.sound.main.weather.description=Weather Volume
 cui.settings.sound.main.texttospeech.description="Beep-Boop" Voice Volume
 
 ## > Language
-cui.settings.language.main.description=A section for changing the game language - NOTE : Collapse-UI currently doesn't support ALL languages just yet, this may causes some stuff being english. Language Contribution are welcome! - also the toggle broke and kinda forced me to rewrite, but that's not happening.
+cui.settings.language.main.description=A section for changing the game language - NOTE : Collapse-UI currently doesn't support ALL languages just yet, this may causes some stuff being english. Language Contribution are welcome!
 
 ## > Video
 cui.settings.video.main.description=A section for tweaking graphical and gameplay related.
@@ -43,6 +43,8 @@ cui.settings.video.gameplay.title=Gameplay
 cui.settings.video.gameplay.description=Tweaks the gameplay experience.
 cui.settings.video.graphic.title=Graphical
 cui.settings.video.graphic.description=Tweaks the visual and performance experience.
+cui.settings.video.advgraphic.title=Advanced Graphical
+cui.settings.video.advgraphic.description=Tweaks the grpahical experience, e.g Deferred renderer and RTX.
 cui.settings.video.ui.title=UI
 cui.settings.video.ui.description=Tweaks the UI in general for maybe improved accessibility.
 cui.settings.video.perspective.description=Changes your gameplay perspective (or aka F5)
@@ -59,7 +61,14 @@ cui.settings.touch.misc.description=Regular stuff.
 cui.settings.keyboardmouse.main.description=A section for tweaking Mouse and Keyboard experience.
 cui.settings.keyboardmouse.mapping.description=Changes the keyboard mapping, which may allow you to use different game mechanic in different keys.
 
-## Account
+## > Global Resource
+cui.settings.globalresource.main.description=A section for applying resource packs.
+cui.settings.globalresource.deselected.title=Deselected
+cui.settings.globalresource.deselected.description=Current non-applied pack(s).
+cui.settings.globalresource.selected.title=Selected
+cui.settings.globalresource.selected.description=Current applied pack(s) - If you're applying config packs for CUI, consider placing it on the top of Collapse-UI!
+
+## > Account
 cui.settings.accoumt.main.description=A section for signing in your xbox account order to join multiplayer.
 
 
@@ -67,6 +76,8 @@ cui.settings.accoumt.main.description=A section for signing in your xbox account
 cui.main_menu.play=PLAY
 cui.main_menu.achievement=ACHIEVEMENTS
 cui.main_menu.skin=SKINS
+cui.main_menu.settings=SETTINGS
+cui.main_menu.exit=EXIT
 cui.username.logged_in=Logged as
 cui.username.local=Playing as (Local)
 cui.main_menu.quickaccess=Quick Access
@@ -80,8 +91,9 @@ cui.pause.playerlist=Players list
 ## Play screen
 cui.play.controllcentre=Control centre
 cui.play.mostrecent=Most Recent
-cui.play.exp.worldsearch=Experiment World Search
-cui.play.exp.worldsearch.textbar=Search World (Case sensitive)
+cui.play.worldsearch.textbar=Search World (Case sensitive)
+cui.play.hidefeaturedserver=Hide Featured Server list
+cui.play.viewfeaturedserver=View Featured Server list
 
 ## Safezone
 cui.safezone.exp.title=Experiment Settings
@@ -95,11 +107,15 @@ cui.about.tab.about.update=Build Release
 cui.about.tab.activeconfig=Configs
 cui.about.tab.activeconfigalt=Active Configurations
 
+cui.about.tab.activeconfig.configname=Config Name
+cui.about.tab.activeconfig.designedversion=Supported version
+
 cui.about.tab.activeconfig.theme=Theme
 cui.about.tab.activeconfig.primarycolor=Primary Color
-cui.about.tab.activeconfig.secondarycolor=Secondary Color (Unsupported)
-cui.about.tab.activeconfig.fontprimarycolor=Font Primary Color (Unsupported)
-cui.about.tab.activeconfig.fontsecondarycolor=Font Secondary Color (Unsupported)
+cui.about.tab.activeconfig.secondarycolor=Secondary Color
+cui.about.tab.activeconfig.tertiarycolor=Tertiary Color (Secondary but darker)
+cui.about.tab.activeconfig.fontprimarycolor=Font Primary Color
+cui.about.tab.activeconfig.fontsecondarycolor=Font Secondary Color
 cui.about.tab.activeconfig.backgroundalpha=Background Alpha
 cui.about.tab.activeconfig.uibackground=Background
 cui.about.tab.activeconfig.uibackgroundslider=BG Slider on Start screen
@@ -110,11 +126,19 @@ cui.about.tab.activeconfig.oldsliderdesign=Old Slider design
 cui.about.tab.activeconfig.vanillapaperdoll=Vanilla Player doll
 cui.about.tab.activeconfig.norealmspromoteinworldsection=No Realm Promoters on world section
 cui.about.tab.activeconfig.nogamelogo=No Game logo
+cui.about.tab.activeconfig.startmenubuttonclassic=Classic Start menu
+cui.about.tab.activeconfig.logoinpausescreen=Logo In Pause Screen
 
 cui.about.tab.credit=Credits
 cui.about.tab.credit.bg=Artworks / Backgrounds
+cui.about.tab.credit.lang=Languages
 
-
+## Extras
+cui.extras.title=Extras
+cui.extras.tips=Tips:
+cui.extras.warning=Warning!
+cui.extras.uirestart=If you're applying the pack for the first time, please consider restart the game first! Since this UI uses custom fonts, which the experience may vary without restarting.
+cui.extras.goback=Press the background or ESC key for keyboard or 'Select' button for Controller) order to go back
 
 options.fov= 
 options.fov.alt=FOV
