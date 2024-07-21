@@ -11,12 +11,13 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 20 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
       { "bg_label": {
@@ -36,9 +37,10 @@
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}},
       { "bg_label": {

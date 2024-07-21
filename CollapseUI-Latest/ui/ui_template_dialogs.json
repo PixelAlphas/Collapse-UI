@@ -1,5 +1,4 @@
-{
-  "main_panel_three_buttons": {
+{ "main_panel_three_buttons": {
     "type": "panel",
     "anchor_from": "center",
     "anchor_to": "center",
@@ -11,21 +10,19 @@
       { "title_label@cui-dialog.title_label": {
           "layer": 2
       }},
-      { "outline": {
-          "type": "image",
-          "size": [ "100% - 14px", 1 ],
-          "texture": "textures/ui/White",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "layer": 2,
-          "color": "$cuigv:PrimaryColor",
-          "offset": [ 0, 22 ]
-      }},
       { "texture": {
           "type": "image",
           "size": [ "100%", "100%" ],
-          "texture": "textures/ui/.cui-assets/.dialogs/dialog_background_basic",
-          "color": "$cuigv:PrimaryColor"
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "color": "$cuigv:TertiaryColor"
+      }},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 55px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, -5 ],
+          "alpha": 0.8
       }},
       {
         "panel_indent": {
@@ -77,21 +74,19 @@
       { "title_label@cui-dialog.title_label": {
           "layer": 2
       }},
-      { "outline": {
-          "type": "image",
-          "size": [ "100% - 14px", 1 ],
-          "texture": "textures/ui/White",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "layer": 2,
-          "color": "$cuigv:PrimaryColor",
-          "offset": [ 0, 22 ]
-      }},
       { "texture": {
           "type": "image",
           "size": [ "100%", "100%" ],
-          "texture": "textures/ui/.cui-assets/.dialogs/dialog_background_basic",
-          "color": "$cuigv:PrimaryColor"
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "color": "$cuigv:TertiaryColor"
+      }},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 55px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, -5 ],
+          "alpha": 0.8
       }},
       {
         "panel_indent": {
@@ -134,21 +129,19 @@
       { "title_label@cui-dialog.title_label": {
           "layer": 2
       }},
-      { "outline": {
-          "type": "image",
-          "size": [ "100% - 14px", 1 ],
-          "texture": "textures/ui/White",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "layer": 2,
-          "color": "$cuigv:PrimaryColor",
-          "offset": [ 0, 22 ]
-      }},
       { "texture": {
           "type": "image",
           "size": [ "100%", "100%" ],
-          "texture": "textures/ui/.cui-assets/.dialogs/dialog_background_basic",
-          "color": "$cuigv:PrimaryColor"
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "color": "$cuigv:TertiaryColor"
+      }},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 55px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, -5 ],
+          "alpha": 0.8
       }},
       {
         "panel_indent": {
@@ -183,21 +176,20 @@
       { "title_label@cui-dialog.title_label": {
           "layer": 2
       }},
-      { "outline": {
-          "type": "image",
-          "size": [ "100% - 14px", 1 ],
-          "texture": "textures/ui/White",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "layer": 2,
-          "color": "$cuigv:PrimaryColor",
-          "offset": [ 0, 22 ]
-      }},
       { "texture": {
           "type": "image",
           "size": [ "100%", "100%" ],
-          "texture": "textures/ui/.cui-assets/.dialogs/dialog_background_basic",
-          "color": "$cuigv:PrimaryColor"
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "color": "$cuigv:TertiaryColor"
+      }},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 30px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, 8 ],
+          "layer": 2,
+          "alpha": 0.8
       }},
       { "panel_indent": {
           "type": "panel",
@@ -218,8 +210,8 @@
       { "texture": {
           "type": "image",
           "size": [ "100%", "100%" ],
-          "texture": "textures/ui/.cui-assets/.dialogs/dialog_background_basic",
-          "color": "$cuigv:PrimaryColor"
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "color": "$cuigv:TertiaryColor"
       }},
       { "panel_indent": {
           "type": "panel",
@@ -245,21 +237,19 @@
       { "title_label@cui-dialog.title_label": {
           "layer": 2
       }},
-      { "outline": {
-          "type": "image",
-          "size": [ "100% - 14px", 1 ],
-          "texture": "textures/ui/White",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "layer": 2,
-          "color": "$cuigv:PrimaryColor",
-          "offset": [ 0, 22 ]
-      }},
       { "texture": {
           "type": "image",
           "size": [ "100%", "100%" ],
-          "texture": "textures/ui/.cui-assets/.dialogs/dialog_background_basic",
-          "color": "$cuigv:PrimaryColor"
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "color": "$cuigv:TertiaryColor"
+      }},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 55px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, -5 ],
+          "alpha": 0.8
       }},
       {
         "panel_indent": {

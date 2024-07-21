@@ -7,10 +7,12 @@
   "ui/.cui/.cui-debug.json",
   "ui/.cui/.cui-dialog.json",
   "ui/.cui/.cui-gamepad.json",
+  "ui/.cui/.cui-toast.json",
   "ui/.cui/.cui-toggle.json",
   "ui/.cui/.cui-slider.json",
   
   "ui/.cui/.screens/.cui-about_screen.json",
+  "ui/.cui/.screens/.cui-add_external_server.json",
   "ui/.cui/.screens/.cui-content_log.json",
   "ui/.cui/.screens/.cui-death_screen.json",
   "ui/.cui/.screens/.cui-hud_screen.json",

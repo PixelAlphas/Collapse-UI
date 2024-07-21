@@ -3,175 +3,153 @@
     "type": "panel",
     "controls": [
       {
-        "layout_customization_reset": {
-          "type": "image",
-          "size": [ "200%", "200%" ],
-          "texture": "textures/ui/Black.png",
-          "fill": true,
-          "alpha": 0.5,
-          "layer": 50,
-          "controls": [
-            {
-              "layout_customization_reset_modal@common_dialogs.main_panel_two_buttons": {
-                "size": [ 210, 160 ],
-                "$show_close_button": false,
-                "$child_control": "library_modal.modal_text_content",
-                "$top_button_panel": "hud.wysiwyg_reset_modal_ok",
-                "$bottom_button_panel": "hud.wysiwyg_reset_modal_cancel",
-                "$modal_text": "hudScreen.controlCustomization.resetModalText"
-              }
-            }
-          ],
+        "@cui-hud_screen.statistics": {}
+      }
+  ]},
+  "statistics": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "50%", "100%c" ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [ -2, -2 ],
+    "use_child_anchors": true,
+    "controls": [
+      { "@number_of_days_played": {}},
+      { "padding": { "type": "panel", "size": [ 2, 1 ]}},
+      { "@player_position": {}}
+  ]},
+  "number_of_days_played": {
+    "type": "image",
+    "size": [ "100%c + 12px", "100%c + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "bindings": [
+      { "binding_name": "#number_of_days_played_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "global"
+    }],
+    "controls": [
+      { "number_of_days_played_text": {
+          "type": "label",
+          "layer": 1,
+          "enable_profanity_filter": false,
+          "color": "$cuigv:FontPrimaryColor",
+          "text": "#text",
+          "shadow": false,
           "bindings": [
-            {
-              "binding_name": "#reset_modal_visible",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "layout_customization_close_without_saving": {
-          "type": "image",
-          "size": [ "200%", "200%" ],
-          "texture": "textures/ui/Black.png",
-          "fill": true,
-          "alpha": 0.5,
-          "layer": 50,
-          "controls": [
-            {
-              "layout_customization_close_without_saving_modal@common_dialogs.main_panel_two_buttons": {
-                "size": [ 210, 160 ],
-                "$show_close_button": false,
-                "$child_control": "library_modal.modal_text_content",
-                "$top_button_panel": "hud.wysiwyg_close_without_saving_modal_ok",
-                "$bottom_button_panel": "hud.wysiwyg_close_without_saving_modal_cancel",
-                "$modal_text": "hudScreen.controlCustomization.closeWithoutSavingModalText"
-              }
-            }
-          ],
+            { "binding_name": "#number_of_days_played_text",
+              "binding_name_override": "#text",
+              "binding_condition": "always_when_visible",
+              "binding_type": "global"
+          }]
+      }}
+  ]},
+  "player_position": {
+    "type": "image",
+    "size": [ "100%c + 12px", "100%c + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "bindings": [
+      { "binding_name": "#player_position_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "global"
+    }],
+    "controls": [
+      { "player_position_text": {
+          "type": "label",
+          "layer": 1,
+          "enable_profanity_filter": false,
+          "color": "$cuigv:FontPrimaryColor",
+          "text": "#text",
+          "shadow": false,
           "bindings": [
-            {
-              "binding_name": "#close_without_saving_modal_visible",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "layout_customization_main_panel@hud.layout_customization_main_panel": {}
-      },
-      {
-        "layout_customization_sub_panel@hud.layout_customization_sub_panel": {}
-      },
-      {
-        "layout_customization_hint_drag_frame": {
-          "type": "image",
-          "layer": 40,
-          "use_anchored_offset": true,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "property_bag": {
-            "#anchored_offset_value_y": 0.0
-          },
-          "texture": "textures/ui/Black",
-          "size": [ "100%c+5px", "100%c+2px" ],
-          "alpha": 0.5,
+            { "binding_name": "#player_position_text",
+              "binding_name_override": "#text",
+              "binding_condition": "always_when_visible",
+              "binding_type": "global"
+          }]
+      }}
+  ]},
+  "item_text_factory": {
+    "size": [ 100, 10 ],
+    "type": "factory",
+    "control_ids": {
+      "item_text": "@cui-hud_screen.item_name_text",
+      "jukebox_text": "@hud.jukebox_popup_text"
+  }},
+  "item_name_text": {
+		"type": "image",
+		"size": ["100%c + 12px","100%c + 5px"], 
+		"offset": [ 0, "50%-50px" ],
+		"texture": "textures/ui/.cui-assets/background",
+		"alpha": "@hud.anim_item_name_background_alpha_in",
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"color": "$cuigv:SecondaryColor",
+		"$wait_duration|default": 1,
+		"$destroy_id|default": "item_name_text",
+		"anims": [
+			"@cui-anims.hud_tooltip_alpha",
+			"@cui-anims.hud_tooltip_item"
+		],
+		"bindings": [],
+		"controls": [
+      { "item_text_label_panel": {
+          "type": "panel",
+          "size": [ "100%c", 8 ],
+          "clips_children": true,
           "controls": [
-            {
-              "layout_customization_hint_drag": {
+            { "label": {
                 "type": "label",
-                "text": "hudScreen.controlCustomization.hintDrag",
-                "color": "$f_color_format"
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#hint_drag_visible",
-              "binding_name_override": "#visible"
-            },
-            {
-              "binding_name": "#layout_customization_hint_offset_y",
-              "binding_name_override": "#anchored_offset_value_y",
-              "binding_condition": "visible"
-            }
-          ]
-        }
-      },
-      {
-        "layout_customization_hint_deselect_frame": {
-          "type": "image",
-          "layer": 40,
-          "use_anchored_offset": true,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "property_bag": {
-            "#anchored_offset_value_y": 0.0
-          },
-          "texture": "textures/ui/Black",
-          "size": [ "100%c+5px", "100%c+2px" ],
-          "alpha": 0.5,
-          "controls": [
-            {
-              "layout_customization_hint_deselect": {
-                "type": "label",
-                "text": "hudScreen.controlCustomization.hintDeselect",
-                "color": "$f_color_format"
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#hint_deselect_visible",
-              "binding_name_override": "#visible"
-            },
-            {
-              "binding_name": "#layout_customization_hint_offset_y",
-              "binding_name_override": "#anchored_offset_value_y",
-              "binding_condition": "visible"
-            }
-          ]
-        }
-      },
-      {
-        "layout_customization_hint_saved": {
-          "type": "image",
-          "layer": 40,
-          "use_anchored_offset": true,
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "property_bag": {
-            "#anchored_offset_value_y": 0.0
-          },
-          "texture": "textures/ui/Black",
-          "size": [ "100%c+5px", "100%c+2px" ],
-          "alpha": 0.5,
-          "controls": [
-            {
-              "layout_customization_hint_saved": {
-                "type": "label",
-                "text": "hudScreen.controlCustomization.hintSaved",
-                "color": "$f_color_format"
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#hint_saved_visible",
-              "binding_name_override": "#visible"
-            },
-            {
-              "binding_name": "#layout_customization_hint_offset_y",
-              "binding_name_override": "#anchored_offset_value_y",
-              "binding_condition": "visible"
-            }
-          ]
-        }
-      },
-      { "editor_gizmo_renderer@hud.editor_gizmo_renderer": {
-          "ignored": "(not $is_editor_mode_enabled)"
-      }},
-      { "camera_renderer@hud.camera_renderer": {}}
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 10,
+                "font_scale_factor": 0.8,
+                "color": "$cuigv:FontPrimaryColor",
+                "text": "#text",
+                "alpha": "@hud.anim_item_name_text_alpha_in",
+                "bindings": [
+                  { "binding_name": "#item_text",
+                    "binding_name_override": "#text"
+                }]
+            }}
+      ]}}
+  ]},
+  "hud_tip_text": {
+		"type": "image",
+		"size": [ "100%c + 12px", "100%c + 5px" ],
+		"offset": [ 0, "50%-55px" ],
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"texture": "textures/ui/hud_tip_text_background",
+		"alpha": "@hud.anim_item_name_background_alpha_out",
+		"$wait_duration|default": 1,
+		"$destroy_id|default": "popup_tip_text",
+		"anims": [
+			"@cui-anims.hud_tooltip_alpha",
+			"@cui-anims.hud_tooltip_item"
+		],
+		"controls": [
+		  { "item_text_label": {
+			    "type": "label",
+			    "layer": 10,
+			    "color": "$cuigv:FontPrimaryColor",
+			    "text": "#text",
+			    "shadow": false,
+			    "alpha": "@hud.anim_item_name_text_alpha_out",
+			    "bindings": [
+				    { "binding_name": "#tip_text",
+				      "binding_name_override": "#text"
+				  }]
+		  }}
   ]}
 }

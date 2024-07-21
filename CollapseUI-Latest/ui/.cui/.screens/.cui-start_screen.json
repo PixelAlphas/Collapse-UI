@@ -51,35 +51,80 @@
                 "controls": [
                   { "stack_panel": {
                       "type": "stack_panel",
+                      "$cuiv:subbutton": true,
                       "size": [ "100% - 8px", "100%c" ],
                       "controls": [
                         { "utilities@cui-common.header": { "$cuiv:header_text": "cui.main_menu.quickaccess", "anims": "$cuiv:selector_anims", "layer": 5 }},
+                        
+                        { "achievements@cui-button.text_button": {
+                            "size": [ "100%", 22 ],
+                            "anims": "$cuiv:selector_anims",
+                            "$pressed_button_name": "button.menu_achievements",
+                            "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                            "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:button_text": "menu.achievements",
+                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/setting_icon",
+                            "$cuiv:button_image_anchor": "left_middle",
+                            "$cuiv:button_image_offset": [ 2, -0.5 ],
+                            "$cuiv:button_text_anchor": "left_middle",
+                            "$cuiv:button_text_offset": [ 22, 0 ]
+                        }},
+                        { "profile@cui-button.text_button": {
+                            "size": [ "100%", 22 ],
+                            "anims": "$cuiv:selector_anims",
+                            "$pressed_button_name": "button.to_profile_screen",
+                            "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                            "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:button_text": "menu.skins",
+                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/skin_icon",
+                            "$cuiv:button_image_anchor": "left_middle",
+                            "$cuiv:button_image_offset": [ 2, -0.5 ],
+                            "$cuiv:button_text_anchor": "left_middle",
+                            "$cuiv:button_text_offset": [ 22, 0 ]
+                        }},
                         { "marketplace@cui-button.text_button": {
                             "size": [ "100%", 22 ],
                             "anims": "$cuiv:selector_anims",
-                            "$cuiv:button_type_panel": "cui-toggle.toggle_button_core",
-                            "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/marketplace_icon",
-                            "$cuiv:toggle_label_text": "dayOneExperience.tab.marketplace",
-                            "$cuiv:button_image_offset": [ 5, 5 ],
-                            "$pressed_button_name": "button.menu_store"
+                            "$pressed_button_name": "button.menu_store",
+                            "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                            "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:button_text": "menu.store",
+                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/marketplace_icon",
+                            "$cuiv:button_image_anchor": "left_middle",
+                            "$cuiv:button_image_offset": [ 2, -0.5 ],
+                            "$cuiv:button_text_anchor": "left_middle",
+                            "$cuiv:button_text_offset": [ 22, 0 ]
                         }},
                         { "realm@cui-button.text_button": {
                             "size": [ "100%", 22 ],
                             "anims": "$cuiv:selector_anims",
-                            "$cuiv:button_type_panel": "cui-toggle.toggle_button_core",
-                            "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/realms_icon",
-                            "$cuiv:toggle_label_text": "menu.realmsServer",
-                            "$cuiv:button_image_offset": [ 5, 5 ],
-                            "$pressed_button_name": "button.menu_realms"
+                            "$pressed_button_name": "button.menu_realms",
+                            "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                            "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:button_text": "menu.online",
+                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/realms_icon",
+                            "$cuiv:button_image_anchor": "left_middle",
+                            "$cuiv:button_image_offset": [ 2, -0.5 ],
+                            "$cuiv:button_text_anchor": "left_middle",
+                            "$cuiv:button_text_offset": [ 22, 0 ]
                         }},
                         { "getstarted@cui-button.text_button": {
                             "size": [ "100%", 22 ],
                             "anims": "$cuiv:selector_anims",
-                            "$cuiv:button_type_panel": "cui-toggle.toggle_button_core",
-                            "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/play_icon",
-                            "$cuiv:toggle_label_text": "menu.getStarted",
-                            "$cuiv:button_image_offset": [ 5, 5 ],
-                            "$pressed_button_name": "button.menu_get_started"
+                            "$pressed_button_name": "button.menu_get_started",
+                            "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                            "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:button_text": "menu.getStarted",
+                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/play_icon",
+                            "$cuiv:button_image_anchor": "left_middle",
+                            "$cuiv:button_image_offset": [ 2, -0.5 ],
+                            "$cuiv:button_text_anchor": "left_middle",
+                            "$cuiv:button_text_offset": [ 22, 0 ]
                         }}
                   ]}}
             ]}},
@@ -94,35 +139,51 @@
                 "controls": [
                   { "stack_panel": {
                       "type": "stack_panel",
+                      "$cuiv:subbutton": true,
                       "size": [ "100% - 8px", "100%c" ],
                       "controls": [
                         { "utilities@cui-common.header": { "$cuiv:header_text": "cui.main_menu.infomation", "anims": "$cuiv:selector_anims", "layer": 5 }},
                         { "about@cui-button.text_button": {
                             "size": [ "100%", 22 ],
                             "anims": "$cuiv:selector_anims",
-                            "$cuiv:button_type_panel": "cui-toggle.toggle_button_core",
-                            "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/about_icon",
-                            "$cuiv:toggle_label_text": "cui.about.title",
-                            "$cuiv:button_image_offset": [ 5, 5 ],
-                            "$pressed_button_name": "button.menu_buy_game"
+                            "$pressed_button_name": "button.menu_buy_game",
+                            "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                            "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:button_text": "cui.about.title",
+                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/about_icon",
+                            "$cuiv:button_image_anchor": "left_middle",
+                            "$cuiv:button_image_offset": [ 2, -0.5 ],
+                            "$cuiv:button_text_anchor": "left_middle",
+                            "$cuiv:button_text_offset": [ 22, 0 ]
                         }},
                         { "inbox@cui-button.text_button": {
                             "size": [ "100%", 22 ],
-                            "$cuiv:button_type_panel": "cui-toggle.toggle_button_core",
-                            "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/notification_icon",
                             "anims": "$cuiv:selector_anims",
-                            "$cuiv:toggle_label_text": "Inbox",
-                            "$cuiv:button_image_offset": [ 5, 5 ],
-                            "$pressed_button_name": "button.menu_inbox"
+                            "$pressed_button_name": "button.menu_inbox",
+                            "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                            "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:button_text": "menu.inbox",
+                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/notification_icon",
+                            "$cuiv:button_image_anchor": "left_middle",
+                            "$cuiv:button_image_offset": [ 2, -0.5 ],
+                            "$cuiv:button_text_anchor": "left_middle",
+                            "$cuiv:button_text_offset": [ 22, 0 ]
                         }},
                         { "feedback@cui-button.text_button": {
                             "size": [ "100%", 22 ],
                             "anims": "$cuiv:selector_anims",
-                            "$cuiv:button_type_panel": "cui-toggle.toggle_button_core",
-                            "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/feedback_icon",
-                            "$cuiv:toggle_label_text": "Feedback",
-                            "$cuiv:button_image_offset": [ 5, 5 ],
-                            "$pressed_button_name": "button.feedback_button_pressed"
+                            "$pressed_button_name": "button.feedback_button_pressed",
+                            "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                            "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                            "$cuiv:button_text": "options.group.feedback",
+                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/feedback_icon",
+                            "$cuiv:button_image_anchor": "left_middle",
+                            "$cuiv:button_image_offset": [ 2, -0.5 ],
+                            "$cuiv:button_text_anchor": "left_middle",
+                            "$cuiv:button_text_offset": [ 22, 0 ]
                         }}
                   ]}}
             ]}}
@@ -215,40 +276,26 @@
       { "paddings": { "type": "panel", "size": [ 4, 4 ]}},
       { "alter_panel": {
           "type": "panel",
-          "size": [ 200, 72 ],
+          "size": [ 200, 34 ],
           "controls": [
             { "alter_stack": {
                 "type": "stack_panel",
                 "orientation": "vertical",
-                "size": [ "100%cm", 72 ],
+                "size": [ "100%cm", 34 ],
                 "$cuiv:subbutton": true,
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "controls": [
-                { "achievements@cui-button.text_button": {
+                { "settings@cui-button.text_button": {
                     "size": [ 162, 34 ],
-                    "$pressed_button_name": "button.menu_achievements",
+                    "$pressed_button_name": "button.menu_settings",
                     "$cuiv:button_type_panel": "cui-start_screen.button_label",
                     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
                     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-                    "$cuiv:button_text": "cui.main_menu.achievement",
-                    "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/achievement_icon",
+                    "$cuiv:button_text": "cui.main_menu.settings",
+                    "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/setting_icon",
                     "$cuiv:button_image_anchor": "left_middle",
-                    "$cuiv:button_image_offset": [ 8, -1 ],
-                    "$cuiv:button_text_anchor": "left_middle",
-                    "$cuiv:button_text_offset": [ 30, 0 ]
-                }},
-                { "paddings_01": { "type": "panel", "size": [ 4, 4 ]}},
-                { "profile@cui-button.text_button": {
-                    "size": [ 162, 34 ],
-                    "$pressed_button_name": "button.to_profile_screen",
-                    "$cuiv:button_type_panel": "cui-start_screen.button_label",
-                    "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
-                    "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-                    "$cuiv:button_text": "cui.main_menu.skin",
-                    "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/skin_icon",
-                    "$cuiv:button_image_anchor": "left_middle",
-                    "$cuiv:button_image_offset": [ 8, -1 ],
+                    "$cuiv:button_image_offset": [ 8, -0.5 ],
                     "$cuiv:button_text_anchor": "left_middle",
                     "$cuiv:button_text_offset": [ 30, 0 ]
                 }}
@@ -256,21 +303,12 @@
             { "alter_stack_2": {
                 "type": "stack_panel",
                 "orientation": "vertical",
-                "size": [ 34, 72 ],
+                "size": [ 34, 34 ],
                 "offset": [ 166, 0 ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "$cuiv:subbutton": true,
                 "controls": [
-                  { "settings@cui-button.text_button": {
-                      "size": [ 34, 34 ],
-                      "$pressed_button_name": "button.menu_settings",
-                      "$cuiv:button_type_panel": "cui-start_screen.button_label",
-                      "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
-                      "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-                      "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/setting_icon"
-                  }},
-                  { "paddings_01": { "type": "panel", "size": [ 4, 4 ]}},
                   { "exit@cui-button.text_button": {
                       "size": [ 34, 34 ],
                       "$pressed_button_name": "button.menu_exit",
@@ -287,16 +325,16 @@
     "$cuiv:subbutton|default": false,
     "$cuiv:gradientbackground|default": false,
     "clips_children": true,
+    "$cuiv:button_text|default": "",
+    "$cuiv:text_color_main|default": "$cuigv:FontPrimaryColor",
+    "$cuiv:button_text_offset|default": [ 5, -3 ],
+    "$cuiv:button_text_scale|default": 1.4,
+    "$cuiv:button_text_anchor|default": "bottom_left",
+    "$cuiv:button_text_font|default": "MinecraftTen",
     "controls": [
       { "label": {
           "type": "label",
           "layer": 4,
-          "$cuiv:button_text|default": "",
-          "$cuiv:text_color_main|default": [ 1, 1, 1 ],
-          "$cuiv:button_text_offset|default": [ 5, -3 ],
-          "$cuiv:button_text_scale|default": 1.4,
-          "$cuiv:button_text_anchor|default": "bottom_left",
-          "$cuiv:button_text_font|default": "MinecraftTen",
           "offset": "$cuiv:button_text_offset",
           "font_scale_factor": "$cuiv:button_text_scale",
           "font_type": "$cuiv:button_text_font",
@@ -501,7 +539,7 @@
     "controls": [
       { "background": {
           "type": "image",
-          "texture": "textures/ui/.cui-assets/background",
+          "texture": "textures/ui/.cui-assets/background_2x",
           "color": "$cuigv:SecondaryColor",
           "size": [ "100% + 4px", "100% + 4px" ],
           "alpha": "$cuigv:BackgroundAlpha"
@@ -641,7 +679,7 @@
           "type": "label",
           "color": "$cuigv:FontPrimaryColor",
           "alpha": "$cuigv:BackgroundAlpha",
-          "text": "Collapse-UI v1.0.4"
+          "text": "Collapse-UI v2.0"
       }},
       { "paddings": { "type": "panel", "size": [ 4, 1 ]}},
       { "mojang_copyright": {

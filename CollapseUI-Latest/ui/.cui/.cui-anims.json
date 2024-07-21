@@ -1,4 +1,27 @@
 { "namespace": "cui-anims",
+  // Hud tooltip Anims
+  "hud_tooltip_item": {
+		"anim_type": "offset",
+		"easing": "out_quart",
+		"duration": 0.15,
+		"from": [  0, "50%-50px"],
+		"to": [  0, "50%-55px"]
+	},
+  "hud_tooltip_tip": {
+		"anim_type": "offset",
+		"easing": "out_quart",
+		"duration": 0.15,
+		"from": [  0, "50%-65px"], 
+		"to": [  0, "50%-70px"]
+	},
+	"hud_tooltip_alpha": {
+		"anim_type": "alpha",
+		"easing": "out_circ",
+		"duration": 0.15,
+		"from": 0.0,
+		"to": "$cuigv:BackgroundAlpha"
+	},
+  // Screens Anims
   "screen_outro_anim_push": {
     "anim_type": "offset",
     "easing": "in_cubic",
@@ -71,18 +94,7 @@
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
-
-
-
-
-
-
-
-
-
-
-
-
+  // Content Logs
   "content_log_anim_text_alpha_00": {
     "anim_type": "alpha",
     "easing": "in_quart",
@@ -159,6 +171,8 @@
     "from": [ "0%", "100%" ],
     "to": [ "100% + 8px", "100%" ]
   },
+  
+  // Loading Anims
   "loading_anim": {
     "anim_type": "flip_book",
     "initial_uv": [ 0, 0 ],
@@ -168,6 +182,8 @@
     "reversible": false,
     "easing": "linear"
   },
+  
+  // Extra Menu Anims
   "extra_anims_offset": {
     "anim_type": "offset",
     "from": [ -120, 0 ],
@@ -210,6 +226,8 @@
     "destroy_at_end": "$cuiv:destroy_at_end",
     "duration": 0.4
   },
+  
+  // Unused
   "background_slider_load": {
     "anim_type": "alpha",
     "duration": "$cuiv:background_slider_anim_duration",

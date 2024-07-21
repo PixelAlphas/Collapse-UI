@@ -1,15 +1,1 @@
-{ "content_log_panel": {
-    "controls": [
-      { "stack_panel": {
-          "type": "stack_panel",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "size": [ "100%", "100%cm" ],
-          "factory": {
-            "name": "content_log_item_factory",
-            "max_children_size": 50,
-            "control_ids": {
-              "content_log_item": "cui-content_log.content_log_grid_item"
-          }}
-      }}
-]}}
+{ }

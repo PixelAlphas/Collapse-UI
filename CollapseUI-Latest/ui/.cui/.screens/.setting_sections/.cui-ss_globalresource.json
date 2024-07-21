@@ -78,8 +78,22 @@
         "target_property_name": "#visible"
     }],
     "controls": [
-      { "@cui-common.element_background": { "$cuiv:header_text": "menu.globalpacks", "$cuiv:element_background_contents": "cui-ss_globalresource.globalresource"}},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "section_title": {
+          "type": "label",
+          "text": "menu.globalpacks",
+          "size": [ "100% - 12px", "default" ],
+          "font_type": "MinecraftTen",
+          "color": "$cuigv:FontPrimaryColor",
+          "font_scale_factor": 1.8
+      }},
+      { "description": {
+          "type": "label",
+          "text": "cui.settings.globalresource.main.description",
+          "size": [ "100% - 12px", "default" ],
+          "color": "$cuigv:FontSecondaryColor"
+      }},
+      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
       { "@cui-ss_globalresource.tabs_element": {}},
       { "@cui-ss_globalresource.deselected_pack": {}},
       { "@cui-ss_globalresource.selected_pack": {}}
@@ -128,13 +142,29 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.globalresource.selected.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "note_panel": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "100% - 8px", "100%cm + 4px" ],
+          "color": "$cuigv:TertiaryColor",
+          "controls": [
+            { "note_label": {
+                "type": "label",
+                "text": "cui.settings.globalresource.selected.description",
+                "layer": 10,
+                "size": [ "100% - 8px", "default" ]
+            }}
+      ]}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "selected_pack_section": {
           "type": "stack_panel",
           "orientation": "vertical",
@@ -175,13 +205,29 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.globalresource.deselected.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "note_panel": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "100% - 8px", "100%cm + 4px" ],
+          "color": "$cuigv:TertiaryColor",
+          "controls": [
+            { "note_label": {
+                "type": "label",
+                "text": "cui.settings.globalresource.deselected.description",
+                "layer": 10,
+                "size": [ "100% - 8px", "default" ]
+            }}
+      ]}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "available_packs_section": {
           "type": "stack_panel",
           "orientation": "vertical",

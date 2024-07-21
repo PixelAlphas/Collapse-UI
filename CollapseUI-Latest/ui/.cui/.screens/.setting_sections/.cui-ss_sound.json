@@ -12,7 +12,21 @@
         "target_property_name": "#visible"
     }],
     "controls": [
-      { "sound@cui-common.element_background": { "$cuiv:header_text": "options.sounds", "$cuiv:element_background_contents": "cui-ss_sound.sound"}},
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "section_title": {
+          "type": "label",
+          "text": "options.sounds",
+          "size": [ "100% - 12px", "default" ],
+          "font_type": "MinecraftTen",
+          "color": "$cuigv:FontPrimaryColor",
+          "font_scale_factor": 1.8
+      }},
+      { "description": {
+          "type": "label",
+          "text": "cui.settings.sound.main.description",
+          "size": [ "100% - 12px", "default" ],
+          "color": "$cuigv:FontSecondaryColor"
+      }},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
       { "main@cui-common.element_background": { "$cuiv:header_text": "options.sound", "$cuiv:element_background_contents": "cui-ss_sound.main"}},
       { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
@@ -26,35 +40,21 @@
       }},
       { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}}
   ]},
-  "sound": {
-    "type": "stack_panel",
-    "size": [ "100% - 4px", "100%c" ],
-    "orientation": "vertical",
-    "use_child_anchors": true,
-    "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.sound.main.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.6, 0.6, 0.6 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
-  ]},
   "main": {
     "type": "stack_panel",
     "size": [ "100% - 4px", "100%c" ],
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_slider_0@cui-setting_screen.option_slider": {
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.all.description",
@@ -70,9 +70,10 @@
       { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_04": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_slider_1@cui-setting_screen.option_slider": {

@@ -6,27 +6,17 @@
     "size": [ "60%", "85%" ],
     "controls": [
       { "title@cui-dialog.modal_title_text": {} },
-      { "outline": {
-          "type": "image",
-          "size": [ "100% - 14px", 1 ],
-          "texture": "textures/ui/White",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "layer": 2,
-          "color": "$cuigv:PrimaryColor",
-          "offset": [ 0, 22 ]
-      }},
       { "texture": {
           "type": "image",
           "size": [ "100%", "100%" ],
-          "texture": "textures/ui/.cui-assets/.dialogs/dialog_background_basic",
-          "color": "$cuigv:PrimaryColor"
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "color": "$cuigv:TertiaryColor"
       }},
       { "text_background": {
           "type": "image",
           "size": [ "100% - 14px", "100% - 55px" ],
           "texture": "textures/ui/.cui-assets/background",
-          "color": [ 0, 0, 0 ],
+          "color": "$cuigv:SecondaryColor",
           "offset": [ 0, -5 ],
           "alpha": 0.8
       }},
@@ -106,7 +96,7 @@
         "binding_name": "#tts_dialog_title"
   }]},
   "modal_label_panel@common.scrolling_panel": {
-    "$scrolling_pane_size": [ "100% - 1px", "100% - 3px" ],
+    "$scrolling_pane_size": [ "100% - 1px", "100% + 5px" ],
     "$scrolling_pane_offset": [ 2, 0 ],
     "$scrolling_content": "cui-dialog.modal_label_text",
     "$scroll_size": [ 2, "100% - 4px" ],
@@ -158,6 +148,56 @@
       { "left@cui-dialog.modal_left_button": {}},
       { "pudding": { "type": "panel", "size": [ 4, 1 ]}},
       { "right@cui-dialog.modal_rightcancel_button": {}}
+  ]},
+  "two_buttons_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "size": [ "100% - 14px", 20 ],
+    "offset": [ 0, -7 ],
+    "controls": [
+      { "left@cui-dialog.modal_left_button": {} },
+      { "pudding": { "type": "panel", "size": [ 4, 1 ]}},
+      { "right@cui-dialog.modal_rightcancel_button": {}}
+  ]},
+  "three_buttons_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "size": [ "100% - 14px", 66 ],
+    "offset": [ 0, -7 ],
+    "controls": [
+      { "left@cui-dialog.modal_left_button": {}},
+      { "pudding_01": { "type": "panel", "size": [ 4, 2 ]}},
+      { "middle@cui-dialog.modal_middle_button": {}},
+      { "pudding_02": { "type": "panel", "size": [ 4, 2 ]}},
+      { "right@cui-dialog.modal_rightcancel_button": {}}
+  ]},
+
+  "destructive_three_buttons_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "size": [ "100% - 14px", 66 ],
+    "offset": [ 0, -7 ],
+    "controls": [
+      { "left@cui-dialog.modal_left_button": {}},
+      { "pudding_01": { "type": "panel", "size": [ 4, 2 ]}},
+      { "middle@cui-dialog.modal_middle_button": {}},
+      { "pudding_02": { "type": "panel", "size": [ 4, 2 ]}},
+      { "right@cui-dialog.modal_rightcancel_button": {}}
+  ]},
+  "single_button_panel": {
+    "type": "panel",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "size": [ "100% - 14px", 20 ],
+    "offset": [ 0, -7 ],
+    "controls": [
+      { "left@cui-dialog.modal_middle_button": { "size": [ "100%", "100%" ] } }
   ]},
   "modal_left_button@cui-button.text_button": {
     "size": [ "fill", 20 ],

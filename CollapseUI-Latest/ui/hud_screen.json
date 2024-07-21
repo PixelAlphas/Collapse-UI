@@ -29,6 +29,114 @@
           }]
       }}
   ]},
+  "anim_chat_txt_alpha_in": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.3,
+    "from": 0,
+    "to": 1,
+    "next": "@hud.anim_chat_txt_alpha_wait"
+  },
+  "anim_chat_txt_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 1,
+    "to": 0
+  },
+  "anim_chat_txt_alpha_wait": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@hud.anim_chat_txt_alpha_out"
+  },
+  "anim_chat_bg_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": "$chat_bg_alpha",
+    "to": 0,
+    "destroy_at_end": "chat_grid_item"
+  },
+  "anim_chat_bg_alpha_in": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.3,
+    "from": 0,
+    "to": "$chat_bg_alpha",
+    "next": "@hud.anim_chat_bg_alpha_wait"
+  },
+  "anim_chat_bg_alpha_wait": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@hud.anim_chat_bg_alpha_out"
+  },
+  "anim_chat_bg_pop": {
+    "anim_type": "offset",
+    "easing": "out_expo",
+    "duration": 0.5,
+    "from": [ "-50%", 0 ],
+    "to": [ 0, 0 ],
+    "next": "@hud.anim_chat_bg_wait_push"
+  },
+  "anim_chat_bg_push": {
+    "anim_type": "offset",
+    "easing": "in_expo",
+    "duration": 0.5,
+    "from": [ 0, 0 ],
+    "to": [ "-50%", 0 ]
+  },
+  "anim_chat_bg_wait_push": {
+    "anim_type": "wait",
+    "duration": "($chat_item_lifetime - 0.2)",
+    "next": "@hud.anim_chat_bg_push"
+  },
+  "anim_chat_stack": {
+    "anim_type": "size",
+    "easing": "out_expo",
+    "duration": 0.5,
+    "from": [ "100%", 0 ],
+    "to": [ "100%", "100%c" ]
+  },
+  "chat_label": {
+		"anims": [
+		  "@hud.anim_chat_txt_alpha_in"
+  ]},
+	"chat_grid_item": {
+		"anims": [
+		  "@hud.anim_chat_stack"
+  ]},
+	"chat_grid_item/chat_background": {
+		"$chat_bg_alpha|default": 0.7,
+		"layer": 30,
+		"anims": [
+		  "@hud.anim_chat_bg_alpha_in"
+		],
+		"offset": "@hud.anim_chat_bg_pop"
+	},
+	"exp_progress_bar_and_hotbar_pocket/item_text": {
+	  "controls": [
+      { "item_text_factory@cui-hud_screen.item_text_factory": {}}
+	]},
+	"root_panel/hud_tip_text_factory": {
+	  "control_name": "@cui-hud_screen.hud_tip_text"
+	},
+  "root_panel/chat_stack": {
+    "modifications": [
+      { "control_name": "number_of_days_played",
+        "operation": "remove"
+      },
+      { "control_name": "player_position",
+        "operation": "remove"
+      }
+  ]},
+  "root_panel": {
+    "modifications": [
+      { "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "root_contents@cui-hud_screen.root_contents": {}}
+      ]}
+  ]},
   "hotbar_elipses_panel_left_content": {
     "$hotbar_elipses_button_size": [ 20, 22 ],
     "controls": [
@@ -86,13 +194,7 @@
           }}]
       }},
       { "hotbar@hotbar_chooser": { "offset": [ 4, 15.5 ]}},
-      { "item_text_factory": {
-          "size": [ 100, 10 ],
-          "type": "factory",
-          "control_ids": {
-            "item_text": "@hud.item_name_text",
-            "jukebox_text": "@hud.jukebox_popup_text"
-      }}}
+      { "item_text_factory@cui-hud_screen.item_text_factory": {}}
   ]},
   "progress_text_label": {
     "shadow": false,

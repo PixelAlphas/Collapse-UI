@@ -7,6 +7,7 @@
     "$slider_box_indent_layout|default": "cui-slider.slider_button_indent_layout",
     "$slider_step_factory_control_ids": { "slider_step": "@cui-slider.slider_step", "slider_step_hover": "@cui-slider.slider_step_hover", "slider_step_progress": "@cui-slider.slider_step_progress", "slider_step_progress_hover": "@cui-slider.slider_step_progress_hover" },
     "focus_enabled": true,
+    "$slider_box_size": [ 8, 8 ],
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": true,
     "$slider_binding_type|default": "global",
@@ -28,15 +29,15 @@
       { "binding_type": "$slider_tts_binding_type", "binding_condition": "$slider_tts_binding_condition", "binding_collection_name": "$slider_collection_name", "binding_name": "$slider_tts_text_value" },
       { "binding_type": "$slider_tts_header_binding_type", "binding_condition": "$slider_tts_header_binding_condition", "binding_collection_name": "$slider_header_collection_name", "binding_name": "$slider_tts_header" }
   ]},
-  "slider_button_state": { "type": "image", "layer": 2, "texture": "textures/ui/White" },
-  "slider_button_layout@cui-slider.slider_button_state": { "texture": "textures/ui/White" },
-  "slider_button_hover_layout@cui-slider.slider_button_state": { "texture": "textures/ui/White", "color": "$cuigv:PrimaryColor" },
-  "slider_button_locked_layout@cui-slider.slider_button_state": { "texture": "textures/ui/White", "alpha": 0.2 },
-  "slider_button_indent_layout@cui-slider.slider_button_state": { "texture": "textures/ui/White", "alpha": 1 },
+  "slider_button_state": { "type": "image", "layer": 2, "texture": "textures/ui/.cui-assets/slider_ball", "visible": false },
+  "slider_button_layout@cui-slider.slider_button_state": { "texture": "textures/ui/.cui-assets/slider_ball", "color": "$cuigv:PrimaryColor" },
+  "slider_button_hover_layout@cui-slider.slider_button_state": { "texture": "textures/ui/.cui-assets/slider_ball", "color": "$cuigv:PrimaryColor" },
+  "slider_button_locked_layout@cui-slider.slider_button_state": { "texture": "textures/ui/.cui-assets/slider_ball", "alpha": 0.2 },
+  "slider_button_indent_layout@cui-slider.slider_button_state": { "texture": "textures/ui/.cui-assets/slider_ball", "alpha": 1 },
   "slider_box": {
     "type": "slider_box",
     "layer": 4,
-    "size": [ 2, 10 ],
+    "size": [ 8, 8 ],
     "anchor_to": "center",
     "anchor_from": "center",
     "default_control": "default",
@@ -60,14 +61,14 @@
             }}
       ]}}
   ]},
-  "slider_background_template@auicore_configloader.core": {
+  "slider_background_template": {
     "type": "image",
-    "texture": "textures/ui/White"
+    "texture": "textures/ui/.cui-assets/background"
   },
-  "slider_background@cui-slider.slider_background_template": { "color": [ 0.2, 0.2, 0.2 ] },
+  "slider_background@cui-slider.slider_background_template": { "color": "$cuigv:TertiaryColor" },
   "slider_background_hover@cui-slider.slider_background_template": { "color": [ 0.5, 0.5, 0.5 ] },
-  "slider_progress@cui-slider.slider_background_template": {},
-  "slider_progress_hover@cui-slider.slider_background_template": { "color": "$cuigv:PrimaryColor" },
+  "slider_progress@cui-slider.slider_background_template": { "color": "$cuigv:PrimaryColor"},
+  "slider_progress_hover@cui-slider.slider_background_template": {},
   "slider_border": { "type": "image", "texture": "textures/ui/slider_border" },
   "slider_bar_default": {
     "type": "panel",
@@ -79,9 +80,9 @@
     "controls": [
       { "sizing_panel": {
           "type": "panel",
-          "size": [ "100%", "100% - 2px" ],
+          "size": [ "100% + 6px", "100% - 2px" ],
           "controls": [
-            { "$background_control_name@$background_control": { "layer": 1, "size": [ "100%", 2 ] }},
+            { "$background_control_name@$background_control": { "layer": 1 }},
             { "$progress_control_name@$progress_control": { "layer": 3, "clip_direction": "$progress_clip_direction", "clip_pixelperfect": false }}
       ]}},
       { "transparent_grey": {
@@ -94,8 +95,8 @@
       }}
   ]},
   "slider_bar_hover@cui-slider.slider_bar_default": { "$background_control": "cui-slider.slider_background_hover", "$progress_control": "cui-slider.slider_progress_hover", "$background_control_name": "slider_background_hover", "$progress_control_name": "slider_progress_hover" },
-  "slider_step": { "type": "image", "texture": "textures/ui/Black", "size": [ 2, 6 ], "layer": 4, "offset": "$step_offset" },
-  "slider_step_hover@common.slider_step": { "texture": "textures/ui/White", "alpha": 0.5 },
-  "slider_step_progress@common.slider_step": { "texture": "textures/ui/White" },
-  "slider_step_progress_hover@common.slider_step": { "texture": "textures/ui/White", "color": "$cuigv:PrimaryColor" }
+  "slider_step": { "type": "image", "texture": "textures/ui/Black", "size": [ 2, 4 ], "layer": 4, "offset": "$step_offset" },
+  "slider_step_hover@cui-slider.slider_step": { "texture": "textures/ui/Black", "alpha": 0.5 },
+  "slider_step_progress@cui-slider.slider_step": { "texture": "textures/ui/White", "color": "$cuigv:PrimaryColor" },
+  "slider_step_progress_hover@cui-slider.slider_step": { "texture": "textures/ui/Black" }
 }

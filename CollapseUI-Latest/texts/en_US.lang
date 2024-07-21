@@ -110,9 +110,10 @@ cui.about.tab.activeconfig.designedversion=Supported version
 
 cui.about.tab.activeconfig.theme=Theme
 cui.about.tab.activeconfig.primarycolor=Primary Color
-cui.about.tab.activeconfig.secondarycolor=Secondary Color (Unsupported)
-cui.about.tab.activeconfig.fontprimarycolor=Font Primary Color (Unsupported)
-cui.about.tab.activeconfig.fontsecondarycolor=Font Secondary Color (Unsupported)
+cui.about.tab.activeconfig.secondarycolor=Secondary Color
+cui.about.tab.activeconfig.tertiarycolor=Tertiary Color (Secondary but darker)
+cui.about.tab.activeconfig.fontprimarycolor=Font Primary Color
+cui.about.tab.activeconfig.fontsecondarycolor=Font Secondary Color
 cui.about.tab.activeconfig.backgroundalpha=Background Alpha
 cui.about.tab.activeconfig.uibackground=Background
 cui.about.tab.activeconfig.uibackgroundslider=BG Slider on Start screen

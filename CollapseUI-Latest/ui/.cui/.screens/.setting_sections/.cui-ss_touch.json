@@ -12,7 +12,21 @@
         "target_property_name": "#visible"
     }],
     "controls": [
-      { "touch@cui-common.element_background": { "$cuiv:header_text": "options.touch", "$cuiv:element_background_contents": "cui-ss_touch.touch"}},
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "section_title": {
+          "type": "label",
+          "text": "options.touch",
+          "size": [ "100% - 12px", "default" ],
+          "font_type": "MinecraftTen",
+          "color": "$cuigv:FontPrimaryColor",
+          "font_scale_factor": 1.8
+      }},
+      { "description": {
+          "type": "label",
+          "text": "cui.settings.touch.main.description",
+          "size": [ "100% - 12px", "default" ],
+          "color": "$cuigv:FontSecondaryColor"
+      }},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
       { "controlmode@cui-common.element_background": { "$cuiv:header_text": "options.controlMode.title", "$cuiv:element_background_contents": "cui-ss_touch.controlmode"}},
       { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
@@ -27,45 +41,39 @@
       }},
       { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}}
   ]},
-  "touch": {
-    "type": "stack_panel",
-    "size": [ "100% - 4px", "100%c" ],
-    "orientation": "vertical",
-    "use_child_anchors": true,
-    "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.touch.main.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
-  ]},
   "controlmode": {
     "type": "stack_panel",
     "size": [ "100% - 4px", "100%c" ],
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ],
-          "text": "#selected_control_scheme",
-          "bindings": [
-            { "binding_name": "#selected_control_scheme_name",
-              "binding_name_override": "#selected_control_scheme"
-          }]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "note_panel": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "100% - 8px", "100%cm + 4px" ],
+          "color": "$cuigv:TertiaryColor",
+          "controls": [
+            { "description": {
+                "type": "label",
+                "size": [ "100% - 8px", "default" ],
+                "color": "$cuigv:FontPrimaryColor",
+                "layer": 5,
+                "text": "#selected_control_scheme",
+                "bindings": [
+                  { "binding_name": "#selected_control_scheme_name",
+                    "binding_name_override": "#selected_control_scheme"
+                }]
+            }}
+      ]}},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "image_and_button": {
           "type": "stack_panel",
@@ -144,21 +152,15 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ],
-          "text": "cui.settings.touch.misc.description"
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_slider_0@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.sensitivity",
           "$slider_name": "touch_sensitivity",

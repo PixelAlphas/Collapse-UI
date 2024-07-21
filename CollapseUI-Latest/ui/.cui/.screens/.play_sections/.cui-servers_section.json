@@ -157,6 +157,7 @@
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "use_child_anchors": true,
+    "$cuiv:subbutton": true,
     "controls": [
       { "control_centre_label@cui-common.header": { "$cuiv:header_text": "cui.play.controllcentre" }},
       { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
@@ -264,11 +265,54 @@
                 "$tts_section_header": "thirdPartyWorld.Featured",
                 "grid_item_template": "cui-servers_section.server_item_template"
             }},
-            { "padding_02": { "type": "panel", "size": [ "100%", 2 ]}}
+            { "close_fs@cui-toggle.toggle_button": {
+                "size": [ "100%", 30 ],
+                "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                "$cuiv:button_text": "Close Featured Servers",
+                "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/setting_icon",
+                "$cuiv:button_image_anchor": "left_middle",
+                "$cuiv:button_image_offset": [ 8, -0.5 ],
+                "$cuiv:button_text_anchor": "left_middle",
+                "$cuiv:button_text_offset": [ 30, 0 ],
+                
+                "$toggle_view_binding_name": "cuib-toggle_fs",
+                "$toggle_name": "toggle_fs",
+                "$toggle_group_forced_index": 2,
+                "$radio_toggle_group": true,
+                "$toggle_group_default_selected": 0
+            }}
           ],
           "bindings": [
-            { "binding_name": "#featured_servers_visible_and_available",
-              "binding_name_override": "#visible"
+            { "binding_type": "view",
+              "source_control_name": "cuib-toggle_fs",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
             }
-      ]}}
+      ]}},
+      { "open_fs@cui-toggle.toggle_button": {
+          "size": [ "100%", 30 ],
+          "$cuiv:button_type_panel": "cui-start_screen.button_label",
+          "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:button_text": "Open Featured Servers",
+          "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/setting_icon",
+          "$cuiv:button_image_anchor": "left_middle",
+          "$cuiv:button_image_offset": [ 8, -0.5 ],
+          "$cuiv:button_text_anchor": "left_middle",
+          "$cuiv:button_text_offset": [ 30, 0 ],
+          "$toggle_view_binding_name": "cuib-toggle_fs",
+          "$radio_toggle_group": true,
+          "$toggle_name": "toggle_fs",
+          "$toggle_group_forced_index": 1,
+          "$toggle_group_default_selected": 0,
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "cuib-toggle_fs",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+          }]
+      }},
+      { "padding_02": { "type": "panel", "size": [ "100%", 2 ]}}
 ]}}

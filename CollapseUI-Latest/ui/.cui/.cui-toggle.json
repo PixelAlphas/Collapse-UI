@@ -18,11 +18,11 @@
     
     "$cuiv:default_button_texture|default": "textures/ui/.cui-assets/background",
     "$cuiv:default_button_color|default": "$cuigv:SecondaryColor",
-    "$cuiv:hover_button_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:hover_button_texture|default": "textures/ui/.cui-assets/background_2x",
     "$cuiv:hover_button_color|default": "$cuigv:PrimaryColor",
     "$cuiv:pressed_button_texture|default": "textures/ui/.cui-assets/background",
     "$cuiv:pressed_button_color|default": "$cuigv:PrimaryColor",
-    "$cuiv:pressed_no_hover_button_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:pressed_no_hover_button_texture|default": "textures/ui/.cui-assets/background_2x",
     "$cuiv:pressed_no_hover_button_color|default": "$cuigv:PrimaryColor",
     "$cuiv:locked_button_texture|default": "textures/ui/disabledButtonNoBorder",
     "$cuiv:locked_button_color|default": [ 1, 1, 1 ]
@@ -87,9 +87,9 @@
           "controls": [
             { "toggle_button_label": {
                 "type": "label",
-                "offset": [ 0, 7 ],
+                "offset": [ 0, 8 ],
                 "text": "$cuiv:toggle_label_text",
-                "color": "$cuiv:text_color"
+                "color": "$cuiv:toggle_texture_color"
             }}
       ]}}
   ]},
@@ -132,7 +132,7 @@
     "$cuiv:button_texture": "$cuiv:hover_button_texture",
     "$cuiv:button_texture_color": "$cuiv:hover_button_color",
     "$cuiv:toggle_texture_color": "$cuigv:SecondaryColor",
-    "$cuiv:text_color": "$dark_button_hover_text_color",
+    "$cuiv:text_color": "$light_button_hover_text_color",
     "$toggle_checked": true,
     "$pressed_state": true,
     "layer": 2
@@ -142,7 +142,7 @@
     "$cuiv:button_texture": "$cuiv:pressed_button_texture",
     "$cuiv:button_texture_color": "$cuiv:pressed_button_color",
     "$cuiv:toggle_texture_color": "$cuigv:SecondaryColor",
-    "$cuiv:text_color": "$dark_button_pressed_text_color",
+    "$cuiv:text_color": "$light_button_pressed_text_color",
     "$toggle_unchecked_hover": true,
     "$hover_state": true,
     "layer": 3
@@ -152,7 +152,7 @@
     "$cuiv:button_texture": "$cuiv:pressed_no_hover_button_texture",
     "$cuiv:button_texture_color": "$cuiv:pressed_no_hover_button_color",
     "$cuiv:toggle_texture_color": "$cuigv:SecondaryColor",
-    "$cuiv:text_color": "$dark_button_pressed_text_color",
+    "$cuiv:text_color": "$light_button_pressed_text_color",
     "$toggle_checked_hover": true,
     "$pressed_state": true,
     "layer": 4

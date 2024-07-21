@@ -14,8 +14,24 @@
         "target_property_name": "#visible"
     }],
     "controls": [
-      { "keyboardmouse@cui-common.element_background": { "$cuiv:header_text": "options.keyboardAndMouse", "$cuiv:element_background_contents": "cui-ss_keyboardmouse.keyboardmouse"}},
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "section_title": {
+          "type": "label",
+          "text": "options.controller",
+          "size": [ "100% - 12px", "default" ],
+          "font_type": "MinecraftTen",
+          "color": "$cuigv:FontPrimaryColor",
+          "font_scale_factor": 1.8
+      }},
+      { "description": {
+          "type": "label",
+          "text": "cui.settings.keyboardmouse.main.description",
+          "size": [ "100% - 12px", "default" ],
+          "color": "$cuigv:FontSecondaryColor"
+      }},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
+      { "keyboardmouse@cui-common.element_background": { "$cuiv:header_text": "options.keyboardAndMouse", "$cuiv:element_background_contents": "cui-ss_keyboardmouse.keyboardmouse"}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
       { "mappingnormal@cui-common.element_background": { "$cuiv:header_text": "options.keyboardLayout", "$cuiv:element_background_contents": "cui-ss_keyboardmouse.mappingnormal",
         "bindings": [
           { "binding_name": "#keyboard_show_standard_keyboard_options",
@@ -43,19 +59,13 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.keyboardmouse.main.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_slider_0@cui-setting_screen.option_slider": {
@@ -98,19 +108,13 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.keyboardmouse.mapping.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_toggle_show_keyboard_prompts@cui-setting_screen.option_toggle": {
@@ -155,19 +159,13 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.keyboardmouse.mapping.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_toggle_show_keyboard_prompts@cui-setting_screen.option_toggle": {
@@ -243,8 +241,9 @@
     "controls": [
       { "option_info_label_control": {
           "type": "image",
-          "texture": "textures/ui/.cui-assets/text_box_hover",
-          "size": [ "fill", "100%" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "fill", "100% - 2px" ],
+          "color": "$cuigv:TertiaryColor",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "controls": [
@@ -252,9 +251,9 @@
                 "type": "label",
                 "color": "$generic_button_text_color",
                 "size": [ "100% - 4px", "default" ],
-                "text_alignment": "center",
+                "text_alignment": "left",
                 "layer": 1,
-                "font_type": "dainbold",
+                "offset": [ 4, 0 ],
                 "text": "#keymapping_name",
                 "bindings": [
                   { "binding_name": "#keymapping_name",

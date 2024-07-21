@@ -12,10 +12,28 @@
         "target_property_name": "#visible"
     }],
     "controls": [
-      { "creator@cui-common.element_background": { "$cuiv:header_text": "options.creator", "$cuiv:element_background_contents": "cui-ss_creator.creator"}},
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "section_title": {
+          "type": "label",
+          "text": "options.creator",
+          "size": [ "100% - 12px", "default" ],
+          "font_type": "MinecraftTen",
+          "color": "$cuigv:FontPrimaryColor",
+          "font_scale_factor": 1.8
+      }},
+      { "description": {
+          "type": "label",
+          "text": "cui.settings.creator.main.description",
+          "size": [ "100% - 12px", "default" ],
+          "color": "$cuigv:FontSecondaryColor"
+      }},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
       { "contentlog@cui-common.element_background": { "$cuiv:header_text": "cui.settings.creator.contentlog.title", "$cuiv:element_background_contents": "cui-ss_creator.contentlog"}},
       { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
+      { "debugger@cui-common.element_background": { "$cuiv:header_text": "options.creator.debuggerHeading", "$cuiv:element_background_contents": "cui-ss_creator.debugger_toggles_panel", "bindings": [{ "binding_name": "#script_debugger_options_enabled", "binding_name_override": "#enabled" }]}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 4 ]}},
+      { "watchdog@cui-common.element_background": { "$cuiv:header_text": "options.creator.watchdogHeading", "$cuiv:element_background_contents": "cui-ss_creator.watchdog_toggles_panel", "bindings": [{ "binding_name": "#script_watchdog_options_enabled", "binding_name_override": "#enabled" }]}},
+      { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}},
       { "reset_button@cui-button.text_button": {
           "ignored": "(not $is_pregame)",
           "size": [ "100% - 4px", 30 ],
@@ -24,22 +42,7 @@
           "$focus_override_down": "FOCUS_OVERRIDE_STOP",
           "property_bag": { "reset_group": "creator" }
       }},
-      { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}}
-  ]},
-  "creator": {
-    "type": "stack_panel",
-    "size": [ "100% - 4px", "100%c" ],
-    "orientation": "vertical",
-    "use_child_anchors": true,
-    "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.creator.main.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
+      { "pudding_05": { "type": "panel", "size": [ 1, 4 ]}}
   ]},
   "contentlog": {
     "type": "stack_panel",
@@ -47,19 +50,13 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "contentlog.settingsSectionName",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_content_file_log@cui-setting_screen.option_toggle": {
@@ -68,9 +65,10 @@
           "$toggle_name": "copy_coordinate_ui"
       }},
       { "creator_setting_button": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": [ "100%", 30 ],
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "100% - 8px", "100%cm + 4px" ],
+          "color": "$cuigv:TertiaryColor",
           "bindings": [
             { "binding_name": "#show_keybinds_button",
               "binding_name_override": "#visible"
@@ -79,12 +77,12 @@
             { "go_to_keybinds@cui-button.text_button": {
                 "$pressed_button_name": "button.go_to_keybinds",
                 "$cuiv:button_text": "options.go_to_keybinds",
-                "size": [ "100%", "100%" ],
+                "size": [ "100% - 4px", 30 ],
                 "bindings": [
                   { "binding_name": "#go_to_keybinds",
                     "binding_name_override": "#enabled"
                 }]
-           }}
+            }}
       ]}},
       { "option_content_file_log@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.content_log_file",
@@ -99,29 +97,45 @@
           "$toggle_name": "content_log_gui"
       }},
       { "pudding_04": { "type": "panel", "size": [ 1, 2 ]}},
-      { "content_log_location_label_header": {
-          "type": "label",
-          "text": "contentlog.logLocationSectionName",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ],
-          "bindings": [
-            { "binding_name": "#content_log_file_enabled",
-              "binding_name_override": "#visible"
-          }]
-      }},
       { "cclt": {
-          "type": "label",
-          "text": "#text",
-          "size": [ "100% - 8px", "default" ],
-          "hide_hyphen": true,
-          "bindings": [
-            { "binding_name": "#content_log_location_text",
-              "binding_name_override": "#text"
-            },
-            { "binding_name": "#content_log_file_enabled",
-              "binding_name_override": "#visible"
-          }]
-      }},
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "100% - 8px", "100%cm + 4px" ],
+          "color": "$cuigv:TertiaryColor",
+          "controls": [
+            { "cclt_sp": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100% - 8px", "100%c" ],
+                "controls": [
+                  { "content_log_location_label_header": {
+                      "type": "label",
+                      "text": "contentlog.logLocationSectionName",
+                      "size": [ "100% - 8px", "default" ],
+                      "font_type": "MinecraftTen",
+                      "layer": 10,
+                      "bindings": [
+                        { "binding_name": "#content_log_file_enabled",
+                          "binding_name_override": "#visible"
+                      }]
+                  }},
+                  { "pudding": { "type": "panel", "size": [ 1, 2 ]}},
+                  { "cclt": {
+                      "type": "label",
+                      "text": "#text",
+                      "layer": 10,
+                      "size": [ "100% - 8px", "default" ],
+                      "hide_hyphen": true,
+                      "bindings": [
+                        { "binding_name": "#content_log_location_text",
+                          "binding_name_override": "#text"
+                        },
+                        { "binding_name": "#content_log_file_enabled",
+                          "binding_name_override": "#visible"
+                      }]
+                  }}
+            ]}}
+      ]}},
       { "pudding_05": { "type": "panel", "size": [ 1, 2 ]}},
       { "content_log_buttons": {
           "type": "stack_panel",
@@ -150,4 +164,153 @@
             }}
       ]}},
       { "pudding_06": { "type": "panel", "size": [ 1, 2 ]}}
+  ]},
+  "debugger_toggles_panel": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
+      }},
+      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "auto_attach_toggle@cui-setting_screen.option_toggle": {
+          "ignored": "$build_platform_UWP",
+          "$cuiv:option_label_text": "options.creator.debuggerAutoAttach",
+          "$cuiv:option_binding_name": "#script_debugger_auto_attach",
+          "$cuiv:option_toggle_binding_name": "#script_debugger_auto_attach_enabled",
+          "$toggle_name": "script_debugger_auto_attach"
+      }},
+      { "auto_connect_toggle@cui-setting_screen.option_toggle": {
+          "ignored": "(not $build_platform_UWP)",
+          "$cuiv:option_label_text": "options.creator.debuggerAutoConnect",
+          "$cuiv:option_binding_name": "#script_debugger_auto_attach",
+          "$cuiv:option_toggle_binding_name": "#script_debugger_auto_attach_enabled",
+          "$toggle_name": "script_debugger_auto_attach"
+      }},
+      { "all_options_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "use_child_anchors": true,
+          "bindings": [
+            { "binding_name": "#script_debugger_auto_attach_options_visible",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "attach_mode_option": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%c" ],
+                "use_child_anchors": true,
+                "orientation": "vertical",
+                "$option_label": "Attach Mode",
+                "controls": [
+                  { "connect@cui-setting_screen.option_dropdown": {
+                      "$cuiv:option_binding_name": "#script_debugger_attach_mode_connect",
+                      "$cuiv:option_value_text": "options.creator.debuggerListen",
+                      "bindings": [
+                        { "binding_name": "#script_debugger_attach_mode_listen",
+                          "binding_name_override": "#visible"
+                      }]
+                  }},
+                  { "listen@cui-setting_screen.option_dropdown": {
+                      "$cuiv:option_binding_name": "#script_debugger_attach_mode_listen",
+                      "$cuiv:option_value_text": "options.creator.debuggerConnect",
+                      "bindings": [
+                        { "binding_name": "#script_debugger_attach_mode_connect",
+                          "binding_name_override": "#visible"
+                      }]
+                  }}
+              ]}},
+              { "host_input_panel@cui-common.textbox_template": {
+                  "$cuiv:tbt_header": "options.creator.debuggerHost",
+                  "$cuiv:tbt_bindings": "#script_debugger_host",
+                  "$cuiv:tbt_placeholder|default": "options.creator.debuggerHost",
+                  "$cuiv:tbt_name|default": "script_debugger_host",
+                  "$cuiv:tbt_bindings_property": [
+                    { "binding_name": "#script_debugger_attach_mode_connect",
+                      "binding_name_override": "#enabled"
+                  }]
+              }},
+              { "pudding": { "type": "panel", "size": [ 1, 2 ]}},
+              { "port_input_panel@cui-common.textbox_template": {
+                  "$cuiv:tbt_header": "options.creator.debuggerPort",
+                  "$cuiv:tbt_bindings": "#script_debugger_port",
+                  "$cuiv:tbt_placeholder|default": "options.creator.debuggerPort",
+                  "$cuiv:tbt_name|default": "script_debugger_port"
+              }}
+      ]}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}}
+  ]},
+  "watchdog_toggles_panel": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
+      }},
+      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "hang_threshold_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.creator.watchdogHangThreshold",
+          "$slider_name": "script_watchdog_hang_threshold",
+          "$slider_value_binding_name": "#script_watchdog_hang_threshold",
+          "$slider_tts_text_value": "#script_watchdog_hang_threshold_text_value",
+          "$cuiv:slider_value_text": "#script_watchdog_hang_threshold_text_value",
+          "$cuiv:option_toggle_binding_name": "#script_watchdog_hang_threshold_enabled",
+          "$slider_steps_binding_name": "#script_watchdog_hang_threshold_steps",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#script_watchdog_hang_threshold_text_value" }]
+      }},
+      { "spike_warning_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.creator.watchdogSpikeWarning",
+          "$cuiv:option_binding_name": "#script_watchdog_spike_warning",
+          "$cuiv:option_toggle_binding_name": "#script_watchdog_spike_warning_enabled",
+          "$toggle_name": "script_watchdog_spike_warning"
+      }},
+      { "spike_threshold_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.creator.watchdogSpikeThreshold",
+          "$slider_name": "script_watchdog_spike_threshold",
+          "$slider_value_binding_name": "#script_watchdog_spike_threshold",
+          "$slider_tts_text_value": "#script_watchdog_spike_threshold_text_value",
+          "$cuiv:slider_value_text": "#script_watchdog_spike_threshold_text_value",
+          "$cuiv:option_toggle_binding_name": "#script_watchdog_spike_threshold_enabled",
+          "$slider_steps_binding_name": "#script_watchdog_spike_threshold_steps",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#script_watchdog_spike_threshold_text_value" }],
+          "bindings": [
+            { "binding_name": "#script_watchdog_spike_threshold_text_value",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "slow_warning_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.creator.watchdogSlowWarning",
+          "$cuiv:option_binding_name": "#script_watchdog_slow_warning",
+          "$cuiv:option_toggle_binding_name": "#script_watchdog_slow_warning_enabled",
+          "$toggle_name": "script_watchdog_slow_warning"
+      }},
+      { "slow_threshold_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.creator.watchdogSlowThreshold",
+          "$slider_name": "script_watchdog_slow_threshold",
+          "$slider_value_binding_name": "#script_watchdog_slow_threshold",
+          "$slider_tts_text_value": "#script_watchdog_slow_threshold_text_value",
+          "$cuiv:slider_value_text": "#script_watchdog_slow_threshold_text_value",
+          "$cuiv:option_toggle_binding_name": "#script_watchdog_slow_threshold_enabled",
+          "$slider_steps_binding_name": "#script_watchdog_slow_threshold_steps",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#script_watchdog_slow_threshold_text_value" }],
+          "bindings": [
+            { "binding_name": "#script_watchdog_slow_threshold_visible",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}}
 ]}}

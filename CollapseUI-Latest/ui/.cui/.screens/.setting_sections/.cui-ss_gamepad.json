@@ -14,17 +14,33 @@
         "target_property_name": "#visible"
     }],
     "controls": [
-      { "gamepad@cui-common.element_background": { "$cuiv:header_text": "options.controller", "$cuiv:element_background_contents": "cui-ss_gamepad.gamepad"}},
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "section_title": {
+          "type": "label",
+          "text": "options.controller",
+          "size": [ "100% - 12px", "default" ],
+          "font_type": "MinecraftTen",
+          "color": "$cuigv:FontPrimaryColor",
+          "font_scale_factor": 1.8
+      }},
+      { "description": {
+          "type": "label",
+          "text": "cui.settings.gamepad.main.description",
+          "size": [ "100% - 12px", "default" ],
+          "color": "$cuigv:FontSecondaryColor"
+      }},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
-      { "mapping@cui-common.element_background": { "$cuiv:header_text": "options.controllerLayout", "$cuiv:element_background_contents": "cui-ss_gamepad.mapping"}},
+      { "gamepad@cui-common.element_background": { "$cuiv:header_text": "options.controller", "$cuiv:element_background_contents": "cui-ss_gamepad.gamepad"}},
       { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
+      { "mapping@cui-common.element_background": { "$cuiv:header_text": "options.controllerLayout", "$cuiv:element_background_contents": "cui-ss_gamepad.mapping"}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 4 ]}},
       { "reset_button@cui-button.text_button": {
           "size": [ "100% - 4px", 30 ],
           "$pressed_button_name": "button.reset_gamepad_bindings",
           "$cuiv:button_text": "controllerLayoutScreen.resetAllBindings",
           "$focus_override_down": "FOCUS_OVERRIDE_STOP"
       }},
-      { "pudding_03": { "type": "panel", "size": [ 1, 4 ]}}
+      { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}}
   ]},
   "gamepad": {
     "type": "stack_panel",
@@ -32,19 +48,13 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.gamepad.main.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_slider_0@cui-setting_screen.option_slider": {
@@ -136,19 +146,13 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.gamepad.mapping.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "gamepad_keymapping_grid@cui-ss_gamepad.gamepad_mapping_grid": {
@@ -191,8 +195,9 @@
     "controls": [
       { "option_info_label_control": {
           "type": "image",
-          "texture": "textures/ui/.cui-assets/text_box_hover",
-          "size": [ "fill", "100%" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "fill", "100% - 2px" ],
+          "color": "$cuigv:TertiaryColor",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "controls": [
@@ -200,9 +205,9 @@
                 "type": "label",
                 "color": "$generic_button_text_color",
                 "size": [ "100% - 4px", "default" ],
-                "text_alignment": "center",
+                "text_alignment": "left",
+                "offset": [ 4, 0 ],
                 "layer": 1,
-                
                 "text": "#keymapping_name",
                 "bindings": [
                   { "binding_name": "#keymapping_name",

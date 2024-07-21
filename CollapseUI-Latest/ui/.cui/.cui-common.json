@@ -1,4 +1,49 @@
 { "namespace": "cui-common",
+  "textbox_template": {
+    "type": "image",
+    "texture": "textures/ui/.cui-assets/background",
+    "size": [ "100% - 8px", "100%cm + 4px" ],
+    "color": "$cuigv:TertiaryColor",
+    "$cuiv:tbt_header|default": "NaN lmao",
+    "$cuiv:tbt_bindings|default": "NaN lmao",
+    "$cuiv:tbt_placeholder|default": "NaN lmao",
+    "$cuiv:tbt_name|default": "NaN lmao",
+    "$cuiv:tbt_bindings_property|default": [],
+    "controls": [
+      { "sp": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100% - 8px", "100%c" ],
+          "controls": [
+            { "header": {
+                "type": "label",
+                "text": "$cuiv:tbt_header",
+                "size": [ "100% - 8px", "default" ],
+                "font_type": "MinecraftTen",
+                "layer": 10
+            }},
+            { "pudding": { "type": "panel", "size": [ 1, 2 ]}},
+            { "host_input@cui-common.text_box": {
+                "$cuiv:text_edit_box_content_binding_name": "$cuiv:tbt_bindings",
+                "$cuiv:text_edit_box_binding_collection_name": "$cuiv:tbt_bindings",
+                "$cuiv:placeholder_text": "$cuiv:tbt_placeholder",
+                "$cuiv:text_box_name": "$cuiv:tbt_name",
+                "size": [ "100%", 20 ],
+                "bindings": "$cuiv:tbt_bindings_property"
+            }}
+      ]}}
+  ]},
+  "cancel_button@cui-button.text_button": {
+    "$pressed_button_name": "button.menu_exit",
+    "size": [ 25, 25 ],
+    "offset": [ 4, 4 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$cuiv:button_type_panel": "cui-start_screen.button_label",
+    "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+    "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+    "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/exit_icon"
+  },
   "gradient_renderer_template": {
     "type": "custom",
     "renderer": "gradient_renderer",
@@ -81,7 +126,13 @@
     "$cuiv:place_holder_control": "cui-common.text_edit_box_place_holder_label",
     "$cuiv:text_background_default": "cui-common.edit_box_indent",
     "$cuiv:text_background_hover": "cui-common.edit_box_indent_hover",
+    "$cuiv:text_background_locked": "cui-common.edit_box_indent_locked",
+    "max_length": 256,
+    "$cuiv:text_edit_box_content_binding_type|default": "global",
+    "$cuiv:text_edit_box_content_binding_name|default": "#text_box_item_name",
+    "$cuiv:text_edit_box_binding_condition|default": "visible",
     
+    "$cuiv:text_magnifying_glass_image|default": false,
     "text_edit_box_grid_collection_name": "$cuiv:text_edit_box_grid_collection_name",
     "text_box_name": "$cuiv:text_box_name",
     "text_type": "$cuiv:text_edit_box_text_type",
@@ -93,7 +144,6 @@
     "default_control": "default",
     "hover_control": "hover",
     "pressed_control": "pressed",
-    "max_length": 14,
     "button_mappings": [
       { "from_button_id": "button.menu_select",
         "to_button_id": "button.text_edit_box_selected",
@@ -135,6 +185,18 @@
         "handle_deselect": false,
         "mapping_type": "focused"
     }],
+    "property_bag": {
+      "#property_field": "#item_name"
+    },
+    "bindings": [
+      { "binding_type": "$cuiv:text_edit_box_content_binding_type",
+        "binding_condition": "$cuiv:text_edit_box_binding_condition",
+        "binding_collection_name": "$cuiv:text_edit_box_grid_collection_name",
+        "binding_name": "$cuiv:text_edit_box_content_binding_name",
+        "binding_name_override": "#item_name"
+      },
+      { "binding_name": "#newline_refresh"
+    }],
     "controls": [
       { "centering_panel": {
           "type": "panel",
@@ -143,9 +205,16 @@
           "controls": [
             { "$cuiv:text_edit_text_control@cui-common.text_edit_box_label": { "layer": 1 }},
             { "magnifying_glass@common.text_magnifying_glass_image": {
+                "ignored": "(not $cuiv:text_magnifying_glass_image)",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
-                "size": [ 10, 10 ]
+                "size": [ 10, 10 ],
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "$cuiv:text_edit_text_control",
+                    "source_property_name": "(#item_name = '')",
+                    "target_property_name": "#visible"
+                }]
             }},
             { "visibility_panel": {
                 "type": "panel",
@@ -163,7 +232,8 @@
       ]}},
       { "default@$cuiv:text_background_default": {} },
       { "hover@$cuiv:text_background_hover": {} },
-      { "pressed@$cuiv:text_background_hover": {} }
+      { "pressed@$cuiv:text_background_hover": {} },
+      { "locked@$cuiv:text_background_locked": {} }
     ]
   },
   "text_edit_box_place_holder_label": {
@@ -177,12 +247,13 @@
       { "binding_type": "global",
         "binding_condition": "visible",
         "binding_collection_name": "",
-        "binding_name": "#text_box_item_name"
+        "binding_name": "$cuiv:text_edit_box_content_binding_name"
   }]},
   "text_edit_box_label": {
     "type": "label",
     "shadow": false,
     "text": "#item_name",
+    "size": [ "100%", "default" ],
     "property_bag": {
       "#property_field": "#item_name"
     },
@@ -190,7 +261,7 @@
       { "binding_type": "global",
         "binding_condition": "visible",
         "binding_collection_name": "",
-        "binding_name": "#text_box_item_name",
+        "binding_name": "$cuiv:text_edit_box_content_binding_name",
         "binding_name_override": "#item_name"
       },
       { "binding_name": "#newline_refresh" }
@@ -240,6 +311,10 @@
   },
   "edit_box_indent_hover@cui-common.edit_box_indent": {
     "texture": "textures/ui/.cui-assets/text_box_hover"
+  },
+  "edit_box_indent_locked@cui-common.edit_box_indent": {
+    "texture": "textures/ui/.cui-assets/text_box_hover",
+    "color": [ 1, 0, 0 ]
   },
   "loading_screen_background": {
     "type": "panel",
@@ -296,6 +371,7 @@
   ]},
   "close_button@cui-button.text_button": {
     "$pressed_button_name": "button.menu_exit",
+    "layer": 90,
     "controls": [
       { "default@cui-common.close_button_panel": {}},
       { "hover@cui-common.close_button_panel": { "$cuiv:close_button_color": [ 0.7, 0.7, 0.7 ]}},
@@ -303,11 +379,11 @@
   ]},
   "close_button_panel": {
     "type": "label",
-    "font_type": "dainbold",
+    "font_type": "MinecraftTen",
     "font_scale_factor": 1.8,
     "text": "<",
     "color":"$cuiv:close_button_color",
-    "$cuiv:close_button_color|default": [ 1, 1, 1 ]
+    "$cuiv:close_button_color|default": "$cuigv:FontSecondaryColor"
   },
   "title_core": {
     "type": "stack_panel",
@@ -329,7 +405,6 @@
       "@cui-anims.screen_intro_anim_push",
       "@cui-anims.screen_intro_anim_pop"
     ],
-    
     "controls": [
       { "paddings": { "type": "panel", "size": [ 28, 1 ], "ignored": "(not $cuiv:AddPadding)"}},
       { "close_button@cui-common.close_button": {

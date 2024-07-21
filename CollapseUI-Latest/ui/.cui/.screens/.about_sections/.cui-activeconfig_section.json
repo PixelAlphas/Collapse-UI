@@ -11,12 +11,13 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 20 ]}},
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "line": {
           "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
       { "theme_label": {
@@ -52,6 +53,11 @@
           "type": "panel",
           "$cuiv:config_text": "cui.about.tab.activeconfig.secondarycolor",
           "$cuiv:config_color": "$cuigv:SecondaryColor"
+      }},
+      { "config_theme_021@cui-activeconfig_section.config_color": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.tertiarycolor",
+          "$cuiv:config_color": "$cuigv:TertiaryColor"
       }},
       { "config_theme_03@cui-activeconfig_section.config_color": {
           "type": "panel",

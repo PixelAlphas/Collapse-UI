@@ -95,7 +95,7 @@
                 "$scrolling_content": "$section_content_panels",
                 "$show_background": false,
                 "$scroll_size": [ "5px", "100% - 4px" ],
-                "$scroll_bar_left_padding_size": [ 1, 0 ]
+                "$scroll_bar_left_padding_size": [ 0, 0 ]
             }}
       ]}}
   ]},
@@ -112,23 +112,15 @@
           "orientation": "vertical",
           "use_child_anchors": true,
           "controls": [
-            { "button_background": {
-                "type": "image",
-                "texture": "textures/ui/.cui-assets/background",
-                "size": [ "100%", "100%cm + 8px" ],
-                "color": [ 0, 0, 0 ],
-                "alpha": 0.7,
+            { "stack_panel": {
+                "type": "stack_panel",
+                "size": [ "100% - 8px", "100%c" ],
                 "controls": [
-                  { "stack_panel": {
-                      "type": "stack_panel",
-                      "size": [ "100% - 8px", "100%c" ],
-                      "controls": [
-                        { "utilities@cui-common.header": { "$cuiv:header_text": "cui.settings.utilities" }},
-                        { "accessibility_button@cui-setting_screen.accessibility_button": { "$toggle_group_forced_index": "$accessibility_forced_index", "ignored": "(not $include_controls_and_settings_sections)" }},
-                        { "creator_button@cui-setting_screen.creator_button": { "$toggle_group_forced_index": 100, "ignored": "(not $include_controls_and_settings_sections)" }},
-                        { "general_button@cui-setting_screen.general_button": { "$toggle_group_forced_index": "$general_forced_index", "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls or $include_world_section or not $include_controls_and_settings_sections)" }},
-                        { "realm_selector_panel@realms_settings.selector_panel": { "ignored": "(not $include_realm_section)", "$world_toggle_index": "$world_forced_index", "$members_toggle_index": "$members_forced_index", "$subscription_toggle_index": "$subscription_forced_index", "$backup_toggle_index": "$backup_forced_index", "$dev_options_toggle_index": "$dev_options_forced_index"}}
-                  ]}}
+                  { "utilities@cui-common.header": { "$cuiv:header_text": "cui.settings.utilities" }},
+                  { "accessibility_button@cui-setting_screen.accessibility_button": { "$toggle_group_forced_index": "$accessibility_forced_index", "ignored": "(not $include_controls_and_settings_sections)" }},
+                  { "creator_button@cui-setting_screen.creator_button": { "$toggle_group_forced_index": 100, "ignored": "(not $include_controls_and_settings_sections)" }},
+                  { "general_button@cui-setting_screen.general_button": { "$toggle_group_forced_index": "$general_forced_index", "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls or $include_world_section or not $include_controls_and_settings_sections)" }},
+                  { "realm_selector_panel@realms_settings.selector_panel": { "ignored": "(not $include_realm_section)", "$world_toggle_index": "$world_forced_index", "$members_toggle_index": "$members_forced_index", "$subscription_toggle_index": "$subscription_forced_index", "$backup_toggle_index": "$backup_forced_index", "$dev_options_toggle_index": "$dev_options_forced_index"}}
             ]}},
             { "world_selector_pane@cui-setting_screen.selector_pane_content": { "ignored": "(not $include_world_section)" }}
       ]}},
@@ -137,47 +129,33 @@
           "type": "stack_panel",
           "ignored": "(not $include_controls_and_settings_sections)",
           "$controls_section_header": "options.group.input",
+          "use_child_anchors": true,
           "$general_section_header": "stat.generalButton",
           "controls": [
-            { "button_background": {
-                "type": "image",
-                "texture": "textures/ui/.cui-assets/background",
-                "size": [ "100%", "100%cm + 8px" ],
-                "color": [ 0, 0, 0 ],
-                "alpha": 0.7,
+            { "stack_panel": {
+                "type": "stack_panel",
+                "ignored": "(not $include_controls_and_settings_sections)",
+                "size": [ "100% - 8px", "100%c" ],
                 "controls": [
-                  { "stack_panel": {
-                      "type": "stack_panel",
-                      "ignored": "(not $include_controls_and_settings_sections)",
-                      "size": [ "100% - 8px", "100%c" ],
-                      "controls": [
-                        { "utilities@cui-common.header": { "$cuiv:header_text": "cui.settings.controls" }},
-                        { "gamepad_button@cui-setting_screen.gamepad_button": { "ignored": "(not $gamepad_supported or $nx_os)", "$toggle_group_forced_index": "$controller_and_switch_forced_index" }},
-                        { "keyboardmouse_button@cui-setting_screen.keyboardmouse_button": { "ignored": "(not $keyboard_and_mouse_supported)", "$toggle_group_forced_index": "$keyboard_and_mouse_forced_index" }},
-                        { "touch_button@cui-setting_screen.touch_button": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "$toggle_group_forced_index": "$touch_forced_index" }}
-                  ]}}
+                  { "utilities@cui-common.header": { "$cuiv:header_text": "cui.settings.controls" }},
+                  { "gamepad_button@cui-setting_screen.gamepad_button": { "ignored": "(not $gamepad_supported or $nx_os)", "$toggle_group_forced_index": "$controller_and_switch_forced_index" }},
+                  { "keyboardmouse_button@cui-setting_screen.keyboardmouse_button": { "ignored": "(not $keyboard_and_mouse_supported)", "$toggle_group_forced_index": "$keyboard_and_mouse_forced_index" }},
+                  { "touch_button@cui-setting_screen.touch_button": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "$toggle_group_forced_index": "$touch_forced_index" }}
             ]}},
             { "pudding01": { "type": "panel", "size": [ 4, 4 ] }},
-            { "button_background": {
-                "type": "image",
-                "texture": "textures/ui/.cui-assets/background",
-                "size": [ "100%", "100%cm + 8px" ],
-                "color": [ 0, 0, 0 ],
-                "alpha": 0.7,
+            { "stack_panel": {
+                "type": "stack_panel",
+                "size": [ "100% - 8px", "100%c" ],
                 "controls": [
-                  { "stack_panel": {
-                      "type": "stack_panel",
-                      "size": [ "100% - 8px", "100%c" ],
-                      "controls": [
-                        { "utilities@cui-common.header": { "$cuiv:header_text": "cui.settings.generals" }},
-                        { "account_button@cui-setting_screen.account_button": { "$toggle_group_forced_index": "$account_forced_index" }},
-                        { "video_button@cui-setting_screen.video_button": { "$toggle_group_forced_index": "$video_forced_index" }},
-                        { "sound_button@cui-setting_screen.sound_button": { "$toggle_group_forced_index": "$sound_forced_index" }},
-                        { "global_texture_pack_button@cui-setting_screen.global_texture_pack_button": { "ignored": "$ignore_global_resources_section", "$toggle_group_forced_index": "$global_texture_pack_forced_index", "visible": "($is_global_texture_packs_visible)" }},
-                        { "storage_management_button@cui-setting_screen.storage_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$storage_management_forced_index" }},
-                        { "language_button@cui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index" }}
-                  ]}}
+                  { "utilities@cui-common.header": { "$cuiv:header_text": "cui.settings.generals" }},
+                  { "account_button@cui-setting_screen.account_button": { "$toggle_group_forced_index": "$account_forced_index" }},
+                  { "video_button@cui-setting_screen.video_button": { "$toggle_group_forced_index": "$video_forced_index" }},
+                  { "sound_button@cui-setting_screen.sound_button": { "$toggle_group_forced_index": "$sound_forced_index" }},
+                  { "global_texture_pack_button@cui-setting_screen.global_texture_pack_button": { "ignored": "$ignore_global_resources_section", "$toggle_group_forced_index": "$global_texture_pack_forced_index", "visible": "($is_global_texture_packs_visible)" }},
+                  { "storage_management_button@cui-setting_screen.storage_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$storage_management_forced_index" }},
+                  { "language_button@cui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index" }}
             ]}}
+            
       ]}},
       { "addons_selector_panel@world_section.addons_selector_panel": { "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))", "$level_texture_pack_toggle_index": "$level_texture_pack_index", "$addon_toggle_index": "$addon_index" }}
   ]},
@@ -241,21 +219,14 @@
             }}
       ]}},
       { "pudding00": { "type": "panel", "size": [ 2, 4 ] }},
-      { "button_background": {
-          "type": "image",
-          "texture": "textures/ui/.cui-assets/background",
-          "size": [ "100%", "100%cm + 8px" ],
-          "color": [ 0, 0, 0 ],
-          "alpha": 0.7,
+      { "stack_panel": {
+          "type": "stack_panel",
+          "use_child_anchors": true,
+          "size": [ "100% - 8px", "100%c" ],
           "controls": [
-            { "stack_panel": {
-                "type": "stack_panel",
-                "size": [ "100% - 8px", "100%c" ],
-                "controls": [
-                  { "utilities@cui-common.header": { "$cuiv:header_text": "realmsSettingsScreen.worldSectionTitle" }},
-                  { "game_button@cui-setting_screen.game_button": { "$toggle_group_forced_index": "$game_forced_index" }},
-                  { "multiplayer_button@cui-setting_screen.multiplayer_button": { "visible": "(not $education_edition)", "$toggle_group_forced_index": "$multiplayer_forced_index" }}
-            ]}}
+            { "utilities@cui-common.header": { "$cuiv:header_text": "realmsSettingsScreen.worldSectionTitle" }},
+            { "game_button@cui-setting_screen.game_button": { "$toggle_group_forced_index": "$game_forced_index" }},
+            { "multiplayer_button@cui-setting_screen.multiplayer_button": { "visible": "(not $education_edition)", "$toggle_group_forced_index": "$multiplayer_forced_index" }}
       ]}}
   ]},
   "section_content_panels": {
@@ -394,6 +365,7 @@
     "orientation": "horizontal",
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
+    "$cuiv:toggle_texture_color|default": "$cuigv:FontPrimaryColor",
     "controls": [
       { "pudding_01": { "type": "panel", "size": [ 2, 1 ]}},
       { "cycling_icon": {
@@ -422,10 +394,9 @@
           "controls": [
             { "toggle_button_label": {
                 "type": "label",
-                "offset": [ 0, 7 ],
+                "offset": [ 0, 8 ],
                 "text": "$cuiv:toggle_label_text",
-                "color": "$cuiv:text_color",
-                "font_type": "dainbold"
+                "color": "$cuiv:toggle_texture_color"
             }}
       ]}}
   ]},
@@ -496,27 +467,47 @@
         "$cuiv:option_control_name": "cui-setting_screen.option_slider_control_old"
   }]},
   "slider@cui-slider.slider": {
-    "$slider_box_size": [ 10, 10 ],
-    "size": [ "100% - 8px", 10 ],
+    "size": [ "100% - 15px", 10 ],
     "enabled": "$cuiv:is_enabled",
     "$option_label|default": ""
   },
   "option_slider_control": {
     "type": "panel",
-    "anchor_from": "top_right",
-    "anchor_to": "top_right",
     "size": [ "100%", 10 ],
+    "$cuiv:option_state_color_opposite|default": [ 1, 1, 1 ],
+    "$cuiv:option_state_color|default": [ 1, 1, 1 ],
     "controls": [
+      { "label": {
+          "type": "label",
+          "layer": 10,
+          "color": "$cuiv:option_state_color_opposite",
+          "size": "$cuiv:option_label_size",
+          "offset": [ 0, 4 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:option_label_text",
+          "bindings": "$cuiv:option_label_bindings"
+      }},
       { "label_value": {
           "type": "label",
           "text": "$cuiv:slider_value_text",
-          "size": [ "100%", "default" ],
+          "size": [ "default", "default" ],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "text_alignment": "right",
-          "offset": [ -4, 3 ],
-          "bindings": "$cuiv:slider_value_binding"
-      }}
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ -10.5, 4 ],
+          "bindings": "$cuiv:slider_value_binding",
+          "controls": [
+            { "hover_background": {
+                "type": "image",
+                "size": [ "100% + 7px", "100% + 2px" ],
+                "offset": [ 0, 0 ],
+                "layer": -1,
+                "texture": "textures/ui/.cui-assets/background",
+                "color": "$cuigv:PrimaryColor"
+            }}
+      ]}}
   ]},
   "option_slider_control_old": {
     "type": "panel",
@@ -527,7 +518,7 @@
       { "slider@cui-slider.slider": {
           "$slider_box_size": [ 10, 10 ],
           "size": [ "100%", 10 ],
-          "offset": [ -4, 3 ],
+          "offset": [ -4, 8 ],
           "enabled": "$cuiv:is_enabled",
           "$option_label|default": "",
           "$slider_tts_header": "$option_label",
@@ -573,10 +564,10 @@
     "$cuiv:option_label_text|default": "No text?",
     "$cuiv:option_description|default": false,
     "$cuiv:option_description_text|default": "No description?",
-    "$cuiv:option_layout_size|default": [ "100%", "100%c + 18px" ],
-    "$cuiv:option_layout_max_size|default": [ "100%", 16 ],
-    "$cuiv:option_label_size|default": [ "70% - 14px", "default" ],
-    "$cuiv:option_label_offset|default": [ 4, 3 ],
+    "$cuiv:option_layout_size|default": [ "100%", "100%c + 8px" ],
+    "$cuiv:option_layout_max_size|default": [ "100%", "100%cm + 18px" ],
+    "$cuiv:option_label_size|default": [ "100%", "default" ],
+    "$cuiv:option_label_offset|default": [ 4, 0 ],
     "$cuiv:option_label_bindings|default": [],
     "$cuiv:option_value_text|default": "No bindings?",
     "use_child_anchors": true,
@@ -595,27 +586,29 @@
       { "layout": {
           "type": "panel",
           "size": "$cuiv:option_layout_size",
-          "max_size": "$cuiv:option_layout_max_size",
           "$cuiv:option_layout_anchor|default": "top_left",
           "controls": [
-            { "$cuiv:option_control_name@$cuiv:option_control_name": {
-                "anchor_from": "$cuiv:option_layout_anchor",
-                "anchor_to": "$cuiv:option_layout_anchor",
-                "variables": [
-                  { "requires": "(($cuiv:is_slider) or (not $cuigv:OldSliderDesign))",
-                    "$cuiv:option_layout_anchor": "top_right"
-                }]
-            }},
             { "label": {
                 "type": "label",
-                "layer": 5,
+                "layer": 10,
                 "size": "$cuiv:option_label_size",
                 "offset": "$cuiv:option_label_offset",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
+                "alpha": 0,
                 "text": "$cuiv:option_label_text",
-                "bindings": "$cuiv:option_label_bindings"
-            }}
+                "bindings": "$cuiv:option_label_bindings",
+                "controls": [
+                  { "$cuiv:option_control_name@$cuiv:option_control_name": {
+                      "anchor_from": "$cuiv:option_layout_anchor",
+                      "anchor_to": "$cuiv:option_layout_anchor",
+                      "offset": [ 0, 0 ],
+                      "variables": [
+                        { "requires": "(($cuiv:is_slider) or (not $cuigv:OldSliderDesign))",
+                          "$cuiv:option_layout_anchor": "top_right"
+                      }]
+                  }}
+            ]}}
       ]}},
       { "$cuiv:option_control_name_slider@$cuiv:option_control_name_slider": {
           "ignored": "((not $cuiv:is_slider) or ($cuigv:OldSliderDesign))"
@@ -625,26 +618,25 @@
           "type": "panel",
           "size": [ 4, 4 ]
       }},
-      { "label_panel": {
+      { "description": {
+          "ignored": "(not $cuiv:option_description)",
+          "type": "label",
+          "size": [ "100% - 8px", "default" ],
+          "color": "$cuigv:FontSecondaryColor",
+          "layer": 5,
+          "text": "$cuiv:option_description_text",
+          "font_scale_factor": 0.75,
+          "locked_alpha": 0.5
+      }},
+      { "description_spacing": {
+          "ignored": "(not $cuiv:option_description)",
           "type": "panel",
-          "size": [ "100%", "100%c" ],
-          "controls": [
-            { "description": {
-                "ignored": "(not $cuiv:option_description)",
-                "type": "label",
-                "size": [ "100% - 8px", "default" ],
-                "color": [ 0.7, 0.7, 0.7 ],
-                "font_type": "dainbold",
-                "offset": [ 0, -4 ],
-                "text": "$cuiv:option_description_text",
-                "font_scale_factor": 0.75,
-                "locked_alpha": 0.5
-            }}
-      ]}}
+          "size": [ 4, 4 ]
+      }}
   ]},
   "option_toggle_control@common.toggle": {
     "layer": 2,
-    "size": [ "100%", "100%c" ],
+    "size": [ "100% + 6px", "100% + 8px" ],
     "$toggle_enabled_binding_name|default": "$cuiv:option_toggle_binding_name",
     "$toggle_enabled_binding_type|default": "global",
     "$toggle_state_binding_name|default": "$cuiv:option_binding_name",
@@ -668,7 +660,7 @@
   }]},
   "option_radio_control@common.radio_toggle": {
     "layer": 2,
-    "size": [ "100%", "100%c" ],
+    "size": [ "100% + 6px", "100% + 8px" ],
     "$radio_toggle_group": true,
     "$unchecked_control": "cui-setting_screen.option_toggle_off",
     "$checked_control": "cui-setting_screen.option_toggle_on",
@@ -690,16 +682,30 @@
   "option_toggle_state_template": {
     "type": "panel",
     "$cuiv:option_isHover|default": false,
-    "size": [ "100%", "100%cm" ],
+    "size": [ "100% - 2px", "100%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "$cuiv:option_state_color_opposite|default": [ 1, 1, 1 ],
     "$cuiv:option_state_color|default": [ 1, 1, 1 ],
     "controls": [
+      { "label": {
+          "type": "label",
+          "layer": 10,
+          "color": "$cuiv:option_state_color_opposite",
+          "size": [ "80%", "default" ],
+          "offset": [ 6, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:option_label_text",
+          "bindings": "$cuiv:option_label_bindings"
+      }},
       { "image": {
           "ignored": "$cuiv:is_dropdown",
           "type": "image",
-          "size": [ 10, 10 ],
-          "offset": [ -4, 3 ],
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
+          "size": [ 16, 8 ],
+          "offset": [ -6, 0 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
           "texture": "$cuiv:option_state_texture",
           "color": "$cuiv:option_state_color"
       }},
@@ -708,12 +714,13 @@
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%c", 10 ],
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "offset": [ -4, 3 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -6, 0 ],
           "controls": [
             { "left_arrow": {
                 "type": "label",
+                "color": "$cuiv:option_state_color",
                 "text": "< "
             }},
             { "value": {
@@ -723,27 +730,30 @@
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "text": "$cuiv:option_value_text",
+                "color": "$cuiv:option_state_color",
                 "text_alignment": "right",
                 "locked_alpha": 0.5
             }},
             { "right_arrow": {
                 "type": "label",
+                "color": "$cuiv:option_state_color",
                 "text": " >"
             }}
       ]}},
       { "hover_background": {
           "ignored": "(not $cuiv:option_isHover)",
           "type": "image",
-          "size": [ "100%", 16 ],
-          "texture": "textures/ui/White",
-          "alpha": 0.35,
-          "color": "$cuiv:option_state_color"
+          "size": [ "100%", "100%" ],
+          "offset": [ 0, 0 ],
+          "layer": -11,
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:PrimaryColor"
       }}
   ]},
-  "option_toggle_on@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on", "$cuiv:option_state_color": "$cuigv:PrimaryColor" },
-  "option_toggle_off@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_off" },
-  "option_toggle_on_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:PrimaryColor" },
-  "option_toggle_off_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_off_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:PrimaryColor" },
+  "option_toggle_on@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on", "$cuiv:option_state_color": "$cuigv:PrimaryColor", "$cuiv:option_state_color_opposite": "$cuigv:FontPrimaryColor" },
+  "option_toggle_off@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_off", "$cuiv:option_state_color_opposite": "$cuigv:FontPrimaryColor" },
+  "option_toggle_on_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:SecondaryColor", "$cuiv:option_state_color_opposite": "$cuigv:SecondaryColor" },
+  "option_toggle_off_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_off_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:SecondaryColor", "$cuiv:option_state_color_opposite": "$cuigv:SecondaryColor" },
   "option_toggle_on_locked@cui-setting_screen.option_toggle_on": { "alpha": 0.5 },
   "option_toggle_off_locked@cui-setting_screen.option_toggle_off": { "alpha": 0.5 }
 }
