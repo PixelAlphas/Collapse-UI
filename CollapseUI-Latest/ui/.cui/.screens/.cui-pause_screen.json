@@ -87,7 +87,52 @@
           "$cuiv:button_image_offset": [ 2, -0.5 ],
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 24, 0 ]
-      }}
+      }},
+      { "realm_elements": {
+          "type": "stack_panel",
+          "size": [ "100%", 20 ],
+          "orientation": "horizontal",
+          "bindings": [
+            { "binding_name": "#in_realm_with_stories",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+          }],
+          "controls": [
+            { "screenshot@cui-button.text_button": {
+                "size": [ "fill", 20 ],
+                "$pressed_button_name": "button.screenshot",
+                "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/screenshot_icon",
+                "bindings": [
+                  { "binding_name": "#screenshot_button_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                }],
+                "button_mappings": [
+                  { "from_button_id": "button.controller_secondary_select",
+                    "to_button_id": "button.screenshot",
+                    "mapping_type": "global",
+                    "scope": "controller"
+                }]
+            }},
+            { "screenshot@cui-button.text_button": {
+                "size": [ "fill", 20 ],
+                "$pressed_button_name": "button.menu_feed",
+                "$cuiv:button_type_panel": "cui-start_screen.button_label",
+                "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+                "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+                "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/realms_icon",
+                "bindings": [
+                  { "binding_name": "#in_realm_with_stories",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                }]
+            }}
+          ]
+        }
+      }
   ]},
   "button_label": {
     "type": "panel",

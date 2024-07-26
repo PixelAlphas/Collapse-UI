@@ -87,6 +87,8 @@ cui.main_menu.infomation=Information
 cui.pause.resume=RESUME
 cui.pause.world=Currently playing
 cui.pause.playerlist=Players list
+cui.pause.screenshot=SCREENSHOT
+cui.pause.stories=STORIES
 
 ## Play screen
 cui.play.controllcentre=Control centre

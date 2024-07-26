@@ -64,7 +64,7 @@
                             "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
                             "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
                             "$cuiv:button_text": "menu.achievements",
-                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/setting_icon",
+                            "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/achievement_icon",
                             "$cuiv:button_image_anchor": "left_middle",
                             "$cuiv:button_image_offset": [ 2, -0.5 ],
                             "$cuiv:button_text_anchor": "left_middle",
@@ -679,7 +679,7 @@
           "type": "label",
           "color": "$cuigv:FontPrimaryColor",
           "alpha": "$cuigv:BackgroundAlpha",
-          "text": "Collapse-UI v2.0.2"
+          "text": "Collapse-UI v2.0.3"
       }},
       { "paddings": { "type": "panel", "size": [ 4, 1 ]}},
       { "mojang_copyright": {

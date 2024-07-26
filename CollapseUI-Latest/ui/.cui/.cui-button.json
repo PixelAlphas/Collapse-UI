@@ -240,6 +240,7 @@
     "controls": [
       { "tab_image@$cuiv:tab_image": {
           "size": [ "100%", "100%" ],
+          "alpha": "$cuigv:BackgroundAlpha",
           "layer": 2,
           "color": "$cuigv:PrimaryColor"
       }},
@@ -287,10 +288,10 @@
     "$is_hover_state|default": false,
     "$allow_controller_back_button_mapping|default": false,
     "$top_tab_tts_name|default": "accessibility.tab.tts.title",
-    "$unchecked_default_image|default": "textures/ui/.cui-assets/.buttons/button_idle",
-    "$unchecked_hover_image|default": "textures/ui/.cui-assets/.buttons/button_idle",
-    "$unchecked_locked_image|default": "textures/ui/.cui-assets/.buttons/button_idle",
-    "$unchecked_locked_hover_image|default": "textures/ui/.cui-assets/.buttons/button_idle",
+    "$unchecked_default_image|default": "textures/ui/.cui-assets/.buttons/button_hover",
+    "$unchecked_hover_image|default": "textures/ui/.cui-assets/.buttons/button_hover",
+    "$unchecked_locked_image|default": "textures/ui/.cui-assets/.buttons/button_hover",
+    "$unchecked_locked_hover_image|default": "textures/ui/.cui-assets/.buttons/button_hover",
     "$checked_default_image|default": "textures/ui/.cui-assets/background_2x",
     "$checked_hover_image|default": "textures/ui/.cui-assets/background_2x",
     "$checked_locked_image|default": "textures/ui/.cui-assets/background_2x",
