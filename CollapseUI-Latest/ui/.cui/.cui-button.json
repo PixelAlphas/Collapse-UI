@@ -237,12 +237,15 @@
     "$cuiv:tab_content|default": "common_tabs.empty_tab_content",
     "$cuiv:tab_image|default": "common_tabs.tab_image",
     "$cuiv:tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
+    "$cuiv:tab_color|default": "$cuigv:PrimaryColor",
     "controls": [
-      { "tab_image@$cuiv:tab_image": {
+      { "tab_image": {
+          "type": "image",
+          "texture": "$tab_texture",
           "size": [ "100%", "100%" ],
           "alpha": "$cuigv:BackgroundAlpha",
           "layer": 2,
-          "color": "$cuigv:PrimaryColor"
+          "color": "$cuiv:tab_color"
       }},
       { "tab_content_sizer": {
           "type": "panel",
@@ -288,10 +291,10 @@
     "$is_hover_state|default": false,
     "$allow_controller_back_button_mapping|default": false,
     "$top_tab_tts_name|default": "accessibility.tab.tts.title",
-    "$unchecked_default_image|default": "textures/ui/.cui-assets/.buttons/button_hover",
-    "$unchecked_hover_image|default": "textures/ui/.cui-assets/.buttons/button_hover",
-    "$unchecked_locked_image|default": "textures/ui/.cui-assets/.buttons/button_hover",
-    "$unchecked_locked_hover_image|default": "textures/ui/.cui-assets/.buttons/button_hover",
+    "$unchecked_default_image|default": "textures/ui/.cui-assets/background",
+    "$unchecked_hover_image|default": "textures/ui/.cui-assets/background",
+    "$unchecked_locked_image|default": "textures/ui/.cui-assets/background",
+    "$unchecked_locked_hover_image|default": "textures/ui/.cui-assets/background",
     "$checked_default_image|default": "textures/ui/.cui-assets/background_2x",
     "$checked_hover_image|default": "textures/ui/.cui-assets/background_2x",
     "$checked_locked_image|default": "textures/ui/.cui-assets/background_2x",
@@ -308,6 +311,7 @@
                 "$text_color": "$unchecked_text_color",
                 "$tab_texture": "$unchecked_default_image",
                 "$tab_state": "unchecked",
+                "$cuiv:tab_color": "$cuigv:SecondaryColor",
                 "layer": 1
             }},
             { "unchecked_hover@$tab_panel": {
@@ -315,18 +319,21 @@
                 "$tab_texture": "$unchecked_hover_image",
                 "$tab_state": "unchecked_hover",
                 "$is_hover_state": true,
+                "$cuiv:tab_color": "$cuigv:TertiaryColor",
                 "layer": 1
             }},
             { "unchecked_locked@$tab_panel": {
                 "$text_color": "$unchecked_locked_text_color",
                 "$tab_texture": "$unchecked_locked_image",
                 "$tab_state": "unchecked_locked",
+                "$cuiv:tab_color": "$cuigv:SecondaryColor",
                 "layer": 1
             }},
             { "unchecked_locked_hover@$tab_panel": {
                 "$text_color": "$unchecked_locked_hover_text_color",
                 "$tab_texture": "$unchecked_locked_hover_image",
                 "$tab_state": "unchecked_locked_hover",
+                "$cuiv:tab_color": "$cuigv:SecondaryColor",
                 "layer": 1
             }},
             { "checked@$tab_panel": {
@@ -334,6 +341,7 @@
                 "$tab_texture": "$checked_default_image",
                 "$tab_state": "checked",
                 "$is_checked_state": true,
+                "$cuiv:tab_color": "$cuigv:PrimaryColor",
                 "layer": 2
             }},
             { "checked_hover@$tab_panel": {
@@ -342,6 +350,7 @@
                 "$tab_state": "checked_hover",
                 "$is_checked_state": true,
                 "$is_hover_state": true,
+                "$cuiv:tab_color": "$cuigv:PrimaryColor",
                 "layer": 2
             }},
             { "checked_locked@$tab_panel": {
@@ -349,6 +358,7 @@
                 "$tab_texture": "$checked_locked_image",
                 "$tab_state": "checked_locked",
                 "$is_checked_state": true,
+                "$cuiv:tab_color": "$cuigv:TertiaryColor",
                 "layer": 2
             }},
             { "checked_locked_hover@$tab_panel": {
@@ -356,6 +366,7 @@
                 "$tab_texture": "$checked_locked_hover_image",
                 "$tab_state": "checked_locked_hover",
                 "$is_checked_state": true,
+                "$cuiv:tab_color": "$cuigv:TertiaryColor",
                 "layer": 2
             }}
       ]}}

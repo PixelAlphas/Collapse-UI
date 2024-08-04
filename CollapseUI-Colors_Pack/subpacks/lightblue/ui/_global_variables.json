@@ -1,0 +1,7 @@
+{
+  "$cuigv:ConfigName": "Multiple Colors",
+  "$cuigv:DesignedVersion": "v2.0",
+  "$cuigv:PrimaryColor": [ 0.0000, 0.6235, 0.8745 ], 
+  "$cuigv:SecondaryColor": [ 0.0000, 0.1098, 0.1568 ], 
+  "$cuigv:TertiaryColor": [ 0.0000, 0.2509, 0.3529 ]
+}
