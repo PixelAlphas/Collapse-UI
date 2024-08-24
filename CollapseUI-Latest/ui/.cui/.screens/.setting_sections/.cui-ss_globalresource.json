@@ -104,11 +104,9 @@
     "size": [ "100%", 30 ],
     "layer": 1,
     "controls": [
-      { "gamepad_tooltip_lb@cui-gamepad.gamepad_tooltip_lb": {}},
       { "@cui-ss_globalresource.deselected_pack_tab": { "size": [ "fill", 28 ]}},
       { "paddings_01": { "type": "panel", "size": [ 2, 1 ]}},
-      { "@cui-ss_globalresource.selected_pack_tab": { "size": [ "fill", 28 ]}},
-      { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip_rb": {}}
+      { "@cui-ss_globalresource.selected_pack_tab": { "size": [ "fill", 28 ]}}
   ]},
   "tab_content_element": {
     "type": "panel",

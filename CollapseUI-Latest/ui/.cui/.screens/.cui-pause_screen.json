@@ -36,6 +36,7 @@
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 24, 0 ]
       }},
+      { "pudding_00": { "type": "panel", "size": [ 4, 1 ] }},
       { "achievement@cui-button.text_button": {
           "size": [ 162, 20 ],
           "$pressed_button_name": "button.menu_achievements",
@@ -49,6 +50,7 @@
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 24, 0 ]
       }},
+      { "pudding_01": { "type": "panel", "size": [ 4, 1 ] }},
       { "skin@cui-button.text_button": {
           "size": [ 162, 20 ],
           "$pressed_button_name": "button.to_profile_or_skins_screen",
@@ -62,6 +64,7 @@
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 24, 0 ]
       }},
+      { "pudding_02": { "type": "panel", "size": [ 4, 1 ] }},
       { "settings@cui-button.text_button": {
           "size": [ 162, 20 ],
           "$pressed_button_name": "button.menu_settings",
@@ -75,6 +78,7 @@
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 24, 0 ]
       }},
+      { "pudding_03": { "type": "panel", "size": [ 4, 1 ] }},
       { "exit@cui-button.text_button": {
           "size": [ 162, 20 ],
           "$pressed_button_name": "button.menu_quit",
@@ -88,6 +92,7 @@
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 24, 0 ]
       }},
+      { "pudding_04": { "type": "panel", "size": [ 4, 1 ] }},
       { "realm_elements": {
           "type": "stack_panel",
           "size": [ "100%", 20 ],
@@ -98,6 +103,7 @@
               "binding_type": "global"
           }],
           "controls": [
+            { "pudding_00": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $include_controls_and_settings_sections)" }},
             { "screenshot@cui-button.text_button": {
                 "size": [ "fill", 20 ],
                 "$pressed_button_name": "button.screenshot",
@@ -117,6 +123,7 @@
                     "scope": "controller"
                 }]
             }},
+            { "pudding_00": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $include_controls_and_settings_sections)" }},
             { "screenshot@cui-button.text_button": {
                 "size": [ "fill", 20 ],
                 "$pressed_button_name": "button.menu_feed",

@@ -98,14 +98,64 @@
           "$cuiv:config_text": "cui.about.tab.activeconfig.uibackgroundslider",
           "$cuiv:config_value": "$cuigv:UIBackgroundSlider"
       }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
+      { "config_theme_08@cui-activeconfig_section.config_color": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradientprimarycolor",
+          "$cuiv:config_color": "$cuigv:BackgroundGradientPrimaryColor"
+      }},
+      { "config_theme_09@cui-activeconfig_section.config_color": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradientsecondarycolor",
+          "$cuiv:config_color": "$cuigv:BackgroundGradientSecondaryColor"
+      }},
+      { "pudding_03": { "type": "panel", "size": [ 1, 4 ]}},
+      { "visual_label": {
+          "type": "label",
+          "text": "cui.about.tab.activeconfig.visual",
+          "font_type": "MinecraftTen",
+          "size": [ "100% - 8px", 10 ]
+      }},
+      { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}},
       { "line": {
           "type": "image",
           "size": [ "100% - 8px", 1 ],
           "texture": "textures/ui/White",
           "color": [ 0.6, 0.6, 0.6 ]
       }},
-      { "pudding_03": { "type": "panel", "size": [ 1, 4 ]}},
+      { "pudding_05": { "type": "panel", "size": [ 1, 4 ]}},
+      { "config_visual_01@cui-activeconfig_section.config_label": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.shadows",
+          "$cuiv:config_value": "$cuigv:Shadows"
+      }},
+      { "config_visual_02@cui-activeconfig_section.config_label": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.fadedprogressBar",
+          "$cuiv:config_value": "$cuigv:FadedProgressBar"
+      }},
+      { "config_visual_03@cui-activeconfig_section.config_label": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.exptextshadows",
+          "$cuiv:config_value": "$cuigv:ExpTextShadows"
+      }},
+      { "config_visual_04@cui-activeconfig_section.config_label": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradient",
+          "$cuiv:config_value": "$cuigv:BackgroundGradient"
+      }},
+      { "config_visual_05@cui-activeconfig_section.config_label": {
+          "type": "panel",
+          "$cuiv:config_text": "cui.about.tab.activeconfig.uianimations",
+          "$cuiv:config_value": "$cuigv:UIAnimations"
+      }},
+      { "pudding_06": { "type": "panel", "size": [ 1, 4 ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 1 ],
+          "texture": "textures/ui/White",
+          "color": [ 0.6, 0.6, 0.6 ]
+      }},
+      { "pudding_07": { "type": "panel", "size": [ 1, 4 ]}},
       { "layout_label": {
           "type": "label",
           "text": "cui.about.tab.activeconfig.layout",

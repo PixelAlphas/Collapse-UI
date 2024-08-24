@@ -5,7 +5,48 @@
     "anchor_from": "center",
     "size": [ "60%", "85%" ],
     "controls": [
-      { "title@cui-dialog.modal_title_text": {} },
+      { "title_text_element": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 9px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 1,
+          "offset": [ 0, 2 ],
+          "color": "$cuigv:PrimaryColor",
+          "bindings": [
+            { "binding_type": "view",
+              "source_property_name": "(not(#modal_title_text = ''))",
+              "target_property_name": "#visible"
+          }],
+          "controls": [
+            { "title_text": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "#text",
+                "shadow": false,
+                "bindings": [
+                    { "binding_type": "view",
+                      "source_control_name": "$visibility_source_control_name",
+                      "source_property_name": "#modal_title_text",
+                      "target_property_name": "#text"
+                    },
+                    { "binding_type": "view",
+                      "source_control_name": "$visibility_source_control_name",
+                      "source_property_name": "#modal_title_tts",
+                      "target_property_name": "#tts_text"
+                }]
+            }}
+      ]}},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 16 ],
+          "size": [ "100% + 16px", "100%" ],
+          "layer": -5
+      }},
       { "texture": {
           "type": "image",
           "size": [ "100%", "100%" ],

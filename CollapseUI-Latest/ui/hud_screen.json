@@ -210,25 +210,36 @@
       { "item_text_factory@cui-hud_screen.item_text_factory": {}}
   ]},
   "progress_text_label": {
-    "shadow": false,
+    "$cuiv:progresstextshadows|default": false,
+    "shadow": "$cuiv:progresstextshadows",
     "color": [ 0.6156, 0.9019, 0.3058 ],
+    "variables": [
+      {
+        "requires": "(not $cuigv:ExpTextShadows)",
+        "$cuiv:progresstextshadows": true
+      }
+    ],
     "controls": [
       { "shadow01@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExpTextShadows)",
           "color": [ 0, 0.2054, 0.1505 ],
           "offset": [ -1, 0 ],
           "layer": -2
       }},
       { "shadow02@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExpTextShadows)",
           "color": [ 0, 0.2054, 0.1505 ],
           "offset": [ 1, 0 ],
           "layer": -2
       }},
       { "shadow03@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExpTextShadows)",
           "color": [ 0, 0.2054, 0.1505 ],
           "offset": [ 0, -1 ],
           "layer": -2
       }},
       { "shadow04@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExpTextShadows)",
           "color": [ 0, 0.2054, 0.1505 ],
           "offset": [ 0, 1 ],
           "layer": -2

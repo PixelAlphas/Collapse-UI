@@ -97,6 +97,14 @@
           "texture": "$cuiv:button_texture",
           "anims": "$cuiv:button_anims"
       }},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 6 ],
+          "size": [ "100% + 16px", "100% + 12px" ],
+          "layer": -5
+      }},
       { "button_content": {
           "type": "panel",
           "size": "$cuiv:button_content_size",
@@ -246,6 +254,14 @@
           "alpha": "$cuigv:BackgroundAlpha",
           "layer": 2,
           "color": "$cuiv:tab_color"
+      }},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 6 ],
+          "size": [ "100% + 16px", "100% + 12px" ],
+          "layer": -5
       }},
       { "tab_content_sizer": {
           "type": "panel",

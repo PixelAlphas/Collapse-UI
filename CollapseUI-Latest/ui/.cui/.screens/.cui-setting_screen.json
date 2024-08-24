@@ -2,11 +2,6 @@
   "root_screen": {
     "type": "screen",
     "cache_screen": false,
-    "button_mappings": [
-      { "from_button_id": "button.menu_cancel", "to_button_id": "button.menu_exit", "mapping_type": "global" },
-      { "from_button_id": "button.menu_tab_left", "to_button_id": "button.menu_tab_left", "mapping_type": "global", "scope": "view" },
-      { "from_button_id": "button.menu_tab_right", "to_button_id": "button.menu_tab_right", "mapping_type": "global", "scope": "view" }
-    ],
     "variables": [
       { "requires": "($is_realm_slot or $realm_no_world_edit)", "$screen_background_control": "realms_slots.realms_background" }
     ],
@@ -117,9 +112,13 @@
                 "size": [ "100% - 8px", "100%c" ],
                 "controls": [
                   { "utilities@cui-common.header": { "$cuiv:header_text": "cui.settings.utilities" }},
+                  { "pudding_00": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $include_controls_and_settings_sections)" }},
                   { "accessibility_button@cui-setting_screen.accessibility_button": { "$toggle_group_forced_index": "$accessibility_forced_index", "ignored": "(not $include_controls_and_settings_sections)" }},
+                  { "pudding_01": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $include_controls_and_settings_sections)" }},
                   { "creator_button@cui-setting_screen.creator_button": { "$toggle_group_forced_index": 100, "ignored": "(not $include_controls_and_settings_sections)" }},
+                  { "pudding_02": { "type": "panel", "size": [ 4, 1 ], "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls or $include_world_section or not $include_controls_and_settings_sections))" }},
                   { "general_button@cui-setting_screen.general_button": { "$toggle_group_forced_index": "$general_forced_index", "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls or $include_world_section or not $include_controls_and_settings_sections)" }},
+                  { "pudding_03": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $include_realm_section)" }},
                   { "realm_selector_panel@realms_settings.selector_panel": { "ignored": "(not $include_realm_section)", "$world_toggle_index": "$world_forced_index", "$members_toggle_index": "$members_forced_index", "$subscription_toggle_index": "$subscription_forced_index", "$backup_toggle_index": "$backup_forced_index", "$dev_options_toggle_index": "$dev_options_forced_index"}}
             ]}},
             { "world_selector_pane@cui-setting_screen.selector_pane_content": { "ignored": "(not $include_world_section)" }}
@@ -138,8 +137,11 @@
                 "size": [ "100% - 8px", "100%c" ],
                 "controls": [
                   { "utilities@cui-common.header": { "$cuiv:header_text": "cui.settings.controls" }},
+                  { "pudding_00": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $gamepad_supported or $nx_os)" }},
                   { "gamepad_button@cui-setting_screen.gamepad_button": { "ignored": "(not $gamepad_supported or $nx_os)", "$toggle_group_forced_index": "$controller_and_switch_forced_index" }},
+                  { "pudding_01": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $keyboard_and_mouse_supported)" }},
                   { "keyboardmouse_button@cui-setting_screen.keyboardmouse_button": { "ignored": "(not $keyboard_and_mouse_supported)", "$toggle_group_forced_index": "$keyboard_and_mouse_forced_index" }},
+                  { "pudding_02": { "type": "panel", "size": [ 4, 1 ], "ignored": "($is_holographic or not $touch_supported or $nx_os)" }},
                   { "touch_button@cui-setting_screen.touch_button": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "$toggle_group_forced_index": "$touch_forced_index" }}
             ]}},
             { "pudding01": { "type": "panel", "size": [ 4, 4 ] }},
@@ -148,14 +150,19 @@
                 "size": [ "100% - 8px", "100%c" ],
                 "controls": [
                   { "utilities@cui-common.header": { "$cuiv:header_text": "cui.settings.generals" }},
+                  { "pudding_00": { "type": "panel", "size": [ 4, 1 ] }},
                   { "account_button@cui-setting_screen.account_button": { "$toggle_group_forced_index": "$account_forced_index" }},
+                  { "pudding_01": { "type": "panel", "size": [ 4, 1 ] }},
                   { "video_button@cui-setting_screen.video_button": { "$toggle_group_forced_index": "$video_forced_index" }},
+                  { "pudding_02": { "type": "panel", "size": [ 4, 1 ] }},
                   { "sound_button@cui-setting_screen.sound_button": { "$toggle_group_forced_index": "$sound_forced_index" }},
+                  { "pudding_03": { "type": "panel", "size": [ 4, 1 ], "ignored": "$ignore_global_resources_section" }},
                   { "global_texture_pack_button@cui-setting_screen.global_texture_pack_button": { "ignored": "$ignore_global_resources_section", "$toggle_group_forced_index": "$global_texture_pack_forced_index", "visible": "($is_global_texture_packs_visible)" }},
+                  { "pudding_04": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $is_pregame)" }},
                   { "storage_management_button@cui-setting_screen.storage_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$storage_management_forced_index" }},
+                  { "pudding_05": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $is_pregame)" }},
                   { "language_button@cui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index" }}
             ]}}
-            
       ]}},
       { "addons_selector_panel@world_section.addons_selector_panel": { "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))", "$level_texture_pack_toggle_index": "$level_texture_pack_index", "$addon_toggle_index": "$addon_index" }}
   ]},
@@ -227,6 +234,7 @@
           "controls": [
             { "utilities@cui-common.header": { "$cuiv:header_text": "realmsSettingsScreen.worldSectionTitle" }},
             { "game_button@cui-setting_screen.game_button": { "$toggle_group_forced_index": "$game_forced_index" }},
+            { "pudding_00": { "type": "panel", "size": [ 4, 1 ]}},
             { "multiplayer_button@cui-setting_screen.multiplayer_button": { "visible": "(not $education_edition)", "$toggle_group_forced_index": "$multiplayer_forced_index" }}
       ]}}
   ]},
@@ -388,7 +396,7 @@
               "binding_condition": "always"
           }]
       }},
-      { "pudding_02": { "type": "panel", "size": [ 4, 1 ]}},
+      { "pudding_00": { "type": "panel", "size": [ 4, 1 ]}},
       { "layer": {
           "type": "panel",
           "size": [ "fill", "fill" ],

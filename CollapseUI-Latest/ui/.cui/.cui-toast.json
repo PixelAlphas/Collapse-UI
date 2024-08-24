@@ -14,7 +14,7 @@
         "snackbar": "snackbar@toast_screen.snackbar"
     }},
     "controls": [
-      { "content_log_panel@cui-toast.content_log_panel": {} },
+      { "content_log_panel@content_log.content_log_panel": {} },
       { "perf_turtle_panel@perf_turtle.perf_turtle_panel": {} }
   ]},
   "content_log_panel": {
@@ -73,6 +73,16 @@
           "color": "$cuigv:PrimaryColor",
           "anims": "$alpha_anims",
           "offset": [ 0, -22 ]
+        }
+      },
+      {
+        "shadow": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "anims": "$alpha_anims",
+          "offset": [ 0, -13 ],
+          "size": [ "100% + 14px", "100%" ],
+          "layer": -10
         }
       },
       {

@@ -7,8 +7,46 @@
     "$middle_button_panel|default": "common.empty_panel",
     "$bottom_button_panel|default": "common.empty_panel",
     "controls": [
-      { "title_label@cui-dialog.title_label": {
-          "layer": 2
+      { "title_text_element": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 9px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 1,
+          "offset": [ 0, 2 ],
+          "color": "$cuigv:PrimaryColor",
+          "bindings": [
+            { "binding_type": "view",
+              "source_property_name": "(not($text_name = ''))",
+              "target_property_name": "#visible"
+          }],
+          "controls": [
+            { "title_text": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "$text_name",
+                "shadow": false,
+                "bindings": [
+                    { "binding_type": "$title_text_binding_type",
+                      "binding_condition": "$title_binding_condition",
+                      "binding_name": "$text_name",
+                      "binding_name_override": "$text_name"
+                    },
+                    { "binding_type": "global",
+                      "binding_condition": "once",
+                      "binding_name": "#tts_dialog_title"
+                }]
+            }}
+      ]}},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 16 ],
+          "size": [ "100% + 16px", "100%" ],
+          "layer": -5
       }},
       { "texture": {
           "type": "image",
@@ -71,8 +109,46 @@
     "$top_button_panel|default": "common.empty_panel",
     "$bottom_button_panel|default": "common.empty_panel",
     "controls": [
-      { "title_label@cui-dialog.title_label": {
-          "layer": 2
+      { "title_text_element": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 9px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 1,
+          "offset": [ 0, 2 ],
+          "color": "$cuigv:PrimaryColor",
+          "bindings": [
+            { "binding_type": "view",
+              "source_property_name": "(not($text_name = ''))",
+              "target_property_name": "#visible"
+          }],
+          "controls": [
+            { "title_text": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "$text_name",
+                "shadow": false,
+                "bindings": [
+                    { "binding_type": "$title_text_binding_type",
+                      "binding_condition": "$title_binding_condition",
+                      "binding_name": "$text_name",
+                      "binding_name_override": "$text_name"
+                    },
+                    { "binding_type": "global",
+                      "binding_condition": "once",
+                      "binding_name": "#tts_dialog_title"
+                }]
+            }}
+      ]}},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 16 ],
+          "size": [ "100% + 16px", "100%" ],
+          "layer": -5
       }},
       { "texture": {
           "type": "image",
@@ -126,8 +202,46 @@
     "$text_name|default": "",
     "$button_panel|default": "common.empty_panel",
     "controls": [
-      { "title_label@cui-dialog.title_label": {
-          "layer": 2
+      { "title_text_element": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 9px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 1,
+          "offset": [ 0, 2 ],
+          "color": "$cuigv:PrimaryColor",
+          "bindings": [
+            { "binding_type": "view",
+              "source_property_name": "(not($text_name = ''))",
+              "target_property_name": "#visible"
+          }],
+          "controls": [
+            { "title_text": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "$text_name",
+                "shadow": false,
+                "bindings": [
+                    { "binding_type": "$title_text_binding_type",
+                      "binding_condition": "$title_binding_condition",
+                      "binding_name": "$text_name",
+                      "binding_name_override": "$text_name"
+                    },
+                    { "binding_type": "global",
+                      "binding_condition": "once",
+                      "binding_name": "#tts_dialog_title"
+                }]
+            }}
+      ]}},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 16 ],
+          "size": [ "100% + 16px", "100%" ],
+          "layer": -5
       }},
       { "texture": {
           "type": "image",
@@ -173,8 +287,46 @@
     "$panel_indent_size|default": [ "100% - 16px", "100% - 31px" ],
     "$custom_background|default": "dialog_background_hollow_3",
     "controls": [
-      { "title_label@cui-dialog.title_label": {
-          "layer": 2
+      { "title_text_element": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 9px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 1,
+          "offset": [ 0, 2 ],
+          "color": "$cuigv:PrimaryColor",
+          "bindings": [
+            { "binding_type": "view",
+              "source_property_name": "(not($text_name = ''))",
+              "target_property_name": "#visible"
+          }],
+          "controls": [
+            { "title_text": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "$text_name",
+                "shadow": false,
+                "bindings": [
+                    { "binding_type": "$title_text_binding_type",
+                      "binding_condition": "$title_binding_condition",
+                      "binding_name": "$text_name",
+                      "binding_name_override": "$text_name"
+                    },
+                    { "binding_type": "global",
+                      "binding_condition": "once",
+                      "binding_name": "#tts_dialog_title"
+                }]
+            }}
+      ]}},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 16 ],
+          "size": [ "100% + 16px", "100%" ],
+          "layer": -5
       }},
       { "texture": {
           "type": "image",
@@ -234,8 +386,46 @@
     "$button_panel_size|default": [ "100% - 14px", 30 ],
     "$main_panel_size|default": [ "100% - 16px", "100% - 59px" ],
     "controls": [
-      { "title_label@cui-dialog.title_label": {
-          "layer": 2
+      { "title_text_element": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 9px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 1,
+          "offset": [ 0, 2 ],
+          "color": "$cuigv:PrimaryColor",
+          "bindings": [
+            { "binding_type": "view",
+              "source_property_name": "(not($text_name = ''))",
+              "target_property_name": "#visible"
+          }],
+          "controls": [
+            { "title_text": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "$text_name",
+                "shadow": false,
+                "bindings": [
+                    { "binding_type": "$title_text_binding_type",
+                      "binding_condition": "$title_binding_condition",
+                      "binding_name": "$text_name",
+                      "binding_name_override": "$text_name"
+                    },
+                    { "binding_type": "global",
+                      "binding_condition": "once",
+                      "binding_name": "#tts_dialog_title"
+                }]
+            }}
+      ]}},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 16 ],
+          "size": [ "100% + 16px", "100%" ],
+          "layer": -5
       }},
       { "texture": {
           "type": "image",

@@ -95,7 +95,7 @@
           "texture": "textures/ui/.cui-assets/background",
           "alpha": 0.5,
           "layer": -1,
-          "color": [ 1, 0, 0 ],
+          "color": [ 0, 0, 0 ],
           "bindings": [
             { "binding_type": "view",
               "source_control_name": "background_warning",
@@ -211,7 +211,7 @@
             { "background": {
                 "type": "image",
                 "size": [ "100% + 8px", "100%"],
-                "texture": "textures/ui/Blaco",
+                "texture": "textures/ui/Black",
                 "alpha": 0.5,
                 "layer": -1,
                 "anims": [

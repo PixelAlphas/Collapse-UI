@@ -8,7 +8,7 @@
       { "background": {
           "type": "image",
           "size": [ "250%", "250%" ],
-          "layer": -10,
+          "layer": -50,
           "alpha": 0.2,
           "texture": "textures/ui/White",
           "color": "$cuigv:PrimaryColor"
@@ -89,22 +89,43 @@
     "type": "input_panel",
     "size": [ 316, 188 ],
     "controls": [
-      { "title_text": {
-          "type": "label",
-          "layer": 1,
-          "text": "#title_text",
+      { "cancel_button_core@cui-common.cancel_button_core": {
+          "offset": [ 37, 0 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+      }},
+      { "title_text_element": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 9px" ],
+          "texture": "textures/ui/.cui-assets/background",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
-          "font_scale_factor": 1.8,
-          "font_type": "MinecraftTen",
-          "shadow": false,
-          "bindings": [{ "binding_name": "#title_text" }]
-      }},
+          "layer": 1,
+          "offset": [ 0, 2 ],
+          "color": "$cuigv:PrimaryColor",
+          "controls": [
+            { "title_text": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "#title_text",
+                "shadow": false,
+                "bindings": [{ "binding_name": "#title_text" }]
+            }}
+      ]}},
       { "texture": {
           "type": "image",
           "size": [ "100%", "100%" ],
           "texture": "textures/ui/.cui-assets/background_2x",
           "color": "$cuigv:TertiaryColor"
+      }},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 16 ],
+          "size": [ "100% + 16px", "100%" ],
+          "layer": -5
       }},
       { "text_background": {
           "type": "image",

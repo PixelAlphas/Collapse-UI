@@ -121,6 +121,15 @@ cui.about.tab.activeconfig.fontsecondarycolor=Font Secondary Color
 cui.about.tab.activeconfig.backgroundalpha=Background Alpha
 cui.about.tab.activeconfig.uibackground=Background
 cui.about.tab.activeconfig.uibackgroundslider=BG Slider on Start screen
+cui.about.tab.activeconfig.backgroundgradientprimarycolor=Gradient BG Primary color
+cui.about.tab.activeconfig.backgroundgradientsecondarycolor=Gradient BG Secondary color
+
+cui.about.tab.activeconfig.visual=Visual
+cui.about.tab.activeconfig.shadows=Shadows
+cui.about.tab.activeconfig.fadedprogressBar=Faded Loading bar
+cui.about.tab.activeconfig.exptextshadows=Java Edition Experience bar text
+cui.about.tab.activeconfig.backgroundgradient=Background Gradient
+cui.about.tab.activeconfig.uianimations=Animations
 
 cui.about.tab.activeconfig.layout=Layouts
 cui.about.tab.activeconfig.searchboxsystem=World Search Box

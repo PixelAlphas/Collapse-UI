@@ -10,7 +10,7 @@
   ]},
   "cancel_button@cui-button.text_button": {
     "$pressed_button_name": "button.menu_exit",
-    "size": [ 25, 25 ],
+    "size": [ 35, 35 ],
     "offset": [ 4, 4 ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
@@ -27,6 +27,7 @@
       }
   ]},
   "loading_icon": {
+    "ignored": "(not $cuigv:UIAnimations)",
     "type": "image",
     "texture": "textures/ui/.cui-assets/loadingharlow",
     "size": [ 16, 16 ],

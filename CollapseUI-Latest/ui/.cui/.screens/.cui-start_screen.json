@@ -420,8 +420,8 @@
       { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
           "ignored": "$cuiv:no_extramenu",
           "$cuiv:gamepad_no_bindings_description": true,
-          "$cuiv:icon_texture": "textures/ui/.cui-assets/.controller/start",
-          "$icon_description_bind": "Open \"Extra Menu\""
+          "$cuiv:icon_texture": "#controller_start_icon",
+          "$icon_description_bind": "\"Extra Menu\""
       }}
   ]},
   "extra_menu_button_element": {
@@ -679,7 +679,7 @@
           "type": "label",
           "color": "$cuigv:FontPrimaryColor",
           "alpha": "$cuigv:BackgroundAlpha",
-          "text": "Collapse-UI v2.0.5"
+          "text": "Collapse-UI v2.1"
       }},
       { "paddings": { "type": "panel", "size": [ 4, 1 ]}},
       { "mojang_copyright": {

@@ -33,12 +33,14 @@
             }}
       ]}}
   ]},
-  "cancel_button@cui-button.text_button": {
-    "$pressed_button_name": "button.menu_exit",
-    "size": [ 25, 25 ],
+  "cancel_button@cui-common.cancel_button_core": {
     "offset": [ 4, 4 ],
     "anchor_from": "top_right",
-    "anchor_to": "top_right",
+    "anchor_to": "top_right"
+  },
+  "cancel_button_core@cui-button.text_button": {
+    "$pressed_button_name": "button.menu_exit",
+    "size": [ 35, 35 ],
     "$cuiv:button_type_panel": "cui-start_screen.button_label",
     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
@@ -69,10 +71,11 @@
     "type": "panel",
     "controls": [
       { "gradient@cui-common.gradient_renderer_template": {
+          "ignored": "(not $cuigv:BackgroundGradient)",
           "size": [ "55%", "100%" ],
           "gradient_direction": "horizontal",
-          "color1": "$cuigv:BackgroundGradient",
-          "color2": [ 0, 0, 0, 0 ],
+          "color1": "$cuigv:BackgroundGradientPrimaryColor",
+          "color2": "$cuigv:BackgroundGradientSecondaryColor",
           "anchor_from": "left_middle",
           "anchor_to": "left_middle"
       }},
@@ -287,6 +290,7 @@
     "controls": [
       { "head@cui-common.gradient_renderer_template": {
           "size": [ 20, "100%" ],
+          "ignored": "(not $cuigv:FadedProgressBar)",
           "layer": 90,
           "gradient_direction": "horizontal",
           "color1": [ 1, 1, 1, 0 ],
@@ -320,16 +324,18 @@
     "type": "panel",
     "controls": [
       { "gradient02@cui-common.gradient_renderer_template": {
+          "ignored": "(not $cuigv:BackgroundGradient)",
           "size": [ "100%", "30%" ],
-          "color1": [ 0, 0, 0, 0 ],
-          "color2": [ 0, 0, 0, 1 ],
+          "color1": "$cuigv:BackgroundGradientSecondaryColor",
+          "color2": "$cuigv:BackgroundGradientPrimaryColor",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "offset": [ 0, -50 ]
       }},
       { "background": {
           "type": "image",
-          "texture": "textures/ui/Black",
+          "texture": "textures/ui/White",
+          "color": "$cuigv:BackgroundGradientSecondaryColor",
           "size": [ "100%", 50 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
@@ -347,16 +353,18 @@
     "type": "panel",
     "controls": [
       { "gradient01@cui-common.gradient_renderer_template": {
+          "ignored": "(not $cuigv:BackgroundGradient)",
           "size": [ "100%", "20%" ],
-          "color1": "$cuigv:BackgroundGradient",
-          "color2": [ 0, 0, 0, 0 ],
+          "color1": "$cuigv:BackgroundGradientPrimaryColor",
+          "color2": "$cuigv:BackgroundGradientSecondaryColor",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle"
       }},
       { "gradient02@cui-common.gradient_renderer_template": {
+          "ignored": "(not $cuigv:BackgroundGradient)",
           "size": [ "100%", "45%" ],
-          "color1": [ 0, 0, 0, 0 ],
-          "color2": "$cuigv:BackgroundGradient",
+          "color1": "$cuigv:BackgroundGradientSecondaryColor",
+          "color2": "$cuigv:BackgroundGradientPrimaryColor",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
       }},
