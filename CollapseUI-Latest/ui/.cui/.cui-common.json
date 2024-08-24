@@ -47,6 +47,7 @@
     "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/exit_icon"
   },
   "gradient_renderer_template": {
+    "ignored": "(not $cuigv:BackgroundGradient)",
     "type": "custom",
     "renderer": "gradient_renderer",
     "layer": -89
