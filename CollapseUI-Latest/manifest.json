@@ -3,7 +3,7 @@
     "name": "Collapse-UI / v2.1",
     "description": "Modified & Enhanced UI made by Arxance (Harlow)\n§cRestart are required once applying!",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 2, 1, 0 ],
+    "version": [ 2, 1, 1 ],
     "min_engine_version": [ 1, 21, 0 ]
   },
   "modules": [
