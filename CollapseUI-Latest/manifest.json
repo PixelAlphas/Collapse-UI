@@ -1,9 +1,9 @@
 { "format_version": 2,
   "header": {
-    "name": "Collapse-UI / v2.1",
+    "name": "Collapse-UI / v2.1.4",
     "description": "Modified & Enhanced UI made by Arxance (Harlow)\n§cRestart are required once applying!",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 2, 1, 1 ],
+    "version": [ 2, 1, 4 ],
     "min_engine_version": [ 1, 21, 0 ]
   },
   "modules": [
@@ -11,6 +11,36 @@
       "uuid": "c4a12d1d-2fc8-4dca-a412-a413536c40b2",
       "version": [ 1, 0, 0 ]
   }],
+  "settings": [
+		{	"type": "label",
+			"text": "Select which preset you want for the pack."
+		},
+		{	"type": "label",
+			"text": "> §eMaximum Preset§7 - §fDefault, This includes everything that Collapse-UI has to offer. shadows, alot of fancy panels and such."
+		},
+		{	"type": "label",
+			"text": "> §eMedium Preset§7 - §fThis removes several visuals like shadow, less fancy but in return, more reduced loading times."
+		},
+		{	"type": "label",
+			"text": "> §eMinimum Preset§7 - §fThis removes everything that isn't necessarily needed. such as Search bar, Animations, Scrolling backgrounds, Loading screen icon, Faded loading bar, Experience bar text shadows, No gradient backgrounds"
+  }],
+  "subpacks": [
+    {
+      "folder_name": "minpreset",
+      "name": "Minimum Preset",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "medpreset",
+      "name": "Medium Preset",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "maxpreset",
+      "name": "Maximum Preset",
+      "memory_tier": 0
+    }
+  ],
   "metadata": {
     "authors": [ "// Arxance (Harlow)" ]
 }}

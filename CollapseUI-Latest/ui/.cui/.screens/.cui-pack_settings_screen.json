@@ -80,6 +80,7 @@
               "binding_name_override": "#visible"
           }]
       }},
+      { "generated_form@server_form.generated_contents": {}},
       { "unsupported_content_tier_label": {
           "type": "label",
           "text": "#text",

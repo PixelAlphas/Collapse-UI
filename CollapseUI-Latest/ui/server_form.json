@@ -5,7 +5,7 @@
       { "array_name": "controls",
         "operation": "insert_front",
         "value": [
-          { "@cui-common.cancel_button": {}}
+          { "cancel@cui-common.cancel_button": {}}
       ]}
   ]},
   "third_party_server_screen": {

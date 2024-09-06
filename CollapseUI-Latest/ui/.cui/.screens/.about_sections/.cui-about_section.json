@@ -22,11 +22,11 @@
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "collapse-ui@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.uititle",
-          "$cuiv:about_text_gray": "v2.1"
+          "$cuiv:about_text_gray": "v2.1.4"
       }},
       { "update_release_date@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Sun, Aug 23th (2024)"
+          "$cuiv:about_text_gray": "Fri, Sep 6 (2024)"
       }},
       { "arxance@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.author",
@@ -175,7 +175,7 @@
             }},
             { "label02": {
                 "type": "label",
-                "text": "@PixelHarlow",
+                "text": "@Arcdustry",
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
                 "color": [ 0.7, 0.7, 0.7 ]
