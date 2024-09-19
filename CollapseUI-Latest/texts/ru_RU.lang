@@ -1,0 +1,156 @@
+## Collapse-UI's Default EN lang
+## Settings screen
+cui.settings.experimental.title=Экспериментальные
+cui.settings.utilities=Утилиты
+cui.settings.controls=Управление(s)
+cui.settings.generals=Общие(s)
+
+## > Accessibility
+cui.settings.accessibility.main.description=Раздел, который может помочь в вопросах инвалидности и видимости.
+cui.settings.accessibility.tts.description=Голос робота, который может играть при взаимодействии с предметами.
+cui.settings.accessibility.misc.description=Доступность, связанная с худом и игровым процессом, например, сообщения в чате и темнота.
+
+## > General
+cui.settings.general.online.title=Онлайн
+cui.settings.general.online.description=Важнейший раздел для управления Online - например, как будет отображаться скин или автообновление пакетов на рынке. (Это может отличаться в зависимости от платформ, на которых вы играете)
+cui.settings.general.network.description=Раздел, в котором можно управлять сетью/интернетом, помимо wifi.
+cui.settings.general.misc.description=Дополнительная информация об игре, Кредиты, Сборка игры и т.д. может быть полезна только разработчикам.
+
+## > Creator
+cui.settings.creator.main.description=Раздел, который довольно полезен для создателей и отладки ресурс-паков/поведенческих пакетов.
+cui.settings.creator.contentlog.title=Журнал содержания
+
+## > Sounds
+cui.settings.sound.main.description=Секция громкости звука.
+cui.settings.sound.main.all.description=Общяя громкость - влияет на громкость всей игры.
+cui.settings.sound.main.music.description=Громкость музыки/песен
+cui.settings.sound.main.audio.description=Громкость аудио/ SFX
+cui.settings.sound.main.ambient.description=Громкость окружающей среды/пещеры
+cui.settings.sound.main.block.description=Громкость размещения/разрушения
+cui.settings.sound.main.hostile.description=Громкость враждебных мобов
+cui.settings.sound.main.neutral.description=Громкость нейтральных мобов
+cui.settings.sound.main.player.description=Громкость звуков удара/получения урона
+cui.settings.sound.main.record.description=Громкость музыкальных пластинок
+cui.settings.sound.main.weather.description=Громкость звуков погоды
+cui.settings.sound.main.texttospeech.description="Beep-Boop" Voice Volume
+
+## > Language
+cui.settings.language.main.description=Раздел для изменения языка игры : Интерфейс Collapse-UI пока не поддерживает все языки, из-за чего некоторые элементы могут отображаться на английском. Мы приглашаем вас внести вклад в перевод!
+
+## > Video
+cui.settings.video.main.description=Раздел для настройки графики и геймплейных параметров.
+cui.settings.video.gameplay.title=Геймплей
+cui.settings.video.gameplay.description=Настройки, которые изменяют игровой процесс.
+cui.settings.video.graphic.title=Графика
+cui.settings.video.graphic.description=Настройки, которые изменяют визуальные эффекты и производительность.
+cui.settings.video.advgraphic.title=Расширенные настройки графики
+cui.settings.video.advgraphic.description=Настройки, которые изменяют графическое восприятие, например, отложенный рендеринг и RTX.
+cui.settings.video.ui.title=Интерфейс
+cui.settings.video.ui.description=Настройки, которые изменяют интерфейс пользователя для улучшения доступности.
+cui.settings.video.perspective.description=Изменяет вашу игровую перспективу (или F5)
+
+## > Gamepad
+cui.settings.gamepad.main.description=Раздел для настройки управления с помощью контроллера.
+cui.settings.gamepad.mapping.description=Изменяет назначение кнопок на контроллере, что позволяет переназначить механизмы на другие кнопки.
+
+## > Touch
+cui.settings.touch.main.description=Раздел для настройки управления сенсорным экраном.
+cui.settings.touch.misc.description=Обычные настройки.
+
+## > Keyboard
+cui.settings.keyboardmouse.main.description=Раздел для настройки управления мышью и клавиатурой.
+cui.settings.keyboardmouse.mapping.description=Изменяет назначение клавиш на клавиатуре, что позволяет использовать различные игровые механики на других клавишах.
+
+## > Global Resource
+cui.settings.globalresource.main.description=Раздел для применения ресурс паков.
+cui.settings.globalresource.deselected.title=Отключенные
+cui.settings.globalresource.deselected.description=Текущий не применённый(ые) пак(и).
+cui.settings.globalresource.selected.title=Включенные
+cui.settings.globalresource.selected.description=Текущий применённый пакет(ы) — если вы применяете пакеты конфигурации для CUI, рекомендуется разместить их в верхней части Collapse-UI.
+
+## > Account
+cui.settings.accoumt.main.description=Раздел для входа в аккаунт Xbox для подключения к многопользовательской игре.
+
+
+## Start screen
+cui.main_menu.play=ИГРАТЬ
+cui.main_menu.achievement=ДОСТИЖЕНИЯ
+cui.main_menu.skin=СКИНЫ
+cui.main_menu.settings=НАСТРОЙКИ
+cui.main_menu.exit=ВЫЙТИ
+cui.username.logged_in=Вход выполнен с
+cui.username.local=Играете как (Локально)
+cui.main_menu.quickaccess=Быстрый доступ
+cui.main_menu.infomation=Информация
+
+## Pause screen
+cui.pause.resume=ПРОДОЛЖИТЬ
+cui.pause.world=В данный момент играете
+cui.pause.playerlist=Список игроков
+cui.pause.screenshot=СКРИНШОТ
+cui.pause.stories=ИСТОРИИ
+
+## Play screen
+cui.play.controllcentre=Центр управления
+cui.play.mostrecent=Недавние
+cui.play.worldsearch.textbar=Поиск мира (чувствителен к регистру)
+cui.play.hidefeaturedserver=Скрыть список рекомендованных серверов
+cui.play.viewfeaturedserver=Просмотреть список рекомендованных серверов
+
+## Safezone
+cui.safezone.exp.title=Экспериментальные настройки
+
+## About
+cui.about.title=О данном интерфейсе
+cui.about.tab.about=О программе
+cui.about.tab.about.uititle=Collapse-UI
+cui.about.tab.about.author=Автор этого интерфейса
+cui.about.tab.about.update=Версия сборки
+cui.about.tab.activeconfig=Конфигурации
+cui.about.tab.activeconfigalt=Активные конфигурации
+
+cui.about.tab.activeconfig.configname=Имя конфигурации
+cui.about.tab.activeconfig.designedversion=Поддерживаемая версия
+
+cui.about.tab.activeconfig.theme=Тема
+cui.about.tab.activeconfig.primarycolor=Основной цвет
+cui.about.tab.activeconfig.secondarycolor=Вторичный цвет
+cui.about.tab.activeconfig.tertiarycolor=Третичный цвет (вторичный, но темнее)
+cui.about.tab.activeconfig.fontprimarycolor=Основной цвет шрифта
+cui.about.tab.activeconfig.fontsecondarycolor=Вторичный цвет шрифта
+cui.about.tab.activeconfig.backgroundalpha=Прозрачность фона
+cui.about.tab.activeconfig.uibackground=Фон
+cui.about.tab.activeconfig.uibackgroundslider=Ползунок фона на экране запуска
+cui.about.tab.activeconfig.backgroundgradientprimarycolor=Основной цвет градиента фона
+cui.about.tab.activeconfig.backgroundgradientsecondarycolor=Вторичный цвет градиента фона
+
+cui.about.tab.activeconfig.visual=Визуальные эффекты
+cui.about.tab.activeconfig.shadows=Тени
+cui.about.tab.activeconfig.fadedprogressBar=Плавный загрузочный индикатор
+cui.about.tab.activeconfig.exptextshadows=Текст панели опыта как в Java Edition
+cui.about.tab.activeconfig.backgroundgradient=Градиент фона
+cui.about.tab.activeconfig.uianimations=Анимации
+
+cui.about.tab.activeconfig.layout=Макеты
+cui.about.tab.activeconfig.searchboxsystem=Поле поиска мира
+cui.about.tab.activeconfig.oldsliderdesign=Старый дизайн ползунка
+cui.about.tab.activeconfig.vanillapaperdoll=Ванильная игровая кукла
+cui.about.tab.activeconfig.norealmspromoteinworldsection=Без промоутеров Realm в разделе миров
+cui.about.tab.activeconfig.nogamelogo=Без логотипа игры
+cui.about.tab.activeconfig.startmenubuttonclassic=Классическое меню запуска
+cui.about.tab.activeconfig.logoinpausescreen=Логотип на экране паузы
+
+cui.about.tab.credit=Титры
+cui.about.tab.credit.bg=Изображения / Фоны
+cui.about.tab.credit.lang=Языки
+
+## Extras
+cui.extras.title=Дополнительно
+cui.extras.tips=Советы:
+cui.extras.warning=Внимание!
+cui.extras.uirestart=Если вы применяете ресурс пак в первый раз, пожалуйста, перезапустите игру! Поскольку этот интерфейс использует кастомные шрифты, без перезапуска игра может быть непредсказуемая.
+cui.extras.goback=Нажмите на фон или клавишу ESC на клавиатуре, либо кнопку 'Select' на контроллере, чтобы вернуться.
+
+options.fov= 
+options.fov.alt=Поле зрения
+resourcePack.subpackResolution.alt=Разрешение

@@ -502,7 +502,7 @@
     "type": "panel",
     "layer": 20,
     "controls": [
-      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text": "Extras",
+      { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text": "cui.extras.title",
         "layer": 20,
         "anims": [ 
           "@cui-anims.extra_anims_offset_title_exit"

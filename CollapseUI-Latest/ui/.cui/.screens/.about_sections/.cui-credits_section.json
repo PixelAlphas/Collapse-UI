@@ -49,11 +49,14 @@
           "font_type": "MinecraftTen",
           "size": [ "100% - 8px", 10 ]
       }},
-      { "@cui-about_section.about_text": {
+      { "qin@cui-about_section.about_text": {
           "$cuiv:about_text": "QinDagghc | 中文 / Chinese",
           "$cuiv:about_text_gray": "@QinDagghc (Github)"
+      }},
+      { "@cui-about_section.about_text": {
+          "$cuiv:about_text": "Expexx | русский / Russia",
+          "$cuiv:about_text_gray": "@Expexx (Discord)"
       }}
-      
   ]},
   "core_element": {
     "type": "stack_panel",
