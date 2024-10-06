@@ -1,7 +1,7 @@
 ## Collapse-UI's Default EN lang
 ## Settings screen
 cui.settings.experimental.title=实验性
-cui.settings.utilities=实用
+cui.settings.utilities=可访问性
 cui.settings.controls=控制(s)
 cui.settings.generals=通用(s)
 
@@ -12,7 +12,7 @@ cui.settings.accessibility.misc.description=hud和游戏相关的辅助功能，
 
 ## > General
 cui.settings.general.online.title=在线
-cui.settings.general.online.description=管理在线相关的重要部分 - 例如皮肤显示或自动更新市场包的方式。 （您游玩的平台不同，这可能会有所不同）
+cui.settings.general.online.description=管理在线相关的重要部分 - 例如皮肤显示或自动更新市场包的方式。 （你游玩的平台不同，这可能会有所不同）
 cui.settings.general.network.description=除了wifi之外，还可以控制网络/互联网相关的部分。
 cui.settings.general.misc.description=附加游戏信息、制作人员、游戏构建等可能仅对开发人员有用。
 
@@ -43,13 +43,15 @@ cui.settings.video.gameplay.title=游戏玩法
 cui.settings.video.gameplay.description=调整游戏体验。
 cui.settings.video.graphic.title=图形
 cui.settings.video.graphic.description=调整视觉和性能体验。
+cui.settings.video.advgraphic.title=高级图形
+cui.settings.video.advgraphic.description=调整图形体验，例如延迟渲染器和RTX。
 cui.settings.video.ui.title=UI
 cui.settings.video.ui.description=总体上调整 UI，以提高可访问性。
 cui.settings.video.perspective.description=改变你的游戏视角（又称 F5）
 
 ## > Gamepad
 cui.settings.gamepad.main.description=调整手柄体验的部分。
-cui.settings.gamepad.mapping.description=更改手柄映射，这可能允许您将机制更改为不同的按钮。
+cui.settings.gamepad.mapping.description=更改手柄映射，这可能允许你将机制更改为不同的按钮。
 
 ## > Touch
 cui.settings.touch.main.description=调整触屏体验的部分。
@@ -57,20 +59,27 @@ cui.settings.touch.misc.description=常规的东西。
 
 ## > Keyboard
 cui.settings.keyboardmouse.main.description=调整鼠标和键盘体验的部分。
-cui.settings.keyboardmouse.mapping.description=更改键盘映射，这可能允许您在不同的键上使用不同的游戏机制。
+cui.settings.keyboardmouse.mapping.description=更改键盘映射，这可能允许你在不同的键上使用不同的游戏机制。
 
 ## Account
-cui.settings.accoumt.main.description=用于登录您的xbox帐户以加入多人游戏的部分。
+cui.settings.accoumt.main.description=登录你的xbox帐户以加入多人游戏的部分。
+
+## > Global Resource
+cui.settings.globalresource.main.description=应用资源包的部分。
+cui.settings.globalresource.deselected.title=我的资源包
+cui.settings.globalresource.deselected.description=当前未应用的资源包(s)。
+cui.settings.globalresource.selected.title=启用的资源包
+cui.settings.globalresource.selected.description=当前启用的资源包(s)-如果你正在应用GUI的配置包，请考虑将其放在 Collapse-UI 的顶部！
 
 
 ## Start screen
-cui.main_menu.play=玩
+cui.main_menu.play=游戏
 cui.main_menu.achievement=成就
 cui.main_menu.skin=皮肤
 cui.main_menu.settings=设置
 cui.main_menu.exit=退出
-cui.username.logged_in=已登录
-cui.username.local=以（游客）身份游玩
+cui.username.logged_in=用户名
+cui.username.local=游客身份
 cui.main_menu.quickaccess=快速访问
 cui.main_menu.infomation=信息
 
@@ -83,9 +92,12 @@ cui.pause.playerlist=玩家列表
 cui.play.controllcentre=控制中心
 cui.play.mostrecent=最近游戏
 cui.play.worldsearch.textbar=搜索世界（区分大小写）
+cui.play.hidefeaturedserver=隐藏精选服务器列表
+cui.play.viewfeaturedserver=查看精选服务器列表
 
 ## Safezone
 cui.safezone.exp.title=实验设置
+
 
 ## About
 cui.about.title=关于此UI
@@ -119,6 +131,7 @@ cui.about.tab.activeconfig.startmenubuttonclassic=经典开始菜单
 cui.about.tab.credit=制作人员
 cui.about.tab.credit.bg=艺术品/背景
 cui.about.tab.credit.lang=语言
+cui.about.tab.activeconfig.logoinpausescreen=暂停屏幕中的Logo
 
 ## Extras
 cui.extras.title=附加信息
@@ -129,7 +142,7 @@ cui.extras.goback=按下键盘的背景或ESC键或手柄的“选择”按钮�
 
 options.fov= 
 options.fov.alt=FOV
-resourcePack.subpackResolution.alt=Resolution
+resourcePack.subpackResolution.alt=分辨率
 
 Github (View source code)=Github（查看源代码）
 Pause=暂停
@@ -140,3 +153,6 @@ Search World (Case sensitive)=搜索世界（区分大小写）
 Settings=设置
 Loading...=加载中...
 | Copyright Mojang AB=| 版权归 Mojang 所有
+EXTRAS=附加信息
+WORLDS=世界
+INFOMATION=信息

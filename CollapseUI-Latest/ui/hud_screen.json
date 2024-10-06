@@ -117,10 +117,7 @@
 	  "controls": [
       { "item_text_factory@cui-hud_screen.item_text_factory": {}}
 	]},
-	"root_panel/hud_tip_text_factory": {
-	  "control_name": "@cui-hud_screen.hud_tip_text"
-	},
-  "root_panel/chat_stack": {
+	"root_panel/chat_stack": {
     "modifications": [
       { "control_name": "number_of_days_played",
         "operation": "remove"

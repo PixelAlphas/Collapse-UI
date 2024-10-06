@@ -21,6 +21,15 @@
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "$cuiv:subbutton": true,
+    "$cuiv-anim:pos_from": [ -44, 0 ],
+    "$cuiv-anim:pos_to": [ 14, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "controls": [
       { "resume@cui-button.text_button": {
           "size": [ 162, 35 ],
@@ -97,13 +106,8 @@
           "type": "stack_panel",
           "size": [ "100%", 20 ],
           "orientation": "horizontal",
-          "bindings": [
-            { "binding_name": "#in_realm_with_stories",
-              "binding_name_override": "#visible",
-              "binding_type": "global"
-          }],
           "controls": [
-            { "pudding_00": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $include_controls_and_settings_sections)" }},
+            { "pudding_00": { "type": "panel", "size": [ 4, 1 ]}},
             { "screenshot@cui-button.text_button": {
                 "size": [ "fill", 20 ],
                 "$pressed_button_name": "button.screenshot",
@@ -111,19 +115,22 @@
                 "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
                 "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
                 "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/screenshot_icon",
-                "bindings": [
-                  { "binding_name": "#screenshot_button_visible",
-                    "binding_name_override": "#visible",
-                    "binding_type": "global"
-                }],
                 "button_mappings": [
                   { "from_button_id": "button.controller_secondary_select",
                     "to_button_id": "button.screenshot",
                     "mapping_type": "global",
                     "scope": "controller"
+                  },
+                  { "from_button_id": "button.menu_select",
+                    "to_button_id": "$pressed_button_name",
+                    "mapping_type": "pressed"
+                  },
+                  { "from_button_id": "button.menu_ok",
+                    "to_button_id": "$pressed_button_name",
+                    "mapping_type": "focused"
                 }]
             }},
-            { "pudding_00": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $include_controls_and_settings_sections)" }},
+            { "pudding_00": { "type": "panel", "size": [ 4, 1 ]}},
             { "screenshot@cui-button.text_button": {
                 "size": [ "fill", 20 ],
                 "$pressed_button_name": "button.menu_feed",
@@ -132,14 +139,12 @@
                 "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
                 "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/realms_icon",
                 "bindings": [
-                  { "binding_name": "#in_realm_with_stories",
+                  { "binding_name": "#is_realm_level",
                     "binding_name_override": "#visible",
                     "binding_type": "global"
                 }]
             }}
-          ]
-        }
-      }
+      ]}}
   ]},
   "button_label": {
     "type": "panel",
@@ -231,6 +236,15 @@
   ]},
   "playerlist_element": {
     "type": "panel",
+    "$cuiv-anim:pos_from": [ 50, 0 ],
+    "$cuiv-anim:pos_to": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "controls": [
       { "playerlist_element@cui-common.element_background": {
           "$cuiv:element_background_contents": "cui-pause_screen.scrolling_panel",

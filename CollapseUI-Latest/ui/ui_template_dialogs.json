@@ -2,7 +2,9 @@
     "type": "panel",
     "anchor_from": "center",
     "anchor_to": "center",
-    "$text_name|default": "",
+    "$title_text_binding_type|default": "global",
+    "$title_binding_condition|default": "once",
+    "$text_name|default": "#none",
     "$top_button_panel|default": "common.empty_panel",
     "$middle_button_panel|default": "common.empty_panel",
     "$bottom_button_panel|default": "common.empty_panel",
@@ -62,8 +64,7 @@
           "offset": [ 0, -5 ],
           "alpha": 0.8
       }},
-      {
-        "panel_indent": {
+      { "panel_indent": {
           "type": "panel",
           "size": [ "100% - 16px", "100% - 131px" ],
           "offset": [ 0, 23 ],
@@ -72,40 +73,34 @@
           "controls": [
             { "inside_header_panel@$child_control": {} }
           ]
-        }
-      },
-      {
-        "top_button_panel@$top_button_panel": {
+      }},
+      { "top_button_panel@$top_button_panel": {
           "size": [ "100% - 14px", 30 ],
           "offset": [ 0, -71 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
-        }
-      },
-      {
-        "middle_button_panel@$middle_button_panel": {
+      }},
+      { "middle_button_panel@$middle_button_panel": {
           "size": [ "100% - 14px", 30 ],
           "offset": [ 0, -39 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
-        }
-      },
-      {
-        "bottom_button_panel@$bottom_button_panel": {
+      }},
+      { "bottom_button_panel@$bottom_button_panel": {
           "size": [ "100% - 14px", 30 ],
           "offset": [ 0, -7 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
 
   "main_panel_two_buttons": {
     "type": "panel",
     "anchor_from": "center",
     "anchor_to": "center",
-    "$text_name|default": "",
+    "$title_text_binding_type|default": "global",
+    "$title_binding_condition|default": "once",
+    "$text_name|default": "#none",
     "$top_button_panel|default": "common.empty_panel",
     "$bottom_button_panel|default": "common.empty_panel",
     "controls": [
@@ -164,8 +159,7 @@
           "offset": [ 0, -5 ],
           "alpha": 0.8
       }},
-      {
-        "panel_indent": {
+      { "panel_indent": {
           "type": "panel",
           "size": [ "100% - 16px", "100% - 99px" ],
           "offset": [ 0, 23 ],
@@ -173,33 +167,28 @@
           "anchor_to": "top_middle",
           "controls": [
             { "inside_header_panel@$child_control": {} }
-          ]
-        }
-      },
-      {
-        "top_button_panel@$top_button_panel": {
+      ]}},
+      { "top_button_panel@$top_button_panel": {
           "size": [ "100% - 14px", 30 ],
           "offset": [ 0, -39 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
-        }
-      },
-      {
-        "bottom_button_panel@$bottom_button_panel": {
+      }},
+      { "bottom_button_panel@$bottom_button_panel": {
           "size": [ "100% - 14px", 30 ],
           "offset": [ 0, -7 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
 
   "main_panel_one_button": {
     "type": "panel",
     "anchor_from": "center",
     "anchor_to": "center",
-    "$text_name|default": "",
+    "$title_text_binding_type|default": "global",
+    "$title_binding_condition|default": "once",
+    "$text_name|default": "#none",
     "$button_panel|default": "common.empty_panel",
     "controls": [
       { "title_text_element": {
@@ -257,8 +246,7 @@
           "offset": [ 0, -5 ],
           "alpha": 0.8
       }},
-      {
-        "panel_indent": {
+      { "panel_indent": {
           "type": "panel",
           "size": [ "100% - 16px", "100% - 65px" ],
           "offset": [ 0, 23 ],
@@ -266,24 +254,21 @@
           "anchor_to": "top_middle",
           "controls": [
             { "inside_header_panel@$child_control": {} }
-          ]
-        }
-      },
-      {
-        "bottom_button_panel@$button_panel": {
+      ]}},
+      { "bottom_button_panel@$button_panel": {
           "size": [ "100% - 14px", 30 ],
           "offset": [ 0, -7 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "main_panel_no_buttons": {
     "type": "panel",
     "anchor_from": "center",
     "anchor_to": "center",
-    "$text_name|default": "",
+    "$title_text_binding_type|default": "global",
+    "$title_binding_condition|default": "once",
+    "$text_name|default": "#none",
     "$panel_indent_size|default": [ "100% - 16px", "100% - 31px" ],
     "$custom_background|default": "dialog_background_hollow_3",
     "controls": [
@@ -380,7 +365,9 @@
     "type": "panel",
     "anchor_from": "center",
     "anchor_to": "center",
-    "$text_name|default": "",
+    "$title_text_binding_type|default": "global",
+    "$title_binding_condition|default": "once",
+    "$text_name|default": "#none",
     "$button_panel|default": "common.empty_panel",
     "$show_close_button": false,
     "$button_panel_size|default": [ "100% - 14px", 30 ],
@@ -441,8 +428,7 @@
           "offset": [ 0, -5 ],
           "alpha": 0.8
       }},
-      {
-        "panel_indent": {
+      { "panel_indent": {
           "type": "panel",
           "size": "$main_panel_size",
           "offset": [ 0, 17 ],
@@ -450,17 +436,11 @@
           "anchor_to": "top_middle",
           "controls": [
             { "inside_header_panel@$child_control": {} }
-          ]
-        }
-      },
-      {
-        "bottom_button_panel@$button_panel": {
+      ]}},
+      { "bottom_button_panel@$button_panel": {
           "size": "$button_panel_size",
           "offset": [ 0, -7 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
-        }
-      }
-    ]
-  }
-}
+      }}
+]}}

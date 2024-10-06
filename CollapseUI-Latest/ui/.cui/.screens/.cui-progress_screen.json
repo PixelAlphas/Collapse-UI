@@ -18,6 +18,15 @@
     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
     "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/exit_icon",
+    "$cuiv-anim:pos_from": [ 4, -50 ],
+    "$cuiv-anim:pos_to": [ 4, 4 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "bindings": [
       { "binding_name": "#cancel_visible",
         "binding_name_override": "#visible"
@@ -60,19 +69,30 @@
           "offset": [ 0, -30 ],
           "size": [ "100%", 5 ],
           "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle"
+          "anchor_to": "bottom_middle",
+          "$cuiv-anim:pos_from": [ 0, 20 ],
+          "$cuiv-anim:pos_to": [ 0, -30 ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ]
       }},
       { "progress_title_text@progress.progress_title_text": {
           "text": "#title_text",
           "offset": [ 14, -26 ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
+          "$cuiv-anim:pos_from": [ 14, 24 ],
+          "$cuiv-anim:pos_to": [ 14, -26 ],
           "animation_reset_name": "screen_animation_reset",
           "anims": [
-            "@common.screen_exit_animation_push_alpha",
-            "@common.screen_exit_animation_pop_alpha",
-            "@common.screen_entrance_animation_push_alpha",
-            "@common.screen_entrance_animation_pop_alpha"
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
           ],
           "bindings": [ { "binding_name": "#title_text" }]
       }},
@@ -84,12 +104,14 @@
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "text": "#progress_text",
+          "$cuiv-anim:pos_from": [ 1, 42 ],
+          "$cuiv-anim:pos_to": [ 1, -8 ],
           "animation_reset_name": "screen_animation_reset",
           "anims": [
-            "@common.screen_exit_animation_push_alpha",
-            "@common.screen_exit_animation_pop_alpha",
-            "@common.screen_entrance_animation_push_alpha",
-            "@common.screen_entrance_animation_pop_alpha"
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
           ],
           "bindings": [ { "binding_name": "#progress_text" }]
       }},
@@ -97,7 +119,16 @@
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [ 1, -37 ],
-          "size": [ 10, 10 ]
+          "size": [ 10, 10 ],
+          "$cuiv-anim:pos_from": [ 1, 13 ],
+          "$cuiv-anim:pos_to": [ 1, -37 ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ]
       }}
   ]},
   "progress_title_world_panel": {
@@ -207,8 +238,15 @@
     "anchor_to": "bottom_middle",
     "size": [ "100% - 80px", 5 ],
     "offset": [ 0, -30 ],
+    "$cuiv-anim:pos_from": [ 0, 20 ],
+    "$cuiv-anim:pos_to": [ 0, -30 ],
     "animation_reset_name": "screen_animation_reset",
-    "anims": [],
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "controls": [
       { "experience_bar_full@cui-common.experience_bar_full": { "layer": 2 }}
   ]}

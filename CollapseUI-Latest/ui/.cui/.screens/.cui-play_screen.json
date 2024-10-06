@@ -17,13 +17,11 @@
     "animation_reset_name": "screen_animation_reset",
     "$cuiv-anim:pos_from": [ "25%", 0 ],
     "$cuiv-anim:pos_to": [ 0, 0 ],
-    "$cuiv-anim:size_from": [ "80% - 85px", "80%" ],
-    "$cuiv-anim:size_to": [ "100% - 85px", "100%" ],
     "anims": [
-      "@cui-anims.screen_outro_anim_size_push",
-      "@cui-anims.screen_outro_anim_size_pop",
-      "@cui-anims.screen_intro_anim_size_push",
-      "@cui-anims.screen_intro_anim_size_pop"
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
     ],
     "controls": [
       { "tab_content_panel@cui-play_screen.tab_content_element": { "layer": 2 }}
@@ -139,6 +137,7 @@
           "ignored": "(not $can_quit)"
       }},
       { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
+          "ignored": true,
           "$cuiv:icon_texture": "textures/ui/.cui-assets/.controller/start",
           "$cuiv:gamepad_no_bindings_description": true,
           "$icon_description_bind": "Toggle \"Edit Mode\""

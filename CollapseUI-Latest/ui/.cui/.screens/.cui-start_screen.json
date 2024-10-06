@@ -255,6 +255,15 @@
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "$cuiv:button_content_size": [ "100%", "100%" ],
+    "$cuiv-anim:pos_from": [ -44, 0 ],
+    "$cuiv-anim:pos_to": [ 14, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "cuib-more",
