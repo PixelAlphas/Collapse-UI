@@ -546,12 +546,14 @@
       "@cui-anims.screen_intro_anim_pop"
     ],
     "controls": [
-      { "background": {
-          "type": "image",
-          "texture": "textures/ui/.cui-assets/background_2x",
-          "color": "$cuigv:SecondaryColor",
+      { "achievements@cui-button.text_button": {
+          "$cuiv:button_texture_alpha": 0,
           "size": [ "100% + 4px", "100% + 4px" ],
-          "alpha": "$cuigv:BackgroundAlpha"
+          "$pressed_button_name": "button.menu_profile",
+          "bindings": [
+            { "binding_name": "#profile_button_a_visible",
+              "binding_name_override": "#visible"
+          }]
       }},
       { "player_head_element@cui-common.player_head_renderer": {
           "anchor_from": "right_middle",
@@ -688,7 +690,7 @@
           "type": "label",
           "color": "$cuigv:FontPrimaryColor",
           "alpha": "$cuigv:BackgroundAlpha",
-          "text": "Collapse-UI v2.1.4"
+          "text": "Collapse-UI v2.22"
       }},
       { "paddings": { "type": "panel", "size": [ 4, 1 ]}},
       { "mojang_copyright": {

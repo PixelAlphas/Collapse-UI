@@ -90,6 +90,7 @@
     "size": [ 316, 188 ],
     "controls": [
       { "cancel_button_core@cui-common.cancel_button_core": {
+          "ignored": true,
           "offset": [ 37, 0 ],
           "anchor_from": "top_right",
           "anchor_to": "top_right"

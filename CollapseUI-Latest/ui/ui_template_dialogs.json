@@ -19,6 +19,7 @@
           "offset": [ 0, 2 ],
           "color": "$cuigv:PrimaryColor",
           "bindings": [
+            { "binding_name": "$text_name" },
             { "binding_type": "view",
               "source_property_name": "(not($text_name = ''))",
               "target_property_name": "#visible"
@@ -114,6 +115,7 @@
           "offset": [ 0, 2 ],
           "color": "$cuigv:PrimaryColor",
           "bindings": [
+            { "binding_name": "$text_name" },
             { "binding_type": "view",
               "source_property_name": "(not($text_name = ''))",
               "target_property_name": "#visible"
@@ -201,6 +203,7 @@
           "offset": [ 0, 2 ],
           "color": "$cuigv:PrimaryColor",
           "bindings": [
+            { "binding_name": "$text_name" },
             { "binding_type": "view",
               "source_property_name": "(not($text_name = ''))",
               "target_property_name": "#visible"
@@ -282,6 +285,7 @@
           "offset": [ 0, 2 ],
           "color": "$cuigv:PrimaryColor",
           "bindings": [
+            { "binding_name": "$text_name" },
             { "binding_type": "view",
               "source_property_name": "(not($text_name = ''))",
               "target_property_name": "#visible"
@@ -383,6 +387,7 @@
           "offset": [ 0, 2 ],
           "color": "$cuigv:PrimaryColor",
           "bindings": [
+            { "binding_name": "$text_name" },
             { "binding_type": "view",
               "source_property_name": "(not($text_name = ''))",
               "target_property_name": "#visible"

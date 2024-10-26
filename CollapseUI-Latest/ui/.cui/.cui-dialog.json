@@ -15,7 +15,7 @@
           "offset": [ 0, 2 ],
           "color": "$cuigv:PrimaryColor",
           "bindings": [
-            { "binding_name": "modal_title_text"},
+            { "binding_name": "#modal_title_text"},
             { "binding_type": "view",
               "source_property_name": "(not(#modal_title_text = ''))",
               "target_property_name": "#visible"
@@ -28,16 +28,16 @@
                 "text": "#text",
                 "shadow": false,
                 "bindings": [
-                    { "binding_name": "modal_title_text"},
-                    { "binding_type": "view",
-                      "source_control_name": "$visibility_source_control_name",
-                      "source_property_name": "#modal_title_text",
-                      "target_property_name": "#text"
-                    },
-                    { "binding_type": "view",
-                      "source_control_name": "$visibility_source_control_name",
-                      "source_property_name": "#modal_title_tts",
-                      "target_property_name": "#tts_text"
+                  { "binding_name": "#modal_title_text"},
+                  { "binding_type": "view",
+                    "source_control_name": "$visibility_source_control_name",
+                    "source_property_name": "#modal_title_text",
+                    "target_property_name": "#text"
+                  },
+                  { "binding_type": "view",
+                    "source_control_name": "$visibility_source_control_name",
+                    "source_property_name": "#modal_title_tts",
+                    "target_property_name": "#tts_text"
                 }]
             }}
       ]}},
@@ -91,6 +91,7 @@
     "font_scale_factor": 1.8,
     "font_type": "MinecraftTen",
     "bindings": [
+      { "binding_name": "#modal_title_text"},
       { "binding_type": "view",
         "source_control_name": "$visibility_source_control_name",
         "source_property_name": "#modal_title_text",
@@ -129,6 +130,7 @@
       "#tts_dialog_title": "$text_name"
     },
     "bindings": [
+      { "binding_name": "#modal_title_text"},
       { "binding_type": "$title_text_binding_type",
         "binding_condition": "$title_binding_condition",
         "binding_name": "$text_name",
@@ -168,6 +170,7 @@
           "font_type": "dainbold",
           "shadow": false,
           "bindings": [
+            { "binding_name": "#modal_title_text"},
             { "binding_type": "view",
               "source_control_name": "$visibility_source_control_name",
               "source_property_name": "#modal_label_text",
