@@ -15,6 +15,7 @@
           "offset": [ 0, 2 ],
           "color": "$cuigv:PrimaryColor",
           "bindings": [
+            { "binding_name": "modal_title_text"},
             { "binding_type": "view",
               "source_property_name": "(not(#modal_title_text = ''))",
               "target_property_name": "#visible"
@@ -27,6 +28,7 @@
                 "text": "#text",
                 "shadow": false,
                 "bindings": [
+                    { "binding_name": "modal_title_text"},
                     { "binding_type": "view",
                       "source_control_name": "$visibility_source_control_name",
                       "source_property_name": "#modal_title_text",

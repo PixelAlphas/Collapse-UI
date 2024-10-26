@@ -11,7 +11,7 @@
   // by following.
     // [ 1, 1, 1, 1.0 ] | ColorAdv — RBG values but divided by 1 + Alpha
     // [ 1, 1, 1 ] Color — RBG values but divided by 1
-    // 0.0 - 1.0 | String — Value only support ranged from 0.0 to 1.0
+    // 0.0 - 1.0 | Value — Value only support ranged from 0.0 to 1.0
     // True/False | Boolean — Only True/False as Value ( True = Enable | False = Disable )
   
   // UI Theme
@@ -26,8 +26,10 @@
     // Overall texts color. (Not fully finished)
   "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ], // Color
     // Secondary texts color — it's gray text.
-  "$cuigv:BackgroundAlpha": 0.8, // String
+  "$cuigv:BackgroundAlpha": 0.8, // Value
     // UI Background transparent.
+  "$cuigv:ButtonAlpha": 0.8, // Value
+    // Button(s) transparent.
   "$cuigv:UIBackground": false, // Boolean
     // Shows actual image behind the UI — Including Blur version.
   "$cuigv:UIBackgroundSlider": true, // Boolean

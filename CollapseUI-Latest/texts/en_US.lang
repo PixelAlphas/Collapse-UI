@@ -119,6 +119,7 @@ cui.about.tab.activeconfig.tertiarycolor=Tertiary Color (Secondary but darker)
 cui.about.tab.activeconfig.fontprimarycolor=Font Primary Color
 cui.about.tab.activeconfig.fontsecondarycolor=Font Secondary Color
 cui.about.tab.activeconfig.backgroundalpha=Background Alpha
+cui.about.tab.activeconfig.buttonalpha=Button Alpha
 cui.about.tab.activeconfig.uibackground=Background
 cui.about.tab.activeconfig.uibackgroundslider=BG Slider on Start screen
 cui.about.tab.activeconfig.backgroundgradientprimarycolor=Gradient BG Primary color

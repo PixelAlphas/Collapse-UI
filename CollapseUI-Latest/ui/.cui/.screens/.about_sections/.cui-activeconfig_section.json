@@ -88,6 +88,25 @@
                 "alpha": "$cuigv:BackgroundAlpha"
             }}
       ]}},
+      { "config_theme_05": {
+          "type": "panel",
+          "size": [ "100% - 10px", 16 ],
+          "controls": [
+            { "config_label": {
+                "type": "label",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "text": "cui.about.tab.activeconfig.buttonalpha"
+            }},
+            { "config_color": {
+                "type": "image",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "size": [ 14, 14 ],
+                "texture": "textures/ui/White",
+                "alpha": "$cuigv:ButtonAlpha"
+            }}
+      ]}},
       { "config_theme_06@cui-activeconfig_section.config_label": {
           "type": "panel",
           "$cuiv:config_text": "cui.about.tab.activeconfig.uibackground",

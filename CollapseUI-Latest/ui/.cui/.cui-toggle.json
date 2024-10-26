@@ -4,7 +4,7 @@
     "$cuiv:button_text|default": "",
     "$cuiv:button_anims|default": [],
     "$cuiv:button_text_shadow|default": false,
-    "$cuiv:button_texture_alpha|default": 1,
+    "$cuiv:button_texture_alpha|default": "$cuigv:ButtonAlpha",
     "$cuiv:button_text_bindings|default": "",
     
     "$unchecked_control": "cui-toggle.toggle_unchecked",
@@ -29,7 +29,7 @@
   },
   "toggle_button": {
     "type": "panel",
-    "$cuiv:button_type_panel": "cui-toggle.toggle_button_core",
+    "$cuiv:button_type_panel|default": "cui-toggle.toggle_button_core",
     "$cuiv:button_anims|default": [],
     "$toggle_view_binding_name|default": "this_toggle",
     "controls": [
@@ -62,7 +62,7 @@
     "$cuiv:toggle_texture|default": "",
     "$cuiv:toggle_texture_color|default": "$cuigv:FontPrimaryColor",
     "$cuiv:toggle_texture_size|default": [ 16, 16 ],
-    "$cuiv:toggle_texture_alpha|default": "$cuigv:BackgroundAlpha",
+    "$cuiv:toggle_texture_alpha|default": "$cuigv:ButtonAlpha",
     "$cuiv:toggle_texture_anchor|default": "center",
     "$cuiv:toggle_texture_offset|default": [ 0, 0 ],
     "$cuiv:toggle_label_text|default": "",

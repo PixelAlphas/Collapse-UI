@@ -22,11 +22,11 @@
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "collapse-ui@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.uititle",
-          "$cuiv:about_text_gray": "v2.2"
+          "$cuiv:about_text_gray": "v2.21"
       }},
       { "update_release_date@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Sun, Oct 6 (2024)"
+          "$cuiv:about_text_gray": "Sun, Oct 26 (2024)"
       }},
       { "arxance@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.author",
@@ -34,7 +34,7 @@
       }},
       { "minecraft@cui-about_section.about_text": {
           "$cuiv:about_text": "MCBE Version Supported",
-          "$cuiv:about_text_gray": "v1.21.0+"
+          "$cuiv:about_text_gray": "v1.21.40+"
       }},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "line": {
