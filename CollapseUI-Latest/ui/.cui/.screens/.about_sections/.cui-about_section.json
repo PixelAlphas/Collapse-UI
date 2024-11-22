@@ -22,11 +22,11 @@
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "collapse-ui@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.uititle",
-          "$cuiv:about_text_gray": "v2.22"
+          "$cuiv:about_text_gray": "v2.3"
       }},
       { "update_release_date@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Sun, Oct 26 (2024)"
+          "$cuiv:about_text_gray": "Fri, Nov 22 (2024)"
       }},
       { "arxance@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.author",

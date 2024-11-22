@@ -11,6 +11,16 @@
           "$cuiv:title_back_button": false
       }},
       { "@main_button": {}},
+      { "@account_element": {
+          "offset": [ -36, 5 ],
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "cuib-player_list",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+          }]
+      }},
+      { "@realm_elements": {}},
       { "@playerlist_element": {}}
   ]},
   "main_button": {
@@ -32,7 +42,7 @@
     ],
     "controls": [
       { "resume@cui-button.text_button": {
-          "size": [ 162, 35 ],
+          "size": [ 162, 30 ],
           "$cuiv:gradientbackground": true,
           "$pressed_button_name": "button.menu_continue",
           "$cuiv:button_type_panel": "cui-pause_screen.button_label",
@@ -47,7 +57,7 @@
       }},
       { "pudding_00": { "type": "panel", "size": [ 4, 1 ] }},
       { "achievement@cui-button.text_button": {
-          "size": [ 162, 20 ],
+          "size": [ 162, 25 ],
           "$pressed_button_name": "button.menu_achievements",
           "$cuiv:button_type_panel": "cui-start_screen.button_label",
           "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
@@ -61,7 +71,7 @@
       }},
       { "pudding_01": { "type": "panel", "size": [ 4, 1 ] }},
       { "skin@cui-button.text_button": {
-          "size": [ 162, 20 ],
+          "size": [ 162, 25 ],
           "$pressed_button_name": "button.to_profile_or_skins_screen",
           "$cuiv:button_type_panel": "cui-start_screen.button_label",
           "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
@@ -74,8 +84,23 @@
           "$cuiv:button_text_offset": [ 24, 0 ]
       }},
       { "pudding_02": { "type": "panel", "size": [ 4, 1 ] }},
+      { "marketplace@cui-button.text_button": {
+          "size": [ "100%", 25 ],
+          "ignored": "$cuigv:NoMarketplaceButton",
+          "$pressed_button_name": "button.menu_store",
+          "$cuiv:button_type_panel": "cui-start_screen.button_label",
+          "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:button_text": "cui.main_menu.marketplace",
+          "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/marketplace_icon",
+          "$cuiv:button_image_anchor": "left_middle",
+          "$cuiv:button_image_offset": [ 2, -0.5 ],
+          "$cuiv:button_text_anchor": "left_middle",
+          "$cuiv:button_text_offset": [ 24, 0 ]
+      }},
+      { "pudding_03": { "type": "panel", "size": [ 4, 1 ] }},
       { "settings@cui-button.text_button": {
-          "size": [ 162, 20 ],
+          "size": [ 162, 25 ],
           "$pressed_button_name": "button.menu_settings",
           "$cuiv:button_type_panel": "cui-start_screen.button_label",
           "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
@@ -87,9 +112,9 @@
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 24, 0 ]
       }},
-      { "pudding_03": { "type": "panel", "size": [ 4, 1 ] }},
+      { "pudding_04": { "type": "panel", "size": [ 4, 1 ] }},
       { "exit@cui-button.text_button": {
-          "size": [ 162, 20 ],
+          "size": [ 162, 25 ],
           "$pressed_button_name": "button.menu_quit",
           "$cuiv:button_type_panel": "cui-start_screen.button_label",
           "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
@@ -100,56 +125,58 @@
           "$cuiv:button_image_offset": [ 2, -0.5 ],
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 24, 0 ]
+      }}
+  ]},
+  "realm_elements": {
+    "type": "stack_panel",
+    "size": [ "100%c", 20 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "orientation": "horizontal",
+    "offset": [ 6, -6 ],
+    "controls": [
+      { "screenshot@cui-button.text_button": {
+          "size": [ 20, 20 ],
+          "$pressed_button_name": "button.screenshot",
+          "$cuiv:button_type_panel": "cui-start_screen.button_label",
+          "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/screenshot_icon",
+          "button_mappings": [
+            { "from_button_id": "button.controller_secondary_select",
+              "to_button_id": "button.screenshot",
+              "mapping_type": "global",
+              "scope": "controller"
+            },
+            { "from_button_id": "button.menu_select",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "pressed"
+            },
+            { "from_button_id": "button.menu_ok",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "focused"
+          }]
       }},
-      { "pudding_04": { "type": "panel", "size": [ 4, 1 ] }},
-      { "realm_elements": {
-          "type": "stack_panel",
-          "size": [ "100%", 20 ],
-          "orientation": "horizontal",
-          "controls": [
-            { "screenshot@cui-button.text_button": {
-                "size": [ "50% - 2px", 20 ],
-                "$pressed_button_name": "button.screenshot",
-                "$cuiv:button_type_panel": "cui-start_screen.button_label",
-                "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
-                "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-                "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/screenshot_icon",
-                "button_mappings": [
-                  { "from_button_id": "button.controller_secondary_select",
-                    "to_button_id": "button.screenshot",
-                    "mapping_type": "global",
-                    "scope": "controller"
-                  },
-                  { "from_button_id": "button.menu_select",
-                    "to_button_id": "$pressed_button_name",
-                    "mapping_type": "pressed"
-                  },
-                  { "from_button_id": "button.menu_ok",
-                    "to_button_id": "$pressed_button_name",
-                    "mapping_type": "focused"
-                }]
-            }},
-            { "pudding_00": { "type": "panel", "size": [ 4, 1 ],
-                "bindings": [
-                  { "binding_name": "#is_realm_level",
-                    "binding_name_override": "#visible",
-                    "binding_type": "global"
-                }]
-            }},
-            { "screenshot@cui-button.text_button": {
-                "size": [ "50% - 2px", 20 ],
-                "$pressed_button_name": "button.menu_feed",
-                "$cuiv:button_type_panel": "cui-start_screen.button_label",
-                "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
-                "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-                "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/realms_icon",
-                "bindings": [
-                  { "binding_name": "#is_realm_level",
-                    "binding_name_override": "#visible",
-                    "binding_type": "global"
-                }]
-            }}
-      ]}}
+      { "pudding_00": { "type": "panel", "size": [ 4, 1 ],
+          "bindings": [
+            { "binding_name": "#is_realm_level",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+          }]
+      }},
+      { "screenshot@cui-button.text_button": {
+          "size": [ 20, 20 ],
+          "$pressed_button_name": "button.menu_feed",
+          "$cuiv:button_type_panel": "cui-start_screen.button_label",
+          "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/realms_icon",
+          "bindings": [
+            { "binding_name": "#is_realm_level",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+          }]
+      }}
   ]},
   "button_label": {
     "type": "panel",
@@ -592,4 +619,88 @@
                 "bindings": [ { "binding_type": "collection_details", "binding_collection_name": "players_collection" }]
             }}
       ]}}
-]}}
+  ]},
+  "account_element": {
+    "type": "panel",
+    "size": [ 140, 24 ],
+    "offset": [ -26, 5 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$cuiv-anim:pos_from": [ -46, -50 ],
+    "$cuiv-anim:pos_to": [ -46, 5 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
+    "controls": [
+      { "profile@cui-button.text_button": {
+          "$cuiv:button_texture_alpha": 0,
+          "size": [ "100% + 4px", "100% + 4px" ],
+          "$pressed_button_name": "button.menu_profile",
+          "bindings": [
+            { "binding_name": "#profile_button_a_visible",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "player_head_element@cui-common.player_head_renderer": {
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+      }},
+      { "online_element": {
+          "type": "panel",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -32, 0 ],
+          "bindings": [
+            { "binding_name": "#gamertag_pic_and_label_visible",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "size": [ "100%c", 15 ],
+                "controls": [
+                  { "label": {
+                      "type": "label",
+                      "text": "#playername",
+                      "layer": 1,
+                      "font_type": "OldSmoothFont",
+                      "font_scale_factor": 1.3,
+                      "offset": [ 0, 1 ],
+                      "color": "$cuigv:FontPrimaryColor",
+                      "bindings": [{ "binding_name": "#playername" }]
+                  }},
+                  { "paddings": { "type": "panel", "size": [ 3, 0 ]}},
+                  { "gametag_profile": {
+                      "type": "image",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "size": [ 15, 15 ],
+                      "layer": 1,
+                      "bindings": [
+                        { "binding_name": "#gamerpic_texture_path", "binding_name_override": "#texture" },
+                        { "binding_name": "#gamerpic_texture_location_type", "binding_name_override": "#texture_file_system" },
+                        { "binding_name": "#profile_button_a_visible",
+                          "binding_name_override": "#visible"
+                        }
+                  ]}}
+            ]}},
+            { "label": {
+                "type": "label",
+                "text": "cui.username.playing",
+                "layer": 1,
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "font_size": "small",
+                "color": "$cuigv:FontSecondaryColor",
+                "offset": [ 0, 0 ]
+            }}
+      ]}}
+  ]}
+}

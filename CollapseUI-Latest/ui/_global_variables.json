@@ -2,7 +2,7 @@
   // General
   "$cuigv:ConfigName": "Default",
     // Config name — You can change it to anything you want if you wish to customize.
-  "$cuigv:DesignedVersion": "v2.0",
+  "$cuigv:DesignedVersion": "v2.3",
     // Designed Version — Config version that supported the UI
   
   // -- README before modifying! --
@@ -54,7 +54,7 @@
   // Layouts
   "$cuigv:LogoInPauseScreen": true,
     // Enable the game's logo instead displaying "Pause"
-  "$cuigv:StartMainButtonClassic": false,
+  "$cuigv:StartMainButtonClassic": true,
     // Enable Classic menu (from Arc-UI) for controller convenience.
   "$cuigv:SearchBoxSystem": true, // Boolean
     // World Search ( Case Sensitive! )
@@ -66,10 +66,11 @@
     // Replace the UI logo with game logo.
   "$cuigv:NoRealmsPromoteInWorldSection": true, // Boolean
     // Realms promotion on world section.
+  "$cuigv:NoMarketplaceButton": false, // Boolean
+    // No Marketplace Button on either pause and start screen.
     
   // Unused - will do nothing...
   "$cuigv:OriginUI": true, // Boolean
-  "$cuigv:NoMarketplaceButton": false, // Boolean
   "$cuigv:DebugElement": false, // Boolean
   "$cuigv:CompactMode": false, // Boolean
   "$cuigv:AdditionalStartButtons": true // Boolean

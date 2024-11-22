@@ -10,6 +10,9 @@
       "@common.screen_entrance_animation_pop_fade"
     ]
   },
+  "realms_world_content_panel": {
+    "size": [ "100% - 8px", "100% - 2px" ]
+  },
   "world_screenshot_base": {
     "size": [ "100%cm + 2px", "100%" ],
     "texture": ""

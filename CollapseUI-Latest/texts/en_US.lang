@@ -77,9 +77,11 @@ cui.main_menu.play=PLAY
 cui.main_menu.achievement=ACHIEVEMENTS
 cui.main_menu.skin=SKINS
 cui.main_menu.settings=SETTINGS
+cui.main_menu.marketplace=MARKETPLACE
 cui.main_menu.exit=EXIT
 cui.username.logged_in=Logged as
 cui.username.local=Playing as (Local)
+cui.username.playing=Playing as
 cui.main_menu.quickaccess=Quick Access
 cui.main_menu.infomation=Information
 

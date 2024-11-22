@@ -311,6 +311,9 @@
         "source_property_name": "#item_name",
         "target_property_name": "#world_search_string"
       },
+      { "binding_name": "#no_local_worlds",
+        "binding_name_override": "#visible"
+      },
       { "binding_type": "view",
         "source_property_name": "(#world_search_string = '')",
         "target_property_name": "#visible"
@@ -345,6 +348,10 @@
           "orientation": "vertical",
           "size": [ "100%", "100%c" ],
           "use_child_anchors": true,
+          "bindings": [
+            { "binding_name": "#no_local_worlds",
+              "binding_name_override": "#visible"
+          }],
           "controls": [
             { "padding_01": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
             { "search_bar@cui-common.text_box": { "$cuiv:placeholder_text": "cui.play.worldsearch.textbar", "$cuiv:text_edit_text_control": "string_world", "size": [ "100% - 8px", 20 ], "ignored": "(not $cuigv:SearchBoxSystem)", "$cuiv:text_magnifying_glass_image": true }},
