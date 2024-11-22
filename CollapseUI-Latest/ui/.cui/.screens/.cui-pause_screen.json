@@ -85,7 +85,7 @@
       }},
       { "pudding_02": { "type": "panel", "size": [ 4, 1 ] }},
       { "marketplace@cui-button.text_button": {
-          "size": [ "100%", 25 ],
+          "size": [ 162, 25 ],
           "ignored": "$cuigv:NoMarketplaceButton",
           "$pressed_button_name": "button.menu_store",
           "$cuiv:button_type_panel": "cui-start_screen.button_label",

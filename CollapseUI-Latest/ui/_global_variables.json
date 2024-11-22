@@ -58,8 +58,6 @@
     // Enable Classic menu (from Arc-UI) for controller convenience.
   "$cuigv:SearchBoxSystem": true, // Boolean
     // World Search ( Case Sensitive! )
-  "$cuigv:OldSliderDesign": false, // Boolean
-    // Enable "Sodium Mod" looking settings slider — Controller are not supported.
   "$cuigv:VanillaPaperdoll": false, // Boolean
     // Shows your character/skin on the menu.
   "$cuigv:NoGameLogo": false, // Boolean
@@ -70,6 +68,7 @@
     // No Marketplace Button on either pause and start screen.
     
   // Unused - will do nothing...
+  "$cuigv:OldSliderDesign": false, // Boolean
   "$cuigv:OriginUI": true, // Boolean
   "$cuigv:DebugElement": false, // Boolean
   "$cuigv:CompactMode": false, // Boolean
