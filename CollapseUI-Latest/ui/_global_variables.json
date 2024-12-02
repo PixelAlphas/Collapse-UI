@@ -54,7 +54,7 @@
   // Layouts
   "$cuigv:LogoInPauseScreen": true,
     // Enable the game's logo instead displaying "Pause"
-  "$cuigv:StartMainButtonClassic": true,
+  "$cuigv:StartMainButtonClassic": false,
     // Enable Classic menu (from Arc-UI) for controller convenience.
   "$cuigv:SearchBoxSystem": true, // Boolean
     // World Search ( Case Sensitive! )
@@ -66,7 +66,7 @@
     // Realms promotion on world section.
   "$cuigv:NoMarketplaceButton": false, // Boolean
     // No Marketplace Button on either pause and start screen.
-    
+  
   // Unused - will do nothing...
   "$cuigv:OldSliderDesign": false, // Boolean
   "$cuigv:OriginUI": true, // Boolean

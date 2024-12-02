@@ -117,13 +117,7 @@
                   },
                   { "binding_name": "#incompatible_reason",
                     "binding_name_override": "#text"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  }
-}
+                }]
+            }}
+      ]}}
+]}}

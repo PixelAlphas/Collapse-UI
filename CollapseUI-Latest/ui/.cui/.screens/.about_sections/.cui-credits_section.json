@@ -26,14 +26,58 @@
           "font_type": "MinecraftTen",
           "size": [ "100% - 8px", 10 ]
       }},
-      { "mattoo@cui-about_section.about_text": {
-          "$cuiv:about_text": "Mattoo/Mattoo0oo0 | Backgrounds",
-          "$cuiv:about_text_gray": "youtube.com/@Mattoo0oo0 (YT)"
-      }},
-      { "nutor@cui-about_section.about_text": {
-          "$cuiv:about_text": "Nutor | Additional Backgrounds",
-          "$cuiv:about_text_gray": "@n.tor (Discord)"
-      }},
+      { "mattoo": {
+          "type": "panel",
+          "size": [ "100% - 10px", 18 ],
+          "controls": [
+            { "logo": {
+                "type": "image",
+                "size": [ 16, 16 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "texture": "textures/ui/.cui-assets/.icons/youtube_icon"
+            }},
+            { "label01": {
+                "type": "label",
+                "text": "@Mattoo0oo0",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [ -20, 0 ],
+                "color": [ 0.7, 0.7, 0.7 ]
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "Mattoo/Mattoo0oo0 | Backgrounds",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+            }}
+      ]}},
+      { "nutor": {
+          "type": "panel",
+          "size": [ "100% - 10px", 18 ],
+          "controls": [
+            { "logo": {
+                "type": "image",
+                "size": [ 16, 16 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "texture": "textures/ui/.cui-assets/.icons/discord_icon"
+            }},
+            { "label01": {
+                "type": "label",
+                "text": "@n.tor",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [ -20, 0 ],
+                "color": [ 0.7, 0.7, 0.7 ]
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "Nutor | Additional Backgrounds",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+            }}
+      ]}},
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "line": {
           "type": "image",
@@ -49,14 +93,58 @@
           "font_type": "MinecraftTen",
           "size": [ "100% - 8px", 10 ]
       }},
-      { "qin@cui-about_section.about_text": {
-          "$cuiv:about_text": "QinDagghc | 中文 / Chinese",
-          "$cuiv:about_text_gray": "@QinDagghc (Github)"
-      }},
-      { "@cui-about_section.about_text": {
-          "$cuiv:about_text": "Expexx | русский / Russia",
-          "$cuiv:about_text_gray": "@Expexx (Discord)"
-      }}
+      { "qindagghc": {
+          "type": "panel",
+          "size": [ "100% - 10px", 18 ],
+          "controls": [
+            { "logo": {
+                "type": "image",
+                "size": [ 16, 16 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "texture": "textures/ui/.cui-assets/.icons/github_icon"
+            }},
+            { "label01": {
+                "type": "label",
+                "text": "@QinDagghc",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [ -20, 0 ],
+                "color": [ 0.7, 0.7, 0.7 ]
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "QinDagghc | 中文 / Chinese",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+            }}
+      ]}},
+      { "expexx": {
+          "type": "panel",
+          "size": [ "100% - 10px", 18 ],
+          "controls": [
+            { "logo": {
+                "type": "image",
+                "size": [ 16, 16 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "texture": "textures/ui/.cui-assets/.icons/discord_icon"
+            }},
+            { "label01": {
+                "type": "label",
+                "text": "@Expexx",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [ -20, 0 ],
+                "color": [ 0.7, 0.7, 0.7 ]
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "Expexx | русский / Russia",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+            }}
+      ]}}
   ]},
   "core_element": {
     "type": "stack_panel",

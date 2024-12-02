@@ -134,17 +134,17 @@
     "to": [ 0, 0 ],
     "next": "@hud.anim_chat_bg_wait_push"
   },
+  "anim_chat_bg_wait_push": {
+    "anim_type": "wait",
+    "duration": "($chat_item_lifetime - 0.2)",
+    "next": "@hud.anim_chat_bg_push"
+  },
   "anim_chat_bg_push": {
     "anim_type": "offset",
     "easing": "in_expo",
     "duration": 0.5,
     "from": [ 0, 0 ],
     "to": [ "-50%", 0 ]
-  },
-  "anim_chat_bg_wait_push": {
-    "anim_type": "wait",
-    "duration": "($chat_item_lifetime - 0.2)",
-    "next": "@hud.anim_chat_bg_push"
   },
   "anim_chat_stack": {
     "anim_type": "size",

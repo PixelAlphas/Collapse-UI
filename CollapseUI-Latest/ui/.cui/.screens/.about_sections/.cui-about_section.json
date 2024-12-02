@@ -22,7 +22,7 @@
       { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "collapse-ui@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.uititle",
-          "$cuiv:about_text_gray": "v2.3"
+          "$cuiv:about_text_gray": "v2.33"
       }},
       { "update_release_date@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
@@ -149,7 +149,7 @@
             }},
             { "label02": {
                 "type": "label",
-                "text": "@Arcdustry",
+                "text": "@Arxance",
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
                 "color": [ 0.7, 0.7, 0.7 ]
