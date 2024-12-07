@@ -12,7 +12,80 @@
       { "@main_button_element": {}},
       { "@main_button_element_classic": {}},
       { "@extra_menu_button_element": {}},
-      { "@extra_menu_element": {}}
+      { "@extra_menu_element": {}},
+      { "@event_element": {}}
+  ]},
+  "event_element": {
+    "type": "panel",
+    "bindings": [
+      { "binding_name": "#gathering_enabled",
+        "binding_name_override": "#visible"
+    }],
+    "controls": [
+      { "warning": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 8px" ],
+          "texture": "textures/ui/.cui-assets/background_middle",
+          "alpha": "$cuigv:BackgroundAlpha",
+          "color": "$cuigv:SecondaryColor",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -12, 33 ],
+          "controls": [
+            { "number_of_days_played_text": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:FontPrimaryColor",
+                "text": "§eEvent is detected.\n§fYou may try to join, but Collapse-UI's\nCompatibility are not guaranteed.\n§7If UI breaks, i'd advice unapply it.",
+                "shadow": false
+          }}]
+      }},
+      { "event_join@cui-button.text_button": {
+          "size": [ 100, 30 ],
+          "offset": [ -12, -20 ],
+          "$cuiv:subbutton": true,
+          "$cuiv:button_type_panel": "cui-start_screen.button_label",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "$pressed_button_name": "button.gathering",
+          "$cuiv:button_text": "#gathering_button_text",
+          "$cuiv:bindings": [{ "binding_name": "$cuiv:button_text" }]
+      }},
+      { "gathering_caption": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 8px" ],
+          "texture": "textures/ui/.cui-assets/background_middle",
+          "alpha": "$cuigv:BackgroundAlpha",
+          "anchor_to": "bottom_right",
+          "anchor_from": "bottom_right",
+          "layer": 20,
+          "offset": [ -12, -53 ],
+          "$gathering_caption_foreground_color|default": "$0_color_format",
+          "$gathering_caption_background_color|default": "$f_color_format",
+          "color": "$gathering_caption_background_color",
+          "controls": [
+            { "countdown_text": {
+                "type": "label",
+                "text": "#text",
+                "size": [ 88, "default" ],
+                "text_alignment": "right",
+                "layer": 10,
+                "color": "$gathering_caption_foreground_color",
+                "bindings": [
+                  { "binding_name": "#gathering_countdown_text",
+                    "binding_name_override": "#text",
+                    "binding_condition": "always_when_visible"
+                  },
+                  { "binding_name": "#gathering_caption_foreground_color",
+                    "binding_name_override": "#color"
+                  }
+              ]}
+          }],
+          "bindings": [
+            { "binding_name": "#gathering_caption_background_color",
+              "binding_name_override": "#color"
+          }]
+      }}
   ]},
   "selector_area": {
     "type": "panel",
@@ -454,7 +527,9 @@
           "text": "$cuiv:button_text",
           "color": "$cuiv:text_color_main",
           "$cuiv:anims|default": [],
+          "$cuiv:bindings|default": [],
           "anims": "$cuiv:anims",
+          "bindings": "$cuiv:bindings",
           "variables": [
             { "requires": "(($hover_state) or ($pressed_state))",
               "$cuiv:text_color_main": "$cuigv:PrimaryColor"
@@ -705,14 +780,17 @@
                   }},
                   { "paddings": { "type": "panel", "size": [ 3, 0 ]}},
                   { "gametag_profile": {
-                      "type": "image",
+                      "type": "custom",
+                      "renderer": "profile_image_renderer",
                       "anchor_from": "center",
                       "anchor_to": "center",
                       "size": [ 15, 15 ],
                       "layer": 1,
                       "bindings": [
-                        { "binding_name": "#gamerpic_texture_path", "binding_name_override": "#texture" },
-                        { "binding_name": "#gamerpic_texture_location_type", "binding_name_override": "#texture_file_system" }
+                        { "binding_name": "#profile_image_options" },
+                        { "binding_name": "#none",
+                          "binding_name_override": "#visible"
+                        }
                   ]}}
             ]}},
             { "label": {
@@ -793,7 +871,7 @@
           "type": "label",
           "color": "$cuigv:FontPrimaryColor",
           "alpha": "$cuigv:BackgroundAlpha",
-          "text": "Collapse-UI v2.34"
+          "text": "Collapse-UI v2.35"
       }},
       { "paddings": { "type": "panel", "size": [ 4, 1 ]}},
       { "mojang_copyright": {
