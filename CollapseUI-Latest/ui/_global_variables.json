@@ -34,7 +34,7 @@
     // Shows actual image behind the UI — Including Blur version.
   "$cuigv:UIBackgroundSlider": true, // Boolean
     // Shows a sliding images on the Play Button from Start screen.
-  "$cuigv:BackgroundGradientPrimaryColor": [ 0, 0, 0, 0.7 ], // ColorAdv
+  "$cuigv:BackgroundGradientPrimaryColor": [ 0, 0, 0, 0.8 ], // ColorAdv
     // Background Gradient.
   "$cuigv:BackgroundGradientSecondaryColor": [ 0, 0, 0, 0 ], // ColorAdv
     // Background Gradient.

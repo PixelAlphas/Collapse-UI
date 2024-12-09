@@ -164,7 +164,8 @@
                   { "language_button@cui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index" }}
             ]}}
       ]}},
-      { "addons_selector_panel@world_section.addons_selector_panel": { "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))", "$level_texture_pack_toggle_index": "$level_texture_pack_index", "$addon_toggle_index": "$addon_index" }}
+      { "addons_selector_panel@world_section.addons_selector_panel": { "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))", "$level_texture_pack_toggle_index": "$level_texture_pack_index", "$addon_toggle_index": "$addon_index" }},
+      { "pudding": { "type": "panel", "size": [ 8, 4 ]}}
   ]},
   "selector_pane_content": {
     "type": "stack_panel",

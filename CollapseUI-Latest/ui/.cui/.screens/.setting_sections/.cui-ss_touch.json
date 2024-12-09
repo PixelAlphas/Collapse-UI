@@ -189,6 +189,21 @@
               "binding_name_override": "#visible"
           }]
       }},
+      { "option_show_block_select_button@cui-setting_screen.option_toggle": {
+          "ignored": "$education_edition",
+          "$cuiv:option_label_text": "options.showBlockSelectButton",
+          "$cuiv:option_binding_name": "#show_block_select_button",
+          "$cuiv:option_toggle_binding_name": "#show_block_select_button_enabled",
+          "$toggle_name": "show_block_select_button",
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.showBlockSelectButton.message"
+      }},
+      { "option_toggle_left_handed@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.lefthanded",
+          "$cuiv:option_binding_name": "#left_handed",
+          "$cuiv:option_toggle_binding_name": "#left_handed_enabled",
+          "$toggle_name": "left_handed"
+      }},
       { "option_toggle_auto_jump@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.autojump",
           "$cuiv:option_binding_name": "#touch_autojump",

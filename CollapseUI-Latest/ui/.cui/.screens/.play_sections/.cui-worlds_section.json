@@ -316,6 +316,30 @@
         "target_property_name": "#visible"
     }],
     "controls": [
+      { "header_button": {
+          "ignored": "$local_world_upload",
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "layer": 1,
+          "use_child_anchors": true,
+          "size": [ "100%", "100%c" ],
+          "bindings": "$cuiv:search_mode_bindings",
+          "controls": [
+            { "control_centre_label@cui-common.header": { "$cuiv:header_text": "cui.play.controllcentre" }},
+            { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
+            { "regular_buttons": {
+                "type": "stack_panel",
+                "size": [ "100% - 8px", 30 ],
+                "orientation": "horizontal",
+                "controls": [
+                  { "@create_new_world_button": {}},
+                  { "padding_01": { "type": "panel", "size": [ 2, 2 ]}},
+                  { "@quick_play_button": {}},
+                  { "padding_02": { "type": "panel", "size": [ 2, 2 ]}},
+                  { "@import_world_button": {}}
+            ]}},
+            { "play_screen_warning@play.realm_warning_tip": {}}
+      ]}},
       { "empty_whitelist": {
           "type": "stack_panel",
           "orientation": "vertical",
@@ -361,30 +385,6 @@
               "target_property_name": "#visible"
           }],
           "controls": [
-            { "header_button": {
-                "ignored": "$local_world_upload",
-                "type": "stack_panel",
-                "orientation": "vertical",
-                "layer": 1,
-                "use_child_anchors": true,
-                "size": [ "100%", "100%c" ],
-                "bindings": "$cuiv:search_mode_bindings",
-                "controls": [
-                  { "control_centre_label@cui-common.header": { "$cuiv:header_text": "cui.play.controllcentre" }},
-                  { "padding_00": { "type": "panel", "size": [ "100%", 2 ]}},
-                  { "regular_buttons": {
-                      "type": "stack_panel",
-                      "size": [ "100% - 8px", 30 ],
-                      "orientation": "horizontal",
-                      "controls": [
-                        { "@create_new_world_button": {}},
-                        { "padding_01": { "type": "panel", "size": [ 2, 2 ]}},
-                        { "@quick_play_button": {}},
-                        { "padding_02": { "type": "panel", "size": [ 2, 2 ]}},
-                        { "@import_world_button": {}}
-                  ]}},
-                  { "play_screen_warning@play.realm_warning_tip": {}}
-            ]}},
             { "search_mode": {
                 "type": "stack_panel",
                 "orientation": "vertical",

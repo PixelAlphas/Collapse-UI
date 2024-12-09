@@ -12,7 +12,7 @@
       }},
       { "@main_button": {}},
       { "@account_element": {
-          "offset": [ -36, 5 ],
+          "offset": [ -5, 5 ],
           "bindings": [
             { "binding_type": "view",
               "source_control_name": "cuib-player_list",
@@ -623,11 +623,10 @@
   "account_element": {
     "type": "panel",
     "size": [ 140, 24 ],
-    "offset": [ -26, 5 ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
-    "$cuiv-anim:pos_from": [ -46, -50 ],
-    "$cuiv-anim:pos_to": [ -46, 5 ],
+    "$cuiv-anim:pos_from": [ -5, -50 ],
+    "$cuiv-anim:pos_to": [ -5, 5 ],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
       "@cui-anims.screen_outro_anim_push",
@@ -636,6 +635,13 @@
       "@cui-anims.screen_intro_anim_pop"
     ],
     "controls": [
+      { "warning": {
+          "type": "image",
+          "size": [ "100% + 4px", "100% + 4px" ],
+          "texture": "textures/ui/.cui-assets/background_middle",
+          "alpha": "$cuigv:BackgroundAlpha",
+          "color": "$cuigv:SecondaryColor"
+      }},
       { "profile@cui-button.text_button": {
           "$cuiv:button_texture_alpha": 0,
           "size": [ "100% + 4px", "100% + 4px" ],

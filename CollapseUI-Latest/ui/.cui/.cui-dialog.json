@@ -46,6 +46,7 @@
           "type": "image",
           "texture": "textures/ui/.cui-assets/shadow",
           "offset": [ 0, 16 ],
+          "allow_clipping": false,
           "size": [ "100% + 16px", "100%" ],
           "layer": -5
       }},

@@ -144,6 +144,32 @@
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle"
             }}
+      ]}},
+      { "sdinataaa": {
+          "type": "panel",
+          "size": [ "100% - 10px", 18 ],
+          "controls": [
+            { "logo": {
+                "type": "image",
+                "size": [ 16, 16 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "texture": "textures/ui/.cui-assets/.icons/discord_icon"
+            }},
+            { "label01": {
+                "type": "label",
+                "text": "@sdinataaa",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [ -20, 0 ],
+                "color": [ 0.7, 0.7, 0.7 ]
+            }},
+            { "label02": {
+                "type": "label",
+                "text": "sdinataaa | Bahasa / Indonesia",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+            }}
       ]}}
   ]},
   "core_element": {

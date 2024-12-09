@@ -1,0 +1,159 @@
+## Collapse-UI's Default EN lang
+## Settings screen
+cui.settings.experimental.title=Eksperimen
+cui.settings.utilities=Utilitas
+cui.settings.controls=Kontrol
+cui.settings.generals=Umum
+
+## > Accessibility
+cui.settings.accessibility.main.description=Bagian yang dapat membantu terkait disabilitas dan visibilitas.
+cui.settings.accessibility.tts.description=Suara robot yang diputar setelah Anda berinteraksi dengan berbagai hal (text to speech).
+cui.settings.accessibility.misc.description=HUD dan aksesibilitas terkait Permainan, seperti pesan Obrolan dan Kegelapan.
+
+## > General
+cui.settings.general.online.title=Online
+cui.settings.general.online.description=Bagian penting untuk mengelola hal-hal yang berhubungan dengan Online - seperti cara tampilan skin atau paket marketplace yang diupdate secara otomatis. (Ini mungkin berbeda di setiap platform tempat Anda bermain)
+cui.settings.general.network.description=Bagian yang dapat mengontrol jaringan/internet yang terkait, selain WiFi.
+cui.settings.general.misc.description=Info Game tambahan, Kredit, Pembuatan game (game build), dll. mungkin hanya berguna untuk developer/kreator.
+
+## > Creator
+cui.settings.creator.main.description=Bagian yang sangat berguna bagi developer/kreator untuk debugging paket sumber daya / paket perilaku.
+cui.settings.creator.contentlog.title=Log konten
+
+## > Sounds
+cui.settings.sound.main.description=Bagian untuk volume suara.
+cui.settings.sound.main.all.description=Volume Global - Akan mempengaruhi seluruh volume permainan
+cui.settings.sound.main.music.description=Volume Musik/Lagu
+cui.settings.sound.main.audio.description=Volume Audio/SFX
+cui.settings.sound.main.ambient.description=Volume Lingkungan/Gua
+cui.settings.sound.main.block.description=Volume Menempatkan/Memecahkan blok
+cui.settings.sound.main.hostile.description=Volume Mob Jahat
+cui.settings.sound.main.neutral.description=Volume Mob Netral
+cui.settings.sound.main.player.description=Volume Pukulan/Kesakitan
+cui.settings.sound.main.record.description=Volume Disk Musik
+cui.settings.sound.main.weather.description=Volume Cuaca
+cui.settings.sound.main.texttospeech.description=Volume Suara "Beep-Boop"
+
+## > Language
+cui.settings.language.main.description=Bagian untuk mengubah bahasa permainan - CATATAN : Collapse-UI saat ini belum mendukung semua bahasa, hal ini dapat menyebabkan beberapa hal menjadi bahasa Inggris. Kontribusi bahasa dipersilakan!
+
+## > Video
+cui.settings.video.main.description=Bagian untuk menyesuaikan grafis dan hal-hal yang terkait dengan permainan.
+cui.settings.video.gameplay.title=Permainan
+cui.settings.video.gameplay.description=Menyesuaikan pengalaman permainan.
+cui.settings.video.graphic.title=Grafis
+cui.settings.video.graphic.description=Menyesuaikan pengalaman visual dan performa.
+cui.settings.video.advgraphic.title=Grafis Tingkat Lanjut
+cui.settings.video.advgraphic.description=Menyesuaikan pengalaman grafis, misalnya Deferred renderer dan RTX.
+cui.settings.video.ui.title=UI
+cui.settings.video.ui.description=Menyesuaikan UI secara keseluruhan untuk "mungkin" meningkatkan aksesibilitas.
+cui.settings.video.perspective.description=Mengubah perspektif kamera Anda (alias F5)
+
+## > Gamepad
+cui.settings.gamepad.main.description=Bagian untuk menyesuaikan pengalaman bermain controller.
+cui.settings.gamepad.mapping.description=Mengubah pemetaan controller, yang memungkinkan Anda untuk menggunakan/mengubah mekanisme ke tombol yang berbeda.
+
+## > Touch
+cui.settings.touch.main.description=Bagian untuk menyesuaikan pengalaman bermain layar sentuh.
+cui.settings.touch.misc.description=Hal-hal biasa.
+
+## > Keyboard
+cui.settings.keyboardmouse.main.description=Bagian untuk menyesuaikan pengalaman bermain Mouse dan Keyboard.
+cui.settings.keyboardmouse.mapping.description=Mengubah pemetaan keyboard, yang memungkinkan Anda menggunakan mekanisme permainan yang berbeda di tombol yang berbeda.
+
+## > Global Resource
+cui.settings.globalresource.main.description=Bagian untuk memasang paket sumber daya.
+cui.settings.globalresource.deselected.title=Tidak dipilih
+cui.settings.globalresource.deselected.description=Paket yang tidak dipasang saat ini.
+cui.settings.globalresource.selected.title=Dipilih
+cui.settings.globalresource.selected.description=Paket yang dipasang saat ini - Jika Anda menerapkan paket konfigurasi untuk CUI, pertimbangkan untuk menempatkannya di atas Collapse-UI!
+
+## > Account
+cui.settings.accoumt.main.description=Bagian untuk masuk ke akun xbox Anda agar dapat bergabung dengan multiplayer.
+
+
+## Start screen
+cui.main_menu.play=BERMAIN
+cui.main_menu.achievement=PRESTASI
+cui.main_menu.skin=SKIN
+cui.main_menu.settings=PENGATURAN
+cui.main_menu.marketplace=MARKETPLACE
+cui.main_menu.exit=KELUAR
+cui.username.logged_in=Masuk sebagai
+cui.username.local=Bermain sebagai (lokal)
+cui.username.playing=Bermain sebagai
+cui.main_menu.quickaccess=Akses Cepat
+cui.main_menu.infomation=Informasi
+
+## Pause screen
+cui.pause.resume=Lanjutkan
+cui.pause.world=Saat ini sedang bermain
+cui.pause.playerlist=Daftar pemain
+cui.pause.screenshot=Tangkapan Layar
+cui.pause.stories=Cerita
+
+## Play screen
+cui.play.controllcentre=Pusat kontrol
+cui.play.mostrecent=Terbaru
+cui.play.worldsearch.textbar=Cari Dunia (peka huruf besar/kecil)
+cui.play.hidefeaturedserver=Sembunyikan daftar Server Unggulan
+cui.play.viewfeaturedserver=Lihat daftar Server Unggulan
+
+## Safezone
+cui.safezone.exp.title=Pengaturan Eksperimen
+
+## About
+cui.about.title=Tentang UI Ini
+cui.about.tab.about=Tentang
+cui.about.tab.about.uititle=Collapse-UI
+cui.about.tab.about.author=Pembuat UI ini
+cui.about.tab.about.update=Bangun Rilis (build release)
+cui.about.tab.activeconfig=Konfigurasi
+cui.about.tab.activeconfigalt=Konfigurasi Aktif
+
+cui.about.tab.activeconfig.configname=Nama Konfigurasi
+cui.about.tab.activeconfig.designedversion=Versi yang didukung
+
+cui.about.tab.activeconfig.theme=Tema
+cui.about.tab.activeconfig.primarycolor=Warna Primer
+cui.about.tab.activeconfig.secondarycolor=Warna Sekunder
+cui.about.tab.activeconfig.tertiarycolor=Warna Tersier (warna sekunder tetapi lebih gelap)
+cui.about.tab.activeconfig.fontprimarycolor=Warna Primer Huruf
+cui.about.tab.activeconfig.fontsecondarycolor=Warna Sekunder Huruf
+cui.about.tab.activeconfig.backgroundalpha=Latar Belakang Alpha
+cui.about.tab.activeconfig.buttonalpha=Tombol Alpha
+cui.about.tab.activeconfig.uibackground=Latar Belakang
+cui.about.tab.activeconfig.uibackgroundslider= BG (background) yang bergeser di layar Utama
+cui.about.tab.activeconfig.backgroundgradientprimarycolor=Warna Gradien BG (primer)
+cui.about.tab.activeconfig.backgroundgradientsecondarycolor=Warna Gradien BG (sekunder)
+
+cui.about.tab.activeconfig.visual=Visual
+cui.about.tab.activeconfig.shadows=Bayangan
+cui.about.tab.activeconfig.fadedprogressBar=Bilah pemuatan yang memudar
+cui.about.tab.activeconfig.exptextshadows=Teks bilah Pengalaman Edisi Java
+cui.about.tab.activeconfig.backgroundgradient=Gradien Latar Belakang
+cui.about.tab.activeconfig.uianimations=Animasi
+
+cui.about.tab.activeconfig.layout=Tata letak (layouts)
+cui.about.tab.activeconfig.searchboxsystem=Kotak Pencarian Dunia
+cui.about.tab.activeconfig.oldsliderdesign=Desain Geser/Slider Lama
+cui.about.tab.activeconfig.vanillapaperdoll=Boneka Kertas Vanilla
+cui.about.tab.activeconfig.norealmspromoteinworldsection=Tidak ada Promotor Realm di bagian dunia
+cui.about.tab.activeconfig.nogamelogo=Tidak ada logo Game
+cui.about.tab.activeconfig.startmenubuttonclassic=Menu Utama Klasik
+cui.about.tab.activeconfig.logoinpausescreen=Logo di Layar Jeda
+
+cui.about.tab.credit=Kredit
+cui.about.tab.credit.bg=Karya Seni / Background
+cui.about.tab.credit.lang=Bahasa
+
+## Extras
+cui.extras.title=Ekstra
+cui.extras.tips=Tips:
+cui.extras.warning=Peringatan!
+cui.extras.uirestart=Jika Anda menerapkan paket ini untuk pertama kalinya, harap pertimbangkan untuk memulai ulang game terlebih dahulu! Karena UI ini menggunakan font khusus, yang mana pengalamannya dapat bervariasi tanpa memulai ulang.
+cui.extras.goback=Tekan tombol background atau 'ESC' untuk keyboard atau tombol 'Pilih' untuk Controller untuk kembali
+
+options.fov= 
+options.fov.alt=FOV
+resourcePack.subpackResolution.alt=Resolusi

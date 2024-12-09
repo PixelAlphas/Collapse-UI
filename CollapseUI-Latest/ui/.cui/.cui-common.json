@@ -338,6 +338,7 @@
           "texture": "textures/ui/White",
           "color": "$cuigv:BackgroundGradientSecondaryColor",
           "size": [ "100%", 50 ],
+          "alpha": "$cuigv:BackgroundAlpha",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
       }},

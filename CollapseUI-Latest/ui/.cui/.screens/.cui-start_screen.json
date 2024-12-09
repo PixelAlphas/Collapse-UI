@@ -532,7 +532,7 @@
           "bindings": "$cuiv:bindings",
           "variables": [
             { "requires": "(($hover_state) or ($pressed_state))",
-              "$cuiv:text_color_main": "$cuigv:PrimaryColor"
+              "$cuiv:text_color_main": "$cuigv:SecondaryColor"
             },
             { "requires": "($cuiv:subbutton and (($hover_state) or ($pressed_state)))",
               "$cuiv:text_color_main": "$cuigv:SecondaryColor",
@@ -571,14 +571,21 @@
           "type": "custom",
           "renderer": "gradient_renderer",
           "gradient_direction": "vertical",
-          "color1": [ 0, 0, 0, 0 ],
-          "color2": [ 0, 0, 0, 0.7 ],
-          "layer": 3
+          "$cuiv:gradient_color_01|default": [ 0, 0, 0, 0 ],
+          "$cuiv:gradient_color_02|default": [ 0, 0, 0, 0.7 ],
+          "color1": "$cuiv:gradient_color_01",
+          "color2": "$cuiv:gradient_color_02",
+          "layer": 4,
+          "variables": [
+            { "requires": "(($hover_state) or ($pressed_state))",
+              "$cuiv:gradient_color_01": [ 0, 0, 0, 0 ],
+              "$cuiv:gradient_color_02": "$cuigv:PrimaryColor"
+          }]
       }},
       { "game_version": {
           "ignored": "(not $cuiv:gradientbackground)",
           "type": "label",
-          "layer": 4,
+          "layer": 3,
           "alpha": "$cuigv:BackgroundAlpha",
           "offset": [ -5, -4 ],
           "anchor_from": "bottom_right",
@@ -723,6 +730,13 @@
       "@cui-anims.screen_intro_anim_pop"
     ],
     "controls": [
+      { "warning": {
+          "type": "image",
+          "size": [ "100% + 4px", "100% + 4px" ],
+          "texture": "textures/ui/.cui-assets/background_middle",
+          "alpha": "$cuigv:BackgroundAlpha",
+          "color": "$cuigv:SecondaryColor"
+      }},
       { "profile@cui-button.text_button": {
           "$cuiv:button_texture_alpha": 0,
           "size": [ "100% + 4px", "100% + 4px" ],
@@ -871,7 +885,7 @@
           "type": "label",
           "color": "$cuigv:FontPrimaryColor",
           "alpha": "$cuigv:BackgroundAlpha",
-          "text": "Collapse-UI v2.35"
+          "text": "Collapse-UI v2.36"
       }},
       { "paddings": { "type": "panel", "size": [ 4, 1 ]}},
       { "mojang_copyright": {
