@@ -591,6 +591,11 @@
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
           "text": "#version",
+          "color": "$cuiv:text_color_main",
+          "variables": [
+            { "requires": "(($hover_state) or ($pressed_state))",
+              "$cuiv:text_color_main": "$cuigv:SecondaryColor"
+          }],
           "bindings": [
             { "binding_name": "#version" }
       ]}}
