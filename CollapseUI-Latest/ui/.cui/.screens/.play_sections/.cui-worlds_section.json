@@ -372,6 +372,17 @@
                   }}
             ]}}
       ]}},
+      { "search_mode": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%c" ],
+          "use_child_anchors": true,
+          "controls": [
+            { "padding_01": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
+            { "search_bar@cui-common.text_box": { "$cuiv:placeholder_text": "cui.play.worldsearch.textbar", "$cuiv:text_edit_text_control": "string_world", "size": [ "100% - 8px", 20 ], "ignored": "(not $cuigv:SearchBoxSystem)", "$cuiv:text_magnifying_glass_image": true }},
+            { "padding_02": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
+            { "search_grid@cui-worlds_section.search_world_grid": { "ignored": "(not $cuigv:SearchBoxSystem)"}}
+      ]}},
       { "empty_blacklist": {
           "type": "stack_panel",
           "orientation": "vertical",
@@ -385,17 +396,6 @@
               "target_property_name": "#visible"
           }],
           "controls": [
-            { "search_mode": {
-                "type": "stack_panel",
-                "orientation": "vertical",
-                "size": [ "100%", "100%c" ],
-                "use_child_anchors": true,
-                "controls": [
-                  { "padding_01": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
-                  { "search_bar@cui-common.text_box": { "$cuiv:placeholder_text": "cui.play.worldsearch.textbar", "$cuiv:text_edit_text_control": "string_world", "size": [ "100% - 8px", 20 ], "ignored": "(not $cuigv:SearchBoxSystem)", "$cuiv:text_magnifying_glass_image": true }},
-                  { "padding_02": { "type": "panel", "size": [ "100%", 2 ], "ignored": "(not $cuigv:SearchBoxSystem)"}},
-                  { "search_grid@cui-worlds_section.search_world_grid": { "ignored": "(not $cuigv:SearchBoxSystem)"}}
-            ]}},
             { "most_recent": {
                 "type": "stack_panel",
                 "$cuiv:is_recent_world": true,
