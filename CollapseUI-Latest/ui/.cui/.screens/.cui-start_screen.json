@@ -575,7 +575,7 @@
           "$cuiv:gradient_color_02|default": [ 0, 0, 0, 0.7 ],
           "color1": "$cuiv:gradient_color_01",
           "color2": "$cuiv:gradient_color_02",
-          "layer": 4,
+          "layer": 3,
           "variables": [
             { "requires": "(($hover_state) or ($pressed_state))",
               "$cuiv:gradient_color_01": [ 0, 0, 0, 0 ],
@@ -585,7 +585,7 @@
       { "game_version": {
           "ignored": "(not $cuiv:gradientbackground)",
           "type": "label",
-          "layer": 3,
+          "layer": 4,
           "alpha": "$cuigv:BackgroundAlpha",
           "offset": [ -5, -4 ],
           "anchor_from": "bottom_right",
