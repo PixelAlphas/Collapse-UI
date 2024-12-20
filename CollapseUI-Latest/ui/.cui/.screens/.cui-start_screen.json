@@ -284,6 +284,10 @@
               "to_button_id": "button.menu_cancel",
               "mapping_type": "global"
             },
+            { "from_button_id": "button.controller_start",
+              "to_button_id": "button.controller_start",
+              "mapping_type": "global"
+            },
             { "from_button_id": "button.menu_select",
               "to_button_id": "button.menu_select",
               "mapping_type": "pressed"
@@ -890,7 +894,7 @@
           "type": "label",
           "color": "$cuigv:FontPrimaryColor",
           "alpha": "$cuigv:BackgroundAlpha",
-          "text": "Collapse-UI v2.36"
+          "text": "Collapse-UI v2.37"
       }},
       { "paddings": { "type": "panel", "size": [ 4, 1 ]}},
       { "mojang_copyright": {
