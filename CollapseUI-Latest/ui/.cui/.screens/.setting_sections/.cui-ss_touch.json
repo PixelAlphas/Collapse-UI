@@ -5,6 +5,9 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "touch_button_toggle",
@@ -13,25 +16,20 @@
     }],
     "controls": [
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
-      { "section_title": {
-          "type": "label",
-          "text": "options.touch",
-          "size": [ "100% - 12px", "default" ],
-          "font_type": "MinecraftTen",
-          "color": "$cuigv:FontPrimaryColor",
-          "font_scale_factor": 1.8
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.touch", "$cuiv:header_title": "cui.settings.touch.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "options.controlMode.title"
       }},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.touch.main.description",
-          "size": [ "100% - 12px", "default" ],
-          "color": "$cuigv:FontSecondaryColor"
+      { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "controlmode@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_touch.controlmode"}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "key.categories.misc"
       }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
-      { "controlmode@cui-common.element_background": { "$cuiv:header_text": "options.controlMode.title", "$cuiv:element_background_contents": "cui-ss_touch.controlmode"}},
-      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
-      { "misc@cui-common.element_background": { "$cuiv:header_text": "key.categories.misc", "$cuiv:element_background_contents": "cui-ss_touch.misc"}},
-      { "pudding_03": { "type": "panel", "size": [ 1, 4 ]}},
+      { "padding_04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "misc@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_touch.misc"}},
+      { "pudding_05": { "type": "panel", "size": [ 1, 6 ]}},
       { "reset_button@cui-button.text_button": {
           "ignored": "(not $is_pregame)",
           "size": [ "100% - 4px", 30 ],
@@ -39,7 +37,7 @@
           "$cuiv:button_text": "controllerLayoutScreen.resetAllBindings",
           "$focus_override_down": "FOCUS_OVERRIDE_STOP"
       }},
-      { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}}
+      { "pudding_06": { "type": "panel", "size": [ 1, 6 ]}}
   ]},
   "controlmode": {
     "type": "stack_panel",
@@ -47,14 +45,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
       { "note_panel": {
           "type": "image",
@@ -152,15 +142,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_slider_0@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.sensitivity",
           "$slider_name": "touch_sensitivity",

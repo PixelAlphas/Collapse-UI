@@ -1,6 +1,7 @@
 {
   "world_convert_modal_progress_screen": { "$screen_content": "cui-progress_screen.regular_progress_screen_content"},
   "realms_loading_progress_screen": { "$screen_content": "cui-progress_screen.world_modal_progress_panel", "$screen_bg_content": "common.empty_panel", "$use_custom_panorama": "(not $is_holographic)"},
+  "realms_stories_loading_progress_screen": { "$screen_content": "cui-progress_screen.regular_progress_screen_content", "$screen_bg_content": "common.empty_panel", "$use_custom_panorama": "(not $is_holographic)"},
   "world_loading_progress_screen": { "$screen_content": "cui-progress_screen.regular_progress_screen_content", "$screen_bg_content": "cui-common.loading_screen_background", "$use_custom_panorama": "(not $is_holographic)"},
   
   "modal_progress_screen": { "$screen_content": "cui-progress_screen.modal_screen_content", "$screen_bg_content": "cui-common.menu_screen_background", "$is_full_screen_layout": true},

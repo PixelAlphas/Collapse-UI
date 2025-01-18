@@ -1,3 +1,4 @@
+// Not doing that my apologies, it's pretty buggy to work with.
 { "namespace": "cui-ss_storage",
   "storage_section": {
     "type": "stack_panel",

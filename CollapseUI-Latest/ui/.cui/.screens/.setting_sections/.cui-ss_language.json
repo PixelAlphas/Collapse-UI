@@ -5,6 +5,9 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "language_button_toggle",
@@ -13,15 +16,8 @@
     }],
     "controls": [
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
-      { "section_title": {
-          "type": "label",
-          "text": "options.language",
-          "size": [ "100% - 12px", "default" ],
-          "font_type": "MinecraftTen",
-          "color": "$cuigv:FontPrimaryColor",
-          "font_scale_factor": 1.8
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.language", "$cuiv:header_title": "cui.settings.language.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
       { "language@cui-common.element_background": { "$cuiv:header_text": "options.language", "$cuiv:element_background_contents": "cui-ss_language.language"}}
   ]},
   "language": {
@@ -30,15 +26,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "language_list_grid": {
           "type": "grid",
           "size": [ "100% - 8px", "100%c" ],

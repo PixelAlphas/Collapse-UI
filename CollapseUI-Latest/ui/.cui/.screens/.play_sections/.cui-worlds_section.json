@@ -396,19 +396,6 @@
               "target_property_name": "#visible"
           }],
           "controls": [
-            { "most_recent": {
-                "type": "stack_panel",
-                "$cuiv:is_recent_world": true,
-                "collection_name": "local_worlds",
-                "bindings": "$cuiv:search_mode_bindings",
-                "controls": [
-                  { "most_recent_label@cui-common.header": { "$cuiv:header_text": "cui.play.mostrecent" }},
-                  { "padding_07": { "type": "panel", "size": [ "100%", 2 ]}},
-                  { "recent_world@cui-worlds_section.local_world_item": {
-                      "collection_index": 0
-                  }}
-            ]}},
-            { "padding_01": { "type": "panel", "ignored": "((not $is_realms_enabled) or ($cuigv:NoRealmsPromoteInWorldSection))", "size": [ "100%", 2 ]}},
             { "realms_panel": {
                 "ignored": "((not $is_realms_enabled) or ($cuigv:NoRealmsPromoteInWorldSection))",
                 "type": "stack_panel",
@@ -516,6 +503,19 @@
                       "$information_panel_label_text_binding_condition": "always_when_visible"
                   }},
                   { "open_uri_button@play.open_account_setting_button": {}}
+            ]}},
+            { "padding_01": { "type": "panel", "ignored": "((not $is_realms_enabled) or ($cuigv:NoRealmsPromoteInWorldSection))", "size": [ "100%", 2 ]}},
+            { "most_recent": {
+                "type": "stack_panel",
+                "$cuiv:is_recent_world": true,
+                "collection_name": "local_worlds",
+                "bindings": "$cuiv:search_mode_bindings",
+                "controls": [
+                  { "most_recent_label@cui-common.header": { "$cuiv:header_text": "cui.play.mostrecent" }},
+                  { "padding_07": { "type": "panel", "size": [ "100%", 2 ]}},
+                  { "recent_world@cui-worlds_section.local_world_item": {
+                      "collection_index": 0
+                  }}
             ]}},
             { "padding_03": { "type": "panel", "size": [ "100%", 2 ]}},
             { "world_section": {

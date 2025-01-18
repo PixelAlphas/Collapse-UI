@@ -98,20 +98,42 @@
     "$cuiv:lwb_text|default": "?",
     "$cuiv:lwb_text_color|default": "$cuigv:SecondaryColor",
     "$cuiv:lwb_bg_color|default": "$cuigv:PrimaryColor",
-    "$cuiv:lwb_bindings|default": "",
+    "$cuiv:lwb_bindings|default": [],
     "controls": [
-      {
-        "label": {
+      { "main": {
           "type": "label",
           "text": "$cuiv:lwb_text",
           "color": "$cuiv:lwb_text_color",
           "shadow": false,
           "layer": 2,
           "bindings": "$cuiv:lwb_bindings"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
+  "label_with_background_adv": {
+    "type": "image",
+    "size": [ "100%c + 12px", "100%c + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuiv:lwb_bg_color",
+    "$cuiv:lwb_text|default": "?",
+    "$cuiv:lwb_text_color|default": "$cuigv:FontPrimaryColor",
+    "$cuiv:lwb_text_alignment|default": "center",
+    "$cuiv:lwb_text_size|default": [ "default", "default" ],
+    "$cuiv:lwb_bg_color|default": "$cuigv:SecondaryColor",
+    "$cuiv:lwb_bindings|default": [],
+    "controls": [
+      { "main": {
+          "type": "label",
+          "layer": 1,
+          "enable_profanity_filter": false,
+          "color": "$cuiv:lwb_text_color",
+          "text": "$cuiv:lwb_text",
+          "shadow": false,
+          "size": "$cuiv:lwb_text_size",
+          "text_alignment": "$cuiv:lwb_text_alignment",
+          "bindings": "$cuiv:lwb_bindings"
+      }}
+  ]},
   "experience_bar_template": {
     "type": "image",
     "size": [ "100%", "100%" ],
@@ -131,7 +153,8 @@
     "$cuiv:text_background_default": "cui-common.edit_box_indent",
     "$cuiv:text_background_hover": "cui-common.edit_box_indent_hover",
     "$cuiv:text_background_locked": "cui-common.edit_box_indent_locked",
-    "max_length": 256,
+    "max_length": 512,
+    "always_listening": true,
     "$cuiv:text_edit_box_content_binding_type|default": "global",
     "$cuiv:text_edit_box_content_binding_name|default": "#text_box_item_name",
     "$cuiv:text_edit_box_binding_condition|default": "visible",
@@ -286,8 +309,7 @@
       { "binding_type": "view",
         "source_property_name": "(1.0 - (#loading_bar_percentage))",
         "target_property_name": "#size_binding_x"
-      }
-    ],
+    }],
     "controls": [
       { "head@cui-common.gradient_renderer_template": {
           "size": [ 20, "100%" ],
@@ -312,13 +334,18 @@
   ]},
   "edit_box_indent": {
     "type": "image",
-    "texture": "textures/ui/.cui-assets/text_box"
+    "texture": "textures/ui/.cui-assets/text_box",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor"
   },
   "edit_box_indent_hover@cui-common.edit_box_indent": {
-    "texture": "textures/ui/.cui-assets/text_box_hover"
+    "texture": "textures/ui/.cui-assets/text_box_hover",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:PrimaryColor"
   },
   "edit_box_indent_locked@cui-common.edit_box_indent": {
     "texture": "textures/ui/.cui-assets/text_box_hover",
+    "alpha": "$cuigv:BackgroundAlpha",
     "color": [ 1, 0, 0 ]
   },
   "loading_screen_background": {
@@ -405,6 +432,7 @@
     "$cuiv:title_back_button|default": true,
     "$cuiv:title_text|default": "Collapse-UI",
     "$cuiv:title_text_subtitle|default": "",
+    "$cuiv:title_text_color|default": "$cuigv:FontPrimaryColor",
     "$cuiv-anim:pos_from": [ 14, -50 ],
     "$cuiv-anim:pos_to": [ 14, 4 ],
     "$cuiv:AddPadding|default": false,
@@ -430,6 +458,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "font_type": "MinecraftTen",
+          "color": "$cuiv:title_text_color",
           "controls": [
             { "version_label": {
                 "ignored": "$cuiv:title_back_button",
@@ -437,8 +466,8 @@
                 "text": "$cuiv:title_text_subtitle",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "font_type": "dainbold",
                 "offset": [ 125, 12 ],
+                "color": "$cuiv:title_text_color",
                 "alpha": 0.7
             }}
       ]}}
@@ -461,36 +490,51 @@
   ]},
   "header": {
     "type": "panel",
-    "size": [ "100%", 14 ],
+    "size": [ "100%", 20 ],
     "$cuiv:header_text|default": "none",
+    "$cuiv:header_anchor|default": "left_middle",
+    "$cuiv:header_background|default": false,
     "controls": [
-      { "background": {
+      { "label": {
           "type": "image",
-          "texture": "textures/ui/.cui-assets/background",
-          "color": "$cuigv:SecondaryColor",
-          "alpha": "$cuigv:BackgroundAlpha",
-          "size": [ "100%", "100%" ]
-      }},
-      { "list_label": {
-          "type": "label",
-          "size": [ "100% - 8px", 10 ],
-          "font_type": "MinecraftTen",
-          "text": "$cuiv:header_text",
-          "layer": 10,
-          "offset": [ 0, -2 ]
-      }},
-      { "outline": {
-          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 8px" ],
+          "texture": "textures/ui/.cui-assets/background_no_outline",
           "color": "$cuigv:PrimaryColor",
-          "texture": "textures/ui/White",
-          "size": [ "100% - 8px", 1 ],
+          "anchor_from": "$cuiv:header_anchor",
+          "anchor_to": "$cuiv:header_anchor",
+          "layer": 2,
+          "controls": [
+            { "main": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "$cuiv:header_text",
+                "font_type": "MinecraftTen",
+                "offset": [ 0, -1 ],
+                "shadow": false
+            }}
+      ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100%", 4 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
-          "offset": [ 0, -1 ]
+          "layer": 2,
+          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "color": "$cuigv:PrimaryColor"
+      }},
+      { "background": {
+          "ignored": "(not $cuiv:header_background)",
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "layer": 1,
+          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "color": "$cuigv:TertiaryColor"
       }}
   ]},
   "element_background":{
     "type": "image",
+    "$cuiv:element_background_no_label|default": false,
     "$cuiv:element_background_alpha|default": "$cuigv:BackgroundAlpha",
     "$cuiv:element_background_color|default": "$cuigv:SecondaryColor",
     "$cuiv:element_background_size|default": [ "default", "100%cm" ],
@@ -509,6 +553,7 @@
       { "header_contents@$cuiv:element_background_contents": {}},
       { "header_label":{
           "type": "label",
+          "ignored": "$cuiv:element_background_no_label",
           "text": "$cuiv:header_text",
           "layer": 1,
           "shadow": false,
@@ -517,7 +562,8 @@
           "offset": [ 5.5, 2 ],
           "font_type": "MinecraftTen",
           "font_scale_factor": 1.5,
-          "max_size": [ "90%", 45 ]
+          "max_size": [ "90%", 45 ],
+          "color": "$cuigv:FontPrimaryColor"
       }}
   ]}
 }

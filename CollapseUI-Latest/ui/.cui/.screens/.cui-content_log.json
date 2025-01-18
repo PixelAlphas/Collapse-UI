@@ -15,7 +15,7 @@
     "size": [ "100% - 24px", "100% - 74px" ],
     "alpha": "$cuigv:BackgroundAlpha",
     "layer": -80,
-    "color": [ 0, 0, 0 ]
+    "color": "$cuigv:SecondaryColor"
   },
   "main_button": {
     "type": "stack_panel",

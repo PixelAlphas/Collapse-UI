@@ -13,22 +13,9 @@
     }],
     "controls": [
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
-      { "section_title": {
-          "type": "label",
-          "text": "options.account",
-          "size": [ "100% - 12px", "default" ],
-          "font_type": "MinecraftTen",
-          "color": "$cuigv:FontPrimaryColor",
-          "font_scale_factor": 1.8
-      }},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.accoumt.main.description",
-          "size": [ "100% - 12px", "default" ],
-          "color": "$cuigv:FontSecondaryColor"
-      }},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.account", "$cuiv:header_title": "cui.settings.account.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
-      { "account@cui-common.element_background": { "$cuiv:header_text": "options.account", "$cuiv:element_background_contents": "cui-ss_account.account"}}
+      { "account@cui-common.element_background": { "$cuiv:element_background_no_label": true, "$cuiv:element_background_contents": "cui-ss_account.account"}}
   ]},
   "account": {
     "type": "stack_panel",
@@ -36,15 +23,7 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
+      { "pudding_00": { "type": "panel", "size": [ 1, 4 ]}},
       { "option_toggle0@cui-setting_screen.option_toggle": {
           "ignored": "$ignore_profile_sso_toggle",
           "$cuiv:option_label_text": "options.adEduRememberMe",
@@ -68,18 +47,17 @@
               "binding_name_override": "#visible"
           }],
           "controls": [
-            { "gamerpic": {
-                "type": "image",
+            { "gametag_profile": {
+                "type": "custom",
+                "renderer": "profile_image_renderer",
                 "size": [ 30, 30 ],
                 "layer": 1,
                 "bindings": [
-                  { "binding_name": "#gamerpic_texture_path",
-                    "binding_name_override": "#texture"
-                  },
-                  { "binding_name": "#gamerpic_texture_location_type",
-                    "binding_name_override": "#texture_file_system"
-                }]
-            }},
+                  { "binding_name": "#profile_image_options" },
+                  { "binding_name": "#none",
+                    "binding_name_override": "#visible"
+                  }
+            ]}},
             { "labels": { 
                 "type": "panel",
                 "size": [ "fill", 30 ],
@@ -147,7 +125,8 @@
             { "binding_name": "#logged_in",
               "binding_name_override": "#visible"
           }]
-      }}
+      }},
+      { "pudding_00": { "type": "panel", "size": [ 1, 4 ]}}
   ]},
   "switch_accounts_panel": {
     "type": "stack_panel",

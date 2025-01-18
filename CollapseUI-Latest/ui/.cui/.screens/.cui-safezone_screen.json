@@ -5,10 +5,6 @@
       { "safe_zone_bounds_markers": {
           "type": "panel",
           "controls": [
-            { "top_left_marker@safe_zone.corner_tl": {} },
-            { "top_right_marker@safe_zone.corner_tr": {} },
-            { "bottom_left_marker@safe_zone.corner_bl": {} },
-            { "bottom_right_marker@safe_zone.corner_br": {} },
             { "border@cui-safezone_screen.corner_image_border": {} }
             
       ]}},
@@ -17,25 +13,13 @@
           "size": [ 300, 200 ],
           "ttsSectionContainer": true,
           "controls": [
-            { "title_text": {
-                "type": "label",
-                "layer": 1,
-                "text": "options.safeZone.title",
-                "font_type": "MinecraftTen",
-                "font_scale_factor": 1.5,
-                "size": [ "default", 20 ],
+            { "utilities@cui-common.header": { 
+                "size": [ "100% - 14px", 20 ],
                 "anchor_to": "top_middle",
-                "anchor_from": "top_middle"
-            }},
-            { "outline": {
-                "type": "image",
-                "size": [ "100% - 14px", 1 ],
-                "texture": "textures/ui/White",
                 "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "layer": 2,
-                "color": "$cuigv:PrimaryColor",
-                "offset": [ 0, 22 ]
+                "offset": [ 0, 2 ],
+                "$cuiv:header_text": "options.safeZone.title",
+                "$cuiv:header_anchor": "center"
             }},
             { "scrolling_panel@common.scrolling_panel": {
                 "anchor_from": "top_left",
@@ -65,8 +49,7 @@
   "corner_image_border": {
     "type": "panel",
     "controls": [
-      {
-        "left_border": {
+      { "left_border": {
           "type": "image",
           "size": [ 1, "100%" ],
           "anchor_from": "left_middle",
@@ -77,15 +60,11 @@
             "#anchored_offset_value_x": 0.0
           },
           "bindings": [
-            {
-              "binding_name": "#left_safe_zone_offset",
+            { "binding_name": "#left_safe_zone_offset",
               "binding_name_override": "#anchored_offset_value_x"
-            }
-          ]
-        }
-      },
-      {
-        "right_border": {
+          }]
+      }},
+      { "right_border": {
           "type": "image",
           "size": [ 1, "100%" ],
           "anchor_from": "right_middle",
@@ -96,15 +75,11 @@
             "#anchored_offset_value_x": 0.0
           },
           "bindings": [
-            {
-              "binding_name": "#right_safe_zone_offset",
+            { "binding_name": "#right_safe_zone_offset",
               "binding_name_override": "#anchored_offset_value_x"
-            }
-          ]
-        }
-      },
-      {
-        "top_border": {
+          }]
+      }},
+      { "top_border": {
           "type": "image",
           "size": [ "100%", 1 ],
           "anchor_from": "top_middle",
@@ -115,15 +90,11 @@
             "#anchored_offset_value_y": 0.0
           },
           "bindings": [
-            {
-              "binding_name": "#top_safe_zone_offset",
+            { "binding_name": "#top_safe_zone_offset",
               "binding_name_override": "#anchored_offset_value_y"
-            }
-          ]
-        }
-      },
-      {
-        "bottom_border": {
+          }]
+      }},
+      { "bottom_border": {
           "type": "image",
           "size": [ "100%", 1 ],
           "anchor_from": "bottom_middle",
@@ -134,15 +105,11 @@
             "#anchored_offset_value_y": 0.0
           },
           "bindings": [
-            {
-              "binding_name": "#bottom_safe_zone_offset",
+            { "binding_name": "#bottom_safe_zone_offset",
               "binding_name_override": "#anchored_offset_value_y"
-            }
-          ]
-        }
-      }
-    ]
-  },
+          }]
+      }}
+  ]},
   "safezone_section": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],

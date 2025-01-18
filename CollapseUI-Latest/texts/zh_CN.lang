@@ -62,7 +62,7 @@ cui.settings.keyboardmouse.main.description=调整鼠标和键盘体验的部分
 cui.settings.keyboardmouse.mapping.description=更改键盘映射，这可能允许你在不同的键上使用不同的游戏机制。
 
 ## Account
-cui.settings.accoumt.main.description=登录你的xbox帐户以加入多人游戏的部分。
+cui.settings.account.main.description=登录你的xbox帐户以加入多人游戏的部分。
 
 ## > Global Resource
 cui.settings.globalresource.main.description=应用资源包的部分。

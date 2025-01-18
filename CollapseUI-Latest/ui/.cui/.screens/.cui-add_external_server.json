@@ -9,9 +9,9 @@
           "type": "image",
           "size": [ "250%", "250%" ],
           "layer": -50,
-          "alpha": 0.2,
+          "alpha": 0.6,
           "texture": "textures/ui/White",
-          "color": "$cuigv:PrimaryColor"
+          "color": "$cuigv:TertiaryColor"
       }}
   ]},
   "play_button@cui-button.text_button": {

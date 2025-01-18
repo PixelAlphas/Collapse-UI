@@ -7,6 +7,9 @@
     "$cuiv:keymapping_grid_dimension": "#gamepad_grid_dimension",
     "$cuiv:keymapping_collection": "gamepad_collection",
     "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "gamepad_button_toggle",
@@ -15,32 +18,23 @@
     }],
     "controls": [
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
-      { "section_title": {
-          "type": "label",
-          "text": "options.controller",
-          "size": [ "100% - 12px", "default" ],
-          "font_type": "MinecraftTen",
-          "color": "$cuigv:FontPrimaryColor",
-          "font_scale_factor": 1.8
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.controller", "$cuiv:header_title": "cui.settings.gamepad.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "gamepad@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_gamepad.gamepad"}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "options.controllerLayout"
       }},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.gamepad.main.description",
-          "size": [ "100% - 12px", "default" ],
-          "color": "$cuigv:FontSecondaryColor"
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
-      { "gamepad@cui-common.element_background": { "$cuiv:header_text": "options.controller", "$cuiv:element_background_contents": "cui-ss_gamepad.gamepad"}},
-      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
-      { "mapping@cui-common.element_background": { "$cuiv:header_text": "options.controllerLayout", "$cuiv:element_background_contents": "cui-ss_gamepad.mapping"}},
-      { "pudding_03": { "type": "panel", "size": [ 1, 4 ]}},
+      { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "mapping@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_gamepad.mapping"}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}},
       { "reset_button@cui-button.text_button": {
           "size": [ "100% - 4px", 30 ],
           "$pressed_button_name": "button.reset_gamepad_bindings",
           "$cuiv:button_text": "controllerLayoutScreen.resetAllBindings",
           "$focus_override_down": "FOCUS_OVERRIDE_STOP"
       }},
-      { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}}
+      { "pudding_04": { "type": "panel", "size": [ 1, 6 ]}}
   ]},
   "gamepad": {
     "type": "stack_panel",
@@ -48,15 +42,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_slider_0@cui-setting_screen.option_slider": {
           "ignored": "($is_holographic and not $is_living_room_mode)",
           "$cuiv:option_label_text": "options.sensitivity",
@@ -146,35 +131,10 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "gamepad_keymapping_grid@cui-ss_gamepad.gamepad_mapping_grid": {
           "ignored": "$ignore_controller_layout"
       }},
       { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}}
-  ]},
-  "misc": {
-    "type": "stack_panel",
-    "size": [ "100% - 4px", "100%c" ],
-    "orientation": "vertical",
-    "use_child_anchors": true,
-    "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 20 ]}},
-      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 1 ],
-          "texture": "textures/ui/White",
-          "color": [ 0.6, 0.6, 0.6 ]
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}}
   ]},
   "gamepad_mapping_grid": {
     "type": "grid",

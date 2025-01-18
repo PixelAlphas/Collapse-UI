@@ -146,12 +146,25 @@
     "from": [ 0, 0 ],
     "to": [ "-50%", 0 ]
   },
-  "anim_chat_stack": {
+  "anim_chat_pile_up": {
     "anim_type": "size",
     "easing": "out_expo",
     "duration": 0.5,
-    "from": [ "100%", 0 ],
-    "to": [ "100%", "100%c" ]
+    "from": [ "100%", "0%c" ],
+    "to": [ "100%", "100%c" ],
+    "next": "@hud.anim_chat_pile_wait"
+  },
+  "anim_chat_pile_wait": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@hud.anim_chat_pile_down"
+  },
+  "anim_chat_pile_down": {
+    "anim_type": "size",
+    "easing": "in_quart",
+    "duration": 0.3,
+    "from": [ "100%", "100%c" ],
+    "to": [ "100%", "0%c" ]
   },
   "chat_label": {
 		"anims": [
@@ -159,7 +172,7 @@
   ]},
 	"chat_grid_item": {
 		"anims": [
-		  "@hud.anim_chat_stack"
+		  "@hud.anim_chat_pile_up"
   ]},
 	"chat_grid_item/chat_background": {
 		"$chat_bg_alpha|default": 0.7,

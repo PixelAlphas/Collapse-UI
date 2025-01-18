@@ -5,6 +5,9 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "creator_button_toggle",
@@ -13,29 +16,32 @@
     }],
     "controls": [
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
-      { "section_title": {
-          "type": "label",
-          "text": "options.creator",
-          "size": [ "100% - 12px", "default" ],
-          "font_type": "MinecraftTen",
-          "color": "$cuigv:FontPrimaryColor",
-          "font_scale_factor": 1.8
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.creator", "$cuiv:header_title": "cui.settings.creator.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "options.creator.debuggerHeading"
       }},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.creator.main.description",
-          "size": [ "100% - 12px", "default" ],
-          "color": "$cuigv:FontSecondaryColor"
+      { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "debugger@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_creator.debugger_toggles_panel", "bindings": [{ "binding_name": "#script_debugger_options_enabled", "binding_name_override": "#enabled" }]}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "options.creator.watchdogHeading"
       }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
-      { "debugger@cui-common.element_background": { "$cuiv:header_text": "options.creator.debuggerHeading", "$cuiv:element_background_contents": "cui-ss_creator.debugger_toggles_panel", "bindings": [{ "binding_name": "#script_debugger_options_enabled", "binding_name_override": "#enabled" }]}},
-      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
-      { "watchdog@cui-common.element_background": { "$cuiv:header_text": "options.creator.watchdogHeading", "$cuiv:element_background_contents": "cui-ss_creator.watchdog_toggles_panel", "bindings": [{ "binding_name": "#script_watchdog_options_enabled", "binding_name_override": "#enabled" }]}},
-      { "pudding_03": { "type": "panel", "size": [ 1, 4 ]}},
-      { "deviceinfo@cui-common.element_background": { "$cuiv:header_text": "options.creator.deviceInfo", "$cuiv:element_background_contents": "cui-ss_creator.deviceinfo"}},
-      { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}},
-      { "contentlog@cui-common.element_background": { "$cuiv:header_text": "options.creatorTitle", "$cuiv:element_background_contents": "cui-ss_creator.contentlog"}},
-      { "pudding_05": { "type": "panel", "size": [ 1, 4 ]}},
+      { "padding_04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "watchdog@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_creator.watchdog_toggles_panel", "bindings": [{ "binding_name": "#script_watchdog_options_enabled", "binding_name_override": "#enabled" }]}},
+      { "pudding_05": { "type": "panel", "size": [ 1, 6 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "options.creator.deviceInfo"
+      }},
+      { "padding_06": { "type": "panel", "size": [ 1, 2 ]}},
+      { "deviceinfo@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_creator.deviceinfo"}},
+      { "pudding_07": { "type": "panel", "size": [ 1, 6 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "options.creatorTitle"
+      }},
+      { "padding_08": { "type": "panel", "size": [ 1, 2 ]}},
+      { "contentlog@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_creator.contentlog"}},
+      { "pudding_09": { "type": "panel", "size": [ 1, 6 ]}},
       { "reset_button@cui-button.text_button": {
           "ignored": "(not $is_pregame)",
           "size": [ "100% - 4px", 30 ],
@@ -44,7 +50,7 @@
           "$focus_override_down": "FOCUS_OVERRIDE_STOP",
           "property_bag": { "reset_group": "creator" }
       }},
-      { "pudding_06": { "type": "panel", "size": [ 1, 4 ]}}
+      { "pudding_10": { "type": "panel", "size": [ 1, 6 ]}}
   ]},
   "contentlog": {
     "type": "stack_panel",
@@ -52,15 +58,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_content_file_log@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.copyCoordinateUI",
           "$cuiv:option_binding_name": "#copy_coordinate_ui",
@@ -212,15 +209,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "serverbound_client_diagnostics_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.creator.serverboundClientDiagnosticsEnabled",
           "$cuiv:option_binding_name": "#serverbound_client_diagnostics_enabled",
@@ -319,15 +307,6 @@
         "binding_name_override": "#enabled"
     }],
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "device_info_memory_tier_use_override_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.creator.deviceInfoUseMemoryTierOverride",
           "$cuiv:option_binding_name": "#device_info_use_memory_tier_override",
@@ -393,15 +372,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "hang_threshold_slider@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.creator.watchdogHangThreshold",
           "$slider_name": "script_watchdog_hang_threshold",

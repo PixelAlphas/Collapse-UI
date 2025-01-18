@@ -17,7 +17,7 @@ cui.settings.general.network.description=Bagian yang dapat mengontrol jaringan/i
 cui.settings.general.misc.description=Info Game tambahan, Kredit, Pembuatan game (game build), dll. mungkin hanya berguna untuk developer/kreator.
 
 ## > Creator
-cui.settings.creator.main.description=Bagian yang sangat berguna bagi developer/kreator untuk debugging paket sumber daya / paket perilaku.
+cui.settings.creator.main.description=Bagian yang sangat berguna bagi developer untuk debugging paket sumber daya/paket perilaku.
 cui.settings.creator.contentlog.title=Log konten
 
 ## > Sounds
@@ -28,7 +28,7 @@ cui.settings.sound.main.audio.description=Volume Audio/SFX
 cui.settings.sound.main.ambient.description=Volume Lingkungan/Gua
 cui.settings.sound.main.block.description=Volume Menempatkan/Memecahkan blok
 cui.settings.sound.main.hostile.description=Volume Mob Jahat
-cui.settings.sound.main.neutral.description=Volume Mob Netral
+cui.settings.sound.main.neutral.description=Volume Mob Baik Hati/Netral
 cui.settings.sound.main.player.description=Volume Pukulan/Kesakitan
 cui.settings.sound.main.record.description=Volume Disk Musik
 cui.settings.sound.main.weather.description=Volume Cuaca
@@ -69,11 +69,11 @@ cui.settings.globalresource.selected.title=Dipilih
 cui.settings.globalresource.selected.description=Paket yang dipasang saat ini - Jika Anda menerapkan paket konfigurasi untuk CUI, pertimbangkan untuk menempatkannya di atas Collapse-UI!
 
 ## > Account
-cui.settings.accoumt.main.description=Bagian untuk masuk ke akun xbox Anda agar dapat bergabung dengan multiplayer.
+cui.settings.account.main.description=Bagian untuk masuk ke akun xbox Anda agar dapat bergabung dengan multipemain.
 
 
 ## Start screen
-cui.main_menu.play=BERMAIN
+cui.main_menu.play=MAIN
 cui.main_menu.achievement=PRESTASI
 cui.main_menu.skin=SKIN
 cui.main_menu.settings=PENGATURAN
@@ -86,7 +86,7 @@ cui.main_menu.quickaccess=Akses Cepat
 cui.main_menu.infomation=Informasi
 
 ## Pause screen
-cui.pause.resume=Lanjutkan
+cui.pause.resume=LANJUTKAN
 cui.pause.world=Saat ini sedang bermain
 cui.pause.playerlist=Daftar pemain
 cui.pause.screenshot=Tangkapan Layar
@@ -123,7 +123,7 @@ cui.about.tab.activeconfig.fontsecondarycolor=Warna Sekunder Huruf
 cui.about.tab.activeconfig.backgroundalpha=Latar Belakang Alpha
 cui.about.tab.activeconfig.buttonalpha=Tombol Alpha
 cui.about.tab.activeconfig.uibackground=Latar Belakang
-cui.about.tab.activeconfig.uibackgroundslider= BG (background) yang bergeser di layar Utama
+cui.about.tab.activeconfig.uibackgroundslider=BG (background) yang bergeser di layar Utama
 cui.about.tab.activeconfig.backgroundgradientprimarycolor=Warna Gradien BG (primer)
 cui.about.tab.activeconfig.backgroundgradientsecondarycolor=Warna Gradien BG (sekunder)
 

@@ -2,7 +2,7 @@
   // General
   "$cuigv:ConfigName": "Default",
     // Config name — You can change it to anything you want if you wish to customize.
-  "$cuigv:DesignedVersion": "v2.3",
+  "$cuigv:DesignedVersion": "v3.0",
     // Designed Version — Config version that supported the UI
   
   // -- README before modifying! --
@@ -62,13 +62,14 @@
     // Shows your character/skin on the menu.
   "$cuigv:NoGameLogo": false, // Boolean
     // Replace the UI logo with game logo.
-  "$cuigv:NoRealmsPromoteInWorldSection": true, // Boolean
+  "$cuigv:NoRealmsPromoteInWorldSection": false, // Boolean
     // Realms promotion on world section.
   "$cuigv:NoMarketplaceButton": false, // Boolean
     // No Marketplace Button on either pause and start screen.
+  "$cuigv:HorizontalSlider": false, // Boolean
+    // Make the slider into horizontal instead vertical. ( Old slider design returns )
   
   // Unused - will do nothing...
-  "$cuigv:OldSliderDesign": false, // Boolean
   "$cuigv:OriginUI": true, // Boolean
   "$cuigv:DebugElement": false, // Boolean
   "$cuigv:CompactMode": false, // Boolean

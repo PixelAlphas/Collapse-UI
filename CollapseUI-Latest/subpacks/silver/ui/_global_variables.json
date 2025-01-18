@@ -1,0 +1,36 @@
+{
+  "$cuigv:ConfigName": "Silver",
+  "$cuigv:DesignedVersion": "v3.0",
+
+  "$cuigv:PrimaryColor": [ 0.85, 0.85, 0.85 ], 
+  "$cuigv:SecondaryColor": [ 0.1, 0.1, 0.1 ], 
+  "$cuigv:TertiaryColor": [ 0.40, 0.40, 0.40 ],
+  "$cuigv:FontPrimaryColor": [ 1, 1, 1 ], 
+  "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ], 
+  "$cuigv:BackgroundAlpha": 0.8, 
+  "$cuigv:ButtonAlpha": 0.8, 
+  "$cuigv:UIBackground": false, 
+  "$cuigv:UIBackgroundSlider": true, 
+  "$cuigv:BackgroundGradientPrimaryColor": [ 0, 0, 0, 0.8 ], 
+  "$cuigv:BackgroundGradientSecondaryColor": [ 0, 0, 0, 0 ], 
+
+  "$cuigv:Shadows": true, 
+  "$cuigv:FadedProgressBar": true, 
+  "$cuigv:ExpTextShadows": true, 
+  "$cuigv:BackgroundGradient": true, 
+  "$cuigv:UIAnimations": true,
+
+  "$cuigv:LogoInPauseScreen": true,
+  "$cuigv:StartMainButtonClassic": false,
+  "$cuigv:SearchBoxSystem": true, 
+  "$cuigv:VanillaPaperdoll": false, 
+  "$cuigv:NoGameLogo": false, 
+  "$cuigv:NoRealmsPromoteInWorldSection": false, 
+  "$cuigv:NoMarketplaceButton": false, 
+  "$cuigv:HorizontalSlider": false, 
+  
+  "$cuigv:OriginUI": true,
+  "$cuigv:DebugElement": false, 
+  "$cuigv:CompactMode": false, 
+  "$cuigv:AdditionalStartButtons": true 
+}

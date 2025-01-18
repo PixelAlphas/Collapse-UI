@@ -42,6 +42,7 @@
     "size": [ 16, 16 ],
     "uv_size": [ 16, 16 ],
     "uv": "@cui-anims.loading_anim",
+    "color": "$cuigv:FontPrimaryColor",
     "disable_anim_fast_forward": true,
     "animation_reset_name": "screen_animation_reset",
     "anims": [
@@ -72,6 +73,7 @@
           "anchor_to": "bottom_middle",
           "$cuiv-anim:pos_from": [ 0, 20 ],
           "$cuiv-anim:pos_to": [ 0, -30 ],
+          "color": "$cuigv:SecondaryColor",
           "animation_reset_name": "screen_animation_reset",
           "anims": [
             "@cui-anims.screen_outro_anim_push",
@@ -87,6 +89,7 @@
           "anchor_to": "bottom_left",
           "$cuiv-anim:pos_from": [ 14, 24 ],
           "$cuiv-anim:pos_to": [ 14, -26 ],
+          "color": "$cuigv:FontPrimaryColor",
           "animation_reset_name": "screen_animation_reset",
           "anims": [
             "@cui-anims.screen_outro_anim_push",
@@ -106,6 +109,7 @@
           "text": "#progress_text",
           "$cuiv-anim:pos_from": [ 1, 42 ],
           "$cuiv-anim:pos_to": [ 1, -8 ],
+          "color": "$cuigv:FontPrimaryColor",
           "animation_reset_name": "screen_animation_reset",
           "anims": [
             "@cui-anims.screen_outro_anim_push",
@@ -142,6 +146,7 @@
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "animation_reset_name": "screen_animation_reset",
+          "color": "$cuigv:FontPrimaryColor",
           "anims": [
             "@common.screen_exit_animation_push_alpha",
             "@common.screen_exit_animation_pop_alpha",
@@ -159,6 +164,7 @@
           "text": "#progress_text",
           "text_alignment": "center",
           "animation_reset_name": "screen_animation_reset",
+          "color": "$cuigv:FontPrimaryColor",
           "anims": [
             "@common.screen_exit_animation_push_alpha",
             "@common.screen_exit_animation_pop_alpha",
@@ -186,6 +192,7 @@
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "animation_reset_name": "screen_animation_reset",
+          "color": "$cuigv:FontPrimaryColor",
           "anims": [
             "@common.screen_exit_animation_push_alpha",
             "@common.screen_exit_animation_pop_alpha",
@@ -202,6 +209,7 @@
           "text": "#progress_text",
           "text_alignment": "center",
           "animation_reset_name": "screen_animation_reset",
+          "color": "$cuigv:FontPrimaryColor",
           "anims": [
             "@common.screen_exit_animation_push_alpha",
             "@common.screen_exit_animation_pop_alpha",

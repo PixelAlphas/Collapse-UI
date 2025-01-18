@@ -39,6 +39,45 @@
     "next": "@cui-background_slider.background_slider_anim_06"
   },
   "background_slider_anim_06": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@cui-background_slider.background_slider_anim_07"
+  },
+  "background_slider_anim_07": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "from": [ "-300%", 0 ],
+    "to": [ "-400%", 0 ],
+    "duration": 1,
+    "next": "@cui-background_slider.background_slider_anim_08"
+  },
+  "background_slider_anim_08": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@cui-background_slider.background_slider_anim_09"
+  },
+  "background_slider_anim_09": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "from": [ "-400%", 0 ],
+    "to": [ "-500%", 0 ],
+    "duration": 1,
+    "next": "@cui-background_slider.background_slider_anim_10"
+  },
+  "background_slider_anim_10": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@cui-background_slider.background_slider_anim_11"
+  },
+  "background_slider_anim_11": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "from": [ "-500%", 0 ],
+    "to": [ "-600%", 0 ],
+    "duration": 1,
+    "next": "@cui-background_slider.background_slider_anim_12"
+  },
+  "background_slider_anim_12": {
     "anim_type": "offset",
     "from": [ 0, 0 ],
     "to": [ 0, 0 ],
@@ -51,9 +90,11 @@
     "$cuiv:background_slider_image_01|default": "textures/ui/cui-backgrounds/play_button_slider01",
     "$cuiv:background_slider_image_02|default": "textures/ui/cui-backgrounds/play_button_slider02",
     "$cuiv:background_slider_image_03|default": "textures/ui/cui-backgrounds/play_button_slider03",
+    "$cuiv:background_slider_image_04|default": "textures/ui/cui-backgrounds/play_button_slider04",
+    "$cuiv:background_slider_image_05|default": "textures/ui/cui-backgrounds/play_button_slider05",
+    "$cuiv:background_slider_image_06|default": "textures/ui/cui-backgrounds/play_button_slider06",
     "controls": [
-      {
-        "inside_element": {
+      { "inside_element": {
           "type": "panel",
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
@@ -61,43 +102,50 @@
             "@cui-background_slider.background_slider_anim_00"
           ],
           "controls": [
-            {
-              "image_01": {
+            { "image_01": {
                 "type": "image",
                 "fill": true,
                 "offset": [ 0, 0 ],
                 "texture": "$cuiv:background_slider_image_01"
-              }
-            },
-            {
-              "image_02": {
+            }},
+            { "image_02": {
                 "type": "image",
                 "fill": true,
                 "offset": [ "100%", 0 ],
                 "texture": "$cuiv:background_slider_image_02"
-              }
-            },
-            {
-              "image_03": {
+            }},
+            { "image_03": {
                 "type": "image",
                 "fill": true,
                 "offset": [ "200%", 0 ],
                 "texture": "$cuiv:background_slider_image_03"
-              }
-            },
-            {
-              "image_default": {
+            }},
+            { "image_04": {
                 "type": "image",
                 "fill": true,
                 "offset": [ "300%", 0 ],
+                "texture": "$cuiv:background_slider_image_04"
+            }},
+            { "image_05": {
+                "type": "image",
+                "fill": true,
+                "offset": [ "400%", 0 ],
+                "texture": "$cuiv:background_slider_image_05"
+            }},
+            { "image_06": {
+                "type": "image",
+                "fill": true,
+                "offset": [ "500%", 0 ],
+                "texture": "$cuiv:background_slider_image_06"
+            }},
+            { "image_default": {
+                "type": "image",
+                "fill": true,
+                "offset": [ "600%", 0 ],
                 "texture": "$cuiv:background_slider_image_01"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+            }}
+      ]}}
+  ]},
   "background_slider": {
     "type": "panel",
     "controls": [

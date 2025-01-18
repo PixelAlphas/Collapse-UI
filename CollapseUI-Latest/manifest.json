@@ -1,9 +1,9 @@
 { "format_version": 2,
   "header": {
-    "name": "Collapse-UI / v2.37",
-    "description": "Modified & Enhanced UI made by Arxance (Harlow)\n§cRestart are required once applying!",
+    "name": "Collapse-UI / v3.0-beta",
+    "description": "§7THIS IS BETA TEST.\n§fModified & Enhanced UI made by Arxance (Harlow)",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 2, 3, 7 ],
+    "version": [ 2, 3, 9 ],
     "min_engine_version": [ 1, 21, 40 ]
   },
   "modules": [
@@ -13,31 +13,98 @@
   }],
   "settings": [
 		{	"type": "label",
-			"text": "Select which preset you want for the pack."
-		},
-		{	"type": "label",
-			"text": "> §eMaximum Preset§7 - §fDefault, This includes everything that Collapse-UI has to offer. shadows, alot of fancy panels and such."
-		},
-		{	"type": "label",
-			"text": "> §eMedium Preset§7 - §fThis removes several visuals like shadow, less fancy but in return, more reduced loading times."
-		},
-		{	"type": "label",
-			"text": "> §eMinimum Preset§7 - §fThis removes everything that isn't necessarily needed. such as Search bar, Animations, Scrolling backgrounds, Loading screen icon, Faded loading bar, Experience bar text shadows, No gradient backgrounds"
-  }],
+		 	"text": "Select which color you want for the pack."
+		}
+	],
   "subpacks": [
     {
-      "folder_name": "minpreset",
-      "name": "Minimum Preset",
+      "folder_name": "red",
+      "name": "Red",
       "memory_tier": 0
     },
     {
-      "folder_name": "medpreset",
-      "name": "Medium Preset",
+      "folder_name": "orange",
+      "name": "Orange",
       "memory_tier": 0
     },
     {
-      "folder_name": "maxpreset",
-      "name": "Maximum Preset",
+      "folder_name": "yellow",
+      "name": "Yellow (Classic Color!)",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "lime",
+      "name": "Lime",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "green",
+      "name": "Green",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "cyan",
+      "name": "Cyan",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "blue",
+      "name": "Blue",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "lightblue",
+      "name": "Light Blue",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "purple",
+      "name": "Purple",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "magenta",
+      "name": "Magenta (Collapse-UI Alt)",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "pink",
+      "name": "Pink",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "gray",
+      "name": "Gray",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "silver",
+      "name": "Silver",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "white",
+      "name": "White",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "white-classic",
+      "name": "White (Arcdustry-UI Color)",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "light",
+      "name": "Light",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "dark",
+      "name": "Dark",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "default",
+      "name": "Default",
       "memory_tier": 0
     }
   ],

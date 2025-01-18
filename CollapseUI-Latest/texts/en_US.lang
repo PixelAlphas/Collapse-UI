@@ -11,6 +11,7 @@ cui.settings.accessibility.tts.description=A robot voice that may play once you 
 cui.settings.accessibility.misc.description=Hud and Gameplay related accessibility such as Chat messages and Darkness.
 
 ## > General
+cui.settings.general.main.description=A section for some basic stuff or unkown.
 cui.settings.general.online.title=Online
 cui.settings.general.online.description=A essential section for managing Online related - such as the way the skin would display or auto-update marketplace packs. ( This may be different on variety of platforms you play on )
 cui.settings.general.network.description=A section that may control network/internet related besides just wifi.
@@ -48,6 +49,7 @@ cui.settings.video.advgraphic.description=Tweaks the grpahical experience, e.g D
 cui.settings.video.ui.title=UI
 cui.settings.video.ui.description=Tweaks the UI in general for maybe improved accessibility.
 cui.settings.video.perspective.description=Changes your gameplay perspective (or aka F5)
+cui.settings.video.vsync.description=Not recommended if you're using mobile. Leave them be (default - vertical sync)
 
 ## > Gamepad
 cui.settings.gamepad.main.description=A section for tweaking controller experience.
@@ -69,7 +71,7 @@ cui.settings.globalresource.selected.title=Selected
 cui.settings.globalresource.selected.description=Current applied pack(s) - If you're applying config packs for CUI, consider placing it on the top of Collapse-UI!
 
 ## > Account
-cui.settings.accoumt.main.description=A section for signing in your xbox account order to join multiplayer.
+cui.settings.account.main.description=A section for signing in your xbox account order to join multiplayer.
 
 
 ## Start screen
@@ -106,8 +108,12 @@ cui.safezone.exp.title=Experiment Settings
 cui.about.title=About This UI
 cui.about.tab.about=About
 cui.about.tab.about.uititle=Collapse-UI
-cui.about.tab.about.author=Author of this UI
+cui.about.tab.about.author=Made by
 cui.about.tab.about.update=Build Release
+cui.about.tab.about.support=Supported version
+cui.about.tab.about.setting_ver=Settings version
+cui.about.tab.about.hud_ver=Huds version
+cui.about.tab.about.branch=Branch
 cui.about.tab.activeconfig=Configs
 cui.about.tab.activeconfigalt=Active Configurations
 
@@ -136,7 +142,7 @@ cui.about.tab.activeconfig.uianimations=Animations
 
 cui.about.tab.activeconfig.layout=Layouts
 cui.about.tab.activeconfig.searchboxsystem=World Search Box
-cui.about.tab.activeconfig.oldsliderdesign=Old Slider design
+cui.about.tab.activeconfig.oldsliderdesign=Horizontal Slider
 cui.about.tab.activeconfig.vanillapaperdoll=Vanilla Player doll
 cui.about.tab.activeconfig.norealmspromoteinworldsection=No Realm Promoters on world section
 cui.about.tab.activeconfig.nogamelogo=No Game logo

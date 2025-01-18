@@ -5,6 +5,9 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "general_button_toggle",
@@ -13,21 +16,26 @@
     }],
     "controls": [
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
-      { "section_title": {
-          "type": "label",
-          "text": "options.general",
-          "size": [ "100% - 12px", "default" ],
-          "font_type": "MinecraftTen",
-          "color": "$cuigv:FontPrimaryColor",
-          "font_scale_factor": 1.8
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.general", "$cuiv:header_title": "cui.settings.general.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "options.networkSettings"
       }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
-      { "network@cui-common.element_background": { "$cuiv:header_text": "options.networkSettings", "$cuiv:element_background_contents": "cui-ss_general.network"}},
-      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
-      { "online@cui-common.element_background": { "$cuiv:header_text": "cui.settings.general.online.title", "$cuiv:element_background_contents": "cui-ss_general.online"}},
-      { "pudding_03": { "type": "panel", "size": [ 1, 4 ]}},
-      { "misc@cui-common.element_background": { "$cuiv:header_text": "key.categories.misc", "$cuiv:element_background_contents": "cui-ss_general.misc"}},
-      { "pudding_04": { "type": "panel", "size": [ 1, 4 ]}},
+      { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "network@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.network"}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "cui.settings.general.online.title"
+      }},
+      { "padding_04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "online@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.online"}},
+      { "pudding_05": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "key.categories.misc"
+      }},
+      { "padding_06": { "type": "panel", "size": [ 1, 2 ]}},
+      { "misc@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.misc"}},
+      { "pudding_07": { "type": "panel", "size": [ 1, 6 ]}},
       { "reset_button@cui-button.text_button": {
           "ignored": "(not $is_pregame)",
           "size": [ "100% - 4px", 30 ],
@@ -36,7 +44,7 @@
           "$focus_override_down": "FOCUS_OVERRIDE_STOP",
           "property_bag": { "reset_group": "general" }
       }},
-      { "pudding_05": { "type": "panel", "size": [ 1, 4 ]}}
+      { "pudding_08": { "type": "panel", "size": [ 1, 6 ]}}
   ]},
   "network": {
     "type": "stack_panel",
@@ -44,15 +52,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "mobile_data_option_toggle@cui-setting_screen.option_toggle": {
           "ignored": "($is_console or $is_settopbox or $win10_edition or $osx_edition)",
           "$cuiv:option_label_text": "options.allowCellularData",
@@ -76,15 +75,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "auto_update_enabled_toggle@cui-setting_screen.option_toggle": {
           "ignored": "((not $is_console and not $is_settopbox and not $win10_edition and not $osx_edition) or $nx_os)",
           "$cuiv:option_label_text": "options.autoUpdateEnabled",
@@ -135,15 +125,6 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "ecomode_enabled_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.enableEcoMode",
           "$cuiv:option_binding_name": "#ecomode_toggle",

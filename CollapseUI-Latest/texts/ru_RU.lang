@@ -69,7 +69,7 @@ cui.settings.globalresource.selected.title=Включенные
 cui.settings.globalresource.selected.description=Текущий применённый пакет(ы) — если вы применяете пакеты конфигурации для CUI, рекомендуется разместить их в верхней части Collapse-UI.
 
 ## > Account
-cui.settings.accoumt.main.description=Раздел для входа в аккаунт Xbox для подключения к многопользовательской игре.
+cui.settings.account.main.description=Раздел для входа в аккаунт Xbox для подключения к многопользовательской игре.
 
 
 ## Start screen

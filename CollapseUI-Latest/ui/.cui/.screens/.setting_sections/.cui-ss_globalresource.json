@@ -79,22 +79,10 @@
     }],
     "controls": [
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
-      { "section_title": {
-          "type": "label",
-          "text": "menu.globalpacks",
-          "size": [ "100% - 12px", "default" ],
-          "font_type": "MinecraftTen",
-          "color": "$cuigv:FontPrimaryColor",
-          "font_scale_factor": 1.8
-      }},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.globalresource.main.description",
-          "size": [ "100% - 12px", "default" ],
-          "color": "$cuigv:FontSecondaryColor"
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "menu.globalpacks", "$cuiv:header_title": "cui.settings.globalresource.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
       { "@cui-ss_globalresource.tabs_element": {}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
       { "@cui-ss_globalresource.deselected_pack": {}},
       { "@cui-ss_globalresource.selected_pack": {}}
   ]},
@@ -117,8 +105,8 @@
       { "@cui-ss_globalresource.selected_pack": {}}
   ]},
   "deselected_pack@cui-common.element_background": { 
-    "$cuiv:header_text": "cui.settings.globalresource.deselected.title",
     "$cuiv:element_background_contents": "cui-ss_globalresource.deselected_pack_section",
+    "$cuiv:element_background_no_label": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "deselectedpack_navigation",
@@ -126,8 +114,8 @@
         "target_property_name": "#visible"
   }]},
   "selected_pack@cui-common.element_background": { 
-    "$cuiv:header_text": "cui.settings.globalresource.selected.title",
     "$cuiv:element_background_contents": "cui-ss_globalresource.selected_pack_section",
+    "$cuiv:element_background_no_label": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "selectedpack_navigation",
@@ -140,15 +128,7 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
       { "note_panel": {
           "type": "image",
           "texture": "textures/ui/.cui-assets/background",
@@ -162,7 +142,7 @@
                 "size": [ "100% - 8px", "default" ]
             }}
       ]}},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
       { "selected_pack_section": {
           "type": "stack_panel",
           "orientation": "vertical",
@@ -182,36 +162,13 @@
       }},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
   ]},
-  "globalresource": {
-    "type": "stack_panel",
-    "size": [ "100% - 4px", "100%c" ],
-    "orientation": "vertical",
-    "use_child_anchors": true,
-    "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 18 ]}},
-      { "description": {
-          "type": "label",
-          "text": "cui.settings.globalresource.main.description",
-          "size": [ "100% - 8px", "default" ],
-          "color": [ 0.7, 0.7, 0.7 ]
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}}
-  ]},
   "deselected_pack_section": {
     "type": "stack_panel",
     "size": [ "100% - 4px", "100%c" ],
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
-      { "line": {
-          "type": "image",
-          "size": [ "100% - 8px", 3 ],
-          "alpha": 0.5,
-          "texture": "textures/ui/.cui-assets/background_bar",
-          "color": "$cuigv:PrimaryColor"
-      }},
-      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
       { "note_panel": {
           "type": "image",
           "texture": "textures/ui/.cui-assets/background",
@@ -225,7 +182,7 @@
                 "size": [ "100% - 8px", "default" ]
             }}
       ]}},
-      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}},
       { "available_packs_section": {
           "type": "stack_panel",
           "orientation": "vertical",

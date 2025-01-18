@@ -4,7 +4,15 @@
     "controls": [
       {
         "@cui-hud_screen.statistics": {}
-      }
+      }/*,
+      {
+        "@cui-hud_screen.exp_percentage_panel": {}
+      },
+      {
+        "@cui-hud_screen.exp_percentage_test": {}
+      }*/
+      // Had a painful time doing a math, so...
+      // Screw Experience calculation and stuff, not adding it.
   ]},
   "statistics": {
     "type": "stack_panel",

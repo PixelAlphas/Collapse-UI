@@ -15,12 +15,13 @@
           "offset": [ -5, 5 ],
           "bindings": [
             { "binding_type": "view",
-              "source_control_name": "cuib-player_list",
+              "source_control_name": "cuib-playerlist",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
           }]
       }},
       { "@realm_elements": {}},
+      { "@playerlist_button_element": {}},
       { "@playerlist_element": {}}
   ]},
   "main_button": {
@@ -266,90 +267,23 @@
             { "binding_name": "#worldname" }
       ]}}
   ]},
+  
   "playerlist_element": {
     "type": "panel",
-    "$cuiv-anim:pos_from": [ 50, 0 ],
-    "$cuiv-anim:pos_to": [ 0, 0 ],
-    "animation_reset_name": "screen_animation_reset",
-    "anims": [
-      "@cui-anims.screen_outro_anim_push",
-      "@cui-anims.screen_outro_anim_pop",
-      "@cui-anims.screen_intro_anim_push",
-      "@cui-anims.screen_intro_anim_pop"
-    ],
     "controls": [
-      { "playerlist_element@cui-common.element_background": {
-          "$cuiv:element_background_contents": "cui-pause_screen.scrolling_panel",
-          "$cuiv:element_background_size": [ "30%", "100% - 4px" ],
-          "$cuiv:header_text": "cui.pause.playerlist",
-          "anchor_to": "right_middle",
-          "anchor_from": "right_middle",
-          "offset": [ -4, 0 ],
-          "bindings": [{ "binding_type": "view", "source_control_name": "cuib-player_list", "source_property_name": "#toggle_state", "target_property_name": "#visible" }]
-      }},
-      { "playerlist_panel": {
-          "type": "panel",
-          "size": [ "30%", "100%" ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "bindings": [
-            { "binding_type": "view",
-              "source_control_name": "cuib-player_list",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-          }],
-          "controls": [
-            { "close_playerlist@cui-toggle.toggle_button": {
-                "size": [ 25, "50%" ],
-                "offset": [ -31, 0 ],
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
-                "$cuiv:toggle_texture_size": [ 8, 15 ],
-                "$cuiv:toggle_texture": "textures/ui/.cui-assets/close",
-                "$toggle_view_binding_name": "cuib-player_list",
-                "$toggle_name": "playerlist",
-                "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_image",
-                "$toggle_group_forced_index": 2,
-                "$radio_toggle_group": true,
-                "$toggle_group_default_selected": 0,
-                "$button_mappings": [
-                  { "from_button_id": "button.controller_start",
-                    "to_button_id": "button.controller_start",
-                    "mapping_type": "global"
-                  },
-                  { "from_button_id": "button.scoreboard",
-                    "to_button_id": "button.scoreboard",
-                    "mapping_type": "global"
-                  },
-                  { "from_button_id": "button.menu_select",
-                    "to_button_id": "button.menu_select",
-                    "mapping_type": "pressed"
-                  },
-                  { "from_button_id": "button.menu_ok",
-                    "to_button_id": "button.menu_ok",
-                    "mapping_type": "focused"
-                }]
-            }}
-      ]}},
-      { "open_playerlist@cui-toggle.toggle_button": {
+      { "close_playerlist@cui-toggle.toggle_button": {
           "size": [ 25, "50%" ],
+          "offset": [ "-35% - 14px", 0 ],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-          "offset": [ -4, 0 ],
           "$cuiv:toggle_texture_size": [ 8, 15 ],
-          "$cuiv:toggle_texture": "textures/ui/.cui-assets/open",
-          "$toggle_view_binding_name": "cuib-player_list",
+          "$cuiv:toggle_texture": "textures/ui/.cui-assets/close",
           "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_image",
+          "$toggle_view_binding_name": "cuib-playerlist_close",
           "$toggle_name": "playerlist",
-          "$toggle_group_forced_index": 1,
+          "$toggle_group_forced_index": 2,
           "$radio_toggle_group": true,
-          "$toggle_group_default_selected": 0,
-          "bindings": [
-            { "binding_type": "view",
-              "source_control_name": "cuib-player_list",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible"
-          }],
+          "layer": 5,
           "$button_mappings": [
             { "from_button_id": "button.controller_start",
               "to_button_id": "button.controller_start",
@@ -366,21 +300,151 @@
             { "from_button_id": "button.menu_ok",
               "to_button_id": "button.menu_ok",
               "mapping_type": "focused"
+          }],
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "cuib-playerlist",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+          }]
+      }},
+      { "playerlist_content_factory_in": {
+          "type": "stack_panel",
+          "layer": 30,
+          "size": [ "35%", "100% - 8px" ],
+          "anchor_to": "right_middle",
+          "anchor_from": "right_middle",
+          "offset": [ -4, 0 ],
+          "factory": { "name": "more_in", "control_name": "cui-pause_screen.playerlist_element_in" },
+          "collection_name": "playerlist_collection",
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "cuib-playerlist",
+              "source_property_name": "((#toggle_state * 1))",
+              "target_property_name": "#collection_length"
+          }]
+      }},
+      { "playerlist_content_factory_out": {
+          "type": "stack_panel",
+          "layer": 30,
+          "size": [ "35%", "100% - 8px" ],
+          "anchor_to": "right_middle",
+          "anchor_from": "right_middle",
+          "offset": [ -4, 0 ],
+          "factory": { "name": "more_out", "control_name": "cui-pause_screen.playerlist_element_out" },
+          "collection_name": "playerlist_collection",
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "cuib-playerlist_close",
+              "source_property_name": "((#toggle_state * 1))",
+              "target_property_name": "#collection_length"
           }]
       }}
   ]},
-  "scrolling_panel@common.scrolling_panel": {
-    "size": [ "100%", "100% - 20px" ],
-    "$scrolling_pane_size": [ "100%", "100%" ],
-    "$scroll_size": [ 2, "100%" ],
-    "$show_background": false,
-    "clips_children": true,
-    "layer": 6,
-    "offset": [ 0, 10 ],
-    "$scrolling_content": "cui-pause_screen.playerlist_scroll"
-  },
+  "playerlist_button_element": {
+    "type": "panel",
+    "size": [ 25, "50%" ],
+    "offset": [ -4, 0 ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "$cuiv-anim:pos_from": [ 50, 0 ],
+    "$cuiv-anim:pos_to": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
+    "controls": [
+      { "open_playerlist@cui-toggle.toggle_button": {
+          "size": [ "100%", "100%" ],
+          "$cuiv:toggle_texture": "textures/ui/.cui-assets/open",
+          "$toggle_view_binding_name": "cuib-playerlist",
+          "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_image",
+          "$cuiv:toggle_texture_offset": [ 0, 0 ],
+          "$toggle_name": "playerlist",
+          "$toggle_group_forced_index": 1,
+          "$radio_toggle_group": true,
+          "$toggle_group_default_selected": 0,
+          "$button_mappings": [
+            { "from_button_id": "button.controller_start",
+              "to_button_id": "button.controller_start",
+              "mapping_type": "global"
+            },
+            { "from_button_id": "button.scoreboard",
+              "to_button_id": "button.scoreboard",
+              "mapping_type": "global"
+            },
+            { "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            { "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused"
+          }],
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "cuib-playerlist",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+          }]
+      }}
+  ]},
+  "playerlist_element_in": {
+    "type": "panel",
+    "layer": 20,
+    "controls": [
+      { "playerlist_element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-pause_screen.playerlist_core",
+          "$cuiv:element_background_size": [ "100%", "100%" ],
+          "$cuiv:element_background_no_label": true,
+          "$cuiv:header_text": "cui.pause.playerlist",
+          "anims": [
+            "@cui-anims.playerlist_anims_offset"
+          ]
+      }}
+  ]},
+  "playerlist_element_out": {
+    "type": "panel",
+    "layer": 20,
+    "controls": [
+      { "playerlist_element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-pause_screen.playerlist_core",
+          "$cuiv:element_background_size": [ "100%", "100%" ],
+          "$cuiv:element_background_no_label": true,
+          "$cuiv:header_text": "cui.pause.playerlist",
+          "anims": [
+            "@cui-anims.playerlist_anims_offset_exit"
+          ]
+      }}
+  ]},
+  "playerlist_core": {
+    "type": "panel",
+    "controls": [
+      { "theme_label@cui-common.header": {
+          "size": [ "100% - 8px", 20 ],
+          "$cuiv:header_text": "cui.pause.playerlist",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 4 ]
+      }},
+      { "scrolling_panel@common.scrolling_panel": {
+          "size": [ "100%", "100% - 26px" ],
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$scroll_size": [ 0, "100%" ],
+          "$show_background": false,
+          "clips_children": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 6,
+          "offset": [ 0, 26 ],
+          "$scrolling_content": "cui-pause_screen.playerlist_scroll"
+      }}
+  ]},
   "invite_button@cui-button.text_button": {
-    "size": [ "100% - 8px", 20 ],
+    "size": [ "100%", 20 ],
     "$pressed_button_name": "button.menu_invite_players",
     "$cuiv:button_text": "pauseScreen.invite",
     "bindings": [
@@ -396,8 +460,8 @@
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "layer": 6,
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
     "use_child_anchors": true,
     "controls": [
       { "global_player_grid": {

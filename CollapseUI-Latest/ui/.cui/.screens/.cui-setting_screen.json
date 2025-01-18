@@ -473,24 +473,28 @@
     "$cuiv:option_control_name": "cui-setting_screen.option_slider_control",
     "$cuiv:option_control_name_slider": "cui-setting_screen.slider",
     "variables": [
-      { "requires": "($cuigv:OldSliderDesign)",
-        "$cuiv:option_control_name": "cui-setting_screen.option_slider_control_old"
+      { "requires": "($cuigv:HorizontalSlider)",
+        "$cuiv:option_control_name": "cui-setting_screen.option_slider_control_horizontal",
+        "$cuiv:option_control_name_slider": "cui-setting_screen.slider_horizontal"
   }]},
   "slider@cui-slider.slider": {
     "size": [ "100% - 15px", 10 ],
     "enabled": "$cuiv:is_enabled",
     "$option_label|default": ""
   },
+  "slider_horizontal@cui-slider.slider": {
+    "size": [ "30%", 10 ],
+    "enabled": "$cuiv:is_enabled",
+    "$option_label|default": ""
+  },
   "option_slider_control": {
     "type": "panel",
     "size": [ "100%", 10 ],
-    "$cuiv:option_state_color_opposite|default": [ 1, 1, 1 ],
-    "$cuiv:option_state_color|default": [ 1, 1, 1 ],
     "controls": [
       { "label": {
           "type": "label",
           "layer": 10,
-          "color": "$cuiv:option_state_color_opposite",
+          "color": "$cuigv:FontPrimaryColor",
           "size": "$cuiv:option_label_size",
           "offset": [ 0, 4 ],
           "anchor_from": "left_middle",
@@ -519,39 +523,46 @@
             }}
       ]}}
   ]},
-  "option_slider_control_old": {
+  "option_slider_control_horizontal": {
     "type": "panel",
-    "anchor_from": "top_right",
-    "anchor_to": "top_right",
-    "size": [ "30%", 10 ],
+    "size": [ "100%", 10 ],
     "controls": [
-      { "slider@cui-slider.slider": {
-          "$slider_box_size": [ 10, 10 ],
-          "size": [ "100%", 10 ],
-          "offset": [ -4, 8 ],
-          "enabled": "$cuiv:is_enabled",
-          "$option_label|default": "",
-          "$slider_tts_header": "$option_label",
-          "$slider_tts_header_binding_type": "global",
-          "$slider_enabled_binding_name": "$cuiv:option_toggle_binding_name",
-          "$slider_enabled_binding_type": "global",
-          "variables": [
-            { "requires": "(not $cuiv:option_toggle_binding_name or not $cuiv:is_enabled)",
-              "$slider_enabled_binding_name": "#not_data_bound",
-              "$slider_enabled_binding_type": "none"
-          }]
+      { "label": {
+          "type": "label",
+          "layer": 10,
+          "color": "$cuigv:FontPrimaryColor",
+          "size": "$cuiv:option_label_size",
+          "offset": [ 0, 4 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:option_label_text",
+          "bindings": "$cuiv:option_label_bindings"
+      }},
+      { "$cuiv:option_control_name_slider@$cuiv:option_control_name_slider": {
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -10.5, 4 ]
       }},
       { "label_value": {
           "type": "label",
           "text": "$cuiv:slider_value_text",
-          "size": [ "100%", "default" ],
+          "size": [ "default", "default" ],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "text_alignment": "right",
-          "offset": [ "-100% - 12px", 3 ],
-          "$cuiv:slider_value_binding|default": "",
-          "bindings": "$cuiv:slider_value_binding"
-      }}
+          "color": "$cuigv:SecondaryColor",
+          "bindings": "$cuiv:slider_value_binding",
+          "offset": [ "-30% - 21px", 4 ],
+          "controls": [
+            { "hover_background": {
+                "type": "image",
+                "size": [ "100% + 7px", "100% + 2px" ],
+                "offset": [ 0, 0 ],
+                "layer": -1,
+                "texture": "textures/ui/.cui-assets/background",
+                "color": "$cuigv:PrimaryColor"
+            }}
+      ]}}
   ]},
   "option_toggle": {
     "type": "panel",
@@ -596,7 +607,7 @@
       { "layout": {
           "type": "panel",
           "size": "$cuiv:option_layout_size",
-          "$cuiv:option_layout_anchor|default": "top_left",
+          "$cuiv:option_layout_anchor|default": "top_right",
           "controls": [
             { "label": {
                 "type": "label",
@@ -612,21 +623,17 @@
                   { "$cuiv:option_control_name@$cuiv:option_control_name": {
                       "anchor_from": "$cuiv:option_layout_anchor",
                       "anchor_to": "$cuiv:option_layout_anchor",
-                      "offset": [ 0, 0 ],
-                      "variables": [
-                        { "requires": "(($cuiv:is_slider) or (not $cuigv:OldSliderDesign))",
-                          "$cuiv:option_layout_anchor": "top_right"
-                      }]
+                      "offset": [ 0, 0 ]
                   }}
             ]}}
       ]}},
       { "$cuiv:option_control_name_slider@$cuiv:option_control_name_slider": {
-          "ignored": "((not $cuiv:is_slider) or ($cuigv:OldSliderDesign))"
+          "ignored": "((not $cuiv:is_slider) or ($cuigv:HorizontalSlider))"
       }},
       { "slider_spacing": {
-          "ignored": "((not $cuiv:is_slider) or ($cuigv:OldSliderDesign))",
+          "ignored": "((not $cuiv:is_slider) or ($cuigv:HorizontalSlider))",
           "type": "panel",
-          "size": [ 4, 4 ]
+          "size": [ "100%", 4 ]
       }},
       { "description": {
           "ignored": "(not $cuiv:option_description)",
@@ -695,8 +702,11 @@
     "size": [ "100% - 2px", "100%" ],
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
-    "$cuiv:option_state_color_opposite|default": [ 1, 1, 1 ],
-    "$cuiv:option_state_color|default": [ 1, 1, 1 ],
+    "$cuiv:option_state_value_background|default": false,
+    "$cuiv:option_state_value_anchor|default": "right_middle",
+    "$cuiv:option_state_value_offset|default": [ -6, 0 ],
+    "$cuiv:option_state_color_opposite|default": "$cuigv:FontPrimaryColor",
+    "$cuiv:option_state_color|default": "$cuigv:FontPrimaryColor",
     "controls": [
       { "label": {
           "type": "label",
@@ -724,9 +734,9 @@
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%c", 10 ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "offset": [ -6, 0 ],
+          "anchor_from": "$cuiv:option_state_value_anchor",
+          "anchor_to": "$cuiv:option_state_value_anchor",
+          "offset": "$cuiv:option_state_value_offset",
           "controls": [
             { "left_arrow": {
                 "type": "label",
@@ -758,6 +768,15 @@
           "layer": -11,
           "texture": "textures/ui/.cui-assets/background",
           "color": "$cuigv:PrimaryColor"
+      }},
+      { "background": {
+          "ignored": "(not $cuiv:option_state_value_background)",
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "layer": -15,
+          "texture": "textures/ui/.cui-assets/background",
+          "alpha": "$cuigv:BackgroundAlpha",
+          "color": "$cuigv:SecondaryColor"
       }}
   ]},
   "option_toggle_on@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on", "$cuiv:option_state_color": "$cuigv:PrimaryColor", "$cuiv:option_state_color_opposite": "$cuigv:FontPrimaryColor" },
@@ -765,5 +784,29 @@
   "option_toggle_on_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:SecondaryColor", "$cuiv:option_state_color_opposite": "$cuigv:SecondaryColor" },
   "option_toggle_off_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_off_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:SecondaryColor", "$cuiv:option_state_color_opposite": "$cuigv:SecondaryColor" },
   "option_toggle_on_locked@cui-setting_screen.option_toggle_on": { "alpha": 0.5 },
-  "option_toggle_off_locked@cui-setting_screen.option_toggle_off": { "alpha": 0.5 }
+  "option_toggle_off_locked@cui-setting_screen.option_toggle_off": { "alpha": 0.5 },
+  "header_title": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "$cuiv:header_title|default": "lmao",
+    "controls": [
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
+      { "note_panel": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "100% - 8px", "100%cm + 4px" ],
+          "color": "$cuigv:TertiaryColor",
+          "controls": [
+            { "note_label": {
+                "type": "label",
+                "text": "$cuiv:header_title",
+                "layer": 10,
+                "color": "$cuigv:FontSecondaryColor",
+                "size": [ "100% - 8px", "default" ]
+            }}
+      ]}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 6 ]}}
+  ]}
 }

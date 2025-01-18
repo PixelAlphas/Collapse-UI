@@ -11,6 +11,7 @@ cui.settings.accessibility.tts.description=A robot voice that may play once you 
 cui.settings.accessibility.misc.description=Hud and Gameplay related accessibility such as Chat messages and Darkness.
 
 ## > General
+cui.settings.general.main.description=A section for some basic stuff or unkown.
 cui.settings.general.online.title=Online
 cui.settings.general.online.description=A essential section for managing Online related - such as the way the skin would display or auto-update marketplace packs. ( This may be different on variety of platforms you play on )
 cui.settings.general.network.description=A section that may control network/internet related besides just wifi.
@@ -48,6 +49,7 @@ cui.settings.video.advgraphic.description=Tweaks the grpahical experience, e.g D
 cui.settings.video.ui.title=UI
 cui.settings.video.ui.description=Tweaks the UI in general for maybe improved accessibility.
 cui.settings.video.perspective.description=Changes your gameplay perspective (or aka F5)
+cui.settings.video.vsync.description=Not recommended if you're using mobile. Leave them be (default - vertical sync)
 
 ## > Gamepad
 cui.settings.gamepad.main.description=A section for tweaking controller experience.
@@ -69,7 +71,7 @@ cui.settings.globalresource.selected.title=Selected
 cui.settings.globalresource.selected.description=Current applied pack(s) - If you're applying config packs for CUI, consider placing it on the top of Collapse-UI!
 
 ## > Account
-cui.settings.accoumt.main.description=A section for signing in your xbox account order to join multiplayer.
+cui.settings.account.main.description=A section for signing in your xbox account order to join multiplayer.
 
 
 ## Start screen
@@ -77,9 +79,11 @@ cui.main_menu.play=PLAY
 cui.main_menu.achievement=ACHIEVEMENTS
 cui.main_menu.skin=SKINS
 cui.main_menu.settings=SETTINGS
+cui.main_menu.marketplace=MARKETPLACE
 cui.main_menu.exit=EXIT
 cui.username.logged_in=Logged as
 cui.username.local=Playing as (Local)
+cui.username.playing=Playing as
 cui.main_menu.quickaccess=Quick Access
 cui.main_menu.infomation=Information
 
@@ -87,6 +91,8 @@ cui.main_menu.infomation=Information
 cui.pause.resume=RESUME
 cui.pause.world=Currently playing
 cui.pause.playerlist=Players list
+cui.pause.screenshot=SCREENSHOT
+cui.pause.stories=STORIES
 
 ## Play screen
 cui.play.controllcentre=Control centre
@@ -102,8 +108,12 @@ cui.safezone.exp.title=Experiment Settings
 cui.about.title=About This UI
 cui.about.tab.about=About
 cui.about.tab.about.uititle=Collapse-UI
-cui.about.tab.about.author=Author of this UI
+cui.about.tab.about.author=Made by
 cui.about.tab.about.update=Build Release
+cui.about.tab.about.support=Supported version
+cui.about.tab.about.setting_ver=Settings version
+cui.about.tab.about.hud_ver=Huds version
+cui.about.tab.about.branch=Branch
 cui.about.tab.activeconfig=Configs
 cui.about.tab.activeconfigalt=Active Configurations
 
@@ -117,12 +127,22 @@ cui.about.tab.activeconfig.tertiarycolor=Tertiary Color (Secondary but darker)
 cui.about.tab.activeconfig.fontprimarycolor=Font Primary Color
 cui.about.tab.activeconfig.fontsecondarycolor=Font Secondary Color
 cui.about.tab.activeconfig.backgroundalpha=Background Alpha
+cui.about.tab.activeconfig.buttonalpha=Button Alpha
 cui.about.tab.activeconfig.uibackground=Background
 cui.about.tab.activeconfig.uibackgroundslider=BG Slider on Start screen
+cui.about.tab.activeconfig.backgroundgradientprimarycolor=Gradient BG Primary color
+cui.about.tab.activeconfig.backgroundgradientsecondarycolor=Gradient BG Secondary color
+
+cui.about.tab.activeconfig.visual=Visual
+cui.about.tab.activeconfig.shadows=Shadows
+cui.about.tab.activeconfig.fadedprogressBar=Faded Loading bar
+cui.about.tab.activeconfig.exptextshadows=Java Edition Experience bar text
+cui.about.tab.activeconfig.backgroundgradient=Background Gradient
+cui.about.tab.activeconfig.uianimations=Animations
 
 cui.about.tab.activeconfig.layout=Layouts
 cui.about.tab.activeconfig.searchboxsystem=World Search Box
-cui.about.tab.activeconfig.oldsliderdesign=Old Slider design
+cui.about.tab.activeconfig.oldsliderdesign=Horizontal Slider
 cui.about.tab.activeconfig.vanillapaperdoll=Vanilla Player doll
 cui.about.tab.activeconfig.norealmspromoteinworldsection=No Realm Promoters on world section
 cui.about.tab.activeconfig.nogamelogo=No Game logo
