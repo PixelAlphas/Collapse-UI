@@ -1,9 +1,9 @@
 { "format_version": 2,
   "header": {
-    "name": "Collapse-UI / v3.0-beta",
-    "description": "§7THIS IS BETA TEST.\n§fModified & Enhanced UI made by Arxance (Harlow)",
+    "name": "Collapse-UI - v3.0",
+    "description": "\n§fModified & Enhanced UI made by Arxance (Harlow)\n§7Theme available on subpack!",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 2, 3, 9 ],
+    "version": [ 3, 0, 0 ],
     "min_engine_version": [ 1, 21, 40 ]
   },
   "modules": [

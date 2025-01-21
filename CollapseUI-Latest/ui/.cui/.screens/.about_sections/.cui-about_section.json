@@ -15,7 +15,7 @@
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v3.0"
+          "$cuiv:lwb_text": "v3.0.1"
       }},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
@@ -62,7 +62,7 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Sat, 18 January (2025)"
+          "$cuiv:about_text_gray": "Wed, 22 January (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",
@@ -140,7 +140,8 @@
           "type": "label",
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-          "text": "$cuiv:about_text"
+          "text": "$cuiv:about_text",
+          "color": "$cuigv:FontPrimaryColor"
       }},
       { "config_value": {
           "type": "label",
@@ -170,7 +171,8 @@
           "text": "$cuiv:about_text",
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-          "offset": [ 22, 0 ]
+          "offset": [ 22, 0 ],
+          "color": "$cuigv:FontPrimaryColor"
       }},
       { "label02": {
           "type": "label",
@@ -178,25 +180,5 @@
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "color": "$cuigv:FontSecondaryColor"
-      }}
-  ]},
-  "about_text_old": {
-    "type": "panel",
-    "size": [ "100% - 10px", 16 ],
-    "$cuiv:about_text|default": "",
-    "$cuiv:about_text_gray|default": "",
-    "controls": [
-      { "config_label": {
-          "type": "label",
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "text": "$cuiv:about_text"
-      }},
-      { "config_value": {
-          "type": "label",
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "text": "$cuiv:about_text_gray",
-          "color": [ 0.7, 0.7, 0.7 ]
       }}
 ]}}

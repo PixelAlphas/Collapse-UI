@@ -84,7 +84,8 @@
           "type": "label",
           "text": "$cuiv:credit_text_main",
           "anchor_from": "left_middle",
-          "anchor_to": "left_middle"
+          "anchor_to": "left_middle",
+          "color": "$cuigv:FontPrimaryColor"
       }},
       { "who": {
           "type": "label",

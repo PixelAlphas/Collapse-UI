@@ -747,19 +747,17 @@
                       "bindings": [{ "binding_name": "#playername" }]
                   }},
                   { "paddings": { "type": "panel", "size": [ 3, 0 ]}},
-                  { "gametag_profile": {
-                      "type": "image",
-                      "anchor_from": "center",
-                      "anchor_to": "center",
+                  { "profile_gamerpic": {
+                      "type": "custom",
+                      "renderer": "profile_image_renderer",
                       "size": [ 15, 15 ],
-                      "layer": 1,
+                      "layer": 2,
                       "bindings": [
-                        { "binding_name": "#gamerpic_texture_path", "binding_name_override": "#texture" },
-                        { "binding_name": "#gamerpic_texture_location_type", "binding_name_override": "#texture_file_system" },
-                        { "binding_name": "#profile_button_a_visible",
+                        { "binding_name": "#profile_image_options" },
+                        { "binding_name": "$gamerpic_visible",
                           "binding_name_override": "#visible"
-                        }
-                  ]}}
+                      }]
+                  }}
             ]}},
             { "label": {
                 "type": "label",

@@ -32,7 +32,7 @@
           "anchor_to": "top_right",
           "offset": [ -12, 33 ],
           "controls": [
-            { "number_of_days_played_text": {
+            { "sometthing": {
                 "type": "label",
                 "layer": 1,
                 "color": "$cuigv:FontPrimaryColor",
@@ -879,7 +879,7 @@
     "anchor_to": "bottom_right",
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v3.0"
+          "$cuiv:lwb_text": "Collapse-UI v3.0.1"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

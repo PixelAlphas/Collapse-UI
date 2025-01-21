@@ -170,7 +170,8 @@
           "type": "label",
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-          "text": "$cuiv:config_text"
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
       }},
       { "config_value": {
           "type": "label",
@@ -194,7 +195,8 @@
           "type": "label",
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
-          "text": "$cuiv:config_text"
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
       }},
       { "config_label": {
           "type": "label",
@@ -215,7 +217,8 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "layer": 1,
-          "text": "$cuiv:config_text"
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
       }},
       { "config_color": {
           "type": "image",
