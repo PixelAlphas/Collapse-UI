@@ -258,6 +258,7 @@
           "color": "$cuiv:text_color_main",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
+          "font_scale_factor": 0.8,
           "text": "#worldname",
           "variables": [
             { "requires": "(($hover_state) or ($pressed_state))",
@@ -754,7 +755,7 @@
                       "layer": 2,
                       "bindings": [
                         { "binding_name": "#profile_image_options" },
-                        { "binding_name": "$gamerpic_visible",
+                        { "binding_name": "#is_signed_in_xbl",
                           "binding_name_override": "#visible"
                       }]
                   }}
