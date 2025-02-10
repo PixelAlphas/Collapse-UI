@@ -15,7 +15,7 @@
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v3.0.2"
+          "$cuiv:lwb_text": "v3.0.6"
       }},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
@@ -55,14 +55,14 @@
     "controls": [
       { "author@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.author",
-          "$cuiv:about_text_gray": "Arxance (Harlow)"
+          "$cuiv:about_text_gray": "Arxance"
       }}
   ]},
   "about_version@element_stack_template": {
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Wed, 24 January (2025)"
+          "$cuiv:about_text_gray": "Mon, 10 February (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",

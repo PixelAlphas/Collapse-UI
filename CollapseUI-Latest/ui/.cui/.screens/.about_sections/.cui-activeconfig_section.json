@@ -104,6 +104,18 @@
       { "config_theme_10@cui-activeconfig_section.config_color": {
           "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradientsecondarycolor",
           "$cuiv:config_color": "$cuigv:BackgroundGradientSecondaryColor"
+      }},
+      { "config_theme_11@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.overworldcolor",
+          "$cuiv:config_color": "$cuigv:OverworldColor"
+      }},
+      { "config_theme_12@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.nethercolor",
+          "$cuiv:config_color": "$cuigv:NetherColor"
+      }},
+      { "config_theme_13@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.theendcolor",
+          "$cuiv:config_color": "$cuigv:TheEndColor"
       }}
   ]},
   "config_visual@cui-about_section.element_stack_template": {

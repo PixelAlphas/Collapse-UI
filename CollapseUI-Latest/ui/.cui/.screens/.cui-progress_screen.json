@@ -1,11 +1,12 @@
 { "namespace": "cui-progress_screen",
   "world_modal_progress_panel@progress.world_modal_progress_panel": {
     "size": [ "100%", "100%" ],
+    "$cuiv:custom_header_label|default": "#title_text",
+    "$cuiv:custom_bar_color|default": "$cuigv:PrimaryColor",
     "controls": [
       { "popup_dialog_factory@progress.popup_dialog_factory": {}},
       { "progress_title_world_panel@cui-progress_screen.progress_title_world_panel": { "ignored": "$cuiv:is_loading" }},
       { "progress_title_world_panel_alt@cui-progress_screen.progress_title_world_panel_alt": { "ignored": "(not $cuiv:is_loading)" }},
-      { "fancy_progress_loading_bars@cui-progress_screen.fancy_progress_loading_bars": {}},
       { "cancel_button@cui-progress_screen.cancel_button": { "bindings": [ { "binding_name": "#cancel_visible", "binding_name_override": "#visible" }]}}
   ]},
   "cancel_button@cui-button.text_button": {
@@ -82,8 +83,25 @@
             "@cui-anims.screen_intro_anim_pop"
           ]
       }},
+      { "fancy_progress_loading_bars@cui-common.experience_bar_full": {
+          "layer": 2,
+          "offset": [ 0, -30 ],
+          "size": [ "100%", 5 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "$cuiv-anim:pos_from": [ 0, 20 ],
+          "$cuiv-anim:pos_to": [ 0, -30 ],
+          "$cuiv:bar_color": "$cuiv:custom_bar_color",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ]
+      }},
       { "progress_title_text@progress.progress_title_text": {
-          "text": "#title_text",
+          "text": "$cuiv:custom_header_label",
           "offset": [ 14, -26 ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
@@ -229,6 +247,8 @@
     "type": "panel",
     "layer": 3,
     "$cuiv:is_loading": true,
+    "$cuiv:custom_header_label|default": "#title_text",
+    "$cuiv:custom_bar_color|default": "$cuigv:PrimaryColor",
     "controls": [
       { "world_modal_progress_panel@cui-progress_screen.world_modal_progress_panel": {}},
       { "popup_dialog_factory@progress.popup_dialog_factory": {}}
@@ -237,25 +257,22 @@
     "type": "panel",
     "layer": 3,
     "$cuiv:is_loading": true,
+    "$cuiv:custom_header_label|default": "#title_text",
+    "$cuiv:custom_bar_color|default": "$cuigv:PrimaryColor",
     "controls": [
       { "world_modal_progress_panel@cui-progress_screen.world_modal_progress_panel": {}},
       { "popup_dialog_factory@progress.popup_dialog_factory": {}}
   ]},
-  "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
-    "size": [ "100% - 80px", 5 ],
-    "offset": [ 0, -30 ],
-    "$cuiv-anim:pos_from": [ 0, 20 ],
-    "$cuiv-anim:pos_to": [ 0, -30 ],
-    "animation_reset_name": "screen_animation_reset",
-    "anims": [
-      "@cui-anims.screen_outro_anim_push",
-      "@cui-anims.screen_outro_anim_pop",
-      "@cui-anims.screen_intro_anim_push",
-      "@cui-anims.screen_intro_anim_pop"
-    ],
-    "controls": [
-      { "experience_bar_full@cui-common.experience_bar_full": { "layer": 2 }}
-  ]}
+  "regular_progress_screen_content_overworld@regular_progress_screen_content": {
+    "$cuiv:custom_header_label": "cui.loading.overworld",
+    "$cuiv:custom_bar_color": "$cuigv:OverworldColor"
+  },
+  "regular_progress_screen_content_nether@regular_progress_screen_content": {
+    "$cuiv:custom_header_label": "cui.loading.nether",
+    "$cuiv:custom_bar_color": "$cuigv:NetherColor"
+  },
+  "regular_progress_screen_content_theend@regular_progress_screen_content": {
+    "$cuiv:custom_header_label": "cui.loading.theend",
+    "$cuiv:custom_bar_color": "$cuigv:TheEndColor"
+  }
 }

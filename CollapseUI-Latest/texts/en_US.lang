@@ -73,7 +73,6 @@ cui.settings.globalresource.selected.description=Current applied pack(s) - If yo
 ## > Account
 cui.settings.account.main.description=A section for signing in your xbox account order to join multiplayer.
 
-
 ## Start screen
 cui.main_menu.play=PLAY
 cui.main_menu.achievement=ACHIEVEMENTS
@@ -132,6 +131,9 @@ cui.about.tab.activeconfig.uibackground=Background
 cui.about.tab.activeconfig.uibackgroundslider=BG Slider on Start screen
 cui.about.tab.activeconfig.backgroundgradientprimarycolor=Gradient BG Primary color
 cui.about.tab.activeconfig.backgroundgradientsecondarycolor=Gradient BG Secondary color
+cui.about.tab.activeconfig.overworldcolor=Overworld Color
+cui.about.tab.activeconfig.nethercolor=Nether Color
+cui.about.tab.activeconfig.theendcolor='The End' Color
 
 cui.about.tab.activeconfig.visual=Visual
 cui.about.tab.activeconfig.shadows=Shadows
@@ -159,6 +161,11 @@ cui.extras.tips=Tips:
 cui.extras.warning=Warning!
 cui.extras.uirestart=If you're applying the pack for the first time, please consider restart the game first! Since this UI uses custom fonts, which the experience may vary without restarting.
 cui.extras.goback=Press the background or ESC key for keyboard or 'Select' button for Controller) order to go back
+
+## Loading Screen
+cui.loading.overworld=Entering 'Overworld'...
+cui.loading.nether=Entering 'Nether'...
+cui.loading.theend=Entering 'The End'...
 
 options.fov= 
 options.fov.alt=FOV

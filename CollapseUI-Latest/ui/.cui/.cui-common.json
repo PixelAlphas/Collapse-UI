@@ -298,6 +298,7 @@
     "type": "image",
     "anchor_to": "left_middle",
     "anchor_from": "left_middle",
+    "$cuiv:bar_color|default": "$cuigv:PrimaryColor",
     "property_bag": {
       "#size_binding_x": 0.0,
       "#size_binding_y": 0.0
@@ -327,7 +328,7 @@
           "size": [ "100%", "100%" ],
           "offset": [ -1, 0 ],
           "texture": "textures/ui/White",
-          "color": "$cuigv:PrimaryColor",
+          "color": "$cuiv:bar_color",
           "anchor_from": "right_middle",
           "anchor_to": "right_middle"
       }}

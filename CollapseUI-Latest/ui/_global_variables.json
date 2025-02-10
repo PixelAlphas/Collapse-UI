@@ -38,6 +38,12 @@
     // Background Gradient.
   "$cuigv:BackgroundGradientSecondaryColor": [ 0, 0, 0, 0 ], // ColorAdv
     // Background Gradient.
+  "$cuigv:OverworldColor": [ 0.4784, 0.8784, 0.5215 ], // Color
+    // Overworld Color.
+  "$cuigv:NetherColor": [ 0.9568, 0.4784, 0.4784 ], // Color
+    // Nether Color.
+  "$cuigv:TheEndColor": [ 0.6627, 0.4588, 0.8823 ], // Color
+    // The End Color.
 
   // Visuals
   "$cuigv:Shadows": true, // Boolean

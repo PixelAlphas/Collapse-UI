@@ -110,8 +110,7 @@
     "easing": "in_quart",
     "duration": 0.5,
     "from": "$chat_bg_alpha",
-    "to": 0,
-    "destroy_at_end": "chat_grid_item"
+    "to": 0
   },
   "anim_chat_bg_alpha_in": {
     "anim_type": "alpha",
@@ -136,7 +135,7 @@
   },
   "anim_chat_bg_wait_push": {
     "anim_type": "wait",
-    "duration": "($chat_item_lifetime - 0.2)",
+    "duration": "$chat_item_lifetime",
     "next": "@hud.anim_chat_bg_push"
   },
   "anim_chat_bg_push": {
@@ -150,7 +149,7 @@
     "anim_type": "size",
     "easing": "out_expo",
     "duration": 0.5,
-    "from": [ "100%", "0%c" ],
+    "from": [ "100%", 0 ],
     "to": [ "100%", "100%c" ],
     "next": "@hud.anim_chat_pile_wait"
   },
@@ -161,10 +160,11 @@
   },
   "anim_chat_pile_down": {
     "anim_type": "size",
-    "easing": "in_quart",
-    "duration": 0.3,
+    "easing": "out_expo",
+    "duration": 1,
     "from": [ "100%", "100%c" ],
-    "to": [ "100%", "0%c" ]
+    "to": [ "100%", 0 ],
+    "destroy_at_end": "chat_grid_item"
   },
   "chat_label": {
 		"anims": [
@@ -319,6 +319,20 @@
         "binding_type": "global",
         "binding_name_override": "#visible"
   }]},
+  "full_progress_bar": {
+    "type": "image",
+    "texture": "textures/ui/experiencebarfull",
+    "clip_direction": "left",
+    "clip_pixelperfect": false,
+    "bindings": [
+      {
+        "binding_name": "#exp_progress",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "global",
+        "binding_condition": "always_when_visible"
+      }
+    ]
+  },
   "gui_hotbar_grid_item": {
     "type": "panel",
     "layer": 1,

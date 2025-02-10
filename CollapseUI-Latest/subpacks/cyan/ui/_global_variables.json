@@ -13,6 +13,9 @@
   "$cuigv:UIBackgroundSlider": true, 
   "$cuigv:BackgroundGradientPrimaryColor": [ 0, 0, 0, 0.8 ], 
   "$cuigv:BackgroundGradientSecondaryColor": [ 0, 0, 0, 0 ], 
+  "$cuigv:OverworldColor": [ 0.4784, 0.8784, 0.5215 ],
+  "$cuigv:NetherColor": [ 0.9568, 0.4784, 0.4784 ],
+  "$cuigv:TheEndColor": [ 0.6627, 0.4588, 0.8823 ],
 
   "$cuigv:Shadows": true, 
   "$cuigv:FadedProgressBar": true, 

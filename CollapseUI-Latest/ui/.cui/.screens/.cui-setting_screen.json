@@ -707,6 +707,7 @@
     "$cuiv:option_state_value_offset|default": [ -6, 0 ],
     "$cuiv:option_state_color_opposite|default": "$cuigv:FontPrimaryColor",
     "$cuiv:option_state_color|default": "$cuigv:FontPrimaryColor",
+    "$cuiv:option_state_value_background_size|default": [ "100%", "100%" ],
     "controls": [
       { "label": {
           "type": "label",
@@ -772,7 +773,7 @@
       { "background": {
           "ignored": "(not $cuiv:option_state_value_background)",
           "type": "image",
-          "size": [ "100%", "100%" ],
+          "size": "$cuiv:option_state_value_background_size",
           "layer": -15,
           "texture": "textures/ui/.cui-assets/background",
           "alpha": "$cuigv:BackgroundAlpha",
