@@ -113,6 +113,18 @@
             { "button_type_panel@$cuiv:button_type_panel": { "layer": 3 }}
       ]}}
   ]},
+  "background_color_test_00": {
+    "anim_type": "color",
+    "duration": 0.5,
+    "from": "$cuigv:PrimaryColor",
+    "to": "$cuigv:FontSecondaryColor"
+  },
+  "background_color_test_01": {
+    "anim_type": "color",
+    "duration": 0.5,
+    "from": "$cuigv:FontSecondaryColor",
+    "to": "$cuigv:PrimaryColor"
+  },
   "button_label": {
     "type": "label",
     "layer": 2,
@@ -133,6 +145,7 @@
     "$cuiv:button_icon_size|default": [ 16, 16 ],
     "$cuiv:button_label_content|default": "none",
     "$cuiv:button_content|default": false,
+    "animation_reset_name": "$animation_reset_name",
     "controls": [
       { "text_element": {
           "type": "panel",
@@ -148,7 +161,6 @@
                 "anchor_from": "$cuiv:label_anchor",
                 "anchor_to": "$cuiv:label_anchor",
                 "layer": 10,
-                "font_type": "dainbold",
                 "$cuiv:hover_offset|default": [ 3, -1 ],
                 "variables": [
                   { "requires": "((($hover_state) or ($pressed_state)) and ($cuiv:label_adv_icon)",

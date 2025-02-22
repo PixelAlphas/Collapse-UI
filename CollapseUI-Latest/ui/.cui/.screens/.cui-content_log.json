@@ -52,9 +52,13 @@
     "bindings": [
       { "binding_type": "collection",
         "binding_name": "#content_log_text",
-        "binding_name_override": "#text",
         "binding_collection_name": "content_log_message"
-    }],
+      },
+      { "binding_type": "view",
+              "source_property_name": "(#content_log_text - '\n')",
+              "target_property_name": "#text"
+          }
+    ],
     "controls": [
       { "background_warning": {
           "type": "image",

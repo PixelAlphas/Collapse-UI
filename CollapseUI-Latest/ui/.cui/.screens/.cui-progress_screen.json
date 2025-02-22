@@ -151,6 +151,20 @@
             "@cui-anims.screen_intro_anim_push",
             "@cui-anims.screen_intro_anim_pop"
           ]
+      }},
+      { "percentage@cui-progress_screen.progress_bar_percentage": {
+          "offset": [ 0, -35 ],
+          "$cuiv-anim:pos_from": [ 0, 15 ],
+          "$cuiv-anim:pos_to": [ 0, -35 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ]
       }}
   ]},
   "progress_title_world_panel": {
@@ -274,5 +288,50 @@
   "regular_progress_screen_content_theend@regular_progress_screen_content": {
     "$cuiv:custom_header_label": "cui.loading.theend",
     "$cuiv:custom_bar_color": "$cuigv:TheEndColor"
+  },
+  "progress_bar_percentage": {
+    "type": "label",
+    "text": "#text",
+    "bindings": [
+      { "binding_type": "global",
+        "binding_name": "#loading_bar_percentage",
+        "binding_condition": "always"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(100 * (1 - #loading_bar_percentage))",
+        "target_property_name": "#epbl"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(#epbl - #epcl1)",
+        "target_property_name": "#epbl1"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(#epbl1 - #epcl2)",
+        "target_property_name": "#epbl2"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(100 * ((#epbl > 100) + (#epbl > 200) + (#epbl > 300) + (#epbl > 400) + (#epbl > 500) + (#epbl > 600) + (#epbl > 700) + (#epbl > 800) + (#epbl > 900)))",
+        "target_property_name": "#epcl1"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(10 * ((#epbl1 > 10) + (#epbl1 > 20) + (#epbl1 > 30) + (#epbl1 > 40) + (#epbl1 > 50) + (#epbl1 > 60) + (#epbl1 > 70) + (#epbl1 > 80) + (#epbl1 > 90)))",
+        "target_property_name": "#epcl2"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(1 * ((#epbl2 > 1) + (#epbl2 > 2) + (#epbl2 > 3) + (#epbl2 > 4) + (#epbl2 > 5) + (#epbl2 > 6) + (#epbl2 > 7) + (#epbl2 > 8) + (#epbl2 > 9)))",
+        "target_property_name": "#epcl3"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(#epcl1 + #epcl2 + #epcl3)",
+        "target_property_name": "#finalc"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(not(#finalc = 0))",
+        "target_property_name": "#visible"
+      },
+      { "binding_type": "view",
+        "source_property_name": "('§z' + #finalc + '%%')",
+        "target_property_name": "#text"
+    }]
   }
 }

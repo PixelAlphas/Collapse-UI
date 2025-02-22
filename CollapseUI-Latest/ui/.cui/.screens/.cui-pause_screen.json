@@ -234,39 +234,7 @@
             { "requires": "(($hover_state) or ($pressed_state))",
               "$cuiv:text_color_main": "$cuigv:SecondaryColor"
           }]
-      }},
-      { "label": {
-          "type": "label",
-          "text": "cui.pause.world",
-          "layer": 1,
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "font_size": "small",
-          "offset": [ -5, -16 ],
-          "color": "$cuiv:text_color_main",
-          "variables": [
-            { "requires": "(($hover_state) or ($pressed_state))",
-              "$cuiv:text_color_main": "$cuigv:SecondaryColor"
-          }]
-      }},
-      { "worldname_panel": {
-          "ignored": "(not $cuiv:gradientbackground)",
-          "type": "label",
-          "layer": 4,
-          "alpha": "$cuigv:BackgroundAlpha",
-          "offset": [ -5, -4 ],
-          "color": "$cuiv:text_color_main",
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "font_scale_factor": 0.8,
-          "text": "#worldname",
-          "variables": [
-            { "requires": "(($hover_state) or ($pressed_state))",
-              "$cuiv:text_color_main": "$cuigv:SecondaryColor"
-          }],
-          "bindings": [
-            { "binding_name": "#worldname" }
-      ]}}
+      }}
   ]},
   
   "playerlist_element": {
@@ -762,13 +730,17 @@
             ]}},
             { "label": {
                 "type": "label",
-                "text": "cui.username.playing",
+                "text": "#players_list_title",
                 "layer": 1,
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "font_size": "small",
                 "color": "$cuigv:FontSecondaryColor",
-                "offset": [ 0, 0 ]
+                "offset": [ 0, 0 ],
+                "bindings": [
+                  { "binding_name": "#players_list_title",
+                    "binding_type": "global"
+                }]
             }}
       ]}}
   ]}
