@@ -130,7 +130,7 @@
       }},
       { "config_visual_03@cui-activeconfig_section.config_label": {
           "$cuiv:config_text": "cui.about.tab.activeconfig.exptextshadows",
-          "$cuiv:config_value": "$cuigv:ExpTextShadows"
+          "$cuiv:config_value": "$cuigv:ExperienceTextShadows"
       }},
       { "config_visual_04@cui-activeconfig_section.config_label": {
           "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradient",
@@ -139,6 +139,14 @@
       { "config_visual_05@cui-activeconfig_section.config_label": {
           "$cuiv:config_text": "cui.about.tab.activeconfig.uianimations",
           "$cuiv:config_value": "$cuigv:UIAnimations"
+      }},
+      { "config_visual_06@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.moreexperiencedetails",
+          "$cuiv:config_value": "$cuigv:MoreExperienceDetails"
+      }},
+      { "config_visual_07@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.animatedhotbarselect",
+          "$cuiv:config_value": "$cuigv:AnimatedHotbarSelect"
       }}
   ]},
   "config_layout@cui-about_section.element_stack_template": {

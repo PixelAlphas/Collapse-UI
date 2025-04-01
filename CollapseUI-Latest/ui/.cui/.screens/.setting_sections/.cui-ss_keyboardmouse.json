@@ -9,6 +9,7 @@
     "use_child_anchors": true,
     "$cuiv:element_background_no_label": true,
     "$cuiv:header_anchor": "center",
+    "$cuiv:header_offset": [ 0, -1 ],
     "$cuiv:header_background": true,
     "bindings": [
       { "binding_type": "view",
@@ -18,7 +19,7 @@
     }],
     "controls": [
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
-      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.keyboardAndMouse", "$cuiv:element_background_contents": "cui-ss_keyboardmouse.title"}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.keyboardAndMouse", "$cuiv:header_title": "cui.settings.keyboardmouse.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
       { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
       { "keyboardmouse@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_keyboardmouse.keyboardmouse"}},
       { "pudding_02": { "type": "panel", "size": [ 1, 6 ]}},

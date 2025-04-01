@@ -2,25 +2,69 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      {
-        "@cui-hud_screen.statistics": {}
-      },
-      {
-        "@cui-hud_screen.detailed_exp": {}
-      }
+      { "@cui-hud_screen.statistics": {}},
+      { "@cui-hud_screen.detailed_exp": {
+          "ignored": "(not $cuigv:MoreExperienceDetails)"
+      }}
+  ]},
+  "anim_hotbar_select": {
+    "ignored": "(not $cuigv:AnimatedHotbarSelect)",
+    "type": "panel",
+    "controls": [
+      { "hotbar_slot_selected_image": {
+          "type": "collection_panel",
+          "size": [ 24, 24 ],
+          "layer": 8,
+          "propagate_alpha": true,
+          "factory": {
+            "name": "cui:hsf",
+            "control_name": "cui-hud_screen.hotbar_slot_selected_image",
+            "max_children_size": 1
+          },
+          "bindings": [
+            { "binding_name": "#slot_selected",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#slot_selected * 1)",
+              "target_property_name": "#collection_length"
+          }]
+      }},
+      { "hotbar_slot_selected_image_unselected": {
+          "type": "collection_panel",
+          "size": [ 24, 24 ],
+          "layer": 8,
+          "propagate_alpha": true,
+          "factory": {
+            "name": "cui:hsf",
+            "control_name": "cui-hud_screen.hotbar_slot_selected_image_unselected",
+            "max_children_size": 1
+          },
+          "bindings": [
+            { "binding_name": "#slot_selected",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(1 - (#slot_selected * 1))",
+              "target_property_name": "#collection_length"
+          }]
+      }}
   ]},
   "detailed_exp": {
     "type": "panel",
     "controls": [
-      { "exp_percentage@label": {
+      // -- ## FIX ## --
+      // This binding formula causes memory leak.
+      // It'll fill the memory up casually within hour.
+      { "exp_percentage@label_outline": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "offset": [ 114, -23 ],
           "size": [ 40, 10 ],
           "layer": 999,
           "$cuiv:ptl_bindings": [
-            // Read the below
-            // Might use this on any bars related tbh
             { "binding_type": "global",
               "binding_name": "#exp_progress",
               "binding_condition": "always"
@@ -58,7 +102,7 @@
               "target_property_name": "#text"
           }]
       }},
-      { "exp_point@label": {
+      { "exp_point@label_outline": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "offset": [ -113, -13 ],
@@ -74,13 +118,10 @@
               "binding_name": "#level_number",
               "binding_condition": "always"
             },
-            // #level_number are not integers.
-            // so i convert them into that by using '* 1'
             { "binding_type": "view",
               "source_property_name": "(#level_number * 1)",
               "target_property_name": "#exp_required_base"
             },
-            // Forked the calculation formula from wiki lmao
             { "binding_type": "view",
               "source_property_name": "((2 * #exp_required_base + 7) * (#exp_required_base < 16))",
               "target_property_name": "#exp_required_1"
@@ -93,20 +134,14 @@
               "source_property_name": "((9 * #exp_required_base - 158) * (#exp_required_base > 30))",
               "target_property_name": "#exp_required_3"
             },
-            // Combine the above and should turn into required exp
             { "binding_type": "view",
               "source_property_name": "(#exp_required_1 + #exp_required_2 + #exp_required_3)",
               "target_property_name": "#exp_required_result"
             },
-            // I hate math.
             { "binding_type": "view",
               "source_property_name": "((#exp_required_result + 1) * (1 - #exp_progress))",
               "target_property_name": "#epb"
             },
-            // Extract floats into integers by cycling through each operators.
-            // This also acts as integer limiter.
-            // I've used 100,000 as maximum for performance reasons and pronbably no one
-            // are having like 10000 levels.
             { "binding_type": "view",
               "source_property_name": "(#epb - #epc1)",
               "target_property_name": "#epb1"
@@ -151,20 +186,17 @@
               "source_property_name": "(1 * ((#epb5 > 1) + (#epb5 > 2) + (#epb5 > 3) + (#epb5 > 4) + (#epb5 > 5) + (#epb5 > 6) + (#epb5 > 7) + (#epb5 > 8) + (#epb5 > 9)))",
               "target_property_name": "#epc6"
             },
-            // Combine the Extracted integers into a usuable value (e.g 1 + 0 + 0 + 2 + 3 + 5 = 100235)
-            // Can't believe this is how bindings works, i hate this thing.
             { "binding_type": "view",
               "source_property_name": "(#epc1 + #epc2 + #epc3 + #epc4 + #epc5 + #epc6)",
               "target_property_name": "#final"
             },
-            // Display text
             { "binding_type": "view",
               "source_property_name": "('§z' + #final + '\n/ ' + #exp_required_result)",
               "target_property_name": "#text"
           }]
       }}
   ]},
-  "label": {
+  "label_outline": {
     "type": "label",
     "text": "#text",
     "size": [ "100%", "default" ],
@@ -178,37 +210,37 @@
     "color": [ 0.6156, 0.9019, 0.3058 ],
     "layer": 20,
     "variables": [
-      { "requires": "(not $cuigv:ExpTextShadows)",
+      { "requires": "(not $cuigv:ExperienceTextShadows)",
         "$cuiv:progresstextshadows": true
     }],
     "bindings": "$cuiv:ptl_bindings",
     "controls": [
-      { "shadow01@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExpTextShadows)",
+      { "shadow01@label_template": {
+          "ignored": "(not $cuigv:ExperienceTextShadows)",
           "color": [ 0, 0.2054, 0.1505 ],
           "offset": [ -1, 0 ],
           "layer": -2
       }},
-      { "shadow02@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExpTextShadows)",
+      { "shadow02@label_template": {
+          "ignored": "(not $cuigv:ExperienceTextShadows)",
           "color": [ 0, 0.2054, 0.1505 ],
           "offset": [ 1, 0 ],
           "layer": -2
       }},
-      { "shadow03@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExpTextShadows)",
+      { "shadow03@label_template": {
+          "ignored": "(not $cuigv:ExperienceTextShadows)",
           "color": [ 0, 0.2054, 0.1505 ],
           "offset": [ 0, -1 ],
           "layer": -2
       }},
-      { "shadow04@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExpTextShadows)",
+      { "shadow04@label_template": {
+          "ignored": "(not $cuigv:ExperienceTextShadows)",
           "color": [ 0, 0.2054, 0.1505 ],
           "offset": [ 0, 1 ],
           "layer": -2
       }}
   ]},
-  "progress_xp_text_label_template": {
+  "label_template": {
     "type": "label",
     "text": "#text",
     "text_alignment": "$cuiv:text_alignment",
@@ -217,6 +249,52 @@
     "color": [ 0.6156, 0.9019, 0.3058 ],
     "bindings": "$cuiv:ptl_bindings"
   },
+  "progress_text_label": {
+    "$cuiv:progresstextshadows|default": false,
+    "shadow": "$cuiv:progresstextshadows",
+    "color": [ 0.6156, 0.9019, 0.3058 ],
+    "variables": [
+      { "requires": "(not $cuigv:ExperienceTextShadows)",
+        "$cuiv:progresstextshadows": true
+    }],
+    "controls": [
+      { "shadow01@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExperienceTextShadows)",
+          "color": [ 0, 0.2054, 0.1505 ],
+          "offset": [ -1, 0 ],
+          "layer": -2
+      }},
+      { "shadow02@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExperienceTextShadows)",
+          "color": [ 0, 0.2054, 0.1505 ],
+          "offset": [ 1, 0 ],
+          "layer": -2
+      }},
+      { "shadow03@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExperienceTextShadows)",
+          "color": [ 0, 0.2054, 0.1505 ],
+          "offset": [ 0, -1 ],
+          "layer": -2
+      }},
+      { "shadow04@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExperienceTextShadows)",
+          "color": [ 0, 0.2054, 0.1505 ],
+          "offset": [ 0, 1 ],
+          "layer": -2
+      }}
+  ]},
+  "progress_xp_text_label_template": {
+    "type": "label",
+    "text": "#level_number",
+    "color": [ 0.6156, 0.9019, 0.3058 ],
+    "bindings": [
+      { "binding_name": "#level_number",
+        "binding_type": "global"
+      },
+      { "binding_name": "#level_number_visible",
+        "binding_type": "global",
+        "binding_name_override": "#visible"
+  }]},
   "statistics": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -380,5 +458,51 @@
 				      "binding_name_override": "#text"
 				  }]
 		  }}
-  ]}
+  ]},
+  "hotbar_slot_selected_image": {
+    "type": "image",
+    "texture": "textures/ui/selected_hotbar_slot",
+    "size": [ 24, 24 ],
+    "layer": 8,
+    "anims": "$cuiv:hsf_anims",
+    "$cuiv:hsf_anims|default": [ 
+      "@cui-hud_screen.hotbar_slot_selected_anim_size_selected",
+      "@cui-hud_screen.hotbar_slot_selected_anim_alpha_selected"
+    ]
+  },
+  "hotbar_slot_selected_image_unselected@hotbar_slot_selected_image": {
+    "$cuiv:hsf_anims": [ 
+      "@cui-hud_screen.hotbar_slot_selected_anim_size_unselected",
+      "@cui-hud_screen.hotbar_slot_selected_anim_alpha_unselected"
+    ]
+  },
+  "hotbar_slot_selected_anim_size_selected": {
+    "anim_type": "size",
+    "easing": "out_quart",
+    "duration": 0.5,
+    "from": [ 32, 32 ],
+    "to": [ 24, 24 ]
+  },
+  "hotbar_slot_selected_anim_size_unselected": {
+    "anim_type": "size",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": [ 24, 24 ],
+    "to": [ 32, 32 ]
+  },
+  "hotbar_slot_selected_anim_alpha_selected": {
+    "anim_type": "alpha",
+    "easing": "out_quart",
+    "duration": 0.5,
+    "from": 0,
+    "to": 1
+  },
+  "hotbar_slot_selected_anim_alpha_unselected": {
+    "anim_type": "alpha",
+    "easing": "out_quart",
+    "duration": 0.5,
+    "from": 1,
+    "to": 0,
+    "destroy_at_end": "hotbar_slot_selected_image"
+  }
 }

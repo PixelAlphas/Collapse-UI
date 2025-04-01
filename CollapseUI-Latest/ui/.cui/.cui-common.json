@@ -1,46 +1,12 @@
 { "namespace": "cui-common",
-  "textbox_template": {
-    "type": "image",
-    "texture": "textures/ui/.cui-assets/background",
-    "size": [ "100% - 8px", "100%cm + 4px" ],
-    "color": "$cuigv:TertiaryColor",
-    "$cuiv:tbt_header|default": "NaN lmao",
-    "$cuiv:tbt_bindings|default": "NaN lmao",
-    "$cuiv:tbt_placeholder|default": "NaN lmao",
-    "$cuiv:tbt_name|default": "NaN lmao",
-    "$cuiv:tbt_bindings_property|default": [],
-    "controls": [
-      { "sp": {
-          "type": "stack_panel",
-          "orientation": "vertical",
-          "size": [ "100% - 8px", "100%c" ],
-          "controls": [
-            { "header": {
-                "type": "label",
-                "text": "$cuiv:tbt_header",
-                "size": [ "100% - 8px", "default" ],
-                "font_type": "MinecraftTen",
-                "layer": 10
-            }},
-            { "pudding": { "type": "panel", "size": [ 1, 2 ]}},
-            { "host_input@cui-common.text_box": {
-                "$cuiv:text_edit_box_content_binding_name": "$cuiv:tbt_bindings",
-                "$cuiv:text_edit_box_binding_collection_name": "$cuiv:tbt_bindings",
-                "$cuiv:placeholder_text": "$cuiv:tbt_placeholder",
-                "$cuiv:text_box_name": "$cuiv:tbt_name",
-                "size": [ "100%", 20 ],
-                "bindings": "$cuiv:tbt_bindings_property"
-            }}
-      ]}}
-  ]},
   "cancel_button@cui-common.cancel_button_core": {
-    "offset": [ 4, 4 ],
+    "offset": [ -4, 4 ],
     "anchor_from": "top_right",
     "anchor_to": "top_right"
   },
   "cancel_button_core@cui-button.text_button": {
     "$pressed_button_name": "button.menu_exit",
-    "size": [ 35, 35 ],
+    "size": [ 24, 24 ],
     "$cuiv:button_type_panel": "cui-start_screen.button_label",
     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
@@ -261,8 +227,41 @@
       { "hover@$cuiv:text_background_hover": {} },
       { "pressed@$cuiv:text_background_hover": {} },
       { "locked@$cuiv:text_background_locked": {} }
-    ]
-  },
+  ]},
+  "textbox_template": {
+    "type": "image",
+    "texture": "textures/ui/.cui-assets/background",
+    "size": [ "100% - 8px", "100%cm + 4px" ],
+    "color": "$cuigv:TertiaryColor",
+    "$cuiv:tbt_header|default": "NaN lmao",
+    "$cuiv:tbt_bindings|default": "NaN lmao",
+    "$cuiv:tbt_placeholder|default": "NaN lmao",
+    "$cuiv:tbt_name|default": "NaN lmao",
+    "$cuiv:tbt_bindings_property|default": [],
+    "controls": [
+      { "sp": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100% - 8px", "100%c" ],
+          "controls": [
+            { "header": {
+                "type": "label",
+                "text": "$cuiv:tbt_header",
+                "size": [ "100% - 8px", "default" ],
+                "font_type": "MinecraftTen",
+                "layer": 10
+            }},
+            { "pudding": { "type": "panel", "size": [ 1, 2 ]}},
+            { "host_input@cui-common.text_box": {
+                "$cuiv:text_edit_box_content_binding_name": "$cuiv:tbt_bindings",
+                "$cuiv:text_edit_box_binding_collection_name": "$cuiv:tbt_bindings",
+                "$cuiv:placeholder_text": "$cuiv:tbt_placeholder",
+                "$cuiv:text_box_name": "$cuiv:tbt_name",
+                "size": [ "100%", 20 ],
+                "bindings": "$cuiv:tbt_bindings_property"
+            }}
+      ]}}
+  ]},
   "text_edit_box_place_holder_label": {
     "type": "label",
     "shadow": false,
@@ -494,24 +493,25 @@
     "size": [ "100%", 20 ],
     "$cuiv:header_text|default": "none",
     "$cuiv:header_anchor|default": "left_middle",
+    "$cuiv:header_offset|default": [ 6, -1 ],
     "$cuiv:header_background|default": false,
     "controls": [
       { "label": {
           "type": "image",
-          "size": [ "100%c + 12px", "100%c + 8px" ],
+          "size": [ "100%", "100%c + 8px" ],
           "texture": "textures/ui/.cui-assets/background_no_outline",
           "color": "$cuigv:PrimaryColor",
-          "anchor_from": "$cuiv:header_anchor",
-          "anchor_to": "$cuiv:header_anchor",
           "layer": 2,
           "controls": [
             { "main": {
                 "type": "label",
-                "layer": 1,
+                "layer": 3,
                 "color": "$cuigv:SecondaryColor",
                 "text": "$cuiv:header_text",
+                "anchor_from": "$cuiv:header_anchor",
+                "anchor_to": "$cuiv:header_anchor",
                 "font_type": "MinecraftTen",
-                "offset": [ 0, -1 ],
+                "offset": "$cuiv:header_offset",
                 "shadow": false
             }}
       ]}},

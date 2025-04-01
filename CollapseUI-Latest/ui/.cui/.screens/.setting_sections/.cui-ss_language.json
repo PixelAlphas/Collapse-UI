@@ -7,6 +7,7 @@
     "use_child_anchors": true,
     "$cuiv:element_background_no_label": true,
     "$cuiv:header_anchor": "center",
+    "$cuiv:header_offset": [ 0, -1 ],
     "$cuiv:header_background": true,
     "bindings": [
       { "binding_type": "view",

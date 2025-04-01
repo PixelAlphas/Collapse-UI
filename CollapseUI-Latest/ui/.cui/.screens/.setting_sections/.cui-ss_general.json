@@ -7,6 +7,7 @@
     "use_child_anchors": true,
     "$cuiv:element_background_no_label": true,
     "$cuiv:header_anchor": "center",
+    "$cuiv:header_offset": [ 0, -1 ],
     "$cuiv:header_background": true,
     "bindings": [
       { "binding_type": "view",
@@ -25,17 +26,23 @@
       { "network@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.network"}},
       { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}},
       { "header_label@cui-common.header": {
-          "$cuiv:header_text": "cui.settings.general.online.title"
+          "$cuiv:header_text": "cui.settings.video.gameplay.title"
       }},
       { "padding_04": { "type": "panel", "size": [ 1, 2 ]}},
-      { "online@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.online"}},
+      { "gameplay@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.gameplay"}},
       { "pudding_05": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "cui.settings.general.online.title"
+      }},
+      { "padding_06": { "type": "panel", "size": [ 1, 2 ]}},
+      { "online@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.online"}},
+      { "pudding_07": { "type": "panel", "size": [ 1, 6 ]}},
       { "header_label@cui-common.header": {
           "$cuiv:header_text": "key.categories.misc"
       }},
-      { "padding_06": { "type": "panel", "size": [ 1, 2 ]}},
+      { "padding_08": { "type": "panel", "size": [ 1, 2 ]}},
       { "misc@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.misc"}},
-      { "pudding_07": { "type": "panel", "size": [ 1, 6 ]}},
+      { "pudding_09": { "type": "panel", "size": [ 1, 6 ]}},
       { "reset_button@cui-button.text_button": {
           "ignored": "(not $is_pregame)",
           "size": [ "100% - 4px", 30 ],
@@ -44,7 +51,7 @@
           "$focus_override_down": "FOCUS_OVERRIDE_STOP",
           "property_bag": { "reset_group": "general" }
       }},
-      { "pudding_08": { "type": "panel", "size": [ 1, 6 ]}}
+      { "pudding_10": { "type": "panel", "size": [ 1, 6 ]}}
   ]},
   "network": {
     "type": "stack_panel",
@@ -67,6 +74,37 @@
           "$cuiv:option_toggle_binding_name": "#websocket_encryption_enabled",
           "$toggle_name": "websocket_encryption",
           "ignored": "($console_edition)"
+      }}
+  ]},
+  "gameplay": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "pause_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.pauseHint",
+          "$cuiv:option_binding_name": "#pause_option_toggle",
+          "$toggle_name": "pause_option_toggle",
+          "bindings": [
+            { "binding_name": "#pause_toggle_enabled",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "filter_profanity_toggle@cui-setting_screen.option_toggle": {
+          "ignored": "(not ($build_platform_UWP or $is_ios or $google_os) or $disable_toggle_filter_profanity)",
+          "$cuiv:option_label_text": "options.filterProfanity",
+          "$cuiv:option_binding_name": "#filter_profanity",
+          "$cuiv:option_enabled_binding_name": "#filter_profanity_enabled",
+          "$toggle_name": "filter_profanity",
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.filterProfanity.tooltip"
+      }},
+      { "only_allow_trusted_skins_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.onlyTrustedSkinsAllowed",
+          "$cuiv:option_binding_name": "#only_trusted_skins_allowed",
+          "$cuiv:option_toggle_binding_name": "#only_trusted_skins_allowed_enabled",
+          "$toggle_name": "only_trusted_skins_allowed"
       }}
   ]},
   "online": {
@@ -111,13 +149,7 @@
                     "binding_name_override": "#visible"
                 }]
             }}
-      ]}},
-      { "only_allow_trusted_skins_toggle@cui-setting_screen.option_toggle": {
-          "$cuiv:option_label_text": "options.onlyTrustedSkinsAllowed",
-          "$cuiv:option_binding_name": "#only_trusted_skins_allowed",
-          "$cuiv:option_toggle_binding_name": "#only_trusted_skins_allowed_enabled",
-          "$toggle_name": "only_trusted_skins_allowed"
-      }}
+      ]}}
   ]},
   "misc": {
     "type": "stack_panel",
@@ -125,6 +157,40 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
+      { "tutorial_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.tutorial",
+          "$cuiv:option_binding_name": "#tutorial_option_toggle",
+          "$toggle_name": "tutorial_option_toggle",
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.tutorialHint",
+          "bindings": [
+            { "binding_name": "#tutorial_toggle_enabled",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "tutorial_animation_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.tutorial_show_animation",
+          "$cuiv:option_binding_name": "#tutorial_show_animations_toggle",
+          "$toggle_name": "tutorial_show_animations_toggle",
+          "bindings": [
+            { "binding_name": "#edu_show_animation_toggle",
+              "binding_name_override": "#visible"
+            },
+            { "binding_name": "#gametips_enabled",
+              "binding_name_override": "#enabled"
+          }]
+      }},
+      { "tutorial_restart_button@cui-button.text_button": {
+          "$pressed_button_name": "button.tutorial_restart",
+          "$cuiv:button_text": "options.restartTutorial",
+          "bindings": [
+            { "binding_name": "#tutorial_toggle_enabled",
+              "binding_name_override": "#visible"
+            },
+            { "binding_name": "#gametips_enabled",
+              "binding_name_override": "#enabled"
+          }]
+      }},
       { "ecomode_enabled_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.enableEcoMode",
           "$cuiv:option_binding_name": "#ecomode_toggle",

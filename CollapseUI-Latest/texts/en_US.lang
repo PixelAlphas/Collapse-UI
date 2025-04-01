@@ -4,6 +4,8 @@ cui.settings.experimental.title=Experimental
 cui.settings.utilities=Utilities
 cui.settings.controls=Control(s)
 cui.settings.generals=General(s)
+cui.settings.extra_info_enabled=Displaying Descriptions.
+cui.settings_toggle_desc="View Description"
 
 ## > Accessibility
 cui.settings.accessibility.main.description=A section that may help with disability and visibility related.
@@ -85,6 +87,16 @@ cui.username.local=Playing as (Local)
 cui.username.playing=Playing as
 cui.main_menu.quickaccess=Quick Access
 cui.main_menu.infomation=Information
+cui.extra_menu.achievement_desc=View your progress.
+cui.extra_menu.skin_desc=Modify your character.
+cui.extra_menu.marketplace_desc=Add-ons but not quite free.
+cui.extra_menu.realm_desc=View Realm Benefits.
+cui.extra_menu.getstarted_desc=Replay the 'first time' experience.
+cui.extra_menu.about_desc=View the current UI info.
+cui.extra_menu.notification_desc=View Notification/Inbox.
+cui.extra_menu.feedback_desc=Open a feedback website.
+cui.extra_menu_controller="Extra Menu"
+cui.extra_menu.event=§eWorld Event is detected.\n§fCheck out via Extra Menu!
 
 ## Pause screen
 cui.pause.resume=RESUME
@@ -141,6 +153,8 @@ cui.about.tab.activeconfig.fadedprogressBar=Faded Loading bar
 cui.about.tab.activeconfig.exptextshadows=Java Edition Experience bar text
 cui.about.tab.activeconfig.backgroundgradient=Background Gradient
 cui.about.tab.activeconfig.uianimations=Animations
+cui.about.tab.activeconfig.moreexperiencedetails=More Experience Bar Details
+cui.about.tab.activeconfig.animatedhotbarselect=Animated Hotbar Select/Highlight
 
 cui.about.tab.activeconfig.layout=Layouts
 cui.about.tab.activeconfig.searchboxsystem=World Search Box
@@ -166,6 +180,8 @@ cui.extras.goback=Press the background or ESC key for keyboard or 'Select' butto
 cui.loading.overworld=Entering 'Overworld'...
 cui.loading.nether=Entering 'Nether'...
 cui.loading.theend=Entering 'The End'...
+
+
 
 options.fov= 
 options.fov.alt=FOV

@@ -1,6 +1,6 @@
 {
   "$cuigv:ConfigName": "Default",
-  "$cuigv:DesignedVersion": "v3.0",
+  "$cuigv:DesignedVersion": "v4.0",
 
   "$cuigv:PrimaryColor": [ 0.5450, 0.3450, 0.9254 ], 
   "$cuigv:SecondaryColor": [ 0.0745, 0.0588, 0.0862 ], 
@@ -19,10 +19,12 @@
 
   "$cuigv:Shadows": true, 
   "$cuigv:FadedProgressBar": true, 
-  "$cuigv:ExpTextShadows": true, 
+  "$cuigv:ExperienceTextShadows": true, 
   "$cuigv:BackgroundGradient": true, 
   "$cuigv:UIAnimations": true,
-
+  "$cuigv:MoreExperienceDetails": false,
+  "$cuigv:AnimatedHotbarSelect": false,
+  
   "$cuigv:LogoInPauseScreen": true,
   "$cuigv:StartMainButtonClassic": false,
   "$cuigv:SearchBoxSystem": true, 

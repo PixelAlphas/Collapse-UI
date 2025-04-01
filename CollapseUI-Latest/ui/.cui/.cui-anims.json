@@ -1,4 +1,29 @@
 { "namespace": "cui-anims",
+  // Button Anims
+  "button_anim_color": {
+    "anim_type": "color",
+    "duration": 0.1,
+    "from": "$cuiv-anim:color_in",
+    "to": "$cuiv-anim:color_out"
+  },
+  "button_anim_color_reverse": {
+    "anim_type": "color",
+    "duration": 0.1,
+    "from": "$cuiv-anim:color_out",
+    "to": "$cuiv-anim:color_in"
+  },
+  "button_anim_alpha": {
+    "anim_type": "alpha",
+    "duration": 0.1,
+    "from": "$cuiv-anim:alpha_in",
+    "to": "$cuiv-anim:alpha_out"
+  },
+  "button_anim_alpha_reverse": {
+    "anim_type": "alpha",
+    "duration": 0.1,
+    "from": "$cuiv-anim:alpha_out",
+    "to": "$cuiv-anim:alpha_in"
+  },
   // Hud tooltip Anims
   "hud_tooltip_item": {
 		"anim_type": "offset",
@@ -186,15 +211,29 @@
   // Extra Menu Anims
   "extra_anims_offset": {
     "anim_type": "offset",
-    "from": [ -180, 0 ],
-    "to": [ 4, 0 ],
+    "from": [ 0, 100 ],
+    "to": [ 0, -20 ],
     "duration": 0.4,
     "easing": "out_cubic"
   },
   "extra_anims_offset_exit": {
     "anim_type": "offset",
-    "from": [ 4, 0 ],
-    "to": [ -180, 0 ],
+    "from": [ 0, -20 ],
+    "to": [ 0, 100 ],
+    "duration": 0.4,
+    "easing": "in_cubic"
+  },
+  "event_anims_offset": {
+    "anim_type": "offset",
+    "from": [ 0, 55 ],
+    "to": [ 0, -65 ],
+    "duration": 0.4,
+    "easing": "out_cubic"
+  },
+  "event_anims_offset_exit": {
+    "anim_type": "offset",
+    "from": [ 0, -65 ],
+    "to": [ 0, 55 ],
     "duration": 0.4,
     "easing": "in_cubic"
   },
@@ -209,6 +248,20 @@
     "anim_type": "offset",
     "from": [ 14, 4 ],
     "to": [ -180, 4 ],
+    "duration": 0.4,
+    "easing": "in_cubic"
+  },
+  "extra_anims_offset_info": {
+    "anim_type": "offset",
+    "from": [ -180, 40 ],
+    "to": [ 14, 40 ],
+    "duration": 0.4,
+    "easing": "out_cubic"
+  },
+  "extra_anims_offset_info_exit": {
+    "anim_type": "offset",
+    "from": [ 14, 40 ],
+    "to": [ -180, 40 ],
     "duration": 0.4,
     "easing": "in_cubic"
   },

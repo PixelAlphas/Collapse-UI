@@ -15,7 +15,75 @@
           "$cuiv:title_text": "Settings"
       }},
       { "@gamepad_tooltips": {}},
+      { "@extra_info_button_element": {}},
+      { "@extra_info_button_content": {}},
       { "@dialog_content": {}}
+  ]},
+  "extra_info_button_content": {
+    "type": "label",
+    "layer": 80,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "text": "cui.settings.extra_info_enabled",
+    "offset": [ -50, 12 ],
+    "color": "$cuigv:FontPrimaryColor",
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "cuib-info",
+        "source_property_name": "(#toggle_state)",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "warning": {
+          "type": "image",
+          "layer": -1,
+          "size": [ "100% + 8px", "100% + 8px" ],
+          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "color": "$cuigv:SecondaryColor"
+      }}
+  ]},
+  "extra_info_button_element": {
+    "type": "panel",
+    "size": [ 28, 28 ],
+    "offset": [ -12, 3 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$cuiv-anim:pos_from": [ -12, -48 ],
+    "$cuiv-anim:pos_to": [ -12, 3 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
+    "controls": [
+      { "open_extra_menu@cui-toggle.toggle_button": {
+          "$toggle_focus_enabled": false,
+          "size": [ 28, 28 ],
+          "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/extra_icon",
+          "$toggle_view_binding_name": "cuib-info",
+          "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_image",
+          "$cuiv:toggle_texture_offset": [ 0, 0 ],
+          "$toggle_name": "infomenu",
+          "$button_mappings": [
+            { "from_button_id": "button.controller_start",
+              "to_button_id": "button.controller_start",
+              "mapping_type": "global"
+            },
+            { "from_button_id": "button.scoreboard",
+              "to_button_id": "button.scoreboard",
+              "mapping_type": "global"
+            },
+            { "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            { "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused"
+          }]
+      }}
   ]},
   "gamepad_tooltips": {
     "type": "stack_panel",
@@ -28,7 +96,12 @@
     "use_child_anchors": false,
     "controls": [
       { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {}},
-      { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {}}
+      { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {}},
+      { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
+          "$cuiv:gamepad_no_bindings_description": true,
+          "$cuiv:icon_texture": "#controller_start_icon",
+          "$icon_description_bind": "cui.settings_toggle_desc"
+      }}
   ]},
   "dialog_content": {
     "type": "panel",
@@ -463,20 +536,6 @@
     "$button_content": "controls_section.arrow_reset",
     "$cuiv:button_type_panel": "button.reset_binding"
   },
-  "option_dropdown@cui-setting_screen.option_toggle": {
-    "$cuiv:is_dropdown": true,
-    "$cuiv:option_control_name": "cui-setting_screen.option_radio_control"
-  },
-  "option_slider@cui-setting_screen.option_toggle": {
-    "$cuiv:is_slider": true,
-    "$cuiv:slider_value_binding|default": [],
-    "$cuiv:option_control_name": "cui-setting_screen.option_slider_control",
-    "$cuiv:option_control_name_slider": "cui-setting_screen.slider",
-    "variables": [
-      { "requires": "($cuigv:HorizontalSlider)",
-        "$cuiv:option_control_name": "cui-setting_screen.option_slider_control_horizontal",
-        "$cuiv:option_control_name_slider": "cui-setting_screen.slider_horizontal"
-  }]},
   "slider@cui-slider.slider": {
     "size": [ "100% - 15px", 10 ],
     "enabled": "$cuiv:is_enabled",
@@ -491,6 +550,16 @@
     "type": "panel",
     "size": [ "100%", 10 ],
     "controls": [
+      { "image": {
+          "ignored": "(not $cuiv:is_image_pudding)",
+          "type": "image",
+          "layer": 10,
+          "size": [ 20, 20 ],
+          "offset": [ -24, 10 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "texture": "$cuiv:slider_image_source"
+      }},
       { "label": {
           "type": "label",
           "layer": 10,
@@ -564,6 +633,24 @@
             }}
       ]}}
   ]},
+  "option_toggle_info@cui-setting_screen.option_toggle": {
+    "$cuiv:is_info": true,
+    "$cuiv:option_control_name": "cui-setting_screen.option_toggle_info_control"
+  },
+  "option_dropdown@cui-setting_screen.option_toggle": {
+    "$cuiv:is_dropdown": true,
+    "$cuiv:option_control_name": "cui-setting_screen.option_radio_control"
+  },
+  "option_slider@cui-setting_screen.option_toggle": {
+    "$cuiv:is_slider": true,
+    "$cuiv:slider_value_binding|default": [],
+    "$cuiv:option_control_name": "cui-setting_screen.option_slider_control",
+    "$cuiv:option_control_name_slider": "cui-setting_screen.slider",
+    "variables": [
+      { "requires": "($cuigv:HorizontalSlider)",
+        "$cuiv:option_control_name": "cui-setting_screen.option_slider_control_horizontal",
+        "$cuiv:option_control_name_slider": "cui-setting_screen.slider_horizontal"
+  }]},
   "option_toggle": {
     "type": "panel",
     "size": "$cuiv:option_toggle_size",
@@ -576,14 +663,19 @@
   ]},
   "option_toggle_core": {
     "type": "stack_panel",
-    "size": [ "100%", "100%c" ],
+    "size": "$cuiv:option_core_size",
+    "anchor_to": "$cuiv:option_core_anchor",
+    "anchor_from": "$cuiv:option_core_anchor",
+    "offset": "$cuiv:option_core_offset",
     "enabled": "$cuiv:is_enabled",
     "$cuiv:is_slider|default": false,
+    "$cuiv:slider_image_source|default": "textures/ui/.cui-assets/error",
     "$cuiv:is_dropdown|default": false,
+    "$cuiv:is_image_pudding|default": false,
+    "$cuiv:option_description|default": false,
     "$cuiv:option_toggle_binding_type|default": "global",
     "$cuiv:option_toggle_binding_name|default": [],
     "$cuiv:option_label_text|default": "No text?",
-    "$cuiv:option_description|default": false,
     "$cuiv:option_description_text|default": "No description?",
     "$cuiv:option_layout_size|default": [ "100%", "100%c + 8px" ],
     "$cuiv:option_layout_max_size|default": [ "100%", "100%cm + 18px" ],
@@ -591,12 +683,20 @@
     "$cuiv:option_label_offset|default": [ 4, 0 ],
     "$cuiv:option_label_bindings|default": [],
     "$cuiv:option_value_text|default": "No bindings?",
+    "$cuiv:option_core_offset|default": [ 0, 0 ],
+    "$cuiv:option_core_anchor|default": "center",
+    "$cuiv:option_core_size|default": [ "100%", "100%c" ],
     "use_child_anchors": true,
     "$cuiv:option_control_name_slider|default": "",
     "variables": [
       { "requires": "(not $cuiv:is_enabled or not $cuiv:option_toggle_binding_name)",
         "$cuiv:option_toggle_binding_type": "none",
         "$cuiv:option_toggle_binding_name": "#not_data_bound"
+      },
+      { "requires": "$cuiv:is_image_pudding",
+        "$cuiv:option_core_size": [ "100% - 24px", "100%c" ],
+        "$cuiv:option_core_anchor": "right_middle",
+        "$cuiv:option_core_offset": [ -1, 0 ]
     }],
     "bindings": [
       { "binding_type": "$cuiv:option_toggle_binding_type",
@@ -643,12 +743,24 @@
           "layer": 5,
           "text": "$cuiv:option_description_text",
           "font_scale_factor": 0.75,
-          "locked_alpha": 0.5
+          "locked_alpha": 0.5,
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "cuib-info",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+          }]
       }},
       { "description_spacing": {
           "ignored": "(not $cuiv:option_description)",
           "type": "panel",
-          "size": [ 4, 4 ]
+          "size": [ 4, 4 ],
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "cuib-info",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+          }]
       }}
   ]},
   "option_toggle_control@common.toggle": {

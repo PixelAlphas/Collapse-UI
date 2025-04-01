@@ -7,7 +7,9 @@
     "use_child_anchors": true,
     "$cuiv:element_background_no_label": true,
     "$cuiv:header_anchor": "center",
+    "$cuiv:header_offset": [ 0, -1 ],
     "$cuiv:header_background": true,
+    "$cuiv:is_image_pudding": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "sound_button_toggle",
@@ -37,6 +39,7 @@
     "use_child_anchors": true,
     "controls": [
       { "option_slider_0@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/extra_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.all.description",
           "$cuiv:option_label_text": "soundCategory.main",
@@ -58,6 +61,7 @@
       }},
       { "pudding_04": { "type": "panel", "size": [ 1, 2 ]}},
       { "option_slider_1@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/music_sound_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.music.description",
           "$cuiv:option_label_text": "soundCategory.music",
@@ -69,6 +73,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "option_slider_2@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/sound_section_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.audio.description",
           "$cuiv:option_label_text": "options.category.audio",
@@ -80,6 +85,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "option_slider_3@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/ambient_sound_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.ambient.description",
           "$cuiv:option_label_text": "soundCategory.ambient",
@@ -91,6 +97,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "option_slider_4@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/block_sound_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.block.description",
           "$cuiv:option_label_text": "soundCategory.block",
@@ -102,6 +109,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "option_slider_5@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/hostile_sound_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.hostile.description",
           "$cuiv:option_label_text": "soundCategory.hostile",
@@ -113,6 +121,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "option_slider_6@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/neutral_sound_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.neutral.description",
           "$cuiv:option_label_text": "soundCategory.neutral",
@@ -124,6 +133,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "option_slider_7@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/multiplayer_sound_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.player.description",
           "$cuiv:option_label_text": "soundCategory.player",
@@ -135,6 +145,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "option_slider_8@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/noteblock_sound_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.record.description",
           "$cuiv:option_label_text": "soundCategory.record",
@@ -146,6 +157,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "option_slider_9@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/weather_sound_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.weather.description",
           "$cuiv:option_label_text": "soundCategory.weather",
@@ -157,6 +169,7 @@
           "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
       }},
       { "option_slider_10@cui-setting_screen.option_slider": {
+          "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/account_section_icon",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.sound.main.texttospeech.description",
           "$cuiv:option_label_text": "soundCategory.texttospeech",

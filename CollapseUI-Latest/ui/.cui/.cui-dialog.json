@@ -57,12 +57,10 @@
             "binding_name": "$text_name",
             "binding_name_override": "$text_name"
           },
-          {
-            "binding_type": "global",
+          { "binding_type": "global",
             "binding_condition": "once",
             "binding_name": "#tts_dialog_title"
-          }
-        ]
+          }]
       }}
   ]},
   "modal_dialog_with_buttons": {

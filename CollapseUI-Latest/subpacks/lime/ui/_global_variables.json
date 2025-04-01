@@ -1,6 +1,6 @@
 {
   "$cuigv:ConfigName": "Lime",
-  "$cuigv:DesignedVersion": "v3.0",
+  "$cuigv:DesignedVersion": "v4.0",
 
   "$cuigv:PrimaryColor": [ 0.4666, 0.8392, 0.0627 ], 
   "$cuigv:SecondaryColor": [ 0.0745, 0.1411, 0.0000 ], 
@@ -19,10 +19,12 @@
 
   "$cuigv:Shadows": true, 
   "$cuigv:FadedProgressBar": true, 
-  "$cuigv:ExpTextShadows": true, 
+  "$cuigv:ExperienceTextShadows": true, 
   "$cuigv:BackgroundGradient": true, 
   "$cuigv:UIAnimations": true,
-
+  "$cuigv:MoreExperienceDetails": false,
+  "$cuigv:AnimatedHotbarSelect": false,
+  
   "$cuigv:LogoInPauseScreen": true,
   "$cuigv:StartMainButtonClassic": false,
   "$cuigv:SearchBoxSystem": true, 

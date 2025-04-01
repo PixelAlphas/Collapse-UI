@@ -236,7 +236,6 @@
           }]
       }}
   ]},
-  
   "playerlist_element": {
     "type": "panel",
     "controls": [
@@ -317,7 +316,7 @@
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
     "$cuiv-anim:pos_from": [ 50, 0 ],
-    "$cuiv-anim:pos_to": [ 0, 0 ],
+    "$cuiv-anim:pos_to": [ -4, 0 ],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
       "@cui-anims.screen_outro_anim_push",
