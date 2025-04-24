@@ -842,11 +842,11 @@
           "texture": "$cuiv:option_state_texture",
           "color": "$cuiv:option_state_color"
       }},
-      { "value_stack": {
+      { "value_stats": {
           "ignored": "(not $cuiv:is_dropdown)",
           "type": "stack_panel",
           "orientation": "horizontal",
-          "size": [ "100%c", 10 ],
+          "size": [ "50%", 10 ],
           "anchor_from": "$cuiv:option_state_value_anchor",
           "anchor_to": "$cuiv:option_state_value_anchor",
           "offset": "$cuiv:option_state_value_offset",
@@ -859,18 +859,139 @@
             { "value": {
                 "type": "label",
                 "layer": 5,
-                "size": [ "default", 10 ],
+                "size": [ "fill", 10 ],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "text": "$cuiv:option_value_text",
                 "color": "$cuiv:option_state_color",
-                "text_alignment": "right",
+                "text_alignment": "center",
                 "locked_alpha": 0.5
             }},
             { "right_arrow": {
                 "type": "label",
                 "color": "$cuiv:option_state_color",
                 "text": " >"
+            }}
+      ]}},
+      { "value_select": {
+          "ignored": "(not $cuiv:is_dropdown)",
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "50%", 2 ],
+          "anchor_from": "$cuiv:option_state_value_anchor",
+          "anchor_to": "$cuiv:option_state_value_anchor",
+          "offset": [ -6, 6 ],
+          "$cuiv:option_dropdown_state|default": 2,
+          "$cuiv:option_dropdown_select|default": 1,
+          "controls": [
+            { "01": {
+                "ignored": "(not ($cuiv:option_dropdown_select = 1))",
+                "type": "image",
+                "size": [ "fill", "100% + 2px" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "01_disabled": {
+                "ignored": "($cuiv:option_dropdown_select = 1)",
+                "type": "image",
+                "size": [ "fill", "100%" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "padding01": {
+                "ignored": "($cuiv:option_dropdown_state < 2)",
+                "type": "panel",
+                "size": [ 2, 2 ]
+            }},
+            { "02": {
+                "ignored": "(($cuiv:option_dropdown_state < 2) or (not ($cuiv:option_dropdown_select = 2)))",
+                "type": "image",
+                "size": [ "fill", "100% + 2px" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "02_disabled": {
+                "ignored": "(($cuiv:option_dropdown_state < 2) or ($cuiv:option_dropdown_select = 2))",
+                "type": "image",
+                "size": [ "fill", "100%" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "padding02": {
+                "ignored": "($cuiv:option_dropdown_state < 3)",
+                "type": "panel",
+                "size": [ 2, 2 ]
+            }},
+            { "03": {
+                "ignored": "(($cuiv:option_dropdown_state < 3) or (not ($cuiv:option_dropdown_select = 3)))",
+                "type": "image",
+                "size": [ "fill", "100% + 2px" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "03_disabled": {
+                "ignored": "(($cuiv:option_dropdown_state < 3) or ($cuiv:option_dropdown_select = 3))",
+                "type": "image",
+                "size": [ "fill", "100%" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "padding03": {
+                "ignored": "($cuiv:option_dropdown_state < 4)",
+                "type": "panel",
+                "size": [ 2, 2 ]
+            }},
+            { "04": {
+                "ignored": "(($cuiv:option_dropdown_state < 4) or (not ($cuiv:option_dropdown_select = 4)))",
+                "type": "image",
+                "size": [ "fill", "100% + 2px" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "04_disabled": {
+                "ignored": "(($cuiv:option_dropdown_state < 4) or ($cuiv:option_dropdown_select = 4))",
+                "type": "image",
+                "size": [ "fill", "100%" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "padding04": {
+                "ignored": "($cuiv:option_dropdown_state < 5)",
+                "type": "panel",
+                "size": [ 2, 2 ]
+            }},
+            { "05": {
+                "ignored": "(($cuiv:option_dropdown_state < 5) or (not ($cuiv:option_dropdown_select = 5)))",
+                "type": "image",
+                "size": [ "fill", "100% + 2px" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "05_disabled": {
+                "ignored": "(($cuiv:option_dropdown_state < 5) or ($cuiv:option_dropdown_select = 5))",
+                "type": "image",
+                "size": [ "fill", "100%" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "padding05": {
+                "ignored": "($cuiv:option_dropdown_state < 6)",
+                "type": "panel",
+                "size": [ 2, 2 ]
+            }},
+            { "06": {
+                "ignored": "(($cuiv:option_dropdown_state < 6) or (not ($cuiv:option_dropdown_select = 6)))",
+                "type": "image",
+                "size": [ "fill", "100% + 2px" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
+            }},
+            { "06_disabled": {
+                "ignored": "(($cuiv:option_dropdown_state < 6) or ($cuiv:option_dropdown_select = 6))",
+                "type": "image",
+                "size": [ "fill", "100%" ],
+                "color": "$cuiv:option_state_color",
+                "texture": "textures/ui/White"
             }}
       ]}},
       { "hover_background": {

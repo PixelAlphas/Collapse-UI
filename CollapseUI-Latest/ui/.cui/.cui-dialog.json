@@ -277,7 +277,7 @@
   ]},
   "three_buttons_panel": {
     "type": "stack_panel",
-    "orientation": "horizontal",
+    "orientation": "vertical",
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "size": [ "100% - 14px", 66 ],
@@ -292,7 +292,7 @@
 
   "destructive_three_buttons_panel": {
     "type": "stack_panel",
-    "orientation": "horizontal",
+    "orientation": "vertical",
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "size": [ "100% - 14px", 66 ],

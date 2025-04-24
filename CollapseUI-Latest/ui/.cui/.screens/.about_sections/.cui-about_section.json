@@ -15,7 +15,7 @@
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v4.0 - Beyond Update"
+          "$cuiv:lwb_text": "v4.0.8"
       }},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
@@ -62,11 +62,11 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Mon, 31 March (2025)"
+          "$cuiv:about_text_gray": "Fri, 25 April (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",
-          "$cuiv:about_text_gray": "Stable"
+          "$cuiv:about_text_gray": "Alpha - Auto-Compile"
       }},
       { "setting_version@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.setting_ver",

@@ -58,8 +58,10 @@
     "size": [ "100% - 4px", "100%c" ],
     "orientation": "vertical",
     "use_child_anchors": true,
+    "$cuiv:option_description": true,
     "controls": [
       { "option_content_file_log@cui-setting_screen.option_toggle": {
+          "$cuiv:option_description_text": "cui.settings.creator.desc.ccui",
           "$cuiv:option_label_text": "options.copyCoordinateUI",
           "$cuiv:option_binding_name": "#copy_coordinate_ui",
           "$toggle_name": "copy_coordinate_ui"
@@ -85,18 +87,21 @@
             }}
       ]}},
       { "option_content_file_log@cui-setting_screen.option_toggle": {
+          "$cuiv:option_description_text": "cui.settings.creator.desc.clf",
           "$cuiv:option_label_text": "options.content_log_file",
           "$cuiv:option_binding_name": "#content_log_file",
           "$cuiv:option_toggle_binding_name": "#content_log_file_enabled",
           "$toggle_name": "content_log_file"
       }},
       { "option_content_gui_log@cui-setting_screen.option_toggle": {
+          "$cuiv:option_description_text": "cui.settings.creator.desc.clg",
           "$cuiv:option_label_text": "options.content_log_gui",
           "$cuiv:option_binding_name": "#content_log_gui",
           "$cuiv:option_toggle_binding_name": "#content_log_gui_enabled",
           "$toggle_name": "content_log_gui"
       }},
       { "option_content_gui_log_show_on_errors@cui-setting_screen.option_toggle": {
+          "$cuiv:option_description_text": "cui.settings.creator.desc.cle",
           "$cuiv:option_label_text": "options.content_log_gui_show_on_errors",
           "$cuiv:option_binding_name": "#content_log_gui_show_on_errors",
           "$cuiv:option_enabled_binding_name": "#content_log_gui_show_on_errors_enabled",
@@ -148,10 +153,13 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.content_log_gui.level",
+          "$cuiv:option_description_text": "cui.settings.creator.desc.cll",
+          "$cuiv:option_dropdown_state": 4,
           "controls": [
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#content_log_gui_level_verbose",
                 "$cuiv:option_value_text": "options.content_log_gui.level.info",
+                "$cuiv:option_dropdown_select": 4,
                 "bindings": [
                   { "binding_name": "#content_log_gui_level_info",
                     "binding_name_override": "#visible"
@@ -160,6 +168,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#content_log_gui_level_info",
                 "$cuiv:option_value_text": "options.content_log_gui.level.warn",
+                "$cuiv:option_dropdown_select": 3,
                 "bindings": [
                   { "binding_name": "#content_log_gui_level_warn",
                     "binding_name_override": "#visible"
@@ -168,6 +177,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#content_log_gui_level_warn",
                 "$cuiv:option_value_text": "options.content_log_gui.level.error",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#content_log_gui_level_error",
                     "binding_name_override": "#visible"
@@ -176,6 +186,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#content_log_gui_level_error",
                 "$cuiv:option_value_text": "options.content_log_gui.level.verbose",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#content_log_gui_level_verbose",
                     "binding_name_override": "#visible"
@@ -325,6 +336,7 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.creator.deviceInfoMemoryTier",
+          "$cuiv:option_dropdown_state": 5,
           "bindings": [
             { "binding_name": "#device_info_memory_tier_visible",
               "binding_name_override": "#visible"
@@ -333,6 +345,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#memory_tier_superLow",
                 "$cuiv:option_value_text": "options.creator.deviceInfoMemoryTier.low",
+                "$cuiv:option_dropdown_select": 5,
                 "bindings": [
                   { "binding_name": "#memory_tier_low",
                     "binding_name_override": "#visible"
@@ -341,6 +354,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#memory_tier_low",
                 "$cuiv:option_value_text": "options.creator.deviceInfoMemoryTier.mid",
+                "$cuiv:option_dropdown_select": 4,
                 "bindings": [
                   { "binding_name": "#memory_tier_mid",
                     "binding_name_override": "#visible"
@@ -349,6 +363,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#memory_tier_mid",
                 "$cuiv:option_value_text": "options.creator.deviceInfoMemoryTier.high",
+                "$cuiv:option_dropdown_select": 3,
                 "bindings": [
                   { "binding_name": "#memory_tier_high",
                     "binding_name_override": "#visible"
@@ -357,6 +372,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#memory_tier_high",
                 "$cuiv:option_value_text": "options.creator.deviceInfoMemoryTier.superHigh",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#memory_tier_superHigh",
                     "binding_name_override": "#visible"
@@ -365,6 +381,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#memory_tier_superHigh",
                 "$cuiv:option_value_text": "options.creator.deviceInfoMemoryTier.superLow",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#memory_tier_superLow",
                     "binding_name_override": "#visible"

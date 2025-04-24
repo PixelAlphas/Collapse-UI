@@ -1,9 +1,9 @@
 { "format_version": 2,
   "header": {
-    "name": "Collapse-UI - v4.0",
-    "description": "§fModified & Enhanced UI made by Arxance\n§7v4.0 - Beyond Update!",
+    "name": "Collapse-UI - v4.0.8 [ALPHA]",
+    "description": "§fModified & Enhanced UI made by Arxance\n§7v4.0.8 [ALPHA]\n§acNot final!",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 4, 0, 0 ],
+    "version": [ 4, 0, 8 ],
     "min_engine_version": [ 1, 21, 70 ]
   },
   "modules": [

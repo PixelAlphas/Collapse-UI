@@ -124,10 +124,12 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.autoUpdateMode",
+          "$cuiv:option_dropdown_state": 3,
           "controls": [
             { "off@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#auto_update_mode_off",
                 "$cuiv:option_value_text": "options.autoUpdateMode.on.withWifiOnly",
+                "$cuiv:option_dropdown_select": 3,
                 "bindings": [
                   { "binding_name": "#auto_update_mode_on_wifi_only",
                     "binding_name_override": "#visible"
@@ -136,6 +138,7 @@
             { "wifi@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#auto_update_mode_on_wifi_only",
                 "$cuiv:option_value_text": "options.autoUpdateMode.on.withCellular",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#auto_update_mode_on_with_cellular",
                     "binding_name_override": "#visible"
@@ -144,6 +147,7 @@
             { "cellular@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#auto_update_mode_on_with_cellular",
                 "$cuiv:option_value_text": "options.autoUpdateMode.off",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#auto_update_mode_off",
                     "binding_name_override": "#visible"

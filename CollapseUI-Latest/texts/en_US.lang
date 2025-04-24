@@ -11,6 +11,11 @@ cui.settings_toggle_desc="View Description"
 cui.settings.accessibility.main.description=A section that may help with disability and visibility related.
 cui.settings.accessibility.tts.description=A robot voice that may play once you interact things.
 cui.settings.accessibility.misc.description=Hud and Gameplay related accessibility such as Chat messages and Darkness.
+cui.settings.accessibility.desc.atts=Uses your device OS as text to speech built-in rather than the game itself.
+cui.settings.accessibility.desc.tts=Enables UI Text to speech, Pressing button will now plays the button text sound. Pressing button twice will do the button action.
+cui.settings.accessibility.desc.ctts=Read the Chat messages.
+cui.settings.accessibility.desc.ocm=Open Text to speech chat messages...?
+
 
 ## > General
 cui.settings.general.main.description=A section for some basic stuff or unkown.
@@ -22,6 +27,11 @@ cui.settings.general.misc.description=Additional Game infos, Credits, Game build
 ## > Creator
 cui.settings.creator.main.description=A section that are pretty useful for creators and debugging resource packs / behavior packs.
 cui.settings.creator.contentlog.title=Content Log
+cui.settings.creator.desc.ccui=Able to copy and paste the player and block coordinate on Chat menu.
+cui.settings.creator.desc.clf=Logs the content log's content. ( Not recommend if you're not interested on debugging it as individual file, otherwise it may cause issues like massive 'log' folder and decreases your storage lifespan. )
+cui.settings.creator.desc.clg=Shows content log's content on screen.
+cui.settings.creator.desc.cle=Display content log's menu if the content log contains amount of large errors.
+cui.settings.creator.desc.cll=Control on how error will show up on content log.
 
 ## > Sounds
 cui.settings.sound.main.description=A section for sound volume.
@@ -113,7 +123,12 @@ cui.play.hidefeaturedserver=Hide Featured Server list
 cui.play.viewfeaturedserver=View Featured Server list
 
 ## Safezone
-cui.safezone.exp.title=Experiment Settings
+cui.safezone.exp.title=Screen Position
+cui.safezone.main.desc=Change all corners.
+cui.safezone.horizontal_size.desc=Change Horizontal Sides only.
+cui.safezone.horizontal_offset.desc=Change Horizontal Position only.
+cui.safezone.vertical_size.desc=Change Vertical Sides only.
+cui.safezone.vertical_offset.desc=Change Vertical Position only.
 
 ## About
 cui.about.title=About This UI

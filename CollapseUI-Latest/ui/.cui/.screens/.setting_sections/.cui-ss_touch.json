@@ -220,6 +220,7 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.joystickVisibilityOption",
+          "$cuiv:option_dropdown_state": 3,
           "bindings": [
             { "binding_name": "#touch_controls_v2",
               "binding_name_override": "#visible"
@@ -228,6 +229,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#joystick_visibility_visible",
                 "$cuiv:option_value_text": "options.joystickVisibilityOption.hiddenJoystick",
+                "$cuiv:option_dropdown_select": 3,
                 "bindings": [
                   { "binding_name": "#joystick_visibility_hidden",
                     "binding_name_override": "#visible"
@@ -236,6 +238,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#joystick_visibility_hidden",
                 "$cuiv:option_value_text": "options.joystickVisibilityOption.hiddenJoystickWhenUnused",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#joystick_visibility_hidden_when_unused",
                     "binding_name_override": "#visible"
@@ -244,6 +247,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#joystick_visibility_hidden_when_unused",
                 "$cuiv:option_value_text": "options.joystickVisibilityOption.visibleJoystick",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#joystick_visibility_visible",
                     "binding_name_override": "#visible"
@@ -268,6 +272,7 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.sneakOption",
+          "$cuiv:option_dropdown_state": 2,
           "bindings": [
             { "binding_name": "#touch_controls_v2",
               "binding_name_override": "#visible"
@@ -276,6 +281,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#sneak_toggle",
                 "$cuiv:option_value_text": "options.sneakOption.hold",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#sneak_hold",
                     "binding_name_override": "#visible"
@@ -284,6 +290,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#sneak_hold",
                 "$cuiv:option_value_text": "options.sneakOption.toggle",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#sneak_toggle",
                     "binding_name_override": "#visible"

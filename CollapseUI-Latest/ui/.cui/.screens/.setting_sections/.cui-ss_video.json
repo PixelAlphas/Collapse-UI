@@ -85,10 +85,12 @@
           "$option_label": "options.thirdperson",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.video.perspective.description",
+          "$cuiv:option_dropdown_state": 3,
           "controls": [
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#thirdperson_radio_first",
                 "$cuiv:option_value_text": "options.thirdperson.thirdpersonback",
+                "$cuiv:option_dropdown_select": 3,
                 "bindings": [
                   { "binding_name": "#thirdperson_radio_third_back",
                     "binding_name_override": "#visible"
@@ -97,6 +99,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#thirdperson_radio_third_back",
                 "$cuiv:option_value_text": "options.thirdperson.thirdpersonfront",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#thirdperson_radio_third_front",
                     "binding_name_override": "#visible"
@@ -105,6 +108,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#thirdperson_radio_third_front",
                 "$cuiv:option_value_text": "options.thirdperson.firstperson",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#thirdperson_radio_first",
                     "binding_name_override": "#visible"
@@ -259,10 +263,12 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.uiprofile",
+          "$cuiv:option_dropdown_state": 2,
           "controls": [
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#ui_profile_radio_classic",
                 "$cuiv:option_value_text": "options.uiprofile.pocket",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#ui_profile_radio_pocket",
                     "binding_name_override": "#visible"
@@ -271,6 +277,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#ui_profile_radio_pocket",
                 "$cuiv:option_value_text": "options.uiprofile.classic",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#ui_profile_radio_classic",
                     "binding_name_override": "#visible"
@@ -351,10 +358,12 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.graphicsMode",
+          "$cuiv:option_dropdown_state": 2,
           "controls": [
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#graphics_mode_radio_simple",
                 "$cuiv:option_value_text": "options.graphicsMode.fancy",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#graphics_mode_radio_fancy",
                     "binding_name_override": "#visible"
@@ -363,6 +372,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#graphics_mode_radio_fancy",
                 "$cuiv:option_value_text": "options.graphicsMode.simple",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#graphics_mode_radio_simple",
                     "binding_name_override": "#visible"
@@ -376,10 +386,12 @@
           "$option_label": "options.vsync",
           "$cuiv:option_description": true,
           "$cuiv:option_description_text": "cui.settings.video.vsync.description",
+          "$cuiv:option_dropdown_state": 3,
           "controls": [
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#vsync_off",
                 "$cuiv:option_value_text": "options.vsync.adaptive",
+                "$cuiv:option_dropdown_select": 3,
                 "bindings": [
                   { "binding_name": "#vsync_on",
                     "binding_name_override": "#visible"
@@ -388,6 +400,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#vsync_on",
                 "$cuiv:option_value_text": "options.vsync.on",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#vsync_adaptive",
                     "binding_name_override": "#visible"
@@ -396,6 +409,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#vsync_adaptive",
                 "$cuiv:option_value_text": "options.vsync.off",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#vsync_off",
                     "binding_name_override": "#visible"
@@ -441,10 +455,12 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.splitscreen",
+          "$cuiv:option_dropdown_state": 2,
           "controls": [
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#split_screen_radio_horizontal",
                 "$cuiv:option_value_text": "options.splitscreen.horizontal",
+                "$cuiv:option_dropdown_select": 2,
                 "bindings": [
                   { "binding_name": "#split_screen_radio_vertical",
                     "binding_name_override": "#visible"
@@ -453,6 +469,7 @@
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#split_screen_radio_vertical",
                 "$cuiv:option_value_text": "options.splitscreen.vertical",
+                "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#split_screen_radio_horizontal",
                     "binding_name_override": "#visible"

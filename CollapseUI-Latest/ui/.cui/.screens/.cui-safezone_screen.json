@@ -148,6 +148,10 @@
       { "screen_position_slider_y@cui-safezone_screen.screen_position_slider_y": {}}
   ]},
   "safe_zone_slider_all@cui-setting_screen.option_slider": {
+    "$cuiv:is_image_pudding": true,
+    "$cuiv:option_description": true,
+    "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/sz_main_icon",
+    "$cuiv:option_description_text": "cui.safezone.main.desc",
     "$cuiv:option_label_text": "options.safeZone",
     "$slider_name": "safe_zone_all",
     "$slider_value_binding_name": "#safe_zone_all",
@@ -159,6 +163,10 @@
     "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
   },
   "safe_zone_slider_x@cui-setting_screen.option_slider": {
+    "$cuiv:is_image_pudding": true,
+    "$cuiv:option_description": true,
+    "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/sz_horizontal_size_icon",
+    "$cuiv:option_description_text": "cui.safezone.horizontal_size.desc",
     "$cuiv:option_label_text": "options.safeZoneX",
     "$slider_name": "safe_zone_x",
     "$slider_value_binding_name": "#safe_zone_x",
@@ -169,6 +177,10 @@
     "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
   },
   "safe_zone_slider_y@cui-setting_screen.option_slider": {
+    "$cuiv:is_image_pudding": true,
+    "$cuiv:option_description": true,
+    "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/sz_vertical_size_icon",
+    "$cuiv:option_description_text": "cui.safezone.vertical_size.desc",
     "$cuiv:option_label_text": "options.safeZoneY",
     "$slider_name": "safe_zone_y",
     "$slider_value_binding_name": "#safe_zone_y",
@@ -179,6 +191,10 @@
     "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
   },
   "screen_position_slider_x@cui-setting_screen.option_slider": {
+    "$cuiv:is_image_pudding": true,
+    "$cuiv:option_description": true,
+    "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/sz_horizontal_offset_icon",
+    "$cuiv:option_description_text": "cui.safezone.horizontal_offset.desc",
     "$cuiv:option_label_text": "options.screenPositionX",
     "$slider_name": "screen_position_x",
     "$slider_value_binding_name": "#screen_position_x",
@@ -189,6 +205,10 @@
     "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
   },
   "screen_position_slider_y@cui-setting_screen.option_slider": {
+    "$cuiv:is_image_pudding": true,
+    "$cuiv:option_description": true,
+    "$cuiv:slider_image_source": "textures/ui/.cui-assets/.icons/sz_vertical_offset_icon",
+    "$cuiv:option_description_text": "cui.safezone.vertical_offset.desc",
     "$cuiv:option_label_text": "options.screenPositionY",
     "$slider_name": "screen_position_y",
     "$slider_value_binding_name": "#screen_position_y",
