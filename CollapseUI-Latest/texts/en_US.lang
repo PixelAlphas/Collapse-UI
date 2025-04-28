@@ -109,7 +109,7 @@ cui.settings.gamepad.desc.sens=Right joystick/Aim sensitivity.
 cui.settings.gamepad.desc.spyglass=Holding Spyglass's sensitivity.
 cui.settings.gamepad.desc.inverted=Enable inverted Right joystick/Aim.
 cui.settings.gamepad.desc.auto_jump=Allow auto-jumping when on near blocks.
-cui.settings.gamepad.desc.hide_tips=Hide controller's tooltip that shows which button with their specific action.
+cui.settings.gamepad.desc.hide_tips=Hide controller's tooltip that shows which button with their specific action does.
 cui.settings.gamepad.desc.hide_cursor=Hide controller's cursor that shows up on interaction screen related.
 cui.settings.gamepad.desc.clear_hotbar=Allow controller to clear hotbar on creative mode menu.
 cui.settings.gamepad.desc.swap_ab=Swap 'A' and 'B' button.
@@ -119,10 +119,40 @@ cui.settings.gamepad.desc.cursor_sens=Controller's cursor sensitivity.
 ## > Touch
 cui.settings.touch.main.description=A section for tweaking touch experience.
 cui.settings.touch.misc.description=Regular stuff.
+ui.settings.touch.desc.resizeable_ui=Enable resizeable hotbar. (Unused)
+ui.settings.touch.desc.control_layout=Perferred Control scheme.
+ui.settings.touch.desc.sens=Touch's sensitivity.
+ui.settings.touch.desc.spyglass=Holding Spyglass's sensitivity.
+ui.settings.touch.desc.action_button=Enable Action button that is equally as right click.
+ui.settings.touch.desc.picker_button=Enable Picker button next to your joystick.
+ui.settings.touch.desc.left_handed=Change the touch's scheme left-sided.
+ui.settings.touch.desc.auto_jump=Allow auto-jumping when on near blocks. (Recommended)
+ui.settings.touch.desc.auto_sprint=Allow auto-sprinting when moving. (Bannable on some servers, beware!)
+ui.settings.touch.desc.f5=Toggle your perspective on the top-middle buttons.
+ui.settings.touch.desc.joystick_visibility=Change the joystick's visibility scheme.
+ui.settings.touch.desc.joystick_alpha=Change the joystick's alpha.
+ui.settings.touch.desc.toggle_sneak=Allow to toggle sneak instead of holding.
+ui.settings.touch.desc.button_size=Change the overall touch control's button size.
+ui.settings.touch.desc.hotbar_scale=Change the hotbar scale. (Resizeable UI required)
+ui.settings.touch.desc.vibration=Make your phone vibrate when breaking block.
+ui.settings.touch.desc.vibration_split=Make your phone vibrate when splitting items.
+ui.settings.touch.desc.delayed_creative=Change the breaking block delay on creative mode.
+ui.settings.touch.desc.inverted=Enable inverted touch movement.
+ui.settings.touch.desc.display_highlight_button=Display the interact button on certain entity when looking at them.
+ui.settings.touch.desc.split_control=Change the interaction from touch to a cross like java edition.
+ui.settings.touch.desc.swap_jump_sneak=Swap Jump button and Sneak button.
+ui.settings.touch.desc.hotbar_touch_only=Allow hotbar to be only thing that interacted on touch. (Legacy)
 
 ## > Keyboard
 cui.settings.keyboardmouse.main.description=A section for tweaking Mouse and Keyboard experience.
 cui.settings.keyboardmouse.mapping.description=Changes the keyboard mapping, which may allow you to use different game mechanic in different keys.
+cui.settings.keyboardmouse.desc.sens=Mouse sensitivity
+cui.settings.keyboardmouse.desc.spyglass=Right Holding Spyglass's sensitivity
+cui.settings.keyboardmouse.desc.inverted=Inverted mouse sensitivity
+cui.settings.keyboardmouse.desc.auto_jump=Allow auto-jumping when on near block. (Recommended to be disabled)
+cui.settings.keyboardmouse.desc.tooltips=Hide keyboard's tooltip that shows which button which their specific action does.
+cui.settings.keyboardmouse.desc.full_keyboard=Use keyboard as controller.
+cui.settings.keyboardmouse.desc.keyboard_sens=Keyboard rotation sensitivity.
 
 ## > Global Resource
 cui.settings.globalresource.main.description=A section for applying resource packs.

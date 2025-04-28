@@ -9,6 +9,7 @@
     "$cuiv:header_anchor": "center",
     "$cuiv:header_offset": [ 0, -1 ],
     "$cuiv:header_background": true,
+    "$cuiv:option_description": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "touch_button_toggle",
@@ -118,12 +119,14 @@
       }},
       { "option_resizable_ui@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.resizableUI",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.resizeable_ui",
           "$cuiv:option_binding_name": "#resizable_ui",
           "$cuiv:option_toggle_binding_name": "#resizable_ui_enabled",
           "$toggle_name": "resizable_ui"
       }},
       { "modify_control_layout_button@cui-button.text_button": {
           "$pressed_button_name": "button.modify_control_layout",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.control_layout",
           "$cuiv:button_text": "hudScreen.controlCustomization.customiseControls",
           "$focus_override_down": "FOCUS_OVERRIDE_STOP",
           "size": [ "100%", 25 ],
@@ -145,6 +148,7 @@
     "controls": [
       { "option_slider_0@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.sensitivity",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.sens",
           "$slider_name": "touch_sensitivity",
           "$slider_value_binding_name": "#touch_sensitivity",
           "$slider_tts_text_value": "#touch_sensitivity_text_value",
@@ -156,6 +160,7 @@
       }},
       { "option_slider_damen@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.spyglassdampen",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.spyglass",
           "$slider_name": "spyglass_touch_dampening",
           "$slider_value_binding_name": "#spyglass_touch_dampening",
           "$slider_tts_text_value": "#spyglass_touch_dampening_text_value",
@@ -165,6 +170,7 @@
       }},
       { "option_show_action_button@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.showActionButton",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.action_button",
           "$cuiv:option_binding_name": "#show_action_button",
           "$cuiv:option_toggle_binding_name": "#show_action_button_enabled",
           "$toggle_name": "show_action_button",
@@ -176,6 +182,7 @@
       { "option_show_block_select_button@cui-setting_screen.option_toggle": {
           "ignored": "$education_edition",
           "$cuiv:option_label_text": "options.showBlockSelectButton",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.picker_button",
           "$cuiv:option_binding_name": "#show_block_select_button",
           "$cuiv:option_toggle_binding_name": "#show_block_select_button_enabled",
           "$toggle_name": "show_block_select_button",
@@ -184,18 +191,21 @@
       }},
       { "option_toggle_left_handed@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.lefthanded",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.left_handed",
           "$cuiv:option_binding_name": "#left_handed",
           "$cuiv:option_toggle_binding_name": "#left_handed_enabled",
           "$toggle_name": "left_handed"
       }},
       { "option_toggle_auto_jump@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.autojump",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.auto_jump",
           "$cuiv:option_binding_name": "#touch_autojump",
           "$cuiv:option_toggle_binding_name": "#touch_autojump_enabled",
           "$toggle_name": "touch_autojump"
       }},
       { "option_bool_sprint_on_movement@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.sprintOnMovement",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.auto_sprint",
           "$cuiv:option_binding_name": "#sprint_on_movement",
           "$cuiv:option_toggle_binding_name": "#sprint_on_movement_enabled",
           "$toggle_name": "sprint_on_movement",
@@ -204,9 +214,10 @@
               "binding_name_override": "#visible"
           }]
       }},
-      { "option_bool_sprint_on_movement@cui-setting_screen.option_toggle": {
+      { "camera_perspective@cui-setting_screen.option_toggle": {
           "ignored": "$education_edition",
           "$cuiv:option_label_text": "options.showToggleCameraPerspectiveButton",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.f5",
           "$cuiv:option_binding_name": "#show_toggle_camera_perspective_button",
           "$cuiv:option_toggle_binding_name": "#show_toggle_camera_perspective_button_enabled",
           "$toggle_name": "show_toggle_camera_perspective_button",
@@ -220,6 +231,7 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.joystickVisibilityOption",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.joystick_visibility",
           "$cuiv:option_dropdown_state": 3,
           "bindings": [
             { "binding_name": "#touch_controls_v2",
@@ -256,6 +268,7 @@
       ]}},
       { "option_slider_thumbstick_opacity@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.thumbstickOpacity",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.joystick_alpha",
           "$slider_name": "thumbstick_opacity",
           "$slider_value_binding_name": "#thumbstick_opacity",
           "$slider_tts_text_value": "#thumbstick_opacity_text_value",
@@ -273,6 +286,7 @@
           "orientation": "vertical",
           "$option_label": "options.sneakOption",
           "$cuiv:option_dropdown_state": 2,
+          "$cuiv:option_description_text": "cui.settings.touch.desc.toggle_sneak",
           "bindings": [
             { "binding_name": "#touch_controls_v2",
               "binding_name_override": "#visible"
@@ -299,6 +313,7 @@
       ]}},
       { "option_slider_1@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.buttonSize",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.button_size",
           "$slider_name": "button_size",
           "$slider_value_binding_name": "#button_size",
           "$slider_tts_text_value": "#button_size_text_value",
@@ -308,6 +323,7 @@
       }},
       { "hotbar_scale@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.hotbarScale",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.hotbar_scale",
           "$slider_name": "hotbar_scale",
           "$slider_value_binding_name": "#hotbar_scale",
           "$slider_tts_text_value": "#hotbar_scale_text_value",
@@ -321,18 +337,21 @@
       }},
       { "option_toggle_destroy_vibration@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.destroyvibration",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.vibration",
           "$cuiv:option_binding_name": "#touch_destroy_vibration",
           "$cuiv:option_toggle_binding_name": "#touch_destroy_vibration_enabled",
           "$toggle_name": "touch_destroy_vibration"
       }},
       { "option_toggle_split_vibration@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.splitvibration",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.vibration_split",
           "$cuiv:option_binding_name": "#touch_split_vibration",
           "$cuiv:option_toggle_binding_name": "#touch_split_vibration_enabled",
           "$toggle_name": "touch_split_vibration"
       }},
       { "option_creative_delayed_block_breaking@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.creativeDelayedBlockBreaking",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.delayed_creative",
           "$cuiv:option_binding_name": "#creative_delayed_block_breaking",
           "$cuiv:option_toggle_binding_name": "#creative_delayed_block_breaking_enabled",
           "$toggle_name": "creative_delayed_block_breaking",
@@ -343,12 +362,14 @@
       }},
       { "option_toggle_invert_y@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.invertYAxis",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.inverted",
           "$cuiv:option_binding_name": "#touch_invert_y_axis",
           "$cuiv:option_toggle_binding_name": "#touch_invert_y_axis_enabled",
           "$toggle_name": "touch_invert_y_axis"
       }},
       { "option_always_highlight_hovering_box_in_crosshair@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.alwaysHighlightHoveringBoxInCrosshair",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.display_highlight_button",
           "$cuiv:option_binding_name": "#always_highlight_hovering_box_in_crosshair",
           "$cuiv:option_toggle_binding_name": "#always_highlight_hovering_box_in_crosshair_enabled",
           "$toggle_name": "always_highlight_hovering_box_in_crosshair",
@@ -359,6 +380,7 @@
       }},
       { "option_toggle_use_touchpad@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.usetouchpad",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.split_control",
           "$cuiv:option_binding_name": "#split_controls",
           "$cuiv:option_toggle_binding_name": "#split_controls_enabled",
           "$toggle_name": "split_controls",
@@ -369,6 +391,7 @@
       }},
       { "option_toggle_swap_jump_and_sneak@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.swapJumpAndSneak",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.swap_jump_sneak",
           "$cuiv:option_binding_name": "#swap_jump_and_sneak",
           "$cuiv:option_toggle_binding_name": "#swap_jump_and_sneak_enabled",
           "$toggle_name": "swap_jump_and_sneak",
@@ -379,6 +402,7 @@
       }},
       { "hotbar_only_touch_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.hotbarOnlyTouch",
+          "$cuiv:option_description_text": "cui.settings.touch.desc.hotbar_touch_only",
           "$cuiv:option_binding_name": "#hotbar_only_touch",
           "$cuiv:option_toggle_binding_name": "#hotbar_only_touch_enabled",
           "$toggle_name": "hotbar_only_touch"

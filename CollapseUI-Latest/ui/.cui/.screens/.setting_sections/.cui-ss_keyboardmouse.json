@@ -11,6 +11,7 @@
     "$cuiv:header_anchor": "center",
     "$cuiv:header_offset": [ 0, -1 ],
     "$cuiv:header_background": true,
+    "$cuiv:option_description": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "keyboard_and_mouse_button_toggle",
@@ -82,6 +83,7 @@
     "controls": [
       { "option_slider_0@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.sensitivity",
+          "$cuiv:option_description_text": "cui.settings.keyboardmouse.desc.sens",
           "$slider_name": "keyboard_mouse_sensitivity",
           "$slider_value_binding_name": "#keyboard_mouse_sensitivity",
           "$slider_tts_text_value": "#keyboard_mouse_sensitivity_text_value",
@@ -92,6 +94,7 @@
       }},
       {"option_slider_damen@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.spyglassdampen",
+          "$cuiv:option_description_text": "cui.settings.keyboardmouse.desc.spyglass",
           "$slider_name": "spyglass_mouse_dampening",
           "$slider_value_binding_name": "#spyglass_mouse_dampening",
           "$slider_tts_text_value": "#spyglass_mouse_dampening_text_value",
@@ -101,6 +104,7 @@
       }},
       { "option_toggle_0@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.invertYAxis",
+          "$cuiv:option_description_text": "cui.settings.keyboardmouse.desc.inverted",
           "$cuiv:option_binding_name": "#keyboard_mouse_invert_y_axis",
           "$cuiv:option_toggle_binding_name": "#keyboard_mouse_invert_y_axis_enabled",
           "$toggle_name": "keyboard_mouse_invert_y_axis",
@@ -108,6 +112,7 @@
       }},
       { "option_toggle_1@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.autojump",
+          "$cuiv:option_description_text": "cui.settings.keyboardmouse.desc.auto_jump",
           "$cuiv:option_binding_name": "#keyboard_mouse_autojump",
           "$cuiv:option_toggle_binding_name": "#keyboard_mouse_autojump_enabled",
           "$toggle_name": "keyboard_mouse_autojump",
@@ -123,6 +128,7 @@
       { "option_toggle_show_keyboard_prompts@cui-setting_screen.option_toggle": {
           "ignored": "(not $education_edition)",
           "$cuiv:option_label_text": "options.showKeyboardPrompts",
+          "$cuiv:option_description_text": "cui.settings.keyboardmouse.desc.tooltips",
           "$cuiv:option_binding_name": "#show_keyboard_prompts",
           "$cuiv:option_toggle_binding_name": "#hint_toggles_enabled",
           "$toggle_name": "show_keyboard_prompts",
@@ -130,6 +136,7 @@
       }},
       { "option_toggle_full_keyboard_gameplay@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.fullKeyboardGameplay",
+          "$cuiv:option_description_text": "cui.settings.keyboardmouse.desc.full_keyboard",
           "$cuiv:option_binding_name": "#keyboard_show_full_keyboard_options",
           "$cuiv:option_toggle_binding_name": "#keyboard_show_full_keyboard_options_enabled",
           "$toggle_name": "keyboard_show_full_keyboard_options",
@@ -165,6 +172,7 @@
       { "option_toggle_show_keyboard_prompts@cui-setting_screen.option_toggle": {
           "ignored": "(not $education_edition)",
           "$cuiv:option_label_text": "options.showKeyboardPrompts",
+          "$cuiv:option_description_text": "cui.settings.keyboardmouse.desc.tooltips",
           "$cuiv:option_binding_name": "#show_keyboard_prompts",
           "$cuiv:option_toggle_binding_name": "#hint_toggles_enabled",
           "$toggle_name": "show_keyboard_prompts",
@@ -172,6 +180,7 @@
       }},
       { "option_toggle_full_keyboard_gameplay@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.fullKeyboardGameplay",
+          "$cuiv:option_description_text": "cui.settings.keyboardmouse.desc.full_keyboard",
           "$cuiv:option_binding_name": "#keyboard_show_full_keyboard_options",
           "$cuiv:option_toggle_binding_name": "#keyboard_show_full_keyboard_options_enabled",
           "$toggle_name": "keyboard_show_full_keyboard_options",
@@ -187,6 +196,7 @@
           "controls": [
             { "option_slider_smooth_rotation_speed@cui-setting_screen.option_slider": {
                 "$cuiv:option_label_text": "options.smoothRotationSpeed",
+                "$cuiv:option_description_text": "cui.settings.keyboardmouse.desc.keyboard_sens",
                 "$slider_name": "keyboard_smooth_rotation_speed",
                 "$slider_value_binding_name": "#keyboard_smooth_rotation_speed",
                 "$slider_tts_text_value": "#keyboard_smooth_rotation_speed_text_value",
