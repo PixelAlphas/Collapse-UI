@@ -15,6 +15,14 @@ cui.settings.accessibility.desc.atts=Uses your device OS as text to speech built
 cui.settings.accessibility.desc.tts=Enables UI Text to speech, Pressing button will now plays the button text sound. Pressing button twice will do the button action.
 cui.settings.accessibility.desc.ctts=Read the Chat messages.
 cui.settings.accessibility.desc.ocm=Open Text to speech chat messages...?
+cui.settings.accessibility.desc.text_bg=
+cui.settings.accessibility.desc.actionbar_bg=
+cui.settings.accessibility.desc.text_bg=
+cui.settings.accessibility.desc.text_bg=
+cui.settings.accessibility.desc.text_bg=
+cui.settings.accessibility.desc.text_bg=
+cui.settings.accessibility.desc.text_bg=
+cui.settings.accessibility.desc.text_bg=
 
 
 ## > General
@@ -62,6 +70,38 @@ cui.settings.video.ui.title=UI
 cui.settings.video.ui.description=Tweaks the UI in general for maybe improved accessibility.
 cui.settings.video.perspective.description=Changes your gameplay perspective (or aka F5)
 cui.settings.video.vsync.description=Not recommended if you're using mobile. Leave them be (default - vertical sync)
+cui.settings.video.desc.brightness=Change gameplay's brightness.
+cui.settings.video.desc.camera_shake=Allow gameplay's camera for shake stuff via command.
+cui.settings.video.desc.hide_hand=Hide first person's hand.
+cui.settings.video.desc.fov=Change the gameplay's zoomyness. (Field of view)
+cui.settings.video.desc.fov_change=Allow Field of view to be changed whenever drinking speed potion, sprinting, slowness and etc.
+cui.settings.video.desc.outline_box=Change the highlighted block to more of java-look.
+cui.settings.video.desc.hide_name=Hide player's nametag.
+cui.settings.video.desc.hide_name_split=Hide player's nametag on split-screen.
+cui.settings.video.desc.view_bobbing=Make first person's hand to be more "bobbing" with little camera rotating.
+cui.settings.video.desc.render_distance=Allow more chunk(s) to be rendered in gameplay.
+cui.settings.video.desc.fullscreen=Change the game into fullscreen. (Windows only)
+cui.settings.video.desc.hide_paperdoll=Hide your character's view on top-left of the screen.
+cui.settings.video.desc.hide_hud=Hide gameplay's UI elements.
+cui.settings.video.desc.screen_anim=Allow Vanilla UI's and Collapse-UI's to have animations.
+cui.settings.video.desc.hud_alpha=Change the gameplay's UI alpha when being idle for long.
+cui.settings.video.desc.hud_alpha_split=Change the gameplay's UI alpha when being idle for long in split-screen
+cui.settings.video.desc.autosave=Show world saving icon on top-right of gameplay. (Singleplayer only)
+cui.settings.video.desc.ui_profile=Change the gameplay's UI look.
+cui.settings.video.desc.ui_scale=Change the UI scaling.
+cui.settings.video.desc.large_ui=Force UI scaling to be largest as it could. (Will disable UI scaling slider)
+cui.settings.video.desc.input=Allow user's input to be more improved, will cost ton of performance.
+cui.settings.video.desc.fancy_leaves=Make leaves more fancy.
+cui.settings.video.desc.fancy_bubbles=Make bubbles on the watter more fancy.
+cui.settings.video.desc.clouds=Render the cloud.
+cui.settings.video.desc.fancy_sky=Render the sky. (Will disable clouds if disabled)
+cui.settings.video.desc.smooth_lighting=Make blocks smooth lighting rather than just blocky shadows.
+cui.settings.video.desc.graphical=Change the gameplay's graphic
+cui.settings.video.desc.split_screen=Split-Screen things.
+cui.settings.video.desc.max_fps=Change the game's max framerate.
+cui.settings.video.desc.msaa=MSAA things that i don't understand.
+cui.settings.video.desc.texel=Anti-aligning.S
+
 
 ## > Gamepad
 cui.settings.gamepad.main.description=A section for tweaking controller experience.
@@ -197,7 +237,7 @@ cui.loading.nether=Entering 'Nether'...
 cui.loading.theend=Entering 'The End'...
 
 
-
+## Stuff that shall not be messed with...
 options.fov= 
 options.fov.alt=FOV
 resourcePack.subpackResolution.alt=Resolution

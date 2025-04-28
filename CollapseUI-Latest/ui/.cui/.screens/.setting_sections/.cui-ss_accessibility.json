@@ -110,6 +110,7 @@
       { "camera_shake_toggle@cui-setting_screen.option_toggle": {
           "ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
           "$cuiv:option_label_text": "options.screenShake",
+          "$cuiv:option_description_text": "cui.settings.video.desc.camera_shake",
           "$cuiv:option_binding_name": "#camera_shake",
           "$cuiv:option_toggle_binding_name": "#camera_shake_enabled",
           "$toggle_name": "camera_shake"
@@ -117,6 +118,7 @@
       { "text_background_opacity_slider@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.textBackgroundOpacity",
           "$slider_name": "text_background_opacity",
+          "$cuiv:option_description_text": "cui.settings.accessibility.desc.text_bg",
           "$slider_value_binding_name": "#text_background_opacity",
           "$slider_tts_text_value": "#text_background_opacity_text_value",
           "$cuiv:slider_value_text": "#text_background_opacity_text_value",
@@ -126,6 +128,7 @@
       { "actionbar_text_background_opacity_slider@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.actionBarTextBackgroundOpacity",
           "$slider_name": "actionbar_text_background_opacity",
+          "$cuiv:option_description_text": "cui.settings.accessibility.desc.actionbar_bg",
           "$slider_value_binding_name": "#actionbar_text_background_opacity",
           "$slider_tts_text_value": "#actionbar_text_background_opacity_text_value",
           "$cuiv:slider_value_text": "#actionbar_text_background_opacity_text_value",
@@ -242,6 +245,7 @@
       { "gui_scale_slider@cui-setting_screen.option_slider": {
           "ignored": "($is_holographic)",
           "$cuiv:option_label_text": "options.guiScale.optionName",
+          "$cuiv:option_description_text": "cui.settings.video.desc.ui_scale",
           "$slider_name": "gui_scale",
           "$slider_value_binding_name": "#gui_scale",
           "$slider_tts_text_value": "#gui_scale_text_value",
@@ -256,6 +260,7 @@
       }},
       { "gui_accessibility_scaling_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.gui.accessibility.scaling",
+          "$cuiv:option_description_text": "cui.settings.video.desc.large_ui",
           "$cuiv:option_binding_name": "#gui_accessibility_scaling",
           "$cuiv:option_toggle_binding_name": "#gui_accessibility_scaling_enabled",
           "$toggle_name": "gui_accessibility_scaling",

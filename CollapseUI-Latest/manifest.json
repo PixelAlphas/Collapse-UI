@@ -3,7 +3,7 @@
     "name": "Collapse-UI - v4.1",
     "description": "§fModified & Enhanced UI made by Arxance\n§7v4.0.8 [ALPHA]\n§acNot final!",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 4, 0, 8 ],
+    "version": [ 4, 1, 0 ],
     "min_engine_version": [ 1, 21, 70 ]
   },
   "modules": [
@@ -14,100 +14,80 @@
   "settings": [
 		{	"type": "label",
 		 	"text": "Select which color you want for the pack."
-		}
-	],
+	}],
   "subpacks": [
-    {
-      "folder_name": "red",
+    { "folder_name": "red",
       "name": "Red",
       "memory_tier": 0
     },
-    {
-      "folder_name": "orange",
+    { "folder_name": "orange",
       "name": "Orange",
       "memory_tier": 0
     },
-    {
-      "folder_name": "yellow",
+    { "folder_name": "yellow",
       "name": "Yellow (Classic Color!)",
       "memory_tier": 0
     },
-    {
-      "folder_name": "lime",
+    { "folder_name": "lime",
       "name": "Lime",
       "memory_tier": 0
     },
-    {
-      "folder_name": "green",
+    { "folder_name": "green",
       "name": "Green",
       "memory_tier": 0
     },
-    {
-      "folder_name": "cyan",
+    { "folder_name": "cyan",
       "name": "Cyan",
       "memory_tier": 0
     },
-    {
-      "folder_name": "blue",
+    { "folder_name": "blue",
       "name": "Blue",
       "memory_tier": 0
     },
-    {
-      "folder_name": "lightblue",
+    { "folder_name": "lightblue",
       "name": "Light Blue",
       "memory_tier": 0
     },
-    {
-      "folder_name": "purple",
+    { "folder_name": "purple",
       "name": "Purple",
       "memory_tier": 0
     },
-    {
-      "folder_name": "magenta",
+    { "folder_name": "magenta",
       "name": "Magenta (Collapse-UI Alt)",
       "memory_tier": 0
     },
-    {
-      "folder_name": "pink",
+    { "folder_name": "pink",
       "name": "Pink",
       "memory_tier": 0
     },
-    {
-      "folder_name": "gray",
+    { "folder_name": "gray",
       "name": "Gray",
       "memory_tier": 0
     },
-    {
-      "folder_name": "silver",
+    { "folder_name": "silver",
       "name": "Silver",
       "memory_tier": 0
     },
-    {
-      "folder_name": "white",
+    { "folder_name": "white",
       "name": "White",
       "memory_tier": 0
     },
-    {
-      "folder_name": "white-classic",
+    { "folder_name": "white-classic",
       "name": "White (Arcdustry-UI Color)",
       "memory_tier": 0
     },
-    {
-      "folder_name": "light",
+    { "folder_name": "light",
       "name": "Light",
       "memory_tier": 0
     },
-    {
-      "folder_name": "dark",
+    { "folder_name": "dark",
       "name": "Dark",
       "memory_tier": 0
     },
-    {
-      "folder_name": "default",
+    { "folder_name": "default",
       "name": "Default",
       "memory_tier": 0
-    }
-  ],
+  }],
   "metadata": {
     "authors": [ "// Arxance (Harlow)" ]
 }}
