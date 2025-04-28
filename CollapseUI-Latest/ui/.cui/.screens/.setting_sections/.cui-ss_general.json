@@ -9,6 +9,7 @@
     "$cuiv:header_anchor": "center",
     "$cuiv:header_offset": [ 0, -1 ],
     "$cuiv:header_background": true,
+    "$cuiv:option_description": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "general_button_toggle",
@@ -70,6 +71,7 @@
       }},
       { "websocket_option_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.websocketEncryption",
+          "$cuiv:option_description_text": "cui.settings.general.desc.pocket",
           "$cuiv:option_binding_name": "#websocket_encryption",
           "$cuiv:option_toggle_binding_name": "#websocket_encryption_enabled",
           "$toggle_name": "websocket_encryption",
@@ -84,6 +86,7 @@
     "controls": [
       { "pause_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.pauseHint",
+          "$cuiv:option_description_text": "cui.settings.general.desc.pause",
           "$cuiv:option_binding_name": "#pause_option_toggle",
           "$toggle_name": "pause_option_toggle",
           "bindings": [
@@ -102,6 +105,7 @@
       }},
       { "only_allow_trusted_skins_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.onlyTrustedSkinsAllowed",
+          "$cuiv:option_description_text": "cui.settings.general.desc.trusted_skin",
           "$cuiv:option_binding_name": "#only_trusted_skins_allowed",
           "$cuiv:option_toggle_binding_name": "#only_trusted_skins_allowed_enabled",
           "$toggle_name": "only_trusted_skins_allowed"
@@ -115,6 +119,7 @@
     "controls": [
       { "auto_update_enabled_toggle@cui-setting_screen.option_toggle": {
           "ignored": "((not $is_console and not $is_settopbox and not $win10_edition and not $osx_edition) or $nx_os)",
+          "$cuiv:option_description_text": "cui.settings.general.desc.auto_update_toggle",
           "$cuiv:option_label_text": "options.autoUpdateEnabled",
           "$cuiv:option_binding_name": "#auto_update_enabled",
           "$toggle_name": "auto_update_enabled"
@@ -124,6 +129,7 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.autoUpdateMode",
+          "$cuiv:option_description_text": "cui.settings.general.desc.auto_update_option",
           "$cuiv:option_dropdown_state": 3,
           "controls": [
             { "off@cui-setting_screen.option_dropdown": {
@@ -174,6 +180,7 @@
       }},
       { "tutorial_animation_toggle@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.tutorial_show_animation",
+          "$cuiv:option_description_text": "cui.settings.general.desc.tutorial_anim",
           "$cuiv:option_binding_name": "#tutorial_show_animations_toggle",
           "$toggle_name": "tutorial_show_animations_toggle",
           "bindings": [
@@ -186,6 +193,7 @@
       }},
       { "tutorial_restart_button@cui-button.text_button": {
           "$pressed_button_name": "button.tutorial_restart",
+          "$cuiv:option_description_text": "cui.settings.general.desc.tutorial_restart",
           "$cuiv:button_text": "options.restartTutorial",
           "bindings": [
             { "binding_name": "#tutorial_toggle_enabled",

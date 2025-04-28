@@ -60,8 +60,8 @@
     "use_child_anchors": true,
     "$cuiv:option_description": true,
     "controls": [
-      { "option_content_file_log@cui-setting_screen.option_toggle": {
-          "$cuiv:option_description_text": "cui.settings.creator.desc.ccui",
+      { "copy_coordinate_ui@cui-setting_screen.option_toggle": {
+          "$cuiv:option_description_text": "cui.settings.creator.desc.copy_coordinate_ui",
           "$cuiv:option_label_text": "options.copyCoordinateUI",
           "$cuiv:option_binding_name": "#copy_coordinate_ui",
           "$toggle_name": "copy_coordinate_ui"
@@ -87,21 +87,21 @@
             }}
       ]}},
       { "option_content_file_log@cui-setting_screen.option_toggle": {
-          "$cuiv:option_description_text": "cui.settings.creator.desc.clf",
+          "$cuiv:option_description_text": "cui.settings.creator.desc.content_file_log",
           "$cuiv:option_label_text": "options.content_log_file",
           "$cuiv:option_binding_name": "#content_log_file",
           "$cuiv:option_toggle_binding_name": "#content_log_file_enabled",
           "$toggle_name": "content_log_file"
       }},
       { "option_content_gui_log@cui-setting_screen.option_toggle": {
-          "$cuiv:option_description_text": "cui.settings.creator.desc.clg",
+          "$cuiv:option_description_text": "cui.settings.creator.desc.content_gui_log",
           "$cuiv:option_label_text": "options.content_log_gui",
           "$cuiv:option_binding_name": "#content_log_gui",
           "$cuiv:option_toggle_binding_name": "#content_log_gui_enabled",
           "$toggle_name": "content_log_gui"
       }},
       { "option_content_gui_log_show_on_errors@cui-setting_screen.option_toggle": {
-          "$cuiv:option_description_text": "cui.settings.creator.desc.cle",
+          "$cuiv:option_description_text": "cui.settings.creator.desc.content_error_log",
           "$cuiv:option_label_text": "options.content_log_gui_show_on_errors",
           "$cuiv:option_binding_name": "#content_log_gui_show_on_errors",
           "$cuiv:option_enabled_binding_name": "#content_log_gui_show_on_errors_enabled",
@@ -153,7 +153,7 @@
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.content_log_gui.level",
-          "$cuiv:option_description_text": "cui.settings.creator.desc.cll",
+          "$cuiv:option_description_text": "cui.settings.creator.desc.log_gui_level",
           "$cuiv:option_dropdown_state": 4,
           "controls": [
             { "@cui-setting_screen.option_dropdown": {

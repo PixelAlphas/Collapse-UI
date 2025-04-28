@@ -11,6 +11,7 @@
     "$cuiv:header_anchor": "center",
     "$cuiv:header_offset": [ 0, -1 ],
     "$cuiv:header_background": true,
+    "$cuiv:option_description": true,
     "bindings": [
       { "binding_type": "view",
         "source_control_name": "gamepad_button_toggle",
@@ -43,9 +44,10 @@
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
-      { "option_slider_0@cui-setting_screen.option_slider": {
+      { "sensitivity@cui-setting_screen.option_slider": {
           "ignored": "($is_holographic and not $is_living_room_mode)",
           "$cuiv:option_label_text": "options.sensitivity",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.sens",
           "$slider_name": "controller_sensitivity",
           "$slider_value_binding_name": "#controller_sensitivity",
           "$slider_tts_text_value": "#controller_sensitivity_text_value",
@@ -56,6 +58,7 @@
       }},
       { "option_slider_damen@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.spyglassdampen",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.spyglass",
           "$slider_name": "spyglass_gamepad_dampening",
           "$slider_value_binding_name": "#spyglass_gamepad_dampening",
           "$slider_tts_text_value": "#spyglass_gamepad_dampening_text_value",
@@ -65,6 +68,7 @@
       }},
       { "option_toggle_0@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.invertYAxis",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.inverted",
           "$cuiv:option_binding_name": "#controller_invert_y_axis",
           "$cuiv:option_toggle_binding_name": "#controller_invert_y_axis_enabled",
           "$toggle_name": "controller_invert_y_axis",
@@ -73,6 +77,7 @@
       { "option_toggle_1@cui-setting_screen.option_toggle": {
           "ignored": "($is_holographic and not $is_living_room_mode)",
           "$cuiv:option_label_text": "options.autojump",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.auto_jump",
           "$cuiv:option_binding_name": "#controller_autojump",
           "$cuiv:option_toggle_binding_name": "#controller_autojump_enabled",
           "$toggle_name": "controller_autojump",
@@ -80,6 +85,7 @@
       }},
       { "option_toggle9@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.hidetooltips",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.hide_tips",
           "$cuiv:option_binding_name": "#hide_tooltips",
           "$cuiv:option_toggle_binding_name": "#hint_toggles_enabled",
           "$toggle_name": "hide_tooltips",
@@ -87,6 +93,7 @@
       }},
       { "option_toggle10@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.hidegamepadcursor",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.hide_cursor",
           "$cuiv:option_binding_name": "#hide_gamepad_cursor",
           "$cuiv:option_toggle_binding_name": "#hide_gamepad_cursor_enabled",
           "$toggle_name": "hide_gamepad_cursor",
@@ -94,6 +101,7 @@
       }},
       { "option_toggle_11@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "options.clearhotbar",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.clear_hotbar",
           "$cuiv:option_binding_name": "#controller_clear_hotbar",
           "$cuiv:option_toggle_binding_name": "#controller_clear_hotbar_enabled",
           "$toggle_name": "controller_clear_hotbar",
@@ -101,6 +109,7 @@
       }},
       { "gamepad_swap_ab@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "#swap_gamepad_ab",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.swap_ab",
           "$cuiv:option_binding_name": "#swap_gamepad_ab_buttons",
           "$cuiv:option_toggle_binding_name": "#swap_gamepad_ab_buttons_enabled",
           "$toggle_name": "swap_gamepad_ab_buttons",
@@ -109,6 +118,7 @@
       }},
       { "gamepad_swap_xy@cui-setting_screen.option_toggle": {
           "$cuiv:option_label_text": "#swap_gamepad_xy",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.swap_xy",
           "$cuiv:option_binding_name": "#swap_gamepad_xy_buttons",
           "$cuiv:option_toggle_binding_name": "#swap_gamepad_xy_buttons_enabled",
           "$toggle_name": "swap_gamepad_xy_buttons",
@@ -117,6 +127,7 @@
       }},
       { "gamepad_cursor_sensitivity_option_slider@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.gamepadcursorsensitivity",
+          "$cuiv:option_description_text": "cui.settings.gamepad.desc.cursor_sens",
           "$slider_name": "gamepad_cursor_sensitivity",
           "$slider_value_binding_name": "#gamepad_cursor_sensitivity",
           "$slider_tts_text_value": "#gamepad_cursor_sensitivity_text_value",

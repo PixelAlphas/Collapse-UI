@@ -15,15 +15,8 @@ cui.settings.accessibility.desc.atts=Uses your device OS as text to speech built
 cui.settings.accessibility.desc.tts=Enables UI Text to speech, Pressing button will now plays the button text sound. Pressing button twice will do the button action.
 cui.settings.accessibility.desc.ctts=Read the Chat messages.
 cui.settings.accessibility.desc.ocm=Open Text to speech chat messages...?
-cui.settings.accessibility.desc.text_bg=
-cui.settings.accessibility.desc.actionbar_bg=
-cui.settings.accessibility.desc.text_bg=
-cui.settings.accessibility.desc.text_bg=
-cui.settings.accessibility.desc.text_bg=
-cui.settings.accessibility.desc.text_bg=
-cui.settings.accessibility.desc.text_bg=
-cui.settings.accessibility.desc.text_bg=
-
+cui.settings.accessibility.desc.text_bg=Change the gameplay's text alpha. such as - Chat messages, Title & subtitle, Item name, Coordinate bar and so on.
+cui.settings.accessibility.desc.actionbar_bg=Change the gameplay's only actionbar alpha.
 
 ## > General
 cui.settings.general.main.description=A section for some basic stuff or unkown.
@@ -31,29 +24,36 @@ cui.settings.general.online.title=Online
 cui.settings.general.online.description=A essential section for managing Online related - such as the way the skin would display or auto-update marketplace packs. ( This may be different on variety of platforms you play on )
 cui.settings.general.network.description=A section that may control network/internet related besides just wifi.
 cui.settings.general.misc.description=Additional Game infos, Credits, Game build etc. may only useful for developers.
+cui.settings.general.desc.pocket=Allow more safe packet connection.
+cui.settings.general.desc.pause=Enable the actual game pausing feature. (Singleplayer only)
+cui.settings.general.desc.trusted_skin=Allow user to see external/third-party skins on any servers. (Will not work on certain servers)
+cui.settings.general.desc.auto_update_toggle=Allow your owned packs to be automatically updated.
+cui.settings.general.desc.auto_update_option=Choose which internet method for the packs to be automatically updated.
+cui.settings.general.desc.tutorial_anim=Tutorial Animations. (No clue what it does though)
+cui.settings.general.desc.tutorial_restart=Restart the Tutorial or first time playing minecraft menu.
 
 ## > Creator
 cui.settings.creator.main.description=A section that are pretty useful for creators and debugging resource packs / behavior packs.
 cui.settings.creator.contentlog.title=Content Log
-cui.settings.creator.desc.ccui=Able to copy and paste the player and block coordinate on Chat menu.
-cui.settings.creator.desc.clf=Logs the content log's content. ( Not recommend if you're not interested on debugging it as individual file, otherwise it may cause issues like massive 'log' folder and decreases your storage lifespan. )
-cui.settings.creator.desc.clg=Shows content log's content on screen.
-cui.settings.creator.desc.cle=Display content log's menu if the content log contains amount of large errors.
-cui.settings.creator.desc.cll=Control on how error will show up on content log.
+cui.settings.creator.desc.copy_coordinate_ui=Able to copy and paste the player and block coordinate on Chat menu.
+cui.settings.creator.desc.content_file_log=Logs the content log's content. ( Not recommend if you're not interested on debugging it as individual file, otherwise it may cause issues like massive 'log' folder and decreases your storage lifespan. )
+cui.settings.creator.desc.content_gui_log=Shows content log's content on screen.
+cui.settings.creator.desc.content_error_log=Display content log's menu if the content log contains amount of large errors after joining the session.
+cui.settings.creator.desc.log_gui_level=Control on how error will show up on content log.
 
 ## > Sounds
 cui.settings.sound.main.description=A section for sound volume.
 cui.settings.sound.main.all.description=Global Volume - Will affect the whole game volume
-cui.settings.sound.main.music.description=Music/Song Volume
-cui.settings.sound.main.audio.description=Audio/SFX Volume
-cui.settings.sound.main.ambient.description=Ambient/Cave Volume
-cui.settings.sound.main.block.description=Placing/Breaking Volume
-cui.settings.sound.main.hostile.description=Hostile Mobs Volume
-cui.settings.sound.main.neutral.description=Neutral Mobs Volume
-cui.settings.sound.main.player.description=Player Hitsound/Hurt Volume
-cui.settings.sound.main.record.description=Record disc's Volume
-cui.settings.sound.main.weather.description=Weather Volume
-cui.settings.sound.main.texttospeech.description="Beep-Boop" Voice Volume
+cui.settings.sound.main.music.description=Background Music that will casually playing.
+cui.settings.sound.main.audio.description=Sound effects such as breaking block, interacting, etc.
+cui.settings.sound.main.ambient.description=Ambient sound effects for such scary stuff like cave.
+cui.settings.sound.main.block.description=Destroy and place block.
+cui.settings.sound.main.hostile.description=Hostile Mobs that may attack player.
+cui.settings.sound.main.neutral.description=Neutral Mobs that does not probably attack player.
+cui.settings.sound.main.player.description=Player Hitsound/Hurt sound.
+cui.settings.sound.main.record.description=Record Discs Songs.
+cui.settings.sound.main.weather.description=Weather such as rain, snow, etc.
+cui.settings.sound.main.texttospeech.description=Your generic text-to-speech voiceline.
 
 ## > Language
 cui.settings.language.main.description=A section for changing the game language - NOTE : Collapse-UI currently doesn't support ALL languages just yet, this may causes some stuff being english. Language Contribution are welcome!
@@ -100,12 +100,21 @@ cui.settings.video.desc.graphical=Change the gameplay's graphic
 cui.settings.video.desc.split_screen=Split-Screen things.
 cui.settings.video.desc.max_fps=Change the game's max framerate.
 cui.settings.video.desc.msaa=MSAA things that i don't understand.
-cui.settings.video.desc.texel=Anti-aligning.S
-
+cui.settings.video.desc.texel=Anti-aligning.
 
 ## > Gamepad
 cui.settings.gamepad.main.description=A section for tweaking controller experience.
 cui.settings.gamepad.mapping.description=Changes the controller mapping, which may allow you to use change the mechanic to different buttons.
+cui.settings.gamepad.desc.sens=Right joystick/Aim sensitivity.
+cui.settings.gamepad.desc.spyglass=Holding Spyglass's sensitivity.
+cui.settings.gamepad.desc.inverted=Enable inverted Right joystick/Aim.
+cui.settings.gamepad.desc.auto_jump=Allow auto-jumping when on near blocks.
+cui.settings.gamepad.desc.hide_tips=Hide controller's tooltip that shows which button with their specific action.
+cui.settings.gamepad.desc.hide_cursor=Hide controller's cursor that shows up on interaction screen related.
+cui.settings.gamepad.desc.clear_hotbar=Allow controller to clear hotbar on creative mode menu.
+cui.settings.gamepad.desc.swap_ab=Swap 'A' and 'B' button.
+cui.settings.gamepad.desc.swap_xy=Swap 'X' and 'Y' button.
+cui.settings.gamepad.desc.cursor_sens=Controller's cursor sensitivity.
 
 ## > Touch
 cui.settings.touch.main.description=A section for tweaking touch experience.
