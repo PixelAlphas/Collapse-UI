@@ -483,7 +483,7 @@
             }}
       ]}}
   ]},
-  "binding_button@cui-button.text_button": {
+  "binding_button@cui-button.text_button_legacy": {
     "$pressed_button_name": "button.binding_button",
     "$cuiv:button_type_panel": "cui-setting_screen.just_label",
     "$cuiv:button_text": "#binding_button_text",
@@ -506,7 +506,7 @@
     "shadow": "$cuiv:button_text_shadow",
     "bindings": "$cuiv:button_text_bindings"
   },
-  "image_binding_button@cui-button.text_button": {
+  "image_binding_button@cui-button.text_button_legacy": {
     "$pressed_button_name": "button.binding_button",
     "$cuiv:button_type_panel": "cui-setting_screen.base_icon_image",
     "$cuiv:button_text": "#binding_button_text",
@@ -531,7 +531,7 @@
         "binding_type": "collection",
         "binding_collection_name": "$cuiv:keymapping_collection"
   }]},
-  "reset_binding_button@cui-button.text_button": {
+  "reset_binding_button@cui-button.text_button_legacy": {
     "layer": 1,
     "$button_content": "controls_section.arrow_reset",
     "$cuiv:button_type_panel": "button.reset_binding"

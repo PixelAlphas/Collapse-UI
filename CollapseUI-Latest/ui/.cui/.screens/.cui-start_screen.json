@@ -250,14 +250,9 @@
                       "$cuiv:button_text": "#gathering_button_text",
                       "$cuiv:bindings": [{ "binding_name": "$cuiv:button_text" }]
                   }}
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+            ]}}
+      ]}}
+  ]},
   "extra_menu_element": {
     "type": "panel",
     "controls": [
@@ -1005,7 +1000,7 @@
           "layer": 80,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "text": "§lWelcome to §eCollapse-UI v4.0!",
+          "text": "Did you know this project takes like 1 year?\n\nAlso there's template packs somewhere that you can choose...",
           "color": "$cuigv:FontPrimaryColor",
           "anims": [ 
             "@cui-anims.extra_anims_offset_info"
@@ -1259,7 +1254,7 @@
     "anchor_to": "bottom_right",
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v4.0.10"
+          "$cuiv:lwb_text": "Collapse-UI v4.0.12"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

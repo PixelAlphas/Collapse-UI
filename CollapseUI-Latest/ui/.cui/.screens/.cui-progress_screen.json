@@ -292,6 +292,7 @@
   "progress_bar_percentage": {
     "type": "label",
     "text": "#text",
+    "color": "$cuigv:PrimaryColor"
     "bindings": [
       { "binding_type": "global",
         "binding_name": "#loading_bar_percentage",

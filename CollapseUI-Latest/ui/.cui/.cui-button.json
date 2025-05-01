@@ -264,6 +264,7 @@
     "$tab_panel|default": "cui-button.tab_panel",
     "$is_checked_state|default": false,
     "$is_hover_state|default": false,
+    "$default_tab|default": "",
     "$allow_controller_back_button_mapping|default": false,
     "$top_tab_tts_name|default": "accessibility.tab.tts.title",
     "$unchecked_default_image|default": "textures/ui/.cui-assets/background",

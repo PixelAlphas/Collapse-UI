@@ -202,7 +202,7 @@
               "binding_collection_name": "$cuiv:keymapping_collection"
           }]
       }},
-      { "keymapping_button_1@cui-button.text_button": {
+      { "keymapping_button_1@cui-button.text_button_legacy": {
           "size": [ "15%", "100%" ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",

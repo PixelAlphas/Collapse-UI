@@ -278,7 +278,7 @@
   "progress_text_label": {
     "$cuiv:progresstextshadows|default": false,
     "shadow": "$cuiv:progresstextshadows",
-    "color": [ 0.6156, 0.9019, 0.3058 ],
+    "color": "$cuigv:PrimaryColor",
     "variables": [
       { "requires": "(not $cuigv:ExperienceTextShadows)",
         "$cuiv:progresstextshadows": true
@@ -286,25 +286,25 @@
     "controls": [
       { "shadow01@progress_xp_text_label_template": {
           "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuigv:SecondaryColor",
           "offset": [ -1, 0 ],
           "layer": -2
       }},
       { "shadow02@progress_xp_text_label_template": {
           "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuigv:SecondaryColor",
           "offset": [ 1, 0 ],
           "layer": -2
       }},
       { "shadow03@progress_xp_text_label_template": {
           "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuigv:SecondaryColor",
           "offset": [ 0, -1 ],
           "layer": -2
       }},
       { "shadow04@progress_xp_text_label_template": {
           "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuigv:SecondaryColor",
           "offset": [ 0, 1 ],
           "layer": -2
       }}
@@ -312,7 +312,7 @@
   "progress_xp_text_label_template": {
     "type": "label",
     "text": "#level_number",
-    "color": [ 0.6156, 0.9019, 0.3058 ],
+    "color": "$cuigv:PrimaryColor",
     "bindings": [
       { "binding_name": "#level_number",
         "binding_type": "global"
@@ -323,9 +323,10 @@
   }]},
   "full_progress_bar": {
     "type": "image",
-    "texture": "textures/ui/experiencebarfull",
+    "texture": "textures/ui/experience_bar_full_white",
     "clip_direction": "left",
-    "clip_pixelperfect": false,
+    "color": "$cuigv:PrimaryColor",
+    "clip_pixelperfect": true,
     "bindings": [
       { "binding_name": "#exp_progress",
         "binding_name_override": "#clip_ratio",
@@ -333,6 +334,11 @@
         "binding_condition": "always_when_visible"
       }
   ]},
+  "empty_progress_bar": {
+    "type": "image",
+    "texture": "textures/ui/empty_progress_bar",
+    "color": "$cuigv:PrimaryColor"
+  },
   "gui_hotbar_grid_item": {
     "type": "panel",
     "layer": 1,

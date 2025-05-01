@@ -1,0 +1,23 @@
+{
+  "touch_scrollbar_box_image": {
+    "texture": "textures/ui/ScrollRail",
+    "color": "$cuigv:PrimaryColor"
+  },
+  "new_touch_scrollbar_box_image": {
+    "texture": "textures/ui/ScrollRail",
+    "color": "$cuigv:PrimaryColor"
+  },
+  "container_touch_scrollbar_box_image": {
+    "texture": "textures/ui/ScrollRail",
+    "color": "$cuigv:PrimaryColor"
+  },
+  "scroll_indent_image": {
+    "color": "$cuigv:PrimaryColor"
+  },
+  "scroll_box_indent": {
+    "color": "$cuigv:PrimaryColor"
+  },
+  "scrollbar_box_image": {
+    "color": "$cuigv:PrimaryColor"
+  }
+}
