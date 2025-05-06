@@ -454,7 +454,11 @@
           "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
           "$cuiv:button_text": "cui.main_menu.play",
           "$cuiv:button_image_texture": "textures/ui/cui-backgrounds/play_button_slider01",
-          "$cuiv:button_image_size": [ "100%", "100%" ]
+          "$cuiv:button_image_size": [ "100%", "100%" ],
+          "$cuiv:default_button_texture": "",
+          "$cuiv:hover_button_texture": "",
+          "$cuiv:pressed_button_texture": "",
+          "$cuiv:locked_button_texture": ""
       }},
       { "paddings": { "type": "panel", "size": [ 4, 4 ]}},
       { "alter_panel": {
@@ -1248,13 +1252,13 @@
   "information_element": {
     "type": "stack_panel",
     "size": [ "100%c", 14 ],
-    "offset": [ -12, -6 ],
+    "offset": [ -12, -9 ],
     "orientation": "horizontal",
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v4.0.12"
+          "$cuiv:lwb_text": "Collapse-UI v4.1"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

@@ -4,11 +4,19 @@ cui.settings.experimental.title=Experimental
 cui.settings.utilities=Utilities
 cui.settings.controls=Control(s)
 cui.settings.generals=General(s)
+cui.settings.extra_info_enabled=Displaying Descriptions.
+cui.settings_toggle_desc="View Description"
 
 ## > Accessibility
 cui.settings.accessibility.main.description=A section that may help with disability and visibility related.
 cui.settings.accessibility.tts.description=A robot voice that may play once you interact things.
 cui.settings.accessibility.misc.description=Hud and Gameplay related accessibility such as Chat messages and Darkness.
+cui.settings.accessibility.desc.atts=Uses your device OS as text to speech built-in rather than the game itself.
+cui.settings.accessibility.desc.tts=Enables UI Text to speech, Pressing button will now plays the button text sound. Pressing button twice will do the button action.
+cui.settings.accessibility.desc.ctts=Read the Chat messages.
+cui.settings.accessibility.desc.ocm=Open Text to speech chat messages...?
+cui.settings.accessibility.desc.text_bg=Change the gameplay's text alpha. such as - Chat messages, Title & subtitle, Item name, Coordinate bar and so on.
+cui.settings.accessibility.desc.actionbar_bg=Change the gameplay's only actionbar alpha.
 
 ## > General
 cui.settings.general.main.description=A section for some basic stuff or unkown.
@@ -16,24 +24,36 @@ cui.settings.general.online.title=Online
 cui.settings.general.online.description=A essential section for managing Online related - such as the way the skin would display or auto-update marketplace packs. ( This may be different on variety of platforms you play on )
 cui.settings.general.network.description=A section that may control network/internet related besides just wifi.
 cui.settings.general.misc.description=Additional Game infos, Credits, Game build etc. may only useful for developers.
+cui.settings.general.desc.pocket=Allow more safe packet connection.
+cui.settings.general.desc.pause=Enable the actual game pausing feature. (Singleplayer only)
+cui.settings.general.desc.trusted_skin=Allow user to see external/third-party skins on any servers. (Will not work on certain servers)
+cui.settings.general.desc.auto_update_toggle=Allow your owned packs to be automatically updated.
+cui.settings.general.desc.auto_update_option=Choose which internet method for the packs to be automatically updated.
+cui.settings.general.desc.tutorial_anim=Tutorial Animations. (No clue what it does though)
+cui.settings.general.desc.tutorial_restart=Restart the Tutorial or first time playing minecraft menu.
 
 ## > Creator
 cui.settings.creator.main.description=A section that are pretty useful for creators and debugging resource packs / behavior packs.
 cui.settings.creator.contentlog.title=Content Log
+cui.settings.creator.desc.copy_coordinate_ui=Able to copy and paste the player and block coordinate on Chat menu.
+cui.settings.creator.desc.content_file_log=Logs the content log's content. ( Not recommend if you're not interested on debugging it as individual file, otherwise it may cause issues like massive 'log' folder and decreases your storage lifespan. )
+cui.settings.creator.desc.content_gui_log=Shows content log's content on screen.
+cui.settings.creator.desc.content_error_log=Display content log's menu if the content log contains amount of large errors after joining the session.
+cui.settings.creator.desc.log_gui_level=Control on how error will show up on content log.
 
 ## > Sounds
 cui.settings.sound.main.description=A section for sound volume.
 cui.settings.sound.main.all.description=Global Volume - Will affect the whole game volume
-cui.settings.sound.main.music.description=Music/Song Volume
-cui.settings.sound.main.audio.description=Audio/SFX Volume
-cui.settings.sound.main.ambient.description=Ambient/Cave Volume
-cui.settings.sound.main.block.description=Placing/Breaking Volume
-cui.settings.sound.main.hostile.description=Hostile Mobs Volume
-cui.settings.sound.main.neutral.description=Neutral Mobs Volume
-cui.settings.sound.main.player.description=Player Hitsound/Hurt Volume
-cui.settings.sound.main.record.description=Record disc's Volume
-cui.settings.sound.main.weather.description=Weather Volume
-cui.settings.sound.main.texttospeech.description="Beep-Boop" Voice Volume
+cui.settings.sound.main.music.description=Background Music that will casually playing.
+cui.settings.sound.main.audio.description=Sound effects such as breaking block, interacting, etc.
+cui.settings.sound.main.ambient.description=Ambient sound effects for such scary stuff like cave.
+cui.settings.sound.main.block.description=Destroy and place block.
+cui.settings.sound.main.hostile.description=Hostile Mobs that may attack player.
+cui.settings.sound.main.neutral.description=Neutral Mobs that does not probably attack player.
+cui.settings.sound.main.player.description=Player Hitsound/Hurt sound.
+cui.settings.sound.main.record.description=Record Discs Songs.
+cui.settings.sound.main.weather.description=Weather such as rain, snow, etc.
+cui.settings.sound.main.texttospeech.description=Your generic text-to-speech voiceline.
 
 ## > Language
 cui.settings.language.main.description=A section for changing the game language - NOTE : Collapse-UI currently doesn't support ALL languages just yet, this may causes some stuff being english. Language Contribution are welcome!
@@ -50,18 +70,89 @@ cui.settings.video.ui.title=UI
 cui.settings.video.ui.description=Tweaks the UI in general for maybe improved accessibility.
 cui.settings.video.perspective.description=Changes your gameplay perspective (or aka F5)
 cui.settings.video.vsync.description=Not recommended if you're using mobile. Leave them be (default - vertical sync)
+cui.settings.video.desc.brightness=Change gameplay's brightness.
+cui.settings.video.desc.camera_shake=Allow gameplay's camera for shake stuff via command.
+cui.settings.video.desc.hide_hand=Hide first person's hand.
+cui.settings.video.desc.fov=Change the gameplay's zoomyness. (Field of view)
+cui.settings.video.desc.fov_change=Allow Field of view to be changed whenever drinking speed potion, sprinting, slowness and etc.
+cui.settings.video.desc.outline_box=Change the highlighted block to more of java-look.
+cui.settings.video.desc.hide_name=Hide player's nametag.
+cui.settings.video.desc.hide_name_split=Hide player's nametag on split-screen.
+cui.settings.video.desc.view_bobbing=Make first person's hand to be more "bobbing" with little camera rotating.
+cui.settings.video.desc.render_distance=Allow more chunk(s) to be rendered in gameplay.
+cui.settings.video.desc.fullscreen=Change the game into fullscreen. (Windows only)
+cui.settings.video.desc.hide_paperdoll=Hide your character's view on top-left of the screen.
+cui.settings.video.desc.hide_hud=Hide gameplay's UI elements.
+cui.settings.video.desc.screen_anim=Allow Vanilla UI's and Collapse-UI's to have animations.
+cui.settings.video.desc.hud_alpha=Change the gameplay's UI alpha when being idle for long.
+cui.settings.video.desc.hud_alpha_split=Change the gameplay's UI alpha when being idle for long in split-screen
+cui.settings.video.desc.autosave=Show world saving icon on top-right of gameplay. (Singleplayer only)
+cui.settings.video.desc.ui_profile=Change the gameplay's UI look.
+cui.settings.video.desc.ui_scale=Change the UI scaling.
+cui.settings.video.desc.large_ui=Force UI scaling to be largest as it could. (Will disable UI scaling slider)
+cui.settings.video.desc.input=Allow user's input to be more improved, will cost ton of performance.
+cui.settings.video.desc.fancy_leaves=Make leaves more fancy.
+cui.settings.video.desc.fancy_bubbles=Make bubbles on the watter more fancy.
+cui.settings.video.desc.clouds=Render the cloud.
+cui.settings.video.desc.fancy_sky=Render the sky. (Will disable clouds if disabled)
+cui.settings.video.desc.smooth_lighting=Make blocks smooth lighting rather than just blocky shadows.
+cui.settings.video.desc.graphical=Change the gameplay's graphic
+cui.settings.video.desc.split_screen=Split-Screen things.
+cui.settings.video.desc.max_fps=Change the game's max framerate.
+cui.settings.video.desc.msaa=MSAA things that i don't understand.
+cui.settings.video.desc.texel=Anti-aligning.
 
 ## > Gamepad
 cui.settings.gamepad.main.description=A section for tweaking controller experience.
 cui.settings.gamepad.mapping.description=Changes the controller mapping, which may allow you to use change the mechanic to different buttons.
+cui.settings.gamepad.desc.sens=Right joystick/Aim sensitivity.
+cui.settings.gamepad.desc.spyglass=Holding Spyglass's sensitivity.
+cui.settings.gamepad.desc.inverted=Enable inverted Right joystick/Aim.
+cui.settings.gamepad.desc.auto_jump=Allow auto-jumping when on near blocks.
+cui.settings.gamepad.desc.hide_tips=Hide controller's tooltip that shows which button with their specific action does.
+cui.settings.gamepad.desc.hide_cursor=Hide controller's cursor that shows up on interaction screen related.
+cui.settings.gamepad.desc.clear_hotbar=Allow controller to clear hotbar on creative mode menu.
+cui.settings.gamepad.desc.swap_ab=Swap 'A' and 'B' button.
+cui.settings.gamepad.desc.swap_xy=Swap 'X' and 'Y' button.
+cui.settings.gamepad.desc.cursor_sens=Controller's cursor sensitivity.
 
 ## > Touch
 cui.settings.touch.main.description=A section for tweaking touch experience.
 cui.settings.touch.misc.description=Regular stuff.
+ui.settings.touch.desc.resizeable_ui=Enable resizeable hotbar. (Unused)
+ui.settings.touch.desc.control_layout=Perferred Control scheme.
+ui.settings.touch.desc.sens=Touch's sensitivity.
+ui.settings.touch.desc.spyglass=Holding Spyglass's sensitivity.
+ui.settings.touch.desc.action_button=Enable Action button that is equally as right click.
+ui.settings.touch.desc.picker_button=Enable Picker button next to your joystick.
+ui.settings.touch.desc.left_handed=Change the touch's scheme left-sided.
+ui.settings.touch.desc.auto_jump=Allow auto-jumping when on near blocks. (Recommended)
+ui.settings.touch.desc.auto_sprint=Allow auto-sprinting when moving. (Bannable on some servers, beware!)
+ui.settings.touch.desc.f5=Toggle your perspective on the top-middle buttons.
+ui.settings.touch.desc.joystick_visibility=Change the joystick's visibility scheme.
+ui.settings.touch.desc.joystick_alpha=Change the joystick's alpha.
+ui.settings.touch.desc.toggle_sneak=Allow to toggle sneak instead of holding.
+ui.settings.touch.desc.button_size=Change the overall touch control's button size.
+ui.settings.touch.desc.hotbar_scale=Change the hotbar scale. (Resizeable UI required)
+ui.settings.touch.desc.vibration=Make your phone vibrate when breaking block.
+ui.settings.touch.desc.vibration_split=Make your phone vibrate when splitting items.
+ui.settings.touch.desc.delayed_creative=Change the breaking block delay on creative mode.
+ui.settings.touch.desc.inverted=Enable inverted touch movement.
+ui.settings.touch.desc.display_highlight_button=Display the interact button on certain entity when looking at them.
+ui.settings.touch.desc.split_control=Change the interaction from touch to a cross like java edition.
+ui.settings.touch.desc.swap_jump_sneak=Swap Jump button and Sneak button.
+ui.settings.touch.desc.hotbar_touch_only=Allow hotbar to be only thing that interacted on touch. (Legacy)
 
 ## > Keyboard
 cui.settings.keyboardmouse.main.description=A section for tweaking Mouse and Keyboard experience.
 cui.settings.keyboardmouse.mapping.description=Changes the keyboard mapping, which may allow you to use different game mechanic in different keys.
+cui.settings.keyboardmouse.desc.sens=Mouse sensitivity
+cui.settings.keyboardmouse.desc.spyglass=Right Holding Spyglass's sensitivity
+cui.settings.keyboardmouse.desc.inverted=Inverted mouse sensitivity
+cui.settings.keyboardmouse.desc.auto_jump=Allow auto-jumping when on near block. (Recommended to be disabled)
+cui.settings.keyboardmouse.desc.tooltips=Hide keyboard's tooltip that shows which button which their specific action does.
+cui.settings.keyboardmouse.desc.full_keyboard=Use keyboard as controller.
+cui.settings.keyboardmouse.desc.keyboard_sens=Keyboard rotation sensitivity.
 
 ## > Global Resource
 cui.settings.globalresource.main.description=A section for applying resource packs.
@@ -70,9 +161,14 @@ cui.settings.globalresource.deselected.description=Current non-applied pack(s).
 cui.settings.globalresource.selected.title=Selected
 cui.settings.globalresource.selected.description=Current applied pack(s) - If you're applying config packs for CUI, consider placing it on the top of Collapse-UI!
 
+## > Storage
+cui.settings.storage.main.title=Storage
+cui.settings.storage.main.description=A section for tweaking your own's game storage, such as resource packs, skin packs, behavior packs, worlds, and so on.
+cui.settings.storage.options.title=Section options
+cui.settings.storage.dropdown.title=Storage list
+
 ## > Account
 cui.settings.account.main.description=A section for signing in your xbox account order to join multiplayer.
-
 
 ## Start screen
 cui.main_menu.play=PLAY
@@ -86,6 +182,16 @@ cui.username.local=Playing as (Local)
 cui.username.playing=Playing as
 cui.main_menu.quickaccess=Quick Access
 cui.main_menu.infomation=Information
+cui.extra_menu.achievement_desc=View your progress.
+cui.extra_menu.skin_desc=Modify your character.
+cui.extra_menu.marketplace_desc=Add-ons but not quite free.
+cui.extra_menu.realm_desc=View Realm Benefits.
+cui.extra_menu.getstarted_desc=Replay the 'first time' experience.
+cui.extra_menu.about_desc=View the current UI info.
+cui.extra_menu.notification_desc=View Notification/Inbox.
+cui.extra_menu.feedback_desc=Open a feedback website.
+cui.extra_menu_controller="Extra Menu"
+cui.extra_menu.event=§eWorld Event is detected.\n§fCheck out via Extra Menu!
 
 ## Pause screen
 cui.pause.resume=RESUME
@@ -102,7 +208,12 @@ cui.play.hidefeaturedserver=Hide Featured Server list
 cui.play.viewfeaturedserver=View Featured Server list
 
 ## Safezone
-cui.safezone.exp.title=Experiment Settings
+cui.safezone.exp.title=Screen Position
+cui.safezone.main.desc=Change all corners.
+cui.safezone.horizontal_size.desc=Change Horizontal Sides only.
+cui.safezone.horizontal_offset.desc=Change Horizontal Position only.
+cui.safezone.vertical_size.desc=Change Vertical Sides only.
+cui.safezone.vertical_offset.desc=Change Vertical Position only.
 
 ## About
 cui.about.title=About This UI
@@ -132,6 +243,9 @@ cui.about.tab.activeconfig.uibackground=Background
 cui.about.tab.activeconfig.uibackgroundslider=BG Slider on Start screen
 cui.about.tab.activeconfig.backgroundgradientprimarycolor=Gradient BG Primary color
 cui.about.tab.activeconfig.backgroundgradientsecondarycolor=Gradient BG Secondary color
+cui.about.tab.activeconfig.overworldcolor=Overworld Color
+cui.about.tab.activeconfig.nethercolor=Nether Color
+cui.about.tab.activeconfig.theendcolor='The End' Color
 
 cui.about.tab.activeconfig.visual=Visual
 cui.about.tab.activeconfig.shadows=Shadows
@@ -139,6 +253,8 @@ cui.about.tab.activeconfig.fadedprogressBar=Faded Loading bar
 cui.about.tab.activeconfig.exptextshadows=Java Edition Experience bar text
 cui.about.tab.activeconfig.backgroundgradient=Background Gradient
 cui.about.tab.activeconfig.uianimations=Animations
+cui.about.tab.activeconfig.moreexperiencedetails=More Experience Bar Details
+cui.about.tab.activeconfig.animatedhotbarselect=Animated Hotbar Select/Highlight
 
 cui.about.tab.activeconfig.layout=Layouts
 cui.about.tab.activeconfig.searchboxsystem=World Search Box
@@ -160,6 +276,13 @@ cui.extras.warning=Warning!
 cui.extras.uirestart=If you're applying the pack for the first time, please consider restart the game first! Since this UI uses custom fonts, which the experience may vary without restarting.
 cui.extras.goback=Press the background or ESC key for keyboard or 'Select' button for Controller) order to go back
 
+## Loading Screen
+cui.loading.overworld=Entering 'Overworld'...
+cui.loading.nether=Entering 'Nether'...
+cui.loading.theend=Entering 'The End'...
+
+
+## Stuff that shall not be messed with...
 options.fov= 
 options.fov.alt=FOV
 resourcePack.subpackResolution.alt=Resolution

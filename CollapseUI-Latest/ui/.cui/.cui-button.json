@@ -140,6 +140,7 @@
           "type": "panel",
           "ignored": "(not $cuiv:label_adv_text_bubble)",
           "layer": 80,
+          "allow_clipping": false,
           "controls": [
             { "title_text": {
                 "ignored": "(not $hover_state)",

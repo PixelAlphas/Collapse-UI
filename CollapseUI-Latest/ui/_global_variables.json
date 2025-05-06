@@ -2,7 +2,7 @@
   // General
   "$cuigv:ConfigName": "Default",
     // Config name — You can change it to anything you want if you wish to customize.
-  "$cuigv:DesignedVersion": "v4.0",
+  "$cuigv:DesignedVersion": "v4.1",
     // Designed Version — Config version that supported the UI
   
   // -- README before modifying! --

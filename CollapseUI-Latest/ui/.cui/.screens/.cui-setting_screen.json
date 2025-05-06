@@ -346,7 +346,7 @@
             { "gamepad_section@cui-ss_gamepad.gamepad_section": { "ignored": "(not $gamepad_supported)", "visible": false } },
             { "keyboardmouse_section@cui-ss_keyboardmouse.keyboardmouse_section": { "ignored": "(not $keyboard_and_mouse_supported)", "visible": false } },
             { "touch_section@cui-ss_touch.touch_section": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "visible": false } },
-            { "storage_management_section@general_section.storage_management_section": { "visible": false, "ignored": "$ignore_storage_section" }},
+            { "storage_management_section@cui-ss_storage.storage_section": { "visible": false, "ignored": "$ignore_storage_section" }},
             { "global_texture_pack_section@cui-ss_globalresource.globalresource_section": { "visible": false, "ignored": "$ignore_global_resources_section" }}
       ]}}
   ]},
@@ -426,8 +426,7 @@
     "$cuiv:toggle_label_text": "options.keyboardAndMouse",
     "$toggle_property_bag": {
       "#panel_title": "options.keyboardAndMouseSettings"
-    }
-  },
+  }},
   "touch_button@cui-toggle.toggle_button_section": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "touch_button_toggle",
@@ -811,6 +810,7 @@
   "option_toggle_state_template": {
     "type": "panel",
     "$cuiv:option_isHover|default": false,
+    "$cuiv:option_isDisabled|default": false,
     "size": [ "100% - 2px", "100%" ],
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
@@ -830,7 +830,15 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "text": "$cuiv:option_label_text",
-          "bindings": "$cuiv:option_label_bindings"
+          "bindings": "$cuiv:option_label_bindings",
+          "controls": [
+            { "disabled_cross": {
+                "ignored": "(not $cuiv:option_isDisabled)",
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [ "100%", 1 ],
+                "layer": 20
+            }}]
       }},
       { "image": {
           "ignored": "$cuiv:is_dropdown",
@@ -1017,8 +1025,8 @@
   "option_toggle_off@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_off", "$cuiv:option_state_color_opposite": "$cuigv:FontPrimaryColor" },
   "option_toggle_on_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:SecondaryColor", "$cuiv:option_state_color_opposite": "$cuigv:SecondaryColor" },
   "option_toggle_off_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_off_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:SecondaryColor", "$cuiv:option_state_color_opposite": "$cuigv:SecondaryColor" },
-  "option_toggle_on_locked@cui-setting_screen.option_toggle_on": { "alpha": 0.5 },
-  "option_toggle_off_locked@cui-setting_screen.option_toggle_off": { "alpha": 0.5 },
+  "option_toggle_on_locked@cui-setting_screen.option_toggle_on": { "$cuiv:option_isDisabled": true, "$cuiv:option_state_color": "$cuigv:TertiaryColor", "$cuiv:option_state_color_opposite": "$cuigv:FontPrimaryColor" },
+  "option_toggle_off_locked@cui-setting_screen.option_toggle_off": { "$cuiv:option_isDisabled": true, "$cuiv:option_state_color": "$cuigv:TertiaryColor", "$cuiv:option_state_color_opposite": "$cuigv:FontPrimaryColor" },
   "header_title": {
     "type": "stack_panel",
     "size": [ "100% - 4px", "100%c" ],

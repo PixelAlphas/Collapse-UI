@@ -161,6 +161,12 @@ cui.settings.globalresource.deselected.description=Current non-applied pack(s).
 cui.settings.globalresource.selected.title=Selected
 cui.settings.globalresource.selected.description=Current applied pack(s) - If you're applying config packs for CUI, consider placing it on the top of Collapse-UI!
 
+## > Storage
+cui.settings.storage.main.title=Storage
+cui.settings.storage.main.description=A section for tweaking your own's game storage, such as resource packs, skin packs, behavior packs, worlds, and so on.
+cui.settings.storage.options.title=Section options
+cui.settings.storage.dropdown.title=Storage list
+
 ## > Account
 cui.settings.account.main.description=A section for signing in your xbox account order to join multiplayer.
 
