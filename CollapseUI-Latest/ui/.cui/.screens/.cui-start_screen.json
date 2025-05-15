@@ -915,24 +915,40 @@
       }}
   ]},
   "tooltips_element": {
-    "type": "stack_panel",
-    "orientation": "horizontal",
-    "size": [ "100%c", 15 ],
+    "type": "image",
+    "size": [ "100%cm + 12px", "100%cm + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor",
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
-    "offset": [ 4, -10 ],
-    "layer": 20,
-    "use_child_anchors": false,
+    "offset": [ 4, -4 ],
+    "layer": 900,
+    "$cuiv:gamepad_icon_binding_name|default": "#gamepad_helper_visible",
+    "$cuiv:gamepad_icon_binding_type|default": "global",
+    "bindings": [
+      { "binding_type": "$cuiv:gamepad_icon_binding_type",
+        "binding_name": "$cuiv:gamepad_icon_binding_name",
+        "binding_name_override": "#visible"
+    }],
     "controls": [
-      { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {}},
-      { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {
-          "ignored": "(not $can_quit)"
-      }},
-      { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
-          "$cuiv:gamepad_no_bindings_description": true,
-          "$cuiv:icon_texture": "#controller_start_icon",
-          "$icon_description_bind": "cui.extra_menu_controller"
-      }}
+      { "core": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 15 ],
+          "offset": [ 0, -5 ],
+          "use_child_anchors": false,
+          "controls": [
+            { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {}},
+            { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {
+                "ignored": "(not $can_quit)"
+            }},
+            { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
+                "$cuiv:gamepad_no_bindings_description": true,
+                "$cuiv:icon_texture": "#controller_start_icon",
+                "$icon_description_bind": "cui.extra_menu_controller"
+            }}
+      ]}}
   ]},
   "extra_menu_button_element": {
     "type": "panel",
@@ -1256,9 +1272,10 @@
     "orientation": "horizontal",
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
+    "layer": 900,
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v4.1"
+          "$cuiv:lwb_text": "Collapse-UI v4.1.5"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

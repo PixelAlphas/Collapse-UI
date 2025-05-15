@@ -5,7 +5,7 @@ cui.settings.utilities=Utilities
 cui.settings.controls=Control(s)
 cui.settings.generals=General(s)
 cui.settings.extra_info_enabled=Displaying Descriptions.
-cui.settings_toggle_desc="View Description"
+cui.settings_toggle_desc=View Description
 
 ## > Accessibility
 cui.settings.accessibility.main.description=A section that may help with disability and visibility related.
@@ -171,12 +171,12 @@ cui.settings.storage.dropdown.title=Storage list
 cui.settings.account.main.description=A section for signing in your xbox account order to join multiplayer.
 
 ## Start screen
-cui.main_menu.play=PLAY
-cui.main_menu.achievement=ACHIEVEMENTS
-cui.main_menu.skin=SKINS
-cui.main_menu.settings=SETTINGS
-cui.main_menu.marketplace=MARKETPLACE
-cui.main_menu.exit=EXIT
+cui.main_menu.play=Play
+cui.main_menu.achievement=Achievement
+cui.main_menu.skin=Skins
+cui.main_menu.settings=Options
+cui.main_menu.marketplace=Marketplace
+cui.main_menu.exit=Exit
 cui.username.logged_in=Logged as
 cui.username.local=Playing as (Local)
 cui.username.playing=Playing as
@@ -190,15 +190,17 @@ cui.extra_menu.getstarted_desc=Replay the 'first time' experience.
 cui.extra_menu.about_desc=View the current UI info.
 cui.extra_menu.notification_desc=View Notification/Inbox.
 cui.extra_menu.feedback_desc=Open a feedback website.
-cui.extra_menu_controller="Extra Menu"
+cui.extra_menu_controller=Extra Menu
 cui.extra_menu.event=§eWorld Event is detected.\n§fCheck out via Extra Menu!
 
 ## Pause screen
-cui.pause.resume=RESUME
+cui.pause.resume=Resume
 cui.pause.world=Currently playing
 cui.pause.playerlist=Players list
-cui.pause.screenshot=SCREENSHOT
-cui.pause.stories=STORIES
+cui.pause.screenshot=Screenshot
+cui.pause.stories=Stories
+cui.pause.playerlist.controller=View Playerlist
+cui.pause.continue=Contiune playing
 
 ## Play screen
 cui.play.controllcentre=Control centre

@@ -212,13 +212,13 @@
   "extra_anims_offset": {
     "anim_type": "offset",
     "from": [ 0, 100 ],
-    "to": [ 0, -20 ],
+    "to": [ 0, -30 ],
     "duration": 0.4,
     "easing": "out_cubic"
   },
   "extra_anims_offset_exit": {
     "anim_type": "offset",
-    "from": [ 0, -20 ],
+    "from": [ 0, -30 ],
     "to": [ 0, 100 ],
     "duration": 0.4,
     "easing": "in_cubic"
@@ -226,13 +226,13 @@
   "event_anims_offset": {
     "anim_type": "offset",
     "from": [ 0, 55 ],
-    "to": [ 0, -65 ],
+    "to": [ 0, -75 ],
     "duration": 0.4,
     "easing": "out_cubic"
   },
   "event_anims_offset_exit": {
     "anim_type": "offset",
-    "from": [ 0, -65 ],
+    "from": [ 0, -75 ],
     "to": [ 0, 55 ],
     "duration": 0.4,
     "easing": "in_cubic"

@@ -46,6 +46,7 @@
           "$focus_override_down": "FOCUS_OVERRIDE_STOP",
           "property_bag": { "reset_group": "video" }
       }},
+      { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}},
       { "pudding_8": { "type": "panel", "size": [ 1, 6 ]}}
   ]},
   "gameplay": {
@@ -380,13 +381,17 @@
           "$cuiv:option_toggle_binding_name": "#smooth_lighting_enabled",
           "$toggle_name": "smooth_lighting"
       }},
-      { "graphics_mode_dropdown_content": {
+      { "graphics_mode_dropdown_content_default": {
           "type": "stack_panel",
           "size": [ "100%", "100%c" ],
           "orientation": "vertical",
           "$option_label": "options.graphicsMode",
           "$cuiv:option_description_text": "cui.settings.video.desc.graphical",
           "$cuiv:option_dropdown_state": 2,
+          "bindings": [
+            { "binding_name": "(not #graphics_mode_radio_deferred_enabled)",
+              "binding_name_override": "#visible"
+          }],
           "controls": [
             { "@cui-setting_screen.option_dropdown": {
                 "$cuiv:option_binding_name": "#graphics_mode_radio_simple",
@@ -403,6 +408,46 @@
                 "$cuiv:option_dropdown_select": 1,
                 "bindings": [
                   { "binding_name": "#graphics_mode_radio_simple",
+                    "binding_name_override": "#visible"
+                }]
+            }}
+      ]}},
+      { "graphics_mode_dropdown_content_deferred": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "orientation": "vertical",
+          "$option_label": "options.graphicsMode",
+          "$cuiv:option_description_text": "cui.settings.video.desc.graphical",
+          "$cuiv:option_dropdown_state": 3,
+          "bindings": [
+            { "binding_name": "#graphics_mode_radio_deferred_enabled",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#graphics_mode_radio_deferred",
+                "$cuiv:option_value_text": "options.graphicsMode.simple",
+                "$cuiv:option_dropdown_select": 3,
+                "bindings": [
+                  { "binding_name": "#graphics_mode_radio_simple",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#graphics_mode_radio_simple",
+                "$cuiv:option_value_text": "options.graphicsMode.fancy",
+                "$cuiv:option_dropdown_select": 2,
+                "bindings": [
+                  { "binding_name": "#graphics_mode_radio_fancy",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#graphics_mode_radio_fancy",
+                "$cuiv:option_value_text": "options.graphicsMode.deferred",
+                "$cuiv:option_dropdown_select": 1,
+                "bindings": [
+                  { "binding_name": "#graphics_mode_radio_deferred",
                     "binding_name_override": "#visible"
                 }]
             }}

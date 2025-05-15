@@ -15,7 +15,8 @@
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
       { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.account", "$cuiv:header_title": "cui.settings.account.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
       { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
-      { "account@cui-common.element_background": { "$cuiv:element_background_no_label": true, "$cuiv:element_background_contents": "cui-ss_account.account"}}
+      { "account@cui-common.element_background": { "$cuiv:element_background_no_label": true, "$cuiv:element_background_contents": "cui-ss_account.account"}},
+      { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}}
   ]},
   "account": {
     "type": "stack_panel",

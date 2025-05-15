@@ -19,7 +19,8 @@
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
       { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.language", "$cuiv:header_title": "cui.settings.language.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
       { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
-      { "language@cui-common.element_background": { "$cuiv:header_text": "options.language", "$cuiv:element_background_contents": "cui-ss_language.language"}}
+      { "language@cui-common.element_background": { "$cuiv:header_text": "options.language", "$cuiv:element_background_contents": "cui-ss_language.language"}},
+      { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}}
   ]},
   "language": {
     "type": "stack_panel",

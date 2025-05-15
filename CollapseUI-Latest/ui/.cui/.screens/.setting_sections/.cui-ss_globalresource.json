@@ -84,7 +84,8 @@
       { "@cui-ss_globalresource.tabs_element": {}},
       { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
       { "@cui-ss_globalresource.deselected_pack": {}},
-      { "@cui-ss_globalresource.selected_pack": {}}
+      { "@cui-ss_globalresource.selected_pack": {}},
+      { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}}
   ]},
   "tabs_element": {
     "type": "stack_panel",
@@ -223,19 +224,22 @@
             }}
       ]}}
   ]},
-  "top_tab@cui-play_screen.top_tab": {
-    "$cuiv:tab_content": "cui-ss_globalresource.adv_tab_content",
+  "deselected_pack_tab@cui-toggle.toggle_button": {
+    "$toggle_name": "deselected_pack_tab",
+    "$radio_toggle_group": true,
     "$toggle_group_default_selected": 0,
-    "$toggle_name": "globalresource"
-  },
-  "deselected_pack_tab@cui-ss_globalresource.top_tab": {
-    "$tab_view_binding_name": "deselectedpack_navigation",
-    "$cuiv:tab_name": "cui.settings.globalresource.deselected.title",
+    "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_label",
+    "$toggle_view_binding_name": "deselectedpack_navigation",
+    "$cuiv:toggle_label_text": "cui.settings.globalresource.deselected.title",
     "$toggle_group_forced_index": 0
   },
-  "selected_pack_tab@cui-ss_globalresource.top_tab": {
-    "$tab_view_binding_name": "selectedpack_navigation",
-    "$cuiv:tab_name": "cui.settings.globalresource.selected.title",
+  "selected_pack_tab@cui-toggle.toggle_button": {
+    "$toggle_name": "selected_pack_tab",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 0,
+    "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_label",
+    "$toggle_view_binding_name": "selectedpack_navigation",
+    "$cuiv:toggle_label_text": "cui.settings.globalresource.selected.title",
     "$toggle_group_forced_index": 1
   }
 }

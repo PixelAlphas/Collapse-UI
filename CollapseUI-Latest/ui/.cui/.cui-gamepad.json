@@ -55,15 +55,14 @@
                 }]
             }},
             { "label": {
-                "offset": [ 0, -1 ],
+                "offset": [ 0, 0 ],
                 "ignored": "(not $cuiv:gamepad_no_bindings_description)",
                 "type": "label",
                 "color": "$gamepad_helper_icon_description_text_color",
                 "shadow": "$gamepad_helper_icon_description_shadow",
                 "$gamepad_helper_icon_description_text_color|default": "$gamepad_description_text_color",
                 "$gamepad_helper_icon_description_shadow|default": true,
-                "text": "$icon_description_bind",
-                "font_type": "dainbold"
+                "text": "$icon_description_bind"
             }}
       ]}}
   ]},

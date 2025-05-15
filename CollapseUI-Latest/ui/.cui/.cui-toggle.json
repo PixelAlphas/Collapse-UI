@@ -119,6 +119,19 @@
           "bindings": "$cuiv:toggle_texture_binding"
       }}
   ]},
+  "toggle_button_core_only_label": {
+    "type": "panel",
+    "$cuiv:toggle_texture_offset|default": [ 0, 0 ],
+    "$cuiv:toggle_texture_color|default": "$cuigv:FontPrimaryColor",
+    "$cuiv:toggle_label_text|default": "",
+    "controls": [
+      { "toggle_button_label": {
+          "type": "label",
+          "offset": "$cuiv:toggle_texture_offset",
+          "text": "$cuiv:toggle_label_text",
+          "color": "$cuiv:toggle_texture_color"
+      }}
+  ]},
   "toggle_state_panel": {
     "type": "panel",
     "size": [ "100%", "100%" ],

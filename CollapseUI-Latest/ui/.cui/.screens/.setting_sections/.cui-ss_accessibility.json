@@ -46,6 +46,7 @@
           "$focus_override_down": "FOCUS_OVERRIDE_STOP",
           "property_bag": { "reset_group": "accessibility" }
       }},
+      { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}},
       { "pudding_06": { "type": "panel", "size": [ 1, 6 ]}}
   ]},
   "texttospeech": {

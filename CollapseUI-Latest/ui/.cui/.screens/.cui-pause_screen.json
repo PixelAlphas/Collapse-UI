@@ -22,7 +22,8 @@
       }},
       { "@realm_elements": {}},
       { "@playerlist_button_element": {}},
-      { "@playerlist_element": {}}
+      { "@playerlist_element": {}},
+      { "@tooltips_element": {}}
   ]},
   "main_button": {
     "type": "stack_panel",
@@ -54,7 +55,31 @@
           "$cuiv:button_image_anchor": "left_middle",
           "$cuiv:button_image_offset": [ 2, -0.5 ],
           "$cuiv:button_text_anchor": "left_middle",
-          "$cuiv:button_text_offset": [ 24, 0 ]
+          "$cuiv:button_text_offset": [ 24, 0 ],
+          "bindings": [
+            { "binding_name": "#pause_annoucement_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+          }]
+      }},
+      { "continue@cui-button.text_button": {
+          "size": [ 162, 30 ],
+          "$cuiv:gradientbackground": true,
+          "$pressed_button_name": "button.menu_continue",
+          "$cuiv:button_type_panel": "cui-pause_screen.button_label",
+          "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+          "$cuiv:button_text": "cui.pause.continue",
+          "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/play_icon",
+          "$cuiv:button_image_anchor": "left_middle",
+          "$cuiv:button_image_offset": [ 2, -0.5 ],
+          "$cuiv:button_text_anchor": "left_middle",
+          "$cuiv:button_text_offset": [ 24, 0 ],
+          "bindings": [
+            { "binding_name": "(not #pause_annoucement_visible)",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+          }]
       }},
       { "pudding_00": { "type": "panel", "size": [ 4, 1 ] }},
       { "achievement@cui-button.text_button": {
@@ -128,6 +153,42 @@
           "$cuiv:button_text_offset": [ 24, 0 ]
       }}
   ]},
+  "tooltips_element": {
+    "type": "image",
+    "size": [ "100%cm + 12px", "100%cm + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -4 ],
+    "layer": 900,
+    "$cuiv:gamepad_icon_binding_name|default": "#gamepad_helper_visible",
+    "$cuiv:gamepad_icon_binding_type|default": "global",
+    "bindings": [
+      { "binding_type": "$cuiv:gamepad_icon_binding_type",
+        "binding_name": "$cuiv:gamepad_icon_binding_name",
+        "binding_name_override": "#visible"
+    }],
+    "controls": [
+      { "core": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 15 ],
+          "offset": [ 0, -5 ],
+          "use_child_anchors": false,
+          "controls": [
+            { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {}},
+            { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {
+                "ignored": "(not $can_quit)"
+            }},
+            { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
+                "$cuiv:gamepad_no_bindings_description": true,
+                "$cuiv:icon_texture": "#controller_start_icon",
+                "$icon_description_bind": "cui.pause.playerlist.controller"
+            }}
+      ]}}
+  ]},
   "realm_elements": {
     "type": "stack_panel",
     "size": [ "100%c", 20 ],
@@ -136,6 +197,7 @@
     "orientation": "horizontal",
     "offset": [ 6, -6 ],
     "controls": [
+      
       { "screenshot@cui-button.text_button": {
           "size": [ 20, 20 ],
           "$pressed_button_name": "button.screenshot",

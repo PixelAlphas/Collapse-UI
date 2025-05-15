@@ -52,6 +52,7 @@
           "$focus_override_down": "FOCUS_OVERRIDE_STOP",
           "property_bag": { "reset_group": "general" }
       }},
+      { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}},
       { "pudding_10": { "type": "panel", "size": [ 1, 6 ]}}
   ]},
   "network": {

@@ -31,6 +31,7 @@
       }},
       { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
       { "gameplay@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_storage.storage"}},
+      { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}},
       { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}}
   ]},
   "storage": {
@@ -68,7 +69,7 @@
   ]},
   "options": {
     "type": "stack_panel",
-    "size": [ "100% - 4px", "100%cm" ],
+    "size": [ "100% - 4px", "100%c" ],
     "orientation": "vertical",
     "use_child_anchors": true,
     "controls": [
@@ -104,6 +105,10 @@
           "type": "stack_panel",
           "size": [ "100%", 30 ],
           "orientation": "horizontal",
+          // Mojang be doing that again...
+          "$clear_cache_button_text|default": "",
+          "$clear_screenshots_cache_button_text|default": "",
+          "$delete_local_screenshots_button_text|default": "",
           "controls": [
             { "clear_cache_button@cui-button.text_button": {
                 "size": [ "fill", 30 ],
