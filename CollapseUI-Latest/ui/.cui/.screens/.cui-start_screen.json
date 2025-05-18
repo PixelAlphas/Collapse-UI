@@ -1275,7 +1275,7 @@
     "layer": 900,
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v4.1.5"
+          "$cuiv:lwb_text": "Collapse-UI v4.1.6"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

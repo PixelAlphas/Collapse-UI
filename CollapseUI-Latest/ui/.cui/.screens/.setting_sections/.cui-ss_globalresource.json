@@ -225,7 +225,7 @@
       ]}}
   ]},
   "deselected_pack_tab@cui-toggle.toggle_button": {
-    "$toggle_name": "deselected_pack_tab",
+    "$toggle_name": "resource_pack_tab",
     "$radio_toggle_group": true,
     "$toggle_group_default_selected": 0,
     "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_label",
@@ -234,7 +234,7 @@
     "$toggle_group_forced_index": 0
   },
   "selected_pack_tab@cui-toggle.toggle_button": {
-    "$toggle_name": "selected_pack_tab",
+    "$toggle_name": "resource_pack_tab",
     "$radio_toggle_group": true,
     "$toggle_group_default_selected": 0,
     "$cuiv:button_type_panel": "cui-toggle.toggle_button_core_only_label",

@@ -15,7 +15,7 @@
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v4.1.5"
+          "$cuiv:lwb_text": "v4.1.6"
       }},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
@@ -62,7 +62,7 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Fri, 16 May (2025)"
+          "$cuiv:about_text_gray": "Fri, 18 May (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",
