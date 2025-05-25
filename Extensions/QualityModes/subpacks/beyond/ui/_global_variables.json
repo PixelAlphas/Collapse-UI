@@ -1,0 +1,20 @@
+{
+  "$cuigv:ConfigName": "Beyond",
+  "$cuigv:DesignedVersion": "v4.2",
+  
+  "$cuigv:Shadows": true,
+  "$cuigv:FadedProgressBar": true,
+  "$cuigv:ExperienceTextShadows": true,
+  "$cuigv:BackgroundGradient": true,
+  "$cuigv:UIAnimations": true,
+  "$cuigv:MoreExperienceDetails": true,
+  "$cuigv:AnimatedHotbarSelect": true,
+  
+  "$cuigv:LogoInPauseScreen": true,
+  "$cuigv:StartMainButtonClassic": false,
+  "$cuigv:SearchBoxSystem": false,
+  "$cuigv:NoGameLogo": false,
+  "$cuigv:NoRealmsPromoteInWorldSection": true,
+  "$cuigv:NoMarketplaceButton": true,
+  "$cuigv:HorizontalSlider": true
+}

@@ -1,0 +1,16 @@
+{ "format_version": 2,
+  "header": {
+    "name": "Collapse-UI - Vanilla Experience bar",
+    "description": "§fRemove themed experience bar to vanilla green.\nMade by Arxance",
+    "uuid": "c8694991-dc03-4990-8502-6892789ebcf9",
+    "version": [ 1, 0, 0 ],
+    "min_engine_version": [ 1, 21, 80 ]
+  },
+  "modules": [
+    { "type": "resources",
+      "uuid": "87ffbe84-f1ce-4601-a18b-a1468f954c02",
+      "version": [ 1, 0, 0 ]
+  }],
+  "metadata": {
+    "authors": [ "// Arxance (Harlow)" ]
+}}

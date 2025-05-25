@@ -147,6 +147,10 @@
       { "config_visual_07@cui-activeconfig_section.config_label": {
           "$cuiv:config_text": "cui.about.tab.activeconfig.animatedhotbarselect",
           "$cuiv:config_value": "$cuigv:AnimatedHotbarSelect"
+      }},
+      { "config_visual_08@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.allowcoloredexperiencebar",
+          "$cuiv:config_value": "$cuigv:AllowColoredExperienceBar"
       }}
   ]},
   "config_layout@cui-about_section.element_stack_template": {
@@ -178,6 +182,10 @@
       { "config_layout_07@cui-activeconfig_section.config_label": {
           "$cuiv:config_text": "cui.about.tab.activeconfig.logoinpausescreen",
           "$cuiv:config_value": "$cuigv:LogoInPauseScreen"
+      }},
+      { "config_layout_08@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.lowmemory",
+          "$cuiv:config_value": "$cuigv:LowMemory"
       }}
   ]},
   "config_label": {
@@ -201,8 +209,8 @@
           "color": "$cuigv:FontSecondaryColor",
           "$cuiv:config_value_result|default": "Invaild...",
           "variables": [
-            { "requires": "($cuiv:config_value)", "$cuiv:config_value_result": "Enabled / True" },
-            { "requires": "(not $cuiv:config_value)", "$cuiv:config_value_result": "Disabled / False" }
+            { "requires": "($cuiv:config_value)", "$cuiv:config_value_result": "cui.about.tab.enabled" },
+            { "requires": "(not $cuiv:config_value)", "$cuiv:config_value_result": "cui.about.tab.disabled" }
       ]}}
   ]},
   "config_alpha": {

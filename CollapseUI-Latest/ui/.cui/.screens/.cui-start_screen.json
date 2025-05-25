@@ -88,8 +88,9 @@
                       "$cuiv:button_text_bubble": "cui.extra_menu.skin_desc",
                       "$cuiv:button_icon": "textures/ui/.cui-assets/.icons/skin_icon"
                   }},
-                  { "padding01": { "type": "panel", "size": [ 2, 2 ]}},
+                  { "padding01": { "type": "panel", "size": [ 2, 2 ], "ignored": "$cuigv:NoMarketplaceButton" }},
                   { "marketplace@cui-button.text_button": {
+                      "ignored": "$cuigv:NoMarketplaceButton",
                       "size": [ 34, 34 ],
                       "$cuiv:label_adv_text_bubble": true,
                       "$cuiv:label_adv_icon": true,
@@ -102,9 +103,9 @@
                       "$cuiv:button_text_bubble": "cui.extra_menu.marketplace_desc",
                       "$cuiv:button_icon": "textures/ui/.cui-assets/.icons/marketplace_icon"
                   }},
-                  { "padding02": { "type": "panel", "size": [ 2, 2 ]}},
+                  { "padding02": { "type": "panel", "size": [ 2, 2 ], "ignored": "($trial or $is_preview_app or $cuigv:LowMemory)" }},
                   { "realmtrial@cui-button.text_button": {
-                      "ignored": "($trial or $is_preview_app)",
+                      "ignored": "($trial or $is_preview_app or $cuigv:LowMemory)",
                       "bindings": [
                         { "binding_name": "#realms_promo_visible",
                           "binding_name_override": "#visible"
@@ -121,8 +122,9 @@
                       "$cuiv:button_text_bubble": "cui.extra_menu.realm_desc",
                       "$cuiv:button_icon": "textures/ui/.cui-assets/.icons/realms_icon"
                   }},
-                  { "padding03": { "type": "panel", "size": [ 2, 2 ]}},
+                  { "padding03": { "type": "panel", "size": [ 2, 2 ], "ignored": "$cuigv:LowMemory" }},
                   { "getstarted@cui-button.text_button": {
+                      "ignored": "$cuigv:LowMemory",
                       "size": [ 34, 34 ],
                       "$cuiv:label_adv_text_bubble": true,
                       "$cuiv:label_adv_icon": true,
@@ -171,8 +173,9 @@
                       "$cuiv:button_text_bubble": "cui.extra_menu.notification_desc",
                       "$cuiv:button_icon": "textures/ui/.cui-assets/.icons/notification_icon"
                   }},
-                  { "padding07": { "type": "panel", "size": [ 2, 2 ]}},
-                  { "inbox@cui-button.text_button": {
+                  { "padding07": { "type": "panel", "size": [ 2, 2 ], "ignored": "$cuigv:LowMemory" }},
+                  { "feedback@cui-button.text_button": {
+                      "ignored": "$cuigv:LowMemory",
                       "size": [ 34, 34 ],
                       "$cuiv:label_adv_text_bubble": true,
                       "$cuiv:label_adv_icon": true,
@@ -188,6 +191,7 @@
             ]}}
       ]}},
       { "event_background": {
+          "ignored": "$cuigv:LowMemory",
           "type": "image",
           "texture": "textures/ui/.cui-assets/background_2x",
           "size": [ "100%cm + 8px", "100%cm + 8px" ],
@@ -303,6 +307,7 @@
           }]
       }},
       { "extra_content_factory_out": {
+          "ignored": "(not $cuigv:UIAnimations)",
           "type": "stack_panel",
           "layer": 30,
           "size": [ "100%", "100%" ],
@@ -384,7 +389,7 @@
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 30, 0 ]
       }},
-      { "paddings03": { "type": "panel", "size": [ 4, 2 ]}},
+      { "paddings03": { "type": "panel", "size": [ 4, 2 ], "ignored": "$cuigv:NoMarketplaceButton" }},
       { "marketplace@cui-button.text_button": {
           "size": [ "100%", 25 ],
           "ignored": "$cuigv:NoMarketplaceButton",
@@ -415,12 +420,13 @@
       }}
   ]},
   "main_button_element_dummys@main_button_element": {
+    "ignored": "$cuigv:LowMemory",
     "$focus_enabled": false,
     "$button_mappings": []
   },
   "main_button_element_dummy": {
+    "ignored": "($cuigv:LowMemory or $cuigv:StartMainButtonClassic)",
     "type": "stack_panel",
-    "ignored": "$cuigv:StartMainButtonClassic",
     "orientation": "vertical",
     "size": [ 200, "100%c" ],
     "offset": [ 14, 0 ],
@@ -514,8 +520,8 @@
       ]}}
   ]},
   "main_button_element_dummy_rest": {
+    "ignored": "($cuigv:LowMemory or $cuigv:StartMainButtonClassic)",
     "type": "stack_panel",
-    "ignored": "$cuigv:StartMainButtonClassic",
     "orientation": "vertical",
     "size": [ 200, "100%c" ],
     "offset": [ 14, 0 ],
@@ -999,21 +1005,31 @@
   "extra_element": {
     "type": "panel",
     "layer": 20,
+    "$cuiv:anim|default": [],
     "controls": [
       { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text": "cui.extras.title",
           "layer": 20,
-          "anims": [ 
-            "@cui-anims.extra_anims_offset_title"
-      ]}},
+          "offset": [ 14, 4 ],
+          "variables": [
+            { "requires": "$cuigv:UIAnimations",
+              "$cuiv:anim": [ "@cui-anims.extra_anims_offset_title" ]
+          }],
+          "anims": "$cuiv:anim"
+      }},
       { "selector_area@cui-start_screen.extra_menu_element_view": {
-          "$cuiv:selector_event_anims": [ 
-            "@cui-anims.event_anims_offset",
-            "@cui-anims.extra_anims_alpha"
-          ],
-          "$cuiv:selector_anims": [ 
-            "@cui-anims.extra_anims_offset",
-            "@cui-anims.extra_anims_alpha"
-          ]
+          "$cuiv:selector_event_anims|default": [],
+          "$cuiv:selector_anims|default": [],
+          "variables": [
+            { "requires": "$cuigv:UIAnimations",
+              "$cuiv:selector_event_anims": [ 
+                "@cui-anims.event_anims_offset",
+                "@cui-anims.extra_anims_alpha"
+              ],
+              "$cuiv:selector_anims": [ 
+                "@cui-anims.extra_anims_offset",
+                "@cui-anims.extra_anims_alpha"
+              ]
+          }]
       }},
       { "hover_label": {
           "type": "label",
@@ -1022,9 +1038,12 @@
           "anchor_to": "top_left",
           "text": "Did you know this project takes like 1 year?\n\nAlso there's template packs somewhere that you can choose...",
           "color": "$cuigv:FontPrimaryColor",
-          "anims": [ 
-            "@cui-anims.extra_anims_offset_info"
-          ],
+          "offset": [ 14, 40 ],
+          "variables": [
+            { "requires": "$cuigv:UIAnimations",
+              "$cuiv:anim": [ "@cui-anims.extra_anims_offset_info" ]
+          }],
+          "anims": "$cuiv:anim",
           "controls": [
             { "warning": {
                 "type": "image",
@@ -1042,18 +1061,24 @@
           "color1": "$cuigv:BackgroundGradientSecondaryColor",
           "color2": "$cuigv:PrimaryColor",
           "layer": 3,
-          "anims": [
-            "@cui-anims.extra_anims_alpha"
-          ]
+          "alpha": 0.6,
+          "variables": [
+            { "requires": "$cuigv:UIAnimations",
+              "$cuiv:anim": [ "@cui-anims.extra_anims_alpha" ]
+          }],
+          "anims": "$cuiv:anim"
       }},
       { "fading_background": {
           "type": "image",
           "size": [ "150%", "150%" ],
           "texture": "textures/ui/White",
           "color": "$cuigv:TertiaryColor",
-          "anims": [
-            "@cui-anims.extra_anims_alpha"
-          ]
+          "alpha": 0.6,
+          "variables": [
+            { "requires": "$cuigv:UIAnimations",
+              "$cuiv:anim": [ "@cui-anims.extra_anims_alpha" ]
+          }],
+          "anims": "$cuiv:anim"
       }}
   ]},
   "extra_element_out": {
@@ -1275,7 +1300,7 @@
     "layer": 900,
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v4.1.6"
+          "$cuiv:lwb_text": "Collapse-UI v4.2.0"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

@@ -1,0 +1,6 @@
+{
+  "$cuigv:ConfigName": "Vanilla Expbar",
+  "$cuigv:DesignedVersion": "v4.2",
+  
+  "$cuigv:AllowColoredExperienceBar": false
+}

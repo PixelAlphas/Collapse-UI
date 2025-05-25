@@ -1,0 +1,16 @@
+{ "format_version": 2,
+  "header": {
+    "name": "Collapse-UI - Experiment Features",
+    "description": "§fEnable certain experimental features.\nMade by Arxance",
+    "uuid": "9ded0e10-d0ec-4cb2-8a10-5f98a1216618",
+    "version": [ 1, 0, 0 ],
+    "min_engine_version": [ 1, 21, 80 ]
+  },
+  "modules": [
+    { "type": "resources",
+      "uuid": "dda35025-e319-4f6d-bd8a-c85ed73f1734",
+      "version": [ 1, 0, 0 ]
+  }],
+  "metadata": {
+    "authors": [ "// Arxance (Harlow)" ]
+}}

@@ -1,0 +1,8 @@
+{
+  "$cuigv:ConfigName": "Experiments",
+  "$cuigv:DesignedVersion": "v4.2",
+  
+  "$cuigv:MoreExperienceDetails": true,
+  "$cuigv:AnimatedHotbarSelect": true,
+  "$cuigv:HorizontalSlider": true
+}

@@ -256,7 +256,8 @@ cui.about.tab.activeconfig.exptextshadows=Java Edition Experience bar text
 cui.about.tab.activeconfig.backgroundgradient=Background Gradient
 cui.about.tab.activeconfig.uianimations=Animations
 cui.about.tab.activeconfig.moreexperiencedetails=More Experience Bar Details
-cui.about.tab.activeconfig.animatedhotbarselect=Animated Hotbar Select/Highlight
+cui.about.tab.activeconfig.animatedhotbarselect=Animated Hotbar Select/highlight
+cui.about.tab.activeconfig.allowcoloredexperiencebar=Allow colored experience bar
 
 cui.about.tab.activeconfig.layout=Layouts
 cui.about.tab.activeconfig.searchboxsystem=World Search Box
@@ -266,11 +267,14 @@ cui.about.tab.activeconfig.norealmspromoteinworldsection=No Realm Promoters on w
 cui.about.tab.activeconfig.nogamelogo=No Game logo
 cui.about.tab.activeconfig.startmenubuttonclassic=Classic Start menu
 cui.about.tab.activeconfig.logoinpausescreen=Logo In Pause Screen
+cui.about.tab.activeconfig.lowmemory=Low Memory mode
 
 cui.about.tab.credit=Credits
 cui.about.tab.credit.bg=Artworks / Backgrounds
 cui.about.tab.credit.lang=Languages
 
+cui.about.tab.enabled=Enabled §7(True)
+cui.about.tab.disabled=Disabled §7(False)
 ## Extras
 cui.extras.title=Extras
 cui.extras.tips=Tips:

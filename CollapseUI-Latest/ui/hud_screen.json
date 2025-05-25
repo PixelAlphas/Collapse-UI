@@ -1,4 +1,10 @@
-{
+{ "chat_panel": {
+    "bindings": [
+      { "binding_name": "#hud_visible_centered_touch",
+        "binding_type": "global",
+        "binding_name_override": "#visible"
+      }
+  ]},
   "start_cap_image": { "alpha": 1, "size": [ 1, 22 ] },
   "heart_image": { "alpha": 1, "size": [ 1, 22 ] },
   "hotbar_slot_image": { "alpha": 1 },
@@ -267,65 +273,31 @@
                       "layer": 7
                   }}
             ]}},
-            { "progress_text_label@progress_text_label": {
-                "offset": [ 0, 3 ],
+            { "progress_text_label_outline@cui-hud_screen.progress_text_label": {
+                "ignored": "(not $cuigv:ExperienceTextShadows)",
+                "offset": [ 0, -4 ],
                 "layer": 7
-          }}]
+            }},
+            { "progress_text_label_no_outline@cui-hud_screen.progress_text_label_no_outline": {
+                "ignored": "$cuigv:ExperienceTextShadows",
+                "offset": [ 0, -7 ],
+                "layer": 7
+            }}
+          ]
       }},
       { "hotbar@hotbar_chooser": { "offset": [ 4, 15.5 ]}},
       { "item_text_factory@cui-hud_screen.item_text_factory": {}}
   ]},
-  "progress_text_label": {
-    "$cuiv:progresstextshadows|default": false,
-    "shadow": "$cuiv:progresstextshadows",
-    "color": "$cuigv:PrimaryColor",
-    "variables": [
-      { "requires": "(not $cuigv:ExperienceTextShadows)",
-        "$cuiv:progresstextshadows": true
-    }],
-    "controls": [
-      { "shadow01@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": "$cuigv:SecondaryColor",
-          "offset": [ -1, 0 ],
-          "layer": -2
-      }},
-      { "shadow02@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": "$cuigv:SecondaryColor",
-          "offset": [ 1, 0 ],
-          "layer": -2
-      }},
-      { "shadow03@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": "$cuigv:SecondaryColor",
-          "offset": [ 0, -1 ],
-          "layer": -2
-      }},
-      { "shadow04@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": "$cuigv:SecondaryColor",
-          "offset": [ 0, 1 ],
-          "layer": -2
-      }}
-  ]},
-  "progress_xp_text_label_template": {
-    "type": "label",
-    "text": "#level_number",
-    "color": "$cuigv:PrimaryColor",
-    "bindings": [
-      { "binding_name": "#level_number",
-        "binding_type": "global"
-      },
-      { "binding_name": "#level_number_visible",
-        "binding_type": "global",
-        "binding_name_override": "#visible"
-  }]},
   "full_progress_bar": {
     "type": "image",
     "texture": "textures/ui/experience_bar_full_white",
     "clip_direction": "left",
-    "color": "$cuigv:PrimaryColor",
+    "$cuiv:colored_bar|default": [ 0.6156, 0.9019, 0.3058 ],
+    "color": "$cuiv:colored_bar",
+    "variables": [
+      { "requires": "$cuigv:AllowColoredExperienceBar",
+        "$cuiv:colored_bar": "$cuigv:PrimaryColor"
+    }],
     "clip_pixelperfect": true,
     "bindings": [
       { "binding_name": "#exp_progress",
@@ -337,7 +309,12 @@
   "empty_progress_bar": {
     "type": "image",
     "texture": "textures/ui/empty_progress_bar",
-    "color": "$cuigv:PrimaryColor"
+    "$cuiv:colored_bar|default": [ 0.6156, 0.9019, 0.3058 ],
+    "color": "$cuiv:colored_bar",
+    "variables": [
+      { "requires": "$cuigv:AllowColoredExperienceBar",
+        "$cuiv:colored_bar": "$cuigv:PrimaryColor"
+    }]
   },
   "gui_hotbar_grid_item": {
     "type": "panel",

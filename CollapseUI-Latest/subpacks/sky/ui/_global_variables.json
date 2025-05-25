@@ -1,0 +1,43 @@
+{
+  "$cuigv:ConfigName": "Sky",
+  "$cuigv:DesignedVersion": "v4.2",
+
+  "$cuigv:PrimaryColor": [ 0, 0.5372, 0.7411 ],
+  "$cuigv:SecondaryColor": [ 0, 0.1215, 0.3254 ],
+  "$cuigv:TertiaryColor": [ 0, 0.3411, 0.4823 ],
+  "$cuigv:FontPrimaryColor": [ 1, 1, 1 ], 
+  "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ], 
+  "$cuigv:BackgroundAlpha": 0.8, 
+  "$cuigv:ButtonAlpha": 0.8, 
+  "$cuigv:UIBackground": false, 
+  "$cuigv:UIBackgroundSlider": true, 
+  "$cuigv:BackgroundGradientPrimaryColor": [ 0, 0.3411, 0.4823, 0.8 ], 
+  "$cuigv:BackgroundGradientSecondaryColor": [ 0, 0.3411, 0.4823, 0 ], 
+  "$cuigv:OverworldColor": [ 0.4784, 0.8784, 0.5215 ],
+  "$cuigv:NetherColor": [ 0.9568, 0.4784, 0.4784 ],
+  "$cuigv:TheEndColor": [ 0.6627, 0.4588, 0.8823 ],
+  
+  "$cuigv:Shadows": true, 
+  "$cuigv:FadedProgressBar": true, 
+  "$cuigv:ExperienceTextShadows": true, 
+  "$cuigv:BackgroundGradient": true, 
+  "$cuigv:UIAnimations": true,
+  "$cuigv:MoreExperienceDetails": false,
+  "$cuigv:AnimatedHotbarSelect": false,
+  "$cuigv:AllowColoredExperienceBar": true,
+  
+  "$cuigv:LogoInPauseScreen": true,
+  "$cuigv:StartMainButtonClassic": false,
+  "$cuigv:SearchBoxSystem": true, 
+  "$cuigv:VanillaPaperdoll": false, 
+  "$cuigv:NoGameLogo": false, 
+  "$cuigv:NoRealmsPromoteInWorldSection": false, 
+  "$cuigv:NoMarketplaceButton": false, 
+  "$cuigv:HorizontalSlider": false,
+  "$cuigv:LowMemory": false,
+  
+  "$cuigv:OriginUI": true,
+  "$cuigv:DebugElement": false, 
+  "$cuigv:CompactMode": false, 
+  "$cuigv:AdditionalStartButtons": true 
+}

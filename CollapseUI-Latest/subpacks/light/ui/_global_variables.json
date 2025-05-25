@@ -24,6 +24,7 @@
   "$cuigv:UIAnimations": true,
   "$cuigv:MoreExperienceDetails": false,
   "$cuigv:AnimatedHotbarSelect": false,
+  "$cuigv:AllowColoredExperienceBar": true,
   
   "$cuigv:LogoInPauseScreen": true,
   "$cuigv:StartMainButtonClassic": false,
@@ -32,7 +33,8 @@
   "$cuigv:NoGameLogo": false, 
   "$cuigv:NoRealmsPromoteInWorldSection": false, 
   "$cuigv:NoMarketplaceButton": false, 
-  "$cuigv:HorizontalSlider": false, 
+  "$cuigv:HorizontalSlider": false,
+  "$cuigv:LowMemory": false,
   
   "$cuigv:OriginUI": true,
   "$cuigv:DebugElement": false, 

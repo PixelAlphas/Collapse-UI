@@ -1,0 +1,43 @@
+{ "format_version": 2,
+  "header": {
+    "name": "Collapse-UI - Quality Modes",
+    "description": "§fChange the UI's Quality via Subpack.\nMade by Arxance",
+    "uuid": "2a428236-8ef7-405c-89a4-c539d41c4685",
+    "version": [ 1, 0, 0 ],
+    "min_engine_version": [ 1, 21, 80 ]
+  },
+  "modules": [
+    { "type": "resources",
+      "uuid": "7c8db082-9e38-4769-add7-849721103de2",
+      "version": [ 1, 0, 0 ]
+  }],
+  "settings": [
+		{	"type": "label",
+		 	"text": "Select which UI quality you want for the pack.\n§cBe warned that \"High\" and \"Beyond\" Quality will reduce loading time and may cause performance issues."
+	  },
+    {	"type": "label",
+		 	"text": "§eBeyond Quality§f > §8Enables ALL features including layouts. will cause both performance and increase loading time."
+	  },
+    {	"type": "label",
+		 	"text": "§eHigh Quality§f > §8Enables animated hotbar and horizontal slider. will increase a loading time little bit and is not controller tested at the moment."
+	  },
+    {	"type": "label",
+		 	"text": "§eBeyond Quality§f > §8Disable most of things that are not needed. will reduce the loading time."
+	  }
+  ],
+  "subpacks": [
+    { "folder_name": "beyond",
+      "name": "Beyond Quality",
+      "memory_tier": 0
+    },
+    { "folder_name": "high",
+      "name": "High Quality",
+      "memory_tier": 0
+    },
+    { "folder_name": "low",
+      "name": "Low Quality",
+      "memory_tier": 0
+  }],
+  "metadata": {
+    "authors": [ "// Arxance (Harlow)" ]
+}}

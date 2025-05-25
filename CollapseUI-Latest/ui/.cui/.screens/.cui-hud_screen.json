@@ -5,7 +5,9 @@
       { "@cui-hud_screen.statistics": {}},
       { "@cui-hud_screen.detailed_exp": {
           "ignored": "(not $cuigv:MoreExperienceDetails)"
-      }}
+      }},
+      { "@cui-hud_screen.player_list": {}},
+      { "@cui-hud_screen.chat_panel_bottom": {}}
   ]},
   "anim_hotbar_select": {
     "ignored": "(not $cuigv:AnimatedHotbarSelect)",
@@ -249,44 +251,62 @@
     "color": [ 0.6156, 0.9019, 0.3058 ],
     "bindings": "$cuiv:ptl_bindings"
   },
-  "progress_text_label": {
-    "$cuiv:progresstextshadows|default": false,
-    "shadow": "$cuiv:progresstextshadows",
-    "color": [ 0.6156, 0.9019, 0.3058 ],
-    "variables": [
-      { "requires": "(not $cuigv:ExperienceTextShadows)",
-        "$cuiv:progresstextshadows": true
-    }],
+  "progress_text_label@progress_xp_text_label_template": {
+    "shadow": false,
     "controls": [
       { "shadow01@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "$cuiv:colored_bar|default": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuiv:colored_bar",
+          "variables": [
+            { "requires": "$cuigv:AllowColoredExperienceBar",
+              "$cuiv:colored_bar": "$cuigv:TertiaryColor"
+          }],
           "offset": [ -1, 0 ],
           "layer": -2
       }},
       { "shadow02@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "$cuiv:colored_bar|default": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuiv:colored_bar",
+          "variables": [
+            { "requires": "$cuigv:AllowColoredExperienceBar",
+              "$cuiv:colored_bar": "$cuigv:TertiaryColor"
+          }],
           "offset": [ 1, 0 ],
           "layer": -2
       }},
       { "shadow03@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "$cuiv:colored_bar|default": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuiv:colored_bar",
+          "variables": [
+            { "requires": "$cuigv:AllowColoredExperienceBar",
+              "$cuiv:colored_bar": "$cuigv:TertiaryColor"
+          }],
           "offset": [ 0, -1 ],
           "layer": -2
       }},
       { "shadow04@progress_xp_text_label_template": {
-          "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "$cuiv:colored_bar|default": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuiv:colored_bar",
+          "variables": [
+            { "requires": "$cuigv:AllowColoredExperienceBar",
+              "$cuiv:colored_bar": "$cuigv:TertiaryColor"
+          }],
           "offset": [ 0, 1 ],
           "layer": -2
       }}
   ]},
+  "progress_text_label_no_outline@progress_xp_text_label_template": {
+    "shadow": true
+  },
   "progress_xp_text_label_template": {
     "type": "label",
     "text": "#level_number",
-    "color": [ 0.6156, 0.9019, 0.3058 ],
+    "$cuiv:colored_bar|default": [ 0.6156, 0.9019, 0.3058 ],
+    "color": "$cuiv:colored_bar",
+    "variables": [
+      { "requires": "$cuigv:AllowColoredExperienceBar",
+        "$cuiv:colored_bar": "$cuigv:PrimaryColor"
+    }],
     "bindings": [
       { "binding_name": "#level_number",
         "binding_type": "global"
@@ -468,14 +488,12 @@
     "$cuiv:hsf_anims|default": [ 
       "@cui-hud_screen.hotbar_slot_selected_anim_size_selected",
       "@cui-hud_screen.hotbar_slot_selected_anim_alpha_selected"
-    ]
-  },
+  ]},
   "hotbar_slot_selected_image_unselected@hotbar_slot_selected_image": {
     "$cuiv:hsf_anims": [ 
       "@cui-hud_screen.hotbar_slot_selected_anim_size_unselected",
       "@cui-hud_screen.hotbar_slot_selected_anim_alpha_unselected"
-    ]
-  },
+  ]},
   "hotbar_slot_selected_anim_size_selected": {
     "anim_type": "size",
     "easing": "out_quart",
@@ -504,5 +522,267 @@
     "from": 1,
     "to": 0,
     "destroy_at_end": "hotbar_slot_selected_image"
+  },
+  "player_list": {
+    "type": "button",
+    "size": [ "100%", "100%" ],
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "button_mappings": [
+      { "from_button_id": "button.scoreboard",
+        "to_button_id": "button.scoreboard",
+        "mapping_type": "global"
+    }],
+    "controls": [
+      { "pressed": {
+          "type": "panel",
+          "controls": [
+            { "grid_list": {
+                "type": "grid",
+                "size": [ 124, "100%c" ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ -85, 40 ],
+                "grid_item_template": "cui-hud_screen.player_list_grid_core",
+                "collection_name": "players_collection",
+                "grid_dimension_binding": "#players_grid_dimension",
+                "bindings": [
+                  { "binding_name": "#players_grid_dimension",
+                    "binding_condition": "always"
+                }]
+            }}
+        ]}}
+    ]},
+    "player_joined_anim": {
+      "anim_type": "alpha",
+      "from": "$cuigv:BackgroundAlpha",
+      "to": 0,
+      "easing": "in_cubic",
+      "duration": 2
+    },
+    // i hate this so much somehow.
+    // Players that are joining will show up but when they actually joined, the element will becomes visible.
+    // This means that animation ran BEFORE the element becomes visible.
+    // which this is dumb.
+    // 2 sec is max. and 1 is min.
+
+    // This isnt the fix as there's several issues with it.
+    "player_joined_anim_wait": {
+      "anim_type": "wait",
+      "duration": 1,
+      "next": "@cui-hud_screen.player_joined_anim"
+    },
+    "player_list_grid_core": {
+      "type": "panel",
+      "size": [ 41.33333333, 10 ],
+      "controls": [
+        { "outline_joined_anim": {
+            "type": "image",
+            "size": [ 124, 10 ],
+            "texture": "textures/ui/White",
+            "layer": 10,
+            "alpha": "$cuigv:BackgroundAlpha",
+            "anims": [ "@cui-hud_screen.player_joined_anim_wait" ]
+        }},
+        { "outline": {
+            "type": "image",
+            "size": [ 124, 10 ],
+            "texture": "textures/ui/background_with_border",
+            "alpha": "$cuigv:BackgroundAlpha"
+        }},
+        { "player_profile_core": {
+            "type": "stack_panel",
+            "size": [ 124, "100%" ],
+            "orientation": "horizontal",
+            "clips_children": true,
+            "layer": 2,
+            "controls": [
+              { "player_profile_panel": {
+                  "type": "panel",
+                  "size": [ 8, 8 ],
+                  "layer": 1,
+                  "controls": [
+                    { "player_profile": {
+                        "type": "image",
+                        "texture": "#texture",
+                        "texture_file_system": "#texture_source",
+                        "size": [ 8, 8 ],
+                        "offset": [ 1, 1 ],
+                        "layer": 2,
+                        "bindings": [
+                          { "binding_name": "#texture",
+                            "binding_type": "collection",
+                            "binding_collection_name": "players_collection"
+                          },
+                          { "binding_name": "#texture_source",
+                            "binding_name_override": "#texture_file_system",
+                            "binding_type": "collection",
+                            "binding_collection_name": "players_collection"
+                          },
+                          { "binding_name": "#gamerpic_visible",
+                            "binding_type": "collection",
+                            "binding_collection_name": "players_collection",
+                            "binding_name_override": "#visible"
+                        }]
+                    }},
+                    { "player_profile_offline": {
+                        "type": "image",
+                        "texture": "textures/ui/lan_icon",
+                        "size": [ 8, 8 ],
+                        "offset": [ 1, 1 ],
+                        "bindings": [
+                          { "binding_name": "(not #gamerpic_visible)",
+                            "binding_type": "collection",
+                            "binding_collection_name": "players_collection",
+                            "binding_name_override": "#visible"
+                        }]
+                    }}
+              ]}},
+              { "padding_nametag": { "type": "panel", "size": [ 2, 2 ]}},
+              { "player_name": {
+                  "type": "label",
+                  "text": "#gamertag",
+                  "size": [ 124, "default" ],
+                  "text_alignment": "left",
+                  "shadow": true,
+                  "layer": 1,
+                  "controls": [
+                    { "outline_joined_anim": {
+                        "type": "image",
+                        "size": [ 200, 20 ],
+                        "texture": "textures/ui/White",
+                        "layer": 10,
+                        "alpha": "$cuigv:BackgroundAlpha",
+                        "anims": [ "@cui-hud_screen.player_joined_anim" ]
+                    }}
+                  ],
+                  "bindings": [
+                    { "binding_name": "#gamertag",
+                      "binding_type": "collection",
+                      "binding_collection_name": "players_collection"
+                }]
+            }}
+      ]}}
+  ]},
+  // Turned out the only method for them to properly use is literally
+  // using grid and shifting it with clip children.
+  // this is a bad idea, so im not adding it as for now...
+  "player_list_count_core": {
+    "ignored": true,
+    "type": "image",
+    "size": [ "100%c + 12px", "100%c + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -12, 10 ],
+    "controls": [
+      { "sometthing": {
+          "type": "label",
+          "layer": 1,
+          "color": "$cuigv:FontPrimaryColor",
+          "text": "#player_list_count_label",
+          "shadow": false,
+          "bindings": [
+            { "binding_type": "collection_details",
+              "binding_collection_name": "players_collection"
+            },
+            { "binding_type": "collection",
+              "binding_collection_name": "players_collection",
+              "binding_name": "#collection_index"
+            },
+            { "binding_type": "view",
+              "source_property_name": "('§f' + (#collection_index + 1) + ' players in this session.')",
+              "target_property_name": "#player_list_count_label"
+            }
+          ]
+      }}
+  ]},
+  "chat_panel_bottom": {
+    "type": "panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ 312, "100%c" ],
+    "max_size": [ 312, 200 ],
+    "offset": [ 0, -53 ],
+    "bindings": [
+      { "binding_name": "#hud_visible_centered_touch",
+        "binding_type": "global"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(not #hud_visible_centered_touch)",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%", "100%c" ],
+          "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 15,
+            "control_ids": {
+            "chat_item": "chat_item@cui-hud_screen.chat_grid_item_bottom"
+          }}
+      }}
+  ]},
+  "chat_grid_item_bottom": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "alpha": 0.5,
+    "size": [ 312, "100%c" ],
+    "anims": [
+      "@cui-hud_screen.anim_chat_bg_wait_bottom"
+    ],
+    "bindings": [
+      { "binding_name": "(not #on_new_death_screen)",
+        "binding_name_override": "#visible"
+    }],
+    "controls": [
+      { "text_wrapper": {
+          "type": "button",
+          "size": [ 312, "100%c" ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "layer": 5,
+          "offset": [ 2, 0 ],
+          "controls": [
+            { "text": {
+                "type": "label",
+                "text": "#text",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "shadow": true,
+                "localize": false,
+                "size": [ 312, "default" ],
+                "enable_profanity_filter": true,
+                "anims": [ "@hud.anim_chat_txt_wait" ],
+                "bindings": [
+                  { "binding_name": "#text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "chat_text_grid"
+                  },
+                  { "binding_type": "view",
+                    "source_property_name": "#text",
+                    "target_property_name": "#chat_text"
+                }]
+            }}
+      ]}}
+  ]},
+  "anim_chat_bg_alpha_bottom": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "destroy_at_end": "chat_text_thing",
+    "duration": 1,
+    "from": 0.5,
+    "to": 0
+  },
+  "anim_chat_bg_wait_bottom": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@cui-hud_screen.anim_chat_bg_alpha_bottom"
   }
 }

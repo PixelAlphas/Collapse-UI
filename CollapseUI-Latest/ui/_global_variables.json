@@ -59,7 +59,9 @@
     // Enable More detailed experience bar on each hotbar side.
   "$cuigv:AnimatedHotbarSelect": false, // Boolean
     // Enable Animation on hothar select/highlight.
-    
+  "$cuigv:AllowColoredExperienceBar": true, // Boolean
+    // Allow Experience bar and text to be themed with primary and secondary color.
+
   // ----- ## Layouts ## -----
   "$cuigv:LogoInPauseScreen": true,
     // Enable the game's logo instead displaying "Pause"
@@ -77,6 +79,8 @@
     // No Marketplace Button on either pause and start screen.
   "$cuigv:HorizontalSlider": false, // Boolean
     // Make the slider into horizontal instead vertical. ( Old slider design returns )
+  "$cuigv:LowMemory": false, // Boolean
+    // Reduce loading time aswell remove several things that is not needed.
   
   // ----- ## Unused - Will do nothing. ## -----
   "$cuigv:OriginUI": true, // Boolean

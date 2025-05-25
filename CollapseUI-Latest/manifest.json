@@ -1,10 +1,10 @@
 { "format_version": 2,
   "header": {
-    "name": "Collapse-UI - v4.1.6",
+    "name": "Collapse-UI - v4.2.0",
     "description": "§fModified & Enhanced UI made by Arxance\nThemes exists on subpack!",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 4, 1, 6 ],
-    "min_engine_version": [ 1, 21, 70 ]
+    "version": [ 4, 2, 0 ],
+    "min_engine_version": [ 1, 21, 80 ]
   },
   "modules": [
     { "type": "resources",
@@ -82,6 +82,18 @@
     },
     { "folder_name": "dark",
       "name": "Dark",
+      "memory_tier": 0
+    },
+    { "folder_name": "cozy",
+      "name": "Cozy",
+      "memory_tier": 0
+    },
+    { "folder_name": "sky",
+      "name": "Sky",
+      "memory_tier": 0
+    },
+    { "folder_name": "Horizon",
+      "name": "Horizon",
       "memory_tier": 0
     },
     { "folder_name": "default",

@@ -53,6 +53,7 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "size": [ "65%", 40 ],
+    "offset": [ 0, 40 ],
     "anims": [
       "@cui-toast.popup_anim"
     ],
@@ -66,27 +67,22 @@
         "button_up_right_of_first_refusal": true
     }],
     "controls": [
-      {
-        "background": {
+      { "background": {
           "type": "image",
           "texture": "textures/ui/.cui-assets/background_notif",
           "color": "$cuigv:PrimaryColor",
           "anims": "$alpha_anims",
           "offset": [ 0, -22 ]
-        }
-      },
-      {
-        "shadow": {
+      }},
+      { "shadow": {
           "type": "image",
           "texture": "textures/ui/.cui-assets/shadow",
           "anims": "$alpha_anims",
           "offset": [ 0, -13 ],
           "size": [ "100% + 14px", "100%" ],
           "layer": -10
-        }
-      },
-      {
-        "popup_content": {
+      }},
+      { "popup_content": {
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%", "100%" ],
@@ -95,8 +91,7 @@
           "offset": [ 8, -27],
           "layer": 1,
           "controls": [
-            {
-              "icon_padding": {
+            { "icon_padding": {
                 "layer": 1,
                 "type": "stack_panel",
                 "anchor_from": "top_left",
@@ -114,45 +109,29 @@
                   },
                   "factory_variables": [
                     "$hide_xbox_live_icon"
-                  ]
-                },
+                ]},
                 "bindings": [
-                  {
-                    "binding_type": "global",
+                  { "binding_type": "global",
                     "binding_name": "#toast_icon_section_content",
                     "binding_name_override": "#collection_length"
-                  }
-                ]
-              }
-            },
-            {
-              "text_padding": {
+                }]
+            }},
+            { "text_padding": {
                 "type": "panel",
                 "size": [ 2, "100%" ],
                 "bindings": [
-                  {
-                    "binding_name": "#text_padding_visible",
+                  { "binding_name": "#text_padding_visible",
                     "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "text_panel": {
+                }]
+            }},
+            { "text_panel": {
                 "type": "panel",
                 "size": [ "fill", "100%" ],
                 "controls": [
-                  {
-                    "text_stack_panel@toast_screen.text_stack_panel": {}
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
+                  { "text_stack_panel@toast_screen.text_stack_panel": {}}
+            ]}}
+      ]}}
+  ]},
   "popup_anim": {
     "anim_type": "offset",
     "easing": "in_out_cubic",
@@ -171,7 +150,6 @@
     "$anim_event_name|default": "toast_animation_finished",
     "end_event": "$anim_event_name"
   },
-  
   "popup_anim_alpha_01tezt": {
     "anim_type": "alpha",
     "easing": "in_out_cubic",
@@ -207,104 +185,5 @@
     "anim_type": "wait",
     "duration": "$display_time",
     "next": "@toast_screen.fade_anim_end"
-  },
-  "popupvanilla@common.input_panel": {
-    "consume_hover_events": true,
-    "prevent_touch_input": true,
-    "$toast_anchor_from|default": "top_middle",
-    "$toast_anchor_to|default": "bottom_middle",
-    "$toast_offset|default": [ 0, 0 ],
-    "offset": "$toast_offset",
-    "anchor_from": "$toast_anchor_from",
-    "anchor_to": "$toast_anchor_to",
-    "size": "$popup_size",
-    "$alpha_anims|default": [],
-    "$offset_anims|default": [
-      "@toast_screen.popup_anim"
-    ],
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.toast_interaction",
-        "mapping_type": "pressed",
-        "button_up_right_of_first_refusal": true
-      }
-    ],
-    "controls": [
-      {
-        "background": {
-          "type": "image",
-          "texture": "textures/ui/greyBorder",
-          "anims": "$alpha_anims"
-        }
-      },
-      {
-        "popup_content": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": [ "100%", "100%" ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ 6, 0 ],
-          "layer": 1,
-          "controls": [
-            {
-              "icon_padding": {
-                "layer": 1,
-                "type": "stack_panel",
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "size": [ "100%c", "100%" ],
-                "factory": {
-                  "name": "toast_image_factory",
-                  "control_ids": {
-                    "xbox_icon": "@toast_screen.xbox_icon",
-                    "third_party_achievement_icon": "@toast_screen.third_party_achievement_icon",
-                    "third_party_invite_icon": "@toast_screen.third_party_invite_icon",
-                    "icon_resource_pack": "@toast_screen.resource_pack_icon",
-                    "key_art_image": "@toast_screen.key_art_image",
-                    "persona_icon": "@toast_screen.persona_icon"
-                  },
-                  "factory_variables": [
-                    "$hide_xbox_live_icon"
-                  ]
-                },
-                "bindings": [
-                  {
-                    "binding_type": "global",
-                    "binding_name": "#toast_icon_section_content",
-                    "binding_name_override": "#collection_length"
-                  }
-                ]
-              }
-            },
-            {
-              "text_padding": {
-                "type": "panel",
-                "size": [ 2, "100%" ],
-                "bindings": [
-                  {
-                    "binding_name": "#text_padding_visible",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "text_panel": {
-                "type": "panel",
-                "size": [ "fill", "100%" ],
-                "controls": [
-                  {
-                    "text_stack_panel@toast_screen.text_stack_panel": {}
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ],
-    "anims": "$offset_anims"
   }
 }

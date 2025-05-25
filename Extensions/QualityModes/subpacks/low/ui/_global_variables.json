@@ -1,0 +1,21 @@
+{
+  "$cuigv:ConfigName": "Low",
+  "$cuigv:DesignedVersion": "v4.2",
+  
+  "$cuigv:Shadows": false,
+  "$cuigv:FadedProgressBar": false,
+  "$cuigv:ExperienceTextShadows": false,
+  "$cuigv:BackgroundGradient": false,
+  "$cuigv:UIAnimations": false,
+  "$cuigv:MoreExperienceDetails": false,
+  "$cuigv:AnimatedHotbarSelect": false,
+  
+  "$cuigv:LogoInPauseScreen": true,
+  "$cuigv:StartMainButtonClassic": true,
+  "$cuigv:SearchBoxSystem": false,
+  "$cuigv:NoGameLogo": false,
+  "$cuigv:NoRealmsPromoteInWorldSection": false,
+  "$cuigv:NoMarketplaceButton": true,
+  "$cuigv:HorizontalSlider": false,
+  "$cuigv:LowMemory": true
+}

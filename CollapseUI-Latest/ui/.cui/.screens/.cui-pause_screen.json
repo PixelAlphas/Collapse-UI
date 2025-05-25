@@ -12,6 +12,7 @@
       }},
       { "@main_button": {}},
       { "@account_element": {
+          "ignored": "$cuigv:LowMemory",
           "offset": [ -5, 5 ],
           "bindings": [
             { "binding_type": "view",
@@ -109,7 +110,7 @@
           "$cuiv:button_text_anchor": "left_middle",
           "$cuiv:button_text_offset": [ 24, 0 ]
       }},
-      { "pudding_02": { "type": "panel", "size": [ 4, 1 ] }},
+      { "pudding_02": { "type": "panel", "size": [ 4, 1 ], "ignored": "$cuigv:NoMarketplaceButton" }},
       { "marketplace@cui-button.text_button": {
           "size": [ 162, 25 ],
           "ignored": "$cuigv:NoMarketplaceButton",
@@ -197,7 +198,6 @@
     "orientation": "horizontal",
     "offset": [ 6, -6 ],
     "controls": [
-      
       { "screenshot@cui-button.text_button": {
           "size": [ 20, 20 ],
           "$pressed_button_name": "button.screenshot",
@@ -355,6 +355,7 @@
           }]
       }},
       { "playerlist_content_factory_out": {
+          "ignored": "(not $cuigv:UIAnimations)",
           "type": "stack_panel",
           "layer": 30,
           "size": [ "35%", "100% - 8px" ],
@@ -425,15 +426,18 @@
   "playerlist_element_in": {
     "type": "panel",
     "layer": 20,
+    "$cuiv:anim|default": [],
     "controls": [
       { "playerlist_element@cui-common.element_background": {
           "$cuiv:element_background_contents": "cui-pause_screen.playerlist_core",
           "$cuiv:element_background_size": [ "100%", "100%" ],
           "$cuiv:element_background_no_label": true,
           "$cuiv:header_text": "cui.pause.playerlist",
-          "anims": [
-            "@cui-anims.playerlist_anims_offset"
-          ]
+          "variables": [
+            { "requires": "$cuigv:UIAnimations",
+              "$cuiv:anim": [ "@cui-anims.playerlist_anims_offset" ]
+          }],
+          "anims": "$cuiv:anim"
       }}
   ]},
   "playerlist_element_out": {
