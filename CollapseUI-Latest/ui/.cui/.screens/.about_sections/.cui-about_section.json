@@ -62,7 +62,7 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Fri, 18 May (2025)"
+          "$cuiv:about_text_gray": "Sun, 25 May (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",
