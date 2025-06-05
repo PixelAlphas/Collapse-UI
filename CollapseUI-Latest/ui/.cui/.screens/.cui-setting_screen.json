@@ -625,6 +625,16 @@
     "type": "panel",
     "size": [ "100%", 10 ],
     "controls": [
+      { "image": {
+          "ignored": "(not $cuiv:is_image_pudding)",
+          "type": "image",
+          "layer": 10,
+          "size": [ 14, 14 ],
+          "offset": [ -22, 4 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "texture": "$cuiv:slider_image_source"
+      }},
       { "label": {
           "type": "label",
           "layer": 10,

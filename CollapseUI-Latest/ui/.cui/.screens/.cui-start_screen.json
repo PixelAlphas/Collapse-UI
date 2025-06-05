@@ -1036,7 +1036,7 @@
           "layer": 80,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "text": "Did you know this project takes like 1 year?\n\nAlso there's template packs somewhere that you can choose...",
+          "text": "Something is coming... soon?\n\n§oThere's extenstion packs now!",
           "color": "$cuigv:FontPrimaryColor",
           "offset": [ 14, 40 ],
           "variables": [
@@ -1300,7 +1300,7 @@
     "layer": 900,
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v4.2.0"
+          "$cuiv:lwb_text": "Collapse-UI v4.2.1"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

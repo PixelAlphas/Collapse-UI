@@ -15,7 +15,7 @@
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v4.2.0"
+          "$cuiv:lwb_text": "v4.2.1"
       }},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
@@ -38,6 +38,13 @@
           "$cuiv:lwb_text_size": [ "100% - 12px", "default" ],
           "$cuiv:lwb_text_alignment": "left",
           "$cuiv:lwb_text": "Greetings there, Thanks for trying this UI pack! It's pretty much been in-development for quite some time, it was some 'sequel' to §lArcdustry-UI§r§f project due to overwhelming requests for me after retiring JSON-UI, so i decided to create this UI in some sort of secrets and couple of beta testing.\n\nAny suggestions should go through my discord server."
+      }},
+      { "padding07": { "type": "panel", "size": [ 1, 10 ]}},
+      { "ui_version@cui-common.label_with_background_adv": {
+          "size": [ "100%", "100%cm + 8px" ],
+          "$cuiv:lwb_text_size": [ "100% - 12px", "default" ],
+          "$cuiv:lwb_text_alignment": "left",
+          "$cuiv:lwb_text": "Also try out Devamped! it's my texture pack, although unfinished for now...\n\nv0.8 at July!"
       }},
       { "padding07": { "type": "panel", "size": [ 1, 10 ]}}
   ]},
@@ -62,7 +69,7 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Sun, 25 May (2025)"
+          "$cuiv:about_text_gray": "Fri, 6 Jun (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",

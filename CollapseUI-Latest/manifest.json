@@ -1,9 +1,9 @@
 { "format_version": 2,
   "header": {
-    "name": "Collapse-UI - v4.2.0",
+    "name": "Collapse-UI - v4.2.1",
     "description": "§fModified & Enhanced UI made by Arxance\nThemes exists on subpack!",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 4, 2, 0 ],
+    "version": [ 4, 2, 1 ],
     "min_engine_version": [ 1, 21, 80 ]
   },
   "modules": [
