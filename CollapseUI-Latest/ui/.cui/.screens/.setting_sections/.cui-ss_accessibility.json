@@ -116,15 +116,25 @@
           "$cuiv:option_toggle_binding_name": "#camera_shake_enabled",
           "$toggle_name": "camera_shake"
       }},
-      { "text_background_opacity_slider@cui-setting_screen.option_slider": {
-          "$cuiv:option_label_text": "options.textBackgroundOpacity",
-          "$slider_name": "text_background_opacity",
-          "$cuiv:option_description_text": "cui.settings.accessibility.desc.text_bg",
-          "$slider_value_binding_name": "#text_background_opacity",
-          "$slider_tts_text_value": "#text_background_opacity_text_value",
-          "$cuiv:slider_value_text": "#text_background_opacity_text_value",
-          "$cuiv:option_toggle_binding_name": "#text_background_opacity_enabled",
-          "$cuiv:slider_value_binding": [{ "binding_name": "#text_background_opacity_text_value" }]
+      { "hud_text_background_opacity_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.hudTextBackgroundOpacity",
+          "$slider_name": "hud_text_background_opacity",
+          "$cuiv:option_description_text": "options.hudTextBackgroundOpacity.description",
+          "$slider_value_binding_name": "#hud_text_background_opacity",
+          "$slider_tts_text_value": "#hud_text_background_opacity_text_value",
+          "$cuiv:slider_value_text": "#hud_text_background_opacity_text_value",
+          "$cuiv:option_toggle_binding_name": "#hud_text_background_opacity_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#hud_text_background_opacity_text_value" }]
+      }},
+      { "chat_opacity_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.chatBackgroundOpacity",
+          "$slider_name": "chat_background_opacity",
+          "$cuiv:option_description_text": "options.chatBackgroundOpacity.description",
+          "$slider_value_binding_name": "#chat_background_opacity",
+          "$slider_tts_text_value": "#chat_background_opacity_text_value",
+          "$cuiv:slider_value_text": "#chat_background_opacity_text_value",
+          "$cuiv:option_toggle_binding_name": "#chat_background_opacity_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#chat_background_opacity_text_value" }]
       }},
       { "actionbar_text_background_opacity_slider@cui-setting_screen.option_slider": {
           "$cuiv:option_label_text": "options.actionBarTextBackgroundOpacity",

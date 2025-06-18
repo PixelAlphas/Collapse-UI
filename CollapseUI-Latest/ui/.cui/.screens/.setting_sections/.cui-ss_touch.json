@@ -110,7 +110,7 @@
                 "size": [ "100%", "2px" ]
             }}
       ]}},
-      { "select_control_mode@cui-button.text_button": {
+      { "select_control_mode@cui-button.text_button_legacy": {
           "$pressed_button_name": "button.select_control_mode",
           "$cuiv:button_text": "options.controlMode.selectControlMode",
           "size": [ "100%", 25 ],
@@ -155,7 +155,6 @@
           "$cuiv:slider_value_text": "#touch_sensitivity_text_value",
           "$cuiv:option_toggle_binding_name": "#touch_sensitivity_enabled",
           "$cuiv:option_description": true,
-          "$cuiv:option_description_text": "i like balls.",
           "$cuiv:slider_value_binding": [{ "binding_name": "#touch_sensitivity_text_value" }]
       }},
       { "option_slider_damen@cui-setting_screen.option_slider": {

@@ -495,6 +495,7 @@
     "$cuiv:header_anchor|default": "left_middle",
     "$cuiv:header_offset|default": [ 6, -1 ],
     "$cuiv:header_background|default": false,
+    "$cuiv:header_text_bindings|default": [],
     "controls": [
       { "label": {
           "type": "image",
@@ -512,7 +513,8 @@
                 "anchor_to": "$cuiv:header_anchor",
                 "font_type": "MinecraftTen",
                 "offset": "$cuiv:header_offset",
-                "shadow": false
+                "shadow": false,
+                "bindings": "$cuiv:header_text_bindings"
             }}
       ]}},
       { "line": {

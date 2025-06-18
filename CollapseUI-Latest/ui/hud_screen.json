@@ -267,12 +267,20 @@
             { "horse_jump_rend@horse_jump_renderer": {
                 "size": [ "100%", 5 ],
                 "layer": 7,
+                "replaced_while_inactive": true,
                 "controls": [
                   { "dash_rend@dash_renderer": {
                       "size": [ "100%", 5 ],
-                      "layer": 7
+                      "layer": 7,
+                      "replaced_while_inactive": true
                   }}
             ]}},
+            { "locator_bar@locator_bar": {
+                "size": [ "100%sm", 5 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 10
+            }},
             { "progress_text_label_outline@cui-hud_screen.progress_text_label": {
                 "ignored": "(not $cuigv:ExperienceTextShadows)",
                 "offset": [ 0, -4 ],
