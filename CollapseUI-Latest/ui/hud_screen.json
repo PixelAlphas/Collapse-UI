@@ -260,40 +260,49 @@
                     ]}
                 }],
                 "bindings": [
-                  { "binding_name": "#show_survival_ui",
+                  { "binding_name": "#hotbar_with_xp_bar",
                     "binding_name_override": "#visible"
                 }]
             }},
             { "horse_jump_rend@horse_jump_renderer": {
                 "size": [ "100%", 5 ],
                 "layer": 7,
-                "replaced_while_inactive": true,
-                "controls": [
-                  { "dash_rend@dash_renderer": {
-                      "size": [ "100%", 5 ],
-                      "layer": 7,
-                      "replaced_while_inactive": true
-                  }}
-            ]}},
+                "replaced_while_inactive": true
+            }},
+            { "dash_rend@dash_renderer": {
+                "size": [ "100%", 5 ],
+                "layer": 7,
+                "replaced_while_inactive": true
+            }},
             { "locator_bar@locator_bar": {
-                "size": [ "100%sm", 5 ],
+                "size": [ "100%", 5 ],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
-                "layer": 10
+                "layer": 10,
+                "bindings": [
+                  { "binding_name": "#hotbar_with_locator_bar",
+                    "binding_name_override": "#visible"
+                }]
             }},
             { "progress_text_label_outline@cui-hud_screen.progress_text_label": {
                 "ignored": "(not $cuigv:ExperienceTextShadows)",
                 "offset": [ 0, -4 ],
-                "layer": 7
+                "layer": 20
             }},
             { "progress_text_label_no_outline@cui-hud_screen.progress_text_label_no_outline": {
                 "ignored": "$cuigv:ExperienceTextShadows",
                 "offset": [ 0, -7 ],
-                "layer": 7
+                "layer": 20
             }}
           ]
       }},
-      { "hotbar@hotbar_chooser": { "offset": [ 4, 15.5 ]}},
+      { "hotbar@hotbar_chooser": { 
+          "offset": [ 4, 15.5 ],
+          "bindings": [
+            { "binding_name": "(not #is_spectator_mode)",
+              "binding_name_override": "#visible"
+          }]
+      }},
       { "item_text_factory@cui-hud_screen.item_text_factory": {}}
   ]},
   "full_progress_bar": {
