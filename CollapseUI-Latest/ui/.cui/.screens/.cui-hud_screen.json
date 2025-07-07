@@ -708,11 +708,11 @@
     "max_size": [ 312, 200 ],
     "offset": [ 0, -53 ],
     "bindings": [
-      { "binding_name": "#hud_visible_centered_touch",
+      { "binding_name": "#inventory_touch_button",
         "binding_type": "global"
       },
       { "binding_type": "view",
-        "source_property_name": "(not #hud_visible_centered_touch)",
+        "source_property_name": "(not #inventory_touch_button)",
         "target_property_name": "#visible"
     }],
     "controls": [
