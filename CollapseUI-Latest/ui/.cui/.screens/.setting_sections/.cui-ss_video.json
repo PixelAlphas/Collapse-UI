@@ -377,7 +377,7 @@
           "layer": 1
       }},
       { "frame_pacing_toggle@cui-setting_screen.option_toggle": {
-          "$cuiv:option_description_text": "options.framePacing.tooltip",
+          "$cuiv:option_description_text": "cui.settings.video.desc.frame_pacing",
           "$cuiv:option_label_text": "options.framePacing",
           "$cuiv:option_binding_name": "#frame_pacing",
           "$cuiv:option_toggle_binding_name": "#frame_pacing_enabled",

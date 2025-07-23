@@ -15,7 +15,7 @@
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v4.3.1"
+          "$cuiv:lwb_text": "v4.3.2"
       }},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
@@ -44,7 +44,7 @@
           "size": [ "100%", "100%cm + 8px" ],
           "$cuiv:lwb_text_size": [ "100% - 12px", "default" ],
           "$cuiv:lwb_text_alignment": "left",
-          "$cuiv:lwb_text": "Also try out Devamped! it's my texture pack, although unfinished for now...\n\nv0.8 at July!"
+          "$cuiv:lwb_text": "Also try out Devamped! it's my texture pack, although unfinished for now...\n\nv0.8a is coming soon!"
       }},
       { "padding07": { "type": "panel", "size": [ 1, 10 ]}}
   ]},
@@ -69,7 +69,7 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Sat, 21 Jun (2025)"
+          "$cuiv:about_text_gray": "Wed, 23 July (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",
