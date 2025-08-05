@@ -50,7 +50,6 @@
           "ignored": "(not $cuigv:UIBackground)",
           "type": "image",
           "fill": true,
-          "alpha": "$cuigv:BackgroundAlpha",
           "layer": -95,
           "texture": "textures/ui/cui-backgrounds/ui_background"
       }}
@@ -400,7 +399,6 @@
       { "background": {
           "ignored": "(not $cuigv:UIBackground)",
           "type": "image",
-          "alpha": "$cuigv:BackgroundAlpha",
           "fill": true,
           "layer": -95,
           "texture": "textures/ui/cui-backgrounds/ui_background_blur"

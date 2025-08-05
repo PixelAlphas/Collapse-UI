@@ -15,7 +15,7 @@
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v4.3.2"
+          "$cuiv:lwb_text": "v4.3.3"
       }},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
@@ -69,7 +69,7 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Wed, 23 July (2025)"
+          "$cuiv:about_text_gray": "Wed, 6 Aug (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",
@@ -77,7 +77,7 @@
       }},
       { "setting_version@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.setting_ver",
-          "$cuiv:about_text_gray": "v1.21.90"
+          "$cuiv:about_text_gray": "v1.21.100"
       }},
       { "hud_version@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.hud_ver",
@@ -85,7 +85,7 @@
       }},
       { "support_version@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.support",
-          "$cuiv:about_text_gray": "v1.21.90+"
+          "$cuiv:about_text_gray": "v1.21.100+"
       }}
   ]},
   "social_stuff": {

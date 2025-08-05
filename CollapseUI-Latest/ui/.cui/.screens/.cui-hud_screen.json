@@ -219,25 +219,45 @@
     "controls": [
       { "shadow01@label_template": {
           "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "$cuiv:colored_bar|default": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuiv:colored_bar",
+          "variables": [
+            { "requires": "$cuigv:AllowColoredExperienceBar",
+              "$cuiv:colored_bar": "$cuigv:TertiaryColor"
+          }],
           "offset": [ -1, 0 ],
           "layer": -2
       }},
       { "shadow02@label_template": {
           "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "$cuiv:colored_bar|default": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuiv:colored_bar",
+          "variables": [
+            { "requires": "$cuigv:AllowColoredExperienceBar",
+              "$cuiv:colored_bar": "$cuigv:TertiaryColor"
+          }],
           "offset": [ 1, 0 ],
           "layer": -2
       }},
       { "shadow03@label_template": {
           "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "$cuiv:colored_bar|default": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuiv:colored_bar",
+          "variables": [
+            { "requires": "$cuigv:AllowColoredExperienceBar",
+              "$cuiv:colored_bar": "$cuigv:TertiaryColor"
+          }],
           "offset": [ 0, -1 ],
           "layer": -2
       }},
       { "shadow04@label_template": {
           "ignored": "(not $cuigv:ExperienceTextShadows)",
-          "color": [ 0, 0.2054, 0.1505 ],
+          "$cuiv:colored_bar|default": [ 0, 0.2054, 0.1505 ],
+          "color": "$cuiv:colored_bar",
+          "variables": [
+            { "requires": "$cuigv:AllowColoredExperienceBar",
+              "$cuiv:colored_bar": "$cuigv:TertiaryColor"
+          }],
           "offset": [ 0, 1 ],
           "layer": -2
       }}
@@ -248,7 +268,12 @@
     "text_alignment": "$cuiv:text_alignment",
     "font_scale_factor": "$cuiv:font_scale_factor",
     "size": [ "100%", "default" ],
-    "color": [ 0.6156, 0.9019, 0.3058 ],
+    "$cuiv:colored_bar|default": [ 0.6156, 0.9019, 0.3058 ],
+    "color": "$cuiv:colored_bar",
+    "variables": [
+      { "requires": "$cuigv:AllowColoredExperienceBar",
+        "$cuiv:colored_bar": "$cuigv:PrimaryColor"
+    }],
     "bindings": "$cuiv:ptl_bindings"
   },
   "progress_text_label@progress_xp_text_label_template": {
