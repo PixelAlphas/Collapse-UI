@@ -27,24 +27,24 @@
   // Hud tooltip Anims
   "hud_tooltip_item": {
 		"anim_type": "offset",
-		"easing": "out_quart",
-		"duration": 0.15,
-		"from": [  0, "50%-50px"],
-		"to": [  0, "50%-58px"]
+		"easing": "out_expo",
+		"duration": 0.35,
+		"from": [  0, -8 ],
+		"to": [  0, -14 ]
 	},
   "hud_tooltip_tip": {
 		"anim_type": "offset",
-		"easing": "out_quart",
-		"duration": 0.15,
+		"easing": "out_expo",
+		"duration": 0.35,
 		"from": [  0, "50%-65px"], 
 		"to": [  0, "50%-70px"]
 	},
 	"hud_tooltip_alpha": {
 		"anim_type": "alpha",
 		"easing": "out_circ",
-		"duration": 0.15,
+		"duration": 0.35,
 		"from": 0.0,
-		"to": "$cuigv:BackgroundAlpha"
+		"to": 1
 	},
   // Screens Anims
   "screen_outro_anim_push": {
