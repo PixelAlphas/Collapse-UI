@@ -178,7 +178,7 @@
   ]},
 	"chat_grid_item": {
 		"anims": [
-		  "@hud.anim_chat_pile_up"
+		  "@cui-anims.anim_chat_pile_up"
   ]},
 	"chat_grid_item/chat_background": {
 		"$chat_bg_alpha|default": 0.7,
