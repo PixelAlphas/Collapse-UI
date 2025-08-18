@@ -5,7 +5,26 @@
       { "requires": "($is_realm_slot or $realm_no_world_edit)", "$screen_background_control": "realms_slots.realms_background" }
     ],
     "$screen_content": "cui-setting_screen.root_contents",
-    "$screen_bg_content": "cui-common.menu_screen_background"
+    "$screen_bg_content": "cui-setting_screen.root_contents_background"
+  },
+  "root_contents_background": {
+    "type": "panel",
+    "controls": [
+      {
+        "normal@cui-common.menu_screen_background": {}
+      },
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuigv:SecondaryColor",
+          "size": [ "40%", "100%" ],
+          "alpha": "$cuigv:BackgroundAlpha",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      }
+    ]
   },
   "root_contents": {
     "type": "panel",
@@ -463,7 +482,26 @@
             { "global_texture_pack_section@cui-ss_globalresource.globalresource_section": { "visible": false, "ignored": "$ignore_global_resources_section" }}
       ]}}
   ]},
-  "storage_button@cui-toggle.toggle_button_section": {
+  "settings_toggle_theme@cui-toggle.toggle_button_section": {
+    "$cuiv:toggle_state_panel_type": "cui-toggle.settings_button_core",
+    "$cuiv:default_button_texture": "",
+    "$cuiv:hover_button_texture": "textures/ui/.cui-assets/background_solid",
+    "$cuiv:pressed_button_texture": "textures/ui/.cui-assets/background_solid",
+    "$cuiv:pressed_no_hover_button_texture": "textures/ui/.cui-assets/background_solid",
+    "$cuiv:default_button_color": "$cuigv:TertiaryColor",
+    "$cuiv:hover_button_color": "$cuigv:TertiaryColor",
+    "$cuiv:pressed_button_color": "$cuigv:TertiaryColor",
+    "$cuiv:pressed_no_hover_button_color": "$cuigv:TertiaryColor",
+    "$cuiv:default_button_color_text": "$cuigv:FontPrimaryColor",
+    "$cuiv:default_button_color_toggle": "$cuigv:FontPrimaryColor",
+    "$cuiv:hover_button_color_text": "$cuigv:FontPrimaryColor",
+    "$cuiv:hover_button_color_toggle": "$cuigv:FontPrimaryColor",
+    "$cuiv:pressed_button_color_text": "$cuigv:FontPrimaryColor",
+    "$cuiv:pressed_button_color_toggle": "$cuigv:FontPrimaryColor",
+    "$cuiv:pressed_no_hover_button_color_text": "$cuigv:FontPrimaryColor",
+    "$cuiv:pressed_no_hover_button_color_toggle": "$cuigv:FontPrimaryColor"
+  },
+  "storage_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "storage_management_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/storage_section_icon",
@@ -471,68 +509,68 @@
     "$toggle_property_bag": {
       "#panel_title": "menu.storageManagement"
   }},
-  "account_button@cui-toggle.toggle_button_section": {
+  "account_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "account_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/account_section_icon",
     "$cuiv:toggle_label_text": "options.account"
   },
-  "multiplayer_button@cui-toggle.toggle_button_section": {
+  "multiplayer_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "multiplayer_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/multiplayer_section_icon",
     "$cuiv:toggle_label_text": "options.group.multiplayer"
   },
-  "game_button@cui-toggle.toggle_button_section": {
+  "game_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "game_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/language_section_icon",
     "$cuiv:toggle_label_text": "options.category.game"
   },
-  "accessibility_button@cui-toggle.toggle_button_section": {
+  "accessibility_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "accessibility_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/accessibility_section_icon",
     "$cuiv:toggle_label_text": "options.accessibility"
   },
-  "creator_button@cui-toggle.toggle_button_section": {
+  "creator_button@cui-setting_screen.settings_toggle_theme": {
     "ignored": "$ignore_creator_section",
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "creator_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/creator_section_icon",
     "$cuiv:toggle_label_text": "options.creator"
   },
-  "general_button@cui-toggle.toggle_button_section": {
+  "general_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "general_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/setting_icon",
     "$cuiv:toggle_label_text": "options.general"
   },
-  "language_button@cui-toggle.toggle_button_section": {
+  "language_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "language_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/language_section_icon",
     "$cuiv:toggle_label_text": "options.language"
   },
-  "sound_button@cui-toggle.toggle_button_section": {
+  "sound_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "sound_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/sound_section_icon",
     "$cuiv:toggle_label_text": "options.sounds"
   },
-  "video_button@cui-toggle.toggle_button_section": {
+  "video_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "video_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/video_section_icon",
     "$cuiv:toggle_label_text": "options.video"
   },
-  "gamepad_button@cui-toggle.toggle_button_section": {
+  "gamepad_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "gamepad_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/gamepad_section_icon",
     "$cuiv:toggle_label_text": "options.controller"
   },
-  "keyboardmouse_button@cui-toggle.toggle_button_section": {
+  "keyboardmouse_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "keyboard_and_mouse_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/keyboard_section_icon",
@@ -540,13 +578,13 @@
     "$toggle_property_bag": {
       "#panel_title": "options.keyboardAndMouseSettings"
   }},
-  "touch_button@cui-toggle.toggle_button_section": {
+  "touch_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "touch_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/touch_section_icon",
     "$cuiv:toggle_label_text": "options.touch"
   },
-  "global_texture_pack_button@cui-toggle.toggle_button_section": {
+  "global_texture_pack_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$cuiv:button_type_panel": "cui-setting_screen.resource_packs_toggle_button_control",
     "$toggle_view_binding_name": "global_texture_pack_button_toggle",
@@ -562,6 +600,21 @@
     "anchor_to": "left_middle",
     "$cuiv:toggle_texture_color|default": "$cuigv:FontPrimaryColor",
     "controls": [
+      { "pressed_padding": {
+          "type": "panel",
+          "size": [ 5, "100%" ], 
+          "ignored": "(not($pressed_state))",
+          "controls": [
+            { "highlight": {
+                "type": "image",
+                "texture": "textures/ui/White",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "color": "$cuigv:PrimaryColor",
+                "size": [ 2, 12 ]
+            }}]
+      }},
+      { "hover_padding": { "type": "panel", "size": [ 2, 1 ], "ignored": "(not($hover_state))"}},
       { "pudding_01": { "type": "panel", "size": [ 2, 1 ]}},
       { "cycling_icon": {
           "type": "image",
@@ -649,7 +702,7 @@
     "$cuiv:button_type_panel": "button.reset_binding"
   },
   "slider@cui-slider.slider": {
-    "size": [ "100% - 15px", 10 ],
+    "size": [ "100% - 15px", 12 ],
     "enabled": "$cuiv:is_enabled",
     "$option_label|default": ""
   },
@@ -660,7 +713,7 @@
   },
   "option_slider_control": {
     "type": "panel",
-    "size": [ "100%", 10 ],
+    "size": [ "100%", 12 ],
     "controls": [
       { "image": {
           "ignored": "(not $cuiv:is_image_pudding)",
@@ -933,6 +986,7 @@
   "option_toggle_state_template": {
     "type": "panel",
     "$cuiv:option_isHover|default": false,
+    "$cuiv:option_isPressed|default": false,
     "$cuiv:option_isDisabled|default": false,
     "size": [ "100% - 2px", "100%" ],
     "anchor_from": "left_middle",
@@ -1134,6 +1188,15 @@
           "texture": "textures/ui/.cui-assets/background",
           "color": "$cuigv:PrimaryColor"
       }},
+      { "enabled_background": {
+          "ignored": "(not $cuiv:option_isPressed)",
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "offset": [ 0, 0 ],
+          "layer": -12,
+          "texture": "textures/ui/.cui-assets/background_solid",
+          "color": "$cuigv:TertiaryColor"
+      }},
       { "background": {
           "ignored": "(not $cuiv:option_state_value_background)",
           "type": "image",
@@ -1144,7 +1207,7 @@
           "color": "$cuigv:SecondaryColor"
       }}
   ]},
-  "option_toggle_on@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on", "$cuiv:option_state_color": "$cuigv:PrimaryColor", "$cuiv:option_state_color_opposite": "$cuigv:FontPrimaryColor" },
+  "option_toggle_on@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on", "$cuiv:option_isPressed": true, "$cuiv:option_state_color": "$cuigv:PrimaryColor", "$cuiv:option_state_color_opposite": "$cuigv:FontPrimaryColor" },
   "option_toggle_off@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_off", "$cuiv:option_state_color_opposite": "$cuigv:FontPrimaryColor" },
   "option_toggle_on_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_on_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:SecondaryColor", "$cuiv:option_state_color_opposite": "$cuigv:SecondaryColor" },
   "option_toggle_off_hover@cui-setting_screen.option_toggle_state_template": { "$cuiv:option_state_texture": "textures/ui/.cui-assets/.buttons/toggle_off_hover", "$cuiv:option_isHover": true, "$cuiv:option_state_color": "$cuigv:SecondaryColor", "$cuiv:option_state_color_opposite": "$cuigv:SecondaryColor" },
@@ -1160,7 +1223,7 @@
       { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
       { "note_panel": {
           "type": "image",
-          "texture": "textures/ui/.cui-assets/background",
+          "texture": "textures/ui/.cui-assets/background_solid",
           "size": [ "100% - 8px", "100%cm + 4px" ],
           "color": "$cuigv:TertiaryColor",
           "controls": [

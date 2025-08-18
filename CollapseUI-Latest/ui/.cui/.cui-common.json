@@ -57,7 +57,7 @@
   "label_with_background": {
     "type": "image",
     "layer": 1,
-    "texture": "textures/ui/.cui-assets/background",
+    "texture": "textures/ui/.cui-assets/background_solid",
     "color": "$cuiv:lwb_bg_color",
     "size": [ "100%cm + 4px", "100%cm + 2px" ],
     "$cuiv:lwb_text|default": "?",
@@ -498,7 +498,7 @@
       { "label": {
           "type": "image",
           "size": [ "100%", "100%c + 8px" ],
-          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "texture": "textures/ui/.cui-assets/background_solid",
           "color": "$cuigv:PrimaryColor",
           "layer": 2,
           "controls": [
@@ -517,11 +517,12 @@
       ]}},
       { "line": {
           "type": "image",
+          "ignored": true,
           "size": [ "100%", 4 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "layer": 2,
-          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "texture": "textures/ui/.cui-assets/background_solid",
           "color": "$cuigv:PrimaryColor"
       }},
       { "background": {
@@ -529,7 +530,7 @@
           "type": "image",
           "size": [ "100%", "100%" ],
           "layer": 1,
-          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "texture": "textures/ui/.cui-assets/background_solid",
           "color": "$cuigv:TertiaryColor"
       }}
   ]},
@@ -541,7 +542,7 @@
     "$cuiv:element_background_size|default": [ "default", "100%cm" ],
     "$cuiv:element_background_offset|default": [ 0, 0 ],
     "$cuiv:element_background_anchor|default": "bottom_middle",
-    "$cuiv:element_background_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:element_background_texture|default": "textures/ui/.cui-assets/background_solid",
     "$cuiv:element_background_contents|default": "",
     "alpha": "$cuiv:element_background_alpha",
     "color": "$cuiv:element_background_color",

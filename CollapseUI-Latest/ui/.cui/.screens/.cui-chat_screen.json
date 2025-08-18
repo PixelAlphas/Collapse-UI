@@ -45,7 +45,7 @@
       { "ac_previous@cui-chat_screen.ac_previous": {}},
       { "padding_04": { "type": "panel", "size": [ 2, 1 ]}},
       { "ac_next@cui-chat_screen.ac_next": {}},
-      { "padding_05": { "type": "panel", "size": [ 2, 1 ]}},
+      { "padding_05": { "type": "panel", "size": [ "fill", 1 ]}},
       { "send_button@cui-chat_screen.send_button": { "offset": [ -20, 0 ] } }
     ]
   },
@@ -249,6 +249,7 @@
   ]},
   "send_button@cui-button.text_button": {
     "$pressed_button_name": "button.send",
+    "$pressed_button_name_anim": "button.send_anim",
     "size": [ 44, 22 ],
     "$tts_enabled|default": true,
     "focus_enabled": "$tts_enabled",
@@ -265,6 +266,7 @@
   "chat_settings_button@cui-button.text_button": {
     "size": [ 24, 24 ],
     "$pressed_button_name": "button.open_chat_settings",
+    "$pressed_button_name_anim": "button.open_chat_settings_anim",
     "$focus_id": "chat_settings_button_focus_id",
     "$focus_override_up": "coordinate_dropdown_focus_id",
     "$button_tts_header": "chat.settings",
@@ -274,32 +276,40 @@
     "$cuiv:button_image_texture": "textures/ui/gear"
   },
   "ac_previous@cui-button.text_button": {
+    "ignored": "(not $touch)",
     "size": [ "fill", 24 ],
     "$pressed_button_name": "button.chat_autocomplete_back",
+    "$pressed_button_name_anim": "button.chat_autocomplete_back_anim",
     "$cuiv:button_type_panel": "cui-start_screen.button_label",
     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
     "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/chat/ac_previous"
   },
   "ac_next@cui-button.text_button": {
+    "ignored": "(not $touch)",
     "size": [ "fill", 24 ],
     "$pressed_button_name": "button.chat_autocomplete",
+    "$pressed_button_name_anim": "button.chat_autocomplete_anim",
     "$cuiv:button_type_panel": "cui-start_screen.button_label",
     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
     "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/chat/ac_next"
   },
   "msg_previous@cui-button.text_button": {
+    "ignored": "(not $touch)",
     "size": [ "fill", 24 ],
     "$pressed_button_name": "button.chat_previous_message",
+    "$pressed_button_name_anim": "button.chat_previous_message_anim",
     "$cuiv:button_type_panel": "cui-start_screen.button_label",
     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
     "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/chat/previous"
   },
   "msg_next@cui-button.text_button": {
+    "ignored": "(not $touch)",
     "size": [ "fill", 24 ],
     "$pressed_button_name": "button.chat_next_message",
+    "$pressed_button_name_anim": "button.chat_next_message_anim",
     "$cuiv:button_type_panel": "cui-start_screen.button_label",
     "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
     "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",

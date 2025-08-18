@@ -1036,7 +1036,7 @@
           "layer": 80,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "text": "Something is coming... soon?\n\n§oThere's extenstion packs now!",
+          "text": "Working in progress, The update is not final.",
           "color": "$cuigv:FontPrimaryColor",
           "offset": [ 14, 40 ],
           "variables": [
@@ -1300,7 +1300,7 @@
     "layer": 900,
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v4.3.4"
+          "$cuiv:lwb_text": "Collapse-UI v5.0.0 (Beta)"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

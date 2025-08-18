@@ -8,7 +8,7 @@
       { "requires": "($is_realm_slot or $realm_no_world_edit)", "$screen_background_control": "realms_slots.realms_background" }
     ],
     "$screen_content": "cui-setting_screen.root_contents",
-    "$screen_bg_content": "cui-common.menu_screen_background",
+    "$screen_bg_content": "cui-setting_screen.root_contents_background",
     "$header_bar_control": "common.empty_panel",
     "$header_safezone_control": "common.empty_panel",
     "$is_full_screen_layout": false

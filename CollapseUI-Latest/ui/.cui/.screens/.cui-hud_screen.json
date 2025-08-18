@@ -350,9 +350,9 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "50%", "100%c" ],
-    "anchor_from": "bottom_right",
-    "anchor_to": "bottom_right",
-    "offset": [ -2, -2 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -2, 2 ],
     "use_child_anchors": true,
     "controls": [
       { "@number_of_days_played": {}},
@@ -554,43 +554,15 @@
     "layer": 8,
     "anims": "$cuiv:hsf_anims",
     "$cuiv:hsf_anims|default": [ 
-      "@cui-hud_screen.hotbar_slot_selected_anim_size_selected",
-      "@cui-hud_screen.hotbar_slot_selected_anim_alpha_selected"
+      "@cui-anims.hotbar_slot_selected_anim_size_selected",
+      "@cui-anims.hotbar_slot_selected_anim_alpha_selected"
   ]},
   "hotbar_slot_selected_image_unselected@hotbar_slot_selected_image": {
     "$cuiv:hsf_anims": [ 
-      "@cui-hud_screen.hotbar_slot_selected_anim_size_unselected",
-      "@cui-hud_screen.hotbar_slot_selected_anim_alpha_unselected"
+      "@cui-anims.hotbar_slot_selected_anim_size_unselected",
+      "@cui-anims.hotbar_slot_selected_anim_alpha_unselected"
   ]},
-  "hotbar_slot_selected_anim_size_selected": {
-    "anim_type": "size",
-    "easing": "out_quart",
-    "duration": 0.5,
-    "from": [ 32, 32 ],
-    "to": [ 24, 24 ]
-  },
-  "hotbar_slot_selected_anim_size_unselected": {
-    "anim_type": "size",
-    "easing": "in_quart",
-    "duration": 0.5,
-    "from": [ 24, 24 ],
-    "to": [ 32, 32 ]
-  },
-  "hotbar_slot_selected_anim_alpha_selected": {
-    "anim_type": "alpha",
-    "easing": "out_quart",
-    "duration": 0.5,
-    "from": 0,
-    "to": 1
-  },
-  "hotbar_slot_selected_anim_alpha_unselected": {
-    "anim_type": "alpha",
-    "easing": "out_quart",
-    "duration": 0.5,
-    "from": 1,
-    "to": 0,
-    "destroy_at_end": "hotbar_slot_selected_image"
-  },
+  
   "player_list": {
     "type": "button",
     "size": [ "100%", "100%" ],
@@ -813,16 +785,15 @@
           "anchor_to": "bottom_left",
           "layer": 5,
           "controls": [
-            {
-              "background": {
+            { "background": {
                 "type": "image",
                 "texture": "textures/ui/Black",
                 "size": [ 312, "100%cm" ],
                 "alpha": "$chat_background_opacity",
                 "anims": [
-                  "@cui-hud_screen.anim_chat_bg_wait_bottom",
-                  "@cui-hud_screen.anim_chat_bg_pop",
-                  "@cui-hud_screen.anim_chat_pile_up"
+                  "@cui-anims.anim_chat_bg_wait_bottom",
+                  "@cui-anims.anim_chat_bg_pop",
+                  "@cui-anims.anim_chat_pile_up"
                 ],
                 "controls": [
                   { "text": {
@@ -846,104 +817,7 @@
                           "target_property_name": "#chat_text"
                       }]
                   }}
-                ]
-              }
-            }
-            
+            ]}}
       ]}}
-  ]},
-  "anim_chat_txt_alpha_in": {
-    "anim_type": "alpha",
-    "easing": "in_quart",
-    "duration": 0.3,
-    "from": 0,
-    "to": 1,
-    "next": "@cui-hud_screen.anim_chat_txt_alpha_wait"
-  },
-  "anim_chat_txt_alpha_out": {
-    "anim_type": "alpha",
-    "easing": "in_quart",
-    "duration": 0.5,
-    "from": 1,
-    "to": 0
-  },
-  "anim_chat_txt_alpha_wait": {
-    "anim_type": "wait",
-    "duration": "$chat_item_lifetime",
-    "next": "@cui-hud_screen.anim_chat_txt_alpha_out"
-  },
-  "anim_chat_bg_alpha_out": {
-    "anim_type": "alpha",
-    "easing": "in_quart",
-    "duration": 0.5,
-    "from": "$chat_bg_alpha",
-    "to": 0
-  },
-  "anim_chat_bg_alpha_in": {
-    "anim_type": "alpha",
-    "easing": "in_quart",
-    "duration": 0.3,
-    "from": 0,
-    "to": "$chat_bg_alpha",
-    "next": "@cui-hud_screen.anim_chat_bg_alpha_wait"
-  },
-  "anim_chat_bg_alpha_wait": {
-    "anim_type": "wait",
-    "duration": "$chat_item_lifetime",
-    "next": "@cui-hud_screen.anim_chat_bg_alpha_out"
-  },
-  "anim_chat_bg_pop": {
-    "anim_type": "offset",
-    "easing": "out_expo",
-    "duration": 0.5,
-    "from": [ "-50%", 0 ],
-    "to": [ 0, 0 ],
-    "next": "@cui-hud_screen.anim_chat_bg_wait_push"
-  },
-  "anim_chat_bg_wait_push": {
-    "anim_type": "wait",
-    "duration": "$chat_item_lifetime",
-    "next": "@cui-hud_screen.anim_chat_bg_push"
-  },
-  "anim_chat_bg_push": {
-    "anim_type": "offset",
-    "easing": "in_expo",
-    "duration": 0.5,
-    "from": [ 0, 0 ],
-    "to": [ "-50%", 0 ]
-  },
-  "anim_chat_pile_up": {
-    "anim_type": "size",
-    "easing": "out_expo",
-    "duration": 0.5,
-    "from": [ "100%", 0 ],
-    "to": [ "100%", "100%c" ],
-    "next": "@cui-hud_screen.anim_chat_pile_wait"
-  },
-  "anim_chat_pile_wait": {
-    "anim_type": "wait",
-    "duration": "$chat_item_lifetime",
-    "next": "@cui-hud_screen.anim_chat_pile_down"
-  },
-  "anim_chat_pile_down": {
-    "anim_type": "size",
-    "easing": "out_expo",
-    "duration": 1,
-    "from": [ "100%", "100%c" ],
-    "to": [ "100%", 0 ],
-    "destroy_at_end": "chat_grid_item"
-  },
-  "anim_chat_bg_alpha_bottom": {
-    "anim_type": "alpha",
-    "easing": "in_quart",
-    "destroy_at_end": "chat_text_thing",
-    "duration": 1,
-    "from": "$chat_background_opacity",
-    "to": 0
-  },
-  "anim_chat_bg_wait_bottom": {
-    "anim_type": "wait",
-    "duration": "$chat_item_lifetime",
-    "next": "@cui-hud_screen.anim_chat_bg_alpha_bottom"
-  }
+  ]}
 }

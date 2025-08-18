@@ -237,7 +237,7 @@ cui.about.tab.activeconfigalt=Active Configurations
 cui.about.tab.activeconfig.configname=Config Name
 cui.about.tab.activeconfig.designedversion=Supported version
 
-cui.about.tab.activeconfig.theme=Theme
+cui.about.tab.activeconfig.theme=Themes
 cui.about.tab.activeconfig.primarycolor=Primary Color
 cui.about.tab.activeconfig.secondarycolor=Secondary Color
 cui.about.tab.activeconfig.tertiarycolor=Tertiary Color (Secondary but darker)
@@ -253,7 +253,20 @@ cui.about.tab.activeconfig.overworldcolor=Overworld Color
 cui.about.tab.activeconfig.nethercolor=Nether Color
 cui.about.tab.activeconfig.theendcolor='The End' Color
 
-cui.about.tab.activeconfig.visual=Visual
+cui.about.tab.activeconfig.animation=Animations
+cui.about.tab.activeconfig.buttonanimduration=Button hover fades
+cui.about.tab.activeconfig.chatpiledownduration=Chat piles down
+cui.about.tab.activeconfig.chatpileupduration=Chat piles up
+cui.about.tab.activeconfig.chatpopduration=Chat popping (entering)
+cui.about.tab.activeconfig.chatpushduration=Chat pushing (exiting)
+cui.about.tab.activeconfig.hotbarhighlightduration=Hotbar highlight fades and zooms
+cui.about.tab.activeconfig.hudtooltipsduration=HUD tooltip fades and moves
+cui.about.tab.activeconfig.extramenuduration=Extra menu interaction
+cui.about.tab.activeconfig.playerlistmenuduration=Playerlist menu interaction
+cui.about.tab.activeconfig.backgroundsliderwaitduration=Background slider waits
+cui.about.tab.activeconfig.backgroundsliderduration=Background slider 'sliding'
+
+cui.about.tab.activeconfig.visual=Visuals
 cui.about.tab.activeconfig.shadows=Shadows
 cui.about.tab.activeconfig.fadedprogressBar=Faded Loading bar
 cui.about.tab.activeconfig.exptextshadows=Java Edition Experience bar text

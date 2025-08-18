@@ -37,7 +37,7 @@
   "slider_box": {
     "type": "slider_box",
     "layer": 4,
-    "size": [ 8, 8 ],
+    "size": [ 10, 10 ],
     "anchor_to": "center",
     "anchor_from": "center",
     "default_control": "default",

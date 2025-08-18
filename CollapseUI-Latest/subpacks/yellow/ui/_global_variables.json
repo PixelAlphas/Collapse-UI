@@ -1,6 +1,6 @@
 {
   "$cuigv:ConfigName": "Yellow (Legacy Collapse-UI)",
-  "$cuigv:DesignedVersion": "v4.0",
+  "$cuigv:DesignedVersion": "v5.0.0",
 
   "$cuigv:PrimaryColor": [ 1.0000, 0.7725, 0.0274 ], 
   "$cuigv:SecondaryColor": [ 0.1411, 0.0784, 0.0000 ], 
@@ -25,6 +25,18 @@
   "$cuigv:MoreExperienceDetails": false,
   "$cuigv:AnimatedHotbarSelect": false,
   "$cuigv:AllowColoredExperienceBar": true,
+    
+  "$cuigv:ButtonAnimDuration": 0.1,
+  "$cuigv:ChatPileDownDuration": 1,
+  "$cuigv:ChatPileUpDuration": 0.5,
+  "$cuigv:ChatPopDuration": 0.5,
+  "$cuigv:ChatPushDuration": 0.5,
+  "$cuigv:HotbarHighlightDuration": 0.5,
+  "$cuigv:HudTooltipsDuration": 0.35,
+  "$cuigv:ExtraMenuDuration": 0.4,
+  "$cuigv:PlayerlistMenuDuration": 0.4,
+  "$cuigv:BackgroundSliderWaitDuration": 4,
+  "$cuigv:BackgroundSliderDuration": 1,
   
   "$cuigv:LogoInPauseScreen": true,
   "$cuigv:StartMainButtonClassic": false,

@@ -2,7 +2,7 @@
   // General
   "$cuigv:ConfigName": "Default",
     // Config name — You can change it to anything you want if you wish to customize.
-  "$cuigv:DesignedVersion": "v4.1",
+  "$cuigv:DesignedVersion": "v5.0.0",
     // Designed Version — Config version that supported the UI
   
   // -- README before modifying! --
@@ -22,7 +22,7 @@
   "$cuigv:TertiaryColor": [ 0.1607, 0.1176, 0.2 ], // Color
     // Brighter Background Colors.
   "$cuigv:FontPrimaryColor": [ 1, 1, 1 ], // Color
-    // Overall texts color. (Not fully finished)
+    // Overall texts color.
   "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ], // Color
     // Secondary texts color — it's gray text.
   "$cuigv:BackgroundAlpha": 0.8, // Value
@@ -61,6 +61,30 @@
     // Enable Animation on hothar select/highlight.
   "$cuigv:AllowColoredExperienceBar": true, // Boolean
     // Allow Experience bar and text to be themed with primary and secondary color.
+
+  // ----- ## Animations ## -----
+  "$cuigv:ButtonAnimDuration": 0.1, // Value (Low = Fast, High = Slow)
+    // Change how long should hovering or pressing buttons fade in and out.
+  "$cuigv:ChatPileDownDuration": 1,
+    // Change how long should chat animation where it piles down when it displays a new message.
+  "$cuigv:ChatPileUpDuration": 0.5,
+    // Change how long should chat animation where it piles up when the message should no longer exist. (For bottom chat, when there's new message.)
+  "$cuigv:ChatPopDuration": 0.5,
+    // Change how long should chat animation where it slides a new message.
+  "$cuigv:ChatPushDuration": 0.5,
+    // Change how long should chat animation where it hides a new message.
+  "$cuigv:HotbarHighlightDuration": 0.5,
+    // Change how long should hotbar highlight fade in and out, aswell zoom in and out.
+  "$cuigv:HudTooltipsDuration": 0.35,
+    // Change how long should hud tooltips and actionbar should show up and when to hide.
+  "$cuigv:ExtraMenuDuration": 0.4,
+    // Change how long should extra menu fade in and out whenever user interacts it.
+  "$cuigv:PlayerlistMenuDuration": 0.4,
+    // Change how long should playerlist menu fade in and out whenever user interacts it.
+  "$cuigv:BackgroundSliderWaitDuration": 4,
+    // Change how long should background slider waits before sliding a new background.
+  "$cuigv:BackgroundSliderDuration": 1,
+    // Change how long should background sliders after finishing waiting.
 
   // ----- ## Layouts ## -----
   "$cuigv:LogoInPauseScreen": true,

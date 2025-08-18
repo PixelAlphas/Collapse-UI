@@ -1,6 +1,6 @@
 {
   "$cuigv:ConfigName": "Light blue",
-  "$cuigv:DesignedVersion": "v4.0",
+  "$cuigv:DesignedVersion": "v5.0.0",
 
   "$cuigv:PrimaryColor": [ 0.0000, 0.6235, 0.8745 ], 
   "$cuigv:SecondaryColor": [ 0.0000, 0.1098, 0.1568 ], 
@@ -25,6 +25,18 @@
   "$cuigv:MoreExperienceDetails": false,
   "$cuigv:AnimatedHotbarSelect": false,
   "$cuigv:AllowColoredExperienceBar": true,
+    
+  "$cuigv:ButtonAnimDuration": 0.1,
+  "$cuigv:ChatPileDownDuration": 1,
+  "$cuigv:ChatPileUpDuration": 0.5,
+  "$cuigv:ChatPopDuration": 0.5,
+  "$cuigv:ChatPushDuration": 0.5,
+  "$cuigv:HotbarHighlightDuration": 0.5,
+  "$cuigv:HudTooltipsDuration": 0.35,
+  "$cuigv:ExtraMenuDuration": 0.4,
+  "$cuigv:PlayerlistMenuDuration": 0.4,
+  "$cuigv:BackgroundSliderWaitDuration": 4,
+  "$cuigv:BackgroundSliderDuration": 1,
   
   "$cuigv:LogoInPauseScreen": true,
   "$cuigv:StartMainButtonClassic": false,

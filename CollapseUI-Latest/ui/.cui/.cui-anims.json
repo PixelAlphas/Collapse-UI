@@ -1,26 +1,111 @@
 { "namespace": "cui-anims",
+  // Hotbar Selected Anims
+  "hotbar_slot_selected_anim_size_selected": {
+    "anim_type": "size",
+    "easing": "out_quart",
+    "duration": "$cuigv:HotbarHighlightDuration",
+    "from": [ 32, 32 ],
+    "to": [ 24, 24 ]
+  },
+  "hotbar_slot_selected_anim_size_unselected": {
+    "anim_type": "size",
+    "easing": "in_quart",
+    "duration": "$cuigv:HotbarHighlightDuration",
+    "from": [ 24, 24 ],
+    "to": [ 32, 32 ]
+  },
+  "hotbar_slot_selected_anim_alpha_selected": {
+    "anim_type": "alpha",
+    "easing": "out_quart",
+    "duration": "$cuigv:HotbarHighlightDuration",
+    "from": 0,
+    "to": 1
+  },
+  "hotbar_slot_selected_anim_alpha_unselected": {
+    "anim_type": "alpha",
+    "easing": "out_quart",
+    "duration": "$cuigv:HotbarHighlightDuration",
+    "from": 1,
+    "to": 0,
+    "destroy_at_end": "hotbar_slot_selected_image"
+  },
+  // Hud Chat Anims + Bottom Chat
+  "anim_chat_bg_pop": {
+    "anim_type": "offset",
+    "easing": "out_expo",
+    "duration": "$cuigv:ChatPopDuration",
+    "from": [ "-50%", 0 ],
+    "to": [ 0, 0 ],
+    "next": "@cui-anims.anim_chat_bg_wait_push"
+  },
+  "anim_chat_bg_wait_push": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@cui-anims.anim_chat_bg_push"
+  },
+  "anim_chat_bg_push": {
+    "anim_type": "offset",
+    "easing": "in_expo",
+    "duration": "$cuigv:ChatPushDuration",
+    "from": [ 0, 0 ],
+    "to": [ "-50%", 0 ]
+  },
+  "anim_chat_pile_up": {
+    "anim_type": "size",
+    "easing": "out_expo",
+    "duration": "$cuigv:ChatPileUpDuration",
+    "from": [ "100%", 0 ],
+    "to": [ "100%", "100%c" ],
+    "next": "@cui-anims.anim_chat_pile_wait"
+  },
+  "anim_chat_pile_wait": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@cui-anims.anim_chat_pile_down"
+  },
+  "anim_chat_pile_down": {
+    "anim_type": "size",
+    "easing": "out_expo",
+    "duration": "$cuigv:ChatPileDownDuration",
+    "from": [ "100%", "100%c" ],
+    "to": [ "100%", 0 ],
+    "destroy_at_end": "chat_grid_item"
+  },
+  "anim_chat_bg_alpha_bottom": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "destroy_at_end": "chat_text_thing",
+    "duration": "$cuigv:ChatPileDownDuration",
+    "from": "$chat_background_opacity",
+    "to": 0
+  },
+  "anim_chat_bg_wait_bottom": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@cui-anims.anim_chat_bg_alpha_bottom"
+  },
   // Button Anims
   "button_anim_color": {
     "anim_type": "color",
-    "duration": 0.1,
+    "duration": "$cuigv:ButtonAnimDuration",
     "from": "$cuiv-anim:color_in",
     "to": "$cuiv-anim:color_out"
   },
   "button_anim_color_reverse": {
     "anim_type": "color",
-    "duration": 0.1,
+    "duration": "$cuigv:ButtonAnimDuration",
     "from": "$cuiv-anim:color_out",
     "to": "$cuiv-anim:color_in"
   },
   "button_anim_alpha": {
     "anim_type": "alpha",
-    "duration": 0.1,
+    "duration": "$cuigv:ButtonAnimDuration",
     "from": "$cuiv-anim:alpha_in",
     "to": "$cuiv-anim:alpha_out"
   },
   "button_anim_alpha_reverse": {
     "anim_type": "alpha",
-    "duration": 0.1,
+    "duration": "$cuigv:ButtonAnimDuration",
     "from": "$cuiv-anim:alpha_out",
     "to": "$cuiv-anim:alpha_in"
   },
@@ -28,21 +113,21 @@
   "hud_tooltip_item": {
 		"anim_type": "offset",
 		"easing": "out_expo",
-		"duration": 0.35,
+		"duration": "$cuigv:HudTooltipsDuration",
 		"from": [  0, -8 ],
 		"to": [  0, -14 ]
 	},
   "hud_tooltip_tip": {
 		"anim_type": "offset",
 		"easing": "out_expo",
-		"duration": 0.35,
+		"duration": "$cuigv:HudTooltipsDuration",
 		"from": [  0, "50%-65px"], 
 		"to": [  0, "50%-70px"]
 	},
 	"hud_tooltip_alpha": {
 		"anim_type": "alpha",
 		"easing": "out_circ",
-		"duration": 0.35,
+		"duration": "$cuigv:HudTooltipsDuration",
 		"from": 0.0,
 		"to": 1
 	},
@@ -213,63 +298,63 @@
     "anim_type": "offset",
     "from": [ 0, 100 ],
     "to": [ 0, -30 ],
-    "duration": 0.4,
+    "duration": "$cuigv:ExtraMenuDuration",
     "easing": "out_cubic"
   },
   "extra_anims_offset_exit": {
     "anim_type": "offset",
     "from": [ 0, -30 ],
     "to": [ 0, 100 ],
-    "duration": 0.4,
+    "duration": "$cuigv:ExtraMenuDuration",
     "easing": "in_cubic"
   },
   "event_anims_offset": {
     "anim_type": "offset",
     "from": [ 0, 55 ],
     "to": [ 0, -75 ],
-    "duration": 0.4,
+    "duration": "$cuigv:ExtraMenuDuration",
     "easing": "out_cubic"
   },
   "event_anims_offset_exit": {
     "anim_type": "offset",
     "from": [ 0, -75 ],
     "to": [ 0, 55 ],
-    "duration": 0.4,
+    "duration": "$cuigv:ExtraMenuDuration",
     "easing": "in_cubic"
   },
   "extra_anims_offset_title": {
     "anim_type": "offset",
     "from": [ -180, 4 ],
     "to": [ 14, 4 ],
-    "duration": 0.4,
+    "duration": "$cuigv:ExtraMenuDuration",
     "easing": "out_cubic"
   },
   "extra_anims_offset_title_exit": {
     "anim_type": "offset",
     "from": [ 14, 4 ],
     "to": [ -180, 4 ],
-    "duration": 0.4,
+    "duration": "$cuigv:ExtraMenuDuration",
     "easing": "in_cubic"
   },
   "extra_anims_offset_info": {
     "anim_type": "offset",
     "from": [ -180, 40 ],
     "to": [ 14, 40 ],
-    "duration": 0.4,
+    "duration": "$cuigv:ExtraMenuDuration",
     "easing": "out_cubic"
   },
   "extra_anims_offset_info_exit": {
     "anim_type": "offset",
     "from": [ 14, 40 ],
     "to": [ -180, 40 ],
-    "duration": 0.4,
+    "duration": "$cuigv:ExtraMenuDuration",
     "easing": "in_cubic"
   },
   "extra_anims_alpha": {
     "anim_type": "alpha",
     "from": 0,
     "to": 0.6,
-    "duration": 0.4
+    "duration": "$cuigv:ExtraMenuDuration"
   },
   "extra_anims_alpha_exit": {
     "anim_type": "alpha",
@@ -277,43 +362,26 @@
     "to": 0,
     "$cuiv:destroy_at_end|default": "extra_element_out",
     "destroy_at_end": "$cuiv:destroy_at_end",
-    "duration": 0.4
+    "duration": "$cuigv:ExtraMenuDuration"
   },
   // Pause Playerlist Anims
   "playerlist_anims_offset": {
     "anim_type": "offset",
     "from": [ 180, 0 ],
     "to": [ -4, 0 ],
-    "duration": 0.4,
+    "duration": "$cuigv:PlayerlistMenuDuration",
     "easing": "out_cubic"
   },
   "playerlist_anims_offset_exit": {
     "anim_type": "offset",
     "from": [ -4, 0 ],
     "to": [ 180, 0 ],
-    "duration": 0.4,
+    "duration": "$cuigv:PlayerlistMenuDuration",
     "$cuiv:destroy_at_end|default": "playerlist_element_out",
     "destroy_at_end": "$cuiv:destroy_at_end",
     "easing": "in_cubic"
   },
-  
-  "test_00": {
-    "anim_type": "offset",
-    "from": [ -10, 0 ],
-    "to": [ 0, 0 ],
-    "duration": 0.4,
-    "easing": "out_cubic",
-    "next": "@cui-anims.test_01"
-  },
-  "test_01": {
-    "anim_type": "offset",
-    "from": [ 0, 0 ],
-    "to": [ -10, 0 ],
-    "duration": 0.4,
-    "easing": "in_cubic",
-    "next": "@cui-anims.test_00"
-  },
-  // Unused
+  // Menu Slider
   "background_slider_load": {
     "anim_type": "alpha",
     "duration": "$cuiv:background_slider_anim_duration",
@@ -347,5 +415,23 @@
     "anim_type": "wait",
     "duration": "$cuiv:background_slider_anim_max",
     "next": "@cui-anims.background_slider"
+  },
+
+  // Unused
+  "test_00": {
+    "anim_type": "offset",
+    "from": [ -10, 0 ],
+    "to": [ 0, 0 ],
+    "duration": 0.4,
+    "easing": "out_cubic",
+    "next": "@cui-anims.test_01"
+  },
+  "test_01": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ -10, 0 ],
+    "duration": 0.4,
+    "easing": "in_cubic",
+    "next": "@cui-anims.test_00"
   }
 }
