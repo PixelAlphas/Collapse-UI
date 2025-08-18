@@ -288,7 +288,7 @@
           "anchor_to": "right_middle",
           "text": "#text",
 					"property_bag": {
-						"#test": 0.25
+						"#test": "$cuiv:config_duration"
 					},
           "bindings": [
 						{ "binding_type": "global",
