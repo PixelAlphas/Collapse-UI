@@ -1,0 +1,137 @@
+{ "namespace": "cui-about_screen",
+  "root_contents": {
+    "type": "panel",
+    "controls": [
+      { "@cui-about_screen.tab_element": { "layer": 10 }},
+      { "@cui-about_screen.about_screen_panel": {}}
+  ]},
+  "about_screen_panel": {
+    "type": "panel",
+    "size": [ "100% - 85px", "100%" ],
+    "offset": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "$cuiv-anim:pos_from": [ "25%", 0 ],
+    "$cuiv-anim:pos_to": [ 0, 0 ],
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
+    "controls": [
+      { "tab_content_panel@cui-about_screen.tab_content_element": { "layer": 2 }}
+  ]},
+  "tab_element": {
+    "type": "panel",
+    "controls": [
+      { "@cui-common.title_core": {
+          "$cuiv:title_text": "cui.about.title"
+      }},
+      { "tabs_element": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 40 ],
+          "offset": [ -14, 4 ],
+          "layer": 1,
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$cuiv-anim:pos_from": [ -14, -50 ],
+          "$cuiv-anim:pos_to": [ -14, 4 ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ],
+          "controls": [
+            { "gamepad_tooltip_lb@cui-gamepad.gamepad_tooltip_lb": {}},
+            { "about_navigation_tab@cui-about_screen.about_tab": { "size": [ 65, 28 ]}},
+            { "paddings_01": { "type": "panel", "size": [ 2, 1 ]}},
+            { "activeconfig_navigation_tab@cui-about_screen.activeconfig_tab": { "size": [ 65, 28 ]}},
+            { "paddings_02": { "type": "panel", "size": [ 2, 1 ]}},
+            { "credits_navigation_tab@cui-about_screen.credits_tab": { "size": [ 65, 28 ]}},
+            { "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip_rb": {}}
+      ]}}
+  ]},
+  "general_scroll_contents": {
+    "type": "input_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "focus_container": true,
+    "use_last_focus": true,
+    "$cuiv-anim:pos_from": [ "-30%", 0 ],
+    "$cuiv-anim:pos_to": [ 0, 0 ],
+    "focus_navigation_mode_down": "contained",
+    "focus_navigation_mode_up": "contained",
+    "focus_navigation_mode_right": "contained",
+    "focus_navigation_mode_left": "contained",
+    "controls": [
+      { "scrolling_panel@cui-play_screen.common_scrolling_panel": {
+          "size": [ "100% - 4px", "100% - 4px" ],
+          "offset": [ 2, 2 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 1,
+          "$scrolling_content|default": "cui-play_screen.test_scroll_panel"
+      }}
+  ]},
+  "tab_content_element": {
+    "type": "input_panel",
+    "size": [ "100%", "100%" ],
+    "ttsSectionContainer": true,
+    "controls": [
+      { "about_tab_content@cui-about_screen.about_tab_content_panel": {} },
+      { "activeconfig_tab_content@cui-about_screen.activeconfig_tab_content_panel": {} },
+      { "credits_tab_content@cui-about_screen.credits_tab_content_panel": {} }
+  ]},
+  "about_tab_content_panel@cui-play_screen.common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "about_navigation",
+    "$scroll_tab_content": "cui-about_section.root_contents"
+  },
+  "activeconfig_tab_content_panel@cui-play_screen.common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "activeconfig_navigation",
+    "$scroll_tab_content": "cui-activeconfig_section.root_contents"
+  },
+  "credits_tab_content_panel@cui-play_screen.common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "credits_navigation",
+    "$scroll_tab_content": "cui-credits_section.root_contents"
+  },
+  "adv_tab_content": {
+    "type": "panel",
+    "controls": [
+      { "text_section": {
+          "type": "panel",
+          "controls": [
+            { "label": {
+                "type": "label",
+                "shadow": false,
+                "layer": 3,
+                "font_type": "dainbold",
+                "font_scale_factor": 1,
+                "color": "$text_color",
+                "text": "$cuiv:tab_name",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 2, -2 ]
+            }}
+      ]}}
+  ]},
+  "top_tab@cui-play_screen.top_tab": {
+    "$cuiv:tab_content": "cui-about_screen.adv_tab_content"
+  },
+  "about_tab@cui-about_screen.top_tab": {
+    "$tab_view_binding_name": "about_navigation",
+    "$cuiv:tab_name": "cui.about.tab.about",
+    "$toggle_group_forced_index": 0
+  },
+  "activeconfig_tab@cui-about_screen.top_tab": {
+    "$tab_view_binding_name": "activeconfig_navigation",
+    "$cuiv:tab_name": "cui.about.tab.activeconfig",
+    "$toggle_group_forced_index": 1
+  },
+  "credits_tab@cui-about_screen.top_tab": {
+    "$tab_view_binding_name": "credits_navigation",
+    "$cuiv:tab_name": "cui.about.tab.credit",
+    "$toggle_group_forced_index": 2
+}}

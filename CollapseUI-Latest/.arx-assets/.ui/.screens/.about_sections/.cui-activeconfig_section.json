@@ -1,0 +1,430 @@
+{ "namespace": "cui-activeconfig_section",
+  "root_contents": {
+    "type": "panel",
+    "$scrolling_content": "cui-activeconfig_section.core_element",
+    "controls": [
+      { "@cui-play_screen.general_scroll_contents": {}}
+  ]},
+  "core_element": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "use_child_anchors": true,
+    "controls": [
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.activeconfigalt"
+      }},
+      { "padding00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-activeconfig_section.config_version",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding01": { "type": "panel", "size": [ 1, 10 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.activeconfig.theme"
+      }},
+      { "padding02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-activeconfig_section.config_theme",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding03": { "type": "panel", "size": [ 1, 10 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.activeconfig.visual"
+      }},
+      { "padding04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-activeconfig_section.config_visual",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding05": { "type": "panel", "size": [ 1, 10 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.activeconfig.animation"
+      }},
+      { "padding06": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-activeconfig_section.config_animation",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding07": { "type": "panel", "size": [ 1, 10 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.activeconfig.layout"
+      }},
+      { "padding08": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-activeconfig_section.config_layout",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding09": { "type": "panel", "size": [ 1, 10 ]}}
+  ]},
+  "config_version@cui-about_section.element_stack_template": {
+    "controls": [
+      { "build_release@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.configname",
+          "$cuiv:about_text_gray": "$cuigv:ConfigName"
+      }},
+      { "branch@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.designedversion",
+          "$cuiv:about_text_gray": "$cuigv:DesignedVersion"
+      }}
+  ]},
+  "config_theme@cui-about_section.element_stack_template": {
+    "controls": [
+      { "config_theme_01@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.primarycolor",
+          "$cuiv:config_color": "$cuigv:PrimaryColor"
+      }},
+      { "config_theme_02@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.secondarycolor",
+          "$cuiv:config_color": "$cuigv:SecondaryColor"
+      }},
+      { "config_theme_021@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.tertiarycolor",
+          "$cuiv:config_color": "$cuigv:TertiaryColor"
+      }},
+      { "config_theme_03@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.fontprimarycolor",
+          "$cuiv:config_color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_theme_04@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.fontsecondarycolor",
+          "$cuiv:config_color": "$cuigv:FontSecondaryColor"
+      }},
+      { "config_theme_05@cui-activeconfig_section.config_alpha": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundalpha",
+          "$cuiv:config_alpha": "$cuigv:BackgroundAlpha"
+      }},
+      { "config_theme_06@cui-activeconfig_section.config_alpha": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.buttonalpha",
+          "$cuiv:config_alpha": "$cuigv:ButtonAlpha"
+      }},
+      { "config_theme_07@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.uibackground",
+          "$cuiv:config_value": "$cuigv:UIBackground"
+      }},
+      { "config_theme_08@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.uibackgroundslider",
+          "$cuiv:config_value": "$cuigv:UIBackgroundSlider"
+      }},
+      { "config_theme_09@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradientprimarycolor",
+          "$cuiv:config_color": "$cuigv:BackgroundGradientPrimaryColor"
+      }},
+      { "config_theme_10@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradientsecondarycolor",
+          "$cuiv:config_color": "$cuigv:BackgroundGradientSecondaryColor"
+      }},
+      { "config_theme_11@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.overworldcolor",
+          "$cuiv:config_color": "$cuigv:OverworldColor"
+      }},
+      { "config_theme_12@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.nethercolor",
+          "$cuiv:config_color": "$cuigv:NetherColor"
+      }},
+      { "config_theme_13@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.theendcolor",
+          "$cuiv:config_color": "$cuigv:TheEndColor"
+      }}
+  ]},
+  "config_visual@cui-about_section.element_stack_template": {
+    "controls": [
+      { "config_visual_01@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.shadows",
+          "$cuiv:config_value": "$cuigv:Shadows"
+      }},
+      { "config_visual_02@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.fadedprogressBar",
+          "$cuiv:config_value": "$cuigv:FadedProgressBar"
+      }},
+      { "config_visual_03@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.exptextshadows",
+          "$cuiv:config_value": "$cuigv:ExperienceTextShadows"
+      }},
+      { "config_visual_04@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradient",
+          "$cuiv:config_value": "$cuigv:BackgroundGradient"
+      }},
+      { "config_visual_05@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.uianimations",
+          "$cuiv:config_value": "$cuigv:UIAnimations"
+      }},
+      { "config_visual_06@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.moreexperiencedetails",
+          "$cuiv:config_value": "$cuigv:MoreExperienceDetails"
+      }},
+      { "config_visual_07@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.animatedhotbarselect",
+          "$cuiv:config_value": "$cuigv:AnimatedHotbarSelect"
+      }},
+      { "config_visual_08@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.allowcoloredexperiencebar",
+          "$cuiv:config_value": "$cuigv:AllowColoredExperienceBar"
+      }}
+  ]},
+  "config_layout@cui-about_section.element_stack_template": {
+    "controls": [
+      { "config_layout_01@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.searchboxsystem",
+          "$cuiv:config_value": "$cuigv:SearchBoxSystem"
+      }},
+      { "config_layout_02@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.oldsliderdesign",
+          "$cuiv:config_value": "$cuigv:HorizontalSlider"
+      }},
+      { "config_layout_03@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.vanillapaperdoll",
+          "$cuiv:config_value": "$cuigv:VanillaPaperdoll"
+      }},
+      { "config_layout_04@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.nogamelogo",
+          "$cuiv:config_value": "$cuigv:NoGameLogo"
+      }},
+      { "config_layout_05@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.norealmspromoteinworldsection",
+          "$cuiv:config_value": "$cuigv:NoRealmsPromoteInWorldSection"
+      }},
+      { "config_layout_06@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.startmenubuttonclassic",
+          "$cuiv:config_value": "$cuigv:StartMainButtonClassic"
+      }},
+      { "config_layout_07@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.logoinpausescreen",
+          "$cuiv:config_value": "$cuigv:LogoInPauseScreen"
+      }},
+      { "config_layout_08@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.lowmemory",
+          "$cuiv:config_value": "$cuigv:LowMemory"
+      }}
+  ]},
+	"config_animation@cui-about_section.element_stack_template": {
+    "controls": [
+      { "config_animation_01@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.buttonanimduration",
+          "$cuiv:config_duration": "$cuigv:ButtonAnimDuration"
+      }},
+      { "config_animation_02@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.chatpiledownduration",
+          "$cuiv:config_duration": "$cuigv:ChatPileDownDuration"
+      }},
+      { "config_animation_03@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.chatpileupduration",
+          "$cuiv:config_duration": "$cuigv:ChatPileUpDuration"
+      }},
+      { "config_animation_04@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.chatpopduration",
+          "$cuiv:config_duration": "$cuigv:ChatPopDuration"
+      }},
+      { "config_animation_05@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.chatpushduration",
+          "$cuiv:config_duration": "$cuigv:ChatPushDuration"
+      }},
+      { "config_animation_06@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.hotbarhighlightduration",
+          "$cuiv:config_duration": "$cuigv:HotbarHighlightDuration"
+      }},
+      { "config_animation_07@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.hudtooltipsduration",
+          "$cuiv:config_duration": "$cuigv:HudTooltipsDuration"
+      }},
+      { "config_animation_08@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.extramenuduration",
+          "$cuiv:config_duration": "$cuigv:ExtraMenuDuration"
+      }},
+      { "config_animation_09@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.playerlistmenuduration",
+          "$cuiv:config_duration": "$cuigv:PlayerlistMenuDuration"
+      }},
+      { "config_animation_10@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundsliderwaitduration",
+          "$cuiv:config_duration": "$cuigv:BackgroundSliderWaitDuration"
+      }},
+      { "config_animation_11@cui-activeconfig_section.config_duration": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundsliderduration",
+          "$cuiv:config_duration": "$cuigv:BackgroundSliderDuration"
+      }}
+  ]},
+  "config_label": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:config_text|default": "",
+    "$cuiv:config_value|default": "",
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_value": {
+          "type": "label",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "text": "$cuiv:config_value_result",
+          "color": "$cuigv:FontSecondaryColor",
+          "$cuiv:config_value_result|default": "Invaild...",
+          "variables": [
+            { "requires": "($cuiv:config_value)", "$cuiv:config_value_result": "cui.about.tab.enabled" },
+            { "requires": "(not $cuiv:config_value)", "$cuiv:config_value_result": "cui.about.tab.disabled" }
+      ]}}
+  ]},
+	"config_duration": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:config_text|default": "",
+    "$cuiv:config_duration|default": "",
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "text": "#text",
+					"property_bag": {
+						"#test": "$cuiv:config_duration"
+					},
+          "bindings": [
+						{ "binding_type": "global",
+							"binding_name": "#null"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(100 * (#test) + 1)",
+							"target_property_name": "#epbl"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(#epbl - #epcl1)",
+							"target_property_name": "#epbl1"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(#epbl1 - #epcl2)",
+							"target_property_name": "#epbl2"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(#epbl2 - #epcl3)",
+							"target_property_name": "#epbl3"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(1000 * ((#epbl > 1000) + (#epbl > 2000) + (#epbl > 3000) + (#epbl > 4000) + (#epbl > 5000) + (#epbl > 6000) + (#epbl > 7000) + (#epbl > 8000) + (#epbl > 9000)))",
+							"target_property_name": "#epcl1"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(100 * ((#epbl1 > 100) + (#epbl1 > 200) + (#epbl1 > 300) + (#epbl1 > 400) + (#epbl1 > 500) + (#epbl1 > 600) + (#epbl1 > 700) + (#epbl1 > 800) + (#epbl1 > 900)))",
+							"target_property_name": "#epcl2"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(10 * ((#epbl2 > 10) + (#epbl2 > 20) + (#epbl2 > 30) + (#epbl2 > 40) + (#epbl2 > 50) + (#epbl2 > 60) + (#epbl2 > 70) + (#epbl2 > 80) + (#epbl2 > 90)))",
+							"target_property_name": "#epcl3"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(1 * ((#epbl3 > 1) + (#epbl3 > 2) + (#epbl3 > 3) + (#epbl3 > 4) + (#epbl3 > 5) + (#epbl3 > 6) + (#epbl3 > 7) + (#epbl3 > 8) + (#epbl3 > 9)))",
+							"target_property_name": "#epcl4"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(#epcl3 + #epcl4)",
+							"target_property_name": "#finalc"
+						},
+						{ "binding_type": "view", // actual worst thing i ever done but im in a hurry so lmao
+							"source_property_name": "('§z' + (#epcl1 + #epcl2) - '00')",
+							"target_property_name": "#epcl1s"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "('§z' + #epcl1s + '.' + #finalc + ' Second§7(s)')",
+							"target_property_name": "#text"
+					}]
+      }}
+  ]},
+  "config_alpha": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:config_text|default": "",
+    "$cuiv:config_alpha|default": "",
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "text": "#text",
+					"property_bag": {
+						"#test": "$cuiv:config_alpha"
+					},
+          "bindings": [
+						{ "binding_type": "global",
+							"binding_name": "#null"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(100 * (#test) + 1)",
+							"target_property_name": "#epbl"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(#epbl - #epcl1)",
+							"target_property_name": "#epbl1"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(#epbl1 - #epcl2)",
+							"target_property_name": "#epbl2"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(100 * ((#epbl > 100) + (#epbl > 200) + (#epbl > 300) + (#epbl > 400) + (#epbl > 500) + (#epbl > 600) + (#epbl > 700) + (#epbl > 800) + (#epbl > 900)))",
+							"target_property_name": "#epcl1"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(10 * ((#epbl1 > 10) + (#epbl1 > 20) + (#epbl1 > 30) + (#epbl1 > 40) + (#epbl1 > 50) + (#epbl1 > 60) + (#epbl1 > 70) + (#epbl1 > 80) + (#epbl1 > 90)))",
+							"target_property_name": "#epcl2"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(1 * ((#epbl2 > 1) + (#epbl2 > 2) + (#epbl2 > 3) + (#epbl2 > 4) + (#epbl2 > 5) + (#epbl2 > 6) + (#epbl2 > 7) + (#epbl2 > 8) + (#epbl2 > 9)))",
+							"target_property_name": "#epcl3"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "(#epcl2 + #epcl3)",
+							"target_property_name": "#finalc"
+						},
+						{ "binding_type": "view", // actual worst thing i ever done but im in a hurry so lmao
+							"source_property_name": "(('§z' + #epcl1) - '00')",
+							"target_property_name": "#epcl1s"
+						},
+						{ "binding_type": "view",
+							"source_property_name": "('§z' + #epcl1s + '.' + #finalc + '§7 (' + (#epcl1 + #finalc) + '%%)')",
+							"target_property_name": "#text"
+					}]
+      }}
+  ]},
+  "config_color": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:config_text|default": "",
+    "$cuiv:config_color|default": "",
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 1,
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_color": {
+          "type": "image",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "size": [ 14, 14 ],
+          "layer": 1,
+          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "color": "$cuiv:config_color"
+      }}
+  ]}
+}

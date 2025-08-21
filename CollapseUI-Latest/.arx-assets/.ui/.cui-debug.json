@@ -1,0 +1,148 @@
+{ "namespace": "cui-debug",
+  "background_label": {
+    "type": "image",
+    "texture": "textures/ui/White",
+    "alpha": 0.7,
+    "color": "$cuigv:SecondaryColor",
+    "size": [ "100%c + 6px", "100%c + 2px" ],
+    "$cuiv:bl_label|default": "nan",
+    "$cuiv:bl_color|default": [],
+    "$cuiv:bl_bindings|default": [],
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "text": "$cuiv:bl_label",
+          "color": "$cuiv:bl_color",
+          "bindings": "$cuiv:bl_bindings"
+        }
+      }
+    ]
+  },
+  "enable_menu": {
+    "type": "panel",
+    "$cuiv:debug_screen|default": "Unknown",
+    "controls": [
+      {
+        "toggle@common_toggles.light_text_toggle": {
+          "size": [ 40, 20 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, 4 ],
+          "$button_text": "Debug",
+          "$toggle_view_binding_name": "cuidebugmode-toggle",
+          "$toggle_name": "cuidebugmode"
+        }
+      },
+      {
+        "debug_left_status": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%c", "100%c" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 4, 4 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "cuidebugmode-toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "corelabel00@background_label": {
+                "$cuiv:bl_label": "CUI:Rewrite Debug Mode"
+              }
+            },
+            {
+              "corelabel01@background_label": {
+                "$cuiv:bl_label": "#modified_text",
+                "$cuiv:bl_bindings": [
+                  { "binding_name": "#version" },
+                  { "binding_type": "view",
+                    "source_property_name": "('Game version - §a' + #version)",
+                    "target_property_name": "#modified_text"
+                  }
+                ]
+              }
+            },
+            {
+              "corelabel02@background_label": {
+                "$cuiv:bl_label": "('Screen: §5' + $cuiv:debug_screen)"
+              }
+            },
+            {
+              "corelabel03@background_label": {
+                "$cuiv:bl_label": "('Config Name: §6' + $cuigv:ConfigName)"
+              }
+            },
+            {
+              "corelabel04@background_label": {
+                "$cuiv:bl_label": "('Config Ver: §6' + $cuigv:DesignedVersion)"
+              }
+            },
+            {
+              "padding00": {
+                "type": "panel",
+                "size": [ 10, 10 ]
+              }
+            },
+            {
+              "themevarlabel00@background_label": {
+                "$cuiv:bl_label": "§7// Theme //"
+              }
+            },
+            {
+              "themevarlabel01@background_label": {
+                "$cuiv:bl_label": "§fPrimaryColor: §r######",
+                "$cuiv:bl_color": "$cuigv:PrimaryColor"
+              }
+            },
+            {
+              "themevarlabel02@background_label": {
+                "$cuiv:bl_label": "§fSecondaryColor: §r######",
+                "$cuiv:bl_color": "$cuigv:SecondaryColor"
+              }
+            },
+            {
+              "themevarlabel03@background_label": {
+                "$cuiv:bl_label": "§fFontPrimaryColor: §r######",
+                "$cuiv:bl_color": "$cuigv:FontPrimaryColor"
+              }
+            },
+            {
+              "themevarlabel04@background_label": {
+                "$cuiv:bl_label": "§fFontSecondaryColor: §r######",
+                "$cuiv:bl_color": "$cuigv:FontSecondaryColor"
+              }
+            },
+            {
+              "themevarlabel05@background_label": {
+                "$cuiv:bl_label": "('BackgroundAlpha: §7' + '0.7')"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "background": {
+          "type": "image",
+          "size": [ "200%", "200%" ],
+          "texture": "textures/ui/Black",
+          "alpha": 0.4,
+          "layer": -90,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "cuidebugmode-toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

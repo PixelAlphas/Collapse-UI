@@ -1,0 +1,92 @@
+{ "namespace": "cui-death_screen",
+  "root_contents": {
+    "type": "panel",
+    "controls": [
+      { "@death_element": {}},
+      { "@main_button": {}}
+  ]},
+  "death_element": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c"],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 14, 14 ],
+    "controls": [
+      { "death_label": {
+          "type": "label",
+          "font_type": "dainbold",
+          "font_size": "large",
+          "color": "$death_text_color",
+          "offset": [ 14, 14 ],
+          "text": "deathScreen.message"
+      }},
+      { "death_reason_label": {
+          "type": "label",
+          "color": "$death_text_color",
+          "text": "#death_reason_text",
+          "offset": [ 0, 15 ],
+          "bindings": [
+            { "binding_name": "#death_reason_text"}
+      ]}}
+  ]},
+  "death_label": {
+    "controls": [
+      { "death_reason_label": {
+          "type": "label",
+          "color": "$death_text_color",
+          "text": "#death_reason_text",
+          "offset": [ 0, 15 ],
+          "bindings": [
+            { "binding_name": "#death_reason_text"}
+      ]}}
+  ]},
+  "main_button": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 145, "100%c" ],
+    "offset": [ 14, 0 ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      { "respawn@cui-button.text_button": {
+          "size": [ 145, 22 ],
+          "$cuiv:button_type_panel": "cui-start_screen.button_label",
+          "$cuiv:default_button_texture": "",
+          "$cuiv:hover_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
+          "$cuiv:hover_button_color": [ 1, 0.8627, 0 ],
+          "$cuiv:pressed_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
+          "$cuiv:pressed_button_color": [ 1, 0.8627, 0 ],
+          "$cuiv:button_text": "deathScreen.respawn",
+          "$pressed_button_name": "button.respawn_button",
+          "bindings": [
+            { "binding_name": "#respawn_enabled",
+              "binding_name_override": "#enabled"
+            },
+            { "binding_name": "#respawn_visible",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "exit@cui-button.text_button": {
+          "size": [ 145, 22 ],
+          "$cuiv:button_type_panel": "cui-start_screen.button_label",
+          "$cuiv:default_button_texture": "",
+          "$cuiv:hover_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
+          "$cuiv:hover_button_color": [ 1, 0.8627, 0 ],
+          "$cuiv:pressed_button_texture": "textures/ui/.cui-assets/.buttons/main_button",
+          "$cuiv:pressed_button_color": [ 1, 0.8627, 0 ],
+          "$cuiv:button_text": "deathScreen.quit",
+          "$pressed_button_name": "button.main_menu_button",
+          "variables": [
+            { "requires": "$is_secondary_client",
+              "$cuiv:button_text": "deathScreen.quit.secondaryClient"
+          }],
+          "bindings": [
+            { "binding_name": "#quit_enabled",
+              "binding_name_override": "#enabled"
+            },
+            { "binding_name": "#quit_visible",
+              "binding_name_override": "#visible"
+          }]
+      }}
+]}}
