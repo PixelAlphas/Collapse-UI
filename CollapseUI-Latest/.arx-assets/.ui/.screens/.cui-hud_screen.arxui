@@ -564,6 +564,7 @@
   ]},
   
   "player_list": {
+    "ignored": "(not $cuigv:PlayerListTab)",
     "type": "button",
     "size": [ "100%", "100%" ],
     "default_control": "default",

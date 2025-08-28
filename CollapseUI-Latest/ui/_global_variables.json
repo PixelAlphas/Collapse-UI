@@ -105,7 +105,11 @@
     // Make the slider into horizontal instead vertical. ( Old slider design returns )
   "$cuigv:LowMemory": false, // Boolean
     // Reduce loading time aswell remove several things that is not needed.
-  
+  "$cuigv:OptimizedSettings": true, // Boolean
+    // Optimize the settings by not pre-load every section, this loads setting *alot* faster but comes with a cost of stutter when selecting sections.
+  "$cuigv:PlayerListTab": false, // Boolean
+    // Enable Playerlist Tab ingame.
+    
   // ----- ## Unused - Will do nothing. ## -----
   "$cuigv:OriginUI": true, // Boolean
   "$cuigv:DebugElement": false, // Boolean

@@ -2,6 +2,44 @@
   "video_section": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
+    "use_child_anchors": true,
+    "controls": [
+      { "optimized": {
+          "ignored": "(not $cuigv:OptimizedSettings)",
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "factory": { "name": "video_section", "control_name": "cui-ss_video.core_section" },
+          "use_child_anchors": true,
+          "property_bag": {
+            "#toggle_state": false
+          },
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "video_button_toggle",
+              "source_property_name": "(#toggle_state * 1)",
+              "target_property_name": "#collection_length"
+          }]
+      }},
+      { "vanilla@core_section": {
+          "ignored": "($cuigv:OptimizedSettings)",
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "use_child_anchors": true,
+          "visible": false,
+          "property_bag": {
+            "#toggle_state": false
+          },
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "video_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+          }]
+      }}
+  ]},
+  "core_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "use_child_anchors": true,
@@ -10,12 +48,6 @@
     "$cuiv:header_offset": [ 0, -1 ],
     "$cuiv:header_background": true,
     "$cuiv:option_description": true,
-    "bindings": [
-      { "binding_type": "view",
-        "source_control_name": "video_button_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-    }],
     "controls": [
       { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
       { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.video", "$cuiv:header_title": "cui.settings.video.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
@@ -343,12 +375,12 @@
               "binding_name_override": "#visible"
           }]
       }},
-      { "gui_accessibility_scaling_toggle@cui-setting_screen.option_toggle": {
-          "$cuiv:option_label_text": "options.gui.accessibility.scaling",
+      { "gui_video_scaling_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.gui.video.scaling",
           "$cuiv:option_description_text": "cui.settings.video.desc.large_ui",
-          "$cuiv:option_binding_name": "#gui_accessibility_scaling",
-          "$cuiv:option_toggle_binding_name": "#gui_accessibility_scaling_enabled",
-          "$toggle_name": "gui_accessibility_scaling",
+          "$cuiv:option_binding_name": "#gui_video_scaling",
+          "$cuiv:option_toggle_binding_name": "#gui_video_scaling_enabled",
+          "$toggle_name": "gui_video_scaling",
           "layer": 1
       }}
   ]},

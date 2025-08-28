@@ -10,11 +10,8 @@
   "root_contents_background": {
     "type": "panel",
     "controls": [
-      {
-        "normal@cui-common.menu_screen_background": {}
-      },
-      {
-        "background": {
+      { "normal@cui-common.menu_screen_background": {}},
+      { "background": {
           "type": "image",
           "texture": "textures/ui/White",
           "color": "$cuigv:SecondaryColor",
@@ -22,10 +19,8 @@
           "alpha": "$cuigv:BackgroundAlpha",
           "anchor_from": "left_middle",
           "anchor_to": "left_middle"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "root_contents": {
     "type": "panel",
     "controls": [
@@ -213,14 +208,11 @@
     "$use_touch_mode|default": false,
     "$show_background|default": false,
     "controls": [
-      {
-        "scroll_mouse@common.scrolling_panel_base": {
+      { "scroll_mouse@common.scrolling_panel_base": {
           "size": "$scrolling_pane_size",
           "offset": "$scrolling_pane_offset"
-        }
-      }
-    ]
-  },
+      }}
+  ]},
   "container_scroll_background_image": {
     "type": "image",
     "layer": 2,
@@ -242,7 +234,6 @@
     "size": [ "100% + 4px", "100%" ],
     "texture": "textures/ui/form_scrolling_box_bg"
   },
-
   "long_form_scrolling_panel@runeui-form.scrolling_panel": {
     "layer": 50,
     "anchor_to": "top_left",
@@ -411,7 +402,7 @@
                 }]
             }}
       ]}},
-      { "play_or_host_panel@world_section.play_or_host_stack_edu": {}},
+      { "play_or_host_panel@world_section.play_or_host_stack_edu": { "ignored": "($cuigv:OptimizedSettings)" }},
       { "server_settings_visibility_panel": {
           "type": "stack_panel",
           "bindings": [
@@ -452,34 +443,139 @@
           "type": "stack_panel",
           "ignored": "(not $include_world_section)",
           "controls": [
-            { "game_section@world_section.game_section": {} },
-            { "server_section@world_section.server_section": {} },
-            { "multiplayer_section@world_section.multiplayer_section": {} }
+            { "game_section": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%c" ],
+                "use_child_anchors": true,
+                "controls": [
+                  { "optimized": {
+                      "ignored": "(not $cuigv:OptimizedSettings)",
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%c" ],
+                      "factory": { "name": "game_section", "control_name": "world_section.game_section" },
+                      "use_child_anchors": true,
+                      "bindings": [
+                        { "binding_type": "view",
+                          "source_control_name": "game_button_toggle",
+                          "source_property_name": "(#toggle_state * 1)",
+                          "target_property_name": "#collection_length"
+                      }]
+                  }},
+                  { "vanilla@world_section.game_section": {
+                      "ignored": "($cuigv:OptimizedSettings)"
+                  }}
+            ]}},
+            { "server_section": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%c" ],
+                "use_child_anchors": true,
+                "controls": [
+                  { "optimized": {
+                      "ignored": "(not $cuigv:OptimizedSettings)",
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%c" ],
+                      "factory": { "name": "server_section", "control_name": "world_section.server_section" },
+                      "use_child_anchors": true,
+                      "bindings": [
+                        { "binding_type": "view",
+                          "source_control_name": "server_settings_button_toggle",
+                          "source_property_name": "(#toggle_state * 1)",
+                          "target_property_name": "#collection_length"
+                      }]
+                  }},
+                  { "vanilla@world_section.server_section": {
+                      "ignored": "($cuigv:OptimizedSettings)"
+                  }}
+            ]}},
+            { "multiplayer_section": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%c" ],
+                "use_child_anchors": true,
+                "controls": [
+                  { "optimized": {
+                      "ignored": "(not $cuigv:OptimizedSettings)",
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%c" ],
+                      "factory": { "name": "multiplayer_section", "control_name": "world_section.multiplayer_section" },
+                      "use_child_anchors": true,
+                      "bindings": [
+                        { "binding_type": "view",
+                          "source_control_name": "multiplayer_button_toggle",
+                          "source_property_name": "(#toggle_state * 1)",
+                          "target_property_name": "#collection_length"
+                      }]
+                  }},
+                  { "vanilla@world_section.multiplayer_section": {
+                      "ignored": "($cuigv:OptimizedSettings)"
+                  }}
+            ]}}
       ]}},
       { "packs_sections": {
           "type": "stack_panel",
           "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))",
           "controls": [
-            { "level_texture_pack_section@world_section.level_texture_pack_section": {} },
-            { "addon_section@world_section.addon_section": {} }
+            { "level_texture_pack_section": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%c" ],
+                "use_child_anchors": true,
+                "controls": [
+                  { "optimized": {
+                      "ignored": "(not $cuigv:OptimizedSettings)",
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%c" ],
+                      "factory": { "name": "level_texture_pack_section", "control_name": "world_section.level_texture_pack_section" },
+                      "use_child_anchors": true,
+                      "bindings": [
+                        { "binding_type": "view",
+                          "source_control_name": "level_texture_pack_button_toggle",
+                          "source_property_name": "(#toggle_state * 1)",
+                          "target_property_name": "#collection_length"
+                      }]
+                  }},
+                  { "vanilla@world_section.level_texture_pack_section": {
+                      "ignored": "($cuigv:OptimizedSettings)"
+                  }}
+            ]}},
+            { "addon_section": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%c" ],
+                "use_child_anchors": true,
+                "controls": [
+                  { "optimized": {
+                      "ignored": "(not $cuigv:OptimizedSettings)",
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%c" ],
+                      "factory": { "name": "addon_section", "control_name": "world_section.addon_section" },
+                      "use_child_anchors": true,
+                      "bindings": [
+                        { "binding_type": "view",
+                          "source_control_name": "addon_button_toggle",
+                          "source_property_name": "(#toggle_state * 1)",
+                          "target_property_name": "#collection_length"
+                      }]
+                  }},
+                  { "vanilla@world_section.addon_section": {
+                      "ignored": "($cuigv:OptimizedSettings)"
+                  }}
+            ]}} 
       ]}},
       { "section_content_panels@realms_settings.section_content_panels": { "ignored": "(not $include_realm_section)" }},
       { "general_and_controls_sections": {
           "type": "stack_panel",
           "ignored": "(not $include_controls_and_settings_sections)",
           "controls": [
-            { "account_section@cui-ss_account.account_section": { "visible": false } },
-            { "accessibility_section@cui-ss_accessibility.accessibility_section": { "visible": false } },
-            { "creator_section@cui-ss_creator.creator_section": { "visible": false } },
-            { "general_section@cui-ss_general.general_section": { "visible": false } },
-            { "language_section@cui-ss_language.language_section": { "visible": false } },
-            { "sound_section@cui-ss_sound.sound_section": { "visible": false } },
-            { "video_section@cui-ss_video.video_section": { "visible": false } },
-            { "gamepad_section@cui-ss_gamepad.gamepad_section": { "ignored": "(not $gamepad_supported)", "visible": false } },
-            { "keyboardmouse_section@cui-ss_keyboardmouse.keyboardmouse_section": { "ignored": "(not $keyboard_and_mouse_supported)", "visible": false } },
-            { "touch_section@cui-ss_touch.touch_section": { "ignored": "($is_holographic or not $touch_supported or $nx_os)", "visible": false } },
-            { "storage_management_section@cui-ss_storage.storage_section": { "visible": false, "ignored": "$ignore_storage_section" }},
-            { "global_texture_pack_section@cui-ss_globalresource.globalresource_section": { "visible": false, "ignored": "$ignore_global_resources_section" }}
+            { "account_section@cui-ss_account.account_section": {}},
+            { "accessibility_section@cui-ss_accessibility.accessibility_section": {}},
+            { "creator_section@cui-ss_creator.creator_section": {}},
+            { "general_section@cui-ss_general.general_section": {}},
+            { "language_section@cui-ss_language.language_section": {} },
+            { "sound_section@cui-ss_sound.sound_section": {}},
+            { "video_section@cui-ss_video.video_section": {}},
+            { "gamepad_section@cui-ss_gamepad.gamepad_section": { "ignored": "(not $gamepad_supported)" }},
+            { "keyboardmouse_section@cui-ss_keyboardmouse.keyboardmouse_section": { "ignored": "(not $keyboard_and_mouse_supported)"}},
+            { "touch_section@cui-ss_touch.touch_section": { "ignored": "($is_holographic or not $touch_supported or $nx_os)"}},
+            { "storage_management_section@cui-ss_storage.storage_section": { "ignored": "$ignore_storage_section" }},
+            { "global_texture_pack_section@cui-ss_globalresource.globalresource_section": { "ignored": "$ignore_global_resources_section" }}
       ]}}
   ]},
   "settings_toggle_theme@cui-toggle.toggle_button_section": {
@@ -702,7 +798,7 @@
     "$cuiv:button_type_panel": "button.reset_binding"
   },
   "slider@cui-slider.slider": {
-    "size": [ "100% - 15px", 12 ],
+    "size": [ "100%", 12 ],
     "enabled": "$cuiv:is_enabled",
     "$option_label|default": ""
   },
@@ -902,40 +998,57 @@
                   }}
             ]}}
       ]}},
-      { "$cuiv:option_control_name_slider@$cuiv:option_control_name_slider": {
-          "ignored": "((not $cuiv:is_slider) or ($cuigv:HorizontalSlider))"
-      }},
+      { "slider_panel": {
+          "ignored": "((not $cuiv:is_slider) or ($cuigv:HorizontalSlider))",
+          "type": "panel",
+          "size": [ "100%", 12 ],
+          "controls": [
+            { "$cuiv:option_control_name_slider@$cuiv:option_control_name_slider": {
+                "size": [ "100% - 15px", "100%" ]
+            }}
+      ]}},
       { "slider_spacing": {
           "ignored": "((not $cuiv:is_slider) or ($cuigv:HorizontalSlider))",
           "type": "panel",
           "size": [ "100%", 4 ]
       }},
-      { "description": {
-          "ignored": "(not $cuiv:option_description)",
-          "type": "label",
-          "size": [ "100% - 8px", "default" ],
-          "color": "$cuigv:FontSecondaryColor",
-          "layer": 5,
-          "text": "$cuiv:option_description_text",
-          "font_scale_factor": 0.75,
-          "locked_alpha": 0.5,
+      { "optimized": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "factory": { "name": "description", "control_name": "cui-setting_screen.description_core" },
+          "use_child_anchors": true,
           "bindings": [
             { "binding_type": "view",
               "source_control_name": "cuib-info",
-              "source_property_name": "(#toggle_state)",
-              "target_property_name": "#visible"
+              "source_property_name": "(#toggle_state * 1)",
+              "target_property_name": "#collection_length"
           }]
-      }},
+      }}
+  ]},
+  "description_core": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      { "description": {
+          "ignored": "(not $cuiv:option_description)",
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            { "description": {
+                "type": "label",
+                "size": [ "100% - 8px", "default" ],
+                "color": "$cuigv:FontSecondaryColor",
+                "layer": 5,
+                "text": "$cuiv:option_description_text",
+                "font_scale_factor": 0.75,
+                "locked_alpha": 0.5
+            }}
+      ]}},
+      
       { "description_spacing": {
           "ignored": "(not $cuiv:option_description)",
           "type": "panel",
-          "size": [ 4, 4 ],
-          "bindings": [
-            { "binding_type": "view",
-              "source_control_name": "cuib-info",
-              "source_property_name": "(#toggle_state)",
-              "target_property_name": "#visible"
-          }]
+          "size": [ 4, 4 ]
       }}
   ]},
   "option_toggle_control@common.toggle": {

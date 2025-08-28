@@ -2,6 +2,44 @@
   "keyboardmouse_section": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
+    "use_child_anchors": true,
+    "controls": [
+      { "optimized": {
+          "ignored": "(not $cuigv:OptimizedSettings)",
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "factory": { "name": "keyboardmouse_section", "control_name": "cui-ss_keyboardmouse.core_section" },
+          "use_child_anchors": true,
+          "property_bag": {
+            "#toggle_state": false
+          },
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "keyboard_and_mouse_button_toggle",
+              "source_property_name": "(#toggle_state * 1)",
+              "target_property_name": "#collection_length"
+          }]
+      }},
+      { "vanilla@core_section": {
+          "ignored": "($cuigv:OptimizedSettings)",
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "use_child_anchors": true,
+          "visible": false,
+          "property_bag": {
+            "#toggle_state": false
+          },
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "keyboard_and_mouse_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+          }]
+      }}
+  ]},
+  "core_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "$cuiv:keymapping_grid_dimension": "#keyboard_standard_grid_dimension",
@@ -287,7 +325,7 @@
           "anchor_to": "top_left",
           "$cuiv:button_type_panel": "controls_section.arrow_reset",
           "$pressed_button_name": "button.reset_binding",
-          "$button_tts_header": "accessibility.settings.reset",
+          "$button_tts_header": "keyboardmouse.settings.reset",
           "bindings": [
             { "binding_type": "collection_details",
               "binding_collection_name": "$cuiv:keymapping_collection"
