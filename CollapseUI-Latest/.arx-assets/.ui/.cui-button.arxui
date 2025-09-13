@@ -421,12 +421,21 @@
     "$cuiv:button_anims_color|default": [
       "@cui-anims.button_anim_color"
     ],
+    "$cuiv:button_anims_color_light|default": [
+      "@cui-anims.button_anim_color_light"
+    ],
     "$cuiv:button_anims_alpha|default": [
       "@cui-anims.button_anim_alpha"
     ],
     "$cuiv:button_anims_offset|default": [
       "@cui-anims.button_anim_offset",
       "@cui-anims.button_anim_alpha"
+    ],
+    "$cuiv:button_anims_offset_no_alpha|default": [
+      "@cui-anims.button_anim_offset"
+    ],
+    "$cuiv:button_anims_offset_no_easing|default": [
+      "@cui-anims.button_anim_no_easing_offset"
     ],
     "$cuiv:button_anims_alpha_reverse|default": [
       "@cui-anims.button_anim_alpha_reverse"
@@ -438,12 +447,21 @@
         "$cuiv:button_anims_color": [
           "@cui-anims.button_anim_color_reverse"
         ],
+        "$cuiv:button_anims_color_light": [
+          "@cui-anims.button_anim_color_light_reverse"
+        ],
         "$cuiv:button_anims_alpha": [
           "@cui-anims.button_anim_alpha_reverse"
         ],
         "$cuiv:button_anims_offset": [
           "@cui-anims.button_anim_offset_reverse",
           "@cui-anims.button_anim_alpha_reverse"
+        ],
+        "$cuiv:button_anims_offset_no_alpha": [
+          "@cui-anims.button_anim_offset_reverse"
+        ],
+        "$cuiv:button_anims_offset_no_easing": [
+          "@cui-anims.button_anim_offset_no_easing_reverse"
         ],
         "$cuiv:button_anims_alpha_reverse": [
           "@cui-anims.button_anim_alpha"
@@ -506,9 +524,12 @@
     "$default_state": true,
     "$cuiv:button_texture": "$cuiv:default_button_texture",
     "$cuiv:button_texture_color": "$cuiv:default_button_color",
+    "$cuiv:button_texture_color_light": "$cuigv:FontPrimaryColor",
     "$animation_reset_name": "$pressed_button_name_anim",
     "$cuiv-anim:color_in|default": "$cuigv:PrimaryColor",
     "$cuiv-anim:color_out|default": "$cuigv:SecondaryColor",
+    "$cuiv-anim:color_in_light|default": "$cuigv:PrimaryColor",
+    "$cuiv-anim:color_out_light|default": "$cuigv:FontPrimaryColor",
     "$cuiv-anim:alpha_in|default": 1,
     "$cuiv-anim:alpha_out|default": 0,
     "$cuiv-anim:offset_in|default": [ 0, -38 ],
@@ -518,9 +539,12 @@
     "$hover_state": true,
     "$cuiv:button_texture": "$cuiv:hover_button_texture",
     "$cuiv:button_texture_color": "$cuiv:hover_button_color",
+    "$cuiv:button_texture_color_light": "$cuiv:hover_button_color",
     "$animation_reset_name": "$pressed_button_name_anim",
     "$cuiv-anim:color_in|default": "$cuigv:PrimaryColor",
     "$cuiv-anim:color_out|default": "$cuigv:SecondaryColor",
+    "$cuiv-anim:color_in_light|default": "$cuigv:PrimaryColor",
+    "$cuiv-anim:color_out_light|default": "$cuigv:FontPrimaryColor",
     "$cuiv-anim:alpha_in|default": 1,
     "$cuiv-anim:alpha_out|default": 0,
     "$cuiv-anim:offset_in|default": [ 0, -38 ],
@@ -530,9 +554,12 @@
     "$pressed_state": true,
     "$cuiv:button_texture": "$cuiv:pressed_button_texture",
     "$cuiv:button_texture_color": "$cuiv:pressed_button_color",
+    "$cuiv:button_texture_color_light": "$cuiv:pressed_button_color",
     "$animation_reset_name": "$pressed_button_name_anim",
     "$cuiv-anim:color_in|default": "$cuigv:PrimaryColor",
     "$cuiv-anim:color_out|default": "$cuigv:SecondaryColor",
+    "$cuiv-anim:color_in_light|default": "$cuigv:PrimaryColor",
+    "$cuiv-anim:color_out_light|default": "$cuigv:FontPrimaryColor",
     "$cuiv-anim:alpha_in|default": 1,
     "$cuiv-anim:alpha_out|default": 0,
     "$cuiv-anim:offset_in|default": [ 0, -38 ],
@@ -542,9 +569,12 @@
     "$locked_state": true,
     "$cuiv:button_texture": "$cuiv:locked_button_texture",
     "$cuiv:button_texture_color": "$cuiv:locked_button_color",
+    "$cuiv:button_texture_color_light": "$cuiv:locked_button_color",
     "$animation_reset_name": "$pressed_button_name_anim",
     "$cuiv-anim:color_in|default": "$cuigv:PrimaryColor",
     "$cuiv-anim:color_out|default": "$cuigv:SecondaryColor",
+    "$cuiv-anim:color_in_light|default": "$cuigv:PrimaryColor",
+    "$cuiv-anim:color_out_light|default": "$cuigv:FontPrimaryColor",
     "$cuiv-anim:alpha_in|default": 1,
     "$cuiv-anim:alpha_out|default": 0,
     "$cuiv-anim:offset_in|default": [ 0, -38 ],

@@ -195,6 +195,14 @@
       { "config_layout_08@cui-activeconfig_section.config_label": {
           "$cuiv:config_text": "cui.about.tab.activeconfig.lowmemory",
           "$cuiv:config_value": "$cuigv:LowMemory"
+      }},
+      { "config_layout_09@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.optimizedsettings",
+          "$cuiv:config_value": "$cuigv:OptimizedSettings"
+      }},
+      { "config_layout_10@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.playerlisttab",
+          "$cuiv:config_value": "$cuigv:PlayerListTab"
       }}
   ]},
 	"config_animation@cui-about_section.element_stack_template": {

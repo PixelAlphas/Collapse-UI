@@ -97,6 +97,18 @@
     "from": "$cuiv-anim:color_out",
     "to": "$cuiv-anim:color_in"
   },
+  "button_anim_color_light": {
+    "anim_type": "color",
+    "duration": "$cuigv:ButtonAnimDuration",
+    "from": "$cuiv-anim:color_in_light",
+    "to": "$cuiv-anim:color_out_light"
+  },
+  "button_anim_color_light_reverse": {
+    "anim_type": "color",
+    "duration": "$cuigv:ButtonAnimDuration",
+    "from": "$cuiv-anim:color_out_light",
+    "to": "$cuiv-anim:color_in_light"
+  },
   "button_anim_alpha": {
     "anim_type": "alpha",
     "duration": "$cuigv:ButtonAnimDuration",
@@ -120,6 +132,18 @@
     "anim_type": "offset",
     "duration": "$cuigv:ButtonAnimDuration",
     "easing": "out_expo",
+    "from": "$cuiv-anim:offset_out",
+    "to": "$cuiv-anim:offset_in"
+  },
+  "button_anim_no_easing_offset": {
+    "anim_type": "offset",
+    "duration": "$cuigv:ButtonAnimDuration",
+    "from": "$cuiv-anim:offset_in",
+    "to": "$cuiv-anim:offset_out"
+  },
+  "button_anim_offset_no_easing_reverse": {
+    "anim_type": "offset",
+    "duration": "$cuigv:ButtonAnimDuration",
     "from": "$cuiv-anim:offset_out",
     "to": "$cuiv-anim:offset_in"
   },

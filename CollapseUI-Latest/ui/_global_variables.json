@@ -15,11 +15,11 @@
     // True/False | Boolean — Only True/False as Value ( True = Enable | False = Disable )
   
   // ----- ## UI Theme ## -----
-  "$cuigv:PrimaryColor": [ 0.5450, 0.3450, 0.9254 ], // Color
+  "$cuigv:PrimaryColor": [ 0.6941, 0.0196, 0.8901 ], // Color
     // UI accents, this includes — Buttons, Icons, Loading bar, and etc.
-  "$cuigv:SecondaryColor": [ 0.0745, 0.0588, 0.0862 ], // Color
+  "$cuigv:SecondaryColor": [ 0.0784, 0.0000, 0.0980 ], // Color
     // Background Colors.
-  "$cuigv:TertiaryColor": [ 0.1607, 0.1176, 0.2 ], // Color
+  "$cuigv:TertiaryColor": [ 0.3450, 0.0078, 0.4431 ], // Color
     // Brighter Background Colors.
   "$cuigv:FontPrimaryColor": [ 1, 1, 1 ], // Color
     // Overall texts color.
@@ -103,7 +103,9 @@
     // No Marketplace Button on either pause and start screen.
   "$cuigv:HorizontalSlider": false, // Boolean
     // Make the slider into horizontal instead vertical. ( Old slider design returns )
-  "$cuigv:LowMemory": false, // Boolean
+  "$cuigv:LowMemory": false,
+  "$cuigv:OptimizedSettings": true,
+  "$cuigv:PlayerListTab": false, // Boolean
     // Reduce loading time aswell remove several things that is not needed.
   "$cuigv:OptimizedSettings": true, // Boolean
     // Optimize the settings by not pre-load every section, this loads setting *alot* faster but comes with a cost of stutter when selecting sections.

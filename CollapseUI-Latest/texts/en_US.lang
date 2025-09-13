@@ -285,6 +285,8 @@ cui.about.tab.activeconfig.nogamelogo=No Game logo
 cui.about.tab.activeconfig.startmenubuttonclassic=Classic Start menu
 cui.about.tab.activeconfig.logoinpausescreen=Logo In Pause Screen
 cui.about.tab.activeconfig.lowmemory=Low Memory mode
+cui.about.tab.activeconfig.optimizedsettings=Optimitzed Settings
+cui.about.tab.activeconfig.playerlisttab=Player List via Tab button
 
 cui.about.tab.credit=Credits
 cui.about.tab.credit.bg=Artworks / Backgrounds

@@ -60,6 +60,7 @@
     "anchor_to": "top_left",
     "focus_container": true,
     "use_last_focus": true,
+    "focus_enabled": true,
     "$cuiv-anim:pos_from": [ "-30%", 0 ],
     "$cuiv-anim:pos_to": [ 0, 0 ],
     "focus_navigation_mode_down": "contained",

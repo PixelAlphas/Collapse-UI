@@ -1,9 +1,9 @@
 { "format_version": 2,
   "header": {
-    "name": "Collapse-UI: Celestial - v5.0.2 (Beta)",
+    "name": "Collapse-UI: Celestial - v1.0.038",
     "description": "§fModified & Enhanced UI made by Arxance\nThemes exists on subpack!",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 5, 0, 2 ],
+    "version": [ 5, 0, 5 ],
     "min_engine_version": [ 1, 21, 100 ]
   },
   "modules": [
@@ -53,7 +53,7 @@
       "memory_tier": 0
     },
     { "folder_name": "magenta",
-      "name": "Magenta (Collapse-UI Alt)",
+      "name": "Legacy Default",
       "memory_tier": 0
     },
     { "folder_name": "pink",
@@ -92,7 +92,7 @@
       "name": "Sky",
       "memory_tier": 0
     },
-    { "folder_name": "Horizon",
+    { "folder_name": "horizon",
       "name": "Horizon",
       "memory_tier": 0
     },

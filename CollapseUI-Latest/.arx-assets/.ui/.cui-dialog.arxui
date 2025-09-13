@@ -1,6 +1,7 @@
 { "namespace": "cui-dialog",
   "background_element": {
     "type": "panel",
+    "layer": 300,
     "controls": [
       { "shadow": {
           "ignored": "(not $cuigv:Shadows)",
@@ -24,7 +25,7 @@
     "texture": "textures/ui/.cui-assets/background",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "layer": 1,
+    "layer": 300,
     "offset": [ 0, 2 ],
     "color": "$cuigv:PrimaryColor",
     "$use_custom_title_control|default": false,
@@ -68,6 +69,7 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "size": [ "80%", "85%" ],
+    "layer": 300,
     "controls": [
       { "title_text_element": {
           "type": "image",
@@ -150,12 +152,12 @@
   "modal_title_text": {
     "type": "label",
     "size": [ "default", 25 ],
-    "layer": 2,
     "text": "#text",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "text_tts": "#tts_text",
     "shadow": false,
+    "layer": 300,
     "font_scale_factor": 1.8,
     "font_type": "MinecraftTen",
     "bindings": [
@@ -225,6 +227,7 @@
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
     "offset": [ 2, 0 ],
+    "layer": 300,
     "controls": [
       { "text": {
           "type": "label",

@@ -47,6 +47,8 @@
   "$cuigv:NoMarketplaceButton": false, 
   "$cuigv:HorizontalSlider": false,
   "$cuigv:LowMemory": false,
+  "$cuigv:OptimizedSettings": true,
+  "$cuigv:PlayerListTab": false,
   
   "$cuigv:OriginUI": true,
   "$cuigv:DebugElement": false, 

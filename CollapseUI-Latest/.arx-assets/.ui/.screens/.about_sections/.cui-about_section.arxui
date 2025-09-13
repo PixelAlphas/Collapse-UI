@@ -15,7 +15,7 @@
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v5.0.2"
+          "$cuiv:lwb_text": "v1.0.038"
       }},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
@@ -69,11 +69,11 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Mon, 22 Aug (2025)"
+          "$cuiv:about_text_gray": "Sat, 13 Sep (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",
-          "$cuiv:about_text_gray": "Beta"
+          "$cuiv:about_text_gray": "Early Access"
       }},
       { "setting_version@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.setting_ver",
@@ -132,7 +132,7 @@
       { "discord@cui-about_section.about_text_icon": {
           "$cuiv:about_icon": "textures/ui/.cui-assets/.icons/discord_icon",
           "$cuiv:about_text": "Discord",
-          "$cuiv:about_text_gray": "Arcdustry | discord.gg/ZPAZvtprYa"
+          "$cuiv:about_text_gray": "@arcdustry | discord.gg/ZPAZvtprYa"
       }}
   ]},
   "about_text": {
