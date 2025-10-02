@@ -1,0 +1,205 @@
+{ "namespace": "cui-ss_gamepad",
+  "gamepad_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$cuiv:keymapping_grid_dimension": "#gamepad_grid_dimension",
+    "$cuiv:keymapping_collection": "gamepad_collection",
+    "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "gamepad_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.controller", "$cuiv:header_title": "cui.settings.gamepad.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "gamepad@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_gamepad.gamepad"}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "options.controllerLayout"
+      }},
+      { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "mapping@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_gamepad.mapping"}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}},
+      { "reset_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "$pressed_button_name": "button.reset_gamepad_bindings",
+          "$cuiv:button_text": "controllerLayoutScreen.resetAllBindings",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "pudding_04": { "type": "panel", "size": [ 1, 6 ]}}
+  ]},
+  "gamepad": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "option_slider_0@cui-setting_screen.option_slider": {
+          "ignored": "($is_holographic and not $is_living_room_mode)",
+          "$cuiv:option_label_text": "options.sensitivity",
+          "$slider_name": "controller_sensitivity",
+          "$slider_value_binding_name": "#controller_sensitivity",
+          "$slider_tts_text_value": "#controller_sensitivity_text_value",
+          "$cuiv:slider_value_text": "#controller_sensitivity_text_value",
+          "$cuiv:option_toggle_binding_name": "#controller_sensitivity_enabled",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_damen@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.spyglassdampen",
+          "$slider_name": "spyglass_gamepad_dampening",
+          "$slider_value_binding_name": "#spyglass_gamepad_dampening",
+          "$slider_tts_text_value": "#spyglass_gamepad_dampening_text_value",
+          "$cuiv:slider_value_text": "#spyglass_gamepad_dampening_text_value",
+          "$cuiv:option_toggle_binding_name": "#keyboard_mouse_sensitivity_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_toggle_0@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.invertYAxis",
+          "$cuiv:option_binding_name": "#controller_invert_y_axis",
+          "$cuiv:option_toggle_binding_name": "#controller_invert_y_axis_enabled",
+          "$toggle_name": "controller_invert_y_axis",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle_1@cui-setting_screen.option_toggle": {
+          "ignored": "($is_holographic and not $is_living_room_mode)",
+          "$cuiv:option_label_text": "options.autojump",
+          "$cuiv:option_binding_name": "#controller_autojump",
+          "$cuiv:option_toggle_binding_name": "#controller_autojump_enabled",
+          "$toggle_name": "controller_autojump",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle9@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.hidetooltips",
+          "$cuiv:option_binding_name": "#hide_tooltips",
+          "$cuiv:option_toggle_binding_name": "#hint_toggles_enabled",
+          "$toggle_name": "hide_tooltips",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle10@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.hidegamepadcursor",
+          "$cuiv:option_binding_name": "#hide_gamepad_cursor",
+          "$cuiv:option_toggle_binding_name": "#hide_gamepad_cursor_enabled",
+          "$toggle_name": "hide_gamepad_cursor",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle_11@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.clearhotbar",
+          "$cuiv:option_binding_name": "#controller_clear_hotbar",
+          "$cuiv:option_toggle_binding_name": "#controller_clear_hotbar_enabled",
+          "$toggle_name": "controller_clear_hotbar",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "gamepad_swap_ab@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "#swap_gamepad_ab",
+          "$cuiv:option_binding_name": "#swap_gamepad_ab_buttons",
+          "$cuiv:option_toggle_binding_name": "#swap_gamepad_ab_buttons_enabled",
+          "$toggle_name": "swap_gamepad_ab_buttons",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$cuiv:option_label_bindings": [{ "binding_name": "#swap_gamepad_ab" }]
+      }},
+      { "gamepad_swap_xy@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "#swap_gamepad_xy",
+          "$cuiv:option_binding_name": "#swap_gamepad_xy_buttons",
+          "$cuiv:option_toggle_binding_name": "#swap_gamepad_xy_buttons_enabled",
+          "$toggle_name": "swap_gamepad_xy_buttons",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$cuiv:option_label_bindings": [{ "binding_name": "#swap_gamepad_xy" }]
+      }},
+      { "gamepad_cursor_sensitivity_option_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.gamepadcursorsensitivity",
+          "$slider_name": "gamepad_cursor_sensitivity",
+          "$slider_value_binding_name": "#gamepad_cursor_sensitivity",
+          "$slider_tts_text_value": "#gamepad_cursor_sensitivity_text_value",
+          "$cuiv:slider_value_text": "#gamepad_cursor_sensitivity_text_value",
+          "$cuiv:option_toggle_binding_name": "#gamepad_cursor_sensitivity_enabled",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }}
+  ]},
+  "mapping": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "gamepad_keymapping_grid@cui-ss_gamepad.gamepad_mapping_grid": {
+          "ignored": "$ignore_controller_layout"
+      }},
+      { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}}
+  ]},
+  "gamepad_mapping_grid": {
+    "type": "grid",
+    "size": [ "100%", "default" ],
+    "layer": 1,
+    "grid_item_template": "cui-ss_gamepad.gamepad_mapping_item",
+    "grid_dimension_binding": "#gamepad_grid_dimension",
+    "collection_name": "gamepad_collection",
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "bindings": [{ "binding_name": "#gamepad_grid_dimension" }
+  ]},
+  "gamepad_mapping_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "layer": 1,
+    "size": [ "100%", 25 ],
+    "controls": [
+      { "option_info_label_control": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "fill", "100% - 2px" ],
+          "color": "$cuigv:TertiaryColor",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            { "keymapping_label_control": {
+                "type": "label",
+                "color": "$generic_button_text_color",
+                "size": [ "100% - 4px", "default" ],
+                "text_alignment": "left",
+                "offset": [ 4, 0 ],
+                "layer": 1,
+                "text": "#keymapping_name",
+                "bindings": [
+                  { "binding_name": "#keymapping_name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$cuiv:keymapping_collection"
+                }]
+            }}
+      ]}},
+      { "keymapping_button_0@cui-setting_screen.image_binding_button": {
+          "$button_tts_header": "#audible_keymapping_name",
+          "size": [ "20%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "bindings": [
+            { "binding_type": "collection_details",
+              "binding_collection_name": "$cuiv:keymapping_collection"
+            },
+            { "binding_name": "#audible_keymapping_name",
+              "binding_type": "collection",
+              "binding_collection_name": "$cuiv:keymapping_collection"
+          }]
+      }},
+      { "keymapping_button_1@cui-button.text_button": {
+          "size": [ "15%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$cuiv:button_type_panel": "controls_section.arrow_reset",
+          "$pressed_button_name": "button.reset_binding",
+          "$button_tts_header": "accessibility.settings.reset",
+          "bindings": [
+            { "binding_type": "collection_details",
+              "binding_collection_name": "$cuiv:keymapping_collection"
+          }]
+      }}
+]}}

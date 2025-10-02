@@ -1,0 +1,4 @@
+{ "toast_screen": {
+    "$screen_content": "cui-toast.toast_screen_content",
+    "$screen_animations": []
+}}

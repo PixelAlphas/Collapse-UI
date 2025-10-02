@@ -1,0 +1,221 @@
+{ 
+  "main_panel_three_buttons": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$title_text_binding_type": "global",
+    "$title_binding_condition": "once",
+    "$text_name": "#null",
+    "$top_button_panel|default": "common.empty_panel",
+    "$middle_button_panel|default": "common.empty_panel",
+    "$bottom_button_panel|default": "common.empty_panel",
+    "controls": [
+      { "text_element@cui-dialog.text_element": {}},
+      { "background_element@cui-dialog.background_element": {}},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 55px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, -5 ],
+          "alpha": 0.8
+      }},
+      { "panel_indent": {
+          "type": "panel",
+          "size": [ "100% - 16px", "100% - 131px" ],
+          "offset": [ 0, 23 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "inside_header_panel@$child_control": {} }
+          ]
+      }},
+      { "top_button_panel@$top_button_panel": {
+          "size": [ "100% - 14px", 30 ],
+          "offset": [ 0, -71 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }},
+      { "middle_button_panel@$middle_button_panel": {
+          "size": [ "100% - 14px", 30 ],
+          "offset": [ 0, -39 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }},
+      { "bottom_button_panel@$bottom_button_panel": {
+          "size": [ "100% - 14px", 30 ],
+          "offset": [ 0, -7 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }}
+  ]},
+
+  "main_panel_two_buttons": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$title_text_binding_type": "global",
+    "$title_binding_condition": "once",
+    "$text_name": "#none",
+    "$top_button_panel|default": "common.empty_panel",
+    "$bottom_button_panel|default": "common.empty_panel",
+    "controls": [
+      { "text_element@cui-dialog.text_element": {}},
+      { "background_element@cui-dialog.background_element": {}},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 55px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, -5 ],
+          "alpha": 0.8
+      }},
+      { "panel_indent": {
+          "type": "panel",
+          "size": [ "100% - 16px", "100% - 99px" ],
+          "offset": [ 0, 23 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "inside_header_panel@$child_control": {} }
+      ]}},
+      { "top_button_panel@$top_button_panel": {
+          "size": [ "100% - 14px", 30 ],
+          "offset": [ 0, -39 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }},
+      { "bottom_button_panel@$bottom_button_panel": {
+          "size": [ "100% - 14px", 30 ],
+          "offset": [ 0, -7 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }}
+  ]},
+
+  "main_panel_one_button": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$title_text_binding_type": "global",
+    "$title_binding_condition": "once",
+    "$text_name": "#none",
+    "$button_panel|default": "common.empty_panel",
+    "controls": [
+      { "text_element@cui-dialog.text_element": {}},
+      { "background_element@cui-dialog.background_element": {}},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 55px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, -5 ],
+          "alpha": 0.8
+      }},
+      { "panel_indent": {
+          "type": "panel",
+          "size": [ "100% - 16px", "100% - 65px" ],
+          "offset": [ 0, 23 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "inside_header_panel@$child_control": {} }
+      ]}},
+      { "bottom_button_panel@$button_panel": {
+          "size": [ "100% - 14px", 30 ],
+          "offset": [ 0, -7 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }}
+  ]},
+  "main_panel_no_buttons": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$title_text_binding_type": "global",
+    "$title_binding_condition": "once",
+    "$text_name|default": "#null",
+    "$panel_indent_size|default": [ "100% - 16px", "100% - 31px" ],
+    "controls": [
+      { "text_element@cui-dialog.text_element": {}},
+      { "background_element@cui-dialog.background_element": {}},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 30px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, 8 ],
+          "layer": 2,
+          "alpha": 0.8
+      }},
+      { "panel_indent": {
+          "type": "panel",
+          "size": "$panel_indent_size",
+          "offset": [ 0, 23 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "inside_header_panel@$child_control": {} }
+      ]}}
+  ]},
+
+  "main_panel_no_title_no_buttons": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      { "texture": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "color": "$cuigv:TertiaryColor"
+      }},
+      { "panel_indent": {
+          "type": "panel",
+          "size": [ "100% - 16px", "100% - 16px" ],
+          "offset": [ 0, 8 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "inside_header_panel@$child_control": {} }
+      ]}}
+ ]},
+
+  "main_panel_small_title_one_button": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$title_text_binding_type": "global",
+    "$title_binding_condition": "once",
+    "$text_name": "#none",
+    "$button_panel|default": "common.empty_panel",
+    "$show_close_button": false,
+    "$button_panel_size|default": [ "100% - 14px", 30 ],
+    "$main_panel_size|default": [ "100% - 16px", "100% - 59px" ],
+    "controls": [
+      { "text_element@cui-dialog.text_element": {}},
+      { "background_element@cui-dialog.background_element": {}},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 55px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, -5 ],
+          "alpha": 0.8
+      }},
+      { "panel_indent": {
+          "type": "panel",
+          "size": "$main_panel_size",
+          "offset": [ 0, 17 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "inside_header_panel@$child_control": {} }
+      ]}},
+      { "bottom_button_panel@$button_panel": {
+          "size": "$button_panel_size",
+          "offset": [ 0, -7 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }}
+]}}

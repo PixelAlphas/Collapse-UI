@@ -1,0 +1,4 @@
+{ "start_screen": {
+    "$screen_content": "cui-start_screen.root_contents",
+    "$screen_bg_content": "cui-common.screen_background"
+}}

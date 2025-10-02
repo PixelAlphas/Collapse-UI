@@ -1,0 +1,384 @@
+{ "namespace": "cui-hud_screen",
+  "root_contents": {
+    "type": "panel",
+    "controls": [
+      {
+        "@cui-hud_screen.statistics": {}
+      },
+      {
+        "@cui-hud_screen.detailed_exp": {}
+      }
+  ]},
+  "detailed_exp": {
+    "type": "panel",
+    "controls": [
+      { "exp_percentage@label": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 114, -23 ],
+          "size": [ 40, 10 ],
+          "layer": 999,
+          "$cuiv:ptl_bindings": [
+            // Read the below
+            // Might use this on any bars related tbh
+            { "binding_type": "global",
+              "binding_name": "#exp_progress",
+              "binding_condition": "always"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(100 * (1 - #exp_progress))",
+              "target_property_name": "#epbl"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epbl - #epcl1)",
+              "target_property_name": "#epbl1"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epbl1 - #epcl2)",
+              "target_property_name": "#epbl2"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(100 * ((#epbl > 100) + (#epbl > 200) + (#epbl > 300) + (#epbl > 400) + (#epbl > 500) + (#epbl > 600) + (#epbl > 700) + (#epbl > 800) + (#epbl > 900)))",
+              "target_property_name": "#epcl1"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(10 * ((#epbl1 > 10) + (#epbl1 > 20) + (#epbl1 > 30) + (#epbl1 > 40) + (#epbl1 > 50) + (#epbl1 > 60) + (#epbl1 > 70) + (#epbl1 > 80) + (#epbl1 > 90)))",
+              "target_property_name": "#epcl2"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(1 * ((#epbl2 > 1) + (#epbl2 > 2) + (#epbl2 > 3) + (#epbl2 > 4) + (#epbl2 > 5) + (#epbl2 > 6) + (#epbl2 > 7) + (#epbl2 > 8) + (#epbl2 > 9)))",
+              "target_property_name": "#epcl3"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epcl1 + #epcl2 + #epcl3)",
+              "target_property_name": "#finalc"
+            },
+            { "binding_type": "view",
+              "source_property_name": "('§z' + #finalc + '%%')",
+              "target_property_name": "#text"
+          }]
+      }},
+      { "exp_point@label": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ -113, -13 ],
+          "size": [ 40, 20 ],
+          "$cuiv:text_alignment": "right",
+          "layer": 999,
+          "$cuiv:ptl_bindings": [
+            { "binding_type": "global",
+              "binding_name": "#exp_progress",
+              "binding_condition": "always"
+            },
+            { "binding_type": "global",
+              "binding_name": "#level_number",
+              "binding_condition": "always"
+            },
+            // #level_number are not integers.
+            // so i convert them into that by using '* 1'
+            { "binding_type": "view",
+              "source_property_name": "(#level_number * 1)",
+              "target_property_name": "#exp_required_base"
+            },
+            // Forked the calculation formula from wiki lmao
+            { "binding_type": "view",
+              "source_property_name": "((2 * #exp_required_base + 7) * (#exp_required_base < 16))",
+              "target_property_name": "#exp_required_1"
+            },
+            { "binding_type": "view",
+              "source_property_name": "((5 * #exp_required_base - 38) * ((#exp_required_base < 31) and (#exp_required_base > 15)))",
+              "target_property_name": "#exp_required_2"
+            },
+            { "binding_type": "view",
+              "source_property_name": "((9 * #exp_required_base - 158) * (#exp_required_base > 30))",
+              "target_property_name": "#exp_required_3"
+            },
+            // Combine the above and should turn into required exp
+            { "binding_type": "view",
+              "source_property_name": "(#exp_required_1 + #exp_required_2 + #exp_required_3)",
+              "target_property_name": "#exp_required_result"
+            },
+            // I hate math.
+            { "binding_type": "view",
+              "source_property_name": "((#exp_required_result + 1) * (1 - #exp_progress))",
+              "target_property_name": "#epb"
+            },
+            // Extract floats into integers by cycling through each operators.
+            // This also acts as integer limiter.
+            // I've used 100,000 as maximum for performance reasons and pronbably no one
+            // are having like 10000 levels.
+            { "binding_type": "view",
+              "source_property_name": "(#epb - #epc1)",
+              "target_property_name": "#epb1"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epb1 - #epc2)",
+              "target_property_name": "#epb2"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epb2 - #epc3)",
+              "target_property_name": "#epb3"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epb3 - #epc4)",
+              "target_property_name": "#epb4"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epb4 - #epc5)",
+              "target_property_name": "#epb5"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(100000 * ((#epb > 100000) + (#epb > 200000) + (#epb > 300000) + (#epb > 400000) + (#epb > 500000) + (#epb > 600000) + (#epb > 700000) + (#epb > 800000) + (#epb > 900000)))",
+              "target_property_name": "#epc1"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(10000 * ((#epb1 > 10000) + (#epb1 > 20000) + (#epb1 > 30000) + (#epb1 > 40000) + (#epb1 > 50000) + (#epb1 > 60000) + (#epb1 > 70000) + (#epb1 > 80000) + (#epb1 > 90000)))",
+              "target_property_name": "#epc2"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(1000 * ((#epb2 > 1000) + (#epb2 > 2000) + (#epb2 > 3000) + (#epb2 > 4000) + (#epb2 > 5000) + (#epb2 > 6000) + (#epb2 > 7000) + (#epb2 > 8000) + (#epb2 > 9000)))",
+              "target_property_name": "#epc3"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(100 * ((#epb3 > 100) + (#epb3 > 200) + (#epb3 > 300) + (#epb3 > 400) + (#epb3 > 500) + (#epb3 > 600) + (#epb3 > 700) + (#epb3 > 800) + (#epb3 > 900)))",
+              "target_property_name": "#epc4"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(10 * ((#epb4 > 10) + (#epb4 > 20) + (#epb4 > 30) + (#epb4 > 40) + (#epb4 > 50) + (#epb4 > 60) + (#epb4 > 70) + (#epb4 > 80) + (#epb4 > 90)))",
+              "target_property_name": "#epc5"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(1 * ((#epb5 > 1) + (#epb5 > 2) + (#epb5 > 3) + (#epb5 > 4) + (#epb5 > 5) + (#epb5 > 6) + (#epb5 > 7) + (#epb5 > 8) + (#epb5 > 9)))",
+              "target_property_name": "#epc6"
+            },
+            // Combine the Extracted integers into a usuable value (e.g 1 + 0 + 0 + 2 + 3 + 5 = 100235)
+            // Can't believe this is how bindings works, i hate this thing.
+            { "binding_type": "view",
+              "source_property_name": "(#epc1 + #epc2 + #epc3 + #epc4 + #epc5 + #epc6)",
+              "target_property_name": "#final"
+            },
+            // Display text
+            { "binding_type": "view",
+              "source_property_name": "('§z' + #final + '\n/ ' + #exp_required_result)",
+              "target_property_name": "#text"
+          }]
+      }}
+  ]},
+  "label": {
+    "type": "label",
+    "text": "#text",
+    "size": [ "100%", "default" ],
+    "$cuiv:font_scale_factor|default": 1,
+    "$cuiv:text_alignment|default": "left",
+    "$cuiv:progresstextshadows|default": false,
+    "$cuiv:ptl_bindings|default": [],
+    "font_scale_factor": "$cuiv:font_scale_factor",
+    "text_alignment": "$cuiv:text_alignment",
+    "shadow": "$cuiv:progresstextshadows",
+    "color": [ 0.6156, 0.9019, 0.3058 ],
+    "layer": 20,
+    "variables": [
+      { "requires": "(not $cuigv:ExpTextShadows)",
+        "$cuiv:progresstextshadows": true
+    }],
+    "bindings": "$cuiv:ptl_bindings",
+    "controls": [
+      { "shadow01@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExpTextShadows)",
+          "color": [ 0, 0.2054, 0.1505 ],
+          "offset": [ -1, 0 ],
+          "layer": -2
+      }},
+      { "shadow02@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExpTextShadows)",
+          "color": [ 0, 0.2054, 0.1505 ],
+          "offset": [ 1, 0 ],
+          "layer": -2
+      }},
+      { "shadow03@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExpTextShadows)",
+          "color": [ 0, 0.2054, 0.1505 ],
+          "offset": [ 0, -1 ],
+          "layer": -2
+      }},
+      { "shadow04@progress_xp_text_label_template": {
+          "ignored": "(not $cuigv:ExpTextShadows)",
+          "color": [ 0, 0.2054, 0.1505 ],
+          "offset": [ 0, 1 ],
+          "layer": -2
+      }}
+  ]},
+  "progress_xp_text_label_template": {
+    "type": "label",
+    "text": "#text",
+    "text_alignment": "$cuiv:text_alignment",
+    "font_scale_factor": "$cuiv:font_scale_factor",
+    "size": [ "100%", "default" ],
+    "color": [ 0.6156, 0.9019, 0.3058 ],
+    "bindings": "$cuiv:ptl_bindings"
+  },
+  "statistics": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "50%", "100%c" ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [ -2, -2 ],
+    "use_child_anchors": true,
+    "controls": [
+      { "@number_of_days_played": {}},
+      { "padding": { "type": "panel", "size": [ 2, 1 ]}},
+      { "@player_position": {}}
+  ]},
+  "number_of_days_played": {
+    "type": "image",
+    "size": [ "100%c + 12px", "100%c + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "bindings": [
+      { "binding_name": "#number_of_days_played_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "global"
+    }],
+    "controls": [
+      { "number_of_days_played_text": {
+          "type": "label",
+          "layer": 1,
+          "enable_profanity_filter": false,
+          "color": "$cuigv:FontPrimaryColor",
+          "text": "#text",
+          "font_scale_factor": 0.8,
+          "shadow": false,
+          "bindings": [
+            { "binding_name": "#number_of_days_played_text",
+              "binding_name_override": "#text",
+              "binding_condition": "always_when_visible",
+              "binding_type": "global"
+          }]
+      }}
+  ]},
+  "player_position": {
+    "type": "image",
+    "size": [ "100%c + 12px", "100%c + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "bindings": [
+      { "binding_name": "#player_position_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "global"
+    }],
+    "controls": [
+      { "player_position_text": {
+          "type": "label",
+          "layer": 1,
+          "enable_profanity_filter": false,
+          "color": "$cuigv:FontPrimaryColor",
+          "text": "#text",
+          "font_scale_factor": 0.8,
+          "shadow": false,
+          "bindings": [
+            { "binding_name": "#player_position_text",
+              "binding_name_override": "#text",
+              "binding_condition": "always_when_visible",
+              "binding_type": "global"
+          }]
+      }}
+  ]},
+  "item_text_factory": {
+    "size": [ 100, 10 ],
+    "type": "factory",
+    "control_ids": {
+      "item_text": "@cui-hud_screen.item_name_text",
+      "jukebox_text": "@hud.jukebox_popup_text"
+  }},
+  "item_name_text": {
+    "type": "panel",
+    "size": [ "100%cm", "100%cm" ],
+    "max_size": [ 200, 10 ],
+    "offset": [ 0, "50%-58px" ],
+    "$wait_duration|default": 1,
+    "$destroy_id|default": "item_name_text",
+    "anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"anims": [
+			"@cui-anims.hud_tooltip_alpha",
+			"@cui-anims.hud_tooltip_item"
+		],
+		"controls": [
+		  { "item_text_background": {
+          "type": "image",
+          "size": [ "100%sm + 12px", "100%sm + 9px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "alpha": "@hud.anim_item_name_background_alpha_in"
+      }},
+      { "item_text_label": {
+          "type": "label",
+          "text": "#text",
+          "max_size": [ 200, 8 ],
+          "alpha": 0,
+          "clips_children": true,
+          "enable_profanity_filter": false,
+          "font_scale_factor": 0.8,
+          "bindings": [
+            { "binding_name": "#item_text",
+              "binding_name_override": "#text"
+          }],
+          "controls": [
+            { "extra_text": {
+                "type": "label",
+                "text_alignment": "center",
+                "layer": 5,
+                "max_size": [ 200, "default" ],
+                "font_scale_factor": 0.8,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$cuigv:FontPrimaryColor",
+                "text": "#text",
+                "alpha": "@hud.anim_item_name_text_alpha_in",
+                "clips_children": true,
+                "enable_profanity_filter": false,
+                "bindings": [
+                  { "binding_name": "#item_text",
+                    "binding_name_override": "#text"
+                }]
+            }}
+      ]}}
+  ]},
+  "hud_tip_text": {
+		"type": "image",
+		"size": [ "100%c + 12px", "100%c + 5px" ],
+		"offset": [ 0, "50%-55px" ],
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"texture": "textures/ui/hud_tip_text_background",
+		"alpha": "@hud.anim_item_name_background_alpha_out",
+		"$wait_duration|default": 1,
+		"$destroy_id|default": "popup_tip_text",
+		"anims": [
+			"@cui-anims.hud_tooltip_alpha",
+			"@cui-anims.hud_tooltip_item"
+		],
+		"controls": [
+		  { "item_text_label": {
+			    "type": "label",
+			    "layer": 10,
+			    "color": "$cuigv:FontPrimaryColor",
+			    "text": "#text",
+			    "shadow": false,
+			    "alpha": "@hud.anim_item_name_text_alpha_out",
+			    "bindings": [
+				    { "binding_name": "#tip_text",
+				      "binding_name_override": "#text"
+				  }]
+		  }}
+  ]}
+}

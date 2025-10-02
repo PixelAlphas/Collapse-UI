@@ -1,0 +1,310 @@
+{ "namespace": "cui-toast",
+  "toast_screen_content": {
+    "type": "panel",
+    "clips_children": true,
+    "factory": {
+      "name": "toast_factory",
+      "control_ids": {
+        "popup": "popup@cui-toast.popup",
+        "chat_popup": "chat_popup@toast_screen.chat_popup",
+        "recipe_unlocked": "recipe_unlocked@toast_screen.recipe_unlocked_popup",
+        "recipe_unlocked_pocket": "recipe_unlocked_pocket@toast_screen.recipe_unlocked_pocket_popup",
+        "splitscreen_join_popup": "splitscreen_join_popup@toast_screen.splitscreen_join_popup",
+        "formfitting_alpha_toast": "toast_screen.formfitting_alpha_toast",
+        "snackbar": "snackbar@toast_screen.snackbar"
+    }},
+    "controls": [
+      { "content_log_panel@content_log.content_log_panel": {} },
+      { "perf_turtle_panel@perf_turtle.perf_turtle_panel": {} }
+  ]},
+  "content_log_panel": {
+    "type": "panel",
+    "controls": [
+      { "stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%", "100%cm" ],
+          "factory": {
+            "name": "content_log_item_factory",
+            "max_children_size": 50,
+            "control_ids": {
+              "content_log_item": "cui-content_log.content_log_grid_item"
+          }}
+      }}
+  ]},
+  "toast_label": {
+    "$toast_font_type|default": "default",
+    "$toast_label_offset|default": [ 0, 5 ],
+    "type": "label",
+    "color": "$toast_text_color",
+    "layer": 1,
+    "shadow": false,
+    "font_size": "normal",
+    "offset": "$toast_label_offset",
+    "$toast_text_alignment|default": "left",
+    "text_alignment": "$toast_text_alignment",
+    "anims": "$alpha_anims",
+    "font_type": "$toast_font_type"
+  },
+  "popup@common.input_panel": {
+    "consume_hover_events": true,
+    "prevent_touch_input": true,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "65%", 40 ],
+    "anims": [
+      "@cui-toast.popup_anim"
+    ],
+    "$alpha_anims": [
+      "@cui-toast.popup_anim_alpha_01"
+    ],
+    "button_mappings": [
+      { "from_button_id": "button.menu_select",
+        "to_button_id": "button.toast_interaction",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+    }],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background_notif",
+          "color": "$cuigv:PrimaryColor",
+          "anims": "$alpha_anims",
+          "offset": [ 0, -22 ]
+        }
+      },
+      {
+        "shadow": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "anims": "$alpha_anims",
+          "offset": [ 0, -13 ],
+          "size": [ "100% + 14px", "100%" ],
+          "layer": -10
+        }
+      },
+      {
+        "popup_content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 8, -27],
+          "layer": 1,
+          "controls": [
+            {
+              "icon_padding": {
+                "layer": 1,
+                "type": "stack_panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%c", "100%" ],
+                "factory": {
+                  "name": "toast_image_factory",
+                  "control_ids": {
+                    "xbox_icon": "@toast_screen.xbox_icon",
+                    "third_party_achievement_icon": "@toast_screen.third_party_achievement_icon",
+                    "third_party_invite_icon": "@toast_screen.third_party_invite_icon",
+                    "icon_resource_pack": "@toast_screen.resource_pack_icon",
+                    "key_art_image": "@toast_screen.key_art_image",
+                    "persona_icon": "@toast_screen.persona_icon"
+                  },
+                  "factory_variables": [
+                    "$hide_xbox_live_icon"
+                  ]
+                },
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#toast_icon_section_content",
+                    "binding_name_override": "#collection_length"
+                  }
+                ]
+              }
+            },
+            {
+              "text_padding": {
+                "type": "panel",
+                "size": [ 2, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#text_padding_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  {
+                    "text_stack_panel@toast_screen.text_stack_panel": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "popup_anim": {
+    "anim_type": "offset",
+    "easing": "in_out_cubic",
+    "from": "$popup_distance_from",
+    "to": "$popup_distance_to",
+    "duration": "$transition_time",
+    "$anim_event_name|default": "toast_animation_finished",
+    "end_event": "$anim_event_name"
+  },
+  "popup_anim_alpha_01": {
+    "anim_type": "alpha",
+    "easing": "in_out_cubic",
+    "from": "$popup_alpha_from",
+    "to": "$popup_alpha_to",
+    "duration": "$transition_time",
+    "$anim_event_name|default": "toast_animation_finished",
+    "end_event": "$anim_event_name"
+  },
+  
+  "popup_anim_alpha_01tezt": {
+    "anim_type": "alpha",
+    "easing": "in_out_cubic",
+    "from": 0,
+    "to": 1,
+    "duration": "$transition_time",
+    "next": "@cui-toast.popup_anim_alpha_02"
+  },
+  "popup_anim_alpha_02": {
+    "anim_type": "wait",
+    "duration": "$transition_out_time",
+    "next": "@cui-toast.popup_anim_alpha_03"
+  },
+  "popup_anim_alpha_03": {
+    "anim_type": "alpha",
+    "easing": "in_out_cubic",
+    "from": 1,
+    "to": 0,
+    "duration": "$transition_time",
+    "$anim_event_name|default": "toast_animation_finished",
+    "end_event": "$anim_event_name"
+  },
+  
+  "fade_anim_end": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "from": 1.0,
+    "to": 0.0,
+    "duration": "$transition_out_time",
+    "destroy_at_end": "$toast_control"
+  },
+  "fade_anim_wait": {
+    "anim_type": "wait",
+    "duration": "$display_time",
+    "next": "@toast_screen.fade_anim_end"
+  },
+  "popupvanilla@common.input_panel": {
+    "consume_hover_events": true,
+    "prevent_touch_input": true,
+    "$toast_anchor_from|default": "top_middle",
+    "$toast_anchor_to|default": "bottom_middle",
+    "$toast_offset|default": [ 0, 0 ],
+    "offset": "$toast_offset",
+    "anchor_from": "$toast_anchor_from",
+    "anchor_to": "$toast_anchor_to",
+    "size": "$popup_size",
+    "$alpha_anims|default": [],
+    "$offset_anims|default": [
+      "@toast_screen.popup_anim"
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.toast_interaction",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+      }
+    ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/greyBorder",
+          "anims": "$alpha_anims"
+        }
+      },
+      {
+        "popup_content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 6, 0 ],
+          "layer": 1,
+          "controls": [
+            {
+              "icon_padding": {
+                "layer": 1,
+                "type": "stack_panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%c", "100%" ],
+                "factory": {
+                  "name": "toast_image_factory",
+                  "control_ids": {
+                    "xbox_icon": "@toast_screen.xbox_icon",
+                    "third_party_achievement_icon": "@toast_screen.third_party_achievement_icon",
+                    "third_party_invite_icon": "@toast_screen.third_party_invite_icon",
+                    "icon_resource_pack": "@toast_screen.resource_pack_icon",
+                    "key_art_image": "@toast_screen.key_art_image",
+                    "persona_icon": "@toast_screen.persona_icon"
+                  },
+                  "factory_variables": [
+                    "$hide_xbox_live_icon"
+                  ]
+                },
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#toast_icon_section_content",
+                    "binding_name_override": "#collection_length"
+                  }
+                ]
+              }
+            },
+            {
+              "text_padding": {
+                "type": "panel",
+                "size": [ 2, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#text_padding_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  {
+                    "text_stack_panel@toast_screen.text_stack_panel": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "anims": "$offset_anims"
+  }
+}

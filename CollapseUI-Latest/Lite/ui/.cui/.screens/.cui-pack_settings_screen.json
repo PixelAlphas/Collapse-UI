@@ -1,0 +1,123 @@
+{ "namespace": "cui-pack_settings_screen",
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "cancel_button@cui-common.cancel_button": {}},
+      { "main_screen_dialogs@common_dialogs.main_panel_no_buttons": {
+          "size": [ "80%", "50%" ],
+          "$child_control": "cui-pack_settings_screen.pack_scroll_panel",
+          "$text_name": "#pack_settings_title",
+          "$title_text_binding_type": "global",
+          "layer": 2,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "$cuiv-anim:pos_from": [ 0, 45 ],
+          "$cuiv-anim:pos_to": [ 0, -5 ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+      ]}}
+  ]},
+  "main_screen_background": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui/White",
+    "alpha": 0.6,
+    "color": "$cuigv:TertiaryColor"
+  },
+  "pack_scroll_panel@common.scrolling_panel": {
+    "$show_background": false,
+    "$scrolling_content": "cui-pack_settings_screen.scrolling_content",
+    "$scroll_size": [ 5, "100% - 4px" ],
+    "$scrolling_pane_size": [ "100% - 4px", "100%" ],
+    "$scrolling_pane_offset": [ 2, 0 ],
+    "$scroll_bar_right_padding_size": [ 0, 0 ]
+  },
+  "scrolling_content": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "bindings": [
+      { "binding_name": "#has_content_tiering",
+        "binding_name_override": "#visible"
+    }],
+    "controls": [
+      { "content_tier_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "resourcePack.subpackResolution.alt",
+          "$slider_name": "content_tier_slider",
+          "$slider_select_on_hover": true,
+          "$slider_deselected_button": "button.menu_exit",
+          "$slider_value_binding_name": "#content_tier_value",
+          "$slider_tts_text_value": "#content_tier_slider_text_value",
+          "$cuiv:slider_value_text": "#nevergonnagiveyouup",
+          "$slider_steps_binding_name": "#content_tier_steps",
+          "$cuiv:option_toggle_binding_name": "#has_content_tiering"
+      }},
+      { "information": {
+          "type": "label",
+          "text": "Infomation",
+          "size": [ "100%-8px", "default" ],
+          "layer": 1,
+          "font_type": "MinecraftTen"
+      }},
+      { "content_tier_label": {
+          "type": "label",
+          "text": "#text",
+          "color": [ 0.8, 0.8, 0.8 ],
+          "size": [ "100%-8px", "default" ],
+          "layer": 1,
+          "font_scale_factor": 0.75,
+          "font_type": "dainbold",
+          "localize": false,
+          "bindings": [
+            { "binding_name": "#content_tier_label",
+              "binding_name_override": "#text"
+            },
+            { "binding_name": "#content_tier_supported",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "generated_form@server_form.generated_contents": {}},
+      { "unsupported_content_tier_label": {
+          "type": "label",
+          "text": "#text",
+          "color": "$error_text_color",
+          "size": [ "100%-8px", "default" ],
+          "font_type": "dainbold",
+          "layer": 1,
+          "localize": false,
+          "bindings": [
+            { "binding_name": "#content_tier_label",
+              "binding_name_override": "#text"
+            },
+            { "binding_name": "(not #content_tier_supported)",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "incompatible_label_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c+2px" ],
+          "controls": [
+            { "label": {
+                "type": "label",
+                "text": "#text",
+                "color": "$error_text_color",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "layer": 1,
+                "font_type": "dainbold",
+                "size": [ "100%-8px", "default" ],
+                "offset": [ 4, -2 ],
+                "bindings": [
+                  { "binding_name": "(not #content_tier_supported)",
+                    "binding_name_override": "#visible"
+                  },
+                  { "binding_name": "#incompatible_reason",
+                    "binding_name_override": "#text"
+                }]
+            }}
+      ]}}
+]}}

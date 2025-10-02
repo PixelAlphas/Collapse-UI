@@ -1,0 +1,244 @@
+{ "namespace": "cui-content_log",
+  "root_contents": {
+    "type": "panel",
+    "controls": [
+      { "@cui-common.title_core": {
+          "$cuiv:title_text": "contentlog.history.title"
+      }},
+      { "@main_button": {}},
+      { "@logs_scrolling_panel": {}},
+      { "@logs_scrolling_background": {}}
+  ]},
+  "logs_scrolling_background": {
+    "type": "image",
+    "texture": "textures/ui/.cui-assets/background",
+    "size": [ "100% - 24px", "100% - 74px" ],
+    "alpha": "$cuigv:BackgroundAlpha",
+    "layer": -80,
+    "color": "$cuigv:SecondaryColor"
+  },
+  "main_button": {
+    "type": "stack_panel",
+    "ignored": "(not $supports_clipboard_set)",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ 230, 25 ],
+    "offset": [ 0, -10 ],
+    "controls": [
+      { "clipboard_button@cui-content_log.clipboard_button": {}},
+      { "pudding01": { "type": "panel", "size": [ 4, 4 ] }},
+      { "clear_button@cui-content_log.clear_button": {}}
+  ]},
+  "clipboard_button@cui-button.text_button": {
+    "size": [ "fill", 25 ],
+    "$pressed_button_name": "button.copy_to_clipboard",
+    "$cuiv:button_text": "contentlog.history.copyToClipboard"
+  },
+  "clear_button@cui-button.text_button": {
+    "size": [ "fill", 25 ],
+    "$pressed_button_name": "button.clear",
+    "$cuiv:button_text": "contentlog.history.clear"
+  },
+  "content_log_message": {
+    "type": "label",
+    "color": "$chat_text_color",
+    "localize": false,
+    "size": [ "100% - 8px", "default" ],
+    "text": "#text",
+    "font_type": "smooth",
+    "line_padding": 1,
+    "font_scale_factor": 1,
+    "bindings": [
+      { "binding_type": "collection",
+        "binding_name": "#content_log_text",
+        "binding_name_override": "#text",
+        "binding_collection_name": "content_log_message"
+    }],
+    "controls": [
+      { "background_warning": {
+          "type": "image",
+          "size": [ "100% + 8px", "100%"],
+          "texture": "textures/ui/.cui-assets/background",
+          "alpha": 0.5,
+          "layer": -1,
+          "color": [ 1, 0.5, 0 ],
+          "bindings": [
+            { "binding_type": "collection",
+              "binding_name": "#content_log_text",
+              "binding_name_override": "#text",
+              "binding_collection_name": "content_log_message"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(not(#text - '[warning]' = #text))",
+              "target_property_name": "#visible"
+          }]
+      }},
+      { "background_error": {
+          "type": "image",
+          "size": [ "100% + 8px", "100%"],
+          "texture": "textures/ui/.cui-assets/background",
+          "alpha": 0.5,
+          "layer": -1,
+          "color": [ 1, 0, 0 ],
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "background_warning",
+              "source_property_name": "(not(#text - '[error]' = #text))",
+              "target_property_name": "#visible",
+              "resolve_sibling_scope": true
+          }]
+      }},
+      { "background": {
+          "type": "image",
+          "size": [ "100% + 8px", "100%"],
+          "texture": "textures/ui/.cui-assets/background",
+          "alpha": 0.5,
+          "layer": -1,
+          "color": [ 0, 0, 0 ],
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "background_warning",
+              "source_property_name": "((#text - '[error]' - '[warning]') = #text)",
+              "target_property_name": "#visible",
+              "resolve_sibling_scope": true
+          }]
+      }}
+  ]},
+  "content_log_message_element": {
+    "type": "panel",
+    "size": [ "100%", "100%cm + 4px" ],
+    "controls": [
+      { "@cui-content_log.content_log_message": {}}
+  ]},
+  "messages_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "$scrolling_content_anchor_from": "bottom_left",
+    "$scrolling_content_anchor_to": "bottom_left",
+    "collection_name": "content_log_message",
+    "size": [ "100%", "default" ],
+    "factory": {
+      "name": "messages_factory",
+      "control_name": "cui-content_log.content_log_message_element"
+    },
+    "bindings": [
+      { "binding_name": "#messages_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+  }]},
+  "logs_scrolling_panel@common.scrolling_panel": {
+    "type": "panel",
+    "size": [ "100% - 30px", "100% - 78px" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 38 ],
+    "layer": 30,
+    "$scrolling_content": "cui-content_log.messages_stack_panel",
+    "$scroll_size": [ 5, "100%-4px" ],
+    "$jump_to_bottom_on_update": true,
+    "$show_background": false,
+    "$always_handle_scrolling": true
+  },
+  "content_log_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      { "content_log_core": {
+          "type": "label",
+          "color": "$chat_text_color",
+          "localize": false,
+          "size": [ "100% - 8px", "default" ],
+          "text": "#text",
+          "font_type": "smooth",
+          "line_padding": 1,
+          "font_scale_factor": 1,
+          "anims": [
+            "@cui-anims.content_log_anim_text_alpha_00"
+          ],
+          "bindings": [
+            { "binding_type": "collection",
+              "binding_name": "#content_log_text",
+              "binding_name_override": "#text",
+              "binding_collection_name": "content_log_text_grid",
+              "binding_condition": "once"
+          }],
+          "controls": [
+            { "background_warning": {
+                "type": "image",
+                "size": [ "100% + 8px", "100%"],
+                "texture": "textures/ui/White",
+                "alpha": 0.5,
+                "layer": -1,
+                "color": [ 1, 0.5, 0 ],
+                "anims": [
+                  "@cui-anims.content_log_anim_alpha_00",
+                  "@cui-anims.content_log_anim_bg_00"
+                ],
+                "bindings": [
+                  { "binding_type": "collection",
+                    "binding_name": "#content_log_text",
+                    "binding_name_override": "#text",
+                    "binding_collection_name": "content_log_text_grid"
+                  },
+                  { "binding_type": "view",
+                    "source_property_name": "(not(#text - '[warning]' = #text))",
+                    "target_property_name": "#visible"
+                }]
+            }},
+            { "background_error": {
+                "type": "image",
+                "size": [ "100% + 8px", "100%"],
+                "texture": "textures/ui/White",
+                "alpha": 0.5,
+                "layer": -1,
+                "color": [ 1, 0, 0 ],
+                "anims": [
+                  "@cui-anims.content_log_anim_alpha_00",
+                  "@cui-anims.content_log_anim_bg_00"
+                ],
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "background_warning",
+                    "source_property_name": "(not(#text - '[error]' = #text))",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                }]
+            }},
+            { "background": {
+                "type": "image",
+                "size": [ "100% + 8px", "100%"],
+                "texture": "textures/ui/Black",
+                "alpha": 0.5,
+                "layer": -1,
+                "anims": [
+                  "@cui-anims.content_log_anim_alpha_00",
+                  "@cui-anims.content_log_anim_bg_00"
+                ],
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "background_warning",
+                    "source_property_name": "((#text - '[error]' - '[warning]') = #text)",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                }]
+            }},
+            { "loading_bar": {
+                "type": "image",
+                "size": [ "100% + 8px", 1],
+                "texture": "textures/ui/White",
+                "alpha": 0.2,
+                "layer": -1,
+                "offset": [ -4, 0 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "anims": [
+                  "@cui-anims.content_log_anim_bar_alpha_00",
+                  "@cui-anims.content_log_anim_bar_00"
+                ]
+            }}
+      ]}}
+]}}

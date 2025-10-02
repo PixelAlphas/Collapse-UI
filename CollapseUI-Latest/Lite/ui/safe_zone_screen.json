@@ -1,0 +1,9 @@
+{
+  "safe_zone_screen": {
+    "should_be_skipped_during_automation": true,
+    "controls": [
+      { "screencontent@cui-safezone_screen.root_contents": {}},
+      { "screenbgcontent@cui-common.menu_screen_background": {}}
+    ]
+  }
+}

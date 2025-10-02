@@ -1,0 +1,278 @@
+{ "namespace": "cui-progress_screen",
+  "world_modal_progress_panel@progress.world_modal_progress_panel": {
+    "size": [ "100%", "100%" ],
+    "$cuiv:custom_header_label|default": "#title_text",
+    "$cuiv:custom_bar_color|default": "$cuigv:PrimaryColor",
+    "controls": [
+      { "popup_dialog_factory@progress.popup_dialog_factory": {}},
+      { "progress_title_world_panel@cui-progress_screen.progress_title_world_panel": { "ignored": "$cuiv:is_loading" }},
+      { "progress_title_world_panel_alt@cui-progress_screen.progress_title_world_panel_alt": { "ignored": "(not $cuiv:is_loading)" }},
+      { "cancel_button@cui-progress_screen.cancel_button": { "bindings": [ { "binding_name": "#cancel_visible", "binding_name_override": "#visible" }]}}
+  ]},
+  "cancel_button@cui-button.text_button": {
+    "$pressed_button_name": "button.menu_exit",
+    "size": [ 35, 35 ],
+    "offset": [ 4, 4 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$cuiv:button_type_panel": "cui-start_screen.button_label",
+    "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+    "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+    "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/exit_icon",
+    "$cuiv-anim:pos_from": [ 4, -50 ],
+    "$cuiv-anim:pos_to": [ 4, 4 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
+    "bindings": [
+      { "binding_name": "#cancel_visible",
+        "binding_name_override": "#visible"
+      },
+      { "binding_name": "#cancel_button_text",
+        "binding_type": "global"
+      }
+  ]},
+  "loading_icon": {
+    "ignored": "(not $cuigv:UIAnimations)",
+    "type": "image",
+    "texture": "textures/ui/.cui-assets/loadingharlow",
+    "size": [ 16, 16 ],
+    "uv_size": [ 16, 16 ],
+    "uv": "@cui-anims.loading_anim",
+    "color": "$cuigv:FontPrimaryColor",
+    "disable_anim_fast_forward": true,
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@common.screen_exit_animation_push_alpha",
+      "@common.screen_exit_animation_pop_alpha",
+      "@common.screen_entrance_animation_push_alpha",
+      "@common.screen_entrance_animation_pop_alpha"
+    ],
+    "bindings": [
+      { "binding_name": "#loading_spin_animation_visible",
+        "binding_name_override": "#visible"
+  }]},
+  "modal_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "popup_dialog_factory@progress.popup_dialog_factory": {}},
+      { "modal_progress_panel@cui-progress_screen.modal_progress_panel": {}}
+  ]},
+  "progress_title_world_panel_alt": {
+    "type": "panel",
+    "size": [ "100% - 80px", "100%" ],
+    "controls": [
+      { "experience_bar_empty@cui-common.experience_bar_empty": { 
+          "layer": 1,
+          "offset": [ 0, -30 ],
+          "size": [ "100%", 5 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "$cuiv-anim:pos_from": [ 0, 20 ],
+          "$cuiv-anim:pos_to": [ 0, -30 ],
+          "color": "$cuigv:SecondaryColor",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ]
+      }},
+      { "fancy_progress_loading_bars@cui-common.experience_bar_full": {
+          "layer": 2,
+          "offset": [ 0, -30 ],
+          "size": [ "100%", 5 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "$cuiv-anim:pos_from": [ 0, 20 ],
+          "$cuiv-anim:pos_to": [ 0, -30 ],
+          "$cuiv:bar_color": "$cuiv:custom_bar_color",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ]
+      }},
+      { "progress_title_text@progress.progress_title_text": {
+          "text": "$cuiv:custom_header_label",
+          "offset": [ 14, -26 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "$cuiv-anim:pos_from": [ 14, 24 ],
+          "$cuiv-anim:pos_to": [ 14, -26 ],
+          "color": "$cuigv:FontPrimaryColor",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ],
+          "bindings": [ { "binding_name": "#title_text" }]
+      }},
+      { "progress_bar_text@progress.progress_bar_text": {
+          "size": [ "default", 20 ],
+          "localize": false,
+          "font_size": "small",
+          "offset": [ 1, -8 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "text": "#progress_text",
+          "$cuiv-anim:pos_from": [ 1, 42 ],
+          "$cuiv-anim:pos_to": [ 1, -8 ],
+          "color": "$cuigv:FontPrimaryColor",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ],
+          "bindings": [ { "binding_name": "#progress_text" }]
+      }},
+      { "loading_icon@cui-progress_screen.loading_icon": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 1, -37 ],
+          "size": [ 10, 10 ],
+          "$cuiv-anim:pos_from": [ 1, 13 ],
+          "$cuiv-anim:pos_to": [ 1, -37 ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ]
+      }}
+  ]},
+  "progress_title_world_panel": {
+    "type": "panel",
+    "controls": [
+      { "progress_title_text@progress.progress_title_text": {
+          "font_size": "large",
+          "text": "#title_text",
+          "text_alignment": "center",
+          "offset": [ 0, -40 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "animation_reset_name": "screen_animation_reset",
+          "color": "$cuigv:FontPrimaryColor",
+          "anims": [
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
+          ],
+          "bindings": [ { "binding_name": "#title_text" }]
+      }},
+      { "progress_bar_text@progress.progress_bar_text": {
+          "size": [ "100%", 20 ],
+          "localize": false,
+          "offset": [ 0, -20 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text": "#progress_text",
+          "text_alignment": "center",
+          "animation_reset_name": "screen_animation_reset",
+          "color": "$cuigv:FontPrimaryColor",
+          "anims": [
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
+          ],
+          "bindings": [ { "binding_name": "#progress_text" }]
+      }},
+      { "loading_icon@cui-progress_screen.loading_icon": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -10, 10 ],
+          "size": [ 32, 32 ]
+      }}
+  ]},
+  "modal_progress_panel": {
+    "type": "panel",
+    "controls": [
+      { "@progress.progress_bar": {} },
+      { "progress_title_text@progress.progress_title_text": {
+          "font_size": "large",
+          "text": "#title_text",
+          "text_alignment": "center",
+          "offset": [ 0, -40 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "animation_reset_name": "screen_animation_reset",
+          "color": "$cuigv:FontPrimaryColor",
+          "anims": [
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
+          ],
+          "bindings": [ { "binding_name": "#title_text" }]
+      }},
+      { "progress_bar_text@progress.progress_bar_text": {
+          "size": [ "100%", 20 ],
+          "offset": [ 0, -20 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text": "#progress_text",
+          "text_alignment": "center",
+          "animation_reset_name": "screen_animation_reset",
+          "color": "$cuigv:FontPrimaryColor",
+          "anims": [
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
+          ],
+          "bindings": [ { "binding_name": "#progress_text" }]
+      }},
+      { "loading_anim@cui-progress_screen.loading_icon": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, 4 ],
+          "size": [ 32, 32 ]
+      }}
+  ]},
+  "world_save_modal_progress_screen_content": {
+    "type": "panel",
+    "layer": 3,
+    "$cuiv:is_loading": true,
+    "$cuiv:custom_header_label|default": "#title_text",
+    "$cuiv:custom_bar_color|default": "$cuigv:PrimaryColor",
+    "controls": [
+      { "world_modal_progress_panel@cui-progress_screen.world_modal_progress_panel": {}},
+      { "popup_dialog_factory@progress.popup_dialog_factory": {}}
+  ]},
+  "regular_progress_screen_content": {
+    "type": "panel",
+    "layer": 3,
+    "$cuiv:is_loading": true,
+    "$cuiv:custom_header_label|default": "#title_text",
+    "$cuiv:custom_bar_color|default": "$cuigv:PrimaryColor",
+    "controls": [
+      { "world_modal_progress_panel@cui-progress_screen.world_modal_progress_panel": {}},
+      { "popup_dialog_factory@progress.popup_dialog_factory": {}}
+  ]},
+  "regular_progress_screen_content_overworld@regular_progress_screen_content": {
+    "$cuiv:custom_header_label": "cui.loading.overworld",
+    "$cuiv:custom_bar_color": "$cuigv:OverworldColor"
+  },
+  "regular_progress_screen_content_nether@regular_progress_screen_content": {
+    "$cuiv:custom_header_label": "cui.loading.nether",
+    "$cuiv:custom_bar_color": "$cuigv:NetherColor"
+  },
+  "regular_progress_screen_content_theend@regular_progress_screen_content": {
+    "$cuiv:custom_header_label": "cui.loading.theend",
+    "$cuiv:custom_bar_color": "$cuigv:TheEndColor"
+  }
+}

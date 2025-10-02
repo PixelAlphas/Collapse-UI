@@ -1,0 +1,95 @@
+{ "namespace": "cui-gamepad",
+  "gamepad_tooltip": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 20 ],
+    "$cuiv:gamepad_hide_description|default": false,
+    "$cuiv:gamepad_icon_binding_name|default": "#gamepad_helper_visible",
+    "$cuiv:gamepad_icon_binding_type|default": "global",
+    "$cuiv:gamepad_no_bindings_description|default": false,
+    "$cuiv:icon_texture|default": "",
+    "bindings": [
+      { "binding_type": "$cuiv:gamepad_icon_binding_type",
+        "binding_name": "$cuiv:gamepad_icon_binding_name",
+        "binding_name_override": "#visible"
+    }],
+    "controls": [
+      { "icon_element": {
+          "type": "panel",
+          "size": [ 24, 24 ],
+          "controls": [
+            { "gamepad_icon_button": {
+                "type": "image",
+                "texture": "$cuiv:icon_texture",
+                "bindings": [
+                  { "binding_name": "$cuiv:icon_texture",
+                    "binding_name_override": "#texture"
+                  },
+                  { "binding_type": "$cuiv:gamepad_icon_binding_type",
+                    "binding_name": "$cuiv:gamepad_icon_binding_name",
+                    "binding_name_override": "#visible"
+                }]
+            }}
+      ]}},
+      { "label_element": {
+          "ignored": "$cuiv:gamepad_hide_description",
+          "type": "panel",
+          "size": [ "100%c + 2px", 26 ],
+          "controls": [
+            { "bindings_label": {
+                "offset": [ 0, 0 ],
+                "ignored": "$cuiv:gamepad_no_bindings_description",
+                "type": "label",
+                "color": "$gamepad_helper_icon_description_text_color",
+                "shadow": "$gamepad_helper_icon_description_shadow",
+                "text": "$icon_description_bind",
+                "$icon_description_bind|default": "#gamepad_helper_icon_description",
+                "$icon_description_bind_type|default": "global",
+                "$icon_description_bind_condition|default": "always_when_visible",
+                "$gamepad_helper_icon_description_text_color|default": "$gamepad_description_text_color",
+                "$gamepad_helper_icon_description_shadow|default": true,
+                "bindings": [
+                  { "binding_name": "$icon_description_bind",
+                    "binding_type": "$icon_description_bind_type",
+                    "binding_condition": "$icon_description_bind_condition"
+                }]
+            }},
+            { "label": {
+                "offset": [ 0, -1 ],
+                "ignored": "(not $cuiv:gamepad_no_bindings_description)",
+                "type": "label",
+                "color": "$gamepad_helper_icon_description_text_color",
+                "shadow": "$gamepad_helper_icon_description_shadow",
+                "$gamepad_helper_icon_description_text_color|default": "$gamepad_description_text_color",
+                "$gamepad_helper_icon_description_shadow|default": true,
+                "text": "$icon_description_bind",
+                "font_type": "dainbold"
+            }}
+      ]}}
+  ]},
+  
+  "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip": {
+    "$cuiv:icon_texture": "#controller_face_down_icon",
+    "$icon_description_bind": "#button_a_description"
+  },
+  "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip": {
+    "$cuiv:icon_texture": "#controller_face_right_icon",
+    "$icon_description_bind": "#button_b_description"
+  },
+  "gamepad_tooltip_x@cui-gamepad.gamepad_tooltip": {
+    "$cuiv:icon_texture": "#controller_face_left_icon",
+    "$icon_description_bind": "#button_x_description"
+  },
+  "gamepad_tooltip_y@cui-gamepad.gamepad_tooltip": {
+    "$cuiv:icon_texture": "#controller_face_up_icon",
+    "$icon_description_bind": "#button_y_description"
+  },
+  "gamepad_tooltip_lb@cui-gamepad.gamepad_tooltip": {
+    "$cuiv:icon_texture": "#controller_left_trigger",
+    "$icon_description_bind": "#controller_left_bumper_description"
+  },
+  "gamepad_tooltip_rb@cui-gamepad.gamepad_tooltip": {
+    "$cuiv:icon_texture": "#controller_right_trigger",
+    "$icon_description_bind": "#controller_right_bumper_description"
+  }
+}

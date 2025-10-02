@@ -1,0 +1,184 @@
+{ "namespace": "cui-about_section",
+  "root_contents": {
+    "type": "panel",
+    "$scrolling_content": "cui-about_section.core_element",
+    "controls": [
+      { "@cui-play_screen.general_scroll_contents": {}}
+  ]},
+  "core_element": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "use_child_anchors": true,
+    "controls": [
+      { "padding01": { "type": "panel", "size": [ 1, 10 ]}},
+      { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
+      { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
+      { "ui_version@cui-common.label_with_background_adv": {
+          "$cuiv:lwb_text": "v3.0.6"
+      }},
+      { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-about_section.about_ui",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding04": { "type": "panel", "size": [ 1, 8 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-about_section.about_version",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding05": { "type": "panel", "size": [ 1, 10 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-about_section.social_stuff",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding06": { "type": "panel", "size": [ 1, 10 ]}},
+      { "ui_version@cui-common.label_with_background_adv": {
+          "size": [ "100%", "100%cm + 8px" ],
+          "$cuiv:lwb_text_size": [ "100% - 12px", "default" ],
+          "$cuiv:lwb_text_alignment": "left",
+          "$cuiv:lwb_text": "Greetings there, Thanks for trying this UI pack! It's pretty much been in-development for quite some time, it was some 'sequel' to §lArcdustry-UI§r§f project due to overwhelming requests for me after retiring JSON-UI, so i decided to create this UI in some sort of secrets and couple of beta testing.\n\nAny suggestions should go through my discord server."
+      }},
+      { "padding07": { "type": "panel", "size": [ 1, 10 ]}}
+  ]},
+  "element_panel_template": {
+    "type": "panel",
+    "size": [ "100% - 4px", "100%c" ]
+  },
+  "element_stack_template": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true
+  },
+  "about_ui@element_panel_template": {
+    "controls": [
+      { "author@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.about.author",
+          "$cuiv:about_text_gray": "Arxance"
+      }}
+  ]},
+  "about_version@element_stack_template": {
+    "controls": [
+      { "build_release@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.about.update",
+          "$cuiv:about_text_gray": "Mon, 10 February (2025)"
+      }},
+      { "branch@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.about.branch",
+          "$cuiv:about_text_gray": "Stable"
+      }},
+      { "setting_version@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.about.setting_ver",
+          "$cuiv:about_text_gray": "v1.21.50"
+      }},
+      { "hud_version@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.about.hud_ver",
+          "$cuiv:about_text_gray": "v1.21.50"
+      }},
+      { "support_version@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.about.support",
+          "$cuiv:about_text_gray": "v1.21.50+"
+      }}
+  ]},
+  "social_stuff": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "curseforge@cui-about_section.about_text_icon": {
+          "$cuiv:about_icon": "textures/ui/.cui-assets/.icons/curseforge_icon",
+          "$cuiv:about_text": "Curseforge",
+          "$cuiv:about_text_gray": "Arxance"
+      }},
+      { "mcpedl@cui-about_section.about_text_icon": {
+          "$cuiv:about_icon": "textures/ui/.cui-assets/.icons/mcpedl_icon",
+          "$cuiv:about_text": "MCPEDL",
+          "$cuiv:about_text_gray": "Arxance"
+      }},
+      { "pmc@cui-about_section.about_text_icon": {
+          "$cuiv:about_icon": "textures/ui/.cui-assets/.icons/pmc_icon",
+          "$cuiv:about_text": "PlanetMinecraft",
+          "$cuiv:about_text_gray": "Arxance"
+      }},
+      { "github@cui-about_section.about_text_icon": {
+          "$cuiv:about_icon": "textures/ui/.cui-assets/.icons/github_icon",
+          "$cuiv:about_text": "Github (Source code available)",
+          "$cuiv:about_text_gray": "PixelAlpha"
+      }},
+      { "youtube@cui-about_section.about_text_icon": {
+          "$cuiv:about_icon": "textures/ui/.cui-assets/.icons/youtube_icon",
+          "$cuiv:about_text": "Youtube",
+          "$cuiv:about_text_gray": "Arxance"
+      }},
+      { "twitter@cui-about_section.about_text_icon": {
+          "$cuiv:about_icon": "textures/ui/.cui-assets/.icons/twitter_icon",
+          "$cuiv:about_text": "Twitter",
+          "$cuiv:about_text_gray": "Arcdustry"
+      }},
+      { "bluesky@cui-about_section.about_text_icon": {
+          "$cuiv:about_icon": "textures/ui/.cui-assets/.icons/bluesky_icon",
+          "$cuiv:about_text": "Bluesky",
+          "$cuiv:about_text_gray": "arxance.bsky.social"
+      }},
+      { "discord@cui-about_section.about_text_icon": {
+          "$cuiv:about_icon": "textures/ui/.cui-assets/.icons/discord_icon",
+          "$cuiv:about_text": "Discord",
+          "$cuiv:about_text_gray": "Arcdustry | discord.gg/ZPAZvtprYa"
+      }}
+  ]},
+  "about_text": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:about_text|default": "",
+    "$cuiv:about_text_gray|default": "",
+    "$cuiv:about_text_gray_bindings|default": [],
+    "layer": 1,
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:about_text",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_value": {
+          "type": "label",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "text": "$cuiv:about_text_gray",
+          "color": "$cuigv:FontSecondaryColor",
+          "bindings": "$cuiv:about_text_gray_bindings"
+      }}
+  ]},
+  "about_text_icon": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:about_icon|default": "",
+    "$cuiv:about_text|default": "",
+    "$cuiv:about_text_gray|default": "",
+    "controls": [
+      { "logo": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "texture": "$cuiv:about_icon"
+      }},
+      { "label01": {
+          "type": "label",
+          "text": "$cuiv:about_text",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 22, 0 ],
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "label02": {
+          "type": "label",
+          "text": "$cuiv:about_text_gray",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "color": "$cuigv:FontSecondaryColor"
+      }}
+]}}

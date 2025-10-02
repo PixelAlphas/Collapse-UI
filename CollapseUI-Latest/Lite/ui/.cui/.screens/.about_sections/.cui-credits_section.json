@@ -1,0 +1,99 @@
+{ "namespace": "cui-credits_section",
+  "root_contents": {
+    "type": "panel",
+    "$scrolling_content": "cui-credits_section.core_element",
+    "controls": [
+      { "@cui-play_screen.general_scroll_contents": {}}
+  ]},
+  "core_element": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "use_child_anchors": true,
+    "controls": [
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.credit.bg"
+      }},
+      { "padding00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-credits_section.credit_background",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding01": { "type": "panel", "size": [ 1, 10 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.credit.lang"
+      }},
+      { "padding02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-credits_section.credit_lang",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding03": { "type": "panel", "size": [ 1, 10 ]}}
+  ]},
+  "credit_background@cui-about_section.element_stack_template": {
+    "controls": [
+      { "mattoo@cui-credits_section.credit_label": {
+          "$cuiv:credit_text_main": "Mattoo/Mattoo0oo0 §7( Pre-3.0 )",
+          "$cuiv:credit_text_who": "@muffing85",
+          "$cuiv:credit_text_texture": "textures/ui/.cui-assets/.icons/youtube_icon"
+      }},
+      { "sdinataaa@cui-credits_section.credit_label": {
+          "$cuiv:credit_text_main": "sdinataaa",
+          "$cuiv:credit_text_who": "@sdinataaa",
+          "$cuiv:credit_text_texture": "textures/ui/.cui-assets/.icons/discord_icon"
+      }}
+  ]},
+  "credit_lang@cui-about_section.element_stack_template": {
+    "controls": [
+      { "qindagghc@cui-credits_section.credit_label": {
+          "$cuiv:credit_text_main": "QinDagghc §7( 中文 / Chinese )",
+          "$cuiv:credit_text_who": "@QinDagghc",
+          "$cuiv:credit_text_texture": "textures/ui/.cui-assets/.icons/github_icon"
+      }},
+      { "expexx@cui-credits_section.credit_label": {
+          "$cuiv:credit_text_main": "Expexx §7( русский / Russia )",
+          "$cuiv:credit_text_who": "@Expexx",
+          "$cuiv:credit_text_texture": "textures/ui/.cui-assets/.icons/discord_icon"
+      }},
+      { "sdinataaa@cui-credits_section.credit_label": {
+          "$cuiv:credit_text_main": "sdinataaa §7( Bahasa / Indonesia )",
+          "$cuiv:credit_text_who": "@sdinataaa",
+          "$cuiv:credit_text_texture": "textures/ui/.cui-assets/.icons/discord_icon"
+      }},
+      { "parasetamolowo@cui-credits_section.credit_label": {
+          "$cuiv:credit_text_main": "parasetamolowo §7( Spanish )",
+          "$cuiv:credit_text_who": "@parasetamolowo",
+          "$cuiv:credit_text_texture": "textures/ui/.cui-assets/.icons/discord_icon"
+      }}
+  ]},
+  "credit_label": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:credit_text_main|default": "",
+    "$cuiv:credit_text_who|default": "",
+    "$cuiv:credit_text_texture|default": "",
+    "controls": [
+      { "logo": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "texture": "$cuiv:credit_text_texture"
+      }},
+      { "main": {
+          "type": "label",
+          "text": "$cuiv:credit_text_main",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "who": {
+          "type": "label",
+          "text": "$cuiv:credit_text_who",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -22, 0 ],
+          "color": "$cuigv:FontSecondaryColor"
+      }}
+  ]}
+}

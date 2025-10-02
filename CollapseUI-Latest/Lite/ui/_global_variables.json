@@ -1,0 +1,83 @@
+{
+  // General
+  "$cuigv:ConfigName": "Default",
+    // Config name — You can change it to anything you want if you wish to customize.
+  "$cuigv:DesignedVersion": "v3.0",
+    // Designed Version — Config version that supported the UI
+  
+  // -- README before modifying! --
+  // There'll be a corresponding text next to the value.
+  // To ensure the correct way and not causing errors, You'll see those
+  // by following.
+    // [ 1, 1, 1, 1.0 ] | ColorAdv — RBG values but divided by 1 + Alpha
+    // [ 1, 1, 1 ] Color — RBG values but divided by 1
+    // 0.0 - 1.0 | Value — Value only support ranged from 0.0 to 1.0
+    // True/False | Boolean — Only True/False as Value ( True = Enable | False = Disable )
+  
+  // UI Theme
+  // Changes the UI color/alpha and enable some of its featuure
+  "$cuigv:PrimaryColor": [ 0.5450, 0.3450, 0.9254 ], // Color
+    // UI accents, this includes — Buttons, Icons, Loading bar, and etc.
+  "$cuigv:SecondaryColor": [ 0.0745, 0.0588, 0.0862 ], // Color
+    // Background Colors.
+  "$cuigv:TertiaryColor": [ 0.1607, 0.1176, 0.2 ], // Color
+    // Brighter Background Colors.
+  "$cuigv:FontPrimaryColor": [ 1, 1, 1 ], // Color
+    // Overall texts color. (Not fully finished)
+  "$cuigv:FontSecondaryColor": [ 0.7, 0.7, 0.7 ], // Color
+    // Secondary texts color — it's gray text.
+  "$cuigv:BackgroundAlpha": 0.8, // Value
+    // UI Background transparent.
+  "$cuigv:ButtonAlpha": 0.8, // Value
+    // Button(s) transparent.
+  "$cuigv:UIBackground": false, // Boolean
+    // Shows actual image behind the UI — Including Blur version.
+  "$cuigv:UIBackgroundSlider": true, // Boolean
+    // Shows a sliding images on the Play Button from Start screen.
+  "$cuigv:BackgroundGradientPrimaryColor": [ 0, 0, 0, 0.8 ], // ColorAdv
+    // Background Gradient.
+  "$cuigv:BackgroundGradientSecondaryColor": [ 0, 0, 0, 0 ], // ColorAdv
+    // Background Gradient.
+  "$cuigv:OverworldColor": [ 0.4784, 0.8784, 0.5215 ], // Color
+    // Overworld Color.
+  "$cuigv:NetherColor": [ 0.9568, 0.4784, 0.4784 ], // Color
+    // Nether Color.
+  "$cuigv:TheEndColor": [ 0.6627, 0.4588, 0.8823 ], // Color
+    // The End Color.
+
+  // Visuals
+  "$cuigv:Shadows": true, // Boolean
+    // Adds shadows to the elements.
+  "$cuigv:FadedProgressBar": true, // Boolean
+    // Adds a fading head gradient of the progress bar in loading screen.
+  "$cuigv:ExpTextShadows": true, // Boolean
+    // Replace the vanilla experience bar text into java edition style.
+  "$cuigv:BackgroundGradient": true, // Boolean
+    // Shows a background gradients.
+  "$cuigv:UIAnimations": true,
+    // Shows a animated UI elements such as Play button, Extra Menu etc.
+
+  // Layouts
+  "$cuigv:LogoInPauseScreen": true,
+    // Enable the game's logo instead displaying "Pause"
+  "$cuigv:StartMainButtonClassic": false,
+    // Enable Classic menu (from Arc-UI) for controller convenience.
+  "$cuigv:SearchBoxSystem": true, // Boolean
+    // World Search ( Case Sensitive! )
+  "$cuigv:VanillaPaperdoll": false, // Boolean
+    // Shows your character/skin on the menu.
+  "$cuigv:NoGameLogo": false, // Boolean
+    // Replace the UI logo with game logo.
+  "$cuigv:NoRealmsPromoteInWorldSection": false, // Boolean
+    // Realms promotion on world section.
+  "$cuigv:NoMarketplaceButton": false, // Boolean
+    // No Marketplace Button on either pause and start screen.
+  "$cuigv:HorizontalSlider": false, // Boolean
+    // Make the slider into horizontal instead vertical. ( Old slider design returns )
+  
+  // Unused - will do nothing...
+  "$cuigv:OriginUI": true, // Boolean
+  "$cuigv:DebugElement": false, // Boolean
+  "$cuigv:CompactMode": false, // Boolean
+  "$cuigv:AdditionalStartButtons": true // Boolean
+}

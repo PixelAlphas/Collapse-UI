@@ -1,0 +1,250 @@
+{ "namespace": "cui-ss_accessibility",
+  "accessibility_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "accessibility_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.accessibility", "$cuiv:header_title": "cui.settings.accessibility.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "soundCategory.texttospeech"
+      }},
+      { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "texttospeech@cui-common.element_background": { 
+          "$cuiv:element_background_contents": "cui-ss_accessibility.texttospeech",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "key.categories.misc"
+      }},
+      { "pudding_04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "misc@cui-common.element_background": { 
+          "$cuiv:element_background_contents": "cui-ss_accessibility.misc",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "pudding_05": { "type": "panel", "size": [ 1, 6 ]}},
+      { "reset_button@cui-button.text_button": {
+          "ignored": "(not $is_pregame)",
+          "size": [ "100% - 4px", 30 ],
+          "$pressed_button_name": "button.reset_settings",
+          "$cuiv:button_text": "options.resetSettings",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+          "property_bag": { "reset_group": "accessibility" }
+      }},
+      { "pudding_06": { "type": "panel", "size": [ 1, 6 ]}}
+  ]},
+  "texttospeech": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "option_toggle0@cui-setting_screen.option_toggle": {
+          "ignored": "(not $supports_flite_tts or not $platform_tts_exists)",
+          "$cuiv:option_label_text": "options.enableAutoPlatformTextToSpeech",
+          "$cuiv:option_binding_name": "#enable_auto_text_to_speech",
+          "$cuiv:option_toggle_binding_name": "#enable_auto_text_to_speech_enabled",
+          "$toggle_name": "enable_auto_text_to_speech"
+      }},
+      { "option_toggle1@cui-setting_screen.option_toggle": {
+          "ignored": "(not $supports_flite_tts)",
+          "$cuiv:option_label_text": "options.enableUITextToSpeech",
+          "$cuiv:option_binding_name": "#enable_ui_text_to_speech",
+          "$cuiv:option_toggle_binding_name": "#enable_ui_text_to_speech_enabled",
+          "$toggle_name": "enable_ui_text_to_speech"
+      }},
+      { "option_toggle2@cui-setting_screen.option_toggle": {
+          "ignored": "(not $supports_flite_tts)",
+          "$cuiv:option_label_text": "options.enableChatTextToSpeech",
+          "$cuiv:option_binding_name": "#enable_chat_text_to_speech",
+          "$cuiv:option_toggle_binding_name": "#enable_chat_text_to_speech_enabled",
+          "$toggle_name": "enable_chat_text_to_speech",
+          "bindings": [
+            { "binding_name": "#not_hide_chat",
+              "binding_name_override": "#enabled"
+          }]
+      }},
+      { "option_toggle3@cui-setting_screen.option_toggle": {
+          "ignored": "(not $supports_flite_tts)",
+          "$cuiv:option_label_text": "options.enableOpenChatMessage",
+          "$cuiv:option_binding_name": "#enable_open_chat_message",
+          "$cuiv:option_toggle_binding_name": "#enable_open_chat_message_enabled",
+          "$toggle_name": "enable_open_chat_message"
+      }},
+      { "option_slider_0@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "soundCategory.texttospeech",
+          "$slider_name": "texttospeech_volume",
+          "$slider_value_binding_name": "#texttospeech_volume",
+          "$slider_tts_text_value": "#texttospeech_volume_text_value",
+          "$cuiv:slider_value_text": "#texttospeech_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#texttospeech_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#texttospeech_volume_text_value"
+      }]}}
+  ]},
+  "misc": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "camera_shake_toggle@cui-setting_screen.option_toggle": {
+          "ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
+          "$cuiv:option_label_text": "options.screenShake",
+          "$cuiv:option_binding_name": "#camera_shake",
+          "$cuiv:option_toggle_binding_name": "#camera_shake_enabled",
+          "$toggle_name": "camera_shake"
+      }},
+      { "text_background_opacity_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.textBackgroundOpacity",
+          "$slider_name": "text_background_opacity",
+          "$slider_value_binding_name": "#text_background_opacity",
+          "$slider_tts_text_value": "#text_background_opacity_text_value",
+          "$cuiv:slider_value_text": "#text_background_opacity_text_value",
+          "$cuiv:option_toggle_binding_name": "#text_background_opacity_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#text_background_opacity_text_value" }]
+      }},
+      { "actionbar_text_background_opacity_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.actionBarTextBackgroundOpacity",
+          "$slider_name": "actionbar_text_background_opacity",
+          "$slider_value_binding_name": "#actionbar_text_background_opacity",
+          "$slider_tts_text_value": "#actionbar_text_background_opacity_text_value",
+          "$cuiv:slider_value_text": "#actionbar_text_background_opacity_text_value",
+          "$cuiv:option_toggle_binding_name": "#actionbar_text_background_opacity_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#actionbar_text_background_opacity_text_value" }]
+      }},
+      { "darkness_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.darknessEffectModifier.message",
+          "$cuiv:slider_value_text": "#darkness_text_value",
+          "$cuiv:option_label_text": "options.darknessEffectModifier",
+          "$slider_name": "darkness",
+          "$slider_value_binding_name": "#darkness",
+          "$slider_tts_text_value": "#darkness_text_value",
+          "$cuiv:option_toggle_binding_name": "#darkness_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#darkness_text_value" }]
+      }},
+      { "chat_message_duration_options_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "orientation": "vertical",
+          "$option_label": "options.notificationDuration.Chat",
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.notificationDuration.ChatDuration",
+          "controls": [
+            { "three_sec@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#chat_message_duration_radio_ThreeSec",
+                "$cuiv:option_value_text": "options.notificationDuration.chat.ThirtySec",
+                "bindings": [
+                  { "binding_name": "#chat_message_duration_radio_ThirtySec",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "ten_sec@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#chat_message_duration_radio_TenSec",
+                "$cuiv:option_value_text": "options.notificationDuration.chat.ThreeSec",
+                "bindings": [
+                  { "binding_name": "#chat_message_duration_radio_ThreeSec",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "thirty_sec@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#chat_message_duration_radio_ThirtySec",
+                "$cuiv:option_value_text": "options.notificationDuration.chat.TenSec",
+                "bindings": [
+                  { "binding_name": "#chat_message_duration_radio_TenSec",
+                    "binding_name_override": "#visible"
+                }]
+          }}
+      ]}},
+      { "toast_notification_duration_options_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "orientation": "vertical",
+          "$option_label": "options.notificationDuration.Toast",
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.notificationDuration.ToastMessage",
+          "controls": [
+            { "three_sec@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#notification_duration_radio_ThreeSec",
+                "$cuiv:option_value_text": "options.notificationDuration.toast.ThirtySec",
+                "bindings": [
+                  { "binding_name": "#notification_duration_radio_ThirtySec",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "ten_sec@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#notification_duration_radio_TenSec",
+                "$cuiv:option_value_text": "options.notificationDuration.toast.ThreeSec",
+                "bindings": [
+                  { "binding_name": "#notification_duration_radio_ThreeSec",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "thirty_sec@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#notification_duration_radio_ThirtySec",
+                "$cuiv:option_value_text": "options.notificationDuration.toast.TenSec",
+                "bindings": [
+                  { "binding_name": "#notification_duration_radio_TenSec",
+                    "binding_name_override": "#visible"
+                }]
+          }}
+      ]}},
+      { "glint_strength_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.glintStrength.message",
+          "$cuiv:option_label_text": "options.glintStrength",
+          "$slider_name": "glint_strength",
+          "$slider_value_binding_name": "#glint_strength",
+          "$slider_tts_text_value": "#glint_strength_text_value",
+          "$cuiv:slider_value_text": "#glint_strength_text_value",
+          "$cuiv:option_toggle_binding_name": "#glint_strength_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#glint_strength_text_value" }]
+      }},
+      { "glint_speed_slider@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.glintSpeed.message",
+          "$cuiv:option_label_text": "options.glintSpeed",
+          "$slider_name": "glint_speed",
+          "$slider_value_binding_name": "#glint_speed",
+          "$slider_tts_text_value": "#glint_speed_text_value",
+          "$cuiv:slider_value_text": "#glint_speed_text_value",
+          "$cuiv:option_toggle_binding_name": "#glint_speed_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#glint_speed_text_value" }]
+      }},
+      { "gui_scale_slider@cui-setting_screen.option_slider": {
+          "ignored": "($is_holographic)",
+          "$cuiv:option_label_text": "options.guiScale.optionName",
+          "$slider_name": "gui_scale",
+          "$slider_value_binding_name": "#gui_scale",
+          "$slider_tts_text_value": "#gui_scale_text_value",
+          "$cuiv:slider_value_text": "#gui_scale_text_value",
+          "$cuiv:option_toggle_binding_name": "#gui_scale_enabled",
+          "$slider_steps_binding_name": "#gui_scale_steps",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#gui_scale_text_value" }],
+          "bindings": [
+            { "binding_name": "#gui_scale_visible",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "gui_accessibility_scaling_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.gui.accessibility.scaling",
+          "$cuiv:option_binding_name": "#gui_accessibility_scaling",
+          "$cuiv:option_toggle_binding_name": "#gui_accessibility_scaling_enabled",
+          "$toggle_name": "gui_accessibility_scaling",
+          "layer": 1
+      }}
+  ]}
+}

@@ -1,0 +1,365 @@
+{ "namespace": "cui-ss_touch",
+  "touch_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "touch_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.touch", "$cuiv:header_title": "cui.settings.touch.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "options.controlMode.title"
+      }},
+      { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "controlmode@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_touch.controlmode"}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "key.categories.misc"
+      }},
+      { "padding_04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "misc@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_touch.misc"}},
+      { "pudding_05": { "type": "panel", "size": [ 1, 6 ]}},
+      { "reset_button@cui-button.text_button": {
+          "ignored": "(not $is_pregame)",
+          "size": [ "100% - 4px", 30 ],
+          "$pressed_button_name": "button.reset_touch_bindings",
+          "$cuiv:button_text": "controllerLayoutScreen.resetAllBindings",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "pudding_06": { "type": "panel", "size": [ 1, 6 ]}}
+  ]},
+  "controlmode": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "note_panel": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "100% - 8px", "100%cm + 4px" ],
+          "color": "$cuigv:TertiaryColor",
+          "controls": [
+            { "description": {
+                "type": "label",
+                "size": [ "100% - 8px", "default" ],
+                "color": "$cuigv:FontPrimaryColor",
+                "layer": 5,
+                "text": "#selected_control_scheme",
+                "bindings": [
+                  { "binding_name": "#selected_control_scheme_name",
+                    "binding_name_override": "#selected_control_scheme"
+                }]
+            }}
+      ]}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "image_and_button": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100% - 8px", "100%c" ],
+          "bindings": [
+            { "binding_name": "#new_touch_control_schemes_settings",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "images": {
+                "type": "panel",
+                "size": [ "100%", "20%x" ],
+                "controls": [
+                  { "touch_image": {
+                      "type": "image",
+                      "texture": "textures/ui/thumbnail_touch",
+                      "bindings": [
+                        { "binding_name": "#touch_selected",
+                          "binding_name_override": "#visible"
+                      }]
+                  }},
+                  { "crosshair_image": {
+                      "type": "image",
+                      "texture": "textures/ui/thumbnail_crosshair",
+                      "bindings": [
+                        { "binding_name": "#crosshair_selected",
+                          "binding_name_override": "#visible"
+                      }]
+                  }},
+                  { "classic_image": {
+                      "type": "image",
+                      "texture": "textures/ui/thumbnail_classic",
+                      "bindings": [
+                        { "binding_name": "#classic_selected",
+                          "binding_name_override": "#visible"
+                      }]
+                  }}
+            ]}},
+            { "padding_1": {
+                "type": "panel",
+                "size": [ "100%", "2px" ]
+            }}
+      ]}},
+      { "select_control_mode@cui-button.text_button": {
+          "$pressed_button_name": "button.select_control_mode",
+          "$cuiv:button_text": "options.controlMode.selectControlMode",
+          "size": [ "100%", 25 ],
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+      }},
+      { "option_resizable_ui@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.resizableUI",
+          "$cuiv:option_binding_name": "#resizable_ui",
+          "$cuiv:option_toggle_binding_name": "#resizable_ui_enabled",
+          "$toggle_name": "resizable_ui"
+      }},
+      { "modify_control_layout_button@cui-button.text_button": {
+          "$pressed_button_name": "button.modify_control_layout",
+          "$cuiv:button_text": "hudScreen.controlCustomization.customiseControls",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+          "size": [ "100%", 25 ],
+          "bindings": [
+            { "binding_name": "#modify_layout_enabled",
+              "binding_name_override": "#enabled"
+            },
+            { "binding_name": "#resizable_ui_active",
+              "binding_name_override": "#visible",
+               "binding_type": "global"
+          }]
+      }}
+  ]},
+  "misc": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "option_slider_0@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.sensitivity",
+          "$slider_name": "touch_sensitivity",
+          "$slider_value_binding_name": "#touch_sensitivity",
+          "$slider_tts_text_value": "#touch_sensitivity_text_value",
+          "$cuiv:slider_value_text": "#touch_sensitivity_text_value",
+          "$cuiv:option_toggle_binding_name": "#touch_sensitivity_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#touch_sensitivity_text_value" }]
+      }},
+      { "option_slider_damen@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.spyglassdampen",
+          "$slider_name": "spyglass_touch_dampening",
+          "$slider_value_binding_name": "#spyglass_touch_dampening",
+          "$slider_tts_text_value": "#spyglass_touch_dampening_text_value",
+          "$cuiv:slider_value_text": "#spyglass_touch_dampening_text_value",
+          "$cuiv:option_toggle_binding_name": "#touch_sensitivity_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#spyglass_touch_dampening_text_value" }]
+      }},
+      { "option_show_action_button@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.showActionButton",
+          "$cuiv:option_binding_name": "#show_action_button",
+          "$cuiv:option_toggle_binding_name": "#show_action_button_enabled",
+          "$toggle_name": "show_action_button",
+          "bindings": [
+            { "binding_name": "#touch_controls_v2_crosshair_mode",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "option_show_block_select_button@cui-setting_screen.option_toggle": {
+          "ignored": "$education_edition",
+          "$cuiv:option_label_text": "options.showBlockSelectButton",
+          "$cuiv:option_binding_name": "#show_block_select_button",
+          "$cuiv:option_toggle_binding_name": "#show_block_select_button_enabled",
+          "$toggle_name": "show_block_select_button",
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.showBlockSelectButton.message"
+      }},
+      { "option_toggle_left_handed@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.lefthanded",
+          "$cuiv:option_binding_name": "#left_handed",
+          "$cuiv:option_toggle_binding_name": "#left_handed_enabled",
+          "$toggle_name": "left_handed"
+      }},
+      { "option_toggle_auto_jump@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.autojump",
+          "$cuiv:option_binding_name": "#touch_autojump",
+          "$cuiv:option_toggle_binding_name": "#touch_autojump_enabled",
+          "$toggle_name": "touch_autojump"
+      }},
+      { "option_bool_sprint_on_movement@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.sprintOnMovement",
+          "$cuiv:option_binding_name": "#sprint_on_movement",
+          "$cuiv:option_toggle_binding_name": "#sprint_on_movement_enabled",
+          "$toggle_name": "sprint_on_movement",
+          "bindings": [
+            { "binding_name": "#touch_controls_v2",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "joystick_visibility_dropdown": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "orientation": "vertical",
+          "$option_label": "options.joystickVisibilityOption",
+          "bindings": [
+            { "binding_name": "#touch_controls_v2",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#joystick_visibility_visible",
+                "$cuiv:option_value_text": "options.joystickVisibilityOption.hiddenJoystick",
+                "bindings": [
+                  { "binding_name": "#joystick_visibility_hidden",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#joystick_visibility_hidden",
+                "$cuiv:option_value_text": "options.joystickVisibilityOption.hiddenJoystickWhenUnused",
+                "bindings": [
+                  { "binding_name": "#joystick_visibility_hidden_when_unused",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#joystick_visibility_hidden_when_unused",
+                "$cuiv:option_value_text": "options.joystickVisibilityOption.visibleJoystick",
+                "bindings": [
+                  { "binding_name": "#joystick_visibility_visible",
+                    "binding_name_override": "#visible"
+                }]
+            }}
+      ]}},
+      { "option_slider_thumbstick_opacity@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.thumbstickOpacity",
+          "$slider_name": "thumbstick_opacity",
+          "$slider_value_binding_name": "#thumbstick_opacity",
+          "$slider_tts_text_value": "#thumbstick_opacity_text_value",
+          "$cuiv:slider_value_text": "#thumbstick_opacity_text_value",
+          "$cuiv:option_toggle_binding_name": "#thumbstick_opacity_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#thumbstick_opacity_text_value" }],
+          "bindings": [
+            { "binding_name": "#is_thumbstick_visible",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "sneak_dropdown": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "orientation": "vertical",
+          "$option_label": "options.sneakOption",
+          "bindings": [
+            { "binding_name": "#touch_controls_v2",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#sneak_toggle",
+                "$cuiv:option_value_text": "options.sneakOption.hold",
+                "bindings": [
+                  { "binding_name": "#sneak_hold",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#sneak_hold",
+                "$cuiv:option_value_text": "options.sneakOption.toggle",
+                "bindings": [
+                  { "binding_name": "#sneak_toggle",
+                    "binding_name_override": "#visible"
+                }]
+            }}
+      ]}},
+      { "option_slider_1@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.buttonSize",
+          "$slider_name": "button_size",
+          "$slider_value_binding_name": "#button_size",
+          "$slider_tts_text_value": "#button_size_text_value",
+          "$cuiv:slider_value_text": "#button_size_text_value",
+          "$cuiv:option_toggle_binding_name": "#button_size_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#button_size_text_value" }]
+      }},
+      { "hotbar_scale@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.hotbarScale",
+          "$slider_name": "hotbar_scale",
+          "$slider_value_binding_name": "#hotbar_scale",
+          "$slider_tts_text_value": "#hotbar_scale_text_value",
+          "$cuiv:slider_value_text": "#hotbar_scale_text_value",
+          "$cuiv:option_toggle_binding_name": "#hotbar_scale_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "#hotbar_scale_text_value" }],
+          "bindings": [
+            { "binding_name": "#resizable_ui_active",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "option_toggle_destroy_vibration@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.destroyvibration",
+          "$cuiv:option_binding_name": "#touch_destroy_vibration",
+          "$cuiv:option_toggle_binding_name": "#touch_destroy_vibration_enabled",
+          "$toggle_name": "touch_destroy_vibration"
+      }},
+      { "option_toggle_split_vibration@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.splitvibration",
+          "$cuiv:option_binding_name": "#touch_split_vibration",
+          "$cuiv:option_toggle_binding_name": "#touch_split_vibration_enabled",
+          "$toggle_name": "touch_split_vibration"
+      }},
+      { "option_creative_delayed_block_breaking@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.creativeDelayedBlockBreaking",
+          "$cuiv:option_binding_name": "#creative_delayed_block_breaking",
+          "$cuiv:option_toggle_binding_name": "#creative_delayed_block_breaking_enabled",
+          "$toggle_name": "creative_delayed_block_breaking",
+          "bindings": [
+            { "binding_name": "(not #crosshair_action_button_on)",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "option_toggle_invert_y@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.invertYAxis",
+          "$cuiv:option_binding_name": "#touch_invert_y_axis",
+          "$cuiv:option_toggle_binding_name": "#touch_invert_y_axis_enabled",
+          "$toggle_name": "touch_invert_y_axis"
+      }},
+      { "option_always_highlight_hovering_box_in_crosshair@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.alwaysHighlightHoveringBoxInCrosshair",
+          "$cuiv:option_binding_name": "#always_highlight_hovering_box_in_crosshair",
+          "$cuiv:option_toggle_binding_name": "#always_highlight_hovering_box_in_crosshair_enabled",
+          "$toggle_name": "always_highlight_hovering_box_in_crosshair",
+          "bindings": [
+            { "binding_name": "#touch_controls_v2_crosshair_mode",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "option_toggle_use_touchpad@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.usetouchpad",
+          "$cuiv:option_binding_name": "#split_controls",
+          "$cuiv:option_toggle_binding_name": "#split_controls_enabled",
+          "$toggle_name": "split_controls",
+          "bindings": [
+            { "binding_name": "(not #touch_controls_v2)",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "option_toggle_swap_jump_and_sneak@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.swapJumpAndSneak",
+          "$cuiv:option_binding_name": "#swap_jump_and_sneak",
+          "$cuiv:option_toggle_binding_name": "#swap_jump_and_sneak_enabled",
+          "$toggle_name": "swap_jump_and_sneak",
+          "bindings": [
+            { "binding_name": "(not #touch_controls_v2)",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "hotbar_only_touch_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.hotbarOnlyTouch",
+          "$cuiv:option_binding_name": "#hotbar_only_touch",
+          "$cuiv:option_toggle_binding_name": "#hotbar_only_touch_enabled",
+          "$toggle_name": "hotbar_only_touch"
+      }}
+]}}

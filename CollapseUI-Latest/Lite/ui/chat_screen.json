@@ -1,0 +1,45 @@
+{
+  "namespace": "chat",
+  "chat_screen@common.base_screen": {
+    "$screen_content": "cui-chat_screen.root_contents",
+    "$screen_bg_content": "cui-common.menu_screen_background",
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ]
+  },
+  "click_autocomplete_is_focused": {
+    "type": "image",
+    "texture": "textures/ui/White",
+    "alpha": 0.4,
+    "color": "$non_interact_border_color"
+  },
+  "auto_complete_panel_contents_with_item/autocomplete_button": {
+    "sound_name": "none",
+    "bindings": [
+      { "binding_type": "collection",
+        "binding_name": "#auto_complete_text",
+        "binding_collection_name": "auto_complete"
+      },
+      { "binding_type": "collection_details",
+        "binding_collection_name": "auto_complete",
+        "binding_condition": "always"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(not ((#auto_complete_text - '/') = ''))",
+        "target_property_name": "#visible"
+      }
+  ]},
+  "messages_scrolling_panel": {
+    "size": [ "100%-2px", "100%-64px" ],
+    "offset": [ 2, -41 ]
+  },
+  "commands_panel": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 38 ],
+    "size": [ "100% - 30px", "100% - 82px" ]
+  }
+}

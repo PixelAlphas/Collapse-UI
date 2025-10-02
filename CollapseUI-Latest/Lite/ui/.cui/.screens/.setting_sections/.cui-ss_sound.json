@@ -1,0 +1,170 @@
+{ "namespace": "cui-ss_sound",
+  "sound_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "sound_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.sounds", "$cuiv:header_title": "cui.settings.sound.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "main@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_sound.main"}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 6 ]}},
+      { "reset_button@cui-button.text_button": {
+          "ignored": "(not $is_pregame)",
+          "size": [ "100% - 4px", 30 ],
+          "$pressed_button_name": "button.reset_settings",
+          "$cuiv:button_text": "options.resetSettings",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+          "property_bag": { "reset_group": "audio" }
+      }},
+      { "pudding_04": { "type": "panel", "size": [ 1, 6 ]}}
+  ]},
+  "main": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "option_slider_0@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.all.description",
+          "$cuiv:option_label_text": "soundCategory.main",
+          "$slider_name": "main_volume",
+          "$slider_value_binding_name": "#main_volume",
+          "$slider_tts_text_value": "#main_volume_text_value",
+          "$cuiv:slider_value_text": "#main_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#main_volume_enabled",
+          "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor"
+      }},
+      { "pudding_04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "option_slider_1@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.music.description",
+          "$cuiv:option_label_text": "soundCategory.music",
+          "$slider_name": "music_volume",
+          "$slider_value_binding_name": "#music_volume",
+          "$slider_tts_text_value": "#music_volume_text_value",
+          "$cuiv:slider_value_text": "#music_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#music_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_2@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.audio.description",
+          "$cuiv:option_label_text": "options.category.audio",
+          "$slider_name": "sound_volume",
+          "$slider_value_binding_name": "#sound_volume",
+          "$slider_tts_text_value": "#sound_volume_text_value",
+          "$cuiv:slider_value_text": "#sound_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#sound_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_3@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.ambient.description",
+          "$cuiv:option_label_text": "soundCategory.ambient",
+          "$slider_name": "ambient_volume",
+          "$slider_value_binding_name": "#ambient_volume",
+          "$slider_tts_text_value": "#ambient_volume_text_value",
+          "$cuiv:slider_value_text": "#ambient_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#ambient_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_4@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.block.description",
+          "$cuiv:option_label_text": "soundCategory.block",
+          "$slider_name": "block_volume",
+          "$slider_value_binding_name": "#block_volume",
+          "$slider_tts_text_value": "#block_volume_text_value",
+          "$cuiv:slider_value_text": "#block_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#block_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_5@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.hostile.description",
+          "$cuiv:option_label_text": "soundCategory.hostile",
+          "$slider_name": "hostile_volume",
+          "$slider_value_binding_name": "#hostile_volume",
+          "$slider_tts_text_value": "#hostile_volume_text_value",
+          "$cuiv:slider_value_text": "#hostile_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#hostile_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_6@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.neutral.description",
+          "$cuiv:option_label_text": "soundCategory.neutral",
+          "$slider_name": "neutral_volume",
+          "$slider_value_binding_name": "#neutral_volume",
+          "$slider_tts_text_value": "#neutral_volume_text_value",
+          "$cuiv:slider_value_text": "#neutral_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#neutral_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_7@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.player.description",
+          "$cuiv:option_label_text": "soundCategory.player",
+          "$slider_name": "player_volume",
+          "$slider_value_binding_name": "#player_volume",
+          "$slider_tts_text_value": "#player_volume_text_value",
+          "$cuiv:slider_value_text": "#player_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#player_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_8@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.record.description",
+          "$cuiv:option_label_text": "soundCategory.record",
+          "$slider_name": "record_volume",
+          "$slider_value_binding_name": "#record_volume",
+          "$slider_tts_text_value": "#record_volume_text_value",
+          "$cuiv:slider_value_text": "#record_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#record_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_9@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.weather.description",
+          "$cuiv:option_label_text": "soundCategory.weather",
+          "$slider_name": "weather_volume",
+          "$slider_value_binding_name": "#weather_volume",
+          "$slider_tts_text_value": "#weather_volume_text_value",
+          "$cuiv:slider_value_text": "#weather_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#weather_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_slider_10@cui-setting_screen.option_slider": {
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "cui.settings.sound.main.texttospeech.description",
+          "$cuiv:option_label_text": "soundCategory.texttospeech",
+          "$slider_name": "texttospeech_volume",
+          "$slider_value_binding_name": "#texttospeech_volume",
+          "$slider_tts_text_value": "#texttospeech_volume_text_value",
+          "$cuiv:slider_value_text": "#texttospeech_volume_text_value",
+          "$cuiv:option_toggle_binding_name": "#texttospeech_volume_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }}
+]}}

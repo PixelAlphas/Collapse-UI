@@ -1,0 +1,298 @@
+{ "namespace": "cui-anims",
+  // Hud tooltip Anims
+  "hud_tooltip_item": {
+		"anim_type": "offset",
+		"easing": "out_quart",
+		"duration": 0.15,
+		"from": [  0, "50%-50px"],
+		"to": [  0, "50%-58px"]
+	},
+  "hud_tooltip_tip": {
+		"anim_type": "offset",
+		"easing": "out_quart",
+		"duration": 0.15,
+		"from": [  0, "50%-65px"], 
+		"to": [  0, "50%-70px"]
+	},
+	"hud_tooltip_alpha": {
+		"anim_type": "alpha",
+		"easing": "out_circ",
+		"duration": 0.15,
+		"from": 0.0,
+		"to": "$cuigv:BackgroundAlpha"
+	},
+  // Screens Anims
+  "screen_outro_anim_push": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": "$transition_time_push",
+    "from": "$cuiv-anim:pos_to",
+    "to": "$cuiv-anim:pos_from",
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "screen_outro_anim_pop": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:pos_to",
+    "to": "$cuiv-anim:pos_from",
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "screen_intro_anim_push": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$transition_time_push",
+    "from": "$cuiv-anim:pos_from",
+    "to": "$cuiv-anim:pos_to",
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_intro_anim_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:pos_from",
+    "to": "$cuiv-anim:pos_to",
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_outro_anim_size_push": {
+    "anim_type": "size",
+    "easing": "in_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:size_to",
+    "to": "$cuiv-anim:size_from",
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "screen_outro_anim_size_pop": {
+    "anim_type": "size",
+    "easing": "in_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:size_to",
+    "to": "$cuiv-anim:size_from",
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "screen_intro_anim_size_push": {
+    "anim_type": "size",
+    "easing": "out_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:size_from",
+    "to": "$cuiv-anim:size_to",
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_intro_anim_size_pop": {
+    "anim_type": "size",
+    "easing": "out_cubic",
+    "duration": "$transition_time_pop",
+    "from": "$cuiv-anim:size_from",
+    "to": "$cuiv-anim:size_to",
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+  // Content Logs
+  "content_log_anim_text_alpha_00": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0,
+    "to": 1,
+    "next": "@cui-anims.content_log_anim_text_alpha_01"
+  },
+  "content_log_anim_text_alpha_01": {
+    "anim_type": "wait",
+    "duration": "$content_log_item_lifetime",
+    "next": "@cui-anims.content_log_anim_text_alpha_02"
+  },
+  "content_log_anim_text_alpha_02": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 1,
+    "to": 0,
+    "destroy_at_end": "content_log_grid_item"
+  },
+  "content_log_anim_alpha_00": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0,
+    "to": 0.5,
+    "next": "@cui-anims.content_log_anim_alpha_01"
+  },
+  "content_log_anim_alpha_01": {
+    "anim_type": "wait",
+    "duration": "$content_log_item_lifetime",
+    "next": "@cui-anims.content_log_anim_alpha_02"
+  },
+  "content_log_anim_alpha_02": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0.5,
+    "to": 0,
+    "destroy_at_end": "content_log_grid_item"
+  },
+  "content_log_anim_bar_alpha_00": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0,
+    "to": 0.2,
+    "next": "@cui-anims.content_log_anim_bar_alpha_01"
+  },
+  "content_log_anim_bar_alpha_01": {
+    "anim_type": "wait",
+    "duration": "$content_log_item_lifetime",
+    "next": "@cui-anims.content_log_anim_bar_alpha_02"
+  },
+  "content_log_anim_bar_alpha_02": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": 0.2,
+    "to": 0
+  },
+  "content_log_anim_bg_00": {
+    "anim_type": "size",
+    "easing": "in_quart",
+    "duration": 0.5,
+    "from": [ "100% + 8px", "0%" ],
+    "to": [ "100% + 8px", "100%"]
+  },
+  "content_log_anim_bar_00": {
+    "anim_type": "size",
+    "easing": "in_quart",
+    "duration": "$content_log_item_lifetime",
+    "from": [ "0%", "100%" ],
+    "to": [ "100% + 8px", "100%" ]
+  },
+  
+  // Loading Anims
+  "loading_anim": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 16,
+    "frame_step": 32,
+    "fps": 20,
+    "reversible": false,
+    "easing": "linear"
+  },
+  
+  // Extra Menu Anims
+  "extra_anims_offset": {
+    "anim_type": "offset",
+    "from": [ -180, 0 ],
+    "to": [ 4, 0 ],
+    "duration": 0.4,
+    "easing": "out_cubic"
+  },
+  "extra_anims_offset_exit": {
+    "anim_type": "offset",
+    "from": [ 4, 0 ],
+    "to": [ -180, 0 ],
+    "duration": 0.4,
+    "easing": "in_cubic"
+  },
+  "extra_anims_offset_title": {
+    "anim_type": "offset",
+    "from": [ -180, 4 ],
+    "to": [ 14, 4 ],
+    "duration": 0.4,
+    "easing": "out_cubic"
+  },
+  "extra_anims_offset_title_exit": {
+    "anim_type": "offset",
+    "from": [ 14, 4 ],
+    "to": [ -180, 4 ],
+    "duration": 0.4,
+    "easing": "in_cubic"
+  },
+  "extra_anims_alpha": {
+    "anim_type": "alpha",
+    "from": 0,
+    "to": 0.6,
+    "duration": 0.4
+  },
+  "extra_anims_alpha_exit": {
+    "anim_type": "alpha",
+    "from": 0.6,
+    "to": 0,
+    "$cuiv:destroy_at_end|default": "extra_element_out",
+    "destroy_at_end": "$cuiv:destroy_at_end",
+    "duration": 0.4
+  },
+  // Pause Playerlist Anims
+  "playerlist_anims_offset": {
+    "anim_type": "offset",
+    "from": [ 180, 0 ],
+    "to": [ -4, 0 ],
+    "duration": 0.4,
+    "easing": "out_cubic"
+  },
+  "playerlist_anims_offset_exit": {
+    "anim_type": "offset",
+    "from": [ -4, 0 ],
+    "to": [ 180, 0 ],
+    "duration": 0.4,
+    "$cuiv:destroy_at_end|default": "playerlist_element_out",
+    "destroy_at_end": "$cuiv:destroy_at_end",
+    "easing": "in_cubic"
+  },
+  
+  "test_00": {
+    "anim_type": "offset",
+    "from": [ -10, 0 ],
+    "to": [ 0, 0 ],
+    "duration": 0.4,
+    "easing": "out_cubic",
+    "next": "@cui-anims.test_01"
+  },
+  "test_01": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ -10, 0 ],
+    "duration": 0.4,
+    "easing": "in_cubic",
+    "next": "@cui-anims.test_00"
+  },
+  // Unused
+  "background_slider_load": {
+    "anim_type": "alpha",
+    "duration": "$cuiv:background_slider_anim_duration",
+    "from": "$cuiv:background_slider_anim_alpha",
+    "to": "$cuiv:background_slider_anim_alpha",
+    "next": "@cui-anims.background_slider",
+    "easing": "linear"
+  },
+  "background_slider": {
+    "anim_type": "alpha",
+    "duration": 0.5,
+    "from": 0,
+    "to": 1,
+    "next": "@cui-anims.background_slider_wait",
+    "easing": "linear"
+  },
+  "background_slider_wait": {
+    "anim_type": "wait",
+    "duration": 8,
+    "next": "@cui-anims.background_slider_fade"
+  },
+  "background_slider_fade": {
+    "anim_type": "alpha",
+    "duration": 0.5,
+    "from": 1,
+    "to": 0,
+    "next": "@cui-anims.background_slider_final",
+    "easing": "linear"
+  },
+  "background_slider_final": { 
+    "anim_type": "wait",
+    "duration": "$cuiv:background_slider_anim_max",
+    "next": "@cui-anims.background_slider"
+  }
+}

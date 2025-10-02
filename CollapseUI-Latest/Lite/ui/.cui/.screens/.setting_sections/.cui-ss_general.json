@@ -1,0 +1,295 @@
+{ "namespace": "cui-ss_general",
+  "general_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "general_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.general", "$cuiv:header_title": "cui.settings.general.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "options.networkSettings"
+      }},
+      { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "network@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.network"}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "cui.settings.general.online.title"
+      }},
+      { "padding_04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "online@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.online"}},
+      { "pudding_05": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "key.categories.misc"
+      }},
+      { "padding_06": { "type": "panel", "size": [ 1, 2 ]}},
+      { "misc@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_general.misc"}},
+      { "pudding_07": { "type": "panel", "size": [ 1, 6 ]}},
+      { "reset_button@cui-button.text_button": {
+          "ignored": "(not $is_pregame)",
+          "size": [ "100% - 4px", 30 ],
+          "$pressed_button_name": "button.reset_settings",
+          "$cuiv:button_text": "options.resetSettings",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+          "property_bag": { "reset_group": "general" }
+      }},
+      { "pudding_08": { "type": "panel", "size": [ 1, 6 ]}}
+  ]},
+  "network": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "mobile_data_option_toggle@cui-setting_screen.option_toggle": {
+          "ignored": "($is_console or $is_settopbox or $win10_edition or $osx_edition)",
+          "$cuiv:option_label_text": "options.allowCellularData",
+          "$cuiv:option_binding_name": "#allow_cellular_data",
+          "$cuiv:option_toggle_binding_name": "#allow_cellular_data_enabled",
+          "$toggle_name": "allow_cellular_data",
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.allowCellularData.message"
+      }},
+      { "websocket_option_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.websocketEncryption",
+          "$cuiv:option_binding_name": "#websocket_encryption",
+          "$cuiv:option_toggle_binding_name": "#websocket_encryption_enabled",
+          "$toggle_name": "websocket_encryption",
+          "ignored": "($console_edition)"
+      }}
+  ]},
+  "online": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "auto_update_enabled_toggle@cui-setting_screen.option_toggle": {
+          "ignored": "((not $is_console and not $is_settopbox and not $win10_edition and not $osx_edition) or $nx_os)",
+          "$cuiv:option_label_text": "options.autoUpdateEnabled",
+          "$cuiv:option_binding_name": "#auto_update_enabled",
+          "$toggle_name": "auto_update_enabled"
+      }},
+      { "auto_update_mode_dropdown": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "orientation": "vertical",
+          "$option_label": "options.autoUpdateMode",
+          "controls": [
+            { "off@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#auto_update_mode_off",
+                "$cuiv:option_value_text": "options.autoUpdateMode.on.withWifiOnly",
+                "bindings": [
+                  { "binding_name": "#auto_update_mode_on_wifi_only",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "wifi@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#auto_update_mode_on_wifi_only",
+                "$cuiv:option_value_text": "options.autoUpdateMode.on.withCellular",
+                "bindings": [
+                  { "binding_name": "#auto_update_mode_on_with_cellular",
+                    "binding_name_override": "#visible"
+                }]
+            }},
+            { "cellular@cui-setting_screen.option_dropdown": {
+                "$cuiv:option_binding_name": "#auto_update_mode_on_with_cellular",
+                "$cuiv:option_value_text": "options.autoUpdateMode.off",
+                "bindings": [
+                  { "binding_name": "#auto_update_mode_off",
+                    "binding_name_override": "#visible"
+                }]
+            }}
+      ]}},
+      { "only_allow_trusted_skins_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.onlyTrustedSkinsAllowed",
+          "$cuiv:option_binding_name": "#only_trusted_skins_allowed",
+          "$cuiv:option_toggle_binding_name": "#only_trusted_skins_allowed_enabled",
+          "$toggle_name": "only_trusted_skins_allowed"
+      }}
+  ]},
+  "misc": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "ecomode_enabled_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.enableEcoMode",
+          "$cuiv:option_binding_name": "#ecomode_toggle",
+          "$cuiv:option_toggle_binding_name": "#ecomode_toggle_enabled",
+          "$toggle_name": "ecomode_toggle",
+          "$cuiv:option_description": true,
+          "$cuiv:option_description_text": "options.ecoMode"
+      }},
+      { "support@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "$cuiv:button_text": "options.goToFeedbackWebsite",
+          "$pressed_button_name": "button.menu_open_uri",
+          "property_bag": {
+            "#hyperlink": "https://aka.ms/minecraftedusupport"
+          }
+      }},
+      { "terms_and_conditions_link_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "ignored": "($is_holographic or $fire_tv or not $thirdpartyconsole)",
+          "$cuiv:button_text": "options.termsAndConditions",
+          "$pressed_button_name": "button.menu_open_uri",
+          "bindings": [
+            { "binding_name": "#terms_and_conditions_hyperlink",
+              "binding_name_override": "#hyperlink",
+              "binding_type": "global"
+          }]
+      }},
+      { "terms_and_conditions_content_popup_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "ignored": "((not $is_holographic and not $fire_tv) or not $thirdpartyconsole)",
+          "$pressed_button_name": "button.terms_and_conditions_popup",
+          "$cuiv:button_text": "options.termsAndConditions"
+      }},
+      { "credits_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "$pressed_button_name": "button.credits",
+          "$cuiv:button_text": "options.credits"
+      }},
+      { "attribution_link_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "ignored": "($is_holographic or $fire_tv)",
+          "$cuiv:button_text": "options.attribution",
+          "$pressed_button_name": "button.menu_open_uri",
+          "variables": [
+            { "requires": "(not $nx_os)",
+              "$attribution_button_url": "https://www.minecraft.net/attribution/?hideChrome"
+            },
+            {  "requires": "($nx_os)",
+              "$attribution_button_url": "https://aka.ms/switchattribution"
+          }],
+          "property_bag": {
+            "#hyperlink": "$attribution_button_url"
+      }}},
+      { "attribution_popup_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "ignored": "(not $is_holographic and not $fire_tv)",
+          "$pressed_button_name": "button.attribution_popup",
+          "$cuiv:button_text": "options.attribution"
+      }},
+      { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}},
+      { "description": {
+          "type": "label",
+          "text": "options.licenses",
+          "size": [ "100% - 8px", "default" ],
+          "color": [ 0.7, 0.7, 0.7 ]
+      }},
+      { "pudding_04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "licensed_content_link_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "ignored": "($is_holographic or $fire_tv or $education_edition)",
+          "$cuiv:button_text": "options.licensed_content",
+          "$pressed_button_name": "button.menu_open_uri",
+          "variables": [
+            { "requires": "(not $nx_os)",
+              "$licensed_content_button_url": "https://www.minecraft.net/licensed-content/?hideChrome"
+            },
+            { "requires": "($nx_os)",
+              "$licensed_content_button_url": "https://aka.ms/switchcontent"
+          }],
+          "property_bag": {
+            "#hyperlink": "$licensed_content_button_url"
+      }}},
+      { "licensed_content_popup_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "ignored": "(not $is_holographic and not $fire_tv)",
+          "$pressed_button_name": "button.licensed_content_popup",
+          "$cuiv:button_text": "options.licensed_content",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "font_license_popup_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "$pressed_button_name": "button.font_license_popup",
+          "$cuiv:button_text": "options.font_license",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "build_info_label_panel": {
+          "type": "stack_panel",
+          "size": [ "100% - 6px", "100%c" ],
+          "controls": [
+            { "version_label": {
+                "type": "label",
+                "font_type": "dainbold",
+                "size": [ "100% - 8px", "default" ],
+                "color": [ 0.7, 0.7, 0.7 ],
+                "text": "#modifiedtext",
+                "bindings": [
+                  { "binding_name": "#version" },
+                  { "binding_type": "view",
+                    "source_property_name": "('Minecraft Bedrock ' + #version)",
+                    "target_property_name": "#modifiedtext"
+                }]
+            }},
+            { "build_id_label": {
+                "type": "label",
+                "font_type": "dainbold",
+                "size": [ "100% - 8px", "default" ],
+                "color": [ 0.7, 0.7, 0.7 ],
+                "text": "#build_id",
+                "bindings": [
+                  { "binding_name": "#build_id" 
+                }]
+            }},
+            { "build_date_label": {
+                "type": "label",
+                "font_type": "dainbold",
+                "size": [ "100% - 8px", "default" ],
+                "color": [ 0.7, 0.7, 0.7 ],
+                "text": "#build_date",
+                "bindings": [
+                  { "binding_name": "#build_date" }
+                ]
+            }},
+            { "protocol_version_label": {
+                "type": "label",
+                "font_type": "dainbold",
+                "size": [ "100% - 8px", "default" ],
+                "color": [ 0.7, 0.7, 0.7 ],
+                "text": "#modifiedtext",
+                "bindings": [
+                  { "binding_name": "#protocol_version" },
+                  { "binding_type": "view",
+                    "source_property_name": "('Protocol : ' + #protocol_version)",
+                    "target_property_name": "#modifiedtext"
+                }]
+            }},
+            { "treatment_ids_label": {
+                "visible": "(not $education_edition)",
+                "type": "label",
+                "font_type": "dainbold",
+                "size": [ "100% - 8px", "default" ],
+                "color": [ 0.7, 0.7, 0.7 ],
+                "text": "#treatment_ids",
+                "bindings": [
+                  { "binding_name": "#treatment_ids"
+                }]
+            }},
+            { "world_converter_label": {
+                "type": "label",
+                "font_type": "dainbold",
+                "size": [ "100% - 8px", "default" ],
+                "color": [ 0.7, 0.7, 0.7 ],
+                "text": "#world_conversion_version",
+                "bindings": [
+                  { "binding_name": "#world_conversion_version"
+                }]
+            }}
+      ]}}
+]}}

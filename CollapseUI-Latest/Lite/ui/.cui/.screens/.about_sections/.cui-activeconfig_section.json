@@ -1,0 +1,245 @@
+{ "namespace": "cui-activeconfig_section",
+  "root_contents": {
+    "type": "panel",
+    "$scrolling_content": "cui-activeconfig_section.core_element",
+    "controls": [
+      { "@cui-play_screen.general_scroll_contents": {}}
+  ]},
+  "core_element": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "use_child_anchors": true,
+    "controls": [
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.activeconfigalt"
+      }},
+      { "padding00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-activeconfig_section.config_version",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding01": { "type": "panel", "size": [ 1, 10 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.activeconfig.theme"
+      }},
+      { "padding02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-activeconfig_section.config_theme",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding03": { "type": "panel", "size": [ 1, 10 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.activeconfig.visual"
+      }},
+      { "padding04": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-activeconfig_section.config_visual",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding05": { "type": "panel", "size": [ 1, 10 ]}},
+      { "theme_label@cui-common.header": {
+          "$cuiv:header_text": "cui.about.tab.activeconfig.layout"
+      }},
+      { "padding06": { "type": "panel", "size": [ 1, 2 ]}},
+      { "element@cui-common.element_background": {
+          "$cuiv:element_background_contents": "cui-activeconfig_section.config_layout",
+          "$cuiv:element_background_no_label": true
+      }},
+      { "padding07": { "type": "panel", "size": [ 1, 10 ]}}
+  ]},
+  "config_version@cui-about_section.element_stack_template": {
+    "controls": [
+      { "build_release@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.configname",
+          "$cuiv:about_text_gray": "$cuigv:ConfigName"
+      }},
+      { "branch@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.designedversion",
+          "$cuiv:about_text_gray": "$cuigv:DesignedVersion"
+      }}
+  ]},
+  "config_theme@cui-about_section.element_stack_template": {
+    "controls": [
+      { "config_theme_01@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.primarycolor",
+          "$cuiv:config_color": "$cuigv:PrimaryColor"
+      }},
+      { "config_theme_02@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.secondarycolor",
+          "$cuiv:config_color": "$cuigv:SecondaryColor"
+      }},
+      { "config_theme_021@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.tertiarycolor",
+          "$cuiv:config_color": "$cuigv:TertiaryColor"
+      }},
+      { "config_theme_03@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.fontprimarycolor",
+          "$cuiv:config_color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_theme_04@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.fontsecondarycolor",
+          "$cuiv:config_color": "$cuigv:FontSecondaryColor"
+      }},
+      { "config_theme_05@cui-activeconfig_section.config_alpha": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundalpha",
+          "$cuiv:config_color": "$cuigv:BackgroundAlpha"
+      }},
+      { "config_theme_06@cui-activeconfig_section.config_alpha": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.buttonalpha",
+          "$cuiv:config_color": "$cuigv:ButtonAlpha"
+      }},
+      { "config_theme_07@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.uibackground",
+          "$cuiv:config_value": "$cuigv:UIBackground"
+      }},
+      { "config_theme_08@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.uibackgroundslider",
+          "$cuiv:config_value": "$cuigv:UIBackgroundSlider"
+      }},
+      { "config_theme_09@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradientprimarycolor",
+          "$cuiv:config_color": "$cuigv:BackgroundGradientPrimaryColor"
+      }},
+      { "config_theme_10@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradientsecondarycolor",
+          "$cuiv:config_color": "$cuigv:BackgroundGradientSecondaryColor"
+      }},
+      { "config_theme_11@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.overworldcolor",
+          "$cuiv:config_color": "$cuigv:OverworldColor"
+      }},
+      { "config_theme_12@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.nethercolor",
+          "$cuiv:config_color": "$cuigv:NetherColor"
+      }},
+      { "config_theme_13@cui-activeconfig_section.config_color": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.theendcolor",
+          "$cuiv:config_color": "$cuigv:TheEndColor"
+      }}
+  ]},
+  "config_visual@cui-about_section.element_stack_template": {
+    "controls": [
+      { "config_visual_01@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.shadows",
+          "$cuiv:config_value": "$cuigv:Shadows"
+      }},
+      { "config_visual_02@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.fadedprogressBar",
+          "$cuiv:config_value": "$cuigv:FadedProgressBar"
+      }},
+      { "config_visual_03@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.exptextshadows",
+          "$cuiv:config_value": "$cuigv:ExpTextShadows"
+      }},
+      { "config_visual_04@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundgradient",
+          "$cuiv:config_value": "$cuigv:BackgroundGradient"
+      }},
+      { "config_visual_05@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.uianimations",
+          "$cuiv:config_value": "$cuigv:UIAnimations"
+      }}
+  ]},
+  "config_layout@cui-about_section.element_stack_template": {
+    "controls": [
+      { "config_layout_01@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.searchboxsystem",
+          "$cuiv:config_value": "$cuigv:SearchBoxSystem"
+      }},
+      { "config_layout_02@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.oldsliderdesign",
+          "$cuiv:config_value": "$cuigv:HorizontalSlider"
+      }},
+      { "config_layout_03@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.vanillapaperdoll",
+          "$cuiv:config_value": "$cuigv:VanillaPaperdoll"
+      }},
+      { "config_layout_04@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.nogamelogo",
+          "$cuiv:config_value": "$cuigv:NoGameLogo"
+      }},
+      { "config_layout_05@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.norealmspromoteinworldsection",
+          "$cuiv:config_value": "$cuigv:NoRealmsPromoteInWorldSection"
+      }},
+      { "config_layout_06@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.startmenubuttonclassic",
+          "$cuiv:config_value": "$cuigv:StartMainButtonClassic"
+      }},
+      { "config_layout_07@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.logoinpausescreen",
+          "$cuiv:config_value": "$cuigv:LogoInPauseScreen"
+      }}
+  ]},
+  "config_label": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:config_text|default": "",
+    "$cuiv:config_value|default": "",
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_value": {
+          "type": "label",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "text": "$cuiv:config_value_result",
+          "color": "$cuigv:FontSecondaryColor",
+          "$cuiv:config_value_result|default": "Invaild...",
+          "variables": [
+            { "requires": "($cuiv:config_value)", "$cuiv:config_value_result": "Enabled / True" },
+            { "requires": "(not $cuiv:config_value)", "$cuiv:config_value_result": "Disabled / False" }
+      ]}}
+  ]},
+  "config_alpha": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:config_text|default": "",
+    "$cuiv:config_alpha|default": "",
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "alpha": "$cuiv:config_color",
+          "text": "Test Alpha"
+      }}
+  ]},
+  "config_color": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:config_text|default": "",
+    "$cuiv:config_color|default": "",
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 1,
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_color": {
+          "type": "image",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "size": [ 14, 14 ],
+          "layer": 1,
+          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "color": "$cuiv:config_color"
+      }}
+  ]}
+}

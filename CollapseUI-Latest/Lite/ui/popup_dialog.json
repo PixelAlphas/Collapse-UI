@@ -1,0 +1,37 @@
+{ "modal_dialog_popup": {
+    "type": "panel",
+    "variables": [
+      { "requires": "$three_buttons_visible",
+        "$button_panel": "cui-dialog.three_buttons_panel",
+        "$modal_panel_label_size": [ "100% - 16px", "100% - 124px" ]
+      },
+      { "requires": "$destructive_three_buttons_visible",
+        "$button_panel": "cui-dialog.destructive_three_buttons_panel",
+        "$modal_panel_label_size": [ "100% - 16px", "100% - 124px" ]
+      },
+      { "requires": "$two_buttons_visible",
+        "$button_panel": "cui-dialog.two_buttons_panel",
+        "$modal_panel_label_size": [ "100% - 16px", "100% - 96px" ]
+      },
+      { "requires": "$destructive_two_buttons_visible",
+        "$button_panel": "cui-dialog.destructive_two_buttons_panel",
+        "$modal_panel_label_size": [ "100% - 16px", "100% - 96px" ]
+      },
+      { "requires": "$single_button_visible",
+        "$button_panel": "cui-dialog.single_button_panel",
+        "$modal_panel_label_size": [ "100% - 16px", "100% - 62px" ]
+      },
+      { "requires": "$no_buttons_visible",
+        "$button_panel": "common.empty_panel",
+        "$modal_panel_label_size": [ "100% - 16px", "100% - 28px" ]
+    }],
+    "controls": [
+      { "modal_input@popup_dialog.modal_input_panel": {
+          "controls": [
+            { "cancel_button@cui-common.cancel_button": { "layer": 180, "$pressed_button_name": "$popup_dialog_rightcancel_button_name"}},
+            { "modal_bg_buttons@cui-dialog.modal_dialog_with_buttons": {
+                "$visibility_source_control_name|default": "modal_bg_buttons",
+                "layer": 2
+            }}
+      ]}}
+]}}

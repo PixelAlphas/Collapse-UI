@@ -1,0 +1,3 @@
+{ "add_external_server_screen@common.base_screen": {
+    "$screen_content": "cui-add_external_server.root_contents"
+}}

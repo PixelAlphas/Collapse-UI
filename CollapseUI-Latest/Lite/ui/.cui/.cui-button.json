@@ -1,0 +1,389 @@
+{ "namespace": "cui-button",
+  "button": {
+    "type": "button",
+    "$focus_id|default": "", 
+    "$focus_override_down|default": "", 
+    "$focus_override_up|default": "", 
+    "$focus_override_left|default": "", 
+    "$focus_override_right|default": "", 
+    "focus_identifier": "$focus_id",
+    "focus_change_down": "$focus_override_down",
+    "focus_change_up": "$focus_override_up",
+    "focus_change_left": "$focus_override_left",
+    "focus_change_right": "$focus_override_right",
+    "focus_enabled": true,
+    "size": [ 100, 20 ],
+    "sound_name": "random.click",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "locked_control": "locked",
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "button_mappings": [
+      { "from_button_id": "button.menu_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      { "from_button_id": "button.menu_ok",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "focused"
+  }]},
+  "standard_button_assets@cui-button.button": {
+    "$cuiv:default_button_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:default_button_color|default": "$cuigv:SecondaryColor",
+    "$cuiv:hover_button_texture|default": "textures/ui/.cui-assets/background_2x",
+    "$cuiv:hover_button_color|default": "$cuigv:PrimaryColor",
+    "$cuiv:pressed_button_texture|default": "textures/ui/.cui-assets/background_2x",
+    "$cuiv:pressed_button_color|default": "$cuigv:PrimaryColor",
+    "$cuiv:locked_button_texture|default": "textures/ui/.cui-assets/background_2x",
+    "$cuiv:locked_button_color|default": "$cuigv:TertiaryColor"
+  },
+  "text_button@cui-button.standard_button_assets": {
+    "$cuiv:button_text|default": "",
+    "$cuiv:button_anims|default": [],
+    "$cuiv:button_type_panel": "cui-button.button_label",
+    "$cuiv:button_state_panel|default": "cui-button.button_core",
+    "$cuiv:button_text_shadow|default": false,
+    "$cuiv:button_texture_alpha|default": "$cuigv:ButtonAlpha",
+    "$cuiv:button_text_bindings": [],
+    "$default_state|default": false,
+    "$hover_state|default": false,
+    "$pressed_state|default": false,
+    "$locked_state|default": false,
+    "$secondary_text_color|default": "none",
+    "$text_color|default": "none",
+    "controls": [
+      { "default@$cuiv:button_state_panel": {
+          "$cuiv:button_texture": "$cuiv:default_button_texture",
+          "$cuiv:button_texture_color": "$cuiv:default_button_color",
+          "$cuiv:text_color": "$cuigv:FontPrimaryColor",
+          "$default_state": true,
+          "layer": 1
+      }},
+      { "hover@$cuiv:button_state_panel": {
+          "$cuiv:button_texture": "$cuiv:hover_button_texture",
+          "$cuiv:button_texture_color": "$cuiv:hover_button_color",
+          "$cuiv:text_color": "$cuigv:SecondaryColor",
+          "$hover_state": true,
+          "layer": 4
+      }},
+      { "pressed@$cuiv:button_state_panel": {
+          "$cuiv:button_texture": "$cuiv:pressed_button_texture",
+          "$cuiv:button_texture_color": "$cuiv:pressed_button_color",
+          "$cuiv:text_color": "$cuigv:SecondaryColor",
+          "$pressed_state": true,
+          "layer": 5
+      }},
+      { "locked@$cuiv:button_state_panel": {
+          "$cuiv:button_texture": "$cuiv:locked_button_texture",
+          "$cuiv:button_texture_color": "$cuiv:locked_button_color",
+          "$cuiv:text_color": "$dark_button_locked_text_color",
+          "$locked_state": true,
+          "layer": 1
+      }}
+  ]},
+  "button_core": {
+    "type": "panel",
+    "layer": 1,
+    "anims": "$cuiv:button_anims",
+    "controls": [
+      { "button_image": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "layer": 1,
+          "alpha": "$cuiv:button_texture_alpha",
+          "color": "$cuiv:button_texture_color",
+          "texture": "$cuiv:button_texture",
+          "anims": "$cuiv:button_anims"
+      }},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 6 ],
+          "size": [ "100% + 16px", "100% + 12px" ],
+          "layer": -5
+      }},
+      { "button_content": {
+          "type": "panel",
+          "size": "$cuiv:button_content_size",
+          "$cuiv:button_content_size|default": [ "100% - 6px", "100% - 6px" ],
+          "controls": [
+            { "button_type_panel@$cuiv:button_type_panel": { "layer": 3 }}
+      ]}}
+  ]},
+  "button_label": {
+    "type": "label",
+    "layer": 2,
+    "text": "$cuiv:button_text",
+    "color": "$cuiv:text_color",
+    "shadow": "$cuiv:button_text_shadow"
+  },
+  "button_label_adv": {
+    "type": "panel",
+    "layer": 1,
+    "$cuiv:label_adv_text_bubble|default": false,
+    "$cuiv:label_adv_icon|default": false,
+    "$cuiv:label_adv_bubble_anchor|default": "center",
+    "$cuiv:label_adv_bubble_offset|default": [ 0, -25 ],
+    "$cuiv:label_adv_bubble_with_description|default": false,
+    "$cuiv:label_anchor|default": "left_middle",
+    "$cuiv:button_icon|default": "",
+    "$cuiv:button_icon_size|default": [ 16, 16 ],
+    "$cuiv:button_label_content|default": "none",
+    "$cuiv:button_content|default": false,
+    "controls": [
+      { "text_element": {
+          "type": "panel",
+          "ignored": "$cuiv:label_adv_text_bubble",
+          "controls": [
+            { "label": {
+                "type": "label",
+                "text": "$cuiv:button_text",
+                "color": "$cuiv:text_color",
+                "shadow": "$cuiv:button_text_shadow",
+                "bindings": "$cuiv:button_text_bindings",
+                "offset": "$cuiv:hover_offset",
+                "anchor_from": "$cuiv:label_anchor",
+                "anchor_to": "$cuiv:label_anchor",
+                "layer": 10,
+                "font_type": "dainbold",
+                "$cuiv:hover_offset|default": [ 3, -1 ],
+                "variables": [
+                  { "requires": "((($hover_state) or ($pressed_state)) and ($cuiv:label_adv_icon)",
+                    "$cuiv:hover_offset": [ 27, -1 ]
+                  },
+                  { "requires": "((($hover_state) or ($pressed_state)) and (not $cuiv:label_adv_icon))",
+                    "$cuiv:hover_offset": [ 7, -1 ]
+                  },
+                  { "requires": "(($cuiv:label_adv_icon) and not (($hover_state) or ($pressed_state)))",
+                    "$cuiv:hover_offset": [ 23, -1 ]
+                }]
+            }},
+            { "icon": {
+                "ignored": "(not $cuiv:label_adv_icon)",
+                "type": "image",
+                "texture": "$cuiv:button_icon",
+                "color": "$cuigv:PrimaryColor",
+                "size": "$cuiv:button_icon_size",
+                "offset": "$cuiv:hover_offset",
+                "anchor_from": "$cuiv:label_anchor",
+                "anchor_to": "$cuiv:label_anchor",
+                "layer": 1,
+                "$cuiv:hover_offset|default": [ 3, 0 ],
+                "variables": [
+                  { "requires": "(($hover_state) or ($pressed_state))",
+                    "$cuiv:hover_offset": [ 7, 0 ]
+                }]
+            }}
+      ]}},
+      { "button_content": {
+          "ignored": "(not $cuiv:button_content)",
+          "type": "panel",
+          "size": "$cuiv:button_content_size",
+          "$cuiv:button_content_size|default": [ "100% - 6px", "100% - 6px" ],
+          "controls": [
+            { "button_type_panel@$cuiv:button_label_content": { "layer": 3 }}
+      ]}},
+      { "text_bubble": {
+          "type": "panel",
+          "ignored": "(not $cuiv:label_adv_text_bubble)",
+          "controls": [
+            { "title_text": {
+                "type": "image",
+                "visible": "$pressed_alpha",
+                "texture": "textures/ui/.cui-assets/background",
+                "size": [ "100%c + 12px", "100%c + 5px" ],
+                "alpha": "$cuigv:ButtonAlpha",
+                "anchor_from": "$cuiv:label_adv_bubble_anchor",
+                "anchor_to": "$cuiv:label_adv_bubble_anchor",
+                "offset": "$cuiv:label_adv_bubble_offset",
+                "color": "$cuigv:SecondaryColor",
+                "controls": [
+                  { "stack_panel": {
+                      "type": "stack_panel",
+                      "size": [ "100%c", "100%c" ],
+                      "orientation": "vertical",
+                      "controls": [
+                        { "title": {
+                            "type": "label",
+                            "text": "$cuiv:button_text",
+                            "font_type": "MinecraftTen",
+                            "layer": 11,
+                            "shadow": false,
+                            "size": [ "default", 14 ]
+                        }},
+                        { "description": {
+                            "type": "label",
+                            "layer": 1,
+                            "shadow": false,
+                            "max_size": [ "100%", "100%c" ],
+                            "ignored": "(not $cuiv:label_adv_bubble_with_description)",
+                            "text": "$cuiv:button_text_bubble"
+                        }}
+                  ]}}
+            ]}},
+            { "title_icon": {
+                "ignored": "(not $cuiv:$cuiv:label_adv_icon)",
+                "type": "image",
+                "texture": "$cuiv:button_icon",
+                "color": "$cuigv:PrimaryColor",
+                "size": "$cuiv:button_icon_size",
+                "$cuiv:hover_offset|default": [ 0, -1 ],
+                "offset": "$cuiv:hover_offset",
+                "layer": 1,
+                "variables": [
+                  { "requires": "(($hover_state) or ($pressed_state))",
+                    "$cuiv:hover_offset": [ 0, 0 ]
+                }]
+            }}
+      ]}}
+  ]},
+  "tab_panel": {
+    "type": "panel",
+    "$cuiv:tab_content|default": "common_tabs.empty_tab_content",
+    "$cuiv:tab_image|default": "common_tabs.tab_image",
+    "$cuiv:tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
+    "$cuiv:tab_color|default": "$cuigv:PrimaryColor",
+    "controls": [
+      { "tab_image": {
+          "type": "image",
+          "texture": "$tab_texture",
+          "size": [ "100%", "100%" ],
+          "alpha": "$cuigv:ButtonAlpha",
+          "layer": 2,
+          "color": "$cuiv:tab_color"
+      }},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 6 ],
+          "size": [ "100% + 16px", "100% + 12px" ],
+          "layer": -5
+      }},
+      { "tab_content_sizer": {
+          "type": "panel",
+          "size": "$cuiv:tab_content_size",
+          "controls": [
+            { "tab_content@$cuiv:tab_content": {
+                "layer": 3
+          }}
+      ]}}
+  ]},
+  "tab_button@cui-button.base_tab": {
+    "$tab_panel|default": "cui-button.tab_panel",
+    "$unchecked_secondary_text_color": "$tab_secondary_unchecked_text_color",
+    "$unchecked_hover_secondary_text_color": "$tab_secondary_unchecked_hover_text_color",
+    "$unchecked_locked_secondary_text_color": "$tab_secondary_unchecked_locked_text_color",
+    "$unchecked_locked_hover_secondary_text_color": "$tab_secondary_unchecked_locked_hover_text_color",
+    "$checked_secondary_text_color": "$tab_secondary_checked_text_color",
+    "$checked_hover_secondary_text_color": "$tab_secondary_checked_hover_text_color",
+    "$checked_locked_secondary_text_color": "$tab_secondary_checked_locked_text_color",
+    "$checked_locked_hover_secondary_text_color": "$tab_secondary_checked_locked_hover_text_color",
+    "$unchecked_glyph_color": "$tab_unchecked_glyph_color",
+    "$unchecked_hover_glyph_color": "$tab_unchecked_hover_glyph_color",
+    "$unchecked_locked_glyph_color": "$tab_unchecked_locked_glyph_color",
+    "$unchecked_locked_hover_glyph_color": "$tab_unchecked_locked_hover_glyph_color",
+    "$checked_glyph_color": "$tab_checked_glyph_color",
+    "$checked_hover_glyph_color": "$tab_checked_hover_glyph_color",
+    "$checked_locked_glyph_color": "$tab_checked_locked_glyph_color",
+    "$checked_locked_hover_glyph_color": "$tab_checked_locked_hover_glyph_color"
+  },
+  "base_tab": {
+    "type": "panel",
+    "$unchecked_text_color": "$cuigv:FontPrimaryColor",
+    "$unchecked_hover_text_color": "$cuigv:FontPrimaryColor",
+    "$unchecked_locked_text_color": "$tab_unchecked_locked_text_color",
+    "$unchecked_locked_hover_text_color": "$tab_unchecked_locked_hover_text_color",
+    "$checked_text_color": "$cuigv:SecondaryColor",
+    "$checked_hover_text_color": "$cuigv:SecondaryColor",
+    "$checked_locked_text_color": "$cuigv:SecondaryColor",
+    "$checked_locked_hover_text_color": "$tab_checked_locked_hover_text_color",
+    "$tab_view_binding_name|default": "tab",
+    "$tab_panel|default": "cui-button.tab_panel",
+    "$is_checked_state|default": false,
+    "$is_hover_state|default": false,
+    "$allow_controller_back_button_mapping|default": false,
+    "$top_tab_tts_name|default": "accessibility.tab.tts.title",
+    "$unchecked_default_image|default": "textures/ui/.cui-assets/background",
+    "$unchecked_hover_image|default": "textures/ui/.cui-assets/background",
+    "$unchecked_locked_image|default": "textures/ui/.cui-assets/background",
+    "$unchecked_locked_hover_image|default": "textures/ui/.cui-assets/background",
+    "$checked_default_image|default": "textures/ui/.cui-assets/background_2x",
+    "$checked_hover_image|default": "textures/ui/.cui-assets/background_2x",
+    "$checked_locked_image|default": "textures/ui/.cui-assets/background_2x",
+    "$checked_locked_hover_image|default": "textures/ui/.cui-assets/background_2x",
+    "controls": [
+      { "$tab_view_binding_name@common.toggle": {
+          "$toggle_tts_name": "$top_tab_tts_name",
+          "$toggle_tts_enabled_binding_type": "global",
+          "$toggle_reset_on_focus_lost|default": true,
+          "reset_on_focus_lost": "$toggle_reset_on_focus_lost",
+          "$allow_controller_back_button_mapping": "$allow_controller_back_button_mapping",
+          "controls": [
+            { "unchecked@$tab_panel": {
+                "$text_color": "$unchecked_text_color",
+                "$tab_texture": "$unchecked_default_image",
+                "$tab_state": "unchecked",
+                "$cuiv:tab_color": "$cuigv:SecondaryColor",
+                "layer": 1
+            }},
+            { "unchecked_hover@$tab_panel": {
+                "$text_color": "$unchecked_hover_text_color",
+                "$tab_texture": "$unchecked_hover_image",
+                "$tab_state": "unchecked_hover",
+                "$is_hover_state": true,
+                "$cuiv:tab_color": "$cuigv:TertiaryColor",
+                "layer": 1
+            }},
+            { "unchecked_locked@$tab_panel": {
+                "$text_color": "$unchecked_locked_text_color",
+                "$tab_texture": "$unchecked_locked_image",
+                "$tab_state": "unchecked_locked",
+                "$cuiv:tab_color": "$cuigv:SecondaryColor",
+                "layer": 1
+            }},
+            { "unchecked_locked_hover@$tab_panel": {
+                "$text_color": "$unchecked_locked_hover_text_color",
+                "$tab_texture": "$unchecked_locked_hover_image",
+                "$tab_state": "unchecked_locked_hover",
+                "$cuiv:tab_color": "$cuigv:SecondaryColor",
+                "layer": 1
+            }},
+            { "checked@$tab_panel": {
+                "$text_color": "$checked_text_color",
+                "$tab_texture": "$checked_default_image",
+                "$tab_state": "checked",
+                "$is_checked_state": true,
+                "$cuiv:tab_color": "$cuigv:PrimaryColor",
+                "layer": 2
+            }},
+            { "checked_hover@$tab_panel": {
+                "$text_color": "$checked_hover_text_color",
+                "$tab_texture": "$checked_hover_image",
+                "$tab_state": "checked_hover",
+                "$is_checked_state": true,
+                "$is_hover_state": true,
+                "$cuiv:tab_color": "$cuigv:PrimaryColor",
+                "layer": 2
+            }},
+            { "checked_locked@$tab_panel": {
+                "$text_color": "$checked_locked_text_color",
+                "$tab_texture": "$checked_locked_image",
+                "$tab_state": "checked_locked",
+                "$is_checked_state": true,
+                "$cuiv:tab_color": "$cuigv:TertiaryColor",
+                "layer": 2
+            }},
+            { "checked_locked_hover@$tab_panel": {
+                "$text_color": "$checked_locked_hover_text_color",
+                "$tab_texture": "$checked_locked_hover_image",
+                "$tab_state": "checked_locked_hover",
+                "$is_checked_state": true,
+                "$cuiv:tab_color": "$cuigv:TertiaryColor",
+                "layer": 2
+            }}
+      ]}}
+]}}

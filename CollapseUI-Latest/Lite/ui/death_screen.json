@@ -1,0 +1,5 @@
+{
+  "death_screen@common.base_screen": {
+    "$screen_content": "cui-death_screen.root_contents"
+  }
+}

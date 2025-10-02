@@ -1,0 +1,24 @@
+{
+  "world_convert_modal_progress_screen": { "$screen_content": "cui-progress_screen.regular_progress_screen_content"},
+  "realms_loading_progress_screen": { "$screen_content": "cui-progress_screen.world_modal_progress_panel", "$screen_bg_content": "common.empty_panel", "$use_custom_panorama": "(not $is_holographic)"},
+  "realms_stories_loading_progress_screen": { "$screen_content": "cui-progress_screen.regular_progress_screen_content", "$screen_bg_content": "common.empty_panel", "$use_custom_panorama": "(not $is_holographic)"},
+  "world_loading_progress_screen": { "$screen_content": "cui-progress_screen.regular_progress_screen_content", "$screen_bg_content": "cui-common.loading_screen_background", "$use_custom_panorama": "(not $is_holographic)"},
+  
+  "overworld_loading_progress_screen": {
+    "$screen_content": "cui-progress_screen.regular_progress_screen_content_overworld",
+    "$screen_bg_content": "cui-common.loading_screen_background"
+  },
+  "nether_loading_progress_screen": {
+    "$screen_content": "cui-progress_screen.regular_progress_screen_content_nether",
+    "$screen_bg_content": "cui-common.loading_screen_background"
+  },
+  "theend_loading_progress_screen": {
+    "$screen_content": "cui-progress_screen.regular_progress_screen_content_theend",
+    "$screen_bg_content": "cui-common.loading_screen_background"
+  },
+  
+  "modal_progress_screen": { "$screen_content": "cui-progress_screen.modal_screen_content", "$screen_bg_content": "cui-common.menu_screen_background", "$is_full_screen_layout": true},
+  "world_saving_progress_screen": { "variables": [], "$screen_content":"cui-progress_screen.world_save_modal_progress_screen_content", "$screen_bg_content": "cui-common.loading_screen_background", "$progress_title_text": "menu.saving", "$use_custom_panorama": "(not $is_holographic)"},
+  "gamepad_helpers": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 0, 32 ]},
+  "title_panel_content": { "ignored": true, "$splash_text_visible": false, "layer": -2 }
+}

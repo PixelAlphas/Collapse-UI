@@ -1,0 +1,158 @@
+## Collapse-UI's Default EN lang
+## Settings screen
+cui.settings.experimental.title=Experimental
+cui.settings.utilities=utilidades
+cui.settings.controls=Control(es)
+cui.settings.generals=General(es)
+
+## > Accesibilidad
+cui.settings.accessibility.main.description=Una sección que puede ayudar con temas relacionados con la discapacidad y la visibilidad.
+cui.settings.accessibility.tts.description=Una voz de robot que se reproducirá cuando interactúes con las cosas.
+cui.settings.accessibility.misc.description=Accesibilidad relacionada con HUD y juego, como mensajes de chat y oscuridad.
+
+## > General
+cui.settings.general.online.title=En linea
+cui.settings.general.online.description=Una sección esencial para administrar lo relacionado con Internet, como la forma en que se mostrará el aspecto o la actualización automática de los paquetes del mercado. (Esto puede variar en las distintas plataformas en las que juegues)
+cui.settings.general.network.description=Una sección que puede controlar lo relacionado con la red de internet y datos mobiles.
+cui.settings.general.misc.description=La información adicional del juego, los créditos, la creación del juego, etc. pueden ser útiles únicamente para los desarrolladores.
+
+## > Creador
+cui.settings.creator.main.description=Una sección bastante útil para creadores y depuradores de paquetes de recursos/paquetes de comportamiento.
+cui.settings.creator.contentlog.title=Registro de contenido
+
+## > Sonido
+cui.settings.sound.main.description=Configuración del sonido
+cui.settings.sound.main.all.description=Principal
+cui.settings.sound.main.music.description=Música
+cui.settings.sound.main.audio.description=Sonido
+cui.settings.sound.main.ambient.description=Ambiente/Entorno
+cui.settings.sound.main.block.description=Bloques
+cui.settings.sound.main.hostile.description=Mobs hostiles
+cui.settings.sound.main.neutral.description=Mobs amigables
+cui.settings.sound.main.player.description=Jugadores
+cui.settings.sound.main.record.description=tocadiscos/bloques de notas
+cui.settings.sound.main.weather.description=Clima
+cui.settings.sound.main.texttospeech.description=Texto hablado
+
+## > Idioma
+cui.settings.language.main.description=Una sección para cambiar el idioma del juego. NOTA: Collapse-UI actualmente no es compatible con TODOS los idiomas. ¡Agradecemos las contribuciones en otros idiomas!
+
+## > Video
+cui.settings.video.main.description=Una sección para ajustar aspectos gráficos y relacionados con la jugabilidad.
+cui.settings.video.gameplay.title=Jugabilidad
+cui.settings.video.gameplay.description=Mejora la experiencia de juego.
+cui.settings.video.graphic.title=Gráficos
+cui.settings.video.graphic.description=Modifica la experiencia visual y de rendimiento.
+cui.settings.video.advgraphic.title=Gráficos avanzados
+cui.settings.video.advgraphic.description=Modifica la experiencia gráfica, por ejemplo, renderizador diferido y RTX.
+cui.settings.video.ui.title=Interfaz
+cui.settings.video.ui.description=Modifica la interfaz de usuario en general para mejorar la accesibilidad.
+cui.settings.video.perspective.description=Cambia tu perspectiva de juego (o también conocido como F5)
+
+## > Control
+cui.settings.gamepad.main.description=Una sección para ajustar la experiencia del control.
+cui.settings.gamepad.mapping.description=Cambia la asignación del control, lo que puede permitirle cambiar la acción de diferentes botones.
+
+## > Tocar
+cui.settings.touch.main.description=Una sección para ajustar la experiencia táctil
+cui.settings.touch.misc.description=Cosa regular.
+
+## > Teclado y mouse
+cui.settings.keyboardmouse.main.description=Una sección para ajustar la experiencia del mouse y el teclado.
+cui.settings.keyboardmouse.mapping.description=Cambia la asignación del teclado, lo que puede permitirte utilizar diferentes acciones del juego en diferentes teclas.
+## > Recursos globales
+cui.settings.globalresource.main.description=Una sección para aplicar un paquete de recursos.
+cui.settings.globalresource.deselected.title=Mis packs
+cui.settings.globalresource.deselected.description=Paquete(s) no activo(s).
+cui.settings.globalresource.selected.title=Activo
+cui.settings.globalresource.selected.description=Paquete(s) activo(s) - Si está aplicando paquetes de configuración para CUI, ¡considere colocarlos en la parte superior de Collapse-UI!
+
+## > Cuenta
+cui.settings.account.main.description=Una sección para iniciar sesión con una cuenta de Xbox para poder unirte al modo multijugador.
+
+
+## Pantalla de inicio
+cui.main_menu.play=JUGAR
+cui.main_menu.achievement=LOGROS
+cui.main_menu.skin=ASPECTOS
+cui.main_menu.settings=AJUSTES
+cui.main_menu.marketplace=MERCADO
+cui.main_menu.exit=SALIR
+cui.username.logged_in=Conectado como
+cui.username.local=Jugando como (Local)
+cui.username.playing=Jugando como
+cui.main_menu.quickaccess=Acceso Rápido
+cui.main_menu.infomation=Información
+
+## Pantalla de pausa
+cui.pause.resume=REANUDAR JUEGO
+cui.pause.world=Jugando actualmente
+cui.pause.playerlist=Lista de jugadores
+cui.pause.screenshot=CAPTURA DE PANTALLA
+cui.pause.stories=HISTORIAS
+
+## Pantalla de jugar
+cui.play.controllcentre=Centro de control
+cui.play.mostrecent=Más reciente
+cui.play.worldsearch.textbar=Buscar mundo (distingue mayúsculas y minúsculas)
+cui.play.hidefeaturedserver=Ocultar lista de servidores destacados
+cui.play.viewfeaturedserver=Mostrar lista de servidores destacados
+
+## Safezone
+cui.safezone.exp.title=Ajustes experimentales
+
+## Acerca de
+cui.about.title=Acerca de esta interfaz
+cui.about.tab.about=Acerca de
+cui.about.tab.about.uititle=Collapse-UI
+cui.about.tab.about.author=Autor de esta interfaz
+cui.about.tab.about.update=Fecha de versión
+cui.about.tab.activeconfig=Ajustes
+cui.about.tab.activeconfigalt=Activar ajustes
+
+cui.about.tab.activeconfig.configname=Configurar Nombre
+cui.about.tab.activeconfig.designedversion=Versión compatible
+
+cui.about.tab.activeconfig.theme=Tema
+cui.about.tab.activeconfig.primarycolor=Color primario
+cui.about.tab.activeconfig.secondarycolor=Color secundario
+cui.about.tab.activeconfig.tertiarycolor=Color terciario (Secundario pero más oscuro)
+cui.about.tab.activeconfig.fontprimarycolor=Color primario de la fuente
+cui.about.tab.activeconfig.fontsecondarycolor=Color secundario de la fuente
+cui.about.tab.activeconfig.backgroundalpha=Opacidad del fondo
+cui.about.tab.activeconfig.buttonalpha=Opacidad de los botones
+cui.about.tab.activeconfig.uibackground=Fondo
+cui.about.tab.activeconfig.uibackgroundslider=Deslizador de la pantalla de inicio
+cui.about.tab.activeconfig.backgroundgradientprimarycolor=Fondo degradado color primario
+cui.about.tab.activeconfig.backgroundgradientsecondarycolor=Fondo degradado color secundario
+
+cui.about.tab.activeconfig.visual=Visuales
+cui.about.tab.activeconfig.shadows=Sombras
+cui.about.tab.activeconfig.fadedprogressBar=Desvanecimiento de la barra de carga
+cui.about.tab.activeconfig.exptextshadows=Texto de la barra de experiencia de Java Edition
+cui.about.tab.activeconfig.backgroundgradient=Fondo degradado
+cui.about.tab.activeconfig.uianimations=Animaciones
+
+cui.about.tab.activeconfig.layout=Diseños
+cui.about.tab.activeconfig.searchboxsystem=Barra de búsqueda de mundo
+cui.about.tab.activeconfig.oldsliderdesign=Diseño antiguo del deslizador
+cui.about.tab.activeconfig.vanillapaperdoll=Muñeco de papel vanilla
+cui.about.tab.activeconfig.norealmspromoteinworldsection=Sin organizadores de Realm en la selección de mundo
+cui.about.tab.activeconfig.nogamelogo=Sin el logo del juego
+cui.about.tab.activeconfig.startmenubuttonclassic=Menu de inicio clásico
+cui.about.tab.activeconfig.logoinpausescreen=Logo en la pantalla de pausa
+
+cui.about.tab.credit=Créditos
+cui.about.tab.credit.bg=Diseños / Fondos
+cui.about.tab.credit.lang=Languajes
+
+## Extras
+cui.extras.title=Extras
+cui.extras.tips=Consejos:
+cui.extras.warning=¡Advertencia!
+cui.extras.uirestart=Si estás aplicando el paquete por primera vez, ¡considera reiniciar el juego primero! Dado que esta interfaz de usuario usa fuentes personalizadas, la experiencia puede variar sin reiniciar.
+cui.extras.goback=Presione el fondo o ESC para el teclado o el botón 'Seleccionar' para el control) para volver atrás.
+
+options.fov= 
+options.fov.alt=Campo de visión
+resourcePack.subpackResolution.alt=Resolución

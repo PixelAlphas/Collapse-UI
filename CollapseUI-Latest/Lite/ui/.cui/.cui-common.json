@@ -1,0 +1,570 @@
+{ "namespace": "cui-common",
+  "textbox_template": {
+    "type": "image",
+    "texture": "textures/ui/.cui-assets/background",
+    "size": [ "100% - 8px", "100%cm + 4px" ],
+    "color": "$cuigv:TertiaryColor",
+    "$cuiv:tbt_header|default": "NaN lmao",
+    "$cuiv:tbt_bindings|default": "NaN lmao",
+    "$cuiv:tbt_placeholder|default": "NaN lmao",
+    "$cuiv:tbt_name|default": "NaN lmao",
+    "$cuiv:tbt_bindings_property|default": [],
+    "controls": [
+      { "sp": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100% - 8px", "100%c" ],
+          "controls": [
+            { "header": {
+                "type": "label",
+                "text": "$cuiv:tbt_header",
+                "size": [ "100% - 8px", "default" ],
+                "font_type": "MinecraftTen",
+                "layer": 10
+            }},
+            { "pudding": { "type": "panel", "size": [ 1, 2 ]}},
+            { "host_input@cui-common.text_box": {
+                "$cuiv:text_edit_box_content_binding_name": "$cuiv:tbt_bindings",
+                "$cuiv:text_edit_box_binding_collection_name": "$cuiv:tbt_bindings",
+                "$cuiv:placeholder_text": "$cuiv:tbt_placeholder",
+                "$cuiv:text_box_name": "$cuiv:tbt_name",
+                "size": [ "100%", 20 ],
+                "bindings": "$cuiv:tbt_bindings_property"
+            }}
+      ]}}
+  ]},
+  "cancel_button@cui-common.cancel_button_core": {
+    "offset": [ 4, 4 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right"
+  },
+  "cancel_button_core@cui-button.text_button": {
+    "$pressed_button_name": "button.menu_exit",
+    "size": [ 35, 35 ],
+    "$cuiv:button_type_panel": "cui-start_screen.button_label",
+    "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
+    "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
+    "$cuiv:button_image_texture": "textures/ui/.cui-assets/.icons/exit_icon"
+  },
+  "gradient_renderer_template": {
+    "ignored": "(not $cuigv:BackgroundGradient)",
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "layer": -89
+  },
+  "player_head_renderer": {
+    "type": "panel",
+    "size": [ 25, 25 ],
+    "clips_children": true,
+    "controls": [
+      { "skin_renderer": {
+          "type": "custom",
+          "layer": 5,
+          "camera_tilt_degrees": -10,
+          "starting_rotation": 30,
+          "rotation": "gesture_x",
+          "renderer": "paper_doll_renderer",
+          "size": [ 42, 92 ],
+          "offset": [ 0, 8 ]
+      }}
+  ]},
+  "screen_background": {
+    "type": "panel",
+    "controls": [
+      { "gradient@cui-common.gradient_renderer_template": {
+          "ignored": "(not $cuigv:BackgroundGradient)",
+          "size": [ "55%", "100%" ],
+          "gradient_direction": "horizontal",
+          "color1": "$cuigv:BackgroundGradientPrimaryColor",
+          "color2": "$cuigv:BackgroundGradientSecondaryColor",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+      }},
+      { "background": {
+          "ignored": "(not $cuigv:UIBackground)",
+          "type": "image",
+          "fill": true,
+          "alpha": "$cuigv:BackgroundAlpha",
+          "layer": -95,
+          "texture": "textures/ui/cui-backgrounds/ui_background"
+      }}
+  ]},
+  "label_with_background": {
+    "type": "image",
+    "layer": 1,
+    "texture": "textures/ui/.cui-assets/background",
+    "color": "$cuiv:lwb_bg_color",
+    "size": [ "100%cm + 4px", "100%cm + 2px" ],
+    "$cuiv:lwb_text|default": "?",
+    "$cuiv:lwb_text_color|default": "$cuigv:SecondaryColor",
+    "$cuiv:lwb_bg_color|default": "$cuigv:PrimaryColor",
+    "$cuiv:lwb_bindings|default": [],
+    "controls": [
+      { "main": {
+          "type": "label",
+          "text": "$cuiv:lwb_text",
+          "color": "$cuiv:lwb_text_color",
+          "shadow": false,
+          "layer": 2,
+          "bindings": "$cuiv:lwb_bindings"
+      }}
+  ]},
+  "label_with_background_adv": {
+    "type": "image",
+    "size": [ "100%c + 12px", "100%c + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuiv:lwb_bg_color",
+    "$cuiv:lwb_text|default": "?",
+    "$cuiv:lwb_text_color|default": "$cuigv:FontPrimaryColor",
+    "$cuiv:lwb_text_alignment|default": "center",
+    "$cuiv:lwb_text_size|default": [ "default", "default" ],
+    "$cuiv:lwb_bg_color|default": "$cuigv:SecondaryColor",
+    "$cuiv:lwb_bindings|default": [],
+    "controls": [
+      { "main": {
+          "type": "label",
+          "layer": 1,
+          "enable_profanity_filter": false,
+          "color": "$cuiv:lwb_text_color",
+          "text": "$cuiv:lwb_text",
+          "shadow": false,
+          "size": "$cuiv:lwb_text_size",
+          "text_alignment": "$cuiv:lwb_text_alignment",
+          "bindings": "$cuiv:lwb_bindings"
+      }}
+  ]},
+  "experience_bar_template": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui/White",
+    "clips_children": true
+  },
+  "text_box": {
+    "type": "edit_box",
+    "focus_enabled": true,
+    
+    "$cuiv:text_box_name|default": "#text_box_name",
+    "$cuiv:text_edit_box_grid_collection_name|default": "#text_box_enabled",
+    "$cuiv:text_edit_box_text_type|default": "ExtendedASCII",
+    "$cuiv:virtual_keyboard_buffer_control|default": "",
+    "$cuiv:text_edit_text_control|default": "display_text",
+    "$cuiv:place_holder_control": "cui-common.text_edit_box_place_holder_label",
+    "$cuiv:text_background_default": "cui-common.edit_box_indent",
+    "$cuiv:text_background_hover": "cui-common.edit_box_indent_hover",
+    "$cuiv:text_background_locked": "cui-common.edit_box_indent_locked",
+    "max_length": 512,
+    "always_listening": true,
+    "$cuiv:text_edit_box_content_binding_type|default": "global",
+    "$cuiv:text_edit_box_content_binding_name|default": "#text_box_item_name",
+    "$cuiv:text_edit_box_binding_condition|default": "visible",
+    
+    "$cuiv:text_magnifying_glass_image|default": false,
+    "text_edit_box_grid_collection_name": "$cuiv:text_edit_box_grid_collection_name",
+    "text_box_name": "$cuiv:text_box_name",
+    "text_type": "$cuiv:text_edit_box_text_type",
+    "text_control": "$cuiv:text_edit_text_control",
+    "virtual_keyboard_buffer_control": "$cuiv:virtual_keyboard_buffer_control",
+    "place_holder_control": "$cuiv:place_holder_control",
+    
+    "locked_control": "locked",
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "button_mappings": [
+      { "from_button_id": "button.menu_select",
+        "to_button_id": "button.text_edit_box_selected",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "pressed"
+      },
+      { "from_button_id": "button.menu_select",
+        "to_button_id": "button.text_edit_box_selected",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global",
+        "consume_event": false
+      },
+      { "from_button_id": "button.menu_ok",
+        "to_button_id": "button.text_edit_box_selected",
+        "handle_select": true,
+        "handle_deselect": true,
+        "mapping_type": "pressed"
+      },
+      { "from_button_id": "button.menu_ok",
+        "to_button_id": "button.text_edit_box_selected",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },
+      { "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.text_edit_box_deselected",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },
+      { "to_button_id": "button.text_edit_box_hovered",
+        "mapping_type": "pressed"
+      },
+      { "from_button_id": "button.menu_clear",
+        "to_button_id": "button.text_edit_box_clear",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+    }],
+    "property_bag": {
+      "#property_field": "#item_name"
+    },
+    "bindings": [
+      { "binding_type": "$cuiv:text_edit_box_content_binding_type",
+        "binding_condition": "$cuiv:text_edit_box_binding_condition",
+        "binding_collection_name": "$cuiv:text_edit_box_grid_collection_name",
+        "binding_name": "$cuiv:text_edit_box_content_binding_name",
+        "binding_name_override": "#item_name"
+      },
+      { "binding_name": "#newline_refresh"
+    }],
+    "controls": [
+      { "centering_panel": {
+          "type": "panel",
+          "size": [ "100% - 6px", "100% - 4px" ],
+          "clips_children": true,
+          "controls": [
+            { "$cuiv:text_edit_text_control@cui-common.text_edit_box_label": { "layer": 1 }},
+            { "magnifying_glass@common.text_magnifying_glass_image": {
+                "ignored": "(not $cuiv:text_magnifying_glass_image)",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ 10, 10 ],
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "$cuiv:text_edit_text_control",
+                    "source_property_name": "(#item_name = '')",
+                    "target_property_name": "#visible"
+                }]
+            }},
+            { "visibility_panel": {
+                "type": "panel",
+                "controls": [
+                  { "place_holder_control@$cuiv:place_holder_control": { "layer": 1 }
+                }],
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "$cuiv:text_edit_text_control",
+                    "source_property_name": "(#item_name = '')",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                  }
+            ]}}
+      ]}},
+      { "default@$cuiv:text_background_default": {} },
+      { "hover@$cuiv:text_background_hover": {} },
+      { "pressed@$cuiv:text_background_hover": {} },
+      { "locked@$cuiv:text_background_locked": {} }
+    ]
+  },
+  "text_edit_box_place_holder_label": {
+    "type": "label",
+    "shadow": false,
+    "color": [ 0.7, 0.7, 0.7 ],
+    "$text_box_name|default": "#text_box_name",
+    "$cuiv:placeholder_text|default": "",
+    "text": "$cuiv:placeholder_text",
+    "bindings": [
+      { "binding_type": "global",
+        "binding_condition": "visible",
+        "binding_collection_name": "",
+        "binding_name": "$cuiv:text_edit_box_content_binding_name"
+  }]},
+  "text_edit_box_label": {
+    "type": "label",
+    "shadow": false,
+    "text": "#item_name",
+    "size": [ "100%", "default" ],
+    "property_bag": {
+      "#property_field": "#item_name"
+    },
+    "bindings": [
+      { "binding_type": "global",
+        "binding_condition": "visible",
+        "binding_collection_name": "",
+        "binding_name": "$cuiv:text_edit_box_content_binding_name",
+        "binding_name_override": "#item_name"
+      },
+      { "binding_name": "#newline_refresh" }
+  ]},
+  "experience_bar_empty@cui-common.experience_bar_template": { "color": [ 0.4, 0.4, 0.4 ] },
+  "experience_bar_full@cui-common.experience_bar_template": { 
+    "type": "image",
+    "anchor_to": "left_middle",
+    "anchor_from": "left_middle",
+    "$cuiv:bar_color|default": "$cuigv:PrimaryColor",
+    "property_bag": {
+      "#size_binding_x": 0.0,
+      "#size_binding_y": 0.0
+    },
+    "bindings": [
+      { "binding_name": "#loading_bar_percentage",
+        "binding_type": "global"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(1.0 - (#loading_bar_percentage))",
+        "target_property_name": "#size_binding_x"
+    }],
+    "controls": [
+      { "head@cui-common.gradient_renderer_template": {
+          "size": [ 20, "100%" ],
+          "ignored": "(not $cuigv:FadedProgressBar)",
+          "layer": 90,
+          "gradient_direction": "horizontal",
+          "color1": [ 1, 1, 1, 0 ],
+          "color2": [ 1, 1, 1, 0.8 ],
+          "offset": [ -1, 0 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+      }},
+      { "background": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "offset": [ -1, 0 ],
+          "texture": "textures/ui/White",
+          "color": "$cuiv:bar_color",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle"
+      }}
+  ]},
+  "edit_box_indent": {
+    "type": "image",
+    "texture": "textures/ui/.cui-assets/text_box",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor"
+  },
+  "edit_box_indent_hover@cui-common.edit_box_indent": {
+    "texture": "textures/ui/.cui-assets/text_box_hover",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:PrimaryColor"
+  },
+  "edit_box_indent_locked@cui-common.edit_box_indent": {
+    "texture": "textures/ui/.cui-assets/text_box_hover",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": [ 1, 0, 0 ]
+  },
+  "loading_screen_background": {
+    "type": "panel",
+    "controls": [
+      { "gradient02@cui-common.gradient_renderer_template": {
+          "ignored": "(not $cuigv:BackgroundGradient)",
+          "size": [ "100%", "30%" ],
+          "color1": "$cuigv:BackgroundGradientSecondaryColor",
+          "color2": "$cuigv:BackgroundGradientPrimaryColor",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -50 ]
+      }},
+      { "background": {
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": "$cuigv:BackgroundGradientSecondaryColor",
+          "size": [ "100%", 50 ],
+          "alpha": "$cuigv:BackgroundAlpha",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }},
+      { "background": {
+          "ignored": "(not $cuigv:UIBackground)",
+          "type": "image",
+          "alpha": "$cuigv:BackgroundAlpha",
+          "fill": true,
+          "layer": -95,
+          "texture": "textures/ui/cui-backgrounds/ui_background_blur"
+      }}
+  ]},
+  "menu_screen_background": {
+    "type": "panel",
+    "controls": [
+      { "gradient01@cui-common.gradient_renderer_template": {
+          "ignored": "(not $cuigv:BackgroundGradient)",
+          "size": [ "100%", "20%" ],
+          "color1": "$cuigv:BackgroundGradientPrimaryColor",
+          "color2": "$cuigv:BackgroundGradientSecondaryColor",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+      }},
+      { "gradient02@cui-common.gradient_renderer_template": {
+          "ignored": "(not $cuigv:BackgroundGradient)",
+          "size": [ "100%", "45%" ],
+          "color1": "$cuigv:BackgroundGradientSecondaryColor",
+          "color2": "$cuigv:BackgroundGradientPrimaryColor",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+      }},
+      { "background": {
+          "ignored": "(not $cuigv:UIBackground)",
+          "type": "image",
+          "alpha": "$cuigv:BackgroundAlpha",
+          "fill": true,
+          "layer": -95,
+          "texture": "textures/ui/cui-backgrounds/ui_background_blur"
+      }}
+  ]},
+  "close_button@cui-button.text_button": {
+    "$pressed_button_name": "button.menu_exit",
+    "layer": 90,
+    "controls": [
+      { "default@cui-common.close_button_panel": {}},
+      { "hover@cui-common.close_button_panel": { "$cuiv:close_button_color": [ 0.7, 0.7, 0.7 ]}},
+      { "pressed@cui-common.close_button_panel": { "$cuiv:close_button_color": "$cuigv:PrimaryColor"}}
+  ]},
+  "close_button_panel": {
+    "type": "label",
+    "font_type": "MinecraftTen",
+    "font_scale_factor": 1.8,
+    "text": "<",
+    "color":"$cuiv:close_button_color",
+    "$cuiv:close_button_color|default": "$cuigv:FontSecondaryColor"
+  },
+  "title_core": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%cm", 30 ],
+    "offset": [ 14, 4 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$cuiv:title_back_button|default": true,
+    "$cuiv:title_text|default": "Collapse-UI",
+    "$cuiv:title_text_subtitle|default": "",
+    "$cuiv:title_text_color|default": "$cuigv:FontPrimaryColor",
+    "$cuiv-anim:pos_from": [ 14, -50 ],
+    "$cuiv-anim:pos_to": [ 14, 4 ],
+    "$cuiv:AddPadding|default": false,
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
+    "controls": [
+      { "paddings": { "type": "panel", "size": [ 28, 1 ], "ignored": "(not $cuiv:AddPadding)"}},
+      { "close_button@cui-common.close_button": {
+          "ignored": "(not $cuiv:title_back_button)",
+          "size": [ 28, 28 ]
+      }},
+      { "paddings": { "type": "panel", "size": [ 4, 1 ]}},
+      { "label": {
+          "type": "label",
+          "text": "$cuiv:title_text",
+          "size": [ 300, 30 ],
+          "font_scale_factor": 2.3,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "font_type": "MinecraftTen",
+          "color": "$cuiv:title_text_color",
+          "controls": [
+            { "version_label": {
+                "ignored": "$cuiv:title_back_button",
+                "type": "label",
+                "text": "$cuiv:title_text_subtitle",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 125, 12 ],
+                "color": "$cuiv:title_text_color",
+                "alpha": 0.7
+            }}
+      ]}}
+  ]},
+  "player_head_element_origin": {
+    "type": "panel",
+    "size": [ 25, 25 ],
+    "clips_children": true,
+    "controls": [
+      { "skin_renderer": {
+          "type": "custom",
+          "layer": 5,
+          "camera_tilt_degrees": -10,
+          "starting_rotation": 30,
+          "rotation": "gesture_x",
+          "renderer": "paper_doll_renderer",
+          "size": [ 42, 92 ],
+          "offset": [ 0, 8 ]
+      }}
+  ]},
+  "header": {
+    "type": "panel",
+    "size": [ "100%", 20 ],
+    "$cuiv:header_text|default": "none",
+    "$cuiv:header_anchor|default": "left_middle",
+    "$cuiv:header_background|default": false,
+    "controls": [
+      { "label": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 8px" ],
+          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "color": "$cuigv:PrimaryColor",
+          "anchor_from": "$cuiv:header_anchor",
+          "anchor_to": "$cuiv:header_anchor",
+          "layer": 2,
+          "controls": [
+            { "main": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "$cuiv:header_text",
+                "font_type": "MinecraftTen",
+                "offset": [ 0, -1 ],
+                "shadow": false
+            }}
+      ]}},
+      { "line": {
+          "type": "image",
+          "size": [ "100%", 4 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer": 2,
+          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "color": "$cuigv:PrimaryColor"
+      }},
+      { "background": {
+          "ignored": "(not $cuiv:header_background)",
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "layer": 1,
+          "texture": "textures/ui/.cui-assets/background_no_outline",
+          "color": "$cuigv:TertiaryColor"
+      }}
+  ]},
+  "element_background":{
+    "type": "image",
+    "$cuiv:element_background_no_label|default": false,
+    "$cuiv:element_background_alpha|default": "$cuigv:BackgroundAlpha",
+    "$cuiv:element_background_color|default": "$cuigv:SecondaryColor",
+    "$cuiv:element_background_size|default": [ "default", "100%cm" ],
+    "$cuiv:element_background_offset|default": [ 0, 0 ],
+    "$cuiv:element_background_anchor|default": "bottom_middle",
+    "$cuiv:element_background_texture|default": "textures/ui/.cui-assets/background",
+    "$cuiv:element_background_contents|default": "",
+    "alpha": "$cuiv:element_background_alpha",
+    "color": "$cuiv:element_background_color",
+    "size": "$cuiv:element_background_size",
+    "offset": "$cuiv:element_background_offset",
+    "anchor_from": "$cuiv:element_background_anchor",
+    "anchor_to": "$cuiv:element_background_anchor",
+    "texture": "$cuiv:element_background_texture",
+    "controls": [
+      { "header_contents@$cuiv:element_background_contents": {}},
+      { "header_label":{
+          "type": "label",
+          "ignored": "$cuiv:element_background_no_label",
+          "text": "$cuiv:header_text",
+          "layer": 1,
+          "shadow": false,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 5.5, 2 ],
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 1.5,
+          "max_size": [ "90%", 45 ],
+          "color": "$cuigv:FontPrimaryColor"
+      }}
+  ]}
+}

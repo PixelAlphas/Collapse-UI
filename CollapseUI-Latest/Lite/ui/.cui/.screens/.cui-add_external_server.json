@@ -1,0 +1,178 @@
+{ "namespace": "cui-add_external_server",
+  "root_contents": {
+    "type": "panel",
+    "controls": [
+      { "@add_external_server.gamepad_helpers":{}},
+      { "@main_panel":{}},
+      { "@cui-common.cancel_button": {}},
+      { "background": {
+          "type": "image",
+          "size": [ "250%", "250%" ],
+          "layer": -50,
+          "alpha": 0.6,
+          "texture": "textures/ui/White",
+          "color": "$cuigv:TertiaryColor"
+      }}
+  ]},
+  "play_button@cui-button.text_button": {
+    "$pressed_button_name": "button.play_button",
+    "$cuiv:button_text": "addExternalServerScreen.playButtonLabel",
+    "ignored": "$edit_mode",
+    "bindings": [
+      { "binding_name": "#play_button_enabled",
+        "binding_name_override": "#enabled"
+  }]},
+  "play_disabled_button@play_button": {
+    "bindings": [
+      { "binding_name": "#play_button_disabled",
+        "binding_name_override": "#visible"
+      },
+      { "binding_name": "#play_button_enabled",
+        "binding_name_override": "#enabled"
+  }]},
+  "remove_button@cui-button.text_button": {
+    "$pressed_button_name": "button.remove_button",
+    "$cuiv:button_text": "addExternalServerScreen.removeButtonLabel",
+    "visible": "($edit_mode)"
+  },
+  "save_button@cui-button.text_button": {
+    "$pressed_button_name": "button.save_button",
+    "$cuiv:button_text": "addExternalServerScreen.saveButtonLabel",
+    "bindings": [
+      { "binding_name": "#save_button_enabled",
+        "binding_name_override": "#visible"
+      },
+      { "binding_name": "#save_button_enabled",
+        "binding_name_override": "#enabled"
+  }]},
+  "save_disabled_button@save_button": {
+    "bindings": [
+      { "binding_name": "#save_button_disabled",
+        "binding_name_override": "#visible"
+      },
+      { "binding_name": "#save_button_enabled",
+        "binding_name_override": "#enabled"
+  }]},
+  "content_panel": {
+    "type": "stack_panel",
+    "use_child_anchors": true,
+    "controls": [
+      { "padding_01": { "type": "panel", "size": [ 2, 4 ]}},
+      { "name_edit@cui-common.textbox_template": {
+          "$cuiv:tbt_header": "addExternalServerScreen.nameTextBoxLabel",
+          "$cuiv:tbt_bindings": "#name_text_box_content",
+          "$cuiv:tbt_placeholder|default": "addExternalServerScreen.namePlaceholder",
+          "$cuiv:tbt_name|default": "#name_text_box",
+          "$focus_id": "0_name",
+          "$focus_override_right": "1_ip_edit"
+      }},
+      { "padding_02": { "type": "panel", "size": [ 2, 4 ]}},
+      { "ip_edit@cui-common.textbox_template": {
+          "$cuiv:tbt_header": "addExternalServerScreen.ipTextBoxLabel",
+          "$cuiv:tbt_bindings": "#ip_text_box_content",
+          "$cuiv:tbt_placeholder|default": "addExternalServerScreen.ipPlaceholder",
+          "$cuiv:tbt_name|default": "#ip_text_box",
+          "$focus_id": "1_ip_edit",
+          "$focus_override_right": "2_port"
+      }},
+      { "padding_03": { "type": "panel", "size": [ 2, 4 ]}},
+      { "port_edit@cui-common.textbox_template": {
+          "$cuiv:tbt_header": "addExternalServerScreen.portTextBoxLabel",
+          "$cuiv:tbt_bindings": "#port_text_box_content",
+          "$cuiv:tbt_placeholder|default": "addExternalServerScreen.portPlaceholder",
+          "$cuiv:tbt_name|default": "#port_text_box",
+          "$focus_id": "2_port",
+          "$focus_override_right": "0_name"
+      }}
+  ]},
+  "main_panel": {
+    "type": "input_panel",
+    "size": [ 316, 188 ],
+    "controls": [
+      { "cancel_button_core@cui-common.cancel_button_core": {
+          "ignored": true,
+          "offset": [ 37, 0 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+      }},
+      { "title_text_element": {
+          "type": "image",
+          "size": [ "100%c + 12px", "100%c + 9px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 1,
+          "offset": [ 0, 2 ],
+          "color": "$cuigv:PrimaryColor",
+          "controls": [
+            { "title_text": {
+                "type": "label",
+                "layer": 1,
+                "color": "$cuigv:SecondaryColor",
+                "text": "#title_text",
+                "shadow": false,
+                "bindings": [{ "binding_name": "#title_text" }]
+            }}
+      ]}},
+      { "texture": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "color": "$cuigv:TertiaryColor"
+      }},
+      { "shadow": {
+          "ignored": "(not $cuigv:Shadows)",
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/shadow",
+          "offset": [ 0, 16 ],
+          "size": [ "100% + 16px", "100%" ],
+          "layer": -5
+      }},
+      { "text_background": {
+          "type": "image",
+          "size": [ "100% - 14px", "100% - 55px" ],
+          "texture": "textures/ui/.cui-assets/background",
+          "color": "$cuigv:SecondaryColor",
+          "offset": [ 0, -5 ],
+          "alpha": 0.8
+      }},
+      { "@cui-add_external_server.content_panel": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%-21px", "100%-52px" ],
+          "offset": [ 10, 24 ]
+      }},
+      { "play@cui-add_external_server.play_button": {
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 7, -7 ]
+      }},
+      { "play_disabled@cui-add_external_server.play_disabled_button": {
+          "ignored": "$edit_mode",
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 7, -7 ],
+          "layer": 5
+      }},
+      { "remove@cui-add_external_server.remove_button": {
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 7, -7 ]
+      }},
+      { "save@cui-add_external_server.save_button": {
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -7, -7 ]
+      }},
+      { "save_disabled@cui-add_external_server.save_disabled_button": {
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -7, -7 ],
+          "layer": 1
+      }}
+]}}

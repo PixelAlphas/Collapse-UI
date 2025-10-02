@@ -1,0 +1,7 @@
+{ "tabbed_upsell_screen": {
+    "force_render_below": false,
+    "load_screen_immediately": true,
+    "$use_loading_bars": false,
+    "$screen_content": "cui-about_screen.root_contents",
+    "$screen_bg_content": "cui-common.menu_screen_background"
+}}

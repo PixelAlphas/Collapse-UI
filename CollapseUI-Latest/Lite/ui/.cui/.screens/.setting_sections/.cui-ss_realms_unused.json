@@ -1,0 +1,173 @@
+{ "namespace": "cui-ss_realms",
+  "realms_contents": {
+    "type": "panel",
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "realms_content_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "@cui-common.title_core": {
+          "$cuiv:title_text": "Realms Settings"
+      }},
+      { "@dialog_content": {}}
+  ]},
+  "dialog_content": {
+    "type": "panel",
+    "offset": [ 0, 58 ],
+    "controls": [
+      { "selector_area@cui-ss_realms.selector_area": {
+          "offset": [ 0, 0 ]
+      }}
+  ]},
+  "selector_area": {
+    "type": "panel",
+    "size": [ "100% - 6px", "100% - 58px" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 2,
+    "focus_container": true,
+    "use_last_focus": true,
+    "$focus_navigation_mode_override_down|default": "contained",
+    "$focus_navigation_mode_override_up|default": "contained",
+    "$focus_navigation_mode_override_left|default": "",
+    "$focus_navigation_mode_override_right|default": "",
+    "focus_navigation_mode_down": "$focus_navigation_mode_override_down",
+    "focus_navigation_mode_up": "$focus_navigation_mode_override_up",
+    "focus_navigation_mode_left": "$focus_navigation_mode_override_left",
+    "focus_navigation_mode_right": "$focus_navigation_mode_override_right",
+    "controls": [
+      { "scrolling_panel@common.scrolling_panel": {
+          "$scrolling_content": "cui-ss_realms.selector_panel",
+          "$show_background": false,
+          "$scroll_size": [ "5px", "100% - 4px" ],
+          "$scroll_bar_left_padding_size": [ 1, 0 ]
+      }}
+  ]},
+  "content_area": {
+    "type": "panel",
+    "layer": 1,
+    "focus_container": true,
+    "use_last_focus": false,
+    "$focus_navigation_mode_override_down|default": "contained",
+    "$focus_navigation_mode_override_up|default": "contained",
+    "$focus_navigation_mode_override_left|default": "",
+    "$focus_navigation_mode_override_right|default": "",
+    "focus_navigation_mode_down": "$focus_navigation_mode_override_down",
+    "focus_navigation_mode_up": "$focus_navigation_mode_override_up",
+    "focus_navigation_mode_left": "$focus_navigation_mode_override_left",
+    "focus_navigation_mode_right": "$focus_navigation_mode_override_right",
+    "controls": [
+      { "control": {
+          "type": "stack_panel",
+          "size": [ "60% - 6px", "100% - 58px" ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "controls": [
+            { "scrolling_panel@common.scrolling_panel": {
+                "size": [ "100%", "fill" ],
+                "$scrolling_content": "cui-ss_realms.section_content_panels",
+                "$show_background": false,
+                "$scroll_size": [ "5px", "100% - 4px" ],
+                "$scroll_bar_left_padding_size": [ 0, 0 ]
+            }}
+      ]}}
+  ]},
+  "selector_panels": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "orientation": "vertical",
+    "$default_selector_toggle_index": 0,
+    "ttsSectionContainer": true,
+    "controls": [
+      {
+        "test@cui-ss_realms.test_panel_section": {}
+      }
+  ]},
+  "section_content_panelss": {
+    "type": "panel",
+    "size": [ "100% - 2px", "100%cm" ],
+    "controls": [
+      { "world_sections": {
+          "type": "stack_panel",
+          "controls": [
+            { "game_section@cui-ss_realms.test_panel_sector": {} }
+      ]}}
+  ]},
+  "test_panel_section": {
+    "type": "label",
+    "text": "works panel:P"
+  },
+  "test_panel_sector": {
+    "type": "label",
+    "text": "works list :P"
+  },
+  "selector_panel": {
+    "type": "stack_panel",
+    "orientation": "hori",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c + 4px" ],
+    "$default_selector_toggle_index": 1,
+    "$world_toggle_index|default": 1,
+    "$members_toggle_index|default": 2,
+    "$subscription_toggle_index|default": 3,
+    "$backup_toggle_index|default": 4,
+    "$dev_options_toggle_index|default": 5,
+    "$invite_links_toggle_index|default": 6,
+    "controls": [
+    ]
+  },
+  "section_content_panels": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "world_section@realms_settings.generic_section_wrapper": {
+          "$section_button_name|default": "world_button_toggle",
+          "$section_content_name|default": "realms_world_section.panel_content"
+        }
+      },
+      {
+        "players_section@realms_settings.generic_section_wrapper": {
+          "ignored": "$is_realm_slot",
+          "$section_button_name|default": "members_button_toggle",
+          "$section_content_name|default": "realms_allowlist.friends_containing_panel",
+          "$friend_panel_size": [ "100%", "100%c" ]
+        }
+      },
+      {
+        "subscription_section@realms_settings.generic_section_wrapper": {
+          "ignored": "$is_realm_slot",
+          "$section_button_name|default": "subscription_button_toggle",
+          "$section_content_name|default": "realms_settings.subscriptions_section"
+        }
+      },
+      {
+        "invite_links_section@realms_settings.generic_section_wrapper": {
+          "ignored": "$is_realm_slot",
+          "$section_button_name|default": "invite_links_button_toggle",
+          "$section_content_name|default": "realms_settings.invite_links_section"
+        }
+      },
+      {
+        "dev_options_section@realms_settings.generic_section_wrapper": {
+          "ignored": "($non_config_realms_env or $realm_no_world_edit)",
+          "$section_button_name|default": "dev_options_button_toggle",
+          "$section_content_name|default": "branch_section"
+        }
+      },
+      {
+        "backup_section@realms_settings.generic_section_wrapper": {
+          "ignored": "$realm_no_world_edit",
+          "$section_button_name|default": "backup_button_toggle",
+          "$section_content_name|default": "backup_section"
+        }
+      }
+    ]
+  }
+}

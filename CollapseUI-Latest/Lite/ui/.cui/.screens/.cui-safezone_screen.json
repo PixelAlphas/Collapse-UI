@@ -1,0 +1,201 @@
+{ "namespace": "cui-safezone_screen",
+  "root_contents": {
+    "type": "panel",
+    "controls": [
+      { "safe_zone_bounds_markers": {
+          "type": "panel",
+          "controls": [
+            { "border@cui-safezone_screen.corner_image_border": {} }
+            
+      ]}},
+      { "main_content_panel": {
+          "type": "panel",
+          "size": [ 300, 200 ],
+          "ttsSectionContainer": true,
+          "controls": [
+            { "utilities@cui-common.header": { 
+                "size": [ "100% - 14px", 20 ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "offset": [ 0, 2 ],
+                "$cuiv:header_text": "options.safeZone.title",
+                "$cuiv:header_anchor": "center"
+            }},
+            { "scrolling_panel@common.scrolling_panel": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100% - 24px", "100%-50px" ],
+                "offset": [ 10, 25 ],
+                "$scrolling_pane_size": [ "100%", "100%" ],
+                "$scrolling_pane_offset": [ 1, 0 ],
+                "$scroll_size": [ 5, "100% - 4px" ],
+                "$scrolling_content": "cui-safezone_screen.safezone_section",
+                "$scroll_bar_left_padding_size": [ 0, 0 ],
+                "$scroll_bar_right_padding_size": [ 0, 0 ],
+                "$show_background": false,
+                "$bar_visible": false
+            }},
+            { "confirm_button@cui-button.text_button": {
+                "layer": 1,
+                "size": [ "100% - 14px", 20 ],
+                "$pressed_button_name": "button.confirm_button",
+                "$cuiv:button_text": "gui.confirm","anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "focus_change_down": "FOCUS_OVERRIDE_STOP",
+                "offset": [ 0, 0 ]
+            }}
+      ]}}
+  ]},
+  "corner_image_border": {
+    "type": "panel",
+    "controls": [
+      { "left_border": {
+          "type": "image",
+          "size": [ 1, "100%" ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "use_anchored_offset": true,
+          "texture": "textures/ui/White",
+          "property_bag": {
+            "#anchored_offset_value_x": 0.0
+          },
+          "bindings": [
+            { "binding_name": "#left_safe_zone_offset",
+              "binding_name_override": "#anchored_offset_value_x"
+          }]
+      }},
+      { "right_border": {
+          "type": "image",
+          "size": [ 1, "100%" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "use_anchored_offset": true,
+          "texture": "textures/ui/White",
+          "property_bag": {
+            "#anchored_offset_value_x": 0.0
+          },
+          "bindings": [
+            { "binding_name": "#right_safe_zone_offset",
+              "binding_name_override": "#anchored_offset_value_x"
+          }]
+      }},
+      { "top_border": {
+          "type": "image",
+          "size": [ "100%", 1 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "use_anchored_offset": true,
+          "texture": "textures/ui/White",
+          "property_bag": {
+            "#anchored_offset_value_y": 0.0
+          },
+          "bindings": [
+            { "binding_name": "#top_safe_zone_offset",
+              "binding_name_override": "#anchored_offset_value_y"
+          }]
+      }},
+      { "bottom_border": {
+          "type": "image",
+          "size": [ "100%", 1 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "use_anchored_offset": true,
+          "texture": "textures/ui/White",
+          "property_bag": {
+            "#anchored_offset_value_y": 0.0
+          },
+          "bindings": [
+            { "binding_name": "#bottom_safe_zone_offset",
+              "binding_name_override": "#anchored_offset_value_y"
+          }]
+      }}
+  ]},
+  "safezone_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      { "main_panel@cui-common.element_background": { "$cuiv:header_text": "", "$cuiv:element_background_contents": "cui-safezone_screen.main_panel"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "experiment_panel@cui-common.element_background": { "$cuiv:header_text": "cui.safezone.exp.title", "$cuiv:element_background_contents": "cui-safezone_screen.experiment_panel"}}
+  ]},
+  "main_panel": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ]}},
+      { "description": {
+          "type": "label",
+          "text": "options.safeZone.description",
+          "font_type": "dainbold",
+          "size": [ "100% - 6px", "default" ],
+          "color": [ 0.7, 0.7, 0.7 ]
+      }},
+      { "pudding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "safe_zone_slider_all@cui-safezone_screen.safe_zone_slider_all": {}},
+      { "safe_zone_slider_x@cui-safezone_screen.safe_zone_slider_x": {}},
+      { "safe_zone_slider_y@cui-safezone_screen.safe_zone_slider_y": {}}
+  ]},
+  "experiment_panel": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "pudding_top": { "type": "panel", "size": [ 1, 20 ]}},
+      { "screen_position_slider_x@cui-safezone_screen.screen_position_slider_x": {}},
+      { "screen_position_slider_y@cui-safezone_screen.screen_position_slider_y": {}}
+  ]},
+  "safe_zone_slider_all@cui-setting_screen.option_slider": {
+    "$cuiv:option_label_text": "options.safeZone",
+    "$slider_name": "safe_zone_all",
+    "$slider_value_binding_name": "#safe_zone_all",
+    "$cuiv:option_toggle_binding_name": "#safe_zone_all_enabled",
+    "$default_focus_precedence": 1,
+    "$slider_select_on_hover": false,
+    "$slider_tts_text_value": "#safe_zone_all_text_value",
+    "$cuiv:slider_value_text": "#safe_zone_all_text_value",
+    "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+  },
+  "safe_zone_slider_x@cui-setting_screen.option_slider": {
+    "$cuiv:option_label_text": "options.safeZoneX",
+    "$slider_name": "safe_zone_x",
+    "$slider_value_binding_name": "#safe_zone_x",
+    "$cuiv:option_toggle_binding_name": "#safe_zone_x_enabled",
+    "$slider_select_on_hover": false,
+    "$slider_tts_text_value": "#safe_zone_x_text_value",
+    "$cuiv:slider_value_text": "#safe_zone_x_text_value",
+    "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+  },
+  "safe_zone_slider_y@cui-setting_screen.option_slider": {
+    "$cuiv:option_label_text": "options.safeZoneY",
+    "$slider_name": "safe_zone_y",
+    "$slider_value_binding_name": "#safe_zone_y",
+    "$cuiv:option_toggle_binding_name": "#safe_zone_y_enabled",
+    "$slider_select_on_hover": false,
+    "$slider_tts_text_value": "#safe_zone_y_text_value",
+    "$cuiv:slider_value_text": "#safe_zone_y_text_value",
+    "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+  },
+  "screen_position_slider_x@cui-setting_screen.option_slider": {
+    "$cuiv:option_label_text": "options.screenPositionX",
+    "$slider_name": "screen_position_x",
+    "$slider_value_binding_name": "#screen_position_x",
+    "$cuiv:option_toggle_binding_name": "#screen_position_x_enabled",
+    "$slider_select_on_hover": false,
+    "$slider_tts_text_value": "#screen_position_x_text_value",
+    "$cuiv:slider_value_text": "#screen_position_x_text_value",
+    "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+  },
+  "screen_position_slider_y@cui-setting_screen.option_slider": {
+    "$cuiv:option_label_text": "options.screenPositionY",
+    "$slider_name": "screen_position_y",
+    "$slider_value_binding_name": "#screen_position_y",
+    "$cuiv:option_toggle_binding_name": "#screen_position_y_enabled",
+    "$slider_select_on_hover": false,
+    "$slider_tts_text_value": "#screen_position_y_text_value",
+    "$cuiv:slider_value_text": "#screen_position_y_text_value",
+    "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+  }
+}

@@ -1,0 +1,151 @@
+{ "namespace": "cui-ss_account",
+  "account_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "use_child_anchors": true,
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "account_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.account", "$cuiv:header_title": "cui.settings.account.main.description", "$cuiv:element_background_contents": "cui-setting_screen.header_title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 4 ]}},
+      { "account@cui-common.element_background": { "$cuiv:element_background_no_label": true, "$cuiv:element_background_contents": "cui-ss_account.account"}}
+  ]},
+  "account": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "pudding_00": { "type": "panel", "size": [ 1, 4 ]}},
+      { "option_toggle0@cui-setting_screen.option_toggle": {
+          "ignored": "$ignore_profile_sso_toggle",
+          "$cuiv:option_label_text": "options.adEduRememberMe",
+          "$cuiv:option_binding_name": "#ad_edu_remember_me",
+          "$toggle_name": "ad_edu_remember_me"
+      }},
+      { "switch_accounts@cui-ss_account.switch_accounts_panel": { "ignored": "$ignore_profile_switch_account_button" }},
+      { "sign_out@cui-button.text_button": {
+          "size": [ "100%", 20 ],
+          "ignored": "$ignore_profile_switch_account_button",
+          "enabled": "($is_pregame)",
+          "$cuiv:button_text": "accounts.signOut",
+          "$pressed_button_name": "button.sign_out"
+      }},
+      { "gamertag_core": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100% - 8px", 30 ],
+          "bindings": [
+            { "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "gametag_profile": {
+                "type": "custom",
+                "renderer": "profile_image_renderer",
+                "size": [ 30, 30 ],
+                "layer": 1,
+                "bindings": [
+                  { "binding_name": "#profile_image_options" },
+                  { "binding_name": "#none",
+                    "binding_name_override": "#visible"
+                  }
+            ]}},
+            { "labels": { 
+                "type": "panel",
+                "size": [ "fill", 30 ],
+                "controls": [
+                  { "label_descriptor": {
+                      "type": "label",
+                      "color": "$main_header_text_color",
+                      "layer": 1,
+                      "anchor_to": "left_middle",
+                      "anchor_from": "left_middle",
+                      "text": "cui.username.logged_in",
+                      "offset": [ 4, -10 ]
+                  }},
+                  { "gamertag_label": {
+                      "type": "label",
+                      "color": "$main_header_text_color",
+                      "layer": 1,
+                      "text": "#gamertag_label",
+                      "anchor_to": "left_middle",
+                      "anchor_from": "left_middle",
+                      "offset": [ 4, 0 ],
+                      "bindings": [{ "binding_name": "#gamertag_label" }]
+                  }}
+           ]}}
+      ]}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 2 ],
+        "bindings": [
+            { "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "line": {
+          "type": "image",
+          "size": [ "100% - 8px", 3 ],
+          "alpha": 0.5,
+          "texture": "textures/ui/.cui-assets/background_bar",
+          "color": "$cuigv:PrimaryColor",
+          "bindings": [
+            { "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "pudding_02": { "type": "panel", "size": [ 1, 2 ],
+        "bindings": [
+            { "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "sign_in@cui-button.text_button": {
+          "size": [ "100%", 20 ],
+          "$pressed_button_name": "sign_in_button",
+          "$cuiv:button_text": "xbox.signInLong",
+          "ignored": "$education_edition",
+          "bindings": [
+            { "binding_name": "#not_logged_in",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "sign_out@cui-button.text_button": {
+          "size": [ "100%", 20 ],
+          "ignored": "($build_platform_UWP or not $is_pregame or $requires_xbl_signin_to_play)",
+          "$pressed_button_name": "sign_out_button",
+          "$cuiv:button_text": "xbox.signOutLong",
+          "bindings": [
+            { "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+          }]
+      }},
+      { "pudding_00": { "type": "panel", "size": [ 1, 4 ]}}
+  ]},
+  "switch_accounts_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      { "name_label": {
+          "type": "label",
+          "color": "$main_header_text_color",
+          "localize": false,
+          "text": "#ad_account_name",
+          "bindings": [
+            { "binding_name": "#ad_account_name" }]
+      }},
+      {  "switch_accounts@cui-button.text_button": {
+          "size": [ "100%", "24px" ],
+          "enabled": "$is_pregame",
+          "$cuiv:button_type_panel": "general_section.switch_accounts_button_content",
+          "$pressed_button_name": "button.switch_accounts"
+      }}
+  ]}
+}

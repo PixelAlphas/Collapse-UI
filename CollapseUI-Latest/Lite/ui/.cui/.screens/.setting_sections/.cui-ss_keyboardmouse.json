@@ -1,0 +1,284 @@
+{ "namespace": "cui-ss_keyboardmouse",
+  "keyboardmouse_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$cuiv:keymapping_grid_dimension": "#keyboard_standard_grid_dimension",
+    "$cuiv:keymapping_collection": "keyboard_standard_collection",
+    "use_child_anchors": true,
+    "$cuiv:element_background_no_label": true,
+    "$cuiv:header_anchor": "center",
+    "$cuiv:header_background": true,
+    "bindings": [
+      { "binding_type": "view",
+        "source_control_name": "keyboard_and_mouse_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+    }],
+    "controls": [
+      { "pudding_00": { "type": "panel", "size": [ 1, 2 ]}},
+      { "title@cui-common.element_background": { "$cuiv:element_background_no_label": false, "$cuiv:header_text": "options.keyboardAndMouse", "$cuiv:element_background_contents": "cui-ss_keyboardmouse.title"}},
+      { "pudding_01": { "type": "panel", "size": [ 1, 6 ]}},
+      { "keyboardmouse@cui-common.element_background": { "$cuiv:element_background_contents": "cui-ss_keyboardmouse.keyboardmouse"}},
+      { "pudding_02": { "type": "panel", "size": [ 1, 6 ]}},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "options.keyboardLayout",
+          "bindings": [
+          { "binding_name": "#keyboard_show_standard_keyboard_options",
+            "binding_name_override": "#visible"
+          }]
+      }},
+      { "header_label@cui-common.header": {
+          "$cuiv:header_text": "options.fullKeyboardLayout",
+          "bindings": [
+          { "binding_name": "#keyboard_show_full_keyboard_options",
+            "binding_name_override": "#visible"
+          }]
+      }},
+      { "padding_02": { "type": "panel", "size": [ 1, 2 ]}},
+      { "mappingnormal@cui-common.element_background": { "$cuiv:header_text": "options.keyboardLayout", "$cuiv:element_background_contents": "cui-ss_keyboardmouse.mappingnormal",
+        "bindings": [
+          { "binding_name": "#keyboard_show_standard_keyboard_options",
+            "binding_name_override": "#visible"
+          }]
+      }},
+      { "mappingfull@cui-common.element_background": { "$cuiv:header_text": "options.fullKeyboardLayout", "$cuiv:element_background_contents": "cui-ss_keyboardmouse.mappingfull",
+        "bindings": [
+          { "binding_name": "#keyboard_show_full_keyboard_options",
+            "binding_name_override": "#visible"
+          }]
+      }},
+      { "pudding_02": { "type": "panel", "size": [ 1, 6 ]}},
+      { "reset_button@cui-button.text_button": {
+          "size": [ "100% - 4px", 30 ],
+          "$pressed_button_name": "button.reset_keyboard_bindings",
+          "$cuiv:button_text": "controllerLayoutScreen.resetAllBindings",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "pudding_03": { "type": "panel", "size": [ 1, 6 ]}}
+  ]},
+  "title": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "pudding_top": { "type": "panel", "size": [ 1, 22 ]}},
+      { "description": {
+          "type": "label",
+          "text": "cui.settings.keyboardmouse.main.description",
+          "size": [ "100% - 12px", "default" ],
+          "color": "$cuigv:FontSecondaryColor"
+      }},
+      { "pudding_02": { "type": "panel", "size": [ 1, 4 ]}}
+  ]},
+  "keyboardmouse": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "option_slider_0@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.sensitivity",
+          "$slider_name": "keyboard_mouse_sensitivity",
+          "$slider_value_binding_name": "#keyboard_mouse_sensitivity",
+          "$slider_tts_text_value": "#keyboard_mouse_sensitivity_text_value",
+          "$cuiv:slider_value_text": "#keyboard_mouse_sensitivity_text_value",
+          "$cuiv:option_toggle_binding_name": "#keyboard_mouse_sensitivity_enabled",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      {"option_slider_damen@cui-setting_screen.option_slider": {
+          "$cuiv:option_label_text": "options.spyglassdampen",
+          "$slider_name": "spyglass_mouse_dampening",
+          "$slider_value_binding_name": "#spyglass_mouse_dampening",
+          "$slider_tts_text_value": "#spyglass_mouse_dampening_text_value",
+          "$cuiv:slider_value_text": "#spyglass_mouse_dampening_text_value",
+          "$cuiv:option_toggle_binding_name": "#keyboard_mouse_sensitivity_enabled",
+          "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+      }},
+      { "option_toggle_0@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.invertYAxis",
+          "$cuiv:option_binding_name": "#keyboard_mouse_invert_y_axis",
+          "$cuiv:option_toggle_binding_name": "#keyboard_mouse_invert_y_axis_enabled",
+          "$toggle_name": "keyboard_mouse_invert_y_axis",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle_1@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.autojump",
+          "$cuiv:option_binding_name": "#keyboard_mouse_autojump",
+          "$cuiv:option_toggle_binding_name": "#keyboard_mouse_autojump_enabled",
+          "$toggle_name": "keyboard_mouse_autojump",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }}
+  ]},
+  "mappingnormal": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "option_toggle_show_keyboard_prompts@cui-setting_screen.option_toggle": {
+          "ignored": "(not $education_edition)",
+          "$cuiv:option_label_text": "options.showKeyboardPrompts",
+          "$cuiv:option_binding_name": "#show_keyboard_prompts",
+          "$cuiv:option_toggle_binding_name": "#hint_toggles_enabled",
+          "$toggle_name": "show_keyboard_prompts",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle_full_keyboard_gameplay@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.fullKeyboardGameplay",
+          "$cuiv:option_binding_name": "#keyboard_show_full_keyboard_options",
+          "$cuiv:option_toggle_binding_name": "#keyboard_show_full_keyboard_options_enabled",
+          "$toggle_name": "keyboard_show_full_keyboard_options",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "keyboard_section": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            { "keyboard_keymapping_grid@cui-ss_keyboardmouse.keymapping_grid": {}},
+            { "control_alt_chords_standard_keyboard_section": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%c" ],
+                "bindings": [
+                  { "binding_name": "#show_standard_copy_coordinates_keys",
+                    "binding_name_override": "#visible"
+                }],
+                "controls": [
+                  { "control_alt_chord_keymapping_grid@cui-ss_keyboardmouse.keymapping_grid": {
+                      "$cuiv:keymapping_grid_dimension": "#keyboard_standard_control_alt_chord_grid_dimension",
+                      "$cuiv:keymapping_collection": "keyboard_standard_control_alt_chord_collection"
+                  }}
+            ]}}
+      ]}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}}
+  ]},
+  "mappingfull": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100%c" ],
+    "orientation": "vertical",
+    "use_child_anchors": true,
+    "controls": [
+      { "option_toggle_show_keyboard_prompts@cui-setting_screen.option_toggle": {
+          "ignored": "(not $education_edition)",
+          "$cuiv:option_label_text": "options.showKeyboardPrompts",
+          "$cuiv:option_binding_name": "#show_keyboard_prompts",
+          "$cuiv:option_toggle_binding_name": "#hint_toggles_enabled",
+          "$toggle_name": "show_keyboard_prompts",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "option_toggle_full_keyboard_gameplay@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.fullKeyboardGameplay",
+          "$cuiv:option_binding_name": "#keyboard_show_full_keyboard_options",
+          "$cuiv:option_toggle_binding_name": "#keyboard_show_full_keyboard_options_enabled",
+          "$toggle_name": "keyboard_show_full_keyboard_options",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+      }},
+      { "full_keyboard_section": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "bindings": [
+            { "binding_name": "#keyboard_show_full_keyboard_options",
+              "binding_name_override": "#visible"
+          }],
+          "controls": [
+            { "option_slider_smooth_rotation_speed@cui-setting_screen.option_slider": {
+                "$cuiv:option_label_text": "options.smoothRotationSpeed",
+                "$slider_name": "keyboard_smooth_rotation_speed",
+                "$slider_value_binding_name": "#keyboard_smooth_rotation_speed",
+                "$slider_tts_text_value": "#keyboard_smooth_rotation_speed_text_value",
+                "$cuiv:slider_value_text": "#keyboard_smooth_rotation_speed_text_value",
+                "$cuiv:option_toggle_binding_name": "#keyboard_smooth_rotation_speed_enabled",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "$cuiv:slider_value_binding": [{ "binding_name": "$cuiv:slider_value_text" }]
+            }},
+            { "keyboard_full_keymapping_grid@cui-ss_keyboardmouse.full_keymapping_grid": {}},
+            { "control_alt_chords_full_keyboard_section": {
+                "type": "stack_panel",
+                "size": [ "100%", "100%c" ],
+                "bindings": [
+                  { "binding_name": "#show_full_copy_coordinates_keys",
+                    "binding_name_override": "#visible"
+                }],
+                "controls": [
+                  { "control_alt_chord_keymapping_grid@cui-ss_keyboardmouse.keymapping_grid": {
+                      "$cuiv:keymapping_grid_dimension": "#keyboard_full_control_alt_chord_grid_dimension",
+                      "$cuiv:keymapping_collection": "keyboard_full_control_alt_chord_collection"
+                  }}
+            ]}}
+      ]}},
+      { "pudding_03": { "type": "panel", "size": [ 1, 2 ]}}
+  ]},
+  "keymapping_grid": {
+    "type": "grid",
+    "size": [ "100%", "default" ],
+    "layer": 1,
+    "grid_item_template": "cui-ss_keyboardmouse.keymapping_item",
+    "grid_dimension_binding": "$cuiv:keymapping_grid_dimension",
+    "collection_name": "$cuiv:keymapping_collection",
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "bindings": [{ "binding_name": "$cuiv:keymapping_grid_dimension" }
+  ]},
+  "full_keymapping_grid@cui-ss_keyboardmouse.keymapping_grid": {
+    "$cuiv:keymapping_grid_dimension": "#keyboard_full_grid_dimension",
+    "$cuiv:keymapping_collection": "keyboard_full_collection"
+  },
+  "keymapping_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "layer": 1,
+    "size": [ "100%", 25 ],
+    "controls": [
+      { "option_info_label_control": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background",
+          "size": [ "fill", "100% - 2px" ],
+          "color": "$cuigv:TertiaryColor",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            { "keymapping_label_control": {
+                "type": "label",
+                "color": "$generic_button_text_color",
+                "size": [ "100% - 4px", "default" ],
+                "text_alignment": "left",
+                "layer": 1,
+                "offset": [ 4, 0 ],
+                "text": "#keymapping_name",
+                "bindings": [
+                  { "binding_name": "#keymapping_name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$cuiv:keymapping_collection"
+                }]
+            }}
+      ]}},
+      { "keymapping_button_0@cui-setting_screen.binding_button": {
+          "$button_tts_header": "#audible_keymapping_name",
+          "size": [ "40%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "bindings": [
+            { "binding_type": "collection_details",
+              "binding_collection_name": "$cuiv:keymapping_collection"
+            },
+            { "binding_name": "#audible_keymapping_name",
+              "binding_type": "collection",
+              "binding_collection_name": "$cuiv:keymapping_collection"
+          }]
+      }},
+      { "keymapping_button_1@cui-button.text_button": {
+          "size": [ "15%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$cuiv:button_type_panel": "controls_section.arrow_reset",
+          "$pressed_button_name": "button.reset_binding",
+          "$button_tts_header": "accessibility.settings.reset",
+          "bindings": [
+            { "binding_type": "collection_details",
+              "binding_collection_name": "$cuiv:keymapping_collection"
+          }]
+      }}
+]}}
