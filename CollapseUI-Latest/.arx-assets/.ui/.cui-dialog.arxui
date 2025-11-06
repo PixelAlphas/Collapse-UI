@@ -318,6 +318,8 @@
   ]},
   "modal_left_button@cui-button.text_button": {
     "size": [ "fill", 20 ],
+    "layer": 90,
+    "$pressed_button_name_anim": "leftbutton",
     "$pressed_button_name": "$popup_dialog_left_button_name",
     "$cuiv:button_text": "#modal_left_button_text",
     "$left_focus_number|default": 0,
@@ -325,6 +327,8 @@
   },
   "modal_middle_button@cui-button.text_button": {
     "size": [ "fill", 20 ],
+    "layer": 90,
+    "$pressed_button_name_anim": "middlebutton",
     "$pressed_button_name": "$popup_dialog_middle_button_name",
     "$cuiv:button_text": "#modal_middle_button_text",
     "$middle_focus_number|default": 0,
@@ -332,6 +336,8 @@
   },
   "modal_rightcancel_button@cui-button.text_button": {
     "size": [ "fill", 20 ],
+    "layer": 90,
+    "$pressed_button_name_anim": "rightbutton",
     "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
     "$cuiv:button_text": "#modal_rightcancel_button_text",
     "$right_focus_number|default": 1,

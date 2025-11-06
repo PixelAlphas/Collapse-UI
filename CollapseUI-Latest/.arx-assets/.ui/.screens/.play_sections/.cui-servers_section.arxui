@@ -12,7 +12,7 @@
     "use_child_anchors": true,
     "$cuiv:is_public_server|default": false,
     "controls": [
-      { "servers_item_button@cui-button.text_button": {
+      { "servers_item_button@cui-button.text_button_legacy": {
           "$cuiv:button_type_panel": "cui-servers_section.server_button_content_panel",
           "size": [ "fill", 30 ],
           "$pressed_button_name": "button.menu_network_world_item",
@@ -30,7 +30,7 @@
             "target_property_name": "#visible"
           }]
       }},
-      { "server_edit_button@cui-button.text_button": {
+      { "server_edit_button@cui-button.text_button_legacy": {
           "ignored": "(not $cuiv:is_public_server)",
           "$cuiv:button_type_panel": "play.edit_icon",
           "size": [ 30, 30 ],

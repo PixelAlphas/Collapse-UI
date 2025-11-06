@@ -375,12 +375,12 @@
               "binding_name_override": "#visible"
           }]
       }},
-      { "gui_video_scaling_toggle@cui-setting_screen.option_toggle": {
-          "$cuiv:option_label_text": "options.gui.video.scaling",
+      { "gui_accessibility_scaling_toggle@cui-setting_screen.option_toggle": {
+          "$cuiv:option_label_text": "options.gui.accessibility.scaling",
           "$cuiv:option_description_text": "cui.settings.video.desc.large_ui",
-          "$cuiv:option_binding_name": "#gui_video_scaling",
-          "$cuiv:option_toggle_binding_name": "#gui_video_scaling_enabled",
-          "$toggle_name": "gui_video_scaling",
+          "$cuiv:option_binding_name": "#gui_accessibility_scaling",
+          "$cuiv:option_toggle_binding_name": "#gui_accessibility_scaling_enabled",
+          "$toggle_name": "gui_accessibility_scaling",
           "layer": 1
       }}
   ]},
@@ -397,15 +397,6 @@
           "$cuiv:option_binding_name": "#improved_input_response_options",
           "$cuiv:option_toggle_binding_name": "#improved_input_response_options_enabled",
           "$toggle_name": "improved_input_response_options",
-          "layer": 1
-      }},
-      { "dynamic_textures_toggle@cui-setting_screen.option_toggle": {
-          "ignored": "(not $is_dynamic_textures_platform_supported)",
-          "$cuiv:option_description_text": "options.dynamicTexturesToggle.tooltip",
-          "$cuiv:option_label_text": "options.dynamicTexturesToggle",
-          "$cuiv:option_binding_name": "#dynamic_textures",
-          "$cuiv:option_toggle_binding_name": "#dynamic_textures_enabled",
-          "$toggle_name": "dynamic_textures",
           "layer": 1
       }},
       { "frame_pacing_toggle@cui-setting_screen.option_toggle": {

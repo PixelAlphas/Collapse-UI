@@ -519,34 +519,6 @@
             }}
       ]}}
   ]},
-  "hud_tip_text": {
-		"type": "image",
-		"size": [ "100%c + 12px", "100%c + 5px" ],
-		"offset": [ 0, "50%-55px" ],
-		"anchor_from": "center",
-		"anchor_to": "center",
-		"texture": "textures/ui/hud_tip_text_background",
-		"alpha": "@hud.anim_item_name_background_alpha_out",
-		"$wait_duration|default": 1,
-		"$destroy_id|default": "popup_tip_text",
-		"anims": [
-			"@cui-anims.hud_tooltip_alpha",
-			"@cui-anims.hud_tooltip_tip"
-		],
-		"controls": [
-		  { "item_text_label": {
-			    "type": "label",
-			    "layer": 10,
-			    "color": "$cuigv:FontPrimaryColor",
-			    "text": "#text",
-			    "shadow": false,
-			    "alpha": "@hud.anim_item_name_text_alpha_out",
-			    "bindings": [
-				    { "binding_name": "#tip_text",
-				      "binding_name_override": "#text"
-				  }]
-		  }}
-  ]},
   "hotbar_slot_selected_image": {
     "type": "image",
     "texture": "textures/ui/selected_hotbar_slot",

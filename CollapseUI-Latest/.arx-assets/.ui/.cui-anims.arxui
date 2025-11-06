@@ -2,28 +2,28 @@
   // Hotbar Selected Anims
   "hotbar_slot_selected_anim_size_selected": {
     "anim_type": "size",
-    "easing": "out_quart",
+    "easing": "$cuigv:HotbarHighlightMainEasingIn",
     "duration": "$cuigv:HotbarHighlightDuration",
     "from": [ 32, 32 ],
     "to": [ 24, 24 ]
   },
   "hotbar_slot_selected_anim_size_unselected": {
     "anim_type": "size",
-    "easing": "in_quart",
+    "easing": "$cuigv:HotbarHighlightMainEasingOut",
     "duration": "$cuigv:HotbarHighlightDuration",
     "from": [ 24, 24 ],
     "to": [ 32, 32 ]
   },
   "hotbar_slot_selected_anim_alpha_selected": {
     "anim_type": "alpha",
-    "easing": "out_quart",
+    "easing": "$cuigv:HotbarHighlightOpacityEasingIn",
     "duration": "$cuigv:HotbarHighlightDuration",
     "from": 0,
     "to": 1
   },
   "hotbar_slot_selected_anim_alpha_unselected": {
     "anim_type": "alpha",
-    "easing": "out_quart",
+    "easing": "$cuigv:HotbarHighlightOpacityEasingOut",
     "duration": "$cuigv:HotbarHighlightDuration",
     "from": 1,
     "to": 0,
@@ -32,7 +32,7 @@
   // Hud Chat Anims + Bottom Chat
   "anim_chat_bg_pop": {
     "anim_type": "offset",
-    "easing": "out_expo",
+    "easing": "$cuigv:ChatMainEasingIn",
     "duration": "$cuigv:ChatPopDuration",
     "from": [ "-50%", 0 ],
     "to": [ 0, 0 ],
@@ -45,14 +45,14 @@
   },
   "anim_chat_bg_push": {
     "anim_type": "offset",
-    "easing": "in_expo",
+    "easing": "$cuigv:ChatMainEasingOut",
     "duration": "$cuigv:ChatPushDuration",
     "from": [ 0, 0 ],
     "to": [ "-50%", 0 ]
   },
   "anim_chat_pile_up": {
     "anim_type": "size",
-    "easing": "out_expo",
+    "easing": "$cuigv:ChatPileEasingin",
     "duration": "$cuigv:ChatPileUpDuration",
     "from": [ "100%", 0 ],
     "to": [ "100%", "100%c" ],
@@ -65,7 +65,7 @@
   },
   "anim_chat_pile_down": {
     "anim_type": "size",
-    "easing": "out_expo",
+    "easing": "$cuigv:ChatPileEasingOut",
     "duration": "$cuigv:ChatPileDownDuration",
     "from": [ "100%", "100%c" ],
     "to": [ "100%", 0 ],
@@ -124,14 +124,14 @@
   "button_anim_offset": {
     "anim_type": "offset",
     "duration": "$cuigv:ButtonAnimDuration",
-    "easing": "in_expo",
+    "easing": "$cuigv:ButtonAnimOffsetEasingIn",
     "from": "$cuiv-anim:offset_in",
     "to": "$cuiv-anim:offset_out"
   },
   "button_anim_offset_reverse": {
     "anim_type": "offset",
     "duration": "$cuigv:ButtonAnimDuration",
-    "easing": "out_expo",
+    "easing": "$cuigv:ButtonAnimOffsetEasingOut",
     "from": "$cuiv-anim:offset_out",
     "to": "$cuiv-anim:offset_in"
   },
@@ -150,21 +150,21 @@
   // Hud tooltip Anims
   "hud_tooltip_item": {
 		"anim_type": "offset",
-		"easing": "out_expo",
+		"easing": "$cuigv:HudTooltipsMainEasing",
 		"duration": "$cuigv:HudTooltipsDuration",
 		"from": [  0, -8 ],
 		"to": [  0, -14 ]
 	},
   "hud_tooltip_tip": {
 		"anim_type": "offset",
-		"easing": "out_expo",
+		"easing": "$cuigv:HudTooltipsMainEasing",
 		"duration": "$cuigv:HudTooltipsDuration",
 		"from": [  0, "50%-65px"], 
 		"to": [  0, "50%-70px"]
 	},
 	"hud_tooltip_alpha": {
 		"anim_type": "alpha",
-		"easing": "out_circ",
+		"easing": "$cuigv:HudTooltipsOpacityEasing",
 		"duration": "$cuigv:HudTooltipsDuration",
 		"from": 0.0,
 		"to": 1
@@ -172,7 +172,7 @@
   // Screens Anims
   "screen_outro_anim_push": {
     "anim_type": "offset",
-    "easing": "in_cubic",
+    "easing": "$cuigv:ScreenAnimMainEasingOut",
     "duration": "$transition_time_push",
     "from": "$cuiv-anim:pos_to",
     "to": "$cuiv-anim:pos_from",
@@ -181,7 +181,7 @@
   },
   "screen_outro_anim_pop": {
     "anim_type": "offset",
-    "easing": "in_cubic",
+    "easing": "$cuigv:ScreenAnimMainEasingOut",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:pos_to",
     "to": "$cuiv-anim:pos_from",
@@ -190,7 +190,7 @@
   },
   "screen_intro_anim_push": {
     "anim_type": "offset",
-    "easing": "out_cubic",
+    "easing": "$cuigv:ScreenAnimMainEasingIn",
     "duration": "$transition_time_push",
     "from": "$cuiv-anim:pos_from",
     "to": "$cuiv-anim:pos_to",
@@ -199,7 +199,7 @@
   },
   "screen_intro_anim_pop": {
     "anim_type": "offset",
-    "easing": "out_cubic",
+    "easing": "$cuigv:ScreenAnimMainEasingIn",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:pos_from",
     "to": "$cuiv-anim:pos_to",
@@ -208,7 +208,7 @@
   },
   "screen_outro_anim_size_push": {
     "anim_type": "size",
-    "easing": "in_cubic",
+    "easing": "$cuigv:ScreenAnimMainEasingOut",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:size_to",
     "to": "$cuiv-anim:size_from",
@@ -217,7 +217,7 @@
   },
   "screen_outro_anim_size_pop": {
     "anim_type": "size",
-    "easing": "in_cubic",
+    "easing": "$cuigv:ScreenAnimMainEasingOut",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:size_to",
     "to": "$cuiv-anim:size_from",
@@ -226,7 +226,7 @@
   },
   "screen_intro_anim_size_push": {
     "anim_type": "size",
-    "easing": "out_cubic",
+    "easing": "$cuigv:ScreenAnimMainEasingIn",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:size_from",
     "to": "$cuiv-anim:size_to",
@@ -235,7 +235,7 @@
   },
   "screen_intro_anim_size_pop": {
     "anim_type": "size",
-    "easing": "out_cubic",
+    "easing": "$cuigv:ScreenAnimMainEasingIn",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:size_from",
     "to": "$cuiv-anim:size_to",
@@ -337,56 +337,56 @@
     "from": [ 0, 180 ],
     "to": [ 0, -30 ],
     "duration": "$cuigv:ExtraMenuDuration",
-    "easing": "out_cubic"
+    "easing": "$cuigv:ExtraMenuEasingIn"
   },
   "extra_anims_offset_exit": {
     "anim_type": "offset",
     "from": [ 0, -30 ],
     "to": [ 0, 180 ],
     "duration": "$cuigv:ExtraMenuDuration",
-    "easing": "in_cubic"
+    "easing": "$cuigv:ExtraMenuEasingOut"
   },
   "event_anims_offset": {
     "anim_type": "offset",
     "from": [ 0, 55 ],
     "to": [ 0, -75 ],
     "duration": "$cuigv:ExtraMenuDuration",
-    "easing": "out_cubic"
+    "easing": "$cuigv:ExtraMenuEasingIn"
   },
   "event_anims_offset_exit": {
     "anim_type": "offset",
     "from": [ 0, -75 ],
     "to": [ 0, 55 ],
     "duration": "$cuigv:ExtraMenuDuration",
-    "easing": "in_cubic"
+    "easing": "$cuigv:ExtraMenuEasingOut"
   },
   "extra_anims_offset_title": {
     "anim_type": "offset",
     "from": [ -180, 4 ],
     "to": [ 14, 4 ],
     "duration": "$cuigv:ExtraMenuDuration",
-    "easing": "out_cubic"
+    "easing": "$cuigv:ExtraMenuEasingIn"
   },
   "extra_anims_offset_title_exit": {
     "anim_type": "offset",
     "from": [ 14, 4 ],
     "to": [ -180, 4 ],
     "duration": "$cuigv:ExtraMenuDuration",
-    "easing": "in_cubic"
+    "easing": "$cuigv:ExtraMenuEasingOut"
   },
   "extra_anims_offset_info": {
     "anim_type": "offset",
     "from": [ -180, 40 ],
     "to": [ 14, 40 ],
     "duration": "$cuigv:ExtraMenuDuration",
-    "easing": "out_cubic"
+    "easing": "$cuigv:ExtraMenuEasingIn"
   },
   "extra_anims_offset_info_exit": {
     "anim_type": "offset",
     "from": [ 14, 40 ],
     "to": [ -180, 40 ],
     "duration": "$cuigv:ExtraMenuDuration",
-    "easing": "in_cubic"
+    "easing": "$cuigv:ExtraMenuEasingOut"
   },
   "extra_anims_alpha": {
     "anim_type": "alpha",
@@ -408,7 +408,7 @@
     "from": [ 180, 0 ],
     "to": [ -4, 0 ],
     "duration": "$cuigv:PlayerlistMenuDuration",
-    "easing": "out_cubic"
+    "easing": "$cuigv:PlayerlistMenuEasingIn"
   },
   "playerlist_anims_offset_exit": {
     "anim_type": "offset",
@@ -417,7 +417,7 @@
     "duration": "$cuigv:PlayerlistMenuDuration",
     "$cuiv:destroy_at_end|default": "playerlist_element_out",
     "destroy_at_end": "$cuiv:destroy_at_end",
-    "easing": "in_cubic"
+    "easing": "$cuigv:PlayerlistMenuEasingOut"
   },
   // Menu Slider
   "background_slider_load": {

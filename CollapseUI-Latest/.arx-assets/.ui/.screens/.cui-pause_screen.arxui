@@ -528,6 +528,18 @@
       { "binding_name": "#invite_button_enabled",
         "binding_name_override": "#enabled"
   }]},
+  "permission_button@cui-button.text_button": {
+    "size": [ "100%", 20 ],
+    "$pressed_button_name": "button.menu_permission",
+    "$cuiv:button_text": "permissions.title",
+    "bindings": [
+      { "binding_name": "#invite_button_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      },
+      { "binding_name": "#invite_button_enabled",
+        "binding_name_override": "#enabled"
+  }]},
   "playerlist_scroll": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -563,7 +575,10 @@
                 "factory": {
                   "name": "scored_list_factory",
                   "control_name": "cui-pause_screen.scoreboard_grid_item"
-            }}}
+            }}},
+            { "pudding01": { "type": "panel", "size": [ 1, 2 ]}},
+            { "permission_button@cui-pause_screen.permission_button": {}},
+            { "pudding02": { "type": "panel", "size": [ 1, 2 ]}}
       ]}},
       { "pudding01": { "type": "panel", "size": [ 1, 2 ]}},
       { "invite_button@cui-pause_screen.invite_button": {}},
@@ -627,7 +642,7 @@
             { "gamertag_button@common.button": {
                 "size": [ "100%", "100%" ],
                 "layer": 10,
-                "button_mappings": [ { "from_button_id": "button.menu_select", "to_button_id": "button.player_profile_card", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.player_profile_card", "mapping_type": "focused" }],
+                "button_mappings": [ { "from_button_id": "button.menu_select", "to_button_id": "button.score_player_profile_card", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.score_player_profile_card", "mapping_type": "focused" }],
                 "$pressed_button_name": "button.score_player_profile_card",
                 "controls": [{ "hover": { "type": "image", "alpha": 0.5, "color": "$cuigv:PrimaryColor", "size": [ "100%", "100%" ], "texture": "textures/ui/White" }}],
                 "bindings": [
@@ -762,8 +777,8 @@
     "size": [ 140, 24 ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
-    "$cuiv-anim:pos_from": [ -5, -50 ],
-    "$cuiv-anim:pos_to": [ -5, 5 ],
+    "$cuiv-anim:pos_from": [ -6, -50 ],
+    "$cuiv-anim:pos_to": [ -6, 5 ],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
       "@cui-anims.screen_outro_anim_push",
@@ -772,15 +787,21 @@
       "@cui-anims.screen_intro_anim_pop"
     ],
     "controls": [
-      { "warning": {
+      { "background": {
           "type": "image",
           "size": [ "100% + 4px", "100% + 4px" ],
-          "texture": "textures/ui/.cui-assets/background_middle",
+          "texture": "textures/ui/.cui-assets/background_2x",
           "alpha": "$cuigv:BackgroundAlpha",
-          "color": "$cuigv:SecondaryColor"
+          "color": "$cuigv:SecondaryColor",
+          "bindings": [
+            { "binding_name": "(not #profile_button_a_visible)",
+              "binding_name_override": "#visible"
+          }]
       }},
       { "profile@cui-button.text_button": {
-          "$cuiv:button_texture_alpha": 0,
+          // "$cuiv:button_texture_alpha": 0,
+          "focus_enabled": false,
+          "alpha": -50,
           "size": [ "100% + 4px", "100% + 4px" ],
           "$pressed_button_name": "button.menu_profile",
           "bindings": [
@@ -797,6 +818,7 @@
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "offset": [ -32, 0 ],
+          "layer": 20,
           "bindings": [
             { "binding_name": "#gamertag_pic_and_label_visible",
               "binding_name_override": "#visible"

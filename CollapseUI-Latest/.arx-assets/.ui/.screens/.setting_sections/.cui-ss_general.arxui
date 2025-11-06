@@ -128,7 +128,7 @@
           }]
       }},
       { "filter_profanity_toggle@cui-setting_screen.option_toggle": {
-          "ignored": "(not ($build_platform_UWP or $is_ios or $google_os) or $disable_toggle_filter_profanity)",
+          "ignored": "(not ($build_platform_UWP or $is_ios or $google_os))",
           "$cuiv:option_label_text": "options.filterProfanity",
           "$cuiv:option_binding_name": "#filter_profanity",
           "$cuiv:option_enabled_binding_name": "#filter_profanity_enabled",

@@ -15,7 +15,7 @@
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v1.0.038"
+          "$cuiv:lwb_text": "v1.1.048"
       }},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
@@ -37,7 +37,7 @@
           "size": [ "100%", "100%cm + 8px" ],
           "$cuiv:lwb_text_size": [ "100% - 12px", "default" ],
           "$cuiv:lwb_text_alignment": "left",
-          "$cuiv:lwb_text": "Greetings there, Thanks for trying this UI pack! It's pretty much been in-development for quite some time, it was some 'sequel' to §lArcdustry-UI§r§f project due to overwhelming requests for me after retiring JSON-UI, so i decided to create this UI in some sort of secrets and couple of beta testing.\n\nAny suggestions should go through my discord server."
+          "$cuiv:lwb_text": "Greetings there, Thanks for playing with this UI pack on! Celestial Update or This update is the final unfortunately. and it is for a good reason.\n\nOre-UI are slowly rolling out, and in which. made Collapse-UI not so much worth using, and the future updatee will be Settings which, this kinda kill Collapse-UI. We (or us creators) can't modify Ore-UI based screens like JSON-UI yet, which this is what UI packs based on.\n\nHowever, i may still maintaining it by fixing some bugs or support to latest version, thats all i can do for now.\n\n\n- Harlow (aka Arxance)"
       }},
       { "padding07": { "type": "panel", "size": [ 1, 10 ]}},
       { "ui_version@cui-common.label_with_background_adv": {
@@ -69,23 +69,23 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Sat, 13 Sep (2025)"
+          "$cuiv:about_text_gray": "Fri, 7 Nov (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",
-          "$cuiv:about_text_gray": "Early Access"
+          "$cuiv:about_text_gray": "Stable"
       }},
       { "setting_version@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.setting_ver",
-          "$cuiv:about_text_gray": "v1.21.100"
+          "$cuiv:about_text_gray": "v1.21.120"
       }},
       { "hud_version@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.hud_ver",
-          "$cuiv:about_text_gray": "v1.21.100"
+          "$cuiv:about_text_gray": "v1.21.120"
       }},
       { "support_version@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.support",
-          "$cuiv:about_text_gray": "v1.21.100+"
+          "$cuiv:about_text_gray": "v1.21.120+"
       }}
   ]},
   "social_stuff": {

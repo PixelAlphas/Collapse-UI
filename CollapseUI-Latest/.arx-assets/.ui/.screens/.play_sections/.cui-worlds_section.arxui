@@ -22,6 +22,7 @@
     }],
     "size": [ "fill", "100%" ],
     "$cuiv:button_text": "selectWorld.createNew",
+    "$pressed_button_name_anim|default": "newworld",
     "$button_focus_precedence": 10,
     "$create_new_row_focus_override_up|default": "close_button",
     "$focus_override_up": "$create_new_row_focus_override_up",
@@ -43,6 +44,7 @@
         "$pressed_button_name": "button.menu_import_level"
     }],
     "$cuiv:button_type_panel": "cui-worlds_section.generic_icon",
+    "$pressed_button_name_anim|default": "importworldbutton",
     "$cuiv:icon_texture": "textures/ui/import",
     "$button_tts_header": "accessibility.play.importWorld",
     "size": [ 30, 30 ],
@@ -54,7 +56,7 @@
       { "binding_name": "#worlds_tab_import_button_focus_down_override",
         "binding_name_override": "#focus_change_down"
   }]},
-  "local_world_edit_button@cui-button.text_button": {
+  "local_world_edit_button@cui-button.text_button_legacy": {
     "$cuiv:button_type_panel": "cui-worlds_section.generic_icon",
     "$cuiv:icon_size": [ 22, 16 ],
     "$cuiv:icon_texture": "textures/ui/editIcon",
@@ -140,7 +142,7 @@
             ]}}
       ]}}
   ]},
-  "local_world_item_button@cui-button.text_button": {
+  "local_world_item_button@cui-button.text_button_legacy": {
     "$cuiv:button_type_panel": "play.world_content_panel",
     "$pressed_button_name": "button.menu_start_local_world",
     "$worlds_collection_name": "local_worlds",

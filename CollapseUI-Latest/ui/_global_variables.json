@@ -2,7 +2,7 @@
   // General
   "$cuigv:ConfigName": "Default",
     // Config name — You can change it to anything you want if you wish to customize.
-  "$cuigv:DesignedVersion": "v5.0.0",
+  "$cuigv:DesignedVersion": "v1.1.0-celestial",
     // Designed Version — Config version that supported the UI
   
   // -- README before modifying! --
@@ -19,7 +19,7 @@
     // UI accents, this includes — Buttons, Icons, Loading bar, and etc.
   "$cuigv:SecondaryColor": [ 0.0784, 0.0000, 0.0980 ], // Color
     // Background Colors.
-  "$cuigv:TertiaryColor": [ 0.3450, 0.0078, 0.4431 ], // Color
+  "$cuigv:TertiaryColor": [ 0.200, 0.004, 0.263 ], // Color
     // Brighter Background Colors.
   "$cuigv:FontPrimaryColor": [ 1, 1, 1 ], // Color
     // Overall texts color.
@@ -85,6 +85,47 @@
     // Change how long should background slider waits before sliding a new background.
   "$cuigv:BackgroundSliderDuration": 1,
     // Change how long should background sliders after finishing waiting.
+  "$cuigv:HotbarHighlightMainEasingIn": "out_quart",
+    // Change Hotbar Highlight's Easing In.
+  "$cuigv:HotbarHighlightMainEasingOut": "in_quart",
+    // Change Hotbar Highlight's Easing Out.
+  "$cuigv:HotbarHighlightOpacityEasingIn": "out_quart",
+    // Change Hotbar Highlight's Opacity Easing In.
+  "$cuigv:HotbarHighlightOpacityEasingOut": "out_quart",
+    // Change Hotbar Highlight's Opacity Easing Out.
+  "$cuigv:ButtonAnimOffsetEasingIn": "in_expo",
+    // Change Animated Button's Offset/Move Easing In.
+  "$cuigv:ButtonAnimOffsetEasingOut": "out_expo",
+    // Change Animated Button's Offset/Move Easing Out.
+  "$cuigv:HudTooltipsMainEasing": "out_expo",
+    // Change Hud/Gameplay's Tooltip Easing.
+  "$cuigv:HudTooltipsOpacityEasing": "out_circ",
+    // Change Hud/Gameplay's Tooltip Opacity Easing.
+  "$cuigv:ChatMainEasingIn": "out_expo",
+    // Change Hud/Gameplay's Chat Message Easing In.
+  "$cuigv:ChatMainEasingOut": "in_expo",
+    // Change Hud/Gameplay's Chat Message Easing Out.
+  "$cuigv:ChatPileEasingIn": "out_expo",
+    // Change Hud/Gameplay's Bottom Chat Message Easing In.
+  "$cuigv:ChatPileEasingOut": "out_expo",
+    // Change Hud/Gameplay's Bottom Chat Message Easing Out.
+  "$cuigv:ScreenAnimMainEasingIn": "in_cubic",
+    // Change Screen Animation's Easing In.
+  "$cuigv:ScreenAnimMainEasingOut": "out_cubic",
+    // Change Screen Animation's Easing Out.
+  "$cuigv:ScreenAnimOpacityEasingIn": "in_cubic",
+    // Change Screen Animation's Opacity Easing In.
+  "$cuigv:ScreenAnimOpacityEasingOut": "in_expo",
+    // Change Screen Animation's Opacity Easing Out.
+  "$cuigv:PlayerlistMenuEasingIn": "out_cubic",
+    // Change Playerlist Menu's Easing In.
+  "$cuigv:PlayerlistMenuEasingOut": "in_cubic",
+    // Change Playerlist Menu's Easing Out.
+  "$cuigv:ExtraMenuEasingIn": "out_cubic",
+    // Change Extra Menu's Easing In.
+  "$cuigv:ExtraMenuEasingOut": "in_cubic",
+    // Change Extra Menu's Easing Out.
+
 
   // ----- ## Layouts ## -----
   "$cuigv:LogoInPauseScreen": true,
@@ -109,6 +150,8 @@
     // Optimize the settings by not pre-load every section, this loads setting *alot* faster but comes with a cost of stutter when selecting sections.
   "$cuigv:PlayerListTab": false, // Boolean
     // Enable Playerlist Tab ingame.
+  "$cuigv:EventButton": true, // Boolean
+    // Shows Event on start screen along with its notifcation.
     
   // ----- ## Unused - Will do nothing. ## -----
   "$cuigv:OriginUI": true, // Boolean

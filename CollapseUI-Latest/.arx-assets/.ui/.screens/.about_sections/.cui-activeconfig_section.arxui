@@ -203,6 +203,10 @@
       { "config_layout_10@cui-activeconfig_section.config_label": {
           "$cuiv:config_text": "cui.about.tab.activeconfig.playerlisttab",
           "$cuiv:config_value": "$cuigv:PlayerListTab"
+      }},
+      { "config_layout_11@cui-activeconfig_section.config_label": {
+          "$cuiv:config_text": "cui.about.tab.activeconfig.eventbutton",
+          "$cuiv:config_value": "$cuigv:EventButton"
       }}
   ]},
 	"config_animation@cui-about_section.element_stack_template": {
@@ -250,7 +254,112 @@
       { "config_animation_11@cui-activeconfig_section.config_duration": {
           "$cuiv:config_text": "cui.about.tab.activeconfig.backgroundsliderduration",
           "$cuiv:config_duration": "$cuigv:BackgroundSliderDuration"
+      }},
+      { "config_easing_01@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.hotbarhighlightmaineasingin",
+          "$cuiv:about_text_gray": "$cuigv:HotbarHighlightMainEasingIn"
+      }},
+      { "config_easing_02@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.hotbarhighlightmaineasingout",
+          "$cuiv:about_text_gray": "$cuigv:HotbarHighlightMainEasingOut"
+      }},
+      { "config_easing_03@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.hotbarhighlightopacityeasingin",
+          "$cuiv:about_text_gray": "$cuigv:HotbarHighlightOpacityEasingIn"
+      }},
+      { "config_easing_04@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.hotbarhighlightopacityeasingout",
+          "$cuiv:about_text_gray": "$cuigv:HotbarHighlightOpacityEasingOut"
+      }},
+      { "config_easing_05@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.buttonanimoffseteasingin",
+          "$cuiv:about_text_gray": "$cuigv:ButtonAnimOffsetEasingIn"
+      }},
+      { "config_easing_06@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.buttonanimoffseteasingout",
+          "$cuiv:about_text_gray": "$cuigv:ButtonAnimOffsetEasingOut"
+      }},
+      { "config_easing_07@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.hudtooltipsmaineasing",
+          "$cuiv:about_text_gray": "$cuigv:HudTooltipsMainEasing"
+      }},
+      { "config_easing_08@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.hudtooltipsopacityeasing",
+          "$cuiv:about_text_gray": "$cuigv:HudTooltipsOpacityEasing"
+      }},
+      { "config_easing_09@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.chatmaineasingin",
+          "$cuiv:about_text_gray": "$cuigv:ChatMainEasingIn"
+      }},
+      { "config_easing_10@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.chatmaineasingout",
+          "$cuiv:about_text_gray": "$cuigv:ChatMainEasingOut"
+      }},
+      { "config_easing_11@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.chatpileeasingin",
+          "$cuiv:about_text_gray": "$cuigv:ChatPileEasingIn"
+      }},
+      { "config_easing_12@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.chatpileeasingout",
+          "$cuiv:about_text_gray": "$cuigv:ChatPileEasingOut"
+      }},
+      { "config_easing_13@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.screenanimmaineasingin",
+          "$cuiv:about_text_gray": "$cuigv:ScreenAnimMainEasingIn"
+      }},
+      { "config_easing_14@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.screenanimmaineasingout",
+          "$cuiv:about_text_gray": "$cuigv:ScreenAnimMainEasingOut"
+      }},
+      { "config_easing_15@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.screenanimopacityeasingin",
+          "$cuiv:about_text_gray": "$cuigv:ScreenAnimOpacityEasingIn"
+      }},
+      { "config_easing_16@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.screenanimopacityeasingout",
+          "$cuiv:about_text_gray": "$cuigv:ScreenAnimOpacityEasingOut"
+      }},
+      { "config_easing_17@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.playerlistmenueasingin",
+          "$cuiv:about_text_gray": "$cuigv:PlayerlistMenuEasingIn"
+      }},
+      { "config_easing_18@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.playerlistmenueasingout",
+          "$cuiv:about_text_gray": "$cuigv:PlayerlistMenuEasingOut"
+      }},
+      { "config_easing_19@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.extramenueasingin",
+          "$cuiv:about_text_gray": "$cuigv:ExtraMenuEasingIn"
+      }},
+      { "config_easing_20@cui-about_section.about_text": {
+          "$cuiv:about_text": "cui.about.tab.activeconfig.extramenueasingout",
+          "$cuiv:about_text_gray": "$cuigv:ExtraMenuEasingOut"
       }}
+  ]},
+  "config_easing": {
+    "type": "panel",
+    "size": [ "100% - 10px", 20 ],
+    "$cuiv:config_text|default": "",
+    "$cuiv:config_value|default": "",
+    "controls": [
+      { "config_label": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$cuiv:config_text",
+          "color": "$cuigv:FontPrimaryColor"
+      }},
+      { "config_value": {
+          "type": "label",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "text": "$cuiv:config_value_result",
+          "color": "$cuigv:FontSecondaryColor",
+          "$cuiv:config_value_result|default": "Invaild...",
+          "variables": [
+            { "requires": "($cuiv:config_value)", "$cuiv:config_value_result": "cui.about.tab.enabled" },
+            { "requires": "(not $cuiv:config_value)", "$cuiv:config_value_result": "cui.about.tab.disabled" }
+      ]}}
   ]},
   "config_label": {
     "type": "panel",
@@ -277,7 +386,7 @@
             { "requires": "(not $cuiv:config_value)", "$cuiv:config_value_result": "cui.about.tab.disabled" }
       ]}}
   ]},
-	"config_duration": {
+  "config_duration": {
     "type": "panel",
     "size": [ "100% - 10px", 20 ],
     "$cuiv:config_text|default": "",
@@ -295,57 +404,57 @@
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "text": "#text",
-					"property_bag": {
-						"#test": "$cuiv:config_duration"
-					},
+            "property_bag": {
+                "#test": "$cuiv:config_duration"
+            },
           "bindings": [
-						{ "binding_type": "global",
-							"binding_name": "#null"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(100 * (#test) + 1)",
-							"target_property_name": "#epbl"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(#epbl - #epcl1)",
-							"target_property_name": "#epbl1"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(#epbl1 - #epcl2)",
-							"target_property_name": "#epbl2"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(#epbl2 - #epcl3)",
-							"target_property_name": "#epbl3"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(1000 * ((#epbl > 1000) + (#epbl > 2000) + (#epbl > 3000) + (#epbl > 4000) + (#epbl > 5000) + (#epbl > 6000) + (#epbl > 7000) + (#epbl > 8000) + (#epbl > 9000)))",
-							"target_property_name": "#epcl1"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(100 * ((#epbl1 > 100) + (#epbl1 > 200) + (#epbl1 > 300) + (#epbl1 > 400) + (#epbl1 > 500) + (#epbl1 > 600) + (#epbl1 > 700) + (#epbl1 > 800) + (#epbl1 > 900)))",
-							"target_property_name": "#epcl2"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(10 * ((#epbl2 > 10) + (#epbl2 > 20) + (#epbl2 > 30) + (#epbl2 > 40) + (#epbl2 > 50) + (#epbl2 > 60) + (#epbl2 > 70) + (#epbl2 > 80) + (#epbl2 > 90)))",
-							"target_property_name": "#epcl3"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(1 * ((#epbl3 > 1) + (#epbl3 > 2) + (#epbl3 > 3) + (#epbl3 > 4) + (#epbl3 > 5) + (#epbl3 > 6) + (#epbl3 > 7) + (#epbl3 > 8) + (#epbl3 > 9)))",
-							"target_property_name": "#epcl4"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(#epcl3 + #epcl4)",
-							"target_property_name": "#finalc"
-						},
-						{ "binding_type": "view", // actual worst thing i ever done but im in a hurry so lmao
-							"source_property_name": "('§z' + (#epcl1 + #epcl2) - '00')",
-							"target_property_name": "#epcl1s"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "('§z' + #epcl1s + '.' + #finalc + ' Second§7(s)')",
-							"target_property_name": "#text"
-					}]
+            { "binding_type": "global",
+                "binding_name": "#null"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(100 * (#test) + 1)",
+                "target_property_name": "#epbl"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(#epbl - #epcl1)",
+                "target_property_name": "#epbl1"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(#epbl1 - #epcl2)",
+                "target_property_name": "#epbl2"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(#epbl2 - #epcl3)",
+                "target_property_name": "#epbl3"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(1000 * ((#epbl > 1000) + (#epbl > 2000) + (#epbl > 3000) + (#epbl > 4000) + (#epbl > 5000) + (#epbl > 6000) + (#epbl > 7000) + (#epbl > 8000) + (#epbl > 9000)))",
+                "target_property_name": "#epcl1"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(100 * ((#epbl1 > 100) + (#epbl1 > 200) + (#epbl1 > 300) + (#epbl1 > 400) + (#epbl1 > 500) + (#epbl1 > 600) + (#epbl1 > 700) + (#epbl1 > 800) + (#epbl1 > 900)))",
+                "target_property_name": "#epcl2"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(10 * ((#epbl2 > 10) + (#epbl2 > 20) + (#epbl2 > 30) + (#epbl2 > 40) + (#epbl2 > 50) + (#epbl2 > 60) + (#epbl2 > 70) + (#epbl2 > 80) + (#epbl2 > 90)))",
+                "target_property_name": "#epcl3"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(1 * ((#epbl3 > 1) + (#epbl3 > 2) + (#epbl3 > 3) + (#epbl3 > 4) + (#epbl3 > 5) + (#epbl3 > 6) + (#epbl3 > 7) + (#epbl3 > 8) + (#epbl3 > 9)))",
+                "target_property_name": "#epcl4"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(#epcl3 + #epcl4)",
+                "target_property_name": "#finalc"
+            },
+            { "binding_type": "view", // actual worst thing i ever done but im in a hurry so lmao
+                "source_property_name": "('§z' + (#epcl1 + #epcl2) - '00')",
+                "target_property_name": "#epcl1s"
+            },
+            { "binding_type": "view",
+                "source_property_name": "('§z' + #epcl1s + '.' + #finalc + ' Second§7(s)')",
+                "target_property_name": "#text"
+        }]
       }}
   ]},
   "config_alpha": {
@@ -366,49 +475,49 @@
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "text": "#text",
-					"property_bag": {
-						"#test": "$cuiv:config_alpha"
-					},
+            "property_bag": {
+                "#test": "$cuiv:config_alpha"
+            },
           "bindings": [
-						{ "binding_type": "global",
-							"binding_name": "#null"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(100 * (#test) + 1)",
-							"target_property_name": "#epbl"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(#epbl - #epcl1)",
-							"target_property_name": "#epbl1"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(#epbl1 - #epcl2)",
-							"target_property_name": "#epbl2"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(100 * ((#epbl > 100) + (#epbl > 200) + (#epbl > 300) + (#epbl > 400) + (#epbl > 500) + (#epbl > 600) + (#epbl > 700) + (#epbl > 800) + (#epbl > 900)))",
-							"target_property_name": "#epcl1"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(10 * ((#epbl1 > 10) + (#epbl1 > 20) + (#epbl1 > 30) + (#epbl1 > 40) + (#epbl1 > 50) + (#epbl1 > 60) + (#epbl1 > 70) + (#epbl1 > 80) + (#epbl1 > 90)))",
-							"target_property_name": "#epcl2"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(1 * ((#epbl2 > 1) + (#epbl2 > 2) + (#epbl2 > 3) + (#epbl2 > 4) + (#epbl2 > 5) + (#epbl2 > 6) + (#epbl2 > 7) + (#epbl2 > 8) + (#epbl2 > 9)))",
-							"target_property_name": "#epcl3"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "(#epcl2 + #epcl3)",
-							"target_property_name": "#finalc"
-						},
-						{ "binding_type": "view", // actual worst thing i ever done but im in a hurry so lmao
-							"source_property_name": "(('§z' + #epcl1) - '00')",
-							"target_property_name": "#epcl1s"
-						},
-						{ "binding_type": "view",
-							"source_property_name": "('§z' + #epcl1s + '.' + #finalc + '§7 (' + (#epcl1 + #finalc) + '%%)')",
-							"target_property_name": "#text"
-					}]
+            { "binding_type": "global",
+                "binding_name": "#null"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(100 * (#test) + 1)",
+                "target_property_name": "#epbl"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(#epbl - #epcl1)",
+                "target_property_name": "#epbl1"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(#epbl1 - #epcl2)",
+                "target_property_name": "#epbl2"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(100 * ((#epbl > 100) + (#epbl > 200) + (#epbl > 300) + (#epbl > 400) + (#epbl > 500) + (#epbl > 600) + (#epbl > 700) + (#epbl > 800) + (#epbl > 900)))",
+                "target_property_name": "#epcl1"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(10 * ((#epbl1 > 10) + (#epbl1 > 20) + (#epbl1 > 30) + (#epbl1 > 40) + (#epbl1 > 50) + (#epbl1 > 60) + (#epbl1 > 70) + (#epbl1 > 80) + (#epbl1 > 90)))",
+                "target_property_name": "#epcl2"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(1 * ((#epbl2 > 1) + (#epbl2 > 2) + (#epbl2 > 3) + (#epbl2 > 4) + (#epbl2 > 5) + (#epbl2 > 6) + (#epbl2 > 7) + (#epbl2 > 8) + (#epbl2 > 9)))",
+                "target_property_name": "#epcl3"
+            },
+            { "binding_type": "view",
+                "source_property_name": "(#epcl2 + #epcl3)",
+                "target_property_name": "#finalc"
+            },
+            { "binding_type": "view", // actual worst thing i ever done but im in a hurry so lmao
+                "source_property_name": "(('§z' + #epcl1) - '00')",
+                "target_property_name": "#epcl1s"
+            },
+            { "binding_type": "view",
+                "source_property_name": "('§z' + #epcl1s + '.' + #finalc + '§7 (' + (#epcl1 + #finalc) + '%%)')",
+                "target_property_name": "#text"
+        }]
       }}
   ]},
   "config_color": {
