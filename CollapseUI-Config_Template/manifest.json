@@ -1,0 +1,16 @@
+{ "format_version": 2,
+  "header": {
+    "name": "Collapse-UI Pre-Config (v1.0.4)",
+    "description": "A User made pre-config designed to apply modified config file without altering the main pack config, §l§cRequired to place the pack above of Collapse-UI!",
+    "uuid": "4afaaf0c-b78d-4b4f-b376-366184f0647e",
+    "version": [ 1, 1, 4 ],
+    "min_engine_version": [ 1, 20, 0 ]
+  },
+  "modules": [
+    { "type": "resources",
+      "uuid": "7e0624e3-7eb5-4ce7-bd3b-f1c8d6fd8801",
+      "version": [ 1, 0, 0 ]
+  }],
+  "metadata": {
+    "authors": [ "Arcdustry (Harlow)" ]
+}}
