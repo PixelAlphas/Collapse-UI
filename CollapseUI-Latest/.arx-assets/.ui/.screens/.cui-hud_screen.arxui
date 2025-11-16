@@ -11,6 +11,7 @@
       { "@cui-hud_screen.player_list": {}},
       { "@cui-hud_screen.chat_panel_bottom": {}}
   ]},
+  
   "anim_hotbar_select": {
     "ignored": "(not $cuigv:AnimatedHotbarSelect)",
     "type": "panel",

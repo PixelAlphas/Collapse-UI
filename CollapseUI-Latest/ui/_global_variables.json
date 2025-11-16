@@ -152,6 +152,8 @@
     // Enable Playerlist tab like java edition ingame, highly unfinished.
   "$cuigv:EventButton": true, // Boolean
     // Enable Mojang's Event on start screen, along with its notification.
+  "$cuigv:AnimatedProgressBar": true, // Boolean
+    // Enable Animated Progress Bar that moves bar smoothly instead of jumping. - This only affects Experience Bar.
     
   // ----- ## Unused - Will do nothing. ## -----
   "$cuigv:OriginUI": true, // Boolean

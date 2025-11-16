@@ -52,7 +52,7 @@
   },
   "anim_chat_pile_up": {
     "anim_type": "size",
-    "easing": "$cuigv:ChatPileEasingin",
+    "easing": "$cuigv:ChatPileEasingIn",
     "duration": "$cuigv:ChatPileUpDuration",
     "from": [ "100%", 0 ],
     "to": [ "100%", "100%c" ],

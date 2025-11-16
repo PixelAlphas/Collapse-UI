@@ -1,7 +1,7 @@
 { "namespace": "cui-dialog",
   "background_element": {
     "type": "panel",
-    "layer": 300,
+    "layer": 1,
     "controls": [
       { "shadow": {
           "ignored": "(not $cuigv:Shadows)",
@@ -25,7 +25,7 @@
     "texture": "textures/ui/.cui-assets/background",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "layer": 300,
+    "layer": 1,
     "offset": [ 0, 2 ],
     "color": "$cuigv:PrimaryColor",
     "$use_custom_title_control|default": false,
@@ -69,7 +69,7 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "size": [ "80%", "85%" ],
-    "layer": 300,
+    "layer": 1,
     "controls": [
       { "title_text_element": {
           "type": "image",
@@ -157,7 +157,7 @@
     "anchor_to": "top_middle",
     "text_tts": "#tts_text",
     "shadow": false,
-    "layer": 300,
+    "layer": 1,
     "font_scale_factor": 1.8,
     "font_type": "MinecraftTen",
     "bindings": [
@@ -227,7 +227,7 @@
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
     "offset": [ 2, 0 ],
-    "layer": 300,
+    "layer": 1,
     "controls": [
       { "text": {
           "type": "label",
@@ -318,7 +318,7 @@
   ]},
   "modal_left_button@cui-button.text_button": {
     "size": [ "fill", 20 ],
-    "layer": 90,
+    "layer": 2,
     "$pressed_button_name_anim": "leftbutton",
     "$pressed_button_name": "$popup_dialog_left_button_name",
     "$cuiv:button_text": "#modal_left_button_text",
@@ -327,7 +327,7 @@
   },
   "modal_middle_button@cui-button.text_button": {
     "size": [ "fill", 20 ],
-    "layer": 90,
+    "layer": 2,
     "$pressed_button_name_anim": "middlebutton",
     "$pressed_button_name": "$popup_dialog_middle_button_name",
     "$cuiv:button_text": "#modal_middle_button_text",
@@ -336,7 +336,7 @@
   },
   "modal_rightcancel_button@cui-button.text_button": {
     "size": [ "fill", 20 ],
-    "layer": 90,
+    "layer": 2,
     "$pressed_button_name_anim": "rightbutton",
     "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
     "$cuiv:button_text": "#modal_rightcancel_button_text",
