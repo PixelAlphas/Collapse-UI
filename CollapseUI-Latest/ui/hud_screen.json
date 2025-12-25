@@ -36,6 +36,240 @@
           }]
       }}
   ]},
+  "boss_name_panel": {
+    "type": "panel",
+    "size": [ "100%", 10 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "progress_bar_percentage": {
+          "type": "label",
+          "text": "#text",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ 0, 0 ],
+          "bindings": [
+            { "binding_name": "#bar_color",
+              "binding_name_override": "#color",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            },
+            { "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            { "binding_type": "view",
+              "source_property_name": "((100 + 1) * (1 - #clip_ratio))",
+              "target_property_name": "#epbl"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epbl - #epcl1)",
+              "target_property_name": "#epbl1"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epbl1 - #epcl2)",
+              "target_property_name": "#epbl2"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(100 * ((#epbl > 100) + (#epbl > 200) + (#epbl > 300) + (#epbl > 400) + (#epbl > 500) + (#epbl > 600) + (#epbl > 700) + (#epbl > 800) + (#epbl > 900)))",
+              "target_property_name": "#epcl1"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(10 * ((#epbl1 > 10) + (#epbl1 > 20) + (#epbl1 > 30) + (#epbl1 > 40) + (#epbl1 > 50) + (#epbl1 > 60) + (#epbl1 > 70) + (#epbl1 > 80) + (#epbl1 > 90)))",
+              "target_property_name": "#epcl2"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(1 * ((#epbl2 > 1) + (#epbl2 > 2) + (#epbl2 > 3) + (#epbl2 > 4) + (#epbl2 > 5) + (#epbl2 > 6) + (#epbl2 > 7) + (#epbl2 > 8) + (#epbl2 > 9)))",
+              "target_property_name": "#epcl3"
+            },
+            { "binding_type": "view",
+              "source_property_name": "(#epcl1 + #epcl2 + #epcl3)",
+              "target_property_name": "#finalc"
+            },
+            { "binding_type": "view",
+              "source_property_name": "('§z' + #finalc + '%%')",
+              "target_property_name": "#text"
+          }],
+          "controls": [
+            { "outline_left": {
+                "type": "label",
+                "offset": [ -1, 0 ],
+                "layer": -1,
+                "text": "#text",
+                "color": "black",
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "progress_bar_percentage",
+                    "source_property_name": "#text",
+                    "target_property_name": "#text"
+                }]
+            }},
+            { "outline_top": {
+                "type": "label",
+                "offset": [ 0, -1 ],
+                "layer": -1,
+                "text": "#text",
+                "color": "black",
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "progress_bar_percentage",
+                    "source_property_name": "#text",
+                    "target_property_name": "#text"
+                }]
+            }},
+            { "outline_right": {
+                "type": "label",
+                "offset": [ 1, 0 ],
+                "layer": -1,
+                "text": "#text",
+                "color": "black",
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "progress_bar_percentage",
+                    "source_property_name": "#text",
+                    "target_property_name": "#text"
+                }]
+            }},
+            { "outline_bottom": {
+                "type": "label",
+                "offset": [ 0, 1 ],
+                "layer": -1,
+                "text": "#text",
+                "color": "black",
+                "bindings": [
+                  { "binding_type": "view",
+                    "source_control_name": "progress_bar_percentage",
+                    "source_property_name": "#text",
+                    "target_property_name": "#text"
+                }]
+            }}
+      ]}},
+      { "boss_name": {
+          "type": "label",
+          "color": "$boss_name_text_color",
+          "enable_profanity_filter": true,
+          "text": "#bossName",
+          "anchor_from": "left_middle",
+          "offset": [ 1, 0 ],
+          "anchor_to": "left_middle",
+          "controls": [
+            { "outline_left": {
+                "type": "label",
+                "offset": [ -1, 0 ],
+                "layer": -1,
+                "text": "#bossName",
+                "color": "black",
+                "bindings": [
+                  { "binding_name": "#bossName",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                }]
+            }},
+            { "outline_top": {
+                "type": "label",
+                "offset": [ 0, -1 ],
+                "layer": -1,
+                "text": "#bossName",
+                "color": "black",
+                "bindings": [
+                  { "binding_name": "#bossName",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                }]
+            }},
+            { "outline_right": {
+                "type": "label",
+                "offset": [ 1, 0 ],
+                "layer": -1,
+                "text": "#bossName",
+                "color": "black",
+                "bindings": [
+                  { "binding_name": "#bossName",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                }]
+            }},
+            { "outline_bottom": {
+                "type": "label",
+                "offset": [ 0, 1 ],
+                "layer": -1,
+                "text": "#bossName",
+                "color": "black",
+                "bindings": [
+                  { "binding_name": "#bossName",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                }]
+            }}
+          ],
+          "bindings": [
+            { "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            { "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            },
+            { "binding_name": "#bar_color",
+              "binding_name_override": "#color",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+          }]
+      }}
+  ]},
+  "boss_health_panel": {
+    "type": "panel",
+    "size": [ 182, 22 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$progress_bar_collection": "boss_bars",
+    "controls": [
+      {
+        "boss_name@boss_name_panel": {}
+      },
+      // {
+      //   "boss_name@boss_name_panel": {}
+      // },
+      // {
+      //   "progress_bar_for_collections@common.progress_bar_for_collections": {
+      //     "offset": [ 0, 10 ]
+      //   }
+      // },
+      { "progress_bar_for_collections@common.progress_bar_for_collections": {
+          "offset": [ 0, 10 ],
+          "ignored": "($cuigv:AnimatedProgressBar)"
+      }},
+      { "progress_bar_for_collections@cui-hud_screen.boss_progress_bar_core": {}}
+    ],
+    "bindings": [
+      {
+        "binding_name": "#bar_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "boss_health_grid": {
+    "type": "grid",
+    "grid_dimension_binding": "#boss_grid_dimension",
+    "grid_item_template": "hud.boss_health_panel",
+    "grid_fill_direction": "vertical",
+    "collection_name": "boss_bars",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "size": [ 182, "30%" ],
+    "bindings": [
+      {
+        "binding_name": "(not #on_new_death_screen)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
   "centered_gui_elements_at_bottom_middle_touch": {
     "size": [ 180, 50 ],
     "controls": [
@@ -282,11 +516,7 @@
                       "size": [ "100%", 5 ],
                       "layer": 1,
                       "controls": [
-                        // { "full_progress_bar@cui-hud_screen.full_progress_bar_core": {
-                        //     "size": [ "100%", 5 ],
-                        //     "layer": 2
-                        // }},
-                        { "full_progress_bar@full_progress_bar": {
+                        { "full_progress_bar@cui-hud_screen.full_progress_bar_core": {
                             "size": [ "100%", 5 ],
                             "layer": 2
                         }}

@@ -1,9 +1,9 @@
 { "format_version": 2,
   "header": {
-    "name": "Collapse-UI: Celestial - v1.1.2",
+    "name": "Collapse-UI: Celestial - v1.2.0-rc1",
     "description": "§fModified & Enhanced UI made by Arxance\nThemes exists on subpack!",
     "uuid": "493034e0-587b-48f6-a0be-15e4d864e1cf",
-    "version": [ 5, 1, 2 ],
+    "version": [ 6, 0, 0 ],
     "min_engine_version": [ 1, 21, 110 ]
   },
   "modules": [

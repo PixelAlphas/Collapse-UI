@@ -357,6 +357,19 @@
                   { "storage_management_button@cui-setting_screen.storage_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$storage_management_forced_index" }},
                   { "pudding_05": { "type": "panel", "size": [ 4, 1 ], "ignored": "(not $is_pregame)" }},
                   { "language_button@cui-setting_screen.language_button": { "ignored": "(not $is_pregame)", "$toggle_group_forced_index": "$language_forced_index" }}
+            ]}},
+            { "pudding02": { "type": "panel", "size": [ 4, 4 ] }},
+            { "stack_panel2": {
+                "type": "stack_panel",
+                "size": [ "100% - 8px", "100%c" ],
+                "controls": [
+                  { "about@cui-common.header": { "$cuiv:header_text": "cui.settings.about" }},
+                  { "pudding_00": { "type": "panel", "size": [ 4, 1 ] }},
+                  { "account_button@cui-setting_screen.about_ui_button": { "$toggle_group_forced_index": 10001 }},
+                  { "pudding_01": { "type": "panel", "size": [ 4, 1 ] }},
+                  { "video_button@cui-setting_screen.config_button": { "$toggle_group_forced_index": 10002 }},
+                  { "pudding_02": { "type": "panel", "size": [ 4, 1 ] }},
+                  { "sound_button@cui-setting_screen.credit_button": { "$toggle_group_forced_index": 10003 }}
             ]}}
       ]}},
       { "addons_selector_panel@world_section.addons_selector_panel": { "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))", "$level_texture_pack_toggle_index": "$level_texture_pack_index", "$addon_toggle_index": "$addon_index" }},
@@ -563,6 +576,7 @@
       { "general_and_controls_sections": {
           "type": "stack_panel",
           "ignored": "(not $include_controls_and_settings_sections)",
+          "use_child_anchors": true,
           "controls": [
             { "account_section@cui-ss_account.account_section": {}},
             { "accessibility_section@cui-ss_accessibility.accessibility_section": {}},
@@ -575,7 +589,10 @@
             { "keyboardmouse_section@cui-ss_keyboardmouse.keyboardmouse_section": { "ignored": "(not $keyboard_and_mouse_supported)"}},
             { "touch_section@cui-ss_touch.touch_section": { "ignored": "($is_holographic or not $touch_supported or $nx_os)"}},
             { "storage_management_section@cui-ss_storage.storage_section": { "ignored": "$ignore_storage_section" }},
-            { "global_texture_pack_section@cui-ss_globalresource.globalresource_section": { "ignored": "$ignore_global_resources_section" }}
+            { "global_texture_pack_section@cui-ss_globalresource.globalresource_section": { "ignored": "$ignore_global_resources_section" }},
+            { "about_section@cui-ss_about.about_section": {}},
+            { "config_section@cui-ss_config.config_section": {}},
+            { "credit_section@cui-ss_credit.credit_section": {}}
       ]}}
   ]},
   "settings_toggle_theme@cui-toggle.toggle_button_section": {
@@ -679,6 +696,24 @@
     "$toggle_view_binding_name": "touch_button_toggle",
     "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/touch_section_icon",
     "$cuiv:toggle_label_text": "options.touch"
+  },
+  "about_ui_button@cui-setting_screen.settings_toggle_theme": {
+    "size": [ "100%", 22 ],
+    "$toggle_view_binding_name": "about_ui_button_toggle",
+    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/touch_section_icon",
+    "$cuiv:toggle_label_text": "cui.settings.about.about_ui.button"
+  },
+  "config_button@cui-setting_screen.settings_toggle_theme": {
+    "size": [ "100%", 22 ],
+    "$toggle_view_binding_name": "config_button_toggle",
+    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/touch_section_icon",
+    "$cuiv:toggle_label_text": "cui.settings.about.configuration.button"
+  },
+  "credit_button@cui-setting_screen.settings_toggle_theme": {
+    "size": [ "100%", 22 ],
+    "$toggle_view_binding_name": "credit_button_toggle",
+    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/touch_section_icon",
+    "$cuiv:toggle_label_text": "cui.settings.about.credit.button"
   },
   "global_texture_pack_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],

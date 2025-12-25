@@ -125,7 +125,23 @@
     // Change Extra Menu's Easing In.
   "$cuigv:ExtraMenuEasingOut": "in_cubic",
     // Change Extra Menu's Easing Out.
-
+  "$cuigv:ProgressBarAnimatedIncreaseEasing": "out_cubic",
+    // Change Animated Increasing Progress Bar Easing. 
+  "$cuigv:ProgressBarAnimatedDecreaseEasing": "out_cubic",
+    // Change Animated Decreasing Progress Bar Easing.
+  "$cuigv:ProgressBarAnimatedIncreaseDuration": 0.75,
+    // Change How long would animated increase progress bar playing.
+  "$cuigv:ProgressBarAnimatedDecreaseDuration": 0.75,
+    // Change How long would animated decrease progress bar playing.
+  "$cuigv:BossBarAnimatedIncreaseEasing": "out_cubic",
+    // Change Animated Increase Boss Bar Easing.
+  "$cuigv:BossAnimatedDecreaseEasing": "out_cubic",
+    // Change Animated Decrease Boss Bar Easing.
+  "$cuigv:BossBarAnimatedIncreaseDuration": 0.75,
+    // Change How long would animated increase boss bar playing.
+  "$cuigv:BossBarAnimatedDecreaseDuration": 0.75,
+    // Change How long would animated decrease boss bar playing.
+  
 
   // ----- ## Layouts ## -----
   "$cuigv:LogoInPauseScreen": true,
@@ -153,7 +169,11 @@
   "$cuigv:EventButton": true, // Boolean
     // Enable Mojang's Event on start screen, along with its notification.
   "$cuigv:AnimatedProgressBar": true, // Boolean
-    // Enable Animated Progress Bar that moves bar smoothly instead of jumping. - This only affects Experience Bar.
+    // Enable Animated Progress Bar that moves bar smoothly instead of jumping. - This only affect Experience Bar and Loading screen bar.
+  "$cuigv:AnimatedBossBar": true, // Boolean
+    // Enable Animated Progress Bar that moves bar smoothly instead of jumping. - This only affect Boss Bar.
+  "$cuigv:AnimatedBossBarStyle": "gradient", // BossBarString
+    // Change the decreased animation of boss bar, has 3 variants.
     
   // ----- ## Unused - Will do nothing. ## -----
   "$cuigv:OriginUI": true, // Boolean

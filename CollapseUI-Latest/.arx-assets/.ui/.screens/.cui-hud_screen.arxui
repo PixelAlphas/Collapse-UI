@@ -116,15 +116,10 @@
           "layer": 999,
           "$cuiv:ptl_bindings": [
             { "binding_type": "global",
-              "binding_name": "#exp_progress",
-              "binding_condition": "always"
-            },
-            { "binding_type": "global",
-              "binding_name": "#level_number",
-              "binding_condition": "always"
+              "binding_name": "#level_number"
             },
             { "binding_type": "view",
-              "source_property_name": "(#level_number * 1)",
+              "source_property_name": "((':' + #level_number) - ':')",
               "target_property_name": "#exp_required_base"
             },
             { "binding_type": "view",
@@ -142,6 +137,9 @@
             { "binding_type": "view",
               "source_property_name": "(#exp_required_1 + #exp_required_2 + #exp_required_3)",
               "target_property_name": "#exp_required_result"
+            },
+            { "binding_type": "global",
+              "binding_name": "#exp_progress"
             },
             { "binding_type": "view",
               "source_property_name": "((#exp_required_result + 1) * (1 - #exp_progress))",
@@ -792,6 +790,433 @@
                       }]
                   }}
             ]}}
+      ]}}
+  ]},
+  "progress_bar": {
+    "type": "image",
+    "size": [ 0, "100%" ],
+    "texture": "textures/ui/.cui-assets/animated_bar_fill",
+    "$cuiv:colored_bar|default": [ 0.6156, 0.9019, 0.3058 ],
+    "color": "$cuiv:colored_bar",
+    "variables": [
+      { "requires": "$cuigv:AllowColoredExperienceBar",
+        "$cuiv:colored_bar": "$cuigv:PrimaryColor"
+  }]},
+	"bar_animate@cui-hud_screen.progress_bar": {
+		"size": [ 0, "100%" ],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+    "anims": [
+			"@cui-anims.bar_animate_anim"
+	]},
+	"bar_animate_reverse@cui-hud_screen.progress_bar": {
+		"size": [ 0, "100%" ],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+    "anims": [
+			"@cui-anims.bar_animate_reverse_anim"
+	]},
+  // WARN: Nineslice'd texture does not cope with it due to
+  //       duplicated textures.
+  "full_progress_bar_core": {
+    "type": "panel",
+    "size": [ "100%", 5 ],
+    "$cuiv:animatedbarbinding|default": "#exp_progress",
+    "controls": [
+      { "regular_bar@hud.full_progress_bar": {
+          "ignored": "($cuigv:AnimatedProgressBar)"
+      }},
+      // Using 'stack_panel' due 'fill'.
+      { "animated_bar": {
+          "ignored": "(not $cuigv:AnimatedProgressBar)",
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100% - 2px", "100%" ],
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+          "bindings": [
+            { "binding_name": "$cuiv:animatedbarbinding",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+          }],
+          "controls": [
+            // Bar that will fill the element.
+            { "bar_filler@cui-hud_screen.progress_bar": {
+                "size": [ "fill", "100%" ]
+            }},
+            // Animations size tipping.
+            // How it works is it will essentially size a specific area by
+            // appox increased/decreased size.
+            // Moreover, anims required a element reload, so factory are needed.
+            { "anim_increase": {
+                "type": "collection_panel",
+                "size": [ 0, "100%" ],
+                "use_anchored_offset": true,
+                "anchor_from": "top_left",
+								"anchor_to": "top_left",
+                "property_bag": {
+									"#current_value": 0.0,
+									"#previous_value": 0.0,
+									"#is_equal": true
+                },
+                "factory": {
+                  "name": "anim_increase",
+                  "control_name": "cui-hud_screen.bar_animate",
+                  "max_children_size": 1
+                },
+                "bindings": [
+                  { "binding_name": "$cuiv:animatedbarbinding",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_condition": "always"
+                  },
+                  // Add a check whenever both value are equal as a flag.
+                  {	"binding_type": "view",
+										"source_property_name": "(#current_value = #clip_ratio)",
+										"target_property_name": "#is_equal"
+                  },
+                  // Fetch the clip ratio AFTER the flag.
+                  // WARN: Will fail entirely if the flag check is below.
+									{	"binding_type": "view",
+										"source_property_name": "#clip_ratio",
+										"target_property_name": "#current_value"
+                  },
+                  // Dump a previous value from current value when the flag is true.
+									{	"binding_type": "view",
+										"source_property_name": "((#previous_value * #is_equal) + (#current_value * (not #is_equal)))",
+										"target_property_name": "#previous_value"
+                  },
+                  // Calculate and attempts to fill the animation area for factory. 
+									{	"binding_type": "view",
+										"source_property_name": "(0.0 + (#previous_value - #current_value) * (#previous_value > #current_value))",
+										"target_property_name": "#size_binding_x"
+                  },
+                  // Reload element by checking flag.
+									{	"binding_type": "view",
+										"source_property_name": "(#is_equal * 1)",
+										"target_property_name": "#collection_length"
+                }]
+            }},
+            // I did the same but in reverse by swapping greater to lesser.
+            {	"bar_animate_reverse": {
+								"type": "collection_panel",
+                "size": [ 0, "100%" ],
+                "use_anchored_offset": true,
+                "anchor_from": "top_left",
+								"anchor_to": "top_left",
+                "property_bag": {
+									"#current_value": 0.0,
+									"#previous_value": 0.0,
+									"#is_equal": true
+                },
+								"factory": {
+									"name": "anim_decrease",
+									"control_name": "cui-hud_screen.bar_animate_reverse",
+									"max_children_size": 1 
+                },
+								"bindings": [
+									{ "binding_name": "$cuiv:animatedbarbinding",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_condition": "always"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(#current_value = #clip_ratio)",
+										"target_property_name": "#is_equal"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "#clip_ratio",
+										"target_property_name": "#current_value"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "((#previous_value * #is_equal) + (#current_value * (not #is_equal)))",
+										"target_property_name": "#previous_value"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(0.0 + (#current_value - #previous_value) * (#previous_value < #current_value))",
+										"target_property_name": "#size_binding_x"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(#is_equal * 1)",
+										"target_property_name": "#collection_length"
+                }]
+            }},
+             // A empty panel that respond to fill the 'empty' area.
+            // With 'bar_filler' and 'bar_empty_filler', i get a
+            // glorified weirdest way to do bind sizing bar.
+            {	"bar_empty_filler": {
+								"type": "panel",
+								"size": [ 0, "100%" ],
+								"offset": [ 0, 0 ],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"use_anchored_offset": true,
+								"property_bag": {
+									"#current_value": 0.0,
+									"#previous_value": 0.0,
+									"#is_equal": true
+                },
+                "bindings": [
+									{ "binding_name": "$cuiv:animatedbarbinding",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_condition": "always"
+                  },
+                  // Add a check whenever both value are equal as a flag.
+									{	"binding_type": "view",
+										"source_property_name": "(#current_value = #clip_ratio)",
+										"target_property_name": "#is_equal"
+                  },
+                  // Fetch the clip ratio AFTER the flag.
+                  // WARN: Will fail entirely if the flag check is below.
+									{	"binding_type": "view",
+										"source_property_name": "#clip_ratio",
+										"target_property_name": "#current_value"
+                  },
+                  // Dump a previous value from current value when the flag is true.
+									{	"binding_type": "view",
+										"source_property_name": "((#previous_value * #is_equal) + (#current_value * (not #is_equal)))",
+										"target_property_name": "#previous_value"
+                  },
+                  // Calculate and attempts to fill the empty area. 
+									{	"binding_type": "view",
+										"source_property_name": "(0.0 + (#current_value < #previous_value) * #current_value + (#current_value > #previous_value) * #previous_value)",
+										"target_property_name": "#size_binding_x"
+                }]
+            }}
+      ]}}
+  ]},
+  "boss_progress_bar": {
+    "type": "image",
+    "size": [ 0, "100%" ],
+    "texture": "textures/ui/.cui-assets/animated_bar_fill",
+    "bindings": [
+      { "binding_name": "#bar_color",
+        "binding_name_override": "#color",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars"
+  }]},
+	"boss_bar_animate@cui-hud_screen.boss_progress_bar": {
+		"size": [ 0, "100%" ],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+    "anims": [
+			"@cui-anims.bar_animate_anim"
+	]},
+  "gradient_renderer_template": {
+    "ignored": "(not $cuigv:BackgroundGradient)",
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "layer": -89
+  },
+  "boss_progress_bar_reverse_1": {
+    "type": "image",
+    "size": [ 0, "100%" ],
+    "texture": "textures/ui/.cui-assets/animated_bar_fill"
+  },
+  "boss_progress_bar_reverse_2": {
+    "type": "image",
+    "size": [ 0, "100%" ],
+    "texture": "textures/ui/.cui-assets/animated_bar_fill",
+    "controls": [
+      { "body": {
+          "type": "custom",
+          "renderer": "gradient_renderer",
+          "size": [ "100%", 7 ],
+          "layer": 1,
+          "offset": [ 0, -4 ],
+          "gradient_direction": "vertical",
+          "color1": [ 1, 1, 1, 0 ],
+          "color2": [ 1, 1, 1, 1 ],
+          "clips_children": true,
+          "controls": [
+            { "left_side": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "size": [ 1, "100%" ],
+                "layer": 1,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "gradient_direction": "vertical",
+                "color1": [ 1, 1, 1, 0 ],
+                "color2": [ 1, 1, 1, 1 ]
+            }},
+            { "right_side": {
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "size": [ 1, "100%" ],
+                "layer": 1,
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "gradient_direction": "vertical",
+                "color1": [ 1, 1, 1, 0 ],
+                "color2": [ 1, 1, 1, 1 ]
+            }}
+      ]}}
+  ]},
+  "boss_progress_bar_reverse_3": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "size": [ 0, "100%" ],
+    "layer": 1,
+    "gradient_direction": "horizontal",
+    "color1": [ 1, 1, 1, 1 ],
+    "color2": [ 1, 1, 1, 0 ]
+  },
+	"boss_bar_animate_reverse@cui-hud_screen.boss_progress_bar_reverse_2": {
+		"size": [ 0, "100%" ],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+    "anims": [
+			"@cui-anims.bar_animate_reverse_anim"
+	]},
+  "boss_progress_bar_core": {
+    "type": "panel",
+    "size": [ "100%", 5 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -7 ],
+    "controls": [
+      { "empty_progress_bar": {
+          "ignored": "(not $cuigv:AnimatedProgressBar)",
+          "type": "image",
+          "texture": "textures/ui/empty_progress_bar",
+          "bindings": [
+            { "binding_name": "#bar_color",
+              "binding_name_override": "#color",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+          }]
+      }},
+      { "animated_bar": {
+          "ignored": "(not $cuigv:AnimatedProgressBar)",
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100% - 2px", "100%" ],
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+          "controls": [
+            { "bar_filler@cui-hud_screen.boss_progress_bar": {
+                "size": [ "fill", "100%" ]
+            }},
+            { "anim_increase": {
+                "type": "collection_panel",
+                "size": [ 0, "100%" ],
+                "use_anchored_offset": true,
+                "anchor_from": "top_left",
+								"anchor_to": "top_left",
+                "property_bag": {
+									"#current_value": 0.0,
+									"#previous_value": 0.0,
+									"#is_equal": true
+                },
+                "factory": {
+                  "name": "anim_increase",
+                  "control_name": "cui-hud_screen.boss_bar_animate",
+                  "max_children_size": 1
+                },
+                "bindings": [
+                  { "binding_name": "#progress_percentage",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                  },
+                  {	"binding_type": "view",
+										"source_property_name": "(#current_value = #clip_ratio)",
+										"target_property_name": "#is_equal"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "#clip_ratio",
+										"target_property_name": "#current_value"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "((#previous_value * #is_equal) + (#current_value * (not #is_equal)))",
+										"target_property_name": "#previous_value"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(0.0 + (#previous_value - #current_value) * (#previous_value > #current_value))",
+										"target_property_name": "#size_binding_x"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(#is_equal * 1)",
+										"target_property_name": "#collection_length"
+                }]
+            }},
+            {	"bar_animate_reverse": {
+								"type": "collection_panel",
+                "size": [ 0, "100%" ],
+                "use_anchored_offset": true,
+                "anchor_from": "top_left",
+								"anchor_to": "top_left",
+                "property_bag": {
+									"#current_value": 0.0,
+									"#previous_value": 0.0,
+									"#is_equal": true
+                },
+								"factory": {
+									"name": "anim_decrease",
+									"control_name": "cui-hud_screen.boss_bar_animate_reverse",
+									"max_children_size": 1 
+                },
+								"bindings": [
+									{ "binding_name": "#progress_percentage",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(#current_value = #clip_ratio)",
+										"target_property_name": "#is_equal"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "#clip_ratio",
+										"target_property_name": "#current_value"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "((#previous_value * #is_equal) + (#current_value * (not #is_equal)))",
+										"target_property_name": "#previous_value"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(0.0 + (#current_value - #previous_value) * (#previous_value < #current_value))",
+										"target_property_name": "#size_binding_x"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(#is_equal * 1)",
+										"target_property_name": "#collection_length"
+                }]
+            }},
+            {	"bar_empty_filler": {
+								"type": "panel",
+								"size": [ 0, "100%" ],
+								"offset": [ 0, 0 ],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"use_anchored_offset": true,
+								"property_bag": {
+									"#current_value": 0.0,
+									"#previous_value": 0.0,
+									"#is_equal": true
+                },
+                "bindings": [
+									{ "binding_name": "#progress_percentage",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(#current_value = #clip_ratio)",
+										"target_property_name": "#is_equal"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "#clip_ratio",
+										"target_property_name": "#current_value"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "((#previous_value * #is_equal) + (#current_value * (not #is_equal)))",
+										"target_property_name": "#previous_value"
+                  },
+									{	"binding_type": "view",
+										"source_property_name": "(0.0 + (#current_value < #previous_value) * #current_value + (#current_value > #previous_value) * #previous_value)",
+										"target_property_name": "#size_binding_x"
+                }]
+            }}
       ]}}
   ]}
 }

@@ -1,0 +1,40 @@
+{ "namespace": "cui-ss_credit",
+  "credit_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "use_child_anchors": true,
+    "controls": [
+      { "optimized": {
+          "ignored": "(not $cuigv:OptimizedSettings)",
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "factory": { "name": "about_ui_section", "control_name": "cui-credits_section.core_element" },
+          "use_child_anchors": true,
+          "property_bag": {
+            "#toggle_state": false
+          },
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "credit_button_toggle",
+              "source_property_name": "(#toggle_state * 1)",
+              "target_property_name": "#collection_length"
+          }]
+      }},
+      { "vanilla@cui-credits_section.core_element": {
+          "ignored": "($cuigv:OptimizedSettings)",
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "use_child_anchors": true,
+          "visible": false,
+          "property_bag": {
+            "#toggle_state": false
+          },
+          "bindings": [
+            { "binding_type": "view",
+              "source_control_name": "credit_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+          }]
+      }}
+  ]}
+}

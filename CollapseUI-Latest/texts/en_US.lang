@@ -4,8 +4,14 @@ cui.settings.experimental.title=Experimental(s)
 cui.settings.utilities=Utilitie(s)
 cui.settings.controls=Control(s)
 cui.settings.generals=General(s)
+cui.settings.about=About Info(s)
 cui.settings.extra_info_enabled=Displaying Descriptions.
 cui.settings_toggle_desc=View Description
+
+## > About UI
+cui.settings.about.about_ui.button=About Collapse-UI
+cui.settings.about.configuration.button=Configuration
+cui.settings.about.credit.button=Credit
 
 ## > Accessibility
 cui.settings.accessibility.main.description=A section that may help with disability and visibility related.

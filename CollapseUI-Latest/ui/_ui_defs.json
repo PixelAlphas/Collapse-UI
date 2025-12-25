@@ -45,5 +45,8 @@
   ".arx-assets/.ui/.screens/.setting_sections/.cui-ss_video.arxui",
   ".arx-assets/.ui/.screens/.setting_sections/.cui-ss_gamepad.arxui",
   ".arx-assets/.ui/.screens/.setting_sections/.cui-ss_keyboardmouse.arxui",
-  ".arx-assets/.ui/.screens/.setting_sections/.cui-ss_touch.arxui"
+  ".arx-assets/.ui/.screens/.setting_sections/.cui-ss_touch.arxui",
+  ".arx-assets/.ui/.screens/.setting_sections/.cui-ss_about.arxui",
+  ".arx-assets/.ui/.screens/.setting_sections/.cui-ss_config.arxui",
+  ".arx-assets/.ui/.screens/.setting_sections/.cui-ss_credit.arxui"
 ]}

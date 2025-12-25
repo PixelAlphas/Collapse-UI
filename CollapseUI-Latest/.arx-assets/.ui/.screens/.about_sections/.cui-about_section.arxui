@@ -14,9 +14,14 @@
       { "padding01": { "type": "panel", "size": [ 1, 10 ]}},
       { "titlelogo": { "type": "image", "texture": "textures/ui/collapse-ui_title", "size": [ "100%", 30 ] }},
       { "padding02": { "type": "panel", "size": [ 1, 4 ]}},
-      { "ui_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "v1.1.2"
-      }},
+      { "ui_version_panel": {
+          "type": "panel",
+					"size": [ "100%", 30 ],
+					"controls": [
+						{ "ui_version@cui-common.label_with_background_adv": {
+								"$cuiv:lwb_text": "v1.2.0-rc1 (Release Candidate 1)"
+						}}
+			]}},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
       { "element@cui-common.element_background": {
           "$cuiv:element_background_contents": "cui-about_section.about_ui",
@@ -56,6 +61,7 @@
     "type": "stack_panel",
     "size": [ "100% - 4px", "100%c" ],
     "orientation": "vertical",
+    "offset": [ 4, 0 ],
     "use_child_anchors": true
   },
   "about_ui@element_panel_template": {
@@ -69,11 +75,11 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Sun, 16 Nov (2025)"
+          "$cuiv:about_text_gray": "Thu, 25 Dec (2025)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",
-          "$cuiv:about_text_gray": "Stable"
+          "$cuiv:about_text_gray": "Beta"
       }},
       { "setting_version@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.setting_ver",
@@ -92,6 +98,7 @@
     "type": "stack_panel",
     "size": [ "100% - 4px", "100%c" ],
     "orientation": "vertical",
+    "offset": [ 4, 0 ],
     "use_child_anchors": true,
     "controls": [
       { "curseforge@cui-about_section.about_text_icon": {

@@ -454,7 +454,22 @@
     "duration": "$cuiv:background_slider_anim_max",
     "next": "@cui-anims.background_slider"
   },
-
+  // Animated Progress Bar
+  "bar_animate_anim": {
+		"anim_type": "size",
+    "easing": "$cuigv:ProgressBarAnimatedIncreaseEasing",
+		"duration": "$cuigv:ProgressBarAnimatedIncreaseDuration",
+    "from": [ 0, "100%" ],
+		"to": [ "100%", "100%" ]
+  },
+  "bar_animate_reverse_anim": {
+		"anim_type": "size",
+    "easing": "$cuigv:ProgressBarAnimatedDecreaseEasing",
+		"duration": "$cuigv:ProgressBarAnimatedDecreaseDuration",
+    "from": [ "100%", "100%" ],
+		"to": [ 0, "100%" ]
+  },
+  
   // Unused
   "test_00": {
     "anim_type": "offset",
