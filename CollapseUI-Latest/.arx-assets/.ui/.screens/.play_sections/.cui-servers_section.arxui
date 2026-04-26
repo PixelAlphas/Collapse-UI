@@ -276,7 +276,7 @@
                 "$cuiv:button_image_offset": [ 8, -0.5 ],
                 "$cuiv:button_text_anchor": "left_middle",
                 "$cuiv:button_text_offset": [ 30, 0 ],
-                
+
                 "$toggle_view_binding_name": "cuib-toggle_fs",
                 "$toggle_name": "toggle_fs",
                 "$toggle_group_forced_index": 2,
@@ -314,5 +314,6 @@
               "target_property_name": "#visible"
           }]
       }},
-      { "padding_02": { "type": "panel", "size": [ "100%", 2 ]}}
+      { "padding_02": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}}
 ]}}

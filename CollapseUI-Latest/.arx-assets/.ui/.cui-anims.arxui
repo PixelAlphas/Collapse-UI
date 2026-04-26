@@ -159,7 +159,7 @@
 		"anim_type": "offset",
 		"easing": "$cuigv:HudTooltipsMainEasing",
 		"duration": "$cuigv:HudTooltipsDuration",
-		"from": [  0, "50%-65px"], 
+		"from": [  0, "50%-65px"],
 		"to": [  0, "50%-70px"]
 	},
 	"hud_tooltip_alpha": {
@@ -172,7 +172,7 @@
   // Screens Anims
   "screen_outro_anim_push": {
     "anim_type": "offset",
-    "easing": "$cuigv:ScreenAnimMainEasingOut",
+    "easing": "$cuigv:ScreenAnimMainEasingIn",
     "duration": "$transition_time_push",
     "from": "$cuiv-anim:pos_to",
     "to": "$cuiv-anim:pos_from",
@@ -181,7 +181,7 @@
   },
   "screen_outro_anim_pop": {
     "anim_type": "offset",
-    "easing": "$cuigv:ScreenAnimMainEasingOut",
+    "easing": "$cuigv:ScreenAnimMainEasingIn",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:pos_to",
     "to": "$cuiv-anim:pos_from",
@@ -190,7 +190,7 @@
   },
   "screen_intro_anim_push": {
     "anim_type": "offset",
-    "easing": "$cuigv:ScreenAnimMainEasingIn",
+    "easing": "$cuigv:ScreenAnimMainEasingOut",
     "duration": "$transition_time_push",
     "from": "$cuiv-anim:pos_from",
     "to": "$cuiv-anim:pos_to",
@@ -199,7 +199,7 @@
   },
   "screen_intro_anim_pop": {
     "anim_type": "offset",
-    "easing": "$cuigv:ScreenAnimMainEasingIn",
+    "easing": "$cuigv:ScreenAnimMainEasingOut",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:pos_from",
     "to": "$cuiv-anim:pos_to",
@@ -208,7 +208,7 @@
   },
   "screen_outro_anim_size_push": {
     "anim_type": "size",
-    "easing": "$cuigv:ScreenAnimMainEasingOut",
+    "easing": "$cuigv:ScreenAnimMainEasingIn",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:size_to",
     "to": "$cuiv-anim:size_from",
@@ -217,7 +217,7 @@
   },
   "screen_outro_anim_size_pop": {
     "anim_type": "size",
-    "easing": "$cuigv:ScreenAnimMainEasingOut",
+    "easing": "$cuigv:ScreenAnimMainEasingIn",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:size_to",
     "to": "$cuiv-anim:size_from",
@@ -226,7 +226,7 @@
   },
   "screen_intro_anim_size_push": {
     "anim_type": "size",
-    "easing": "$cuigv:ScreenAnimMainEasingIn",
+    "easing": "$cuigv:ScreenAnimMainEasingOut",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:size_from",
     "to": "$cuiv-anim:size_to",
@@ -235,7 +235,7 @@
   },
   "screen_intro_anim_size_pop": {
     "anim_type": "size",
-    "easing": "$cuigv:ScreenAnimMainEasingIn",
+    "easing": "$cuigv:ScreenAnimMainEasingOut",
     "duration": "$transition_time_pop",
     "from": "$cuiv-anim:size_from",
     "to": "$cuiv-anim:size_to",
@@ -319,7 +319,7 @@
     "from": [ "0%", "100%" ],
     "to": [ "100% + 8px", "100%" ]
   },
-  
+
   // Loading Anims
   "loading_anim": {
     "anim_type": "flip_book",
@@ -330,7 +330,7 @@
     "reversible": false,
     "easing": "linear"
   },
-  
+
   // Extra Menu Anims
   "extra_anims_offset": {
     "anim_type": "offset",
@@ -449,7 +449,7 @@
     "next": "@cui-anims.background_slider_final",
     "easing": "linear"
   },
-  "background_slider_final": { 
+  "background_slider_final": {
     "anim_type": "wait",
     "duration": "$cuiv:background_slider_anim_max",
     "next": "@cui-anims.background_slider"
@@ -469,7 +469,7 @@
     "from": [ "100%", "100%" ],
 		"to": [ 0, "100%" ]
   },
-  
+
   // Unused
   "test_00": {
     "anim_type": "offset",

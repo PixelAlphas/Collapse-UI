@@ -499,10 +499,8 @@
   ]},
   "main_button_element": {
     "ignored": "$cuigv:StartMainButtonClassic",
-    "type": "image",
+    "type": "panel",
     "size": [ "100%cm + 8px", "100%cm + 8px" ],
-    "texture": "textures/ui/.cui-assets/background",
-    "color": "$cuigv:SecondaryColor",
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "offset": [ 14, 0 ],
@@ -511,7 +509,6 @@
     "$cuiv-anim:pos_to": [ 14, 0 ],
     "animation_reset_name": "screen_animation_reset",
     "layer": 1,
-    "alpha": "$cuigv:BackgroundAlpha",
     "anims": [
       "@cui-anims.screen_outro_anim_push",
       "@cui-anims.screen_outro_anim_pop",
@@ -1129,6 +1126,38 @@
           }],
           "anims": "$cuiv:anim"
       }},
+      { "main_background": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "size": [ "100%cm + 12px", "100%cm + 12px" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 8, 20 ],
+          "layer": 20,
+          "color": "$cuigv:SecondaryColor",
+          "variables": [
+            { "requires": "$cuigv:UIAnimations",
+              "$cuiv:anim": [ "@cui-anims.extra_anims_offset_info" ]
+          }],
+          "anims": "$cuiv:anim",
+          "controls": [
+            { "warning": {
+                "type": "label",
+                "layer": 20,
+                "text": "Collapse-UI is best used with Ore-UI remover. For more information, Check out the official website!\n§7https://pixelalphas.github.io/projects/collapseui/main"
+            }}]
+      }},
+      { "qr_code_panel": {
+          "type": "custom",
+          "ignored": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "renderer": "qr_code_renderer",
+          "size": [150, 150],
+          "property_bag": {
+            "#qr_code_content": "pixelalphas.github.io/projects/collapseui/main.html"
+          }
+      }},
       { "selector_area@cui-start_screen.extra_menu_element_view": {
           "$cuiv:selector_event_anims|default": [],
           "$cuiv:selector_anims|default": [],
@@ -1187,6 +1216,34 @@
           "anims": [
             "@cui-anims.extra_anims_offset_title_exit"
       ]}},
+      { "main_background": {
+          "type": "image",
+          "texture": "textures/ui/.cui-assets/background_2x",
+          "size": [ "100%cm + 12px", "100%cm + 12px" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 8, 20 ],
+          "layer": 20,
+          "color": "$cuigv:SecondaryColor",
+          "anims": [ "@cui-anims.extra_anims_offset_info_exit" ],
+          "controls": [
+            { "warning": {
+                "type": "label",
+                "layer": 20,
+                "text": "Collapse-UI is best used with Ore-UI remover. For more information, Check out the official website!\n§7https://pixelalphas.github.io/projects/collapseui/main"
+            }}]
+      }},
+      { "qr_code_panel": {
+          "type": "custom",
+          "ignored": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "renderer": "qr_code_renderer",
+          "size": [150, 150],
+          "property_bag": {
+            "#qr_code_content": "pixelalphas.github.io/projects/collapseui/main.html"
+          }
+      }},
       { "selector_area@cui-start_screen.extra_menu_element_view": {
           "$cuiv:selector_event_anims": [
             "@cui-anims.event_anims_offset_exit",
@@ -1404,7 +1461,7 @@
     "layer": 900,
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v1.2.0"
+          "$cuiv:lwb_text": "Collapse-UI v1.2.1"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

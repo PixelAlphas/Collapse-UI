@@ -19,7 +19,7 @@
 			"size": [ "100%", 30 ],
 			"controls": [
 				{ "ui_version@cui-common.label_with_background_adv": {
-				    "$cuiv:lwb_text": "v1.2"
+				    "$cuiv:lwb_text": "v1.2.1"
 				}}
 			]}},
       { "padding03": { "type": "panel", "size": [ 1, 8 ]}},
@@ -75,7 +75,7 @@
     "controls": [
       { "build_release@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.update",
-          "$cuiv:about_text_gray": "Sun, 26 April (2026)"
+          "$cuiv:about_text_gray": "Sun, 27 April (2026)"
       }},
       { "branch@cui-about_section.about_text": {
           "$cuiv:about_text": "cui.about.tab.about.branch",

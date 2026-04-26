@@ -537,6 +537,7 @@
                       }]
                   }},
                   { "padding_05": { "type": "panel", "size": [ "100%", 2 ]}}
-            ]}}
+            ]}},
+            { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}}
       ]}}
 ]}}

@@ -270,7 +270,7 @@
 
     "$scroll_bar_right_padding_size": [ 0, 0 ],
     "$scroll_bar_left_padding_size": [ 1, 0 ],
-    
+
     "$allow_scrolling_even_when_content_fits": false,
 
     "$scrolling_content": "server_form.long_form_scrolling_content"
@@ -597,7 +597,7 @@
                   { "vanilla@world_section.addon_section": {
                       "ignored": "($cuigv:OptimizedSettings)"
                   }}
-            ]}} 
+            ]}}
       ]}},
       { "section_content_panels@realms_settings.section_content_panels": { "ignored": "(not $include_realm_section)" }},
       { "general_and_controls_sections": {
@@ -727,19 +727,19 @@
   "about_ui_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "about_ui_button_toggle",
-    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/touch_section_icon",
+    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/about_icon",
     "$cuiv:toggle_label_text": "cui.settings.about.about_ui.button"
   },
   "config_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "config_button_toggle",
-    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/touch_section_icon",
+    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/config_icon",
     "$cuiv:toggle_label_text": "cui.settings.about.configuration.button"
   },
   "credit_button@cui-setting_screen.settings_toggle_theme": {
     "size": [ "100%", 22 ],
     "$toggle_view_binding_name": "credit_button_toggle",
-    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/touch_section_icon",
+    "$cuiv:toggle_texture": "textures/ui/.cui-assets/.icons/multiplayer_section_icon",
     "$cuiv:toggle_label_text": "cui.settings.about.credit.button"
   },
   "global_texture_pack_button@cui-setting_screen.settings_toggle_theme": {
@@ -760,7 +760,7 @@
     "controls": [
       { "pressed_padding": {
           "type": "panel",
-          "size": [ 5, "100%" ], 
+          "size": [ 5, "100%" ],
           "ignored": "(not($pressed_state))",
           "controls": [
             { "highlight": {
@@ -1106,7 +1106,7 @@
                 "locked_alpha": 0.5
             }}
       ]}},
-      
+
       { "description_spacing": {
           "ignored": "(not $cuiv:option_description)",
           "type": "panel",

@@ -356,5 +356,6 @@
                 "$collection_name": "lan_network_worlds"
           }}]
       }},
-      { "padding_07": { "type": "panel", "size": [ "100%", 2 ]}}
+      { "padding_07": { "type": "panel", "size": [ "100%", 2 ]}},
+      { "gamepad_tooltips_pudding@cui-setting_screen.gamepad_tooltips_pudding": {}}
 ]}}

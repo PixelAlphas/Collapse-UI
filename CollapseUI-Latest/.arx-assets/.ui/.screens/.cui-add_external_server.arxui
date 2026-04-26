@@ -2,7 +2,7 @@
   "root_contents": {
     "type": "panel",
     "controls": [
-      { "@add_external_server.gamepad_helpers":{}},
+      { "@add_external_server.tooltips_element":{}},
       { "@main_panel":{}},
       { "@cui-common.cancel_button": {}},
       { "background": {
@@ -13,6 +13,35 @@
           "texture": "textures/ui/White",
           "color": "$cuigv:TertiaryColor"
       }}
+  ]},
+  "tooltips_element": {
+    "type": "image",
+    "size": [ "100%cm + 12px", "100%cm + 8px" ],
+    "texture": "textures/ui/.cui-assets/background_middle",
+    "alpha": "$cuigv:BackgroundAlpha",
+    "color": "$cuigv:SecondaryColor",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 4, -4 ],
+    "layer": 900,
+    "$cuiv:gamepad_icon_binding_name|default": "#gamepad_helper_visible",
+    "$cuiv:gamepad_icon_binding_type|default": "global",
+    "bindings": [
+      { "binding_type": "$cuiv:gamepad_icon_binding_type",
+        "binding_name": "$cuiv:gamepad_icon_binding_name",
+        "binding_name_override": "#visible"
+    }],
+    "controls": [
+      { "core": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 15 ],
+          "offset": [ 0, -5 ],
+          "use_child_anchors": false,
+          "controls": [
+            { "gamepad_tooltip_a@cui-gamepad.gamepad_tooltip_a": {}},
+            { "gamepad_tooltip_b@cui-gamepad.gamepad_tooltip_b": {}}
+      ]}}
   ]},
   "play_button@cui-button.text_button": {
     "$pressed_button_name": "button.play_button",

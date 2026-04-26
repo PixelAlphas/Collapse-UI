@@ -230,19 +230,11 @@
       {
         "boss_name@boss_name_panel": {}
       },
-      // {
-      //   "boss_name@boss_name_panel": {}
-      // },
-      // {
-      //   "progress_bar_for_collections@common.progress_bar_for_collections": {
-      //     "offset": [ 0, 10 ]
-      //   }
-      // },
-      { "progress_bar_for_collections@common.progress_bar_for_collections": {
+      { "progress_bar_for_collections_arx@common.progress_bar_for_collections": {
           "offset": [ 0, 10 ],
           "ignored": "($cuigv:AnimatedProgressBar)"
       }},
-      { "progress_bar_for_collections@cui-hud_screen.boss_progress_bar_core": {}}
+      { "progress_bar_for_collections_arx@cui-hud_screen.boss_progress_bar_core": {}}
     ],
     "bindings": [
       {
