@@ -18,7 +18,16 @@
           "size": [ "40%", "100%" ],
           "alpha": "$cuigv:BackgroundAlpha",
           "anchor_from": "left_middle",
-          "anchor_to": "left_middle"
+          "anchor_to": "left_middle",
+          "$cuiv-anim:pos_from": [ -120, 0 ],
+          "$cuiv-anim:pos_to": [ 0, 0 ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cui-anims.screen_outro_anim_push",
+            "@cui-anims.screen_outro_anim_pop",
+            "@cui-anims.screen_intro_anim_push",
+            "@cui-anims.screen_intro_anim_pop"
+          ]
       }}
   ]},
   "root_contents": {
@@ -172,6 +181,15 @@
     "focus_navigation_mode_up": "$focus_navigation_mode_override_up",
     "focus_navigation_mode_left": "$focus_navigation_mode_override_left",
     "focus_navigation_mode_right": "$focus_navigation_mode_override_right",
+    "$cuiv-anim:pos_from": [ -120, 0 ],
+    "$cuiv-anim:pos_to": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "controls": [
       { "scrolling_panel@common.scrolling_panel": {
           "$scrolling_content": "$selector_stack_panel",
@@ -216,12 +234,12 @@
   "container_scroll_background_image": {
     "type": "image",
     "layer": 2,
-    "texture": "textures/ui/form_scrolling_pane_bg",
+    "texture": "textures/ui/buttons/form_scrolling_pane_bg",
     "allow_clipping": false
   },
   "container_scroll_box_image": {
     "type": "image",
-    "texture": "textures/ui/form_scrolling_box",
+    "texture": "textures/ui/buttons/form_scrolling_box",
     "allow_clipping": false
   },
   "container_scrollbar_track": {
@@ -232,7 +250,7 @@
     "offset": [ -2, 0 ],
     "allow_clipping": false,
     "size": [ "100% + 4px", "100%" ],
-    "texture": "textures/ui/form_scrolling_box_bg"
+    "texture": "textures/ui/buttons/form_scrolling_box_bg"
   },
   "long_form_scrolling_panel@runeui-form.scrolling_panel": {
     "layer": 50,
@@ -270,6 +288,15 @@
     "focus_navigation_mode_up": "$focus_navigation_mode_override_up",
     "focus_navigation_mode_left": "$focus_navigation_mode_override_left",
     "focus_navigation_mode_right": "$focus_navigation_mode_override_right",
+    "$cuiv-anim:pos_from": [ 120, 0 ],
+    "$cuiv-anim:pos_to": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cui-anims.screen_outro_anim_push",
+      "@cui-anims.screen_outro_anim_pop",
+      "@cui-anims.screen_intro_anim_push",
+      "@cui-anims.screen_intro_anim_pop"
+    ],
     "controls": [
       { "control": {
           "type": "stack_panel",

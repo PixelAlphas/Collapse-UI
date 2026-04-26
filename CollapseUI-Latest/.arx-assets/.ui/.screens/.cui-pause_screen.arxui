@@ -517,16 +517,13 @@
       }}
   ]},
   "invite_button@cui-button.text_button": {
-    "size": [ "100%", 20 ],
-    "$pressed_button_name": "button.menu_invite_players",
-    "$cuiv:button_text": "pauseScreen.invite",
+    "size": [ "100% - 8px", 20 ],
+    "$pressed_button_name": "button.friends_drawer",
+    "$cuiv:button_text": "cui.pause.invite_button",
+    "$context": "ingame",
     "bindings": [
-      { "binding_name": "#invite_button_visible",
-        "binding_name_override": "#visible",
-        "binding_type": "global"
-      },
-      { "binding_name": "#invite_button_enabled",
-        "binding_name_override": "#enabled"
+      { "binding_name": "#friends_drawer_button_focus_override",
+        "binding_name_override": "#focus_change_down"
   }]},
   "permission_button@cui-button.text_button": {
     "size": [ "100%", 20 ],
@@ -581,7 +578,12 @@
             { "pudding02": { "type": "panel", "size": [ 1, 2 ]}}
       ]}},
       { "pudding01": { "type": "panel", "size": [ 1, 2 ]}},
-      { "invite_button@cui-pause_screen.invite_button": {}},
+      { "invite_button_panel": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "controls": [
+            { "invite_button@cui-pause_screen.invite_button": {}}
+      ]}},
       { "pudding02": { "type": "panel", "size": [ 1, 2 ]}}
   ]},
   "scoreboard_grid_item": {

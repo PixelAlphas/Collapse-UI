@@ -211,6 +211,7 @@ cui.pause.screenshot=Screenshot
 cui.pause.stories=Stories
 cui.pause.playerlist.controller=View Playerlist
 cui.pause.continue=Continue session
+cui.pause.invite_button=More Options (Friends)
 
 ## Play screen
 cui.play.controllcentre=Control centre
@@ -335,6 +336,6 @@ cui.loading.theend=Entering 'The End'...
 
 
 ## Stuff that shall not be messed with...
-options.fov= 
+options.fov=
 options.fov.alt=FOV
 resourcePack.subpackResolution.alt=Resolution

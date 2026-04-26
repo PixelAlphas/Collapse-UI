@@ -148,20 +148,6 @@
                             "layer": 1,
                             "color": "$cuigv:SecondaryColor"
                         }},
-                        { "padding05": { "type": "panel", "size": [ 2, 2 ]}},
-                        { "about@cui-button.text_button": {
-                            "size": [ 34, 34 ],
-                            "$cuiv:label_adv_text_bubble": true,
-                            "$cuiv:label_adv_icon": true,
-                            "$cuiv:label_adv_bubble_with_description": true,
-                            "$pressed_button_name": "button.menu_buy_game",
-                            "$cuiv:button_type_panel": "cui-button.button_label_adv",
-                            "$cuiv:hover_button_color": "$cuigv:PrimaryColor",
-                            "$cuiv:pressed_button_color": "$cuigv:PrimaryColor",
-                            "$cuiv:button_text": "cui.about.title",
-                            "$cuiv:button_text_bubble": "cui.extra_menu.about_desc",
-                            "$cuiv:button_icon": "textures/ui/.cui-assets/.icons/about_icon"
-                        }},
                         { "padding06": { "type": "panel", "size": [ 2, 2 ]}},
                         { "inbox@cui-button.text_button": {
                             "size": [ 34, 34 ],
@@ -633,7 +619,7 @@
             ]}}
       ]}}
   ]},
-  
+
   "button_label_anim": {
     "type": "panel",
     "$cuiv:subbutton|default": false,
@@ -1148,11 +1134,11 @@
           "$cuiv:selector_anims|default": [],
           "variables": [
             { "requires": "$cuigv:UIAnimations",
-              "$cuiv:selector_event_anims": [ 
+              "$cuiv:selector_event_anims": [
                 "@cui-anims.event_anims_offset",
                 "@cui-anims.extra_anims_alpha"
               ],
-              "$cuiv:selector_anims": [ 
+              "$cuiv:selector_anims": [
                 "@cui-anims.extra_anims_offset",
                 "@cui-anims.extra_anims_alpha"
               ]
@@ -1198,15 +1184,15 @@
     "controls": [
       { "@cui-common.title_core": { "$cuiv:title_back_button": false, "$cuiv:title_text": "cui.extras.title",
           "layer": 20,
-          "anims": [ 
+          "anims": [
             "@cui-anims.extra_anims_offset_title_exit"
       ]}},
       { "selector_area@cui-start_screen.extra_menu_element_view": {
-          "$cuiv:selector_event_anims": [ 
+          "$cuiv:selector_event_anims": [
             "@cui-anims.event_anims_offset_exit",
             "@cui-anims.extra_anims_alpha_exit"
           ],
-          "$cuiv:selector_anims": [ 
+          "$cuiv:selector_anims": [
             "@cui-anims.extra_anims_offset_exit",
             "@cui-anims.extra_anims_alpha_exit"
           ]
@@ -1418,7 +1404,7 @@
     "layer": 900,
     "controls": [
       { "game_version@cui-common.label_with_background_adv": {
-          "$cuiv:lwb_text": "Collapse-UI v1.2.0-rc1"
+          "$cuiv:lwb_text": "Collapse-UI v1.2.0"
       }},
       { "paddings": { "type": "panel", "size": [ 6, 1 ]}},
       { "game_version@cui-common.label_with_background_adv": {

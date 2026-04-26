@@ -2,9 +2,9 @@
   // General
   "$cuigv:ConfigName": "Default",
     // Config name — You can change it to anything you want if you wish to customize.
-  "$cuigv:DesignedVersion": "v1.1.0-celestial",
+  "$cuigv:DesignedVersion": "v1.2-celestial",
     // Designed Version — Config version that supported the UI
-  
+
   // -- README before modifying! --
   // There'll be a corresponding text next to the value.
   // To ensure the correct way and not causing errors, You'll see those
@@ -13,7 +13,7 @@
     // [ 1, 1, 1 ] Color — RBG values but divided by 1
     // 0.0 - 1.0 | Value — Value only support ranged from 0.0 to 1.0
     // True/False | Boolean — Only True/False as Value ( True = Enable | False = Disable )
-  
+
   // ----- ## UI Theme ## -----
   "$cuigv:PrimaryColor": [ 0.6941, 0.0196, 0.8901 ], // Color
     // UI accent, this includes — Buttons, Icons, Loading bar, and etc.
@@ -126,7 +126,7 @@
   "$cuigv:ExtraMenuEasingOut": "in_cubic",
     // Change Extra Menu's Easing Out.
   "$cuigv:ProgressBarAnimatedIncreaseEasing": "out_cubic",
-    // Change Animated Increasing Progress Bar Easing. 
+    // Change Animated Increasing Progress Bar Easing.
   "$cuigv:ProgressBarAnimatedDecreaseEasing": "out_cubic",
     // Change Animated Decreasing Progress Bar Easing.
   "$cuigv:ProgressBarAnimatedIncreaseDuration": 0.75,
@@ -141,7 +141,7 @@
     // Change How long would animated increase boss bar playing.
   "$cuigv:BossBarAnimatedDecreaseDuration": 0.75,
     // Change How long would animated decrease boss bar playing.
-  
+
 
   // ----- ## Layouts ## -----
   "$cuigv:LogoInPauseScreen": true,
@@ -174,7 +174,7 @@
     // Enable Animated Progress Bar that moves bar smoothly instead of jumping. - This only affect Boss Bar.
   "$cuigv:AnimatedBossBarStyle": "gradient", // BossBarString
     // Change the decreased animation of boss bar, has 3 variants.
-    
+
   // ----- ## Unused - Will do nothing. ## -----
   "$cuigv:OriginUI": true, // Boolean
   "$cuigv:DebugElement": false, // Boolean

@@ -1,4 +1,4 @@
-{ 
+{
   "chat_panel": {
     "bindings": [
       { "binding_name": "#inventory_touch_button",
@@ -559,7 +559,7 @@
             }}
           ]
       }},
-      { "hotbar@hotbar_chooser": { 
+      { "hotbar@hotbar_chooser": {
           "offset": [ 4, 15.5 ],
           "bindings": [
             { "binding_name": "(not #is_spectator_mode)",
@@ -568,6 +568,30 @@
       }},
       { "item_text_factory@cui-hud_screen.item_text_factory": {}}
   ]},
+  "auto_save_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 9,
+    "frame_step": 18,
+    "fps": 10,
+    "reversible": true,
+    "easing": "linear"
+  },
+  "auto_save": {
+    "type": "image",
+    "layer": 31,
+    "texture": "textures/ui/auto_save",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -15, 15 ],
+    "size": [ 18, 30 ],
+    "uv_size": [ 18, 30 ],
+    "uv": "@hud.auto_save_animation",
+    "disable_anim_fast_forward": true,
+    "bindings": [
+      { "binding_name": "#auto_save_animation_visible",
+        "binding_name_override": "#visible"
+  }]},
   "full_progress_bar": {
     "type": "image",
     "texture": "textures/ui/experience_bar_full_white",
